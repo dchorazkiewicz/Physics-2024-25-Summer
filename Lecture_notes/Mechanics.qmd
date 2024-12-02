@@ -120,7 +120,7 @@ fig, axs = plt.subplots(2,1, figsize=(10,8))
 
 # Left plot: Analytical and numerical solutions
 axs[0].plot(plot_x, y_analytical(plot_x), label='Analytical', linestyle='dashed', linewidth=2)
-axs[0].scatter(x, y_numerical(x, h), label='Numerical', linestyle='solid')
+axs[0].scatter(x, y_numerical(x, h), label='Numerical', linestyle='solid', color='red')
 axs[0].set_title('Analytical vs Numerical')
 axs[0].set_xlabel('x')
 axs[0].set_ylabel('y')
@@ -237,7 +237,7 @@ fig, axs = plt.subplots(2,1, figsize=(10,8))
 
 # Left plot: Analytical and numerical solutions
 axs[0].plot(plot_x, y_analytical(plot_x), label='Analytical', linestyle='dashed', linewidth=2)
-axs[0].scatter(x, y_numerical(x, h), label='Numerical')
+axs[0].scatter(x, y_numerical(x, h), label='Numerical', color='red')
 axs[0].set_title('Analytical vs Numerical')
 axs[0].set_xlabel('x')
 
