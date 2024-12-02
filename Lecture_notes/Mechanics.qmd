@@ -255,3 +255,67 @@ axs[1].legend()
 plt.tight_layout()
 plt.show()
 ```
+
+## Description of motion
+
+### Movement in 2D Cartesian coordinates
+
+We could start considering moving particle in 1D but 2D examples are more interesting.
+First we have to define the position of the particle in 2D Cartesian coordinates. 
+The position of the particle is given by the vector $\mathbf{r} = (x, y)$, where $x$ and $y$ are the coordinates of the particle in the $x$ and $y$ axes, respectively. If this coordinates are functions of time, we can write the position vector as $\mathbf{r}(t) = (x(t), y(t))$. This function describes the trajectory of the particle in the $xy$ plane.
+
+$$
+[a,b]\rightarrow \mathcal{R}^2:
+t\rightarrow \mathbf{r}(t) = (x(t), y(t))
+$$
+
+##### Python example
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def r1(t):
+    return np.array([t, -t**2 + t])
+
+def r2(t):
+    return np.array([np.cos(t), np.sin(t)])
+
+t = np.linspace(0, 10, 100)
+
+fig, axes = plt.subplots(nrows=2, figsize=(8, 6))  # Tworzymy dwa wykresy obok siebie
+
+# Pierwszy wykres
+axes[0].plot(r1(t)[0], r1(t)[1])
+axes[0].set_xlabel('x')
+axes[0].set_ylabel('y')
+axes[0].set_title('Wykres 1: r1(t)')
+
+# Drugi wykres
+axes[1].plot(r2(t)[0], r2(t)[1])
+axes[1].set_xlabel('x')
+axes[1].set_ylabel('y')
+axes[1].set_title('Wykres 2: r2(t)')
+
+plt.tight_layout()  # Dostosowanie układu
+plt.show()
+
+```
+
+##### Geogebra example
+
+* c1 = Curve[t, -t^2+t, t, 0, 10]
+* c2 = Curve[cos(t), sin(t), t, 0, 2*pi]
+* s = Slider[0,10,.001]
+* P = (x(c1(s)),y(c1(s)))
+* Q = (x(c2(s)),y(c2(s)))
+
+where
+
+* c1 is a curve $t\rightarrow (t, -t^2+t)$
+* c2 is a curve $t\rightarrow (\cos(t), \sin(t))$
+* s is a slider from 0 to 10
+* P is a point on c1
+* Q is a point on c2
+
+
