@@ -1,0 +1,257 @@
+---
+title: Mechanics
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    page-layout: full
+    grid:
+      body-width: 1000px
+      sidebar-width: 300px
+      margin-width: 300px
+      gutter-width: 2rem
+    theme:
+      light: [flatly, custom.scss]
+      dark: [darkly, custom.scss]
+    self-contained: true
+---
+
+## Differential equations
+
+### Starting example
+
+Let's consider the first order differential equation
+
+$$
+\frac{dy(x)}{dx} = 2x
+$$
+
+Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to 3. This means that the slope of the function $y(x)$ is constant and equal to 3. This is a simple differential equation that can be solved by integration. The solution is
+
+$$
+y(x) = x^2 + C
+$$
+
+where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. The solution is a straight line with slope 3. The constant $C$ determines the position of the line in the $y$-axis.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def y(x, C):
+    return x**2 + C
+
+x = np.linspace(0, 10, 100)
+
+fig, ax = plt.subplots(figsize=(6, 4))
+
+for C in range(-10, 10, 1):
+    plt.plot(x, y(x, C), label=f'C={C}')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+```
+
+#### Check in geogebra:
+
+* f(x) =    x^2 + 3
+
+##### Numerical solution
+
+Remember that derivatives can be approximated by finite differences. The derivative of a function $f(x)$ can be approximated by
+
+$$
+\frac{df(x)}{dx} \approx \frac{f(x + h) - f(x)}{h}
+$$
+
+where $h$ is a small number. This is a simple way to approximate the derivative of a function. Let's use this approximation to solve the differential equation
+
+$$
+\frac{dy(x)}{dx} = 2x
+$$
+
+We can approximate the derivative by
+
+$$
+\frac{y(x + h) - y(x)}{h} = 2x
+$$
+
+This equation can be solved for $y(x + h)$
+
+$$
+y(x + h) = y(x) + 2xh
+$$
+
+This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.
+
+Let us compare the numerical solution with the analytical solution.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the derivative dy/dx
+def dy_dx(x):
+    return 2 * x
+
+# Define the exact analytical solution y(x) for comparison
+def y_analytical(x):
+    return x**2
+
+# Define a numerical solution for y(x) using the forward Euler method
+def y_numerical(x, h):
+    y = [0]  # Initialize y with the starting value, assuming y(0) = 0
+    for i in range(len(x) - 1):
+        y.append(y[-1] + dy_dx(x[i]) * h)  # Update y using dy/dx
+    return y
+
+# Set up the x values
+plot_x = np.linspace(0, 10, 100)
+x = np.linspace(0, 10, 10)
+h = x[1] - x[0]  # Step size
+
+# Compute the difference between analytical and numerical solutions
+difference = y_analytical(x) - np.array(y_numerical(x, h))
+
+# Set up the figure with two subplots
+fig, axs = plt.subplots(2,1, figsize=(10,8))
+
+# Left plot: Analytical and numerical solutions
+axs[0].plot(plot_x, y_analytical(plot_x), label='Analytical', linestyle='dashed', linewidth=2)
+axs[0].scatter(x, y_numerical(x, h), label='Numerical', linestyle='solid')
+axs[0].set_title('Analytical vs Numerical')
+axs[0].set_xlabel('x')
+axs[0].set_ylabel('y')
+axs[0].legend()
+
+# Right plot: Difference between solutions
+axs[1].scatter(x, difference, label='Difference', color='red')
+axs[1].set_title('Difference (Analytical - Numerical)')
+axs[1].set_xlabel('x')
+axs[1].set_ylabel('Difference')
+axs[1].legend()
+
+# Adjust layout and show the plots
+plt.tight_layout()
+plt.show()
+
+```
+
+Difference between the analytical and numerical solutions depends on the step size $h$. 
+
+### Second order differential equations
+
+Let's consider the second order differential equation
+
+$$
+\frac{d^2y(x)}{dx^2} = -y(x)
+$$
+
+This is a simple differential equation that can be solved by integration. The solution is
+
+$$
+y(x) = A \sin(x) + B \cos(x)
+$$
+
+where $A$ and $B$ are integration constants. This is the general solution of the differential equation. The solution is not unique because the constants $A$ and $B$ can take any value. The solution is a sinusoidal function. The constants $A$ and $B$ determine the amplitude and phase of the sinusoidal function.
+
+#### Numerical solution
+
+From Taylor's theorem, we know that the second derivative of a function $f(x)$ can be approximated by
+
+$$
+f(x + h) = f(x) + h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots
+$$
+
+also
+
+$$
+f(x - h) = f(x) - h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots
+$$
+
+adding these two equations we get
+
+$$
+f(x + h) + f(x - h) = 2 f(x) + h^2 \frac{d^2f(x)}{dx^2}
+$$
+
+so we can approximate the second derivative by
+
+$$
+\frac{f(x + h) + f(x - h) - 2 f(x)}{h^2} \approx \frac{d^2f(x)}{dx^2}
+$$
+
+Let's use this approximation to solve the differential equation
+
+$$
+\frac{d^2y(x)}{dx^2} = -y(x)
+$$
+
+We can approximate the second derivative by
+
+$$
+\frac{y(x + h) + y(x - h) - 2 y(x)}{h^2} = -y(x)
+$$
+
+This equation can be solved for $y(x + h)$
+
+$$
+y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
+$$
+
+This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and $y(x - h)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.
+
+Let us compare the numerical solution with the analytical solution.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the second derivative d^2y/dx^2
+def d2y_dx2(x):
+    return -x
+
+# Define the exact analytical solution y(x) for comparison
+def y_analytical(x):
+    return -np.sin(x)
+
+# Define a numerical solution for y(x) using the forward Euler method
+def y_numerical(x, h):
+    y = [0, np.sin(-h)]  # Initialize y with the starting values, assuming y(0) = 0 and y(-h) = sin(-h)
+    for i in range(1, len(x) - 1):
+        y.append(2 * y[-1] - y[-2] - h**2 * y[-1])  # Update y using d^2y/dx^2
+    return y
+
+# Set up the x values
+plot_x = np.linspace(0, 10, 100)
+x = np.linspace(0, 10, 20)
+h = x[1] - x[0]  # Step size
+
+# Compute the difference between analytical and numerical solutions
+difference = y_analytical(x) - np.array(y_numerical(x, h))
+
+# Set up the figure with two subplots
+fig, axs = plt.subplots(2,1, figsize=(10,8))
+
+# Left plot: Analytical and numerical solutions
+axs[0].plot(plot_x, y_analytical(plot_x), label='Analytical', linestyle='dashed', linewidth=2)
+axs[0].scatter(x, y_numerical(x, h), label='Numerical')
+axs[0].set_title('Analytical vs Numerical')
+axs[0].set_xlabel('x')
+
+axs[0].set_ylabel('y')
+axs[0].legend()
+
+# Right plot: Difference between solutions
+axs[1].scatter(x, difference, label='Difference')
+axs[1].set_title('Difference (Analytical - Numerical)')
+axs[1].set_xlabel('x')
+axs[1].set_ylabel('Difference')
+axs[1].legend()
+
+# Adjust layout and show the plots
+plt.tight_layout()
+plt.show()
+```

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "physics-2024-25-summer"
+version = "0.1.0"
+description = ""
+authors = ["dchorazkiewicz"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+matplotlib = "^3.9.3"
+pandas = "^2.2.3"
+pyyaml = "^6.0.2"
+jupyter = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
