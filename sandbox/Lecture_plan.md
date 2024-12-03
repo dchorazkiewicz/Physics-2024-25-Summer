@@ -6,26 +6,27 @@
 2. **Mechanics**  
    Motion, Newton's Laws, Types of Motion, Energy, Momentum, Differential Equations in Mechanics.
 
-3. **Mechanics in Geogebra**  
-   Canonical Models of Motion, Tools and Visualizations.
+3. **Classical dynamical systems from computational view**  
+   Numerical and Symbolical Computations, Simulations and Animations using tools like Python, JavaScript,Geogebra, Jupyter, etc. Extensions of math/technology to other branches of physics (waves, electromagnetism, etc.)
 
 4. **Waves**  
-   Introduction to Waves, Classification of Waves, Wave Characteristics, Wave Dynamics, Polarization, Wave Interference, Doppler Effect, Specialized Waves.
+   Wave Characteristics, Classification of Waves, Wave Dynamics, Polarization, Wave Interference, Doppler Effect, Applications numerical methods to waves.
 
 5. **Electromagnetism**  
-   Electric Charge, Coulomb’s Law, Electric Fields, Electric Potential, Magnetism, Magnetic Force, Electromagnetic Unification, Applications of Electromagnetism, Magnetic Fields and Currents, Electromagnetic Induction, Magnetic Forces, Maxwell’s Equations, Electromagnetic Waves, Interaction of Light and Matter, Polarization, Antennas and Communication, Advanced Applications.
+   Electric Charge, Coulomb’s Law, Electric Fields, Electric Potential, Magnetism, Magnetic Fields and Currents, Lorentz Force, Electromagnetic Induction, Maxwell’s Equations, Electromagnetic Waves, Optics, Antennas, Applications numerical methods to electromagnetism.
 
 6. **Circuits**  
-   Introduction to Circuits, Fundamental Concepts, Circuit Elements, Voltage and Current Sources, Circuit Analysis, Prototyping and Measurement, Applications, Additional Tools and Resources, Alternating and Direct Currents, Transformers and Electromagnetic Induction, Conductors, Semiconductors, and Insulators, Semiconductor Physics, Diodes, Transistors, RLC Circuits, Harmonic Oscillator Analogy, Applications of RLC Circuits, Complex Numbers in Circuit Analysis.
+   Circuit Elements, Voltage and Current Sources, Circuit Analysis and Measurement, Alternating and Direct Currents, Transformers, Conductors, Semiconductors, and Insulators, Diodes, Transistors, RLC Circuits, Complex Numbers in Circuit Analysis. Applications numerical methods to circuits.
 
 7. **Measurements**  
-   Introduction to Measurements, Types of Measurements, Historical and Modern Measurements, Measurement Concepts, Errors in Measurements, Quantifying Uncertainty, Advanced Statistical Tools, Experiments and Applications, Dimensional Analysis, Probability and Distributions.
+   Measurements (Direct and Indirect, Analog and Digital, Absolute and Relative), Precision and Accuracy, Error and Uncertainty, Quantifying Uncertainty, Mean, Median, Standard Deviation, Important historical and modern measurements (Measurement of gravitational acceleration with a pendulum, Measurement of the mass of the Earth using a pendulum), Measurement Concept (Classical versus Quantum Measurement).
 
-8. **Modern Physics - macroscale**  
-   Universe at different scales (from Earth, Moon, and Solar System, through Stars and the Milky Way, Expansion of the Universe), Observational Astronomy, Newtonian Gravity and Astronomy, Orbital Mechanics, Kepler's Laws, Stellar Evolution, Energy from the Sun, Speed of Light and Special Relativity, General Relativity, Black Holes, Gravitational Waves, Cosmology, Olbers' Paradox, Inflation Theory, Chronology of the Universe, Cosmic Microwave Background, Dark Matter and Dark Energy, Expansion of the Universe, Exoplanets and Habitability, Drake Equation and Fermi Paradox.
+8. **Modern Physics I**  
+   Universe at different scales (from Earth, Moon, and Solar System, through Stars and the Milky Way and other galaxies), Observational Astronomy, Newtonian Gravity, Kepler's Laws, Stellar Evolution, Energy from the Sun, Speed of Light and Special Relativity, General Relativity, Black Holes, Gravitational Waves, Cosmology, Olbers' Paradox, Big Bang Theory, Inflation Theory, Chronology of the Universe, Cosmic Microwave Background, Dark Matter and Dark Energy, Expansion of the Universe, Exoplanets.
 
-9. **Modern Physics - microscale**
-    Introduction to Quantum Mechanics, Historical Development, Fundamental Principles, Key Experiments, Wavefunction, Operators and Observables, Commutators and Uncertainty, Quantum Tunneling, Superposition and Entanglement, Quantum Spin, Potential Well, Quantum Harmonic Oscillator, Quantum computers.
+9.  **Modern Physics II**
+   Introduction to Quantum Mechanics, Historical Development, Fundamental Principles, Key Experiments, Wavefunction, Operators and Observables, Commutators and Uncertainty, Quantum Tunneling, Superposition and Entanglement, Quantum Spin, Potential Well, Quantum Harmonic Oscillator, Quantum computers.
+
 
 ---
 
