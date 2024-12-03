@@ -562,8 +562,84 @@ ax.scatter(x_0, y_0, color='red', label='Initial position')
 plt.show()
 ```
 
+
+## Simple harmonic motion in 2D
+
+Let $\mathbb{F}=(-kx,-ky)$ be the force acting on the particle. The equations of motion are
+
+$$
+\begin{align*}
+\frac{d^2 x(t)}{dt^2} &= -\frac{k}{m} x(t) \\
+\frac{d^2 y(t)}{dt^2} &= -\frac{k}{m} y(t)
+\end{align*}
+$$
+
+where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle in the $x$ direction is proportional to the position of the particle in the $x$ direction. The acceleration of the particle in the $y$ direction is proportional to the position of the particle in the $y$ direction. The force acting on the particle is the force of a spring. The force of a spring is equal to the spring constant times the position of the particle. The force of a spring is equal to the force acting on the particle.
+
+#### Analytical solution
+
+The analytical solution of the equations of motion for a particle in simple harmonic motion is
+
+$$
+\begin{align*}
+x(t) &= A_x \sin(\omega t) + B_x \cos(\omega t) \\
+y(t) &= A_y \sin(\omega t) + B_y \cos(\omega t)
+\end{align*}
+$$
+
+where $A_x$, $B_x$, $A_y$, and $B_y$ are the amplitudes of the particle in the $x$ and $y$ directions, respectively, and $\omega$ is the angular frequency of the particle. The angular frequency of the particle is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ is the initial phase of the particle. The initial phase of the particle is the phase of the particle at time $t=0$. The initial phase of the particle is the boundary condition of the problem. The boundary condition determines the trajectory of the particle in space.
+
+#### Numerical solution
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+k_x, k_y = 1, 2  # Spring constants
+m = 1  # Mass of the particle
+x_0, y_0 = 1, 0  # Initial position
+v_x0, v_y0 = 0, 1  # Initial velocity
+
+# Acceleration function
+def acceleration(x, y, k_x,k_y, m):
+    a_x = -k_x / m * x
+    a_y = -k_y / m * y
+    return a_x, a_y
+
+# Simulation time
+t = np.linspace(0, 50, 500)
+dt = t[1] - t[0]
+
+# Positions and velocities
+x, y = [x_0], [y_0]
+v_x, v_y = v_x0, v_y0
+
+for i in range(1, len(t)):
+    a_x, a_y = acceleration(x[-1], y[-1], k_x,k_y, m)
+    # Update velocity (Euler step)
+    v_x += a_x * dt
+    v_y += a_y * dt
+    # Update position (Euler step)
+    x.append(x[-1] + v_x * dt)
+    y.append(y[-1] + v_y * dt)
+
+# Plotting the trajectory
+plt.figure(figsize=(6, 6))
+plt.plot(x, y, label="Trajectory")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Harmonic Motion in Two Dimensions')
+plt.legend()
+plt.grid()
+plt.axis('equal')
+plt.show()
+```
+
 ## Pendulum motion
 
-## Simple harmonic motion
+
+
+
 
 ## Solar system
