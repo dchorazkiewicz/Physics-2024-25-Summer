@@ -1,4 +1,35 @@
-# Lecture plan
+# New Lecture plan
+
+1. **Introduction**  
+   About the course, History of Physics, Fundamental Forces, Basic Units and Dimensions, Matheamtical description (scalars, vectors, matricies).
+   
+2. **Mechanics**  
+   Motion, Newton's Laws, Types of Motion, Energy, Momentum, Differential Equations in Mechanics.
+
+3. **Mechanics in Geogebra**  
+   Canonical Models of Motion, Tools and Visualizations.
+
+4. **Waves**  
+   Introduction to Waves, Classification of Waves, Wave Characteristics, Wave Dynamics, Polarization, Wave Interference, Doppler Effect, Specialized Waves.
+
+5. **Electromagnetism**  
+   Electric Charge, Coulomb’s Law, Electric Fields, Electric Potential, Magnetism, Magnetic Force, Electromagnetic Unification, Applications of Electromagnetism, Magnetic Fields and Currents, Electromagnetic Induction, Magnetic Forces, Maxwell’s Equations, Electromagnetic Waves, Interaction of Light and Matter, Polarization, Antennas and Communication, Advanced Applications.
+
+6. **Circuits**  
+   Introduction to Circuits, Fundamental Concepts, Circuit Elements, Voltage and Current Sources, Circuit Analysis, Prototyping and Measurement, Applications, Additional Tools and Resources, Alternating and Direct Currents, Transformers and Electromagnetic Induction, Conductors, Semiconductors, and Insulators, Semiconductor Physics, Diodes, Transistors, RLC Circuits, Harmonic Oscillator Analogy, Applications of RLC Circuits, Complex Numbers in Circuit Analysis.
+
+7. **Measurements**  
+   Introduction to Measurements, Types of Measurements, Historical and Modern Measurements, Measurement Concepts, Errors in Measurements, Quantifying Uncertainty, Advanced Statistical Tools, Experiments and Applications, Dimensional Analysis, Probability and Distributions.
+
+8. **Modern Physics - macroscale**  
+   Universe at different scales (from Earth, Moon, and Solar System, through Stars and the Milky Way, Expansion of the Universe), Observational Astronomy, Newtonian Gravity and Astronomy, Orbital Mechanics, Kepler's Laws, Stellar Evolution, Energy from the Sun, Speed of Light and Special Relativity, General Relativity, Black Holes, Gravitational Waves, Cosmology, Olbers' Paradox, Inflation Theory, Chronology of the Universe, Cosmic Microwave Background, Dark Matter and Dark Energy, Expansion of the Universe, Exoplanets and Habitability, Drake Equation and Fermi Paradox.
+
+9. **Modern Physics - microscale**
+    Introduction to Quantum Mechanics, Historical Development, Fundamental Principles, Key Experiments, Wavefunction, Operators and Observables, Commutators and Uncertainty, Quantum Tunneling, Superposition and Entanglement, Quantum Spin, Potential Well, Quantum Harmonic Oscillator, Quantum computers.
+
+---
+
+# OLD Lecture plan
 
 1. **Introduction**  
    History of Physics, Fundamental Forces, Basic Units and Dimensions.
