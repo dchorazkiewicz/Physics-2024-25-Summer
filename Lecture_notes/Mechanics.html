@@ -3290,7 +3290,7 @@ window.Quarto = {
 y(x) = x^2 + C
 \]</span></p>
 <p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value. The solution is a straight line with slope 3. The constant <span class="math inline">\(C\)</span> determines the position of the line in the <span class="math inline">\(y\)</span>-axis.</p>
-<div id="25200e71" class="cell" data-execution_count="1">
+<div id="9c267637" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3340,7 +3340,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="e365886a" class="cell" data-execution_count="2">
+<div id="7017ebd0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3443,7 +3443,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="a9ba5bb3" class="cell" data-execution_count="3">
+<div id="6b403740" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3514,7 +3514,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \]</span></p>
 <section id="python-example" class="level5">
 <h5 class="anchored" data-anchor-id="python-example">Python example</h5>
-<div id="d51161dc" class="cell" data-execution_count="4">
+<div id="02257075" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3590,7 +3590,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \left(\frac{dx(t)}{dt}, \frac{dy(t)}{dt}\right)
 \]</span></p>
 <p>The velocity vector describes the speed and direction of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the velocity vector is the speed of the particle. The direction of the velocity vector is the direction of motion of the particle.</p>
-<div id="5af75cc7" class="cell" data-execution_count="5">
+<div id="428de517" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3651,7 +3651,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 \]</span></p>
 <p>The acceleration vector describes the rate of change of the velocity of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.</p>
-<div id="588c66f6" class="cell" data-execution_count="6">
+<div id="b7617d88" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3766,7 +3766,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 </section>
 <section id="numerical-solution-2" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-2">Numerical solution</h4>
-<div id="b838e119" class="cell" data-execution_count="7">
+<div id="55fbbe33" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
