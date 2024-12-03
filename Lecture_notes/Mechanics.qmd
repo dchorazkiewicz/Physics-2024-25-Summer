@@ -495,9 +495,8 @@ To solve these equations we need to know the initial position and velocity of th
 
 Newton's third law states that forces always occur in pairs. If one object exerts a force on another object, the second object exerts an equal and opposite force on the first object. This law is also known as the law of action and reaction. The law of action and reaction states that for every action there is an equal and opposite reaction. This law is a consequence of the conservation of momentum. The momentum of a system is conserved if no external forces act on it.
 
-## Examples
 
-### Free fall 2D
+## Projectile motion
 
 Equations of motion for a particle in free fall are
 
@@ -563,10 +562,8 @@ ax.scatter(x_0, y_0, color='red', label='Initial position')
 plt.show()
 ```
 
-## Projectile motion
-
-## Circular motion
-
 ## Pendulum motion
 
 ## Simple harmonic motion
+
+## Solar system
