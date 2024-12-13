@@ -2,30 +2,57 @@ site_name: Physics 2024/25 Summer
 nav:
   - Home: index.md
   - Mechanics:
-    - Mechanics: Mechanics/Mechanics.html
-    - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
-    - Double Pendulum: Mechanics/double_pendulum_trajectories.md
+      - Mechanics: Mechanics/Mechanics.html
+      - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
+      - Double Pendulum: Mechanics/double_pendulum_trajectories.md
+  - Experiments & Statistics:
+      - Statistics: Experiments_Statistics/intro_to_stats.md
+
 theme:
-  name: readthedocs
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo # dostępne kolory: red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue grey, black, white
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Przełącz na tryb ciemny
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Przełącz na tryb jasny
+  features:
+    - content.code.copy
   toc:
     depth: 4
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rust
-    - python
-    - bash
+
 markdown_extensions:
   - toc
   - tables
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
 plugins:
   - search
   - mkdocstrings
   - mermaid2
 
 extra_javascript:
-#  - js/init-scripts.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
+
+extra:
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - python
+    - bash
