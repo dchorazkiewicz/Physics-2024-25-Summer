@@ -1,4 +1,8 @@
 site_name: Physics 2024/25 Summer
+nav:
+  - Home: index.md
+  - Mechanics:
+    - Mechanics: Mechanics/Mechanics.html
 theme:
   name: readthedocs
   toc:
@@ -23,4 +27,3 @@ extra_javascript:
 #  - js/init-scripts.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
-  - Mechanics/Mechanics.html

@@ -262,12 +262,31 @@ plt.show()
 
 We could start considering moving particle in 1D but 2D examples are more interesting.
 First we have to define the position of the particle in 2D Cartesian coordinates. 
-The position of the particle is given by the vector $\mathbf{r} = (x, y)$, where $x$ and $y$ are the coordinates of the particle in the $x$ and $y$ axes, respectively. If this coordinates are functions of time, we can write the position vector as $\mathbf{r}(t) = (x(t), y(t))$. This function describes the trajectory of the particle in the $xy$ plane.
+The position of the particle is given by the vector $\mathbf{r} = (x, y)$, where $x$ and $y$ are the coordinates of the particle in the $x$ and $y$ axes, respectively. If these coordinates are functions of time, we can write the position vector as $\mathbf{r}(t) = (x(t), y(t))$. This function describes the trajectory of the particle in the $xy$ plane.
 
 $$
 [a,b]\rightarrow \mathcal{R}^2:
 t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 $$
+
+#### Explanation of Symbols:
+
+- $\mathbf{r}$: Position vector of the particle.
+- $(x, y)$: Cartesian coordinates representing the particle's position in the $x$ and $y$ axes.
+- $\mathbf{r}(t)$: Position vector as a function of time, describing the particle's motion.
+- $x(t), y(t)$: Time-dependent functions representing the particle's coordinates in the $x$ and $y$ axes.
+- $[a, b]$: Interval of time during which the particle's motion is considered.
+- $\mathcal{R}^2$: Two-dimensional Cartesian coordinate space.
+- $t$: Time variable, used as a parameter for the position function.
+
+#### How Mathematicians Read This Notation:
+
+Mathematicians interpret the notation as follows:
+
+- "$[a,b] \rightarrow \mathcal{R}^2$" means "a mapping (or function) is defined from the interval $[a, b]$ in time to the two-dimensional Cartesian space $\mathcal{R}^2$."
+- "$t \rightarrow \mathbf{r}(t) = (x(t), y(t))$" specifies that for each time $t$ within the interval $[a, b]$, there exists a corresponding position vector $\mathbf{r}(t)$ in $\mathcal{R}^2$, which consists of the time-dependent coordinates $x(t)$ and $y(t)$. 
+- The overall expression describes a trajectory as a continuous function of time, mapping the progression of time to the corresponding locations in 2D space.
+
 
 ##### Python example
 
