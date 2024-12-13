@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Logistic Equation - Physics 2024/25 Summer</title>
+<link href="../../css/theme.css" rel="stylesheet"/>
+<link href="../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Logistic Equation";
+        var mkdocs_page_input_path = "Mechanics/logistic_equation_bifurcation.md";
+        var mkdocs_page_url = null;
+      </script>
+<!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../.."> Physics 2024/25 Summer
+        </a><div role="search">
+<form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Mechanics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Mechanics.html">Mechanics</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Logistic Equation</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-code-example-simulating-and-plotting-bifurcations">Python Code Example: Simulating and Plotting Bifurcations</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#key-insights">Key Insights</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">Applications</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-exploration">Advanced Exploration</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#suggested-student-projects">Suggested Student Projects</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../double_pendulum_trajectories/">Double Pendulum</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../..">Physics 2024/25 Summer</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href="../.."></a></li>
+<li class="breadcrumb-item">Mechanics</li>
+<li class="breadcrumb-item active">Logistic Equation</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="logistic-equation-and-bifurcation">Logistic Equation and Bifurcation</h1>
+<h2 id="overview">Overview</h2>
+<p>The logistic equation is a simple mathematical model that describes population growth with a carrying capacity. The equation is:</p>
+<div class="arithmatex">\[ x_{n+1} = r x_n (1 - x_n) \]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(x_n\)</span> is the population at generation <span class="arithmatex">\(n\)</span> (normalized between 0 and 1).</li>
+<li><span class="arithmatex">\(r\)</span> is the growth rate parameter.</li>
+</ul>
+<p>This model exhibits interesting dynamics as the parameter <span class="arithmatex">\(r\)</span> varies, leading to bifurcations and chaotic behavior.</p>
+<hr/>
+<h2 id="python-code-example-simulating-and-plotting-bifurcations">Python Code Example: Simulating and Plotting Bifurcations</h2>
+<p>Here is a Python code snippet to simulate and visualize the bifurcation diagram of the logistic equation:</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the logistic map function, which calculates the next population value
+# given the current population (x) and the growth rate (r).
+def logistic_map(r, x):
+    return r * x * (1 - x)  # Core equation of the logistic map
+
+# Function to generate and plot the bifurcation diagram
+def bifurcation_diagram(r_min=2.5, r_max=4.0, steps=10000, discard=1000, plot_points=200):
+    # Generate a range of r values between r_min and r_max.
+    r_values = np.linspace(r_min, r_max, steps)
+
+    # Initialize the population values with an array of 0.5 (arbitrary starting value).
+    x = 0.5 * np.ones(steps)
+
+    # Set up the figure for plotting.
+    plt.figure(figsize=(10, 7))
+
+    # Iterate to discard transient dynamics, ensuring we only analyze steady-state behavior.
+    for _ in range(discard):
+        x = logistic_map(r_values, x)
+
+    # After discarding transients, iterate again to collect data points for the diagram.
+    for _ in range(plot_points):
+        x = logistic_map(r_values, x)
+        # Plot the r values against the current population values (x).
+        plt.plot(r_values, x, ',k', alpha=0.25)  # ',' creates small dots for a dense diagram
+
+    # Add plot titles and labels for clarity.
+    plt.title("Bifurcation Diagram of the Logistic Map")
+    plt.xlabel("Growth Rate (r)")
+    plt.ylabel("Population (x)")
+    plt.grid(True, alpha=0.5)  # Optional grid for better readability
+    plt.show()
+
+# Entry point to execute the bifurcation diagram plot.
+if __name__ == "__main__":
+    bifurcation_diagram()  # Call the function with default parameters
+</code></pre>
+<p><img alt="bifurcation_diagram" src="../pic/bifurcation_diagram.png"/></p>
+<hr/>
+<h2 id="key-insights">Key Insights</h2>
+<ol>
+<li><strong>Stable Fixed Points:</strong> For small <span class="arithmatex">\(r\)</span>, the population converges to a single fixed point.</li>
+<li><strong>Periodic Orbits:</strong> As <span class="arithmatex">\(r\)</span> increases, bifurcations occur, leading to periodic cycles.</li>
+<li><strong>Chaos:</strong> For <span class="arithmatex">\(r \geq 3.57\)</span>, chaotic behavior is observed, where the population no longer settles into predictable cycles.</li>
+</ol>
+<hr/>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Ecology: Modeling species populations.</li>
+<li>Economics: Describing market dynamics.</li>
+<li>Physics: Exploring chaotic systems.</li>
+</ul>
+<hr/>
+<h2 id="advanced-exploration">Advanced Exploration</h2>
+<h3 id="suggested-student-projects">Suggested Student Projects</h3>
+<p>Students can extend this analysis in the following ways:</p>
+<ol>
+<li>
+<p><strong>Exploration of Lyapunov Exponent:</strong> Implement a calculation of the Lyapunov exponent to quantify chaos in the logistic map. This involves computing the average divergence of nearby trajectories.</p>
+</li>
+<li>
+<p><strong>Effect of Initial Conditions:</strong> Investigate how varying the initial population <span class="arithmatex">\(x_0\)</span> affects the bifurcation diagram. Plot diagrams for different <span class="arithmatex">\(x_0\)</span> values and compare.</p>
+</li>
+<li>
+<p><strong>Parameter Sensitivity:</strong> Analyze the sensitivity of the system to small changes in the growth rate <span class="arithmatex">\(r\)</span> within the chaotic region. Visualize how small perturbations in <span class="arithmatex">\(r\)</span> can lead to different outcomes.</p>
+</li>
+<li>
+<p><strong>3D Visualization:</strong> Extend the bifurcation diagram to include a time dimension, creating a 3D plot to visualize the dynamics.</p>
+</li>
+<li>
+<p><strong>Applications in Real-World Data:</strong> Apply the logistic map to real-world data, such as population studies or stock market fluctuations, to see how well it models observed behaviors.</p>
+</li>
+<li>
+<p><strong>Programming Challenge:</strong> Implement the bifurcation diagram using a different programming language or visualization library (e.g., JavaScript with D3.js or MATLAB).</p>
+</li>
+</ol>
+<hr/>
+<p>This is an introductory example to explore the fascinating behavior of dynamic systems through the logistic equation. Try tweaking the parameters in the code to see how the system's behavior changes!</p>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Mechanics.html" title="Mechanics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../double_pendulum_trajectories/" title="Double Pendulum">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../Mechanics.html" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../double_pendulum_trajectories/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "../..";</script>
+<script src="../../js/theme_extra.js"></script>
+<script src="../../js/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../search/main.js"></script>
+<script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+</body>
+</html>

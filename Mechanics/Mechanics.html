@@ -3286,7 +3286,7 @@ window.Quarto = {
 y(x) = x^2 + C
 \]</span></p>
 <p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value. The solution is a straight line with slope 3. The constant <span class="math inline">\(C\)</span> determines the position of the line in the <span class="math inline">\(y\)</span>-axis.</p>
-<div id="6fe46256" class="cell" data-execution_count="1">
+<div id="832aa704" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3336,7 +3336,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="226133b4" class="cell" data-execution_count="2">
+<div id="dae823b7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3439,7 +3439,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="e9b02003" class="cell" data-execution_count="3">
+<div id="28746056" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3503,14 +3503,34 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 <h2 class="anchored" data-anchor-id="description-of-motion">Description of motion</h2>
 <section id="movement-in-2d-cartesian-coordinates" class="level3">
 <h3 class="anchored" data-anchor-id="movement-in-2d-cartesian-coordinates">Movement in 2D Cartesian coordinates</h3>
-<p>We could start considering moving particle in 1D but 2D examples are more interesting. First we have to define the position of the particle in 2D Cartesian coordinates. The position of the particle is given by the vector <span class="math inline">\(\mathbf{r} = (x, y)\)</span>, where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are the coordinates of the particle in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes, respectively. If this coordinates are functions of time, we can write the position vector as <span class="math inline">\(\mathbf{r}(t) = (x(t), y(t))\)</span>. This function describes the trajectory of the particle in the <span class="math inline">\(xy\)</span> plane.</p>
+<p>We could start considering moving particle in 1D but 2D examples are more interesting. First we have to define the position of the particle in 2D Cartesian coordinates. The position of the particle is given by the vector <span class="math inline">\(\mathbf{r} = (x, y)\)</span>, where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are the coordinates of the particle in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes, respectively. If these coordinates are functions of time, we can write the position vector as <span class="math inline">\(\mathbf{r}(t) = (x(t), y(t))\)</span>. This function describes the trajectory of the particle in the <span class="math inline">\(xy\)</span> plane.</p>
 <p><span class="math display">\[
 [a,b]\rightarrow \mathcal{R}^2:
 t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \]</span></p>
+<section id="explanation-of-symbols" class="level4">
+<h4 class="anchored" data-anchor-id="explanation-of-symbols">Explanation of Symbols:</h4>
+<ul>
+<li><span class="math inline">\(\mathbf{r}\)</span>: Position vector of the particle.</li>
+<li><span class="math inline">\((x, y)\)</span>: Cartesian coordinates representing the particle’s position in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes.</li>
+<li><span class="math inline">\(\mathbf{r}(t)\)</span>: Position vector as a function of time, describing the particle’s motion.</li>
+<li><span class="math inline">\(x(t), y(t)\)</span>: Time-dependent functions representing the particle’s coordinates in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes.</li>
+<li><span class="math inline">\([a, b]\)</span>: Interval of time during which the particle’s motion is considered.</li>
+<li><span class="math inline">\(\mathcal{R}^2\)</span>: Two-dimensional Cartesian coordinate space.</li>
+<li><span class="math inline">\(t\)</span>: Time variable, used as a parameter for the position function.</li>
+</ul>
+</section>
+<section id="how-mathematicians-read-this-notation" class="level4">
+<h4 class="anchored" data-anchor-id="how-mathematicians-read-this-notation">How Mathematicians Read This Notation:</h4>
+<p>Mathematicians interpret the notation as follows:</p>
+<ul>
+<li>“<span class="math inline">\([a,b] \rightarrow \mathcal{R}^2\)</span>” means “a mapping (or function) is defined from the interval <span class="math inline">\([a, b]\)</span> in time to the two-dimensional Cartesian space <span class="math inline">\(\mathcal{R}^2\)</span>.”</li>
+<li>“<span class="math inline">\(t \rightarrow \mathbf{r}(t) = (x(t), y(t))\)</span>” specifies that for each time <span class="math inline">\(t\)</span> within the interval <span class="math inline">\([a, b]\)</span>, there exists a corresponding position vector <span class="math inline">\(\mathbf{r}(t)\)</span> in <span class="math inline">\(\mathcal{R}^2\)</span>, which consists of the time-dependent coordinates <span class="math inline">\(x(t)\)</span> and <span class="math inline">\(y(t)\)</span>.</li>
+<li>The overall expression describes a trajectory as a continuous function of time, mapping the progression of time to the corresponding locations in 2D space.</li>
+</ul>
 <section id="python-example" class="level5">
 <h5 class="anchored" data-anchor-id="python-example">Python example</h5>
-<div id="aea5fb6f" class="cell" data-execution_count="4">
+<div id="94a5acfb" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3579,6 +3599,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 <p>In geberal when we create any curve in Geogebra we can create additional point which will be moving along the curve. This is very useful to visualize the motion of the particle.</p>
 </section>
 </section>
+</section>
 <section id="velocity" class="level3">
 <h3 class="anchored" data-anchor-id="velocity">Velocity</h3>
 <p>The velocity of the particle is the derivative of the position vector with respect to time. The velocity vector is defined as</p>
@@ -3586,7 +3607,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \left(\frac{dx(t)}{dt}, \frac{dy(t)}{dt}\right)
 \]</span></p>
 <p>The velocity vector describes the speed and direction of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the velocity vector is the speed of the particle. The direction of the velocity vector is the direction of motion of the particle.</p>
-<div id="ebd72b25" class="cell" data-execution_count="5">
+<div id="9c64e960" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3647,7 +3668,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 \]</span></p>
 <p>The acceleration vector describes the rate of change of the velocity of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.</p>
-<div id="07754e3e" class="cell" data-execution_count="6">
+<div id="f4f9a28b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3760,7 +3781,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 </section>
 <section id="numerical-solution-2" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-2">Numerical solution</h4>
-<div id="7373fa79" class="cell" data-execution_count="7">
+<div id="36a276a5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3827,7 +3848,7 @@ y(t) &amp;= A_y \sin(\omega t) + B_y \cos(\omega t)
 </section>
 <section id="numerical-solution-3" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-3">Numerical solution</h4>
-<div id="24c61afc" class="cell" data-execution_count="8">
+<div id="e147ca7f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
