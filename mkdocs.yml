@@ -4,6 +4,7 @@ nav:
   - Mechanics:
     - Mechanics: Mechanics/Mechanics.html
     - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
+    - Double Pendulum: Mechanics/double_pendulum_trajectories.md
 theme:
   name: readthedocs
   toc:
