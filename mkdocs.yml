@@ -1,0 +1,25 @@
+site_name: Physics 2024/25 Summer
+theme:
+  name: readthedocs
+  toc:
+    depth: 4
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - python
+    - bash
+markdown_extensions:
+  - toc
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+plugins:
+  - search
+  - mkdocstrings
+  - mermaid2
+
+extra_javascript:
+#  - js/init-scripts.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
