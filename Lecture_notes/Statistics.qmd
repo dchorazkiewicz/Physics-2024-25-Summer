@@ -1,0 +1,40 @@
+---
+title: Statistics
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    page-layout: full
+    grid:
+      body-width: 1000px
+      sidebar-width: 300px
+      margin-width: 300px
+      gutter-width: 2rem
+    theme:
+      light: [flatly, custom.scss]
+      dark: [darkly, custom.scss]
+    self-contained: true
+---
+
+## Basic Concepts
+
+### Experiment with dice
+
+Let us make an experiment with a dice. We will roll the dice 10 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.
+
+```{python}
+import pandas as pd
+import numpy as np
+
+np.random.seed(0)
+data = np.random.randint(1, 7, (10, 10))
+df = pd.DataFrame(data, columns=[f"Roll {i}" for i in range(1, 11)])
+df
+```
+
+We can compute the average number of times each number appears in the 10 rolls.
+
+```{python}
+df.mean()
+```

@@ -6,7 +6,7 @@ nav:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
   - Experiments & Statistics:
-      - Statistics: Experiments_Statistics/intro_to_stats.md
+      - Statistics: Experiments_Statistics/Statistics.html
 
 theme:
   name: material
