@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Mechanics:
     - Mechanics: Mechanics/Mechanics.html
+    - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
 theme:
   name: readthedocs
   toc:
