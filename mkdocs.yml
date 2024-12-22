@@ -5,6 +5,8 @@ nav:
       - Mechanics: Mechanics/Mechanics.html
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
+      - Lorenz Attractor: Mechanics/lorenz_system_and_attractor.md
+      - Predator-Prey Model: Mechanics/Predator-Prey Model.md
   - Experiments & Statistics:
       - Statistics: Experiments_Statistics/Statistics.html
 

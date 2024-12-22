@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktywne Pole Wektorowe z Kulą</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="vectorField" width="500" height="500"></canvas>
+    <script>
+        const canvas = document.getElementById('vectorField');
+        const ctx = canvas.getContext('2d');
+
+        const ball = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 10,
+            isDragging: false
+        };
+
+        // Funkcja generująca wektor dla danego punktu (x, y)
+        function vectorFunction(x, y) {
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const angle = Math.atan2(y - centerY, x - centerX);
+            return {
+                x: Math.cos(angle),
+                y: Math.sin(angle)
+            };
+        }
+
+        // Rysowanie pola wektorowego
+        const gridSize = 20; // Odległość między wektorami
+        const vectorLength = 10; // Długość wektora
+
+        function drawVectorField() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let x = 0; x < canvas.width; x += gridSize) {
+                for (let y = 0; y < canvas.height; y += gridSize) {
+                    const vector = vectorFunction(x, y);
+                    const startX = x;
+                    const startY = y;
+                    const endX = x + vector.x * vectorLength;
+                    const endY = y + vector.y * vectorLength;
+
+                    // Rysowanie linii wektora
+                    ctx.beginPath();
+                    ctx.moveTo(startX, startY);
+                    ctx.lineTo(endX, endY);
+                    ctx.stroke();
+
+                    // Rysowanie grotu strzałki
+                    const headlen = 5; // Długość grotu
+                    const angle = Math.atan2(endY - startY, endX - startX);
+                    ctx.beginPath();
+                    ctx.moveTo(endX, endY);
+                    ctx.lineTo(endX - headlen * Math.cos(angle - Math.PI / 6), endY - headlen * Math.sin(angle - Math.PI / 6));
+                    ctx.moveTo(endX, endY);
+                    ctx.lineTo(endX - headlen * Math.cos(angle + Math.PI / 6), endY - headlen * Math.sin(angle + Math.PI / 6));
+                    ctx.stroke();
+                }
+            }
+        }
+
+        // Rysowanie kulki
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        // Aktualizacja sceny
+        function update() {
+            drawVectorField();
+            drawBall();
+
+            // Rysowanie wektora w miejscu kulki
+            const vector = vectorFunction(ball.x, ball.y);
+            const endX = ball.x + vector.x * vectorLength;
+            const endY = ball.y + vector.y * vectorLength;
+
+            ctx.beginPath();
+            ctx.moveTo(ball.x, ball.y);
+            ctx.lineTo(endX, endY);
+            ctx.strokeStyle = 'blue';
+            ctx.stroke();
+
+            // Rysowanie grotu strzałki
+            const headlen = 5; // Długość grotu
+            const angle = Math.atan2(endY - ball.x, endX - ball.y);
+            ctx.beginPath();
+            ctx.moveTo(endX, endY);
+            ctx.lineTo(endX - headlen * Math.cos(angle - Math.PI / 6), endY - headlen * Math.sin(angle - Math.PI / 6));
+            ctx.moveTo(endX, endY);
+            ctx.lineTo(endX - headlen * Math.cos(angle + Math.PI / 6), endY - headlen * Math.sin(angle + Math.PI / 6));
+            ctx.strokeStyle = 'blue';
+            ctx.stroke();
+        }
+
+        // Obsługa zdarzeń myszy
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            const dist = Math.hypot(mouseX - ball.x, mouseY - ball.y);
+            if (dist < ball.radius) {
+                ball.isDragging = true;
+            }
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (ball.isDragging) {
+                const rect = canvas.getBoundingClientRect();
+                ball.x = e.clientX - rect.left;
+                ball.y = e.clientY - rect.top;
+                update();
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            ball.isDragging = false;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            ball.isDragging = false;
+        });
+
+        // Inicjalizacja
+        update();
+    </script>
+</body>
+</html>
