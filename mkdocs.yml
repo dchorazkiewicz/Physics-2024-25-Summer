@@ -6,7 +6,12 @@ nav:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
       - Lorenz Attractor: Mechanics/lorenz_system_and_attractor.md
-      - Predator-Prey Model: Mechanics/Predator-Prey Model.md
+      - Predator-Prey Model: Mechanics/predator_prey_model.md
+      - Duffing Oscillator: Mechanics/duffing_oscillator.md
+      - Henon Map: Mechanics/henon_map.md
+      - Chua's Circuit: Mechanics/chuas_circuit.md
+      - Pendulum with Damping: Mechanics/pendulum_with_damping_and_forcing.md
+      - Three Body Problem: Mechanics/three_body_problem.md
   - Experiments & Statistics:
       - Statistics: Experiments_Statistics/Statistics.html
 
