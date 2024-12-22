@@ -99,15 +99,19 @@ plt.show()
 ## Suggested Projects
 
 1. **Parameter Sensitivity:**
+
    - Investigate how varying $\alpha$, $\beta$, $\gamma$, and $\delta$ affects the dynamics.
 
 2. **Stability Analysis:**
+
    - Analyze the stability of the fixed points to understand long-term behavior.
 
 3. **Real-World Data:**
+
    - Fit the Lotka-Volterra model to real-world predator-prey data to evaluate its applicability.
 
 4. **Extensions:**
+
    - Add additional species or environmental factors to study more complex ecosystems.
 
 ---

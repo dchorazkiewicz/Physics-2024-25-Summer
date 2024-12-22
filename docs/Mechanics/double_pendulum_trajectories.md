@@ -92,6 +92,7 @@ plt.show()
 ## Key Insights
 
 1. **Trajectories Diverge Rapidly:** Even with a small initial difference, the trajectories of the double pendulum diverge quickly, illustrating chaotic behavior.
+
 2. **Visualization of Sensitivity:** The second plot clearly shows how the differences grow over time, emphasizing the system's sensitivity to initial conditions.
 
 ---

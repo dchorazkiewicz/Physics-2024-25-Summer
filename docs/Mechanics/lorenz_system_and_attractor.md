@@ -88,15 +88,19 @@ plt.show()
 ## Suggested Projects
 
 1. **Parameter Exploration:**
+
    Study how changing $\sigma$, $\rho$, and $\beta$ affects the system’s behavior.
 
 2. **Lyapunov Exponent:**
+
    Quantify the chaos by calculating the Lyapunov exponent of the system.
 
 3. **Comparison with Real Systems:**
+
    Compare the Lorenz system to experimental data from fluid dynamics or weather patterns.
 
 4. **3D Visualization:**
+
    Use interactive tools like Plotly to explore the attractor dynamically.
 
 ---
