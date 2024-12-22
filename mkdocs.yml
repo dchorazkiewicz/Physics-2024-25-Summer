@@ -2,7 +2,7 @@ site_name: Physics 2024/25 Summer
 nav:
   - Home: index.md
   - Mechanics:
-      - Mechanics: Mechanics/Mechanics.html
+      - Lecture Notes: Mechanics/Mechanics.html
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
       - Lorenz Attractor: Mechanics/lorenz_system_and_attractor.md
