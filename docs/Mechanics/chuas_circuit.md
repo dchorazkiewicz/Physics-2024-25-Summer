@@ -80,34 +80,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Chaos in Electronics:**
-   - Chua's circuit is a tangible demonstration of chaos, allowing theoretical predictions to be experimentally verified.
+1. **Chaos in Electronics:** Chua's circuit is a tangible demonstration of chaos, allowing theoretical predictions to be experimentally verified.
 
-2. **Piecewise Nonlinearity:**
-   - The nonlinear resistor introduces the nonlinearity needed for chaotic behavior.
+2. **Piecewise Nonlinearity:** The nonlinear resistor introduces the nonlinearity needed for chaotic behavior.
 
-3. **Rich Dynamics:**
-   - Depending on the parameters, the circuit exhibits periodic, quasiperiodic, or chaotic behavior.
+3. **Rich Dynamics:** Depending on the parameters, the circuit exhibits periodic, quasiperiodic, or chaotic behavior.
 
 ---
 
 ## Suggested Projects
 
-1. **Parameter Exploration:**
+1. **Parameter Exploration:** Investigate how varying $\alpha$, $\beta$, $m_0$, and $m_1$ affects the dynamics.
 
-   - Investigate how varying $\alpha$, $\beta$, $m_0$, and $m_1$ affects the dynamics.
+2. **Lyapunov Exponent:** Compute the Lyapunov exponent to quantify chaos in the circuit.
 
-2. **Lyapunov Exponent:**
+3. **Physical Implementation:** Build Chua's circuit with real electronic components and compare the experimental results with simulations.
 
-   - Compute the Lyapunov exponent to quantify chaos in the circuit.
-
-3. **Physical Implementation:**
-
-   - Build Chua's circuit with real electronic components and compare the experimental results with simulations.
-
-4. **Fractal Dimension:**
-
-   - Calculate the fractal dimension of the attractor to understand its complexity.
+4. **Fractal Dimension:** Calculate the fractal dimension of the attractor to understand its complexity.
 
 ---
 

@@ -85,34 +85,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Oscillatory Behavior:**
-   - The populations of prey and predators tend to oscillate over time, with predator peaks lagging behind prey peaks.
+1. **Oscillatory Behavior:** The populations of prey and predators tend to oscillate over time, with predator peaks lagging behind prey peaks.
 
-2. **Phase Plane:**
-   - The phase plane reveals closed orbits, indicating periodic solutions depending on initial conditions.
+2. **Phase Plane:** The phase plane reveals closed orbits, indicating periodic solutions depending on initial conditions.
 
-3. **Nonlinearity:**
-   - The interaction terms ($\beta xy$ and $\delta xy$) introduce nonlinearity, leading to complex dynamics.
+3. **Nonlinearity:** The interaction terms ($\beta xy$ and $\delta xy$) introduce nonlinearity, leading to complex dynamics.
 
 ---
 
 ## Suggested Projects
 
-1. **Parameter Sensitivity:**
+1. **Parameter Sensitivity:** Investigate how varying $\alpha$, $\beta$, $\gamma$, and $\delta$ affects the dynamics.
 
-   - Investigate how varying $\alpha$, $\beta$, $\gamma$, and $\delta$ affects the dynamics.
+2. **Stability Analysis:** Analyze the stability of the fixed points to understand long-term behavior.
 
-2. **Stability Analysis:**
+3. **Real-World Data:** Fit the Lotka-Volterra model to real-world predator-prey data to evaluate its applicability.
 
-   - Analyze the stability of the fixed points to understand long-term behavior.
-
-3. **Real-World Data:**
-
-   - Fit the Lotka-Volterra model to real-world predator-prey data to evaluate its applicability.
-
-4. **Extensions:**
-
-   - Add additional species or environmental factors to study more complex ecosystems.
+4. **Extensions:** Add additional species or environmental factors to study more complex ecosystems.
 
 ---
 

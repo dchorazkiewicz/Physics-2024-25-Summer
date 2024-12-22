@@ -66,34 +66,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Chaotic Behavior:**
-   - The Hénon map is one of the simplest systems to exhibit chaos, making it a foundational model in dynamical systems.
+1. **Chaotic Behavior:** The Hénon map is one of the simplest systems to exhibit chaos, making it a foundational model in dynamical systems.
 
-2. **Strange Attractor:**
-   - The attractor forms a fractal structure, highlighting the self-similar nature of chaotic systems.
+2. **Strange Attractor:** The attractor forms a fractal structure, highlighting the self-similar nature of chaotic systems.
 
-3. **Parameter Sensitivity:**
-   - Small changes in $a$ or $b$ can lead to significant differences in the attractor's shape and dynamics.
+3. **Parameter Sensitivity:** Small changes in $a$ or $b$ can lead to significant differences in the attractor's shape and dynamics.
 
 ---
 
 ## Suggested Projects
 
-1. **Parameter Exploration:**
+1. **Parameter Exploration:** Investigate how varying $a$ and $b$ affects the attractor's shape and stability.
 
-   - Investigate how varying $a$ and $b$ affects the attractor's shape and stability.
+2. **Fractal Dimension:** Calculate the fractal dimension of the Hénon attractor to quantify its complexity.
 
-2. **Fractal Dimension:**
+3. **Lyapunov Exponent:** Compute the Lyapunov exponent to characterize the map's chaotic nature.
 
-   - Calculate the fractal dimension of the Hénon attractor to quantify its complexity.
-
-3. **Lyapunov Exponent:**
-
-   - Compute the Lyapunov exponent to characterize the map's chaotic nature.
-
-4. **3D Visualization:**
-
-   - Extend the analysis to include a time dimension or color code the points by iteration.
+4. **3D Visualization:** Extend the analysis to include a time dimension or color code the points by iteration.
 
 ---
 

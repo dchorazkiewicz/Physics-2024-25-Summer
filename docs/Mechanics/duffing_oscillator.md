@@ -79,34 +79,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Nonlinear Dynamics:**
-   - The cubic term introduces nonlinearity, leading to rich dynamics, including bifurcations and chaos.
+1. **Nonlinear Dynamics:** The cubic term introduces nonlinearity, leading to rich dynamics, including bifurcations and chaos.
 
-2. **Phase Space Behavior:**
-   - The phase plane can reveal limit cycles, chaotic attractors, or other patterns depending on parameters.
+2. **Phase Space Behavior:** The phase plane can reveal limit cycles, chaotic attractors, or other patterns depending on parameters.
 
-3. **Driven and Damped System:**
-   - The interplay of damping, driving force, and nonlinearity determines the behavior of the oscillator.
+3. **Driven and Damped System:** The interplay of damping, driving force, and nonlinearity determines the behavior of the oscillator.
 
 ---
 
 ## Suggested Projects
 
-1. **Bifurcation Analysis:**
+1. **Bifurcation Analysis:** Vary parameters like $\gamma$ or $\omega$ to explore transitions between different dynamical regimes.
 
-   - Vary parameters like $\gamma$ or $\omega$ to explore transitions between different dynamical regimes.
+2. **Lyapunov Exponent:** Compute the Lyapunov exponent to identify chaotic regions.
 
-2. **Lyapunov Exponent:**
+3. **Comparison with Real Systems:** Model physical systems like beam vibrations or electronic circuits.
 
-   - Compute the Lyapunov exponent to identify chaotic regions.
-
-3. **Comparison with Real Systems:**
-
-   - Model physical systems like beam vibrations or electronic circuits.
-
-4. **Energy Analysis:**
-
-   - Study how energy evolves in the system over time, especially in chaotic regimes.
+4. **Energy Analysis:** Study how energy evolves in the system over time, especially in chaotic regimes.
 
 ---
 

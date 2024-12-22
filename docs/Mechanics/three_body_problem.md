@@ -103,34 +103,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Nonlinearity and Chaos:**
-   - The three-body problem is highly nonlinear and exhibits sensitive dependence on initial conditions, leading to chaotic trajectories.
+1. **Nonlinearity and Chaos:** The three-body problem is highly nonlinear and exhibits sensitive dependence on initial conditions, leading to chaotic trajectories.
 
-2. **Unpredictability:**
-   - Long-term predictions of the bodies' positions are inherently limited by numerical precision and initial condition accuracy.
+2. **Unpredictability:** Long-term predictions of the bodies' positions are inherently limited by numerical precision and initial condition accuracy.
 
-3. **Conservation Laws:**
-   - The system conserves total energy and angular momentum, providing useful checks for numerical simulations.
+3. **Conservation Laws:** The system conserves total energy and angular momentum, providing useful checks for numerical simulations.
 
 ---
 
 ## Suggested Projects
 
-1. **Energy Conservation:**
+1. **Energy Conservation:** Calculate and verify the conservation of total energy throughout the simulation.
 
-   - Calculate and verify the conservation of total energy throughout the simulation.
+2. **Initial Condition Sensitivity:** Explore how small changes in initial positions or velocities affect the trajectories.
 
-2. **Initial Condition Sensitivity:**
+3. **Visualization Enhancements:** Create interactive 3D visualizations or add color coding for time progression.
 
-   - Explore how small changes in initial positions or velocities affect the trajectories.
-
-3. **Visualization Enhancements:**
-
-   - Create interactive 3D visualizations or add color coding for time progression.
-
-4. **Symmetrical Configurations:**
-
-   - Investigate special cases such as equilateral triangle orbits and their stability.
+4. **Symmetrical Configurations:** Investigate special cases such as equilateral triangle orbits and their stability.
 
 ---
 

@@ -79,34 +79,23 @@ plt.show()
 
 ## Key Insights
 
-1. **Nonlinear Dynamics:**
-   - The interaction between damping, restoring force, and driving force creates complex dynamics.
+1. **Nonlinear Dynamics:** The interaction between damping, restoring force, and driving force creates complex dynamics.
 
-2. **Phase Space Behavior:**
-   - The phase plane reveals different regimes: limit cycles, quasiperiodic orbits, and chaotic attractors.
+2. **Phase Space Behavior:** The phase plane reveals different regimes: limit cycles, quasiperiodic orbits, and chaotic attractors.
 
-3. **Sensitivity to Parameters:**
-   - Small changes in $b$, $c$, $A$, or $\omega$ can lead to drastically different behaviors.
+3. **Sensitivity to Parameters:** Small changes in $b$, $c$, $A$, or $\omega$ can lead to drastically different behaviors.
 
 ---
 
 ## Suggested Projects
 
-1. **Parameter Exploration:**
+1. **Parameter Exploration:** Investigate the effects of varying $A$ and $\omega$ to explore transitions between periodic, quasiperiodic, and chaotic motion.
 
-   - Investigate the effects of varying $A$ and $\omega$ to explore transitions between periodic, quasiperiodic, and chaotic motion.
+2. **Poincaré Section:** Visualize the system's dynamics using a Poincaré section to identify periodic orbits and chaos.
 
-2. **Poincaré Section:**
+3. **Energy Analysis:** Study the energy evolution in the system and identify energy dissipation and driving force contributions.
 
-   - Visualize the system's dynamics using a Poincaré section to identify periodic orbits and chaos.
-
-3. **Energy Analysis:**
-
-   - Study the energy evolution in the system and identify energy dissipation and driving force contributions.
-
-4. **Comparison with Real Pendulums:**
-
-   - Build a physical forced pendulum and compare its motion to the simulation.
+4. **Comparison with Real Pendulums:** Build a physical forced pendulum and compare its motion to the simulation.
 
 ---
 
