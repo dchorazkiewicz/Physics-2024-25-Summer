@@ -5,9 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Statistics.html" rel="prev"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.48" name="generator"/>
-<title>Statistics - Physics 2024/25 Summer</title>
+<title>Estiamting Pi - Physics 2024/25 Summer</title>
 <link href="../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#statistics">
+<a class="md-skip" href="#monte-carlo-estimation-of-pi">
           Skip to content
         </a>
 </div>
@@ -46,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Statistics
+              Estiamting Pi
             
           </span>
 </div>
@@ -237,15 +238,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     Experiments &amp; Statistics
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Experiments &amp; Statistics
@@ -275,26 +276,87 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
     🤔 Student Projects
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
             🤔 Student Projects
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../estimation_of_pi/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Estiamting Pi
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Estiamting Pi
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-code-example-estimating-pi-with-monte-carlo">
+<span class="md-ellipsis">
+      Python Code Example: Estimating \(\pi\) with Monte Carlo
+    </span>
+</a>
+<nav aria-label="Python Code Example: Estimating \(\pi\) with Monte Carlo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-circle-and-square-method">
+<span class="md-ellipsis">
+      1. Circle and Square Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-buffons-needle-problem">
+<span class="md-ellipsis">
+      2. Buffon's Needle Problem
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-projects">
+<span class="md-ellipsis">
+      Suggested Projects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -317,29 +379,50 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-is-a-probability">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      What is a probability?
-    </span>
-</a>
-<nav aria-label="What is a probability?" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#simulating-probability-in-python">
-<span class="md-ellipsis">
-      Simulating Probability in Python
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-law-of-large-numbers">
+<a class="md-nav__link" href="#python-code-example-estimating-pi-with-monte-carlo">
 <span class="md-ellipsis">
-      The Law of Large Numbers
+      Python Code Example: Estimating \(\pi\) with Monte Carlo
+    </span>
+</a>
+<nav aria-label="Python Code Example: Estimating \(\pi\) with Monte Carlo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-circle-and-square-method">
+<span class="md-ellipsis">
+      1. Circle and Square Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-buffons-needle-problem">
+<span class="md-ellipsis">
+      2. Buffon's Needle Problem
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-projects">
+<span class="md-ellipsis">
+      Suggested Projects
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -348,65 +431,101 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="statistics">Statistics</h1>
-<h2 id="what-is-a-probability">What is a probability?</h2>
-<p>Probability is a measure of the likelihood of an event occurring. It is a value between 0 and 1, where 0 indicates an impossible event and 1 indicates a certain event.</p>
-<p>In mathematical terms, the probability of an event <span class="arithmatex">\(A\)</span> is calculated as:</p>
-<div class="arithmatex">\[
-P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
-\]</div>
-<p>For example, if we roll a fair six-sided die, the probability of rolling a 4 is:</p>
-<div class="arithmatex">\[
-P(4) = \frac{1}{6}
-\]</div>
-<h3 id="simulating-probability-in-python">Simulating Probability in Python</h3>
-<p>To better understand probabilities, we can use simulations. For instance, we can simulate rolling a die multiple times to estimate the probability of a specific outcome.</p>
-<p>Here is a Python simulation to estimate the probability of rolling a 4 on a six-sided die:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<h1 id="monte-carlo-estimation-of-pi">Monte Carlo Estimation of <span class="arithmatex">\(\pi\)</span></h1>
+<h2 id="overview">Overview</h2>
+<p>Monte Carlo methods provide a stochastic way to solve problems that might be deterministic in principle. Estimating the value of <span class="arithmatex">\(\pi\)</span> is a classic problem in this domain, often demonstrated using simulations like:</p>
+<ol>
+<li><strong>Circle and Square Method:</strong> Simulating random points in a square and checking if they fall inside an inscribed circle.</li>
+<li><strong>Buffon's Needle Problem:</strong> Dropping needles on a floor with parallel lines and calculating the probability of crossing a line.</li>
+</ol>
+<p>Both methods highlight the power of randomness in approximating mathematical constants.</p>
+<hr/>
+<h2 id="python-code-example-estimating-pi-with-monte-carlo">Python Code Example: Estimating <span class="arithmatex">\(\pi\)</span> with Monte Carlo</h2>
+<h3 id="1-circle-and-square-method">1. Circle and Square Method</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Function to simulate rolling a die 'n' times</span>
-<span class="k">def</span> <span class="nf">simulate_die_rolls</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1"># Generate a list of 'n' random die rolls (values between 1 and 6)</span>
-    <span class="n">rolls</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-    <span class="c1"># Calculate the proportion of rolls that resulted in a 4</span>
-    <span class="k">return</span> <span class="n">rolls</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+<span class="c1"># Parameters</span>
+<span class="n">total_points</span> <span class="o">=</span> <span class="mi">10000</span>
 
-<span class="c1"># Simulate 10,000 die rolls</span>
-<span class="n">n_rolls</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="c1"># Estimate the probability of rolling a 4</span>
-<span class="n">estimated_probability</span> <span class="o">=</span> <span class="n">simulate_die_rolls</span><span class="p">(</span><span class="n">n_rolls</span><span class="p">)</span>
-<span class="c1"># Print the estimated probability</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Estimated probability of rolling a 4: </span><span class="si">{</span><span class="n">estimated_probability</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<p>By increasing the number of simulations (<span class="arithmatex">\(n\)</span>), we get a more accurate estimate of the true probability.</p>
-<h3 id="the-law-of-large-numbers">The Law of Large Numbers</h3>
-<p>The Law of Large Numbers states that as the number of trials increases, the experimental probability (from simulations) will converge to the theoretical probability.</p>
-<p>For example, if we simulate the die rolls with a very large number of trials, we expect the estimated probability to approach <span class="arithmatex">\(\frac{1}{6}\)</span>. Let's modify the simulation to observe this behavior:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># Generate random points in a unit square</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total_points</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total_points</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">simulate_convergence</span><span class="p">(</span><span class="n">n_trials</span><span class="p">):</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">cumulative_4s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_trials</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-            <span class="n">cumulative_4s</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cumulative_4s</span> <span class="o">/</span> <span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">results</span>
+<span class="c1"># Check if points are inside the unit circle</span>
+<span class="n">inside_circle</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span>
 
-<span class="c1"># Simulate 100,000 trials</span>
-<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">100000</span>
-<span class="n">convergence_results</span> <span class="o">=</span> <span class="n">simulate_convergence</span><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span>
+<span class="c1"># Estimate π</span>
+<span class="n">pi_estimate</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">inside_circle</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_points</span>
 
-<span class="c1"># Plot the convergence</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_trials</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">convergence_results</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Theoretical Probability'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Number of Trials'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Estimated Probability'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Convergence to Theoretical Probability'</span><span class="p">)</span>
+<span class="c1"># Visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">inside_circle</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">inside_circle</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Inside Circle"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">~</span><span class="n">inside_circle</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="o">~</span><span class="n">inside_circle</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Outside Circle"</span><span class="p">)</span>
+<span class="n">circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Monte Carlo Estimation of π: </span><span class="si">{</span><span class="n">pi_estimate</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"y"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"equal"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"docs/Mechanics/pic/monte_carlo_circle.png"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p>This plot illustrates how the estimated probability stabilizes around the theoretical probability of <span class="arithmatex">\(\frac{1}{6}\)</span> as the number of trials increases.</p>
+<hr/>
+<h3 id="2-buffons-needle-problem">2. Buffon's Needle Problem</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">needle_length</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">line_spacing</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">total_needles</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="c1"># Simulate needle drops</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">total_needles</span><span class="p">)</span>  <span class="c1"># Angle with the horizontal</span>
+<span class="n">x_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">line_spacing</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">total_needles</span><span class="p">)</span>  <span class="c1"># Distance to nearest line</span>
+
+<span class="c1"># Check if needle crosses a line</span>
+<span class="n">crosses_line</span> <span class="o">=</span> <span class="n">x_center</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">needle_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Estimate π</span>
+<span class="n">pi_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">needle_length</span> <span class="o">*</span> <span class="n">total_needles</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">crosses_line</span><span class="p">)</span> <span class="o">*</span> <span class="n">line_spacing</span><span class="p">)</span>
+
+<span class="c1"># Output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Monte Carlo Estimation of π using Buffon's Needle: </span><span class="si">{</span><span class="n">pi_estimate</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<hr/>
+<h2 id="key-insights">Key Insights</h2>
+<ol>
+<li>
+<p><strong>Randomness and Approximation:</strong> Monte Carlo methods rely on randomness to approximate deterministic quantities. Increasing the number of simulations improves the accuracy of the result.</p>
+</li>
+<li>
+<p><strong>Circle and Square:</strong> This method illustrates the geometric relationship between a circle and its circumscribing square.</p>
+</li>
+<li>
+<p><strong>Buffon's Needle:</strong> A classic probabilistic approach linking geometry and probability theory.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="suggested-projects">Suggested Projects</h2>
+<ol>
+<li>
+<p><strong>Accuracy vs. Sample Size:</strong> Analyze how the estimation of <span class="arithmatex">\(\pi\)</span> improves as the number of points or needles increases.</p>
+</li>
+<li>
+<p><strong>Higher Dimensions:</strong> Extend the circle and square method to estimate the volume of a hypersphere in higher dimensions.</p>
+</li>
+<li>
+<p><strong>Visualization Enhancements:</strong> Animate the needle drops or point generation for better understanding.</p>
+</li>
+<li>
+<p><strong>Statistical Analysis:</strong> Perform multiple runs and compute confidence intervals for the estimated <span class="arithmatex">\(\pi\)</span>.</p>
+</li>
+</ol>
+<hr/>
+<p>These examples showcase how randomness can uncover mathematical truths. Experiment with these methods and variations to appreciate the elegance of Monte Carlo techniques in estimating <span class="arithmatex">\(\pi\)</span>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
