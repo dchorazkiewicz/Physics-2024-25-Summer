@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Mechanics.html" rel="prev"/>
-<link href="../double_pendulum_trajectories/" rel="next"/>
+<link href="../henon_map/" rel="prev"/>
+<link href="../pendulum_with_damping_and_forcing/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.48" name="generator"/>
-<title>Logistic Equation - Physics 2024/25 Summer</title>
+<title>Chua's Circuit - Physics 2024/25 Summer</title>
 <link href="../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#logistic-equation-and-bifurcation">
+<a class="md-skip" href="#chuas-circuit">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Logistic Equation
+              Chua's Circuit
             
           </span>
 </div>
@@ -139,73 +139,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Logistic Equation
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../logistic_equation_bifurcation/">
 <span class="md-ellipsis">
     Logistic Equation
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#overview">
-<span class="md-ellipsis">
-      Overview
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#python-code-example-simulating-and-plotting-bifurcations">
-<span class="md-ellipsis">
-      Python Code Example: Simulating and Plotting Bifurcations
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-insights">
-<span class="md-ellipsis">
-      Key Insights
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#applications">
-<span class="md-ellipsis">
-      Applications
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-exploration">
-<span class="md-ellipsis">
-      Advanced Exploration
-    </span>
-</a>
-<nav aria-label="Advanced Exploration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#suggested-student-projects">
-<span class="md-ellipsis">
-      Suggested Student Projects
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../double_pendulum_trajectories/">
@@ -242,12 +181,55 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../chuas_circuit/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chua's Circuit
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chua's Circuit
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-code-example-simulating-and-visualizing-chuas-circuit">
+<span class="md-ellipsis">
+      Python Code Example: Simulating and Visualizing Chua's Circuit
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-projects">
+<span class="md-ellipsis">
+      Suggested Projects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../pendulum_with_damping_and_forcing/">
@@ -312,9 +294,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#python-code-example-simulating-and-plotting-bifurcations">
+<a class="md-nav__link" href="#python-code-example-simulating-and-visualizing-chuas-circuit">
 <span class="md-ellipsis">
-      Python Code Example: Simulating and Plotting Bifurcations
+      Python Code Example: Simulating and Visualizing Chua's Circuit
     </span>
 </a>
 </li>
@@ -326,29 +308,11 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#applications">
+<a class="md-nav__link" href="#suggested-projects">
 <span class="md-ellipsis">
-      Applications
+      Suggested Projects
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#advanced-exploration">
-<span class="md-ellipsis">
-      Advanced Exploration
-    </span>
-</a>
-<nav aria-label="Advanced Exploration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#suggested-student-projects">
-<span class="md-ellipsis">
-      Suggested Student Projects
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -357,100 +321,104 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="logistic-equation-and-bifurcation">Logistic Equation and Bifurcation</h1>
+<h1 id="chuas-circuit">Chua's Circuit</h1>
 <h2 id="overview">Overview</h2>
-<p>The logistic equation is a simple mathematical model that describes population growth with a carrying capacity. The equation is:</p>
-<div class="arithmatex">\[ x_{n+1} = r x_n (1 - x_n) \]</div>
+<p>Chua's Circuit is a simple electronic circuit that exhibits a wide range of nonlinear dynamics, including chaos. It is a physical realization of a chaotic system and has applications in studying nonlinear dynamics and chaos theory.</p>
+<p>The equations describing Chua's circuit are:</p>
+<div class="arithmatex">\[
+\frac{dx}{dt} = \alpha (y - x - h(x))
+\]</div>
+<div class="arithmatex">\[
+\frac{dy}{dt} = x - y + z
+\]</div>
+<div class="arithmatex">\[
+\frac{dz}{dt} = -\beta y
+\]</div>
 <p>Where:</p>
 <ul>
-<li><span class="arithmatex">\(x_n\)</span> is the population at generation <span class="arithmatex">\(n\)</span> (normalized between 0 and 1).</li>
-<li><span class="arithmatex">\(r\)</span> is the growth rate parameter.</li>
+<li><span class="arithmatex">\(h(x)\)</span> is a piecewise-linear function that models the nonlinear resistance (Chua's diode):
+  $$ h(x) = m_1 x + 0.5 (m_0 - m_1) (|x + 1| - |x - 1|) $$</li>
+<li><span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(m_0\)</span>, and <span class="arithmatex">\(m_1\)</span> are parameters defining the circuit's behavior.</li>
 </ul>
-<p>This model exhibits interesting dynamics as the parameter <span class="arithmatex">\(r\)</span> varies, leading to bifurcations and chaotic behavior.</p>
 <hr/>
-<h2 id="python-code-example-simulating-and-plotting-bifurcations">Python Code Example: Simulating and Plotting Bifurcations</h2>
-<p>Here is a Python code snippet to simulate and visualize the bifurcation diagram of the logistic equation:</p>
+<h2 id="python-code-example-simulating-and-visualizing-chuas-circuit">Python Code Example: Simulating and Visualizing Chua's Circuit</h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">solve_ivp</span>
 
-<span class="c1"># Define the logistic map function, which calculates the next population value</span>
-<span class="c1"># given the current population (x) and the growth rate (r).</span>
-<span class="k">def</span> <span class="nf">logistic_map</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># Core equation of the logistic map</span>
+<span class="c1"># Define the piecewise-linear function h(x)</span>
+<span class="k">def</span> <span class="nf">chua_diode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">m1</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">m0</span> <span class="o">-</span> <span class="n">m1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
 
-<span class="c1"># Function to generate and plot the bifurcation diagram</span>
-<span class="k">def</span> <span class="nf">bifurcation_diagram</span><span class="p">(</span><span class="n">r_min</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">r_max</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">discard</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">plot_points</span><span class="o">=</span><span class="mi">200</span><span class="p">):</span>
-    <span class="c1"># Generate a range of r values between r_min and r_max.</span>
-    <span class="n">r_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+<span class="c1"># Define the system of equations for Chua's Circuit</span>
+<span class="k">def</span> <span class="nf">chua_circuit</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="n">chua_diode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">))</span>
+    <span class="n">dy_dt</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+    <span class="n">dz_dt</span> <span class="o">=</span> <span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx_dt</span><span class="p">,</span> <span class="n">dy_dt</span><span class="p">,</span> <span class="n">dz_dt</span><span class="p">]</span>
 
-    <span class="c1"># Initialize the population values with an array of 0.5 (arbitrary starting value).</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+<span class="c1"># Parameters</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">9.0</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">14.286</span>
+<span class="n">m0</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.143</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.714</span>
 
-    <span class="c1"># Set up the figure for plotting.</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="c1"># Initial conditions</span>
+<span class="n">initial_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>  <span class="c1"># Initial values for x, y, z</span>
 
-    <span class="c1"># Iterate to discard transient dynamics, ensuring we only analyze steady-state behavior.</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">discard</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">logistic_map</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="c1"># Time span for the simulation</span>
+<span class="n">time_span</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">time_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">time_span</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">time_span</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10000</span><span class="p">)</span>
 
-    <span class="c1"># After discarding transients, iterate again to collect data points for the diagram.</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plot_points</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">logistic_map</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="c1"># Plot the r values against the current population values (x).</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_values</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">',k'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># ',' creates small dots for a dense diagram</span>
+<span class="c1"># Solve the equations</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">chua_circuit</span><span class="p">,</span> <span class="n">time_span</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">),</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">time_eval</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'RK45'</span><span class="p">)</span>
 
-    <span class="c1"># Add plot titles and labels for clarity.</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Bifurcation Diagram of the Logistic Map"</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Growth Rate (r)"</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Population (x)"</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Optional grid for better readability</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Extract the results</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">y</span>
 
-<span class="c1"># Entry point to execute the bifurcation diagram plot.</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-    <span class="n">bifurcation_diagram</span><span class="p">()</span>  <span class="c1"># Call the function with default parameters</span>
+<span class="c1"># Plot the attractor in 3D</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">'3d'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Chua's Circuit Attractor"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"y"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s2">"z"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"docs/Mechanics/pic/chua_attractor.png"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p><img alt="bifurcation_diagram" src="../pic/bifurcation_diagram.png"/></p>
 <hr/>
 <h2 id="key-insights">Key Insights</h2>
 <ol>
-<li><strong>Stable Fixed Points:</strong> For small <span class="arithmatex">\(r\)</span>, the population converges to a single fixed point.</li>
-<li><strong>Periodic Orbits:</strong> As <span class="arithmatex">\(r\)</span> increases, bifurcations occur, leading to periodic cycles.</li>
-<li><strong>Chaos:</strong> For <span class="arithmatex">\(r \geq 3.57\)</span>, chaotic behavior is observed, where the population no longer settles into predictable cycles.</li>
+<li>
+<p><strong>Chaos in Electronics:</strong> Chua's circuit is a tangible demonstration of chaos, allowing theoretical predictions to be experimentally verified.</p>
+</li>
+<li>
+<p><strong>Piecewise Nonlinearity:</strong> The nonlinear resistor introduces the nonlinearity needed for chaotic behavior.</p>
+</li>
+<li>
+<p><strong>Rich Dynamics:</strong> Depending on the parameters, the circuit exhibits periodic, quasiperiodic, or chaotic behavior.</p>
+</li>
 </ol>
 <hr/>
-<h2 id="applications">Applications</h2>
-<ul>
-<li>Ecology: Modeling species populations.</li>
-<li>Economics: Describing market dynamics.</li>
-<li>Physics: Exploring chaotic systems.</li>
-</ul>
-<hr/>
-<h2 id="advanced-exploration">Advanced Exploration</h2>
-<h3 id="suggested-student-projects">Suggested Student Projects</h3>
-<p>Students can extend this analysis in the following ways:</p>
+<h2 id="suggested-projects">Suggested Projects</h2>
 <ol>
 <li>
-<p><strong>Exploration of Lyapunov Exponent:</strong> Implement a calculation of the Lyapunov exponent to quantify chaos in the logistic map. This involves computing the average divergence of nearby trajectories.</p>
+<p><strong>Parameter Exploration:</strong> Investigate how varying <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(m_0\)</span>, and <span class="arithmatex">\(m_1\)</span> affects the dynamics.</p>
 </li>
 <li>
-<p><strong>Effect of Initial Conditions:</strong> Investigate how varying the initial population <span class="arithmatex">\(x_0\)</span> affects the bifurcation diagram. Plot diagrams for different <span class="arithmatex">\(x_0\)</span> values and compare.</p>
+<p><strong>Lyapunov Exponent:</strong> Compute the Lyapunov exponent to quantify chaos in the circuit.</p>
 </li>
 <li>
-<p><strong>Parameter Sensitivity:</strong> Analyze the sensitivity of the system to small changes in the growth rate <span class="arithmatex">\(r\)</span> within the chaotic region. Visualize how small perturbations in <span class="arithmatex">\(r\)</span> can lead to different outcomes.</p>
+<p><strong>Physical Implementation:</strong> Build Chua's circuit with real electronic components and compare the experimental results with simulations.</p>
 </li>
 <li>
-<p><strong>3D Visualization:</strong> Extend the bifurcation diagram to include a time dimension, creating a 3D plot to visualize the dynamics.</p>
-</li>
-<li>
-<p><strong>Applications in Real-World Data:</strong> Apply the logistic map to real-world data, such as population studies or stock market fluctuations, to see how well it models observed behaviors.</p>
-</li>
-<li>
-<p><strong>Programming Challenge:</strong> Implement the bifurcation diagram using a different programming language or visualization library (e.g., JavaScript with D3.js or MATLAB).</p>
+<p><strong>Fractal Dimension:</strong> Calculate the fractal dimension of the attractor to understand its complexity.</p>
 </li>
 </ol>
 <hr/>
-<p>This is an introductory example to explore the fascinating behavior of dynamic systems through the logistic equation. Try tweaking the parameters in the code to see how the system's behavior changes!</p>
+<p>Chua's Circuit provides a fascinating look into chaos and nonlinear dynamics. Experiment with the parameters and initial conditions to explore its rich behavior!</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
