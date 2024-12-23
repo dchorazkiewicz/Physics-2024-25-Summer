@@ -938,4 +938,158 @@ plt.show()
 ```
 
 
-## Solar system
+## Universal Law of Gravitation
+
+### Introduction
+
+The Universal Law of Gravitation, formulated by Sir Isaac Newton, describes the gravitational force between two masses. It states that every particle of matter in the universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.
+
+### Mathematical Formulation
+
+The gravitational force $\mathbf{F}$ between two masses $m_1$ and $m_2$ separated by a distance $r$ is given by:
+
+$$
+\mathbf{F} = -G \frac{m_1 m_2}{r^2} \hat{r}
+$$
+
+Where:
+- $G$ is the gravitational constant ($6.674 \times 10^{-11} \ \mathrm{Nm^2/kg^2}$),
+- $\hat{r}$ is the unit vector pointing from one mass to the other,
+- $m_1$ and $m_2$ are the masses of the two bodies,
+- $r$ is the distance between the centers of the masses.
+
+### Gravitational Field
+
+The gravitational field $\mathbf{g}$ at a distance $r$ from a mass $M$ is defined as the force per unit mass exerted by $M$:
+
+$$
+\mathbf{g} = -G \frac{M}{r^2} \hat{r}
+$$
+
+This field points toward the mass $M$ and has a magnitude:
+
+$$
+|\mathbf{g}| = G \frac{M}{r^2}
+$$
+
+### Orbital Motion
+
+Gravitational force is responsible for the orbital motion of planets, moons, and satellites. The centripetal force required for circular motion is provided by gravity:
+
+$$
+F = \frac{mv^2}{r} = G \frac{mM}{r^2}
+$$
+
+From this, the orbital velocity $v$ of a body of mass $m$ around a central mass $M$ is:
+
+$$
+v = \sqrt{G \frac{M}{r}}
+$$
+
+The orbital period $T$ of the body can also be derived:
+
+$$
+T = 2\pi \sqrt{\frac{r^3}{GM}}
+$$
+
+### Escape Velocity
+
+Escape velocity is the minimum velocity required for an object to escape the gravitational pull of a planet or celestial body without further propulsion. It is given by:
+
+$$
+v_\text{escape} = \sqrt{2G \frac{M}{r}}
+$$
+
+### Numerical Example: Gravitational Force Between Earth and Moon
+
+We calculate the gravitational force between Earth and Moon using the following values:
+- Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$
+- Mass of Moon ($M_\text{Moon}$): $7.348 \times 10^{22} \ \mathrm{kg}$
+- Distance between Earth and Moon ($r$): $3.844 \times 10^8 \ \mathrm{m}$
+
+```{python}
+# Constants
+G = 6.674e-11  # Gravitational constant (N m^2/kg^2)
+M_earth = 5.972e24  # Mass of Earth (kg)
+M_moon = 7.348e22  # Mass of Moon (kg)
+r = 3.844e8  # Distance between Earth and Moon (m)
+
+# Gravitational force
+F = G * M_earth * M_moon / r**2
+
+# Output the result
+print(f"The gravitational force between Earth and Moon is {F:.2e} N")
+```
+
+### Visualization: Gravitational Field
+
+We visualize the gravitational field of a central mass $M$ in 2D space.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+M = 5.972e24  # Mass of central body (kg)
+G = 6.674e-11  # Gravitational constant
+
+# Grid for visualization
+x = np.linspace(-10, 10, 100)
+y = np.linspace(-10, 10, 100)
+X, Y = np.meshgrid(x, y)
+R = np.sqrt(X**2 + Y**2)
+
+# Avoid division by zero
+R[R == 0] = np.nan
+
+# Gravitational field
+Fx = -G * M * X / R**3
+Fy = -G * M * Y / R**3
+
+# Plot field
+plt.figure(figsize=(8, 8))
+plt.quiver(X, Y, Fx, Fy, scale=1e10, color='blue')
+plt.xlabel('x (m)')
+plt.ylabel('y (m)')
+plt.title('Gravitational Field')
+plt.grid()
+plt.gca().set_aspect('equal', adjustable='box')
+plt.show()
+```
+
+### Gravitational Potential Energy
+
+The gravitational potential energy $U$ of a two-body system is given by:
+
+$$
+U = -G \frac{m_1 m_2}{r}
+$$
+
+This energy is negative because the gravitational force is attractive, and the potential energy is zero at infinite separation.
+
+### Applications of Universal Gravitation
+
+1. **Planetary Orbits:** Predicting the motion of planets and moons in their orbits.
+2. **Space Travel:** Calculating escape velocities and transfer orbits for spacecraft.
+3. **Tidal Effects:** Understanding the gravitational interaction between Earth and Moon causing ocean tides.
+4. **Astrophysics:** Studying gravitational interactions in galaxies and black holes.
+
+### Advanced Topic: Gravitational Slingshot
+
+Gravitational slingshot, or gravity assist, is a technique used in space travel to accelerate a spacecraft by passing it close to a planet. The gravitational force of the planet alters the spacecraft’s trajectory and speed, conserving energy and allowing the spacecraft to gain velocity relative to its target.
+
+This technique relies on the conservation of momentum and energy in the spacecraft-planet system. It is widely used for interplanetary missions, such as Voyager and Cassini.
+
+```{python}
+# Example parameters for gravitational slingshot visualization
+planet_velocity = np.array([0, 30])  # Planet velocity (km/s)
+initial_velocity = np.array([10, 0])  # Initial spacecraft velocity (km/s)
+relative_velocity = initial_velocity - planet_velocity
+final_velocity = relative_velocity + 2 * planet_velocity
+
+print("Initial velocity relative to the planet:", relative_velocity, "km/s")
+print("Final velocity after slingshot:", final_velocity, "km/s")
+```
+
+This example demonstrates how a spacecraft gains speed using gravitational slingshot.
+    
