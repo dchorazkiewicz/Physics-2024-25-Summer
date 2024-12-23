@@ -1,16 +1,11 @@
 ---
-title: Statistics
+title: Introduction to Statistics with Python Simulations
 format:
   html:
     toc: true
     toc-location: right
     toc-depth: 3
     page-layout: full
-    grid:
-      body-width: 1000px
-      sidebar-width: 300px
-      margin-width: 300px
-      gutter-width: 2rem
     theme:
       light: [flatly, custom.scss]
       dark: [darkly, custom.scss]
@@ -19,22 +14,221 @@ format:
 
 ## Basic Concepts
 
-### Experiment with dice
+### Experiment with a Die
 
-Let us make an experiment with a dice. We will roll the dice 10 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.
+Let us perform an experiment with a die. We will roll a die 5 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.
 
 ```{python}
 import pandas as pd
 import numpy as np
 
 np.random.seed(0)
-data = np.random.randint(1, 7, (10, 10))
-df = pd.DataFrame(data, columns=[f"Roll {i}" for i in range(1, 11)])
+data = np.random.randint(1, 7, (10, 5))
+df = pd.DataFrame(data, columns=['Roll 1', 'Roll 2', 'Roll 3', 'Roll 4', 'Roll 5'])
+df.index = ['Experiment ' + str(i) for i in range(1, 11)]
 df
 ```
 
-We can compute the average number of times each number appears in the 10 rolls.
+One thing we can observe is that the outcomes are different in each experiment. This is due to the randomness of the outcomes. However, some patterns can still be observed. Let us explore some questions.
+
+We have computers, so we can simulate the experiment many times. Let us simulate the experiment 10,000 times.
+
+---
+
+#### Question 1
+
+**Let us compute the sum of the outcomes in each experiment. Next, we will count the number of times each sum appears in the 10,000 experiments and plot the results.**
 
 ```{python}
-df.mean()
+df = np.random.randint(1, 7, (10000, 5))
+sums = df.sum(axis=1)
+counts = pd.Series(sums).value_counts().sort_index()
+counts.plot(kind='bar', figsize=(10, 5))
 ```
+
+---
+
+#### Question 2
+
+**Maybe we can change the number of times we roll the die. Let us repeat the experiment with 42 rolls. We will simulate the experiment 10,000 times and plot the results.**
+
+```{python}
+df = np.random.randint(1, 7, (10000, 42))
+sums = df.sum(axis=1)
+counts = pd.Series(sums).value_counts().sort_index()
+counts.plot(kind='bar', figsize=(10, 5))
+```
+
+The plot is not ideal. Let us try running 100,000 experiments.
+
+```{python}
+df = np.random.randint(1, 7, (100000, 42))
+sums = df.sum(axis=1)
+counts = pd.Series(sums).value_counts().sort_index()
+counts.plot(kind='bar', figsize=(10, 5))
+```
+
+This is much better. We can see that the distribution of the sums looks similar. This kind of behavior is what we are looking for. Even though you cannot predict the outcome of a single experiment, you can predict the distribution of outcomes and use it to make informed decisions.
+
+---
+
+#### Question 3
+
+**Let us compute how many times outcomes 1, 2, 3, 4, 5, and 6 appear in the 10,000 experiments. We will plot the results.**
+
+```{python}
+df = np.random.randint(1, 7, (10000, 42))
+counts = pd.DataFrame(df).stack().value_counts().sort_index()
+counts.plot(kind='bar', figsize=(10, 5))
+```
+
+We can see that the chances are equal.
+
+---
+
+#### Question 4
+
+**Let us compute the chances of getting each outcome in the first, second, third, ..., 42nd roll. We will plot the results.**
+
+```{python}
+df = np.random.randint(1, 7, (10000, 42))
+counts = pd.DataFrame(df).apply(lambda x: x.value_counts(normalize=True)).T
+counts.plot(kind='bar', stacked=True, figsize=(10, 5))
+```
+
+
+## Classical Definition of Probability
+
+The classical definition of probability is rooted in the concept of equally likely outcomes. For an event $A$, its probability is calculated as:
+
+$$
+P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}.
+$$
+
+This definition works well for problems where all outcomes are equally likely, such as rolling a die or drawing a card from a well-shuffled deck. However, calculating probabilities analytically becomes difficult for more complex systems. Here, simulation methods like Monte Carlo become invaluable.
+
+### Simulating Classical Probability with Monte Carlo
+
+Monte Carlo simulation allows us to approximate probabilities by performing random experiments multiple times. Instead of enumerating all possible outcomes, we rely on repeated random sampling to estimate probabilities. Let us demonstrate this with an example.
+
+### Example: Estimating the Probability of Rolling a Sum Greater Than 8 with Two Dice
+
+#### Analytical Solution
+The total number of outcomes when rolling two dice can be calculated programmatically. The favorable outcomes for a sum greater than 8 can also be determined directly:
+
+```{python}
+from itertools import product
+
+# All possible outcomes for two dice
+all_outcomes = list(product(range(1, 7), repeat=2))
+
+# Total number of possible outcomes
+total_outcomes = len(all_outcomes)
+
+# Favorable outcomes (sum > 8)
+favorable_outcomes = [outcome for outcome in all_outcomes if sum(outcome) > 8]
+
+# Number of favorable outcomes
+num_favorable = len(favorable_outcomes)
+
+# Analytical probability
+analytical_probability = num_favorable / total_outcomes
+print(f"Analytical Probability: {analytical_probability:.4f}")
+```
+
+#### Monte Carlo Simulation
+We can estimate this probability by simulating the rolls of two dice many times:
+
+```{python}
+import numpy as np
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Number of simulations
+n_simulations = 100000
+
+# Simulate rolling two dice
+rolls = np.random.randint(1, 7, (n_simulations, 2))
+
+# Calculate sums of rolls
+sums = rolls.sum(axis=1)
+
+# Count favorable outcomes (sum > 8)
+favorable = (sums > 8).sum()
+
+# Estimate probability
+estimated_probability = favorable / n_simulations
+
+print(f"Estimated Probability (Monte Carlo): {estimated_probability:.4f}")
+```
+
+### Results
+The Monte Carlo simulation uses the defined variables and programmatic logic to estimate the probability. This value should converge to the analytical result as the number of simulations increases.
+
+This example illustrates the power of Monte Carlo methods in approximating probabilities, especially for scenarios where analytical solutions are challenging or impossible to compute.
+
+
+---
+
+## Estimating the Probability of Getting 7 Heads in 10 Coin Tosses
+
+When flipping a fair coin 10 times, each flip has two equally likely outcomes: heads or tails. To calculate the probability of getting exactly 7 heads, we can use the binomial probability formula:
+
+$$
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},
+$$
+
+where:
+- $n$ is the number of trials (10 in this case),
+- $k$ is the number of successes (7 heads),
+- $p$ is the probability of success for a single trial (0.5 for a fair coin).
+
+#### Analytical Solution
+We can calculate the analytical probability using Python:
+
+```{python}
+from math import comb
+
+# Parameters
+n_trials = 10
+k_successes = 7
+p_success = 0.5
+
+# Binomial probability
+analytical_probability = comb(n_trials, k_successes) * (p_success ** k_successes) * ((1 - p_success) ** (n_trials - k_successes))
+
+print(f"Analytical Probability of 7 Heads in 10 Tosses: {analytical_probability:.4f}")
+```
+
+#### Monte Carlo Simulation
+We can estimate the probability using a Monte Carlo simulation:
+
+```{python}
+import numpy as np
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Number of simulations
+n_simulations = 100000
+
+# Simulate coin tosses (1 for heads, 0 for tails)
+tosses = np.random.choice([0, 1], size=(n_simulations, n_trials), p=[0.5, 0.5])
+
+# Count number of heads in each simulation
+heads_count = tosses.sum(axis=1)
+
+# Count favorable outcomes (exactly 7 heads)
+favorable = (heads_count == k_successes).sum()
+
+# Estimate probability
+estimated_probability = favorable / n_simulations
+
+print(f"Estimated Probability (Monte Carlo): {estimated_probability:.4f}")
+```
+
+### Results
+Both the analytical and Monte Carlo methods provide an estimate of the probability. The Monte Carlo simulation demonstrates how repeated random sampling can approximate probabilities, converging to the analytical result as the number of simulations increases.
+
+This example showcases the flexibility and power of Monte Carlo simulations in estimating probabilities for complex scenarios. Real problems are often too intricate for direct analytical solutions, making simulation methods a valuable tool in statistical analysis.

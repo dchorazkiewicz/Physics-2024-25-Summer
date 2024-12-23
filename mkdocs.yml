@@ -2,7 +2,9 @@ site_name: Physics 2024/25 Summer
 nav:
   - Home: index.md
   - Mechanics:
+    - 🎓 Lecture Notes:
       - Lecture Notes: Mechanics/Mechanics.html
+    - 🤔 Student Projects:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
       - Lorenz Attractor: Mechanics/lorenz_system_and_attractor.md
@@ -13,7 +15,10 @@ nav:
       - Pendulum with Damping: Mechanics/pendulum_with_damping_and_forcing.md
       - Three Body Problem: Mechanics/three_body_problem.md
   - Experiments & Statistics:
-      - Statistics: Experiments_Statistics/Statistics.html
+    - 🎓 Lecture Notes:
+      - Statistics 101: Experiments_Statistics/Statistics.html
+    - 🤔 Student Projects:
+      - Estiamting Pi: Experiments_Statistics/estimation_of_pi.md
 
 theme:
   name: material
