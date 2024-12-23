@@ -19,6 +19,8 @@ nav:
       - Statistics 101: Experiments_Statistics/Statistics.html
     - 🤔 Student Projects:
       - Estiamting Pi: Experiments_Statistics/estimation_of_pi.md
+  - Exercises for Students:
+    - 🤔 List: Exercises_for_Students/exercises.md
 
 theme:
   name: material
