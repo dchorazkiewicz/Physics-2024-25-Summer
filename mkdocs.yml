@@ -1,9 +1,9 @@
 site_name: Physics 2024/25 Summer
 nav:
-  - Home: index.md
-  - Mechanics:
+  - 🏠 Home: index.md
+  - ⚙️ Mechanics:
     - 🎓 Lecture Notes:
-      - Lecture Notes: Mechanics/Mechanics.html
+      - Mechanics: Mechanics/Mechanics.html
     - 🤔 Student Projects:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
@@ -14,12 +14,29 @@ nav:
       - Chua's Circuit: Mechanics/chuas_circuit.md
       - Pendulum with Damping: Mechanics/pendulum_with_damping_and_forcing.md
       - Three Body Problem: Mechanics/three_body_problem.md
-  - Experiments & Statistics:
+  - ⚡ Electromagnetism:
+    - 🎓 Lecture Notes:
+      - Electromagnetism: Electromagnetism/Electromagnetism.md
+    - 🤔 Student Projects:
+      - RLC Circuit: Electromagnetism/rlc_circuit.md
+  - 🔬 Experiments:
     - 🎓 Lecture Notes:
       - Statistics 101: Experiments_Statistics/Statistics.html
     - 🤔 Student Projects:
       - Estiamting Pi: Experiments_Statistics/estimation_of_pi.md
-  - Exercises for Students:
+  - ⚛️ Modern Physics:
+    - 🎓 Lecture Notes:
+      - Quantum Mechanics: Modern_Physics/Quantum_physics.md
+      - Cosmology: Modern_Physics/Cosmology.md
+    - 🤔 Student Projects:
+      - Quantum Harmonic Oscillator: Modern_Physics/quantum_harmonic_oscillator.md
+      # - Quantum Double Slit Experiment: Modern_Physics/quantum_double_slit_experiment.md
+      # - Quantum Tunneling: Modern_Physics/quantum_tunneling.md
+      # - Quantum Entanglement: Modern_Physics/quantum_entanglement.md
+      # - Quantum Teleportation: Modern_Physics/quantum_teleportation.md
+      # - Quantum Computing: Modern_Physics/quantum_computing.md
+      # - Quantum Cryptography: Modern_Physics/quantum_cryptography.md
+  - ✏️ Exercises for Students:
     - 🤔 List: Exercises_for_Students/exercises.md
 
 theme:
