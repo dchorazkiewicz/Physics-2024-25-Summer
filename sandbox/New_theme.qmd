@@ -11,40 +11,14 @@ format:
     code-summary: "Show the code"
     code-tools: true
     code-block-bg: true
-    code-block-border-left: "#31BAE9"
+    code-block-border-left: "#2aae2a"
+    code-language-label: true
     css: styles.css
     math: mathjax
     self-contained: true
 
 ---
 
-<!-- a11y
-arrow
-atom-one
-ayu   #moze byc
-breeze  # nie
-github
-gruvbox
-All of the standard Pandoc themes are also available:
-
-pygments
-tango
-espresso
-zenburn
-kate
-monochrome
-breezedark
-haddock
-As well as an additional set of extended themes, including:
-
-dracula
-monokai
-nord
-oblivion
-printing
-radical
-solarized
-vim-dark -->
 
 W tym wykładzie omówimy podstawowe pojęcia z mechaniki klasycznej, ilustrując je wzorami matematycznymi oraz przykładami kodu w Pythonie.
 
