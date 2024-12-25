@@ -10,7 +10,6 @@ format:
     code-fold: show
     code-summary: "Show the code"
     code-tools: true
-    code-block-bg: true
     code-block-bg: "rgba(42, 174, 42, 0.02)"
     code-block-border-left: "#2aae2a"
     code-language-label: true
