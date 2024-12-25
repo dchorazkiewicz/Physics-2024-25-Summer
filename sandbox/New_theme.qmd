@@ -10,7 +10,7 @@ format:
     code-fold: show
     code-summary: "Show the code"
     code-tools: true
-    code-block-bg: true
+    code-block-bg: "rgba(42, 174, 42, 0.02)"
     code-block-border-left: "#2aae2a"
     code-language-label: true
     css: styles.css
@@ -41,6 +41,13 @@ gdzie:
 - $s_0$ – położenie początkowe,
 - $v$ – prędkość,
 - $t$ – czas.
+
+### Geogebra
+
+::: {.geogebra-instruction}
+- Otwórz [Geogebrę](https://www.geogebra.org/classic).
+- Wklej równanie $s(t) = s_0 + v \cdot t$.
+:::
 
 ### Przykład w Pythonie
 

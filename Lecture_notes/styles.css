@@ -136,13 +136,23 @@ blockquote {
 
 
 .equation-box {
-  background-color: #f9f9f9; /* Jasne tło dla wyróżnienia */
+  background-color: rgb(169, 17, 9, 0.01); /* Jasne tło dla wyróżnienia */
   border: 2px solid #ddd;    /* Delikatne obramowanie */
   border-radius: 5px;        /* Zaokrąglone rogi */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu 3D */
   padding: 7px;             /* Wewnętrzny odstęp dla czytelności */
   margin: 15px 0;            /* Zewnętrzny odstęp od innych elementów */
   text-align: center;        /* Wyśrodkowanie wzoru */
-  border-left: 2px solid #a91109;
+  border-left: 2px solid rgb(169, 17, 9);
 }
 
+.geogebra-instruction {
+  border-left: 4px solid rgb(255, 140, 0); /* Ciemnopomarańczowy kolor */
+  background-color: rgb(255, 140, 0,0.01); 
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
