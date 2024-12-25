@@ -24,9 +24,11 @@ format:
 
 Let's consider the first order differential equation
 
+::: {.equation-box}
 $$
 \frac{dy(x)}{dx} = 2x
 $$
+:::
 
 Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to 3. This means that the slope of the function $y(x)$ is constant and equal to 3. This is a simple differential equation that can be solved by integration. The solution is
 
