@@ -1,0 +1,62 @@
+---
+title: "Wykład z Mechaniki"
+author: "Imię Nazwisko"
+date: "25 grudnia 2024"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    css: styles.css
+    math: mathjax
+---
+
+# Wprowadzenie
+
+W tym wykładzie omówimy podstawowe pojęcia z mechaniki klasycznej, ilustrując je wzorami matematycznymi oraz przykładami kodu w Pythonie.
+
+# Kinematyka
+
+Kinematyka zajmuje się opisem ruchu ciał bez uwzględnienia przyczyn tego ruchu.
+
+## Równanie ruchu jednostajnego
+
+Ruch jednostajny prostoliniowy opisuje równanie:
+
+$$
+s(t) = s_0 + v \cdot t
+$$
+
+gdzie:
+
+- $s(t)$ – położenie w chwili $t$,
+- $s_0$ – położenie początkowe,
+- $v$ – prędkość,
+- $t$ – czas.
+
+## Przykład w Pythonie
+
+Poniżej znajduje się kod w Pythonie obliczający położenie ciała w ruchu jednostajnym prostoliniowym:
+
+```{python}
+#| label: fig-motion
+#| fig-cap: "Wykres położenia w funkcji czasu dla ruchu jednostajnego"
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parametry ruchu
+s0 = 0  # położenie początkowe w metrach
+v = 5   # prędkość w metrach na sekundę
+t = np.linspace(0, 10, 100)  # czas od 0 do 10 sekund
+
+# Równanie ruchu
+s = s0 + v * t
+
+# Wykres
+plt.plot(t, s, label='s(t) = s0 + v * t')
+plt.xlabel('Czas (s)')
+plt.ylabel('Położenie (m)')
+plt.title('Ruch jednostajny prostoliniowy')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
