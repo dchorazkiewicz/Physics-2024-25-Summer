@@ -29,6 +29,18 @@ body {
     border-radius: 4px;
   }
   
+/* Styl dla nagłówków trzeciego poziomu */
+h3 {
+  color: #2c3e50; /* Kolor z h2 */
+  font-family: 'Merriweather', serif; /* Ten sam font co w h2 */
+  font-size: 1.1em; /* Pomniejszony rozmiar w stosunku do h2 */
+  background: #ecf0f195; /* Tło z h2 */
+  border-left: 2px solid #3498db; /* Granica z h2, ale proporcjonalna */
+  padding: 8px 12px; /* Pomniejszony padding z h2 */
+  margin-bottom: 10px; /* Pomniejszony margines z h2 */
+  border-radius: 4px; /* Zaokrąglenia z h2 */
+}
+
   /* Styl dla paragrafów */
   p {
     font-family: 'Open Sans', sans-serif;
@@ -125,32 +137,12 @@ body {
 
   .equation-box {
     background-color: #f9f9f9; /* Jasne tło dla wyróżnienia */
-    border: 1px solid #ddd;    /* Delikatne obramowanie */
+    border: 2px solid #ddd;    /* Delikatne obramowanie */
     border-radius: 5px;        /* Zaokrąglone rogi */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu 3D */
-    padding: 10px;             /* Wewnętrzny odstęp dla czytelności */
+    padding: 7px;             /* Wewnętrzny odstęp dla czytelności */
     margin: 15px 0;            /* Zewnętrzny odstęp od innych elementów */
     text-align: center;        /* Wyśrodkowanie wzoru */
+    border-left: 2px solid #a91109;
   }
   
-
-  /* Styl dla kodu w bloku */
-  pre {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 15px;
-    overflow-x: auto;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 0.9em;
-    margin-bottom: 20px;
-  }
-  
-  /* Styl dla kodu w linii */
-  /* code {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 0.9em;
-  } */
