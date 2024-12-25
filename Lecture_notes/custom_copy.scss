@@ -1,0 +1,191 @@
+/*-- scss:defaults --*/
+$body-bg: #ffffff;
+$body-color: #333333;
+$link-color: #0078d4;
+$link-hover: darken($link-color, 10%);
+$font-family-sans-serif: "Arial", sans-serif;
+$font-family-monospace: "Courier New", monospace;
+
+/*-- scss:header-sizes --*/
+$header-sizes: (
+  h1: 2.5em,
+  h2: 2em,
+  h3: 1.5em,
+  h4: 1.25em,
+  h5: 1em,
+  h6: 0.75em
+);
+
+/*-- scss:header-colors --*/
+$header-colors: (
+  h1: #1a3a8a,
+  h2: #227ec2,
+  h3: #1e5ca6,
+  h4: #1e91c4,
+  h5: #1587b3,
+  h6: #12678d
+);
+
+/*-- scss:general --*/
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: $font-family-sans-serif;
+  line-height: 1.8;
+  padding: 20px 40px;
+}
+
+/*-- scss:headers --*/
+@each $header, $size in $header-sizes {
+  #{$header} {
+    color: map-get($header-colors, $header);
+    font-size: $size;
+    font-family: $font-family-sans-serif;
+    margin-bottom: 0.5em;
+  }
+}
+
+/* Gradient effect for headers */
+h1 {
+  font-weight: bold;
+}
+h1, h2, h3 {
+  color: map-get($header-colors, h1);
+}
+
+/*-- scss:links --*/
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+}
+
+/*-- scss:code --*/
+code, pre {
+  background-color: #f4f4f4;
+  color: #d63384;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: $font-family-monospace;
+  transition: all 0.3s ease-in-out;
+}
+
+/*-- scss:math --*/
+.math {
+  color: #5a5aad;
+  font-size: 1.2em;
+}
+
+/*-- scss:cards --*/
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-left: 5px solid $link-color;
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: map-get($header-colors, h3);
+  font-weight: bold;
+}
+
+/*-- scss:toc --*/
+#toc {
+  background-color: #e9f5ff;
+  border: 1px solid #cce7ff;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  font-weight: bold;
+}
+
+#toc a {
+  display: block;
+  color: $link-color;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten($link-color, 40%);
+  }
+}
+
+/*-- scss:buttons --*/
+.button {
+  background-color: $link-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: $link-hover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/*-- scss:dark-mode --*/
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: #eaeaea;
+}
+
+.dark-mode a {
+  color: #6ab7ff;
+
+  &:hover {
+    color: lighten($link-hover, 20%);
+  }
+}
+
+.dark-mode .card {
+  background-color: #3c3c3c;
+  border-color: #555555;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode code, .dark-mode pre {
+  background-color: #444444;
+  color: #ff79c6;
+}
+
+.dark-mode #toc {
+  background-color: #444444;
+  border-color: #666666;
+  color: #eaeaea;
+  font-weight: bold;
+}
+
+.dark-mode .button {
+  background-color: lighten($link-color, 10%);
+  color: #333333;
+
+  &:hover {
+    background-color: lighten($link-hover, 20%);
+  }
+}

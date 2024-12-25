@@ -12,8 +12,8 @@ format:
       margin-width: 300px
       gutter-width: 2rem
     theme:
-      light: [flatly, custom.scss]
-      dark: [darkly, custom.scss]
+      light: [flatly, custom_copy.scss]
+      dark: [darkly, custom_copy.scss]
     self-contained: true
 ---
 
