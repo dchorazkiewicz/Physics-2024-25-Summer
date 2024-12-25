@@ -16,7 +16,6 @@ format:
     css: styles.css
     math: mathjax
     self-contained: true
-
 ---
 
 
