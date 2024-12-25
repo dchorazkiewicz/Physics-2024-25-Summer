@@ -2,13 +2,18 @@
 title: Introduction to Statistics with Python Simulations
 format:
   html:
+    theme: flatly
     toc: true
-    toc-location: right
-    toc-depth: 3
-    page-layout: full
-    theme:
-      light: [flatly, custom.scss]
-      dark: [darkly, custom.scss]
+    toc-depth: 4
+    highlight-style: tango
+    code-line-numbers: true
+    code-fold: show
+    code-summary: "Show the code"
+    code-tools: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    css: styles.css
+    math: mathjax
     self-contained: true
 ---
 

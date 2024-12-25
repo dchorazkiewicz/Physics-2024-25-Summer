@@ -1,30 +1,66 @@
 ---
 title: "Wykład z Mechaniki"
-author: "Imię Nazwisko"
-date: "25 grudnia 2024"
 format:
   html:
+    theme: flatly
     toc: true
-    toc-depth: 2
+    toc-depth: 4
+    highlight-style: tango
+    code-line-numbers: true
+    code-fold: show
+    code-summary: "Show the code"
+    code-tools: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
     css: styles.css
     math: mathjax
+    self-contained: true
+
 ---
 
-# Wprowadzenie
+<!-- a11y
+arrow
+atom-one
+ayu   #moze byc
+breeze  # nie
+github
+gruvbox
+All of the standard Pandoc themes are also available:
+
+pygments
+tango
+espresso
+zenburn
+kate
+monochrome
+breezedark
+haddock
+As well as an additional set of extended themes, including:
+
+dracula
+monokai
+nord
+oblivion
+printing
+radical
+solarized
+vim-dark -->
 
 W tym wykładzie omówimy podstawowe pojęcia z mechaniki klasycznej, ilustrując je wzorami matematycznymi oraz przykładami kodu w Pythonie.
 
-# Kinematyka
+## Kinematyka
 
 Kinematyka zajmuje się opisem ruchu ciał bez uwzględnienia przyczyn tego ruchu.
 
-## Równanie ruchu jednostajnego
+### Równanie ruchu jednostajnego
 
 Ruch jednostajny prostoliniowy opisuje równanie:
 
+::: {.equation-box}
 $$
 s(t) = s_0 + v \cdot t
 $$
+:::
 
 gdzie:
 
@@ -33,9 +69,21 @@ gdzie:
 - $v$ – prędkość,
 - $t$ – czas.
 
-## Przykład w Pythonie
+### Przykład w Pythonie
+
+#### Wykres położenia w funkcji czasu
 
 Poniżej znajduje się kod w Pythonie obliczający położenie ciała w ruchu jednostajnym prostoliniowym:
+
+```{python}
+def main(x: str,t: int):
+	"""
+	This is a text
+	"""
+
+	result: int = 2*t
+```
+
 
 ```{python}
 #| label: fig-motion
@@ -56,6 +104,52 @@ plt.plot(t, s, label='s(t) = s0 + v * t')
 plt.xlabel('Czas (s)')
 plt.ylabel('Położenie (m)')
 plt.title('Ruch jednostajny prostoliniowy')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+## Dynamika
+
+Dynamika zajmuje się badaniem przyczyn ruchu ciał.
+
+### II zasada dynamiki Newtona
+
+Zgodnie z II zasadą dynamiki Newtona, przyspieszenie ciała jest proporcjonalne do siły działającej na ciało:
+
+::: {.equation-box}
+$$
+F = m \cdot a
+$$
+:::
+
+gdzie:
+
+- $F$ – siła,
+- $m$ – masa ciała,
+- $a$ – przyspieszenie.
+
+### Przykład w Pythonie
+
+#### Wykres siły w funkcji czasu
+
+Poniżej znajduje się kod w Pythonie obliczający siłę działającą na ciało w ruchu jednostajnym prostoliniowym:
+
+```{python}
+#| label: fig-force
+#| fig-cap: "Wykres siły w funkcji czasu dla ruchu jednostajnego"
+# Parametry ruchu
+m = 1  # masa ciała w kilogramach
+a = 2  # przyspieszenie w metrach na sekundę kwadratową
+
+# Równanie siły
+F = m * a
+
+# Wykres
+plt.plot(t, F * np.ones_like(t), label='F = m * a')
+plt.xlabel('Czas (s)')
+plt.ylabel('Siła (N)')
+plt.title('Siła w ruchu jednostajnym prostoliniowym')
 plt.legend()
 plt.grid(True)
 plt.show()
