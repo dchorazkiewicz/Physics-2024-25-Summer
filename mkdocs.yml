@@ -3,6 +3,7 @@ nav:
   - 🏠 Home: index.md
   - ⚙️ Mechanics:
     - 🎓 Lecture Notes:
+      - Language of Physics: Mechanics/Language_of_physics.html
       - Mechanics: Mechanics/Mechanics.html
     - 🤔 Student Projects:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
