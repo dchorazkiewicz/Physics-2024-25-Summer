@@ -15,7 +15,7 @@ format:
     code-language-label: true
     css: styles.css
     math: mathjax
-    # self-contained: true
+    self-contained: true
 ---
 
 ## Introduction
