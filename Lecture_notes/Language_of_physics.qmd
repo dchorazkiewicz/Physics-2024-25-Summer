@@ -1,0 +1,150 @@
+---
+title: Language of Physics
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 4
+    highlight-style: tango
+    code-line-numbers: true
+    code-fold: show
+    code-summary: "Show the code"
+    code-tools: true
+    code-block-bg: "rgba(42, 174, 42, 0.02)"
+    code-block-border-left: "#2aae2a"
+    code-language-label: true
+    css: styles.css
+    math: mathjax
+    self-contained: true
+---
+
+## Introduction
+
+Physics often describes the universe and its phenomena using the language of mathematics, where the Cartesian 3D space serves as the natural stage for physical events. This spatial representation, defined by three orthogonal axes $x$, $y$, and $z$, is the starting point for our exploration. By reducing the dimensionality to 2D, we simplify the analysis, enabling a focused study of structures that arise in such spaces. This reduction is not merely an abstraction but also a practical tool for understanding the behaviors and interactions within physical systems.
+
+### Scalar Fields
+
+A scalar field associates a single real value to every point in a given space. In 2D, this can be represented as a function $T(x, y)$, where $T$ could represent a physical property like temperature.
+
+#### Example: Temperature on a Surface
+
+Consider a simple model where the temperature of a surface varies with both position and time:
+
+$$
+T(x, y, t) = 20 + 5 \sin(x) \cos(y)
+$$
+
+Below is a Python simulation of this scalar field:
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Scalar field definition
+def scalar_field(x, y):
+    return  5 * np.sin(x) * np.cos(y)
+
+# Generate grid points
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+x, y = np.meshgrid(x, y)
+
+# Compute scalar field values
+T = scalar_field(x, y)
+
+# Plot the scalar field
+plt.figure(figsize=(8, 6))
+plt.imshow(T, extent=[-5, 5, -5, 5], origin='lower', cmap="coolwarm")
+plt.colorbar(label="Temperature")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Temperature Distribution on a Surface")
+plt.show()
+
+```
+
+### Vector Fields
+
+A vector field assigns a vector to every point in space. In 2D, such a field can be represented as $\vec{F}(x, y) = (F_x(x, y), F_y(x, y))$, where $F_x$ and $F_y$ are the components of the vector field.
+
+#### Example: Time-Dependent Vector Field
+
+Let us examine a vector field that depends on both space and time:
+
+$$
+\vec{F}(x, y, t) = (\sin(y), \sqrt{\frac{|x|}{5}})
+$$
+
+This field represents a rotational flow whose magnitude decays over time. Below is an interactive visualization of this vector field:
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definition of the vector field
+def vector_field(x, y):
+    Fx = np.sin(y)
+    Fy = np.sqrt(np.abs(x)/5)
+    return Fx, Fy
+
+# Generating a grid of points
+x = np.linspace(-15, 15, 16)
+y = np.linspace(-15, 15, 16)
+x, y = np.meshgrid(x, y)
+
+# Calculating the vector field
+Fx, Fy = vector_field(x, y)
+
+# Calculating the lengths of the vectors
+d_lengths = np.sqrt(Fx**2 + Fy**2)
+
+# Initializing the plot
+fig, ax = plt.subplots(figsize=(6, 6))
+quiver = ax.quiver(
+    x, y, Fx, Fy, d_lengths, angles='xy', scale_units='xy', scale=1, cmap='viridis'
+)
+cb = fig.colorbar(quiver, ax=ax, label="Vector length")
+ax.set_xlim(-15, 15)
+ax.set_ylim(-15, 15)
+ax.set_xlabel("X axis")
+ax.set_ylabel("Y axis")
+ax.set_title("2D vector field with color dependent on vector length")
+
+plt.show()
+```
+
+
+Stream plot
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definition of the vector field
+def vector_field(x, y):
+    Fx = np.sin(y)
+    Fy = np.sqrt(np.abs(x)/5)
+    return Fx, Fy
+
+# Generating a grid of points
+x = np.linspace(-15, 15, 100)  # Higher resolution for streamlines
+y = np.linspace(-15, 15, 100)
+x, y = np.meshgrid(x, y)
+
+# Calculating the vector field
+Fx, Fy = vector_field(x, y)
+d_lengths = np.sqrt(Fx**2 + Fy**2)
+
+# Streamplot (Streamlines)
+fig, ax = plt.subplots(figsize=(6, 6))
+stream = ax.streamplot(
+    x[0, :], y[:, 0], Fx, Fy, color=d_lengths, cmap='viridis', linewidth=1.5
+)
+cb = fig.colorbar(stream.lines, ax=ax, label="Vector length")
+ax.set_xlim(-15, 15)
+ax.set_ylim(-15, 15)
+ax.set_xlabel("X axis")
+ax.set_ylabel("Y axis")
+ax.set_title("2D Vector Field with Streamlines")
+plt.show()
+```

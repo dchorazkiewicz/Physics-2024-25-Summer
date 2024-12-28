@@ -147,7 +147,7 @@ h3 {
   }
   
   .geogebra-instruction {
-    border-left: 4px solid rgb(255, 140, 0); /* Ciemnopomarańczowy kolor */
+    border-left: 2px solid rgb(255, 140, 0); /* Ciemnopomarańczowy kolor */
     background-color: rgb(255, 140, 0,0.01); 
     padding: 10px 15px;
     margin: 15px 0;
