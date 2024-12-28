@@ -1,4 +1,3 @@
-/* Ogólny styl dokumentu */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
@@ -8,7 +7,6 @@ body {
   padding: 0;
 }
 
-/* Styl dla nagłówka głównego */
 h1 {
   color: #2c3e50;
   font-family: 'Merriweather', serif;
@@ -18,7 +16,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Styl dla nagłówków drugiego poziomu */
+.quarto-title-block.default .quarto-title {
+  margin-bottom: 30px; 
+}
+
 h2 {
   color: #2c3e50;
   font-family: 'Merriweather', serif;
@@ -29,19 +30,17 @@ h2 {
   border-radius: 4px;
 }
 
-/* Styl dla nagłówków trzeciego poziomu */
 h3 {
-color: #2c3e50; /* Kolor z h2 */
-font-family: 'Merriweather', serif; /* Ten sam font co w h2 */
-font-size: 1.1em; /* Pomniejszony rozmiar w stosunku do h2 */
-background: #ecf0f195; /* Tło z h2 */
-border-left: 2px solid #3498db; /* Granica z h2, ale proporcjonalna */
-padding: 8px 12px; /* Pomniejszony padding z h2 */
-margin-bottom: 10px; /* Pomniejszony margines z h2 */
-border-radius: 4px; /* Zaokrąglenia z h2 */
+  color: #2c3e50;
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  background: #ecf0f195;
+  border-left: 2px solid #3498db;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 
-/* Styl dla paragrafów */
 p {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
@@ -49,8 +48,6 @@ p {
   margin-bottom: 20px;
 }
 
-
-/* Styl dla tabel */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -71,13 +68,11 @@ th {
   color: #ffffff;
 }
 
-/* Styl dla list */
 ol, ul {
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
-/* Styl dla linków */
 a {
   color: #3498db;
   text-decoration: none;
@@ -89,7 +84,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Styl dla obrazów */
 img {
   max-width: 100%;
   height: auto;
@@ -98,7 +92,6 @@ img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Styl dla cytatów */
 blockquote {
   border-left: 4px solid #3498db;
   padding-left: 15px;
@@ -108,7 +101,6 @@ blockquote {
   margin-bottom: 20px;
 }
 
-/* Styl dla spisu treści */
 .toc {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
@@ -134,25 +126,28 @@ blockquote {
   text-decoration: none;
 }
 
-
 .equation-box {
-  background-color: rgb(169, 17, 9, 0.01); /* Jasne tło dla wyróżnienia */
-  border: 2px solid #ddd;    /* Delikatne obramowanie */
-  border-radius: 5px;        /* Zaokrąglone rogi */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu 3D */
-  padding: 7px;             /* Wewnętrzny odstęp dla czytelności */
-  margin: 15px 0;            /* Zewnętrzny odstęp od innych elementów */
-  text-align: center;        /* Wyśrodkowanie wzoru */
+  background-color: rgba(169, 17, 9, 0.01);
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  margin: 15px 0;
+  text-align: center;
   border-left: 2px solid rgb(169, 17, 9);
 }
 
 .geogebra-instruction {
-  border-left: 2px solid rgb(255, 140, 0); /* Ciemnopomarańczowy kolor */
-  background-color: rgb(255, 140, 0,0.01); 
-  padding: 10px 15px;
+  border-left: 2px solid rgb(255, 140, 0);
+  background-color: rgba(255, 140, 0, 0.01);
+  padding: 5px 7px;
   margin: 15px 0;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   line-height: 1.6;
+}
+
+.geogebra-instruction > *:last-child {
+  margin-bottom: 0;
 }
