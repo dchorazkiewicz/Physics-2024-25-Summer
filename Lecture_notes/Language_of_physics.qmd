@@ -247,7 +247,7 @@ $$
 \frac{df(x)}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 $$
 
-This limit represents the rate of change of the function $f(x)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes. The derivative can be interpreted as the slope of the function at a given point. The derivative is a function that gives the slope of the function at each point.
+This limit represents the rate of change of the function $f(x)$ with respect to $x$.
 
 #### Derivative of functions of two variables
 
@@ -257,7 +257,7 @@ $$
 \frac{\partial f(x, y)}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}
 $$
 
-This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes. This describes how the function changes in the $x$ direction. 
+This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes for a fixed value of $y$. This describes how the function changes in the $x$ direction.
 
 Similarly, the derivative of a function $f(x, y)$ with respect to $y$ is defined as
 
@@ -265,7 +265,7 @@ $$
 \frac{\partial f(x, y)}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}
 $$
 
-This limit represents the rate of change of the function $f(x, y)$ with respect to $y$. The derivative is a measure of how the function changes as $y$ changes. This describes how the function changes in the $y$ direction.
+This limit represents the rate of change of the function $f(x, y)$ with respect to $y$ and describes how the function changes in the $y$ direction for a fixed value of $x$.
 
 ### Integrals
 
@@ -295,13 +295,12 @@ $$
 $$
 :::
 
-Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to 3. This means that the slope of the function $y(x)$ is constant and equal to 3. This is a simple differential equation that can be solved by integration. The solution is
-
+Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to $2x$. This equation tells us how the function $y(x)$ changes with $x$. The function $y(x)$ changes at a rate of $2x$ with respect to $x$. This is a simple differential equation that can be solved by integration.
 $$
 y(x) = x^2 + C
 $$
 
-where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. The solution is a straight line with slope 3. The constant $C$ determines the position of the line in the $y$-axis.
+where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. 
 
 ```{python}
 import numpy as np

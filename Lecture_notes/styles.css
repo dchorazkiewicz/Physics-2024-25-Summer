@@ -143,8 +143,8 @@ blockquote {
   padding: 5px 7px;
   margin: 15px 0;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9em;
   line-height: 1.6;
 }
 
