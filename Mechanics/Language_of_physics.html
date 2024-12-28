@@ -3339,8 +3339,8 @@ background-color: rgba(255, 140, 0, 0.01);
 padding: 5px 7px;
 margin: 15px 0;
 border-radius: 5px;
-font-family: 'Roboto', sans-serif;
-font-size: 1em;
+font-family: "Fira Code", monospace;
+font-size: 0.9em;
 line-height: 1.6;
 }
 .geogebra-instruction > *:last-child {
@@ -3435,7 +3435,7 @@ margin-bottom: 0;
 T(x, y) = 5 \sin(x) \cos(y)
 \]</span></p>
 <p>Below is a Python code of this scalar field:</p>
-<div id="aac65311" class="cell" data-execution_count="1">
+<div id="dfa617cb" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3483,7 +3483,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </ul>
 </div>
 <p>Or we can use the following Python code to grasp 4 time steps:</p>
-<div id="4ce087df" class="cell" data-execution_count="2">
+<div id="a3d9236b" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3550,7 +3550,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 \vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})
 \]</span></p>
 <p>This field might represent the velocity of a fluid at each point <span class="math inline">\((x, y)\)</span> in a 2D space. Below is a Python code to visualize this vector field:</p>
-<div id="d2885f21" class="cell" data-execution_count="3">
+<div id="dbd5a501" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3596,7 +3596,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </div>
 </div>
 <p>Stream plot</p>
-<div id="4f2de2d7" class="cell" data-execution_count="4">
+<div id="c0bf66d0" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3650,7 +3650,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 <p><span class="math display">\[
 \frac{df(x)}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]</span></p>
-<p>This limit represents the rate of change of the function <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>. The derivative is a measure of how the function changes as <span class="math inline">\(x\)</span> changes. The derivative can be interpreted as the slope of the function at a given point. The derivative is a function that gives the slope of the function at each point.</p>
+<p>This limit represents the rate of change of the function <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>.</p>
 </section>
 <section id="derivative-of-functions-of-two-variables" class="level4">
 <h4 class="anchored" data-anchor-id="derivative-of-functions-of-two-variables">Derivative of functions of two variables</h4>
@@ -3658,12 +3658,12 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 <p><span class="math display">\[
 \frac{\partial f(x, y)}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}
 \]</span></p>
-<p>This limit represents the rate of change of the function <span class="math inline">\(f(x, y)\)</span> with respect to <span class="math inline">\(x\)</span>. The derivative is a measure of how the function changes as <span class="math inline">\(x\)</span> changes. This describes how the function changes in the <span class="math inline">\(x\)</span> direction.</p>
+<p>This limit represents the rate of change of the function <span class="math inline">\(f(x, y)\)</span> with respect to <span class="math inline">\(x\)</span>. The derivative is a measure of how the function changes as <span class="math inline">\(x\)</span> changes for a fixed value of <span class="math inline">\(y\)</span>. This describes how the function changes in the <span class="math inline">\(x\)</span> direction.</p>
 <p>Similarly, the derivative of a function <span class="math inline">\(f(x, y)\)</span> with respect to <span class="math inline">\(y\)</span> is defined as</p>
 <p><span class="math display">\[
 \frac{\partial f(x, y)}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}
 \]</span></p>
-<p>This limit represents the rate of change of the function <span class="math inline">\(f(x, y)\)</span> with respect to <span class="math inline">\(y\)</span>. The derivative is a measure of how the function changes as <span class="math inline">\(y\)</span> changes. This describes how the function changes in the <span class="math inline">\(y\)</span> direction.</p>
+<p>This limit represents the rate of change of the function <span class="math inline">\(f(x, y)\)</span> with respect to <span class="math inline">\(y\)</span> and describes how the function changes in the <span class="math inline">\(y\)</span> direction for a fixed value of <span class="math inline">\(x\)</span>.</p>
 </section>
 </section>
 <section id="integrals" class="level3">
@@ -3689,12 +3689,11 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 \frac{dy(x)}{dx} = 2x
 \]</span></p>
 </div>
-<p>Let us think how we should read this equation. The left hand side is the derivative of the function <span class="math inline">\(y(x)\)</span> with respect to <span class="math inline">\(x\)</span>. This derivative is equal to 3. This means that the slope of the function <span class="math inline">\(y(x)\)</span> is constant and equal to 3. This is a simple differential equation that can be solved by integration. The solution is</p>
-<p><span class="math display">\[
+<p>Let us think how we should read this equation. The left hand side is the derivative of the function <span class="math inline">\(y(x)\)</span> with respect to <span class="math inline">\(x\)</span>. This derivative is equal to <span class="math inline">\(2x\)</span>. This equation tells us how the function <span class="math inline">\(y(x)\)</span> changes with <span class="math inline">\(x\)</span>. The function <span class="math inline">\(y(x)\)</span> changes at a rate of <span class="math inline">\(2x\)</span> with respect to <span class="math inline">\(x\)</span>. This is a simple differential equation that can be solved by integration. <span class="math display">\[
 y(x) = x^2 + C
 \]</span></p>
-<p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value. The solution is a straight line with slope 3. The constant <span class="math inline">\(C\)</span> determines the position of the line in the <span class="math inline">\(y\)</span>-axis.</p>
-<div id="09bdb8ad" class="cell" data-execution_count="5">
+<p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value.</p>
+<div id="b9ce9199" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3749,7 +3748,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="feac080a" class="cell" data-execution_count="6">
+<div id="5753502c" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3855,7 +3854,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="e17f2812" class="cell" data-execution_count="7">
+<div id="97bbd8d0" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4644,7 +4643,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-255"><a href="#cb8-255"></a>\frac{df(x)}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</span>
 <span id="cb8-256"><a href="#cb8-256"></a>$$</span>
 <span id="cb8-257"><a href="#cb8-257"></a></span>
-<span id="cb8-258"><a href="#cb8-258"></a>This limit represents the rate of change of the function $f(x)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes. The derivative can be interpreted as the slope of the function at a given point. The derivative is a function that gives the slope of the function at each point.</span>
+<span id="cb8-258"><a href="#cb8-258"></a>This limit represents the rate of change of the function $f(x)$ with respect to $x$.</span>
 <span id="cb8-259"><a href="#cb8-259"></a></span>
 <span id="cb8-260"><a href="#cb8-260"></a><span class="fu">#### Derivative of functions of two variables</span></span>
 <span id="cb8-261"><a href="#cb8-261"></a></span>
@@ -4654,7 +4653,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-265"><a href="#cb8-265"></a>\frac{\partial f(x, y)}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}</span>
 <span id="cb8-266"><a href="#cb8-266"></a>$$</span>
 <span id="cb8-267"><a href="#cb8-267"></a></span>
-<span id="cb8-268"><a href="#cb8-268"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes. This describes how the function changes in the $x$ direction. </span>
+<span id="cb8-268"><a href="#cb8-268"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes for a fixed value of $y$. This describes how the function changes in the $x$ direction.</span>
 <span id="cb8-269"><a href="#cb8-269"></a></span>
 <span id="cb8-270"><a href="#cb8-270"></a>Similarly, the derivative of a function $f(x, y)$ with respect to $y$ is defined as</span>
 <span id="cb8-271"><a href="#cb8-271"></a></span>
@@ -4662,7 +4661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-273"><a href="#cb8-273"></a>\frac{\partial f(x, y)}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}</span>
 <span id="cb8-274"><a href="#cb8-274"></a>$$</span>
 <span id="cb8-275"><a href="#cb8-275"></a></span>
-<span id="cb8-276"><a href="#cb8-276"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $y$. The derivative is a measure of how the function changes as $y$ changes. This describes how the function changes in the $y$ direction.</span>
+<span id="cb8-276"><a href="#cb8-276"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $y$ and describes how the function changes in the $y$ direction for a fixed value of $x$.</span>
 <span id="cb8-277"><a href="#cb8-277"></a></span>
 <span id="cb8-278"><a href="#cb8-278"></a><span class="fu">### Integrals</span></span>
 <span id="cb8-279"><a href="#cb8-279"></a></span>
@@ -4692,236 +4691,235 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-303"><a href="#cb8-303"></a>$$</span>
 <span id="cb8-304"><a href="#cb8-304"></a>:::</span>
 <span id="cb8-305"><a href="#cb8-305"></a></span>
-<span id="cb8-306"><a href="#cb8-306"></a>Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to 3. This means that the slope of the function $y(x)$ is constant and equal to 3. This is a simple differential equation that can be solved by integration. The solution is</span>
-<span id="cb8-307"><a href="#cb8-307"></a></span>
-<span id="cb8-308"><a href="#cb8-308"></a>$$</span>
-<span id="cb8-309"><a href="#cb8-309"></a>y(x) = x^2 + C</span>
-<span id="cb8-310"><a href="#cb8-310"></a>$$</span>
-<span id="cb8-311"><a href="#cb8-311"></a></span>
-<span id="cb8-312"><a href="#cb8-312"></a>where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. The solution is a straight line with slope 3. The constant $C$ determines the position of the line in the $y$-axis.</span>
-<span id="cb8-313"><a href="#cb8-313"></a></span>
-<span id="cb8-316"><a href="#cb8-316"></a><span class="in">```{python}</span></span>
-<span id="cb8-317"><a href="#cb8-317"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-318"><a href="#cb8-318"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-319"><a href="#cb8-319"></a></span>
-<span id="cb8-320"><a href="#cb8-320"></a><span class="kw">def</span> y(x, C):</span>
-<span id="cb8-321"><a href="#cb8-321"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> C</span>
-<span id="cb8-322"><a href="#cb8-322"></a></span>
-<span id="cb8-323"><a href="#cb8-323"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-324"><a href="#cb8-324"></a></span>
-<span id="cb8-325"><a href="#cb8-325"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb8-326"><a href="#cb8-326"></a></span>
-<span id="cb8-327"><a href="#cb8-327"></a><span class="cf">for</span> C <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>, <span class="dv">10</span>):</span>
-<span id="cb8-328"><a href="#cb8-328"></a>    plt.plot(x, y(x, C), label<span class="op">=</span><span class="ss">f&#39;C=</span><span class="sc">{</span>C<span class="sc">}</span><span class="ss">&#39;</span>)</span>
-<span id="cb8-329"><a href="#cb8-329"></a></span>
-<span id="cb8-330"><a href="#cb8-330"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-331"><a href="#cb8-331"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-332"><a href="#cb8-332"></a>plt.show()</span>
-<span id="cb8-333"><a href="#cb8-333"></a><span class="in">```</span></span>
-<span id="cb8-334"><a href="#cb8-334"></a></span>
-<span id="cb8-335"><a href="#cb8-335"></a><span class="fu">#### Check in geogebra:</span></span>
-<span id="cb8-336"><a href="#cb8-336"></a></span>
-<span id="cb8-337"><a href="#cb8-337"></a>::: {.geogebra-instruction}</span>
-<span id="cb8-338"><a href="#cb8-338"></a><span class="ss">* </span>f(x) =  x^2 + 3</span>
-<span id="cb8-339"><a href="#cb8-339"></a>:::</span>
-<span id="cb8-340"><a href="#cb8-340"></a></span>
-<span id="cb8-341"><a href="#cb8-341"></a><span class="fu">##### Numerical solution</span></span>
-<span id="cb8-342"><a href="#cb8-342"></a></span>
-<span id="cb8-343"><a href="#cb8-343"></a>Remember that derivatives can be approximated by finite differences. The derivative of a function $f(x)$ can be approximated by</span>
-<span id="cb8-344"><a href="#cb8-344"></a></span>
-<span id="cb8-345"><a href="#cb8-345"></a>$$</span>
-<span id="cb8-346"><a href="#cb8-346"></a>\frac{df(x)}{dx} \approx \frac{f(x + h) - f(x)}{h}</span>
-<span id="cb8-347"><a href="#cb8-347"></a>$$</span>
-<span id="cb8-348"><a href="#cb8-348"></a></span>
-<span id="cb8-349"><a href="#cb8-349"></a>where $h$ is a small number. This is a simple way to approximate the derivative of a function. Let&#39;s use this approximation to solve the differential equation</span>
-<span id="cb8-350"><a href="#cb8-350"></a></span>
-<span id="cb8-351"><a href="#cb8-351"></a>$$</span>
-<span id="cb8-352"><a href="#cb8-352"></a>\frac{dy(x)}{dx} = 2x</span>
-<span id="cb8-353"><a href="#cb8-353"></a>$$</span>
-<span id="cb8-354"><a href="#cb8-354"></a></span>
-<span id="cb8-355"><a href="#cb8-355"></a>We can approximate the derivative by</span>
-<span id="cb8-356"><a href="#cb8-356"></a></span>
-<span id="cb8-357"><a href="#cb8-357"></a>$$</span>
-<span id="cb8-358"><a href="#cb8-358"></a>\frac{y(x + h) - y(x)}{h} = 2x</span>
-<span id="cb8-359"><a href="#cb8-359"></a>$$</span>
-<span id="cb8-360"><a href="#cb8-360"></a></span>
-<span id="cb8-361"><a href="#cb8-361"></a>This equation can be solved for $y(x + h)$</span>
-<span id="cb8-362"><a href="#cb8-362"></a></span>
-<span id="cb8-363"><a href="#cb8-363"></a>$$</span>
-<span id="cb8-364"><a href="#cb8-364"></a>y(x + h) = y(x) + 2xh</span>
-<span id="cb8-365"><a href="#cb8-365"></a>$$</span>
-<span id="cb8-366"><a href="#cb8-366"></a></span>
-<span id="cb8-367"><a href="#cb8-367"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
-<span id="cb8-368"><a href="#cb8-368"></a></span>
-<span id="cb8-369"><a href="#cb8-369"></a>Let us compare the numerical solution with the analytical solution.</span>
-<span id="cb8-370"><a href="#cb8-370"></a></span>
-<span id="cb8-373"><a href="#cb8-373"></a><span class="in">```{python}</span></span>
-<span id="cb8-374"><a href="#cb8-374"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-375"><a href="#cb8-375"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-376"><a href="#cb8-376"></a></span>
-<span id="cb8-377"><a href="#cb8-377"></a><span class="co"># Define the derivative dy/dx</span></span>
-<span id="cb8-378"><a href="#cb8-378"></a><span class="kw">def</span> dy_dx(x):</span>
-<span id="cb8-379"><a href="#cb8-379"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
-<span id="cb8-380"><a href="#cb8-380"></a></span>
-<span id="cb8-381"><a href="#cb8-381"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
-<span id="cb8-382"><a href="#cb8-382"></a><span class="kw">def</span> y_analytical(x):</span>
-<span id="cb8-383"><a href="#cb8-383"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb8-384"><a href="#cb8-384"></a></span>
-<span id="cb8-385"><a href="#cb8-385"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
-<span id="cb8-386"><a href="#cb8-386"></a><span class="kw">def</span> y_numerical(x, h):</span>
-<span id="cb8-387"><a href="#cb8-387"></a>    y <span class="op">=</span> [<span class="dv">0</span>]  <span class="co"># Initialize y with the starting value, assuming y(0) = 0</span></span>
-<span id="cb8-388"><a href="#cb8-388"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb8-389"><a href="#cb8-389"></a>        y.append(y[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy_dx(x[i]) <span class="op">*</span> h)  <span class="co"># Update y using dy/dx</span></span>
-<span id="cb8-390"><a href="#cb8-390"></a>    <span class="cf">return</span> y</span>
-<span id="cb8-391"><a href="#cb8-391"></a></span>
-<span id="cb8-392"><a href="#cb8-392"></a><span class="co"># Set up the x values</span></span>
-<span id="cb8-393"><a href="#cb8-393"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-394"><a href="#cb8-394"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb8-395"><a href="#cb8-395"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
-<span id="cb8-396"><a href="#cb8-396"></a></span>
-<span id="cb8-397"><a href="#cb8-397"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
-<span id="cb8-398"><a href="#cb8-398"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
-<span id="cb8-399"><a href="#cb8-399"></a></span>
-<span id="cb8-400"><a href="#cb8-400"></a><span class="co"># Set up the figure with two subplots</span></span>
-<span id="cb8-401"><a href="#cb8-401"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
-<span id="cb8-402"><a href="#cb8-402"></a></span>
-<span id="cb8-403"><a href="#cb8-403"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
-<span id="cb8-404"><a href="#cb8-404"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-405"><a href="#cb8-405"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;solid&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-406"><a href="#cb8-406"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
-<span id="cb8-407"><a href="#cb8-407"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-408"><a href="#cb8-408"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-409"><a href="#cb8-409"></a>axs[<span class="dv">0</span>].legend()</span>
-<span id="cb8-410"><a href="#cb8-410"></a></span>
-<span id="cb8-411"><a href="#cb8-411"></a><span class="co"># Right plot: Difference between solutions</span></span>
-<span id="cb8-412"><a href="#cb8-412"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-413"><a href="#cb8-413"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
-<span id="cb8-414"><a href="#cb8-414"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-415"><a href="#cb8-415"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-416"><a href="#cb8-416"></a>axs[<span class="dv">1</span>].legend()</span>
-<span id="cb8-417"><a href="#cb8-417"></a></span>
-<span id="cb8-418"><a href="#cb8-418"></a><span class="co"># Adjust layout and show the plots</span></span>
-<span id="cb8-419"><a href="#cb8-419"></a>plt.tight_layout()</span>
-<span id="cb8-420"><a href="#cb8-420"></a>plt.show()</span>
-<span id="cb8-421"><a href="#cb8-421"></a></span>
-<span id="cb8-422"><a href="#cb8-422"></a><span class="in">```</span></span>
-<span id="cb8-423"><a href="#cb8-423"></a></span>
-<span id="cb8-424"><a href="#cb8-424"></a>Difference between the analytical and numerical solutions depends on the step size $h$. </span>
-<span id="cb8-425"><a href="#cb8-425"></a></span>
-<span id="cb8-426"><a href="#cb8-426"></a><span class="fu">### Second order differential equations</span></span>
-<span id="cb8-427"><a href="#cb8-427"></a></span>
-<span id="cb8-428"><a href="#cb8-428"></a>Let&#39;s consider the second order differential equation</span>
-<span id="cb8-429"><a href="#cb8-429"></a></span>
-<span id="cb8-430"><a href="#cb8-430"></a>$$</span>
-<span id="cb8-431"><a href="#cb8-431"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
-<span id="cb8-432"><a href="#cb8-432"></a>$$</span>
-<span id="cb8-433"><a href="#cb8-433"></a></span>
-<span id="cb8-434"><a href="#cb8-434"></a>This is a simple differential equation that can be solved by integration. The solution is</span>
-<span id="cb8-435"><a href="#cb8-435"></a></span>
-<span id="cb8-436"><a href="#cb8-436"></a>$$</span>
-<span id="cb8-437"><a href="#cb8-437"></a>y(x) = A \sin(x) + B \cos(x)</span>
-<span id="cb8-438"><a href="#cb8-438"></a>$$</span>
-<span id="cb8-439"><a href="#cb8-439"></a></span>
-<span id="cb8-440"><a href="#cb8-440"></a>where $A$ and $B$ are integration constants. This is the general solution of the differential equation. The solution is not unique because the constants $A$ and $B$ can take any value. The solution is a sinusoidal function. The constants $A$ and $B$ determine the amplitude and phase of the sinusoidal function.</span>
-<span id="cb8-441"><a href="#cb8-441"></a></span>
-<span id="cb8-442"><a href="#cb8-442"></a><span class="fu">#### Numerical solution</span></span>
-<span id="cb8-443"><a href="#cb8-443"></a></span>
-<span id="cb8-444"><a href="#cb8-444"></a>From Taylor&#39;s theorem, we know that the second derivative of a function $f(x)$ can be approximated by</span>
-<span id="cb8-445"><a href="#cb8-445"></a></span>
-<span id="cb8-446"><a href="#cb8-446"></a>$$</span>
-<span id="cb8-447"><a href="#cb8-447"></a>f(x + h) = f(x) + h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
-<span id="cb8-448"><a href="#cb8-448"></a>$$</span>
-<span id="cb8-449"><a href="#cb8-449"></a></span>
-<span id="cb8-450"><a href="#cb8-450"></a>also</span>
-<span id="cb8-451"><a href="#cb8-451"></a></span>
-<span id="cb8-452"><a href="#cb8-452"></a>$$</span>
-<span id="cb8-453"><a href="#cb8-453"></a>f(x - h) = f(x) - h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
-<span id="cb8-454"><a href="#cb8-454"></a>$$</span>
-<span id="cb8-455"><a href="#cb8-455"></a></span>
-<span id="cb8-456"><a href="#cb8-456"></a>adding these two equations we get</span>
-<span id="cb8-457"><a href="#cb8-457"></a></span>
-<span id="cb8-458"><a href="#cb8-458"></a>$$</span>
-<span id="cb8-459"><a href="#cb8-459"></a>f(x + h) + f(x - h) = 2 f(x) + h^2 \frac{d^2f(x)}{dx^2}</span>
-<span id="cb8-460"><a href="#cb8-460"></a>$$</span>
-<span id="cb8-461"><a href="#cb8-461"></a></span>
-<span id="cb8-462"><a href="#cb8-462"></a>so we can approximate the second derivative by</span>
-<span id="cb8-463"><a href="#cb8-463"></a></span>
-<span id="cb8-464"><a href="#cb8-464"></a>$$</span>
-<span id="cb8-465"><a href="#cb8-465"></a>\frac{f(x + h) + f(x - h) - 2 f(x)}{h^2} \approx \frac{d^2f(x)}{dx^2}</span>
-<span id="cb8-466"><a href="#cb8-466"></a>$$</span>
-<span id="cb8-467"><a href="#cb8-467"></a></span>
-<span id="cb8-468"><a href="#cb8-468"></a>Let&#39;s use this approximation to solve the differential equation</span>
-<span id="cb8-469"><a href="#cb8-469"></a></span>
-<span id="cb8-470"><a href="#cb8-470"></a>$$</span>
-<span id="cb8-471"><a href="#cb8-471"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
-<span id="cb8-472"><a href="#cb8-472"></a>$$</span>
-<span id="cb8-473"><a href="#cb8-473"></a></span>
-<span id="cb8-474"><a href="#cb8-474"></a>We can approximate the second derivative by</span>
-<span id="cb8-475"><a href="#cb8-475"></a></span>
-<span id="cb8-476"><a href="#cb8-476"></a>$$</span>
-<span id="cb8-477"><a href="#cb8-477"></a>\frac{y(x + h) + y(x - h) - 2 y(x)}{h^2} = -y(x)</span>
-<span id="cb8-478"><a href="#cb8-478"></a>$$</span>
-<span id="cb8-479"><a href="#cb8-479"></a></span>
-<span id="cb8-480"><a href="#cb8-480"></a>This equation can be solved for $y(x + h)$</span>
-<span id="cb8-481"><a href="#cb8-481"></a></span>
-<span id="cb8-482"><a href="#cb8-482"></a>$$</span>
-<span id="cb8-483"><a href="#cb8-483"></a>y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)</span>
-<span id="cb8-484"><a href="#cb8-484"></a>$$</span>
-<span id="cb8-485"><a href="#cb8-485"></a></span>
-<span id="cb8-486"><a href="#cb8-486"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and $y(x - h)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
-<span id="cb8-487"><a href="#cb8-487"></a></span>
-<span id="cb8-488"><a href="#cb8-488"></a>Let us compare the numerical solution with the analytical solution.</span>
-<span id="cb8-489"><a href="#cb8-489"></a></span>
-<span id="cb8-492"><a href="#cb8-492"></a><span class="in">```{python}</span></span>
-<span id="cb8-493"><a href="#cb8-493"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-494"><a href="#cb8-494"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-495"><a href="#cb8-495"></a></span>
-<span id="cb8-496"><a href="#cb8-496"></a><span class="co"># Define the second derivative d^2y/dx^2</span></span>
-<span id="cb8-497"><a href="#cb8-497"></a><span class="kw">def</span> d2y_dx2(x):</span>
-<span id="cb8-498"><a href="#cb8-498"></a>    <span class="cf">return</span> <span class="op">-</span>x</span>
-<span id="cb8-499"><a href="#cb8-499"></a></span>
-<span id="cb8-500"><a href="#cb8-500"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
-<span id="cb8-501"><a href="#cb8-501"></a><span class="kw">def</span> y_analytical(x):</span>
-<span id="cb8-502"><a href="#cb8-502"></a>    <span class="cf">return</span> <span class="op">-</span>np.sin(x)</span>
-<span id="cb8-503"><a href="#cb8-503"></a></span>
-<span id="cb8-504"><a href="#cb8-504"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
-<span id="cb8-505"><a href="#cb8-505"></a><span class="kw">def</span> y_numerical(x, h):</span>
-<span id="cb8-506"><a href="#cb8-506"></a>    y <span class="op">=</span> [<span class="dv">0</span>, np.sin(<span class="op">-</span>h)]  <span class="co"># Initialize y with the starting values, assuming y(0) = 0 and y(-h) = sin(-h)</span></span>
-<span id="cb8-507"><a href="#cb8-507"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb8-508"><a href="#cb8-508"></a>        y.append(<span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> y[<span class="op">-</span><span class="dv">2</span>] <span class="op">-</span> h<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Update y using d^2y/dx^2</span></span>
-<span id="cb8-509"><a href="#cb8-509"></a>    <span class="cf">return</span> y</span>
-<span id="cb8-510"><a href="#cb8-510"></a></span>
-<span id="cb8-511"><a href="#cb8-511"></a><span class="co"># Set up the x values</span></span>
-<span id="cb8-512"><a href="#cb8-512"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-513"><a href="#cb8-513"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>)</span>
-<span id="cb8-514"><a href="#cb8-514"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
-<span id="cb8-515"><a href="#cb8-515"></a></span>
-<span id="cb8-516"><a href="#cb8-516"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
-<span id="cb8-517"><a href="#cb8-517"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
-<span id="cb8-518"><a href="#cb8-518"></a></span>
-<span id="cb8-519"><a href="#cb8-519"></a><span class="co"># Set up the figure with two subplots</span></span>
-<span id="cb8-520"><a href="#cb8-520"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
-<span id="cb8-521"><a href="#cb8-521"></a></span>
-<span id="cb8-522"><a href="#cb8-522"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
-<span id="cb8-523"><a href="#cb8-523"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-524"><a href="#cb8-524"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-525"><a href="#cb8-525"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
-<span id="cb8-526"><a href="#cb8-526"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-527"><a href="#cb8-527"></a></span>
-<span id="cb8-528"><a href="#cb8-528"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-529"><a href="#cb8-529"></a>axs[<span class="dv">0</span>].legend()</span>
-<span id="cb8-530"><a href="#cb8-530"></a></span>
-<span id="cb8-531"><a href="#cb8-531"></a><span class="co"># Right plot: Difference between solutions</span></span>
-<span id="cb8-532"><a href="#cb8-532"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-533"><a href="#cb8-533"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
-<span id="cb8-534"><a href="#cb8-534"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-535"><a href="#cb8-535"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-536"><a href="#cb8-536"></a>axs[<span class="dv">1</span>].legend()</span>
-<span id="cb8-537"><a href="#cb8-537"></a></span>
-<span id="cb8-538"><a href="#cb8-538"></a><span class="co"># Adjust layout and show the plots</span></span>
-<span id="cb8-539"><a href="#cb8-539"></a>plt.tight_layout()</span>
-<span id="cb8-540"><a href="#cb8-540"></a>plt.show()</span>
-<span id="cb8-541"><a href="#cb8-541"></a><span class="in">```</span></span>
+<span id="cb8-306"><a href="#cb8-306"></a>Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to $2x$. This equation tells us how the function $y(x)$ changes with $x$. The function $y(x)$ changes at a rate of $2x$ with respect to $x$. This is a simple differential equation that can be solved by integration.</span>
+<span id="cb8-307"><a href="#cb8-307"></a>$$</span>
+<span id="cb8-308"><a href="#cb8-308"></a>y(x) = x^2 + C</span>
+<span id="cb8-309"><a href="#cb8-309"></a>$$</span>
+<span id="cb8-310"><a href="#cb8-310"></a></span>
+<span id="cb8-311"><a href="#cb8-311"></a>where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. </span>
+<span id="cb8-312"><a href="#cb8-312"></a></span>
+<span id="cb8-315"><a href="#cb8-315"></a><span class="in">```{python}</span></span>
+<span id="cb8-316"><a href="#cb8-316"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-317"><a href="#cb8-317"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-318"><a href="#cb8-318"></a></span>
+<span id="cb8-319"><a href="#cb8-319"></a><span class="kw">def</span> y(x, C):</span>
+<span id="cb8-320"><a href="#cb8-320"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> C</span>
+<span id="cb8-321"><a href="#cb8-321"></a></span>
+<span id="cb8-322"><a href="#cb8-322"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-323"><a href="#cb8-323"></a></span>
+<span id="cb8-324"><a href="#cb8-324"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb8-325"><a href="#cb8-325"></a></span>
+<span id="cb8-326"><a href="#cb8-326"></a><span class="cf">for</span> C <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>, <span class="dv">10</span>):</span>
+<span id="cb8-327"><a href="#cb8-327"></a>    plt.plot(x, y(x, C), label<span class="op">=</span><span class="ss">f&#39;C=</span><span class="sc">{</span>C<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb8-328"><a href="#cb8-328"></a></span>
+<span id="cb8-329"><a href="#cb8-329"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-330"><a href="#cb8-330"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-331"><a href="#cb8-331"></a>plt.show()</span>
+<span id="cb8-332"><a href="#cb8-332"></a><span class="in">```</span></span>
+<span id="cb8-333"><a href="#cb8-333"></a></span>
+<span id="cb8-334"><a href="#cb8-334"></a><span class="fu">#### Check in geogebra:</span></span>
+<span id="cb8-335"><a href="#cb8-335"></a></span>
+<span id="cb8-336"><a href="#cb8-336"></a>::: {.geogebra-instruction}</span>
+<span id="cb8-337"><a href="#cb8-337"></a><span class="ss">* </span>f(x) =  x^2 + 3</span>
+<span id="cb8-338"><a href="#cb8-338"></a>:::</span>
+<span id="cb8-339"><a href="#cb8-339"></a></span>
+<span id="cb8-340"><a href="#cb8-340"></a><span class="fu">##### Numerical solution</span></span>
+<span id="cb8-341"><a href="#cb8-341"></a></span>
+<span id="cb8-342"><a href="#cb8-342"></a>Remember that derivatives can be approximated by finite differences. The derivative of a function $f(x)$ can be approximated by</span>
+<span id="cb8-343"><a href="#cb8-343"></a></span>
+<span id="cb8-344"><a href="#cb8-344"></a>$$</span>
+<span id="cb8-345"><a href="#cb8-345"></a>\frac{df(x)}{dx} \approx \frac{f(x + h) - f(x)}{h}</span>
+<span id="cb8-346"><a href="#cb8-346"></a>$$</span>
+<span id="cb8-347"><a href="#cb8-347"></a></span>
+<span id="cb8-348"><a href="#cb8-348"></a>where $h$ is a small number. This is a simple way to approximate the derivative of a function. Let&#39;s use this approximation to solve the differential equation</span>
+<span id="cb8-349"><a href="#cb8-349"></a></span>
+<span id="cb8-350"><a href="#cb8-350"></a>$$</span>
+<span id="cb8-351"><a href="#cb8-351"></a>\frac{dy(x)}{dx} = 2x</span>
+<span id="cb8-352"><a href="#cb8-352"></a>$$</span>
+<span id="cb8-353"><a href="#cb8-353"></a></span>
+<span id="cb8-354"><a href="#cb8-354"></a>We can approximate the derivative by</span>
+<span id="cb8-355"><a href="#cb8-355"></a></span>
+<span id="cb8-356"><a href="#cb8-356"></a>$$</span>
+<span id="cb8-357"><a href="#cb8-357"></a>\frac{y(x + h) - y(x)}{h} = 2x</span>
+<span id="cb8-358"><a href="#cb8-358"></a>$$</span>
+<span id="cb8-359"><a href="#cb8-359"></a></span>
+<span id="cb8-360"><a href="#cb8-360"></a>This equation can be solved for $y(x + h)$</span>
+<span id="cb8-361"><a href="#cb8-361"></a></span>
+<span id="cb8-362"><a href="#cb8-362"></a>$$</span>
+<span id="cb8-363"><a href="#cb8-363"></a>y(x + h) = y(x) + 2xh</span>
+<span id="cb8-364"><a href="#cb8-364"></a>$$</span>
+<span id="cb8-365"><a href="#cb8-365"></a></span>
+<span id="cb8-366"><a href="#cb8-366"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
+<span id="cb8-367"><a href="#cb8-367"></a></span>
+<span id="cb8-368"><a href="#cb8-368"></a>Let us compare the numerical solution with the analytical solution.</span>
+<span id="cb8-369"><a href="#cb8-369"></a></span>
+<span id="cb8-372"><a href="#cb8-372"></a><span class="in">```{python}</span></span>
+<span id="cb8-373"><a href="#cb8-373"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-374"><a href="#cb8-374"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-375"><a href="#cb8-375"></a></span>
+<span id="cb8-376"><a href="#cb8-376"></a><span class="co"># Define the derivative dy/dx</span></span>
+<span id="cb8-377"><a href="#cb8-377"></a><span class="kw">def</span> dy_dx(x):</span>
+<span id="cb8-378"><a href="#cb8-378"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
+<span id="cb8-379"><a href="#cb8-379"></a></span>
+<span id="cb8-380"><a href="#cb8-380"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
+<span id="cb8-381"><a href="#cb8-381"></a><span class="kw">def</span> y_analytical(x):</span>
+<span id="cb8-382"><a href="#cb8-382"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb8-383"><a href="#cb8-383"></a></span>
+<span id="cb8-384"><a href="#cb8-384"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
+<span id="cb8-385"><a href="#cb8-385"></a><span class="kw">def</span> y_numerical(x, h):</span>
+<span id="cb8-386"><a href="#cb8-386"></a>    y <span class="op">=</span> [<span class="dv">0</span>]  <span class="co"># Initialize y with the starting value, assuming y(0) = 0</span></span>
+<span id="cb8-387"><a href="#cb8-387"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb8-388"><a href="#cb8-388"></a>        y.append(y[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy_dx(x[i]) <span class="op">*</span> h)  <span class="co"># Update y using dy/dx</span></span>
+<span id="cb8-389"><a href="#cb8-389"></a>    <span class="cf">return</span> y</span>
+<span id="cb8-390"><a href="#cb8-390"></a></span>
+<span id="cb8-391"><a href="#cb8-391"></a><span class="co"># Set up the x values</span></span>
+<span id="cb8-392"><a href="#cb8-392"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-393"><a href="#cb8-393"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb8-394"><a href="#cb8-394"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
+<span id="cb8-395"><a href="#cb8-395"></a></span>
+<span id="cb8-396"><a href="#cb8-396"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
+<span id="cb8-397"><a href="#cb8-397"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
+<span id="cb8-398"><a href="#cb8-398"></a></span>
+<span id="cb8-399"><a href="#cb8-399"></a><span class="co"># Set up the figure with two subplots</span></span>
+<span id="cb8-400"><a href="#cb8-400"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-401"><a href="#cb8-401"></a></span>
+<span id="cb8-402"><a href="#cb8-402"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
+<span id="cb8-403"><a href="#cb8-403"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb8-404"><a href="#cb8-404"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;solid&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-405"><a href="#cb8-405"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
+<span id="cb8-406"><a href="#cb8-406"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-407"><a href="#cb8-407"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-408"><a href="#cb8-408"></a>axs[<span class="dv">0</span>].legend()</span>
+<span id="cb8-409"><a href="#cb8-409"></a></span>
+<span id="cb8-410"><a href="#cb8-410"></a><span class="co"># Right plot: Difference between solutions</span></span>
+<span id="cb8-411"><a href="#cb8-411"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-412"><a href="#cb8-412"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
+<span id="cb8-413"><a href="#cb8-413"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-414"><a href="#cb8-414"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-415"><a href="#cb8-415"></a>axs[<span class="dv">1</span>].legend()</span>
+<span id="cb8-416"><a href="#cb8-416"></a></span>
+<span id="cb8-417"><a href="#cb8-417"></a><span class="co"># Adjust layout and show the plots</span></span>
+<span id="cb8-418"><a href="#cb8-418"></a>plt.tight_layout()</span>
+<span id="cb8-419"><a href="#cb8-419"></a>plt.show()</span>
+<span id="cb8-420"><a href="#cb8-420"></a></span>
+<span id="cb8-421"><a href="#cb8-421"></a><span class="in">```</span></span>
+<span id="cb8-422"><a href="#cb8-422"></a></span>
+<span id="cb8-423"><a href="#cb8-423"></a>Difference between the analytical and numerical solutions depends on the step size $h$. </span>
+<span id="cb8-424"><a href="#cb8-424"></a></span>
+<span id="cb8-425"><a href="#cb8-425"></a><span class="fu">### Second order differential equations</span></span>
+<span id="cb8-426"><a href="#cb8-426"></a></span>
+<span id="cb8-427"><a href="#cb8-427"></a>Let&#39;s consider the second order differential equation</span>
+<span id="cb8-428"><a href="#cb8-428"></a></span>
+<span id="cb8-429"><a href="#cb8-429"></a>$$</span>
+<span id="cb8-430"><a href="#cb8-430"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
+<span id="cb8-431"><a href="#cb8-431"></a>$$</span>
+<span id="cb8-432"><a href="#cb8-432"></a></span>
+<span id="cb8-433"><a href="#cb8-433"></a>This is a simple differential equation that can be solved by integration. The solution is</span>
+<span id="cb8-434"><a href="#cb8-434"></a></span>
+<span id="cb8-435"><a href="#cb8-435"></a>$$</span>
+<span id="cb8-436"><a href="#cb8-436"></a>y(x) = A \sin(x) + B \cos(x)</span>
+<span id="cb8-437"><a href="#cb8-437"></a>$$</span>
+<span id="cb8-438"><a href="#cb8-438"></a></span>
+<span id="cb8-439"><a href="#cb8-439"></a>where $A$ and $B$ are integration constants. This is the general solution of the differential equation. The solution is not unique because the constants $A$ and $B$ can take any value. The solution is a sinusoidal function. The constants $A$ and $B$ determine the amplitude and phase of the sinusoidal function.</span>
+<span id="cb8-440"><a href="#cb8-440"></a></span>
+<span id="cb8-441"><a href="#cb8-441"></a><span class="fu">#### Numerical solution</span></span>
+<span id="cb8-442"><a href="#cb8-442"></a></span>
+<span id="cb8-443"><a href="#cb8-443"></a>From Taylor&#39;s theorem, we know that the second derivative of a function $f(x)$ can be approximated by</span>
+<span id="cb8-444"><a href="#cb8-444"></a></span>
+<span id="cb8-445"><a href="#cb8-445"></a>$$</span>
+<span id="cb8-446"><a href="#cb8-446"></a>f(x + h) = f(x) + h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
+<span id="cb8-447"><a href="#cb8-447"></a>$$</span>
+<span id="cb8-448"><a href="#cb8-448"></a></span>
+<span id="cb8-449"><a href="#cb8-449"></a>also</span>
+<span id="cb8-450"><a href="#cb8-450"></a></span>
+<span id="cb8-451"><a href="#cb8-451"></a>$$</span>
+<span id="cb8-452"><a href="#cb8-452"></a>f(x - h) = f(x) - h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
+<span id="cb8-453"><a href="#cb8-453"></a>$$</span>
+<span id="cb8-454"><a href="#cb8-454"></a></span>
+<span id="cb8-455"><a href="#cb8-455"></a>adding these two equations we get</span>
+<span id="cb8-456"><a href="#cb8-456"></a></span>
+<span id="cb8-457"><a href="#cb8-457"></a>$$</span>
+<span id="cb8-458"><a href="#cb8-458"></a>f(x + h) + f(x - h) = 2 f(x) + h^2 \frac{d^2f(x)}{dx^2}</span>
+<span id="cb8-459"><a href="#cb8-459"></a>$$</span>
+<span id="cb8-460"><a href="#cb8-460"></a></span>
+<span id="cb8-461"><a href="#cb8-461"></a>so we can approximate the second derivative by</span>
+<span id="cb8-462"><a href="#cb8-462"></a></span>
+<span id="cb8-463"><a href="#cb8-463"></a>$$</span>
+<span id="cb8-464"><a href="#cb8-464"></a>\frac{f(x + h) + f(x - h) - 2 f(x)}{h^2} \approx \frac{d^2f(x)}{dx^2}</span>
+<span id="cb8-465"><a href="#cb8-465"></a>$$</span>
+<span id="cb8-466"><a href="#cb8-466"></a></span>
+<span id="cb8-467"><a href="#cb8-467"></a>Let&#39;s use this approximation to solve the differential equation</span>
+<span id="cb8-468"><a href="#cb8-468"></a></span>
+<span id="cb8-469"><a href="#cb8-469"></a>$$</span>
+<span id="cb8-470"><a href="#cb8-470"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
+<span id="cb8-471"><a href="#cb8-471"></a>$$</span>
+<span id="cb8-472"><a href="#cb8-472"></a></span>
+<span id="cb8-473"><a href="#cb8-473"></a>We can approximate the second derivative by</span>
+<span id="cb8-474"><a href="#cb8-474"></a></span>
+<span id="cb8-475"><a href="#cb8-475"></a>$$</span>
+<span id="cb8-476"><a href="#cb8-476"></a>\frac{y(x + h) + y(x - h) - 2 y(x)}{h^2} = -y(x)</span>
+<span id="cb8-477"><a href="#cb8-477"></a>$$</span>
+<span id="cb8-478"><a href="#cb8-478"></a></span>
+<span id="cb8-479"><a href="#cb8-479"></a>This equation can be solved for $y(x + h)$</span>
+<span id="cb8-480"><a href="#cb8-480"></a></span>
+<span id="cb8-481"><a href="#cb8-481"></a>$$</span>
+<span id="cb8-482"><a href="#cb8-482"></a>y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)</span>
+<span id="cb8-483"><a href="#cb8-483"></a>$$</span>
+<span id="cb8-484"><a href="#cb8-484"></a></span>
+<span id="cb8-485"><a href="#cb8-485"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and $y(x - h)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
+<span id="cb8-486"><a href="#cb8-486"></a></span>
+<span id="cb8-487"><a href="#cb8-487"></a>Let us compare the numerical solution with the analytical solution.</span>
+<span id="cb8-488"><a href="#cb8-488"></a></span>
+<span id="cb8-491"><a href="#cb8-491"></a><span class="in">```{python}</span></span>
+<span id="cb8-492"><a href="#cb8-492"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-493"><a href="#cb8-493"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-494"><a href="#cb8-494"></a></span>
+<span id="cb8-495"><a href="#cb8-495"></a><span class="co"># Define the second derivative d^2y/dx^2</span></span>
+<span id="cb8-496"><a href="#cb8-496"></a><span class="kw">def</span> d2y_dx2(x):</span>
+<span id="cb8-497"><a href="#cb8-497"></a>    <span class="cf">return</span> <span class="op">-</span>x</span>
+<span id="cb8-498"><a href="#cb8-498"></a></span>
+<span id="cb8-499"><a href="#cb8-499"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
+<span id="cb8-500"><a href="#cb8-500"></a><span class="kw">def</span> y_analytical(x):</span>
+<span id="cb8-501"><a href="#cb8-501"></a>    <span class="cf">return</span> <span class="op">-</span>np.sin(x)</span>
+<span id="cb8-502"><a href="#cb8-502"></a></span>
+<span id="cb8-503"><a href="#cb8-503"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
+<span id="cb8-504"><a href="#cb8-504"></a><span class="kw">def</span> y_numerical(x, h):</span>
+<span id="cb8-505"><a href="#cb8-505"></a>    y <span class="op">=</span> [<span class="dv">0</span>, np.sin(<span class="op">-</span>h)]  <span class="co"># Initialize y with the starting values, assuming y(0) = 0 and y(-h) = sin(-h)</span></span>
+<span id="cb8-506"><a href="#cb8-506"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb8-507"><a href="#cb8-507"></a>        y.append(<span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> y[<span class="op">-</span><span class="dv">2</span>] <span class="op">-</span> h<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Update y using d^2y/dx^2</span></span>
+<span id="cb8-508"><a href="#cb8-508"></a>    <span class="cf">return</span> y</span>
+<span id="cb8-509"><a href="#cb8-509"></a></span>
+<span id="cb8-510"><a href="#cb8-510"></a><span class="co"># Set up the x values</span></span>
+<span id="cb8-511"><a href="#cb8-511"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-512"><a href="#cb8-512"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>)</span>
+<span id="cb8-513"><a href="#cb8-513"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
+<span id="cb8-514"><a href="#cb8-514"></a></span>
+<span id="cb8-515"><a href="#cb8-515"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
+<span id="cb8-516"><a href="#cb8-516"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
+<span id="cb8-517"><a href="#cb8-517"></a></span>
+<span id="cb8-518"><a href="#cb8-518"></a><span class="co"># Set up the figure with two subplots</span></span>
+<span id="cb8-519"><a href="#cb8-519"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-520"><a href="#cb8-520"></a></span>
+<span id="cb8-521"><a href="#cb8-521"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
+<span id="cb8-522"><a href="#cb8-522"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb8-523"><a href="#cb8-523"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-524"><a href="#cb8-524"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
+<span id="cb8-525"><a href="#cb8-525"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-526"><a href="#cb8-526"></a></span>
+<span id="cb8-527"><a href="#cb8-527"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-528"><a href="#cb8-528"></a>axs[<span class="dv">0</span>].legend()</span>
+<span id="cb8-529"><a href="#cb8-529"></a></span>
+<span id="cb8-530"><a href="#cb8-530"></a><span class="co"># Right plot: Difference between solutions</span></span>
+<span id="cb8-531"><a href="#cb8-531"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-532"><a href="#cb8-532"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
+<span id="cb8-533"><a href="#cb8-533"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-534"><a href="#cb8-534"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-535"><a href="#cb8-535"></a>axs[<span class="dv">1</span>].legend()</span>
+<span id="cb8-536"><a href="#cb8-536"></a></span>
+<span id="cb8-537"><a href="#cb8-537"></a><span class="co"># Adjust layout and show the plots</span></span>
+<span id="cb8-538"><a href="#cb8-538"></a>plt.tight_layout()</span>
+<span id="cb8-539"><a href="#cb8-539"></a>plt.show()</span>
+<span id="cb8-540"><a href="#cb8-540"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
