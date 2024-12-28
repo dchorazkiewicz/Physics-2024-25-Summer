@@ -4,7 +4,7 @@ format:
   html:
     theme: flatly
     toc: true
-    toc-depth: 4
+    toc-depth: 3
     highlight-style: tango
     code-line-numbers: true
     code-fold: show
@@ -86,11 +86,14 @@ plt.show()
 
 ##### Geogebra example
 
+
+::: {.geogebra-instruction}
 * c1 = Curve[t, -t^2+t, t, 0, 10]
 * c2 = Curve[cos(t), sin(t), t, 0, 2*pi]
 * s = Slider[0,10,.001]
 * P = (x(c1(s)),y(c1(s)))
 * Q = (x(c2(s)),y(c2(s)))
+:::
 
 where
 
@@ -103,20 +106,24 @@ where
 
 Check additional examples in geogebra:
 
+::: {.geogebra-instruction}
 * a=Slider[1,10,1]
 * b=Slider[1,10,1]
-* Curve[cos(a*t), b*sin(t), t, 0, 20*pi]
+* Curve[cos(a\*t), b\*sin(t), t, 0, 20*pi]
+:::
 
 Compare following curves:
 
+::: {.geogebra-instruction}
 * Curve[t,t,0,10]
-* Curve[t^2,t^2,0,sqrt(10)]
-* Curve[t^3,t^3,0,10^(1/3)]
+* Curve[t\^2,t\^2,0,sqrt(10)]
+* Curve[t\^3,t\^3,0,10\^(1/3)]
+:::
 
 In geberal when we create any curve in Geogebra we can create additional point which will
 be moving along the curve. This is very useful to visualize the motion of the particle.
 
-### Velocity
+## Velocity
 
 The velocity of the particle is the derivative of the position vector with respect to time. The velocity vector is defined as
 
@@ -162,7 +169,7 @@ we can realze that the in geogebra
 * v1 = Derivative[c1]
 * s = Slider[0,10,.001]
 * P = (x(c1(s)),y(c1(s)))
-* vel = Vector[P,P+v1(s)]
+* vel = Vector[P, P+v1(s)]
 
 where
 
@@ -177,7 +184,10 @@ where
 The acceleration of the particle is the derivative of the velocity vector with respect to time. The acceleration vector is defined as
 
 $$
-\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
+\mathbf{a}(t) = 
+\frac{d\mathbf{v}(t)}{dt} =
+\left(\frac{dv_x(t)}{dt}, \frac{dv_y(t)}{dt}\right) = 
+\left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 $$
 
 The acceleration vector describes the rate of change of the velocity of the particle at any time $t$. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.
@@ -221,8 +231,8 @@ we can realze that the in geogebra
 * a1 = Derivative[v1]
 * s = Slider[0,10,.001]
 * P = (x(c1(s)),y(c1(s)))
-* vel = Vector[P,P+v1(s)]
-* acc = Vector[P,P+a1(s)]
+* vel = Vector[P, P+v1(s)]
+* acc = Vector[P, P+a1(s)]
 
 where
 
@@ -236,17 +246,15 @@ where
 
 
 
-
-
-# Newton's laws of motion
+## Newton's laws of motion
 
 Revolutions in physics started with Newton's laws of motion. These laws describe the motion of particles in space. The first law states that a particle moves with constant velocity if no external forces act on it. The second law states that the acceleration of a particle is proportional to the force acting on it. The third law states that forces always occur in pairs. If one object exerts a force on another object, the second object exerts an equal and opposite force on the first object. These laws are the foundation of classical mechanics.
 
-## Newton's first law
+### Newton's first law
 
 Newton's first law states that a particle moves with constant velocity if no external forces act on it. This law is also known as the law of inertia. The law of inertia states that an object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This law is a consequence of the conservation of momentum. The momentum of a particle is the product of its mass and velocity. The momentum of a particle is conserved if no external forces act on it.
 
-## Newton's second law
+### Newton's second law
 
 Newton's second law states that the acceleration of a particle is proportional to the force acting on it. The acceleration of a particle is the rate of change of its velocity. The force acting on a particle is the product of its mass and acceleration. The force acting on a particle is equal to the rate of change of its momentum. The second law can be written as
 
@@ -268,17 +276,17 @@ $$
 \end{align*}
 $$
 
-### Bounduary conditions
+#### Bounduary conditions
 
 To solve these equations we need to know the initial position and velocity of the particle. These are the boundary conditions of the problem. The boundary conditions are the initial values of the position and velocity of the particle. The boundary conditions determine the trajectory of the particle in space. The boundary conditions can be used to solve the differential equations of motion.
 
 
-## Newton's third law
+### Newton's third law
 
 Newton's third law states that forces always occur in pairs. If one object exerts a force on another object, the second object exerts an equal and opposite force on the first object. This law is also known as the law of action and reaction. The law of action and reaction states that for every action there is an equal and opposite reaction. This law is a consequence of the conservation of momentum. The momentum of a system is conserved if no external forces act on it.
 
 
-## Projectile motion
+### Projectile motion
 
 Equations of motion for a particle in free fall are
 
@@ -345,7 +353,7 @@ plt.show()
 ```
 
 
-## Simple harmonic motion in 2D
+### Simple harmonic motion in 2D
 
 Let $\mathbb{F}=(-kx,-ky)$ be the force acting on the particle. The equations of motion are
 
@@ -418,13 +426,13 @@ plt.axis('equal')
 plt.show()
 ```
 
-## Pendulum Motion
+### Pendulum Motion
 
-### Introduction
+#### Introduction
 
 The motion of a simple pendulum is a classic example of harmonic motion. A pendulum consists of a mass $m$ (called the bob) attached to a string or rod of length $L$, which is fixed at one end and free to swing back and forth under the influence of gravity. For small angles, the motion can be approximated as simple harmonic motion.
 
-### Equations of Motion
+#### Equations of Motion
 
 The equation of motion for a pendulum is derived from Newton's second law. The force acting on the pendulum is the component of the gravitational force tangential to the arc of its swing:
 
@@ -456,7 +464,7 @@ $$
 \omega = \sqrt{\frac{g}{L}}
 $$
 
-### Analytical Solution
+#### Analytical Solution
 
 The analytical solution for small angles is:
 
@@ -468,7 +476,7 @@ where:
 - $\theta_0$ is the initial angular displacement.
 - $\phi$ is the phase constant, determined by initial conditions.
 
-### Numerical Solution
+#### Numerical Solution
 
 For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.
 
@@ -512,7 +520,7 @@ plt.legend()
 plt.show()
 ```
 
-### Phase Space Representation
+#### Phase Space Representation
 
 The motion of the pendulum can also be visualized in phase space, where the angular displacement $\theta$ is plotted against the angular velocity $\omega$.
 
@@ -527,7 +535,7 @@ plt.legend()
 plt.show()
 ```
 
-### Energy Analysis
+#### Energy Analysis
 
 The total mechanical energy of the pendulum is conserved (assuming no damping). The total energy is the sum of kinetic and potential energy:
 
@@ -572,20 +580,20 @@ plt.show()
 ```
 
 
-## Circular Motion
+### Circular Motion
 
-### Introduction
+#### Introduction
 
 Circular motion refers to the movement of an object along a circular path. This motion can be uniform (constant speed) or non-uniform (variable speed). For simplicity, we will consider uniform circular motion, where the speed of the object is constant. The position, velocity, and acceleration vectors in circular motion exhibit interesting properties:
 
 - The velocity vector is always tangent to the circle.
 - The acceleration vector (centripetal acceleration) always points toward the center of the circle.
 
-### Equations of Motion
+#### Equations of Motion
 
 Assume an object moves along a circular path of radius $R$ with constant angular velocity $\omega$.
 
-#### Position Vector
+##### Position Vector
 
 The position of the object at time $t$ can be described in terms of the angle $\theta(t)$ it makes with the reference axis:
 
@@ -621,7 +629,7 @@ $$
 |\mathbf{a}(t)| = R \omega^2
 $$
 
-### Properties (Explicit Calculations)
+#### Properties (Explicit Calculations)
 
 1. **Velocity and Position Perpendicularity:**
    
@@ -655,7 +663,7 @@ $$
    
    This shows that $\mathbf{a}(t)$ always points toward the center of the circle.
 
-### Numerical Example
+#### Numerical Example
 
 We will visualize the position, velocity, and acceleration at two distinct points along the circular path.
 
@@ -701,7 +709,7 @@ plt.show()
 ```
 
 
-## Universal Law of Gravitation
+## Gravity
 
 ### Introduction
 
@@ -793,17 +801,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Parameters
-M = 5.972e24  # Mass of central body (kg)
+M = 2e22  # Mass of central body (kg)
 G = 6.674e-11  # Gravitational constant
 
 # Grid for visualization
-x = np.linspace(-10, 10, 100)
-y = np.linspace(-10, 10, 100)
+x = np.linspace(-100, 100, 25)
+y = np.linspace(-100, 100, 25)
 X, Y = np.meshgrid(x, y)
 R = np.sqrt(X**2 + Y**2)
 
 # Avoid division by zero
 R[R == 0] = np.nan
+R[R <35] = np.nan
 
 # Gravitational field
 Fx = -G * M * X / R**3
