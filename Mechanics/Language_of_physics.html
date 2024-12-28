@@ -3360,32 +3360,22 @@ margin-bottom: 0;
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#weather-data-visualization" id="toc-weather-data-visualization" class="nav-link" data-scroll-target="#weather-data-visualization">Weather Data Visualization</a></li>
   <li><a href="#scalar-fields" id="toc-scalar-fields" class="nav-link" data-scroll-target="#scalar-fields">Scalar Fields</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#example-temperature-on-a-surface" id="toc-example-temperature-on-a-surface" class="nav-link" data-scroll-target="#example-temperature-on-a-surface">Example: Temperature on a surface</a></li>
   </ul></li>
   <li><a href="#vector-fields" id="toc-vector-fields" class="nav-link" data-scroll-target="#vector-fields">Vector Fields</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#example-static-vector-field" id="toc-example-static-vector-field" class="nav-link" data-scroll-target="#example-static-vector-field">Example: Static vector field</a></li>
   </ul></li>
   <li><a href="#derivatives-and-integrals" id="toc-derivatives-and-integrals" class="nav-link" data-scroll-target="#derivatives-and-integrals">Derivatives and Integrals</a>
-  <ul>
-  <li><a href="#derivatives" id="toc-derivatives" class="nav-link" data-scroll-target="#derivatives">Derivatives</a>
   <ul class="collapse">
-  <li><a href="#derivative-of-functions-of-one-variable" id="toc-derivative-of-functions-of-one-variable" class="nav-link" data-scroll-target="#derivative-of-functions-of-one-variable">Derivative of functions of one variable</a></li>
-  <li><a href="#derivative-of-functions-of-two-variables" id="toc-derivative-of-functions-of-two-variables" class="nav-link" data-scroll-target="#derivative-of-functions-of-two-variables">Derivative of functions of two variables</a></li>
-  </ul></li>
+  <li><a href="#derivatives" id="toc-derivatives" class="nav-link" data-scroll-target="#derivatives">Derivatives</a></li>
   <li><a href="#integrals" id="toc-integrals" class="nav-link" data-scroll-target="#integrals">Integrals</a></li>
   </ul></li>
   <li><a href="#differential-equations" id="toc-differential-equations" class="nav-link" data-scroll-target="#differential-equations">Differential equations</a>
-  <ul>
-  <li><a href="#starting-example" id="toc-starting-example" class="nav-link" data-scroll-target="#starting-example">Starting example</a>
   <ul class="collapse">
-  <li><a href="#check-in-geogebra" id="toc-check-in-geogebra" class="nav-link" data-scroll-target="#check-in-geogebra">Check in geogebra:</a></li>
-  </ul></li>
-  <li><a href="#second-order-differential-equations" id="toc-second-order-differential-equations" class="nav-link" data-scroll-target="#second-order-differential-equations">Second order differential equations</a>
-  <ul class="collapse">
-  <li><a href="#numerical-solution-1" id="toc-numerical-solution-1" class="nav-link" data-scroll-target="#numerical-solution-1">Numerical solution</a></li>
-  </ul></li>
+  <li><a href="#starting-example" id="toc-starting-example" class="nav-link" data-scroll-target="#starting-example">Starting example</a></li>
+  <li><a href="#second-order-differential-equations" id="toc-second-order-differential-equations" class="nav-link" data-scroll-target="#second-order-differential-equations">Second order differential equations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -3435,7 +3425,7 @@ margin-bottom: 0;
 T(x, y) = 5 \sin(x) \cos(y)
 \]</span></p>
 <p>Below is a Python code of this scalar field:</p>
-<div id="dfa617cb" class="cell" data-execution_count="1">
+<div id="b61526b6" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3483,7 +3473,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </ul>
 </div>
 <p>Or we can use the following Python code to grasp 4 time steps:</p>
-<div id="a3d9236b" class="cell" data-execution_count="2">
+<div id="8a8c6bde" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3550,7 +3540,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 \vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})
 \]</span></p>
 <p>This field might represent the velocity of a fluid at each point <span class="math inline">\((x, y)\)</span> in a 2D space. Below is a Python code to visualize this vector field:</p>
-<div id="dbd5a501" class="cell" data-execution_count="3">
+<div id="0015e1a9" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3596,7 +3586,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </div>
 </div>
 <p>Stream plot</p>
-<div id="c0bf66d0" class="cell" data-execution_count="4">
+<div id="70c54086" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3693,7 +3683,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 y(x) = x^2 + C
 \]</span></p>
 <p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value.</p>
-<div id="b9ce9199" class="cell" data-execution_count="5">
+<div id="65062c2e" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3748,7 +3738,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="5753502c" class="cell" data-execution_count="6">
+<div id="49e7b0c0" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3854,7 +3844,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="97bbd8d0" class="cell" data-execution_count="7">
+<div id="074f322d" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4400,7 +4390,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-4"><a href="#cb8-4"></a><span class="co">  html:</span></span>
 <span id="cb8-5"><a href="#cb8-5"></a><span class="co">    theme: flatly</span></span>
 <span id="cb8-6"><a href="#cb8-6"></a><span class="co">    toc: true</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co">    toc-depth: 4</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">    toc-depth: 3</span></span>
 <span id="cb8-8"><a href="#cb8-8"></a><span class="co">    highlight-style: tango</span></span>
 <span id="cb8-9"><a href="#cb8-9"></a><span class="co">    code-line-numbers: true</span></span>
 <span id="cb8-10"><a href="#cb8-10"></a><span class="co">    code-fold: show</span></span>
