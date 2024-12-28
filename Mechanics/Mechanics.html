@@ -3475,7 +3475,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 </ul>
 <section id="python-example" class="level5">
 <h5 class="anchored" data-anchor-id="python-example">Python example</h5>
-<div id="31064385" class="cell" data-execution_count="1">
+<div id="38ecc0bc" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3555,7 +3555,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \left(\frac{dx(t)}{dt}, \frac{dy(t)}{dt}\right)
 \]</span></p>
 <p>The velocity vector describes the speed and direction of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the velocity vector is the speed of the particle. The direction of the velocity vector is the direction of motion of the particle.</p>
-<div id="e00c7cd3" class="cell" data-execution_count="2">
+<div id="c76bc0b8" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3619,7 +3619,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 \]</span></p>
 <p>The acceleration vector describes the rate of change of the velocity of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.</p>
-<div id="c5094e41" class="cell" data-execution_count="3">
+<div id="ab07c015" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3735,7 +3735,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 </section>
 <section id="numerical-solution" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution">Numerical solution</h4>
-<div id="01c7665e" class="cell" data-execution_count="4">
+<div id="f91be17a" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3805,7 +3805,7 @@ y(t) &amp;= A_y \sin(\omega t) + B_y \cos(\omega t)
 </section>
 <section id="numerical-solution-1" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-1">Numerical solution</h4>
-<div id="23884442" class="cell" data-execution_count="5">
+<div id="2f17f86b" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3901,7 +3901,7 @@ L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)
 <section id="numerical-solution-2" class="level3">
 <h3 class="anchored" data-anchor-id="numerical-solution-2">Numerical Solution</h3>
 <p>For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.</p>
-<div id="e17981ef" class="cell" data-execution_count="6">
+<div id="51442711" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3954,7 +3954,7 @@ L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)
 <section id="phase-space-representation" class="level3">
 <h3 class="anchored" data-anchor-id="phase-space-representation">Phase Space Representation</h3>
 <p>The motion of the pendulum can also be visualized in phase space, where the angular displacement <span class="math inline">\(\theta\)</span> is plotted against the angular velocity <span class="math inline">\(\omega\)</span>.</p>
-<div id="f49561df" class="cell" data-execution_count="7">
+<div id="c117b884" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
@@ -3994,7 +3994,7 @@ v = L \frac{d\theta}{dt}, \quad h = L (1 - \cos\theta)
 E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 \]</span></p>
 <p>The energy remains constant over time, which can be verified numerically.</p>
-<div id="8c61bc6d" class="cell" data-execution_count="8">
+<div id="002dbecb" class="cell" data-execution_count="8">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Calculate energies</span></span>
@@ -4095,7 +4095,7 @@ E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 <section id="numerical-example" class="level3">
 <h3 class="anchored" data-anchor-id="numerical-example">Numerical Example</h3>
 <p>We will visualize the position, velocity, and acceleration at two distinct points along the circular path.</p>
-<div id="fb02de34" class="cell" data-execution_count="9">
+<div id="a2e628ef" class="cell" data-execution_count="9">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4197,7 +4197,7 @@ v_\text{escape} = \sqrt{2G \frac{M}{r}}
 <section id="numerical-example-gravitational-force-between-earth-and-moon" class="level3">
 <h3 class="anchored" data-anchor-id="numerical-example-gravitational-force-between-earth-and-moon">Numerical Example: Gravitational Force Between Earth and Moon</h3>
 <p>We calculate the gravitational force between Earth and Moon using the following values: - Mass of Earth (<span class="math inline">\(M_\text{Earth}\)</span>): <span class="math inline">\(5.972 \times 10^{24} \ \mathrm{kg}\)</span> - Mass of Moon (<span class="math inline">\(M_\text{Moon}\)</span>): <span class="math inline">\(7.348 \times 10^{22} \ \mathrm{kg}\)</span> - Distance between Earth and Moon (<span class="math inline">\(r\)</span>): <span class="math inline">\(3.844 \times 10^8 \ \mathrm{m}\)</span></p>
-<div id="7257299c" class="cell" data-execution_count="10">
+<div id="557b2059" class="cell" data-execution_count="10">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Constants</span></span>
@@ -4220,7 +4220,7 @@ v_\text{escape} = \sqrt{2G \frac{M}{r}}
 <section id="visualization-gravitational-field" class="level3">
 <h3 class="anchored" data-anchor-id="visualization-gravitational-field">Visualization: Gravitational Field</h3>
 <p>We visualize the gravitational field of a central mass <span class="math inline">\(M\)</span> in 2D space.</p>
-<div id="ae45b1dc" class="cell" data-execution_count="11">
+<div id="6ae88afa" class="cell" data-execution_count="11">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4283,7 +4283,7 @@ U = -G \frac{m_1 m_2}{r}
 <h3 class="anchored" data-anchor-id="advanced-topic-gravitational-slingshot">Advanced Topic: Gravitational Slingshot</h3>
 <p>Gravitational slingshot, or gravity assist, is a technique used in space travel to accelerate a spacecraft by passing it close to a planet. The gravitational force of the planet alters the spacecraft’s trajectory and speed, conserving energy and allowing the spacecraft to gain velocity relative to its target.</p>
 <p>This technique relies on the conservation of momentum and energy in the spacecraft-planet system. It is widely used for interplanetary missions, such as Voyager and Cassini.</p>
-<div id="e6d80b29" class="cell" data-execution_count="12">
+<div id="982f637d" class="cell" data-execution_count="12">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Example parameters for gravitational slingshot visualization</span></span>
