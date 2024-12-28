@@ -73,3 +73,9 @@ A body is attached to a spring with a spring constant $k$. The air resistance is
 
 ## Gravity
 
+## Waves
+
+## Measurements
+
+## Cuircuits
+

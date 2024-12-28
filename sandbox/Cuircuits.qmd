@@ -1,0 +1,24 @@
+## Examples
+
+Python code
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d.config(unit=5)
+    V1 = elm.SourceV().label('20V')
+    R1 = elm.Resistor().right().label('400Ω')
+    elm.Dot()
+    d.push()
+    R2 = elm.Resistor().down().label('100Ω', loc='bot', rotate=True)
+    elm.Dot()
+    d.pop()
+    L1 = elm.Line()
+    I1 = elm.SourceI().down().label('1A', loc='bot')
+    L2 = elm.Line().tox(V1.start)
+    elm.LoopCurrent([R1,R2,L2,V1], pad=1.25).label('$I_1$')
+    elm.LoopCurrent([R1,I1,L2,R2], pad=1.25).label('$I_2$')    # Use R1 as top element for both so they get the same height
+    
+```
