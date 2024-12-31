@@ -21,5 +21,22 @@ Discuss the concept of escape velocities. Define and analyze the first, second, 
 
 ### Problem 3
 
-Analyze the concept of gravitational slingshot (gravity assist). Explain how spacecraft can use the gravity of celestial bodies to change their trajectory and velocity. Discuss its practical applications in interplanetary missions.
+From a rocket passing near the Earth, a payload is released freely. Present the possible trajectories of the object and perform a numerical analysis.
+
+
+## Waves
+
+### Problem 1
+
+
+Find the wave equation for a droplet falling onto the surface of the water. Using this equation, find numerical solutions for the wave that forms when droplets fall on the vertices of regular polygons.
+
+## Circuits
+
+### Problem 1
+
+Calculating equivalent resistance involves using two simple rules. Analyze how graph theory can be utilized for the automated calculation of equivalent resistance. Present the algorithm and implement it.
+
+
+
 
