@@ -58,7 +58,7 @@ theme:
   features:
     - content.code.copy
   toc:
-    depth: 4
+    depth: 3
 
 markdown_extensions:
   - toc
