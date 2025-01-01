@@ -4,6 +4,7 @@
 
 <span style="font-size: 1.2em; font-weight: bold;">Investigating the Range as a Function of the Angle of Projection</span>
 
+#### Motivation:
 
 Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.
 
@@ -172,7 +173,7 @@ These tasks provide a foundation for understanding gravity's influence on motion
 
 <span style="font-size: 1.2em; font-weight: bold;">Interference Patterns on a Water Surface</span>
 
-#### Introduction:
+#### Motivation:
 
 Interference of waves occurs when two or more waves overlap, resulting in a new wave pattern. On a water surface, this can lead to distinctive interference patterns, especially when waves originate from multiple sources arranged in specific geometries.
 
@@ -232,6 +233,8 @@ The goal is to understand how the geometric arrangement of wave sources influenc
 ### Problem 1
 
 <span style="font-size: 1.2em; font-weight: bold;">Equivalent Resistance Using Graph Theory</span>
+
+#### Motivation:
 
 Calculating equivalent resistance involves iteratively applying two rules: combining resistors in series and in parallel. This process requires analyzing the circuit's structure to identify connections that can be reduced. Using graph theory, the circuit can be represented as:
 
