@@ -38,7 +38,7 @@ nav:
       # - Quantum Computing: Modern_Physics/quantum_computing.md
       # - Quantum Cryptography: Modern_Physics/quantum_cryptography.md
   - ✏️ Exercises for Students:
-    - 🤔 List: Exercises_for_Students/exercises_dch.md
+    - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
 
 theme:
   name: material
@@ -61,7 +61,9 @@ theme:
     depth: 3
 
 markdown_extensions:
-  - toc
+  - toc:
+      permalink: true
+      toc_depth: 3
   - tables
   - pymdownx.arithmatex:
       generic: true
