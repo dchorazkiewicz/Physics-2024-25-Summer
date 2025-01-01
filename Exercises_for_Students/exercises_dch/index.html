@@ -747,6 +747,7 @@
 <h2 id="mechanics">Mechanics<a class="headerlink" href="#mechanics" title="Permanent link">¶</a></h2>
 <h3 id="problem-1">Problem 1<a class="headerlink" href="#problem-1" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Investigating the Range as a Function of the Angle of Projection</span></p>
+<h4 id="motivation">Motivation:<a class="headerlink" href="#motivation" title="Permanent link">¶</a></h4>
 <p>Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.</p>
 <p>What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.</p>
 <h4 id="task">Task:<a class="headerlink" href="#task" title="Permanent link">¶</a></h4>
@@ -785,49 +786,58 @@
 </ul>
 <p>This task encourages a deep understanding of projectile motion while showcasing its versatility and applicability across various domains.</p>
 <h3 id="problem-2">Problem 2<a class="headerlink" href="#problem-2" title="Permanent link">¶</a></h3>
-<p><span style="font-size: 1.2em; font-weight: bold;"><strong>Investigating the Dynamics of a Damped Pendulum</strong></span></p>
-<h4 id="motivation">Motivation:<a class="headerlink" href="#motivation" title="Permanent link">¶</a></h4>
-<p>The damped pendulum is a classic example of a physical system that exhibits rich and complex behavior despite its apparent simplicity. By introducing damping into the motion of a pendulum, the system transitions from simple harmonic motion to a more intricate dynamic governed by competing forces: restoring force, damping, and inertia. This system serves as a foundation for understanding a wide range of real-world phenomena, from mechanical oscillators to the motion of structures under external forces.</p>
-<p>The presence of damping introduces new parameters, such as the damping coefficient, which significantly affect the pendulum's behavior. By varying these parameters, a diverse class of solutions can be obtained, including underdamped oscillations, overdamped decay, and critically damped responses. These behaviors not only illustrate fundamental principles of physics but also provide insights into engineering applications like vibration control and resonance.</p>
+<p><span style="font-size: 1.2em; font-weight: bold;"><strong>Investigating the Dynamics of a Forced Damped Pendulum</strong></span></p>
+<h4 id="motivation_1">Motivation:<a class="headerlink" href="#motivation_1" title="Permanent link">¶</a></h4>
+<p>The forced damped pendulum is a captivating example of a physical system with intricate behavior resulting from the interplay of damping, restoring forces, and external driving forces. By introducing both damping and external periodic forcing, the system demonstrates a transition from simple harmonic motion to a rich spectrum of dynamics, including resonance, chaos, and quasiperiodic behavior. These phenomena serve as a foundation for understanding complex real-world systems, such as driven oscillators, climate systems, and mechanical structures under periodic stress.</p>
+<p>Adding forcing introduces new parameters, such as the amplitude and frequency of the external force, which significantly affect the pendulum's behavior. By systematically varying these parameters, a diverse class of solutions can be observed, including synchronized oscillations, chaotic motion, and resonance phenomena. These behaviors not only highlight fundamental physics principles but also provide insights into engineering applications such as energy harvesting, vibration isolation, and mechanical resonance.</p>
 <h4 id="task_1">Task:<a class="headerlink" href="#task_1" title="Permanent link">¶</a></h4>
 <p>1 <strong>Theoretical Foundation:</strong></p>
 <ul>
-<li>Start with the differential equation governing the motion of a damped pendulum.</li>
-<li>Derive the general solutions for different damping regimes (underdamped, overdamped, critically damped).</li>
+<li>
+<p>Start with the differential equation governing the motion of a forced damped pendulum:</p>
+<p><span class="arithmatex">\(\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L}\sin\theta = A\cos(\omega t)\)</span></p>
+</li>
+<li>
+<p>Derive the approximate solutions for small-angle oscillations.</p>
+</li>
+<li>Explore resonance conditions and their implications for the system's energy.</li>
 </ul>
 <p>2 <strong>Analysis of Dynamics:</strong></p>
 <ul>
-<li>Investigate how the damping coefficient influences the motion of the pendulum.</li>
-<li>Examine the transition between different damping regimes and their physical interpretations.</li>
+<li>Investigate how the damping coefficient, driving amplitude, and driving frequency influence the motion of the pendulum.</li>
+<li>Examine the transition between regular and chaotic motion and their physical interpretations.</li>
 </ul>
 <p>3 <strong>Practical Applications:</strong></p>
 <ul>
-<li>Discuss real-world scenarios where the damped pendulum model applies, such as in clock mechanisms, suspension systems, or seismographs.</li>
+<li>Discuss real-world scenarios where the forced damped pendulum model applies, such as in energy harvesting devices, suspension bridges, and oscillating circuits.</li>
 </ul>
 <p>4 <strong>Implementation:</strong></p>
 <ul>
-<li>Create a computational model to simulate the motion of a damped pendulum.</li>
-<li>Visualize the behavior under various damping conditions and initial displacements.</li>
+<li>Create a computational model to simulate the motion of a forced damped pendulum.</li>
+<li>Visualize the behavior under various damping, driving force, and initial conditions.</li>
+<li>Plot phase diagrams and Poincaré sections to illustrate transitions to chaos.</li>
 </ul>
 <hr/>
 <h4 id="deliverables_1">Deliverables:<a class="headerlink" href="#deliverables_1" title="Permanent link">¶</a></h4>
 <ol>
-<li>A detailed explanation of the general solutions for the damped pendulum.</li>
-<li>Graphical representations of the motion for different damping coefficients, illustrating underdamped, overdamped, and critically damped scenarios.</li>
-<li>A discussion on the limitations of the idealized model and how it could be extended to include nonlinear effects or external driving forces.</li>
+<li>A detailed explanation of the general solutions for the forced damped pendulum.</li>
+<li>Graphical representations of the motion for different damping coefficients, driving amplitudes, and driving frequencies, including resonance and chaotic behavior.</li>
+<li>A discussion on the limitations of the model and potential extensions, such as introducing nonlinear damping or non-periodic driving forces.</li>
+<li>Phase portraits, Poincaré sections, and bifurcation diagrams to analyze transitions to complex dynamics.</li>
 </ol>
 <hr/>
 <h4 id="hints-and-resources_1">Hints and Resources:<a class="headerlink" href="#hints-and-resources_1" title="Permanent link">¶</a></h4>
 <ul>
-<li>Use analytical methods to derive solutions for small angles of displacement.</li>
-<li>Employ numerical techniques to explore the dynamics for larger angles or more complex damping models.</li>
-<li>Relate the damped pendulum to analogous systems in other fields, such as electrical circuits (RLC circuits) or fluid dynamics.</li>
+<li>For small angles, approximate <span class="arithmatex">\(\sin\theta \approx \theta\)</span> to simplify the differential equation.</li>
+<li>Employ numerical techniques (e.g., Runge-Kutta methods) for exploring the dynamics beyond the small-angle approximation.</li>
+<li>Relate the forced damped pendulum to analogous systems in other fields, such as electrical circuits (driven RLC circuits) or biomechanics (human gait).</li>
+<li>Utilize software tools like Python, MATLAB, or Mathematica for simulations and visualizations.</li>
 </ul>
-<p>This task offers an opportunity to connect theoretical analysis with computational modeling, fostering a deeper understanding of damping phenomena and their implications in both physics and engineering.</p>
+<p>This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.</p>
 <h2 id="gravity">Gravity<a class="headerlink" href="#gravity" title="Permanent link">¶</a></h2>
 <h3 id="problem-1_1">Problem 1<a class="headerlink" href="#problem-1_1" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Orbital Period and Orbital Radius</span></p>
-<h4 id="motivation_1">Motivation:<a class="headerlink" href="#motivation_1" title="Permanent link">¶</a></h4>
+<h4 id="motivation_2">Motivation:<a class="headerlink" href="#motivation_2" title="Permanent link">¶</a></h4>
 <p>The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, students can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.</p>
 <h4 id="task_2">Task:<a class="headerlink" href="#task_2" title="Permanent link">¶</a></h4>
 <ol>
@@ -839,7 +849,7 @@
 <hr/>
 <h3 id="problem-2_1">Problem 2<a class="headerlink" href="#problem-2_1" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Escape Velocities and Cosmic Velocities</span></p>
-<h4 id="motivation_2">Motivation:<a class="headerlink" href="#motivation_2" title="Permanent link">¶</a></h4>
+<h4 id="motivation_3">Motivation:<a class="headerlink" href="#motivation_3" title="Permanent link">¶</a></h4>
 <p>The concept of escape velocity is crucial for understanding the conditions required to leave a celestial body's gravitational influence. Extending this concept, the first, second, and third cosmic velocities define the thresholds for orbiting, escaping, and leaving a star system. These principles underpin modern space exploration, from launching satellites to interplanetary missions.</p>
 <h4 id="task_3">Task:<a class="headerlink" href="#task_3" title="Permanent link">¶</a></h4>
 <ol>
@@ -851,7 +861,7 @@
 <hr/>
 <h3 id="problem-3">Problem 3<a class="headerlink" href="#problem-3" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Trajectories of a Freely Released Payload Near Earth</span></p>
-<h4 id="motivation_3">Motivation:<a class="headerlink" href="#motivation_3" title="Permanent link">¶</a></h4>
+<h4 id="motivation_4">Motivation:<a class="headerlink" href="#motivation_4" title="Permanent link">¶</a></h4>
 <p>When an object is released from a moving rocket near Earth, its trajectory depends on initial conditions and gravitational forces. This scenario presents a rich problem, blending principles of orbital mechanics and numerical methods. Understanding the potential trajectories is vital for space missions, such as deploying payloads or returning objects to Earth.</p>
 <h4 id="task_4">Task:<a class="headerlink" href="#task_4" title="Permanent link">¶</a></h4>
 <ol>
@@ -871,8 +881,9 @@
 <h2 id="waves">Waves<a class="headerlink" href="#waves" title="Permanent link">¶</a></h2>
 <h3 id="problem-1_2">Problem 1<a class="headerlink" href="#problem-1_2" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Interference Patterns on a Water Surface</span></p>
-<h4 id="introduction">Introduction:<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h4>
-<p>Interference of waves occurs when two or more waves overlap, resulting in a new wave pattern. On a water surface, this can lead to distinctive interference patterns, especially when waves originate from multiple sources arranged in specific geometries.</p>
+<h4 id="motivation_5">Motivation:<a class="headerlink" href="#motivation_5" title="Permanent link">¶</a></h4>
+<p>Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be easily observed when ripples from different points meet, forming distinctive interference patterns. These patterns can show us how waves combine in different ways, either reinforcing each other or canceling out.</p>
+<p>Studying these patterns helps us understand wave behavior in a simple, visual way. It also allows us to explore important concepts, like the relationship between wave phase and the effects of multiple sources. This task offers a hands-on approach to learning about wave interactions and their real-world applications, making it an interesting and engaging way to dive into wave physics.</p>
 <h4 id="equation-of-a-single-disturbance">Equation of a Single Disturbance:<a class="headerlink" href="#equation-of-a-single-disturbance" title="Permanent link">¶</a></h4>
 <p>A circular wave on the water surface, emanating from a point source located at <span class="arithmatex">\((x_0, y_0)\)</span>, can be described by the equation:</p>
 <div class="arithmatex">\[
@@ -927,33 +938,49 @@
 <h2 id="circuits">Circuits<a class="headerlink" href="#circuits" title="Permanent link">¶</a></h2>
 <h3 id="problem-1_3">Problem 1<a class="headerlink" href="#problem-1_3" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;">Equivalent Resistance Using Graph Theory</span></p>
-<p>Calculating equivalent resistance involves iteratively applying two rules: combining resistors in series and in parallel. This process requires analyzing the circuit's structure to identify connections that can be reduced. Using graph theory, the circuit can be represented as:</p>
-<ul>
-<li><strong>Nodes:</strong> Represent junctions or connection points.</li>
-<li><strong>Edges:</strong> Represent resistors with weights corresponding to their resistance values.</li>
-</ul>
-<p>This representation allows the equivalent resistance problem to be approached algorithmically by detecting and simplifying specific graph patterns.</p>
+<h4 id="motivation_6">Motivation:<a class="headerlink" href="#motivation_6" title="Permanent link">¶</a></h4>
+<p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. While traditional methods involve iteratively applying series and parallel resistor rules, these approaches can become cumbersome for complex circuits with many components. Graph theory offers a powerful alternative, providing a structured and algorithmic way to analyze circuits.</p>
+<p>By representing a circuit as a graph—where nodes correspond to junctions and edges represent resistors with weights equal to their resistance values—we can systematically simplify even the most intricate networks. This method not only streamlines calculations but also opens the door to automated analysis, making it particularly useful in modern applications like circuit simulation software, optimization problems, and network design.</p>
+<p>Studying equivalent resistance through graph theory is valuable not only for its practical applications but also for the deeper insights it provides into the interplay between electrical and mathematical concepts. This approach highlights the versatility of graph theory, demonstrating its relevance across physics, engineering, and computer science.</p>
 <hr/>
 <h4 id="task-options">Task Options:<a class="headerlink" href="#task-options" title="Permanent link">¶</a></h4>
 <h5 id="option-1-simplified-task-algorithm-description"><strong>Option 1: Simplified Task – Algorithm Description</strong><a class="headerlink" href="#option-1-simplified-task-algorithm-description" title="Permanent link">¶</a></h5>
 <ol>
-<li>Describe the algorithm for calculating the equivalent resistance using graph theory.</li>
-<li>Provide the pseudocode that:</li>
+<li>
+<p>Describe the algorithm for calculating the equivalent resistance using graph theory.</p>
+</li>
+<li>
+<p>Provide the pseudocode that:</p>
+<ul>
 <li>Identifies series and parallel connections.</li>
 <li>Iteratively reduces the graph until a single equivalent resistance is obtained.</li>
-<li>Include a clear explanation of how the algorithm handles nested combinations.</li>
+</ul>
+</li>
+<li>
+<p>Include a clear explanation of how the algorithm handles nested combinations.</p>
+</li>
 </ol>
 <h5 id="option-2-advanced-task-full-implementation"><strong>Option 2: Advanced Task – Full Implementation</strong><a class="headerlink" href="#option-2-advanced-task-full-implementation" title="Permanent link">¶</a></h5>
 <ol>
-<li>Implement the algorithm in a programming language of your choice.</li>
-<li>Ensure the implementation:</li>
+<li>
+<p>Implement the algorithm in a programming language of your choice.</p>
+</li>
+<li>
+<p>Ensure the implementation:</p>
+<ul>
 <li>Accepts a circuit graph as input.</li>
 <li>Handles arbitrary resistor configurations, including nested series and parallel connections.</li>
 <li>Outputs the final equivalent resistance.</li>
-<li>Test your implementation with examples, such as:</li>
+</ul>
+</li>
+<li>
+<p>Test your implementation with examples, such as:</p>
+<ul>
 <li>Simple series and parallel combinations.</li>
 <li>Nested configurations.</li>
 <li>Complex graphs with multiple cycles.</li>
+</ul>
+</li>
 </ol>
 <hr/>
 <h4 id="deliverables_2">Deliverables:<a class="headerlink" href="#deliverables_2" title="Permanent link">¶</a></h4>
@@ -971,16 +998,18 @@
 <hr/>
 <h4 id="hints-and-resources_3">Hints and Resources:<a class="headerlink" href="#hints-and-resources_3" title="Permanent link">¶</a></h4>
 <ul>
-<li>Focus on iterative graph simplification:</li>
+<li>Focus on iterative graph simplification:<ul>
 <li>Detect linear chains for series reduction.</li>
 <li>Identify cycles for parallel reduction.</li>
+</ul>
+</li>
 <li>Use tools like <code>networkx</code> (Python) or similar for graph manipulation if you choose implementation.</li>
 <li>Depth-first search (DFS) or other traversal methods can help identify patterns in the graph.</li>
 </ul>
 <p>Choose the task that matches your skill level while providing a clear and structured solution to the problem.</p>
 <h3 id="problem-2_2">Problem 2<a class="headerlink" href="#problem-2_2" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;"><strong>Simulating the Effects of the Lorentz Force</strong></span></p>
-<h4 id="motivation_4">Motivation:<a class="headerlink" href="#motivation_4" title="Permanent link">¶</a></h4>
+<h4 id="motivation_7">Motivation:<a class="headerlink" href="#motivation_7" title="Permanent link">¶</a></h4>
 <p>The Lorentz force, expressed as <span class="arithmatex">\(\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}\)</span>, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.</p>
 <h4 id="task_5">Task:<a class="headerlink" href="#task_5" title="Permanent link">¶</a></h4>
 <p>1 <strong>Exploration of Applications:</strong></p>
@@ -1016,17 +1045,14 @@
 <hr/>
 <h4 id="deliverables_3">Deliverables:<a class="headerlink" href="#deliverables_3" title="Permanent link">¶</a></h4>
 <ol>
-<li>A Python script or notebook implementing the simulations.</li>
+<li>A Markdown document with Python script or notebook implementing the simulations.</li>
 <li>Visualizations of particle trajectories for the specified field configurations.</li>
 <li>A discussion on how the results relate to practical systems, such as cyclotrons or magnetic traps.</li>
 </ol>
 <hr/>
 <h4 id="hints-and-resources_4">Hints and Resources:<a class="headerlink" href="#hints-and-resources_4" title="Permanent link">¶</a></h4>
 <ul>
-<li>Use numerical methods like the Euler or Runge-Kutta method to solve the equations of motion:</li>
-</ul>
-<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d\mathbf{v}}{dt} = \frac{\mathbf{F}}{m}, \quad \frac{d\mathbf{r}}{dt} = \mathbf{v}\)</span>\)</span></p>
-<ul>
+<li>Use numerical methods like the Euler or Runge-Kutta method to solve the equations of motion</li>
 <li>Employ Python libraries such as NumPy for calculations and Matplotlib for visualizations.</li>
 <li>Start with simple cases (e.g., uniform magnetic field) and gradually add complexity (e.g., crossed fields).</li>
 </ul>
@@ -1034,7 +1060,7 @@
 <h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">¶</a></h2>
 <h3 id="problem-1_4">Problem 1<a class="headerlink" href="#problem-1_4" title="Permanent link">¶</a></h3>
 <p><span style="font-size: 1.2em; font-weight: bold;"><strong>Exploring the Central Limit Theorem Through Simulations</strong></span></p>
-<h4 id="motivation_5">Motivation:<a class="headerlink" href="#motivation_5" title="Permanent link">¶</a></h4>
+<h4 id="motivation_8">Motivation:<a class="headerlink" href="#motivation_8" title="Permanent link">¶</a></h4>
 <p>The Central Limit Theorem (CLT) is a cornerstone of probability and statistics, stating that the sampling distribution of the sample mean approaches a normal distribution as the sample size increases, regardless of the population’s original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.</p>
 <h4 id="task_6">Task:<a class="headerlink" href="#task_6" title="Permanent link">¶</a></h4>
 <p>1 <strong>Simulating Sampling Distributions:</strong></p>
@@ -1070,7 +1096,7 @@
 <hr/>
 <h4 id="deliverables_4">Deliverables:<a class="headerlink" href="#deliverables_4" title="Permanent link">¶</a></h4>
 <ol>
-<li>Python scripts or notebooks implementing the simulations for various population distributions.</li>
+<li>A Markdown document and Python scripts or notebooks implementing the simulations for various population distributions.</li>
 <li>Plots illustrating the sampling distributions and their progression toward normality.</li>
 <li>A discussion on the implications of the results and their connection to theoretical expectations.</li>
 </ol>
