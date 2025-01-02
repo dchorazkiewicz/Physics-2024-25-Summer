@@ -35,9 +35,10 @@ What makes this topic particularly compelling is the number of free parameters i
 
 #### Deliverables:
 
-1. A detailed description of the family of solutions derived from the governing equations.
-2. Graphical representations of the range versus angle of projection, highlighting how different parameters influence the curve.
-3. A discussion on the limitations of the idealized model and suggestions for incorporating more realistic factors, such as drag or wind.
+1.  A Markdown document with Python script or notebook implementing the simulations.
+2.  A detailed description of the family of solutions derived from the governing equations.
+3. Graphical representations of the range versus angle of projection, highlighting how different parameters influence the curve.
+4. A discussion on the limitations of the idealized model and suggestions for incorporating more realistic factors, such as drag or wind.
 
 --- 
 
@@ -89,10 +90,11 @@ Adding forcing introduces new parameters, such as the amplitude and frequency of
 
 #### Deliverables:
 
-1. A detailed explanation of the general solutions for the forced damped pendulum.
-2. Graphical representations of the motion for different damping coefficients, driving amplitudes, and driving frequencies, including resonance and chaotic behavior.
-3. A discussion on the limitations of the model and potential extensions, such as introducing nonlinear damping or non-periodic driving forces.
-4. Phase portraits, Poincaré sections, and bifurcation diagrams to analyze transitions to complex dynamics.
+1.  A Markdown document with Python script or notebook implementing the simulations.
+2.  A detailed explanation of the general solutions for the forced damped pendulum.
+3. Graphical representations of the motion for different damping coefficients, driving amplitudes, and driving frequencies, including resonance and chaotic behavior.
+4. A discussion on the limitations of the model and potential extensions, such as introducing nonlinear damping or non-periodic driving forces.
+5. Phase portraits, Poincaré sections, and bifurcation diagrams to analyze transitions to complex dynamics.
 
 ---
 
@@ -101,30 +103,26 @@ Adding forcing introduces new parameters, such as the amplitude and frequency of
 - For small angles, approximate $\sin\theta \approx \theta$ to simplify the differential equation.
 - Employ numerical techniques (e.g., Runge-Kutta methods) for exploring the dynamics beyond the small-angle approximation.
 - Relate the forced damped pendulum to analogous systems in other fields, such as electrical circuits (driven RLC circuits) or biomechanics (human gait).
-- Utilize software tools like Python, MATLAB, or Mathematica for simulations and visualizations.
+- Utilize software tools like Python for simulations and visualizations.
 
 This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.
-
 
 ## Gravity
 
 ### Problem 1
 
-
 <span style="font-size: 1.2em; font-weight: bold;">Orbital Period and Orbital Radius</span>
-
-
 
 #### Motivation:
 
-The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, students can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.
+The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, <span style="text-decoration: line-through;">students</span> one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.
 
 #### Task:
 
 1. Derive the relationship between the square of the orbital period and the cube of the orbital radius for circular orbits.
 2. Discuss the implications of this relationship for astronomy, including its role in calculating planetary masses and distances.
 3. Analyze real-world examples, such as the Moon's orbit around Earth or the orbits of planets in the Solar System.
-4. Optional: Implement a computational model to simulate circular orbits and verify the relationship.
+4. <span style="text-decoration: line-through;">Optional: </span>Implement a computational model to simulate circular orbits and verify the relationship.
 
 ---
 
@@ -141,8 +139,8 @@ The concept of escape velocity is crucial for understanding the conditions requi
 
 1. Define the first, second, and third cosmic velocities, explaining their physical meaning.
 2. Analyze the mathematical derivations and parameters affecting these velocities.
-3. Discuss their importance in space exploration, including launching satellites, missions to other planets, and potential interstellar travel.
-4. Optional: Create a simulation to calculate and visualize these velocities for different celestial bodies (e.g., Earth, Moon, Mars).
+3. Discuss their importance in space exploration, including launching satellites, missions to other planets, and potential interstellar travel.<span style="text-decoration: line-through;">PODMIEŃ trzeci z czwartym punktem!!!!!</span>
+4. <span style="text-decoration: line-through;">Optional: </span>Create a simulation to calculate and visualize these velocities for different celestial bodies <span style="text-decoration: line-through;">(e.g., Earth, Moon, Mars).</span> like Earth, Moon, and Mars.
 
 ---
 
@@ -160,14 +158,14 @@ When an object is released from a moving rocket near Earth, its trajectory depen
 1. Analyze the possible trajectories (e.g., parabolic, hyperbolic, elliptical) of a payload released near Earth.
 2. Perform a numerical analysis to compute the path of the payload based on given initial conditions (position, velocity, and altitude).
 3. Discuss how these trajectories relate to orbital insertion, reentry, or escape scenarios.
-4. Optional: Develop a computational tool to simulate and visualize the motion of the payload under Earth's gravity, accounting for initial velocities and directions.
+4. <span style="text-decoration: line-through;">Optional: </span>Develop a computational tool to simulate and visualize the motion of the payload under Earth's gravity, accounting for initial velocities and directions.
 
 ---
 
 #### Hints and Resources:
 
 - Use fundamental gravitational principles, such as Newton's Law of Gravitation and Kepler's Laws, to derive equations and analyze scenarios.
-- Leverage numerical methods or software tools (e.g., Python, MATLAB) to simulate orbits and trajectories.
+- Leverage numerical methods or software tools (e.g., Python) to simulate orbits and trajectories.
 - Explore real-world applications, such as space mission planning, satellite deployment, and planetary exploration.
 
 These tasks provide a foundation for understanding gravity's influence on motion and its role in celestial mechanics and space exploration.
@@ -176,8 +174,7 @@ These tasks provide a foundation for understanding gravity's influence on motion
 
 ### Problem 1
 
-
-<span style="font-size: 1.2em; font-weight: bold;">Interference Patterns on a Water Surface</span>
+<span style="font-size: 1.2em; font-weight: bold;">Interference Patterns on a water surface</span>
 
 #### Motivation:
 
@@ -230,11 +227,13 @@ Your task is to analyze the interference patterns formed on the water surface du
 
 - Assume all sources emit waves with the same amplitude $A$, wavelength $\lambda$, and frequency $f$.
 - The waves are coherent, maintaining a constant phase difference.
-- You may use simulation and visualization tools such as MATLAB, Python (with libraries like Matplotlib), or other graphical software to aid in your analysis.
+- You may use simulation and visualization tools such as Python (with libraries like Matplotlib), or other graphical software to aid in your analysis.
 
-#### Objective:
+#### Deliverables:
 
-The goal is to understand how the geometric arrangement of wave sources influences the resulting interference patterns on the water surface.
+1.  A Markdown document with Python script or notebook implementing the simulations.
+2. A detailed explanation of the interference patterns observed for the chosen regular polygon with the goal of understanding wave superposition.
+3. Graphical representations of the water surface showing constructive and destructive interference regions.
 
 ## Circuits
 
@@ -265,9 +264,7 @@ Studying equivalent resistance through graph theory is valuable not only for its
 
 3. Include a clear explanation of how the algorithm handles nested combinations.
 
-
 ##### **Option 2: Advanced Task – Full Implementation**
-
 
 1. Implement the algorithm in a programming language of your choice.
 
@@ -284,18 +281,26 @@ Studying equivalent resistance through graph theory is valuable not only for its
     - Complex graphs with multiple cycles.
 
 ---
+<span style="text-decoration: line-through;">
+#### Deliverables:</span>
 
-#### Deliverables:
-
-##### **Option 1:**
+<span style="text-decoration: line-through;">##### **Option 1:**</span>
 
 - A detailed pseudocode and explanation of the algorithm.
 - Description of how it handles complex circuit configurations.
 
-##### **Option 2:**
+<span style="text-decoration: line-through;">##### **Option 2:**</span>
 
 - Source code for the algorithm.
 - Examples of input circuits and results.
+- A brief analysis of the algorithm's efficiency and potential improvements.
+</span>
+---
+
+#### Deliverables:
+
+- A detailed pseudocode/source code and explanation of the algorithm.
+- Description of how it handles complex circuit configurations.
 - A brief analysis of the algorithm's efficiency and potential improvements.
 
 ---
@@ -310,12 +315,11 @@ Studying equivalent resistance through graph theory is valuable not only for its
 
 Choose the task that matches your skill level while providing a clear and structured solution to the problem.
 
-
 ## Electromangetism
 
 ### Problem 1
 
-<span style="font-size: 1.2em; font-weight: bold;">**Simulating the Effects of the Lorentz Force**</span>
+<span style="font-size: 1.2em; font-weight: bold;">**Simulating the eEffects of the Lorentz Force**</span>
 
 #### Motivation:
 
@@ -367,12 +371,18 @@ The Lorentz force, expressed as $\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \
 
 This task focuses on applying the Lorentz force concept through simulations, enabling an intuitive understanding of its effects in real-world scenarios.
 
+##### Deliverables:
+
+1. A Markdown document with Python script or notebook implementing the simulations.
+2. Visualizations of particle trajectories for the specified field configurations.
+3. A discussion on how the results relate to practical systems, such as cyclotrons or magnetic traps.
+4. Suggestions for extending the simulation to more complex scenarios, such as non-uniform fields.
 
 ## Statistics
 
 ### Problem 1
 
-<span style="font-size: 1.2em; font-weight: bold;">**Exploring the Central Limit Theorem Through Simulations**</span>
+<span style="font-size: 1.2em; font-weight: bold;">**Exploring the Central Limit Theorem through simulations**</span>
 
 #### Motivation:
 
@@ -424,11 +434,9 @@ The Central Limit Theorem (CLT) is a cornerstone of probability and statistics, 
 
 This task encourages students to explore the Central Limit Theorem through computational experiments, deepening their understanding of its significance in statistics.
 
-
-
 ### Problem 2
 
-<span style="font-size: 1.2em; font-weight: bold;">**Estimating Pi Using Monte Carlo Methods**</span>
+<span style="font-size: 1.2em; font-weight: bold;">**Estimating Pi using Monte Carlo Methods**</span>
 
 #### Motivation:
 
@@ -520,5 +528,7 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 - Start with a small number of iterations to validate the implementation, then increase the sample size to observe convergence.
 
 ---
+<span style="text-decoration: line-through;">
 
 This task offers a practical and visually intuitive way to explore Monte Carlo simulations, emphasizing their application to problems in geometry and probability.
+</span>
