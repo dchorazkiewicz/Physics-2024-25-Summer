@@ -50,8 +50,18 @@ Mathematicians interpret the notation as follows:
 - "$t \rightarrow \mathbf{r}(t) = (x(t), y(t))$" specifies that for each time $t$ within the interval $[a, b]$, there exists a corresponding position vector $\mathbf{r}(t)$ in $\mathcal{R}^2$, which consists of the time-dependent coordinates $x(t)$ and $y(t)$. 
 - The overall expression describes a trajectory as a continuous function of time, mapping the progression of time to the corresponding locations in 2D space.
 
+#### Examples 
 
-##### Python example
+Let us consider two examples of the particle motion in 2D Cartesian coordinates.
+
+$$
+\begin{align*}
+\mathbf{r}_1(t) &= (t, -t^2 + t) \\
+\mathbf{r}_2(t) &= (\cos(t), \sin(t))
+\end{align*}
+$$
+
+##### Python implementation
 
 ```{python}
 import numpy as np
@@ -425,6 +435,11 @@ plt.grid()
 plt.axis('equal')
 plt.show()
 ```
+
+
+### Spring-mass system
+
+......!!!!!!!!
 
 ### Pendulum Motion
 
