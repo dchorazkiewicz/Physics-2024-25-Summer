@@ -577,16 +577,14 @@
 <p>This task explores the physics behind the aurora by simulating the motion of charged particles in Earth's magnetic field, modeled as a dipole field. By solving the equations of motion for these particles, you will gain insights into the mechanisms responsible for the beautiful displays of light near the poles.</p>
 <hr/>
 <h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Earth’s Magnetic Field:</strong></li>
+<p>1 <strong>Earth’s Magnetic Field:</strong></p>
+<ul>
 <li>Approximated as a dipole field, with field lines emerging near the geographic South Pole and re-entering near the North Pole.</li>
-<li>
-<p>The magnetic field at a point <span class="arithmatex">\((x, y, z)\)</span> can be expressed as:
+<li>The magnetic field at a point <span class="arithmatex">\((x, y, z)\)</span> can be expressed as:
      $$
      \mathbf{B} = \frac{\mu_0 M}{4\pi r^5} \left( 3(\mathbf{m} \cdot \mathbf{r})\mathbf{r} - r^2\mathbf{m} \right)
      $$
-     where:</p>
-<ul>
+     where:<ul>
 <li><span class="arithmatex">\(\mu_0\)</span> is the permeability of free space.</li>
 <li><span class="arithmatex">\(\mathbf{M}\)</span> is the Earth's magnetic moment.</li>
 <li><span class="arithmatex">\(\mathbf{r}\)</span> is the position vector.</li>
@@ -594,81 +592,69 @@
 <li><span class="arithmatex">\(r = |\mathbf{r}|\)</span> is the distance from the Earth's center.</li>
 </ul>
 </li>
-<li>
-<p><strong>Lorentz Force:</strong></p>
-</li>
-<li>
-<p>Describes the force acting on a charged particle in an electromagnetic field:
+</ul>
+<p>2 <strong>Lorentz Force:</strong></p>
+<ul>
+<li>Describes the force acting on a charged particle in an electromagnetic field:
      $$
      \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})
      $$
-     where:</p>
-<ul>
+     where:<ul>
 <li><span class="arithmatex">\(q\)</span> is the particle’s charge.</li>
 <li><span class="arithmatex">\(\mathbf{E}\)</span> is the electric field (assumed negligible in this simulation).</li>
 <li><span class="arithmatex">\(\mathbf{v}\)</span> is the particle’s velocity.</li>
 <li><span class="arithmatex">\(\mathbf{B}\)</span> is the magnetic field.</li>
 </ul>
 </li>
-<li>
-<p><strong>Equations of Motion:</strong></p>
-</li>
+</ul>
+<p>3 <strong>Equations of Motion:</strong></p>
+<ul>
 <li>Using the Lorentz force, the motion of a charged particle is described by:
      $$
      m \frac{d\mathbf{v}}{dt} = q \mathbf{v} \times \mathbf{B}
      $$</li>
 <li>These equations are numerically integrated to simulate the trajectory of the particle.</li>
-</ol>
+</ul>
 <hr/>
 <h2 id="implementation-outline">Implementation Outline<a class="headerlink" href="#implementation-outline" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Input:</strong></li>
+<p>1 <strong>Input:</strong></p>
+<ul>
 <li>Initial position and velocity of the particle.</li>
 <li>Particle properties: charge (<span class="arithmatex">\(q\)</span>) and mass (<span class="arithmatex">\(m\)</span>).</li>
-<li>
-<p>Magnetic field parameters, modeled as a dipole field.</p>
-</li>
-<li>
-<p><strong>Process:</strong></p>
-</li>
+<li>Magnetic field parameters, modeled as a dipole field.</li>
+</ul>
+<p>2 <strong>Process:</strong></p>
+<ul>
 <li>Compute the magnetic field at the particle's position using the dipole model.</li>
 <li>Calculate the Lorentz force acting on the particle.</li>
-<li>
-<p>Update the particle's velocity and position using numerical integration (e.g., Runge-Kutta methods).</p>
-</li>
-<li>
-<p><strong>Output:</strong></p>
-</li>
+<li>Update the particle's velocity and position using numerical integration (e.g., Runge-Kutta methods).</li>
+</ul>
+<p>3 <strong>Output:</strong></p>
+<ul>
 <li>A 3D trajectory of the particle, showing how it spirals along Earth's magnetic field lines.</li>
-<li>
-<p>Visual representation of the auroral effect by aggregating trajectories of many particles.</p>
-</li>
-<li>
-<p><strong>Testing Examples:</strong></p>
-</li>
+<li>Visual representation of the auroral effect by aggregating trajectories of many particles.</li>
+</ul>
+<p>4 <strong>Testing Examples:</strong></p>
+<ul>
 <li>Simulate a single charged particle injected into Earth's magnetic field at different latitudes.</li>
 <li>Simulate multiple particles with varying initial velocities and charges.</li>
 <li>Compare results to known auroral patterns, such as their concentration near the poles.</li>
-</ol>
+</ul>
 <hr/>
 <h2 id="key-insights">Key Insights<a class="headerlink" href="#key-insights" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Interaction of Charged Particles and Magnetic Fields:</strong></li>
+<p>1 <strong>Interaction of Charged Particles and Magnetic Fields:</strong></p>
+<ul>
 <li>Charged particles spiral along magnetic field lines, with their motion constrained by the Lorentz force.</li>
-<li>
-<p>This motion is central to the formation of auroral displays.</p>
-</li>
-<li>
-<p><strong>Numerical Simulation:</strong></p>
-</li>
-<li>
-<p>Modeling complex systems like the aurora requires solving coupled differential equations with high accuracy.</p>
-</li>
-<li>
-<p><strong>Visualization of Natural Phenomena:</strong></p>
-</li>
+<li>This motion is central to the formation of auroral displays.</li>
+</ul>
+<p>2 <strong>Numerical Simulation:</strong></p>
+<ul>
+<li>Modeling complex systems like the aurora requires solving coupled differential equations with high accuracy.</li>
+</ul>
+<p>3 <strong>Visualization of Natural Phenomena:</strong></p>
+<ul>
 <li>By simulating the trajectories of charged particles, we can replicate the conditions that lead to the formation of the aurora borealis.</li>
-</ol>
+</ul>
 <hr/>
 <p>Simulating the aurora borealis offers a fascinating application of the Lorentz force and Earth's magnetic field. By implementing this task, you can deepen your understanding of electromagnetism and explore one of nature’s most breathtaking spectacles!</p>
 </article>
