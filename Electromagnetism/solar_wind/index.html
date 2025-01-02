@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Kirchhoff_laws/" rel="prev"/>
+<link href="../../Experiments_Statistics/Statistics.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.48" name="generator"/>
-<title>RLC Circuit - Physics 2024/25 Summer</title>
+<title>Aurora Borealis - Physics 2024/25 Summer</title>
 <link href="../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rlc-circuit">
+<a class="md-skip" href="#simulating-the-aurora-borealis-using-the-lorentz-force">
           Skip to content
         </a>
 </div>
@@ -46,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RLC Circuit
+              Aurora Borealis
             
           </span>
 </div>
@@ -244,15 +246,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     ⚡ Electromagnetism
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             ⚡ Electromagnetism
@@ -282,15 +284,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
     🤔 Student Projects
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
             🤔 Student Projects
@@ -302,6 +304,56 @@
     Kirchhoff Laws
   </span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Aurora Borealis
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Aurora Borealis
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-concepts">
+<span class="md-ellipsis">
+      Key Concepts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-outline">
+<span class="md-ellipsis">
+      Implementation Outline
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -479,13 +531,146 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-concepts">
+<span class="md-ellipsis">
+      Key Concepts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-outline">
+<span class="md-ellipsis">
+      Implementation Outline
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="rlc-circuit">RLC Circuit<a class="headerlink" href="#rlc-circuit" title="Permanent link">¶</a></h1>
+<h1 id="simulating-the-aurora-borealis-using-the-lorentz-force">Simulating the Aurora Borealis Using the Lorentz Force<a class="headerlink" href="#simulating-the-aurora-borealis-using-the-lorentz-force" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>The aurora borealis (northern lights) is a stunning natural phenomenon caused by the interaction of charged particles from the solar wind with Earth's magnetic field. These particles, primarily electrons and protons, spiral along magnetic field lines, collide with atmospheric gases, and emit light. The motion of these particles is governed by the <strong>Lorentz force</strong>, which describes the force exerted on a charged particle moving through electric and magnetic fields.</p>
+<p>This task explores the physics behind the aurora by simulating the motion of charged particles in Earth's magnetic field, modeled as a dipole field. By solving the equations of motion for these particles, you will gain insights into the mechanisms responsible for the beautiful displays of light near the poles.</p>
+<hr/>
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Earth’s Magnetic Field:</strong></li>
+<li>Approximated as a dipole field, with field lines emerging near the geographic South Pole and re-entering near the North Pole.</li>
+<li>
+<p>The magnetic field at a point <span class="arithmatex">\((x, y, z)\)</span> can be expressed as:
+     $$
+     \mathbf{B} = \frac{\mu_0 M}{4\pi r^5} \left( 3(\mathbf{m} \cdot \mathbf{r})\mathbf{r} - r^2\mathbf{m} \right)
+     $$
+     where:</p>
+<ul>
+<li><span class="arithmatex">\(\mu_0\)</span> is the permeability of free space.</li>
+<li><span class="arithmatex">\(\mathbf{M}\)</span> is the Earth's magnetic moment.</li>
+<li><span class="arithmatex">\(\mathbf{r}\)</span> is the position vector.</li>
+<li><span class="arithmatex">\(\mathbf{m}\)</span> is the unit vector of <span class="arithmatex">\(\mathbf{M}\)</span>.</li>
+<li><span class="arithmatex">\(r = |\mathbf{r}|\)</span> is the distance from the Earth's center.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lorentz Force:</strong></p>
+</li>
+<li>
+<p>Describes the force acting on a charged particle in an electromagnetic field:
+     $$
+     \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})
+     $$
+     where:</p>
+<ul>
+<li><span class="arithmatex">\(q\)</span> is the particle’s charge.</li>
+<li><span class="arithmatex">\(\mathbf{E}\)</span> is the electric field (assumed negligible in this simulation).</li>
+<li><span class="arithmatex">\(\mathbf{v}\)</span> is the particle’s velocity.</li>
+<li><span class="arithmatex">\(\mathbf{B}\)</span> is the magnetic field.</li>
+</ul>
+</li>
+<li>
+<p><strong>Equations of Motion:</strong></p>
+</li>
+<li>Using the Lorentz force, the motion of a charged particle is described by:
+     $$
+     m \frac{d\mathbf{v}}{dt} = q \mathbf{v} \times \mathbf{B}
+     $$</li>
+<li>These equations are numerically integrated to simulate the trajectory of the particle.</li>
+</ol>
+<hr/>
+<h2 id="implementation-outline">Implementation Outline<a class="headerlink" href="#implementation-outline" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Input:</strong></li>
+<li>Initial position and velocity of the particle.</li>
+<li>Particle properties: charge (<span class="arithmatex">\(q\)</span>) and mass (<span class="arithmatex">\(m\)</span>).</li>
+<li>
+<p>Magnetic field parameters, modeled as a dipole field.</p>
+</li>
+<li>
+<p><strong>Process:</strong></p>
+</li>
+<li>Compute the magnetic field at the particle's position using the dipole model.</li>
+<li>Calculate the Lorentz force acting on the particle.</li>
+<li>
+<p>Update the particle's velocity and position using numerical integration (e.g., Runge-Kutta methods).</p>
+</li>
+<li>
+<p><strong>Output:</strong></p>
+</li>
+<li>A 3D trajectory of the particle, showing how it spirals along Earth's magnetic field lines.</li>
+<li>
+<p>Visual representation of the auroral effect by aggregating trajectories of many particles.</p>
+</li>
+<li>
+<p><strong>Testing Examples:</strong></p>
+</li>
+<li>Simulate a single charged particle injected into Earth's magnetic field at different latitudes.</li>
+<li>Simulate multiple particles with varying initial velocities and charges.</li>
+<li>Compare results to known auroral patterns, such as their concentration near the poles.</li>
+</ol>
+<hr/>
+<h2 id="key-insights">Key Insights<a class="headerlink" href="#key-insights" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Interaction of Charged Particles and Magnetic Fields:</strong></li>
+<li>Charged particles spiral along magnetic field lines, with their motion constrained by the Lorentz force.</li>
+<li>
+<p>This motion is central to the formation of auroral displays.</p>
+</li>
+<li>
+<p><strong>Numerical Simulation:</strong></p>
+</li>
+<li>
+<p>Modeling complex systems like the aurora requires solving coupled differential equations with high accuracy.</p>
+</li>
+<li>
+<p><strong>Visualization of Natural Phenomena:</strong></p>
+</li>
+<li>By simulating the trajectories of charged particles, we can replicate the conditions that lead to the formation of the aurora borealis.</li>
+</ol>
+<hr/>
+<p>Simulating the aurora borealis offers a fascinating application of the Lorentz force and Earth's magnetic field. By implementing this task, you can deepen your understanding of electromagnetism and explore one of nature’s most breathtaking spectacles!</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
