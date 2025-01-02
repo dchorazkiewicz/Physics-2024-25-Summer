@@ -170,6 +170,12 @@ When an object is released from a moving rocket near Earth, its trajectory depen
 
 These tasks provide a foundation for understanding gravity's influence on motion and its role in celestial mechanics and space exploration.
 
+#### Deliverables:
+
+1. A Markdown document with Python script or notebook implementing the simulations.
+2. A detailed explanation of the subjects.
+3. Graphical representations of orbital trajectories, escape velocities, and payload trajectories near Earth.
+
 ## Waves
 
 ### Problem 1
@@ -371,7 +377,7 @@ The Lorentz force, expressed as $\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \
 
 This task focuses on applying the Lorentz force concept through simulations, enabling an intuitive understanding of its effects in real-world scenarios.
 
-##### Deliverables:
+#### Deliverables:
 
 1. A Markdown document with Python script or notebook implementing the simulations.
 2. Visualizations of particle trajectories for the specified field configurations.
