@@ -437,10 +437,6 @@ plt.show()
 ```
 
 
-### Spring-mass system
-
-......!!!!!!!!
-
 ### Pendulum Motion
 
 #### Introduction
@@ -789,6 +785,7 @@ $$
 ### Numerical Example: Gravitational Force Between Earth and Moon
 
 We calculate the gravitational force between Earth and Moon using the following values:
+
 - Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$
 - Mass of Moon ($M_\text{Moon}$): $7.348 \times 10^{22} \ \mathrm{kg}$
 - Distance between Earth and Moon ($r$): $3.844 \times 10^8 \ \mathrm{m}$
