@@ -1,2 +1,0 @@
-# RLC Circuit
-
