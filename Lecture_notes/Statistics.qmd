@@ -540,7 +540,7 @@ $$
 If we have a sample of data, the sample mean is calculated as the average of the observed values
 
 $$
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i=\frac{x_1+x_2+\cdots+x_n}{n}
 $$
 
 #### Variance of a Probability Distribution
@@ -560,7 +560,7 @@ $$
 If we have a sample of data, the sample variance is calculated as the average of the squared differences between each observed value and the sample mean.
 
 $$
-\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2=\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2}{n}
 $$
 
 #### Example: Mean and Variance of the Beta Distribution

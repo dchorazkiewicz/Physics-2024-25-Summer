@@ -19,7 +19,8 @@ nav:
     - 🎓 Lecture Notes:
       - Electromagnetism: Electromagnetism/Electromagnetism.md
     - 🤔 Student Projects:
-      - RLC Circuit: Electromagnetism/rlc_circuit.md
+      - Kirchhoff Laws: Electromagnetism/Kirchhoff_laws.md
+      - Aurora Borealis: Electromagnetism/solar_wind.md
   - 🔬 Experiments:
     - 🎓 Lecture Notes:
       - Statistics 101: Experiments_Statistics/Statistics.html
@@ -33,10 +34,6 @@ nav:
       - Quantum Harmonic Oscillator: Modern_Physics/quantum_harmonic_oscillator.md
       # - Quantum Double Slit Experiment: Modern_Physics/quantum_double_slit_experiment.md
       # - Quantum Tunneling: Modern_Physics/quantum_tunneling.md
-      # - Quantum Entanglement: Modern_Physics/quantum_entanglement.md
-      # - Quantum Teleportation: Modern_Physics/quantum_teleportation.md
-      # - Quantum Computing: Modern_Physics/quantum_computing.md
-      # - Quantum Cryptography: Modern_Physics/quantum_cryptography.md
   - ✏️ Exercises for Students:
     - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
 
