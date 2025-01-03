@@ -1,5 +1,5 @@
 ---
-title: Wawes
+title: Cosmology
 format:
   html:
     theme: flatly
@@ -18,6 +18,4 @@ format:
     self-contained: true
 ---
 
-# Waves
-
-## Springs
+## Cosmology

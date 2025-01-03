@@ -1,5 +1,5 @@
 ---
-title: Electromagnetism
+title: Quantum mechanics
 format:
   html:
     theme: flatly
@@ -18,4 +18,4 @@ format:
     self-contained: true
 ---
 
-## EM
+## QM
