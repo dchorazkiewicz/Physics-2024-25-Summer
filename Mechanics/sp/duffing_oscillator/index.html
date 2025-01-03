@@ -5,24 +5,26 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="../predator_prey_model/" rel="prev"/>
+<link href="../henon_map/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.48" name="generator"/>
-<title>Exercises - Physics 2024/25 Summer</title>
-<link href="../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>Duffing Oscillator - Physics 2024/25 Summer</title>
+<link href="../../../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mechanics">
+<a class="md-skip" href="#duffing-oscillator">
           Skip to content
         </a>
 </div>
@@ -30,7 +32,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Physics 2024/25 Summer" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Physics 2024/25 Summer">
+<a aria-label="Physics 2024/25 Summer" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Physics 2024/25 Summer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -46,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Exercises
+              Duffing Oscillator
             
           </span>
 </div>
@@ -103,28 +105,28 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Physics 2024/25 Summer" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Physics 2024/25 Summer">
+<a aria-label="Physics 2024/25 Summer" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Physics 2024/25 Summer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
     Physics 2024/25 Summer
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     🏠 Home
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     ⚙️ Mechanics
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             ⚙️ Mechanics
@@ -145,21 +147,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/Language_of_physics.html">
+<a class="md-nav__link" href="../../Language_of_physics.html">
 <span class="md-ellipsis">
     Language of Physics
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/Mechanics.html">
+<a class="md-nav__link" href="../../Mechanics.html">
 <span class="md-ellipsis">
     Mechanics
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/Waves.html">
+<a class="md-nav__link" href="../../Waves.html">
 <span class="md-ellipsis">
     Waves
   </span>
@@ -168,78 +170,121 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-ellipsis">
     🤔 Student Projects
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
             🤔 Student Projects
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/logistic_equation_bifurcation/">
+<a class="md-nav__link" href="../logistic_equation_bifurcation/">
 <span class="md-ellipsis">
     Logistic Equation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/double_pendulum_trajectories/">
+<a class="md-nav__link" href="../double_pendulum_trajectories/">
 <span class="md-ellipsis">
     Double Pendulum
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/lorenz_system_and_attractor/">
+<a class="md-nav__link" href="../lorenz_system_and_attractor/">
 <span class="md-ellipsis">
     Lorenz Attractor
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/predator_prey_model/">
+<a class="md-nav__link" href="../predator_prey_model/">
 <span class="md-ellipsis">
     Predator-Prey Model
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/duffing_oscillator/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Duffing Oscillator
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Duffing Oscillator
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/henon_map/">
+<a class="md-nav__link" href="#python-code-example-simulating-and-visualizing-the-duffing-oscillator">
+<span class="md-ellipsis">
+      Python Code Example: Simulating and Visualizing the Duffing Oscillator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-insights">
+<span class="md-ellipsis">
+      Key Insights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suggested-projects">
+<span class="md-ellipsis">
+      Suggested Projects
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../henon_map/">
 <span class="md-ellipsis">
     Henon Map
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/chuas_circuit/">
+<a class="md-nav__link" href="../chuas_circuit/">
 <span class="md-ellipsis">
     Chua's Circuit
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/pendulum_with_damping_and_forcing/">
+<a class="md-nav__link" href="../pendulum_with_damping_and_forcing/">
 <span class="md-ellipsis">
     Pendulum with Damping
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Mechanics/sp/three_body_problem/">
+<a class="md-nav__link" href="../three_body_problem/">
 <span class="md-ellipsis">
     Three Body Problem
   </span>
@@ -280,14 +325,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Electromagnetism/Electromagnetism.html">
+<a class="md-nav__link" href="../../../Electromagnetism/Electromagnetism.html">
 <span class="md-ellipsis">
     Electromagnetism
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Electromagnetism/Circuits.html">
+<a class="md-nav__link" href="../../../Electromagnetism/Circuits.html">
 <span class="md-ellipsis">
     Circuits
   </span>
@@ -311,14 +356,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Electromagnetism/sp/Kirchhoff_laws/">
+<a class="md-nav__link" href="../../../Electromagnetism/sp/Kirchhoff_laws/">
 <span class="md-ellipsis">
     Kirchhoff Laws
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Electromagnetism/sp/solar_wind/">
+<a class="md-nav__link" href="../../../Electromagnetism/sp/solar_wind/">
 <span class="md-ellipsis">
     Aurora Borealis
   </span>
@@ -359,14 +404,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Experiments_Statistics/Statistics.html">
+<a class="md-nav__link" href="../../../Experiments_Statistics/Statistics.html">
 <span class="md-ellipsis">
     Statistics 101
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Experiments_Statistics/Measurement.html">
+<a class="md-nav__link" href="../../../Experiments_Statistics/Measurement.html">
 <span class="md-ellipsis">
     Measurements
   </span>
@@ -390,7 +435,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Experiments_Statistics/sp/estimation_of_pi/">
+<a class="md-nav__link" href="../../../Experiments_Statistics/sp/estimation_of_pi/">
 <span class="md-ellipsis">
     Estiamting Pi
   </span>
@@ -431,14 +476,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Modern_Physics/Quantum_mechanics.html">
+<a class="md-nav__link" href="../../../Modern_Physics/Quantum_mechanics.html">
 <span class="md-ellipsis">
     Quantum Mechanics
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Modern_Physics/Cosmology.html">
+<a class="md-nav__link" href="../../../Modern_Physics/Cosmology.html">
 <span class="md-ellipsis">
     Cosmology
   </span>
@@ -462,7 +507,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Modern_Physics/sp/quantum_harmonic_oscillator/">
+<a class="md-nav__link" href="../../../Modern_Physics/sp/quantum_harmonic_oscillator/">
 <span class="md-ellipsis">
     Quantum Harmonic Oscillator
   </span>
@@ -489,7 +534,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../exercises_dch/">
+<a class="md-nav__link" href="../../../Exercises_for_Students/exercises_dch/">
 <span class="md-ellipsis">
     🤔 Problem list
   </span>
@@ -513,108 +558,30 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mechanics">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Mechanics
-    </span>
-</a>
-<nav aria-label="Mechanics" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#problem-1">
-<span class="md-ellipsis">
-      Problem 1
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#problem-2">
+<a class="md-nav__link" href="#python-code-example-simulating-and-visualizing-the-duffing-oscillator">
 <span class="md-ellipsis">
-      Problem 2
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gravity">
-<span class="md-ellipsis">
-      Gravity
-    </span>
-</a>
-<nav aria-label="Gravity" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#problem-1_1">
-<span class="md-ellipsis">
-      Problem 1
+      Python Code Example: Simulating and Visualizing the Duffing Oscillator
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#problem-2_1">
+<a class="md-nav__link" href="#key-insights">
 <span class="md-ellipsis">
-      Problem 2
+      Key Insights
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#problem-3">
+<a class="md-nav__link" href="#suggested-projects">
 <span class="md-ellipsis">
-      Problem 3
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#waves">
-<span class="md-ellipsis">
-      Waves
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#electricity-and-magnetism">
-<span class="md-ellipsis">
-      Electricity and Magnetism
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#circuits">
-<span class="md-ellipsis">
-      Circuits
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#measurements">
-<span class="md-ellipsis">
-      Measurements
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#statistics">
-<span class="md-ellipsis">
-      Statistics
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#modern-physics-i">
-<span class="md-ellipsis">
-      Modern Physics I
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#modern-physics-ii">
-<span class="md-ellipsis">
-      Modern Physics II
+      Suggested Projects
     </span>
 </a>
 </li>
@@ -625,76 +592,104 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Exercises</h1>
-<h2 id="mechanics">Mechanics<a class="headerlink" href="#mechanics" title="Permanent link">¶</a></h2>
-<h3 id="problem-1">Problem 1<a class="headerlink" href="#problem-1" title="Permanent link">¶</a></h3>
-<p>Discuss the problem of projectile motion. Investigate the dependence of the range on the angle of projection.</p>
-<h3 id="problem-2">Problem 2<a class="headerlink" href="#problem-2" title="Permanent link">¶</a></h3>
-<p>Analyze the dynamics of a damped pendulum.</p>
-<h2 id="gravity">Gravity<a class="headerlink" href="#gravity" title="Permanent link">¶</a></h2>
-<h3 id="problem-1_1">Problem 1<a class="headerlink" href="#problem-1_1" title="Permanent link">¶</a></h3>
-<p>Analyze the relationship between the square of the orbital period and the cube of the orbital radius in circular motion, and discuss its implications for astronomy.</p>
-<h3 id="problem-2_1">Problem 2<a class="headerlink" href="#problem-2_1" title="Permanent link">¶</a></h3>
-<p>Discuss the concept of escape velocities. Define and analyze the first, second, and third cosmic velocities, and their importance in space exploration.</p>
-<h3 id="problem-3">Problem 3<a class="headerlink" href="#problem-3" title="Permanent link">¶</a></h3>
-<p>Analyze the concept of gravitational slingshot (gravity assist). Explain how spacecraft can use the gravity of celestial bodies to change their trajectory and velocity. Discuss its practical applications in interplanetary missions.</p>
-<h2 id="waves">Waves<a class="headerlink" href="#waves" title="Permanent link">¶</a></h2>
-<p>Describe the difference between transverse and longitudinal waves, as well as the relationship between wave velocity, frequency, and wavelength. Show three <strong>interesting</strong> examples of adding of waves with various wavelenghts and amplitudes. Can two speakers can produce a silence?</p>
-<p>Describe the Doppler Effect for the observed frequency in terms of the velocities of the source and observer. Demonstate various configurations of waves Doppler Effect.</p>
-<h2 id="electricity-and-magnetism">Electricity and Magnetism<a class="headerlink" href="#electricity-and-magnetism" title="Permanent link">¶</a></h2>
-<p>Examine the concept of an electric field. Describe the principle of superposition for electric fields and illustrate it with an example involving multiple point charges.</p>
-<p>Analyze the relationship between electric potential and electric field. Derive the expression for the electric field as the gradient of the potential and discuss its physical implications.</p>
-<p>Investigate the Lorentz force acting on a charged particle in both electric and magnetic fields. Explain the equation for the force and discuss its applications, such as in cyclotrons and mass spectrometers.</p>
-<p>Analyze the relationship between electric currents and magnetic fields. Derive the expression for the magnetic field produced by a current-carrying wire. Describe the forces appearing on a current-carrying wires going in the same or opposite directions. Exlain the right-hand rule, Lenz's Law, and the Biot-Savart Law.</p>
-<p>Discuss the principles of electromagnetic induction. Derive Faraday's Law and explain its practical applications, such as in electric generators and transformers.</p>
-<p>Examine Maxwell's equations. Highlight their significance in unifying electricity and magnetism and their role in predicting the existence of electromagnetic waves.</p>
-<h2 id="circuits">Circuits<a class="headerlink" href="#circuits" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p>Describe difference between series and parallel circuits applied to restitors and capacitors. Using some example complex circuits, <strong>demonstrate</strong> how to simplify it into a single equivalent value of resistor or capacitor using series-parallel transformations. Is there possible algorithm for computing equivalent resistance or capacitance? </p>
-</li>
-<li>
-<p>Describe Kirchhoff’s Current Law (KCL) and Voltage Law (KVL). <strong>Solve a circuit problem</strong> involving multiple loops and junctions, illustrating the use of these laws.</p>
-</li>
-<li>
-<p>Analyze the time evolution of current <span class="arithmatex">\(I(t)\)</span> and voltage in RL and RC and RLC circuits.</p>
-</li>
-</ul>
+<h1 id="duffing-oscillator">Duffing Oscillator<a class="headerlink" href="#duffing-oscillator" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>The Duffing oscillator is a nonlinear second-order differential equation used to model systems with a restoring force that is not purely linear. It has applications in physics, engineering, and even biology.</p>
+<p>The equation is:</p>
+<div class="arithmatex">\[
+\ddot{x} + \delta \dot{x} + \alpha x + \beta x^3 = \gamma \cos(\omega t)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(x\)</span> is the displacement.
+- <span class="arithmatex">\(\delta\)</span> is the damping coefficient.
+- <span class="arithmatex">\(\alpha\)</span> is the linear stiffness.
+- <span class="arithmatex">\(\beta\)</span> is the nonlinear stiffness.
+- <span class="arithmatex">\(\gamma\)</span> is the amplitude of the driving force.
+- <span class="arithmatex">\(\omega\)</span> is the angular frequency of the driving force.</p>
 <hr/>
-<p>Using Ohm’s Law, analyze the relationship between voltage, current, and resistance.</p>
-<p>Explain the working principles of capacitors and inductors. Derive the formulas for total capacitance and inductance in series and parallel circuits, and discuss their applications in electronic devices.</p>
-<p>Explain the differences between Alternating Current (AC) and Direct Current (DC). Derive the formulas for root mean square (RMS) voltage and current, and discuss their significance in AC circuits.</p>
-<p>Analyze the concept of the PN junction in semiconductors. Describe the formation of the depletion zone and its role in controlling current flow.</p>
-<p>Explain the working principles of diodes and transistors. Discuss the differences between NPN and PNP transistors and their applications in amplification and switching circuits.</p>
-<p>Give the formulas for impedance in resistive, inductive, and capacitive elements, and analyze their behavior in series and parallel configurations.</p>
-<p>Analyze the concept of electrical resonance in RLC circuits. Derive the formula for the resonant frequency and discuss the behavior of current and voltage at resonance.</p>
-<h2 id="measurements">Measurements<a class="headerlink" href="#measurements" title="Permanent link">¶</a></h2>
-<p>Examine the principles of measurement systems. Discuss the concepts of accuracy, precision, and resolution, and analyze the sources of errors in measurements.</p>
-<ul>
-<li>Discuss the concept of total uncertainty in measurements using total derivative method. Analyze the methods for combining uncertainties in measurements and calculating the overall uncertainty of a result. Demonstrate it by computing resistance using by ammeter and voltmeter.</li>
-</ul>
-<h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">¶</a></h2>
-<p>Discuss the concepts of mean, median, standard deviation and variance as measures of dispersion in data analysis. Provide the formulas for calculating these statistical parameters and discuss their significance.</p>
-<p>Discuss the graphical representation of data using histograms, box plots, and scatter plots and error bars. Analyze the characteristics of these plots and their applications in visualizing data distributions and relationships.</p>
-<p>Analyze the principles of linear regression in data analysis. Derive the formula for the regression line and discuss its use in predicting the values of dependent variables based on independent variables.</p>
-<h2 id="modern-physics-i">Modern Physics I<a class="headerlink" href="#modern-physics-i" title="Permanent link">¶</a></h2>
-<p>Analyze the life cycle of stars, starting from their formation in nebulae to their evolution into white dwarfs, neutron stars, or black holes. Discuss the role of nuclear fusion in powering stars and the processes of stellar nucleosynthesis.</p>
-<p>Discuss the principles of special relativity, focusing on the concepts of constant light speed, time dilation and length contraction. Derive the formulas for these phenomena and discuss their applications, such as GPS satellite systems and muon decay.</p>
-<p>Describe the Lorentz transformation equations, and explain how they relate space and time coordinates between inertial frames moving at relativistic speeds.</p>
-<p>Use Hubble's Law to calculate the velocity of a galaxy located 200 megaparsecs (Mpc) away, assuming a Hubble constant of 70 km/s/Mpc.</p>
-<p>Explain the Big Bang Theory and its key evidence, including the Cosmic Microwave Background (CMB) radiation. Discuss the significance of primordial nucleosynthesis in explaining the abundance of light elements in the universe.</p>
-<h2 id="modern-physics-ii">Modern Physics II<a class="headerlink" href="#modern-physics-ii" title="Permanent link">¶</a></h2>
-<p>Discuss the Bohr model of the atom and its application to the hydrogen spectrum. Give the expression for the quantized energy levels of the hydrogen atom and explain the significance of the Rydberg formula.</p>
-<p>P: Find all colors of light emitted by hydrogen atom when electron transitions from higher energy level to lower energy level (hint: there are 4 possible transitions).</p>
-<p>Describe the phenomenon of wave-particle duality. Use Young's Double-Slit Experiment to illustrate how particles such as electrons exhibit both wave-like and particle-like behavior.</p>
-<p>Explain the Heisenberg Uncertainty Principle and discuss its implications for the simultaneous measurement of position and momentum. Provide an example demonstrating the calculation of uncertainty in momentum when the uncertainty in position is known.</p>
-<p>Discuss the principles of quantum mechanics, including wave functions, probability amplitudes, and the Schrödinger equation.</p>
-<p>Analyze the behavior of particles in potential wells and barriers, and explain the concept of quantum tunneling.
-Explain the concept of wavefunction normalization. For a given wavefunction <span class="arithmatex">\(\psi(x) = A e^{-x^2}\)</span>, determine the normalization constant <span class="arithmatex">\(A\)</span> over the range <span class="arithmatex">\(x \in (-\infty, \infty)\)</span> and in another range <span class="arithmatex">\(x \in (-L,L)\)</span>.</p>
-<p>Analyze the wave functions and the quantization of energy levels in a one-dimensional infinite potential well.</p>
-<p>Describe the concept of radioactive decay and three types of decay processes: alpha, beta, and gamma decay.</p>
-<p>Describe the decay rates and half-lives of radioactive isotopes.</p>
-<p>Discuss the Standard Model of particle physics. Describe the fundamental particles and forces in the model.</p>
+<h2 id="python-code-example-simulating-and-visualizing-the-duffing-oscillator">Python Code Example: Simulating and Visualizing the Duffing Oscillator<a class="headerlink" href="#python-code-example-simulating-and-visualizing-the-duffing-oscillator" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="c1"># Define the Duffing oscillator</span>
+<span class="k">def</span> <span class="nf">duffing</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="n">ddx_dt</span> <span class="o">=</span> <span class="o">-</span><span class="n">delta</span> <span class="o">*</span> <span class="n">dx_dt</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx_dt</span><span class="p">,</span> <span class="n">ddx_dt</span><span class="p">]</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># Damping coefficient</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>  <span class="c1"># Linear stiffness</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># Nonlinear stiffness</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Driving force amplitude</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="mf">1.2</span>  <span class="c1"># Driving force frequency</span>
+
+<span class="c1"># Initial conditions</span>
+<span class="n">initial_state</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>  <span class="c1"># Initial displacement and velocity</span>
+
+<span class="c1"># Time span for the simulation</span>
+<span class="n">time_span</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">time_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">time_span</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">time_span</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># Solve the Duffing oscillator</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">duffing</span><span class="p">,</span> <span class="n">time_span</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">omega</span><span class="p">),</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">time_eval</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'RK45'</span><span class="p">)</span>
+
+<span class="c1"># Extract the results</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">dx_dt</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">y</span>
+
+<span class="c1"># Plot the displacement over time</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Displacement"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Duffing Oscillator: Displacement Over Time"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Time"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Displacement"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"docs/Mechanics/pic/duffing_time.png"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Plot the phase plane</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dx_dt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"purple"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Phase Plane of the Duffing Oscillator"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Displacement"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Velocity"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"docs/Mechanics/pic/duffing_phase.png"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<hr/>
+<h2 id="key-insights">Key Insights<a class="headerlink" href="#key-insights" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>Nonlinear Dynamics:</strong> The cubic term introduces nonlinearity, leading to rich dynamics, including bifurcations and chaos.</p>
+</li>
+<li>
+<p><strong>Phase Space Behavior:</strong> The phase plane can reveal limit cycles, chaotic attractors, or other patterns depending on parameters.</p>
+</li>
+<li>
+<p><strong>Driven and Damped System:</strong> The interplay of damping, driving force, and nonlinearity determines the behavior of the oscillator.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="suggested-projects">Suggested Projects<a class="headerlink" href="#suggested-projects" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>Bifurcation Analysis:</strong> Vary parameters like <span class="arithmatex">\(\gamma\)</span> or <span class="arithmatex">\(\omega\)</span> to explore transitions between different dynamical regimes.</p>
+</li>
+<li>
+<p><strong>Lyapunov Exponent:</strong> Compute the Lyapunov exponent to identify chaotic regions.</p>
+</li>
+<li>
+<p><strong>Comparison with Real Systems:</strong> Model physical systems like beam vibrations or electronic circuits.</p>
+</li>
+<li>
+<p><strong>Energy Analysis:</strong> Study how energy evolves in the system over time, especially in chaotic regimes.</p>
+</li>
+</ol>
+<hr/>
+<p>This example demonstrates the nonlinear dynamics of the Duffing oscillator. Experiment with parameters and initial conditions to uncover its fascinating behavior!</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -718,8 +713,8 @@ Explain the concept of wavefunction normalization. For a given wavefunction <spa
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
