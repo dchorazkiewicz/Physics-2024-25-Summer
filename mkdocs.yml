@@ -31,12 +31,10 @@ nav:
       - Estiamting Pi: Experiments_Statistics/estimation_of_pi.md
   - ⚛️ Modern Physics:
     - 🎓 Lecture Notes:
-      - Quantum Mechanics: Modern_Physics/Quantum_physics.md
-      - Cosmology: Modern_Physics/Cosmology.md
+      - Quantum Mechanics: Modern_Physics/Quantum_mechanics.html
+      - Cosmology: Modern_Physics/Cosmology.html
     - 🤔 Student Projects:
       - Quantum Harmonic Oscillator: Modern_Physics/quantum_harmonic_oscillator.md
-      # - Quantum Double Slit Experiment: Modern_Physics/quantum_double_slit_experiment.md
-      # - Quantum Tunneling: Modern_Physics/quantum_tunneling.md
   - ✏️ Exercises for Students:
     - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
 
