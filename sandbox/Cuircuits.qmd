@@ -1,3 +1,24 @@
+---
+title: Circuits
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 3
+    highlight-style: tango
+    code-line-numbers: true
+    code-fold: show
+    code-summary: "Show the code"
+    code-tools: true
+    code-block-bg: "rgba(42, 174, 42, 0.02)"
+    code-block-border-left: "#2aae2a"
+    code-language-label: true
+    css: styles.css
+    math: mathjax
+    self-contained: true
+---
+
+
 ## Examples
 
 Python code
@@ -8,17 +29,34 @@ import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
     d.config(unit=5)
-    V1 = elm.SourceV().label('20V')
-    R1 = elm.Resistor().right().label('400Ω')
-    elm.Dot()
-    d.push()
-    R2 = elm.Resistor().down().label('100Ω', loc='bot', rotate=True)
-    elm.Dot()
-    d.pop()
-    L1 = elm.Line()
-    I1 = elm.SourceI().down().label('1A', loc='bot')
-    L2 = elm.Line().tox(V1.start)
-    elm.LoopCurrent([R1,R2,L2,V1], pad=1.25).label('$I_1$')
-    elm.LoopCurrent([R1,I1,L2,R2], pad=1.25).label('$I_2$')    # Use R1 as top element for both so they get the same height
     
+    # Źródło napięcia
+    V1 = d.add(elm.SourceV().label('20V').color('red'))
+    
+    # Rezystor poziomy
+    R1 = d.add(elm.Resistor().right().label('400Ω').color('blue'))
+    
+    # Kropka na połączeniu
+    d.add(elm.Dot().color('green'))
+    d.push()
+    
+    # Rezystor pionowy
+    R2 = d.add(elm.Resistor().down().label('100Ω', loc='bot', rotate=True).color('orange'))
+    
+    # Kolejna kropka
+    d.add(elm.Dot().color('green'))
+    d.pop()
+    
+    # Linia pozioma
+    L1 = d.add(elm.Line().color('purple'))
+    
+    # Źródło prądowe
+    I1 = d.add(elm.SourceI().down().label('1A', loc='bot').color('brown'))
+    
+    # Powrót linią
+    L2 = d.add(elm.Line().tox(V1.start).color('gray'))
+    
+    elm.LoopCurrent([R1,R2,L2,V1], pad=1.25).label('$I_1$').color('red')
+    elm.LoopCurrent([R1,I1,L2,R2], pad=1.25).label('$I_2$').color('pink')    # Use R1 as top element for both so they get the same height
+
 ```
