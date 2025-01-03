@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the .qmd files
-TARGET_DIR="/media/dch/Disk2/Vizja/Physics-2024-25-Summer/Lecture_notes"
+TARGET_DIR="Lecture_notes"
 
 # Check if the directory exists
 if [ ! -d "$TARGET_DIR" ]; then
