@@ -7,34 +7,34 @@ nav:
       - Mechanics: Mechanics/Mechanics.html
       - Waves: Mechanics/Waves.html
     - 🤔 Student Projects:
-      - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
-      - Double Pendulum: Mechanics/double_pendulum_trajectories.md
-      - Lorenz Attractor: Mechanics/lorenz_system_and_attractor.md
-      - Predator-Prey Model: Mechanics/predator_prey_model.md
-      - Duffing Oscillator: Mechanics/duffing_oscillator.md
-      - Henon Map: Mechanics/henon_map.md
-      - Chua's Circuit: Mechanics/chuas_circuit.md
-      - Pendulum with Damping: Mechanics/pendulum_with_damping_and_forcing.md
-      - Three Body Problem: Mechanics/three_body_problem.md
+      - Logistic Equation: Mechanics/sp/logistic_equation_bifurcation.md
+      - Double Pendulum: Mechanics/sp/double_pendulum_trajectories.md
+      - Lorenz Attractor: Mechanics/sp/lorenz_system_and_attractor.md
+      - Predator-Prey Model: Mechanics/sp/predator_prey_model.md
+      - Duffing Oscillator: Mechanics/sp/duffing_oscillator.md
+      - Henon Map: Mechanics/sp/henon_map.md
+      - Chua's Circuit: Mechanics/sp/chuas_circuit.md
+      - Pendulum with Damping: Mechanics/sp/pendulum_with_damping_and_forcing.md
+      - Three Body Problem: Mechanics/sp/three_body_problem.md
   - ⚡ Electromagnetism:
     - 🎓 Lecture Notes:
       - Electromagnetism: Electromagnetism/Electromagnetism.html
       - Circuits: Electromagnetism/Circuits.html
     - 🤔 Student Projects:
-      - Kirchhoff Laws: Electromagnetism/Kirchhoff_laws.md
-      - Aurora Borealis: Electromagnetism/solar_wind.md
+      - Kirchhoff Laws: Electromagnetism/sp/Kirchhoff_laws.md
+      - Aurora Borealis: Electromagnetism/sp/solar_wind.md
   - 🔬 Experiments:
     - 🎓 Lecture Notes:
       - Statistics 101: Experiments_Statistics/Statistics.html
       - Measurements: Experiments_Statistics/Measurement.html
     - 🤔 Student Projects:
-      - Estiamting Pi: Experiments_Statistics/estimation_of_pi.md
+      - Estiamting Pi: Experiments_Statistics/sp/estimation_of_pi.md
   - ⚛️ Modern Physics:
     - 🎓 Lecture Notes:
       - Quantum Mechanics: Modern_Physics/Quantum_mechanics.html
       - Cosmology: Modern_Physics/Cosmology.html
     - 🤔 Student Projects:
-      - Quantum Harmonic Oscillator: Modern_Physics/quantum_harmonic_oscillator.md
+      - Quantum Harmonic Oscillator: Modern_Physics/sp/quantum_harmonic_oscillator.md
   - ✏️ Exercises for Students:
     - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
 
