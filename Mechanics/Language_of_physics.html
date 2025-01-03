@@ -3425,7 +3425,7 @@ margin-bottom: 0;
 T(x, y) = 5 \sin(x) \cos(y)
 \]</span></p>
 <p>Below is a Python code of this scalar field:</p>
-<div id="80b24083" class="cell" data-execution_count="1">
+<div id="97c7cb84" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3473,7 +3473,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </ul>
 </div>
 <p>Or we can use the following Python code to grasp 4 time steps:</p>
-<div id="8dbdcad8" class="cell" data-execution_count="2">
+<div id="406a9d2a" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3540,7 +3540,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 \vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})
 \]</span></p>
 <p>This field might represent the velocity of a fluid at each point <span class="math inline">\((x, y)\)</span> in a 2D space. Below is a Python code to visualize this vector field:</p>
-<div id="a95cd98b" class="cell" data-execution_count="3">
+<div id="814ddb3f" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3586,7 +3586,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </div>
 </div>
 <p>Stream plot</p>
-<div id="bcaa69ee" class="cell" data-execution_count="4">
+<div id="6e7f52e7" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3683,7 +3683,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 y(x) = x^2 + C
 \]</span></p>
 <p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value.</p>
-<div id="82847272" class="cell" data-execution_count="5">
+<div id="98fb39b1" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3738,7 +3738,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="2f9080ff" class="cell" data-execution_count="6">
+<div id="3ac66f84" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3844,7 +3844,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="2c5eedb0" class="cell" data-execution_count="7">
+<div id="83436193" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
