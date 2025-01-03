@@ -5,6 +5,7 @@ nav:
     - 🎓 Lecture Notes:
       - Language of Physics: Mechanics/Language_of_physics.html
       - Mechanics: Mechanics/Mechanics.html
+      - Waves: Mechanics/Waves.html
     - 🤔 Student Projects:
       - Logistic Equation: Mechanics/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/double_pendulum_trajectories.md
@@ -17,7 +18,8 @@ nav:
       - Three Body Problem: Mechanics/three_body_problem.md
   - ⚡ Electromagnetism:
     - 🎓 Lecture Notes:
-      - Electromagnetism: Electromagnetism/Electromagnetism.md
+      - Electromagnetism: Electromagnetism/Electromagnetism.html
+      - Circuits: Electromagnetism/Circuits.html
     - 🤔 Student Projects:
       - Kirchhoff Laws: Electromagnetism/Kirchhoff_laws.md
       - Aurora Borealis: Electromagnetism/solar_wind.md
