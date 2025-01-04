@@ -3454,7 +3454,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \]</span></p>
 <section id="python-implementation" class="level5">
 <h5 class="anchored" data-anchor-id="python-implementation">Python implementation</h5>
-<div id="f9d698f2" class="cell" data-execution_count="1">
+<div id="e38b59d6" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3541,7 +3541,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \left(\frac{dx(t)}{dt}, \frac{dy(t)}{dt}\right)
 \]</span></p>
 <p>The velocity vector describes the speed and direction of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the velocity vector is the speed of the particle. The direction of the velocity vector is the direction of motion of the particle.</p>
-<div id="968b84f0" class="cell" data-execution_count="2">
+<div id="7330e6ea" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3607,7 +3607,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 \]</span></p>
 <p>The acceleration vector describes the rate of change of the velocity of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.</p>
-<div id="1948a90f" class="cell" data-execution_count="3">
+<div id="c0f376a8" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3726,7 +3726,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 </section>
 <section id="numerical-solution" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution">Numerical solution</h4>
-<div id="ed445375" class="cell" data-execution_count="4">
+<div id="9d0ec197" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3792,9 +3792,18 @@ x(t) = A \sin(\omega t) + B \cos(\omega t)
 \]</span></p>
 <p>The angular frequency is equal to the square root of the spring constant divided by the mass of the particle. The phase angle <span class="math inline">\(\phi\)</span> determines the initial phase of the particle.</p>
 </section>
+<section id="geogebra-example-1" class="level4">
+<h4 class="anchored" data-anchor-id="geogebra-example-1">Geogebra example</h4>
+<div class="geogebra-instruction">
+<ul>
+<li>t=Slider[1, 100, 0.1]</li>
+<li>P=Point[0, sin(t)]</li>
+</ul>
+</div>
+</section>
 <section id="numerical-solution-1" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-1">Numerical solution</h4>
-<div id="dd36acb0" class="cell" data-execution_count="5">
+<div id="a521647c" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3888,7 +3897,7 @@ L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)
 <section id="numerical-solution-2" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-2">Numerical Solution</h4>
 <p>For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.</p>
-<div id="8abf4008" class="cell" data-execution_count="6">
+<div id="ca1d8898" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3970,7 +3979,7 @@ v = L \frac{d\theta}{dt}, \quad h = L (1 - \cos\theta)
 E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 \]</span></p>
 <p>The energy remains constant over time, which can be verified numerically.</p>
-<div id="85a97c34" class="cell" data-execution_count="7">
+<div id="9829c9a3" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Calculate energies</span></span>
@@ -4058,7 +4067,7 @@ E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 <section id="numerical-example" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-example">Numerical Example</h4>
 <p>We will visualize the position, velocity, and acceleration at two distinct points along the circular path.</p>
-<div id="f841a39c" class="cell" data-execution_count="8">
+<div id="8a279df6" class="cell" data-execution_count="8">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4144,7 +4153,7 @@ E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 <section id="visualization-gravitational-field" class="level4">
 <h4 class="anchored" data-anchor-id="visualization-gravitational-field">Visualization: Gravitational Field</h4>
 <p>We visualize the gravitational field of a central mass <span class="math inline">\(M\)</span> in 2D slice.</p>
-<div id="83612d79" class="cell" data-execution_count="9">
+<div id="f8db94de" class="cell" data-execution_count="9">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4217,7 +4226,7 @@ v_\text{escape} = \sqrt{2G \frac{M}{R}}
 <li>Mass of Earth (<span class="math inline">\(M_\text{Earth}\)</span>): <span class="math inline">\(5.972 \times 10^{24} \ \mathrm{kg}\)</span></li>
 <li>Radius of Earth (<span class="math inline">\(R_\text{Earth}\)</span>): <span class="math inline">\(6.371 \times 10^6 \ \mathrm{m}\)</span></li>
 </ul>
-<div id="13296c0f" class="cell" data-execution_count="10">
+<div id="2e55c61e" class="cell" data-execution_count="10">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Constants</span></span>
@@ -4253,7 +4262,7 @@ U = -G \frac{m_1 m_2}{r}
 </section>
 <section id="small-body-around-the-earth" class="level3">
 <h3 class="anchored" data-anchor-id="small-body-around-the-earth">Small body around the Earth</h3>
-<div id="735c73d9" class="cell" data-execution_count="11">
+<div id="f608e6ef" class="cell" data-execution_count="11">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4323,7 +4332,7 @@ U = -G \frac{m_1 m_2}{r}
 </section>
 <section id="earth-moon-system-with-small-body" class="level3">
 <h3 class="anchored" data-anchor-id="earth-moon-system-with-small-body">Earth-Moon System with small body</h3>
-<div id="bd4332bb" class="cell" data-execution_count="12">
+<div id="30d842fc" class="cell" data-execution_count="12">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -5275,625 +5284,632 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-385"><a href="#cb14-385"></a></span>
 <span id="cb14-386"><a href="#cb14-386"></a>where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle is proportional to its position, and the force acting on the particle is the force of a spring, equal to the spring constant times the position of the particle.</span>
 <span id="cb14-387"><a href="#cb14-387"></a></span>
-<span id="cb14-388"><a href="#cb14-388"></a><span class="fu">#### Analytical solution</span></span>
-<span id="cb14-389"><a href="#cb14-389"></a></span>
-<span id="cb14-390"><a href="#cb14-390"></a>The analytical solution of the equation of motion for a particle in simple harmonic motion is</span>
-<span id="cb14-391"><a href="#cb14-391"></a></span>
-<span id="cb14-392"><a href="#cb14-392"></a>$$</span>
-<span id="cb14-393"><a href="#cb14-393"></a>x(t) = A \sin(\omega t) + B \cos(\omega t)</span>
-<span id="cb14-394"><a href="#cb14-394"></a>$$</span>
-<span id="cb14-395"><a href="#cb14-395"></a></span>
-<span id="cb14-396"><a href="#cb14-396"></a>where $A$ and $B$ are the amplitudes of the particle, and $\omega$ is the angular frequency of the particle</span>
-<span id="cb14-397"><a href="#cb14-397"></a></span>
-<span id="cb14-398"><a href="#cb14-398"></a>$$</span>
-<span id="cb14-399"><a href="#cb14-399"></a>\omega = \sqrt{\frac{k}{m}}</span>
-<span id="cb14-400"><a href="#cb14-400"></a>$$</span>
-<span id="cb14-401"><a href="#cb14-401"></a></span>
-<span id="cb14-402"><a href="#cb14-402"></a>The angular frequency is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ determines the initial phase of the particle.</span>
-<span id="cb14-403"><a href="#cb14-403"></a></span>
+<span id="cb14-388"><a href="#cb14-388"></a></span>
+<span id="cb14-389"><a href="#cb14-389"></a><span class="fu">#### Analytical solution</span></span>
+<span id="cb14-390"><a href="#cb14-390"></a></span>
+<span id="cb14-391"><a href="#cb14-391"></a>The analytical solution of the equation of motion for a particle in simple harmonic motion is</span>
+<span id="cb14-392"><a href="#cb14-392"></a></span>
+<span id="cb14-393"><a href="#cb14-393"></a>$$</span>
+<span id="cb14-394"><a href="#cb14-394"></a>x(t) = A \sin(\omega t) + B \cos(\omega t)</span>
+<span id="cb14-395"><a href="#cb14-395"></a>$$</span>
+<span id="cb14-396"><a href="#cb14-396"></a></span>
+<span id="cb14-397"><a href="#cb14-397"></a>where $A$ and $B$ are the amplitudes of the particle, and $\omega$ is the angular frequency of the particle</span>
+<span id="cb14-398"><a href="#cb14-398"></a></span>
+<span id="cb14-399"><a href="#cb14-399"></a>$$</span>
+<span id="cb14-400"><a href="#cb14-400"></a>\omega = \sqrt{\frac{k}{m}}</span>
+<span id="cb14-401"><a href="#cb14-401"></a>$$</span>
+<span id="cb14-402"><a href="#cb14-402"></a></span>
+<span id="cb14-403"><a href="#cb14-403"></a>The angular frequency is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ determines the initial phase of the particle.</span>
 <span id="cb14-404"><a href="#cb14-404"></a></span>
-<span id="cb14-405"><a href="#cb14-405"></a></span>
-<span id="cb14-406"><a href="#cb14-406"></a><span class="fu">#### Numerical solution</span></span>
-<span id="cb14-407"><a href="#cb14-407"></a></span>
-<span id="cb14-410"><a href="#cb14-410"></a><span class="in">```{python}</span></span>
-<span id="cb14-411"><a href="#cb14-411"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-412"><a href="#cb14-412"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-413"><a href="#cb14-413"></a></span>
-<span id="cb14-414"><a href="#cb14-414"></a><span class="co"># Parameters</span></span>
-<span id="cb14-415"><a href="#cb14-415"></a>k <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Spring constant</span></span>
-<span id="cb14-416"><a href="#cb14-416"></a>m <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Mass of the particle</span></span>
-<span id="cb14-417"><a href="#cb14-417"></a>x_0 <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Initial position</span></span>
-<span id="cb14-418"><a href="#cb14-418"></a>v_0 <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Initial velocity</span></span>
-<span id="cb14-419"><a href="#cb14-419"></a></span>
-<span id="cb14-420"><a href="#cb14-420"></a><span class="co"># Derived parameters</span></span>
-<span id="cb14-421"><a href="#cb14-421"></a>omega <span class="op">=</span> np.sqrt(k <span class="op">/</span> m)  <span class="co"># Angular frequency</span></span>
-<span id="cb14-422"><a href="#cb14-422"></a></span>
-<span id="cb14-423"><a href="#cb14-423"></a><span class="co"># Time array</span></span>
-<span id="cb14-424"><a href="#cb14-424"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">500</span>)</span>
-<span id="cb14-425"><a href="#cb14-425"></a>dt <span class="op">=</span> t[<span class="dv">1</span>] <span class="op">-</span> t[<span class="dv">0</span>]</span>
+<span id="cb14-405"><a href="#cb14-405"></a><span class="fu">#### Geogebra example</span></span>
+<span id="cb14-406"><a href="#cb14-406"></a></span>
+<span id="cb14-407"><a href="#cb14-407"></a>::: {.geogebra-instruction}</span>
+<span id="cb14-408"><a href="#cb14-408"></a><span class="ss">* </span>t=Slider<span class="co">[</span><span class="ot">1, 100, 0.1</span><span class="co">]</span></span>
+<span id="cb14-409"><a href="#cb14-409"></a><span class="ss">* </span>P=Point<span class="co">[</span><span class="ot">0, sin(t)</span><span class="co">]</span></span>
+<span id="cb14-410"><a href="#cb14-410"></a>:::</span>
+<span id="cb14-411"><a href="#cb14-411"></a></span>
+<span id="cb14-412"><a href="#cb14-412"></a></span>
+<span id="cb14-413"><a href="#cb14-413"></a><span class="fu">#### Numerical solution</span></span>
+<span id="cb14-414"><a href="#cb14-414"></a></span>
+<span id="cb14-417"><a href="#cb14-417"></a><span class="in">```{python}</span></span>
+<span id="cb14-418"><a href="#cb14-418"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-419"><a href="#cb14-419"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-420"><a href="#cb14-420"></a></span>
+<span id="cb14-421"><a href="#cb14-421"></a><span class="co"># Parameters</span></span>
+<span id="cb14-422"><a href="#cb14-422"></a>k <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Spring constant</span></span>
+<span id="cb14-423"><a href="#cb14-423"></a>m <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Mass of the particle</span></span>
+<span id="cb14-424"><a href="#cb14-424"></a>x_0 <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Initial position</span></span>
+<span id="cb14-425"><a href="#cb14-425"></a>v_0 <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Initial velocity</span></span>
 <span id="cb14-426"><a href="#cb14-426"></a></span>
-<span id="cb14-427"><a href="#cb14-427"></a><span class="co"># Numerical solution (Euler method)</span></span>
-<span id="cb14-428"><a href="#cb14-428"></a>x_num <span class="op">=</span> [x_0]</span>
-<span id="cb14-429"><a href="#cb14-429"></a>v <span class="op">=</span> v_0</span>
-<span id="cb14-430"><a href="#cb14-430"></a></span>
-<span id="cb14-431"><a href="#cb14-431"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(t)):</span>
-<span id="cb14-432"><a href="#cb14-432"></a>    a <span class="op">=</span> <span class="op">-</span>k <span class="op">/</span> m <span class="op">*</span> x_num[<span class="op">-</span><span class="dv">1</span>]  <span class="co"># Acceleration</span></span>
-<span id="cb14-433"><a href="#cb14-433"></a>    v <span class="op">+=</span> a <span class="op">*</span> dt            <span class="co"># Update velocity</span></span>
-<span id="cb14-434"><a href="#cb14-434"></a>    x_num.append(x_num[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> v <span class="op">*</span> dt)  <span class="co"># Update position</span></span>
-<span id="cb14-435"><a href="#cb14-435"></a></span>
-<span id="cb14-436"><a href="#cb14-436"></a><span class="co"># Analytical solution</span></span>
-<span id="cb14-437"><a href="#cb14-437"></a>A <span class="op">=</span> x_0</span>
-<span id="cb14-438"><a href="#cb14-438"></a>B <span class="op">=</span> v_0 <span class="op">/</span> omega</span>
-<span id="cb14-439"><a href="#cb14-439"></a>x_analytical <span class="op">=</span> B <span class="op">*</span> np.sin(omega <span class="op">*</span> t) <span class="op">+</span> A <span class="op">*</span> np.cos(omega <span class="op">*</span> t)</span>
-<span id="cb14-440"><a href="#cb14-440"></a></span>
-<span id="cb14-441"><a href="#cb14-441"></a><span class="co"># Plotting the position vs time</span></span>
-<span id="cb14-442"><a href="#cb14-442"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb14-443"><a href="#cb14-443"></a>plt.plot(t, x_num, label<span class="op">=</span><span class="st">&quot;Numerical Solution&quot;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
-<span id="cb14-444"><a href="#cb14-444"></a>plt.plot(t, x_analytical, label<span class="op">=</span><span class="st">&quot;Analytical Solution&quot;</span>, linestyle<span class="op">=</span><span class="st">&#39;-&#39;</span>)</span>
-<span id="cb14-445"><a href="#cb14-445"></a>plt.xlabel(<span class="st">&#39;Time (t)&#39;</span>)</span>
-<span id="cb14-446"><a href="#cb14-446"></a>plt.ylabel(<span class="st">&#39;Position (x)&#39;</span>)</span>
-<span id="cb14-447"><a href="#cb14-447"></a>plt.title(<span class="st">&#39;Harmonic Motion in One Dimension&#39;</span>)</span>
-<span id="cb14-448"><a href="#cb14-448"></a>plt.legend()</span>
-<span id="cb14-449"><a href="#cb14-449"></a>plt.grid()</span>
-<span id="cb14-450"><a href="#cb14-450"></a>plt.show()</span>
-<span id="cb14-451"><a href="#cb14-451"></a><span class="in">```</span></span>
-<span id="cb14-452"><a href="#cb14-452"></a></span>
-<span id="cb14-453"><a href="#cb14-453"></a></span>
-<span id="cb14-454"><a href="#cb14-454"></a><span class="fu">### Pendulum Motion</span></span>
-<span id="cb14-455"><a href="#cb14-455"></a></span>
-<span id="cb14-456"><a href="#cb14-456"></a><span class="fu">#### Introduction</span></span>
-<span id="cb14-457"><a href="#cb14-457"></a></span>
-<span id="cb14-458"><a href="#cb14-458"></a>The motion of a simple pendulum is a classic example of harmonic motion. A pendulum consists of a mass $m$ (called the bob) attached to a string or rod of length $L$, which is fixed at one end and free to swing back and forth under the influence of gravity. For small angles, the motion can be approximated as simple harmonic motion.</span>
+<span id="cb14-427"><a href="#cb14-427"></a><span class="co"># Derived parameters</span></span>
+<span id="cb14-428"><a href="#cb14-428"></a>omega <span class="op">=</span> np.sqrt(k <span class="op">/</span> m)  <span class="co"># Angular frequency</span></span>
+<span id="cb14-429"><a href="#cb14-429"></a></span>
+<span id="cb14-430"><a href="#cb14-430"></a><span class="co"># Time array</span></span>
+<span id="cb14-431"><a href="#cb14-431"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">500</span>)</span>
+<span id="cb14-432"><a href="#cb14-432"></a>dt <span class="op">=</span> t[<span class="dv">1</span>] <span class="op">-</span> t[<span class="dv">0</span>]</span>
+<span id="cb14-433"><a href="#cb14-433"></a></span>
+<span id="cb14-434"><a href="#cb14-434"></a><span class="co"># Numerical solution (Euler method)</span></span>
+<span id="cb14-435"><a href="#cb14-435"></a>x_num <span class="op">=</span> [x_0]</span>
+<span id="cb14-436"><a href="#cb14-436"></a>v <span class="op">=</span> v_0</span>
+<span id="cb14-437"><a href="#cb14-437"></a></span>
+<span id="cb14-438"><a href="#cb14-438"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(t)):</span>
+<span id="cb14-439"><a href="#cb14-439"></a>    a <span class="op">=</span> <span class="op">-</span>k <span class="op">/</span> m <span class="op">*</span> x_num[<span class="op">-</span><span class="dv">1</span>]  <span class="co"># Acceleration</span></span>
+<span id="cb14-440"><a href="#cb14-440"></a>    v <span class="op">+=</span> a <span class="op">*</span> dt            <span class="co"># Update velocity</span></span>
+<span id="cb14-441"><a href="#cb14-441"></a>    x_num.append(x_num[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> v <span class="op">*</span> dt)  <span class="co"># Update position</span></span>
+<span id="cb14-442"><a href="#cb14-442"></a></span>
+<span id="cb14-443"><a href="#cb14-443"></a><span class="co"># Analytical solution</span></span>
+<span id="cb14-444"><a href="#cb14-444"></a>A <span class="op">=</span> x_0</span>
+<span id="cb14-445"><a href="#cb14-445"></a>B <span class="op">=</span> v_0 <span class="op">/</span> omega</span>
+<span id="cb14-446"><a href="#cb14-446"></a>x_analytical <span class="op">=</span> B <span class="op">*</span> np.sin(omega <span class="op">*</span> t) <span class="op">+</span> A <span class="op">*</span> np.cos(omega <span class="op">*</span> t)</span>
+<span id="cb14-447"><a href="#cb14-447"></a></span>
+<span id="cb14-448"><a href="#cb14-448"></a><span class="co"># Plotting the position vs time</span></span>
+<span id="cb14-449"><a href="#cb14-449"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb14-450"><a href="#cb14-450"></a>plt.plot(t, x_num, label<span class="op">=</span><span class="st">&quot;Numerical Solution&quot;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
+<span id="cb14-451"><a href="#cb14-451"></a>plt.plot(t, x_analytical, label<span class="op">=</span><span class="st">&quot;Analytical Solution&quot;</span>, linestyle<span class="op">=</span><span class="st">&#39;-&#39;</span>)</span>
+<span id="cb14-452"><a href="#cb14-452"></a>plt.xlabel(<span class="st">&#39;Time (t)&#39;</span>)</span>
+<span id="cb14-453"><a href="#cb14-453"></a>plt.ylabel(<span class="st">&#39;Position (x)&#39;</span>)</span>
+<span id="cb14-454"><a href="#cb14-454"></a>plt.title(<span class="st">&#39;Harmonic Motion in One Dimension&#39;</span>)</span>
+<span id="cb14-455"><a href="#cb14-455"></a>plt.legend()</span>
+<span id="cb14-456"><a href="#cb14-456"></a>plt.grid()</span>
+<span id="cb14-457"><a href="#cb14-457"></a>plt.show()</span>
+<span id="cb14-458"><a href="#cb14-458"></a><span class="in">```</span></span>
 <span id="cb14-459"><a href="#cb14-459"></a></span>
-<span id="cb14-460"><a href="#cb14-460"></a><span class="fu">#### Equations of Motion</span></span>
-<span id="cb14-461"><a href="#cb14-461"></a></span>
-<span id="cb14-462"><a href="#cb14-462"></a>The equation of motion for a pendulum is derived from Newton&#39;s second law. The force acting on the pendulum is the component of the gravitational force tangential to the arc of its swing:</span>
-<span id="cb14-463"><a href="#cb14-463"></a></span>
-<span id="cb14-464"><a href="#cb14-464"></a>$$</span>
-<span id="cb14-465"><a href="#cb14-465"></a>F = -mg \sin(\theta)</span>
-<span id="cb14-466"><a href="#cb14-466"></a>$$</span>
-<span id="cb14-467"><a href="#cb14-467"></a></span>
-<span id="cb14-468"><a href="#cb14-468"></a>Using the relationship $F = ma$ and the angular acceleration $a = L \frac{d^2 \theta}{dt^2}$, we get:</span>
-<span id="cb14-469"><a href="#cb14-469"></a></span>
-<span id="cb14-470"><a href="#cb14-470"></a>$$</span>
-<span id="cb14-471"><a href="#cb14-471"></a>L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)</span>
-<span id="cb14-472"><a href="#cb14-472"></a>$$</span>
-<span id="cb14-473"><a href="#cb14-473"></a></span>
-<span id="cb14-474"><a href="#cb14-474"></a>Dividing through by $L$, the equation becomes:</span>
-<span id="cb14-475"><a href="#cb14-475"></a></span>
-<span id="cb14-476"><a href="#cb14-476"></a>$$</span>
-<span id="cb14-477"><a href="#cb14-477"></a>\frac{d^2 \theta}{dt^2} + \frac{g}{L} \sin(\theta) = 0</span>
-<span id="cb14-478"><a href="#cb14-478"></a>$$</span>
-<span id="cb14-479"><a href="#cb14-479"></a></span>
-<span id="cb14-480"><a href="#cb14-480"></a>For small angles ($\sin(\theta) \approx \theta$), the equation simplifies to:</span>
-<span id="cb14-481"><a href="#cb14-481"></a></span>
-<span id="cb14-482"><a href="#cb14-482"></a>$$</span>
-<span id="cb14-483"><a href="#cb14-483"></a>\frac{d^2 \theta}{dt^2} + \frac{g}{L} \theta = 0</span>
-<span id="cb14-484"><a href="#cb14-484"></a>$$</span>
-<span id="cb14-485"><a href="#cb14-485"></a></span>
-<span id="cb14-486"><a href="#cb14-486"></a>This is the equation for simple harmonic motion with angular frequency:</span>
-<span id="cb14-487"><a href="#cb14-487"></a></span>
-<span id="cb14-488"><a href="#cb14-488"></a>$$</span>
-<span id="cb14-489"><a href="#cb14-489"></a>\omega = \sqrt{\frac{g}{L}}</span>
-<span id="cb14-490"><a href="#cb14-490"></a>$$</span>
-<span id="cb14-491"><a href="#cb14-491"></a></span>
-<span id="cb14-492"><a href="#cb14-492"></a><span class="fu">#### Analytical Solution</span></span>
-<span id="cb14-493"><a href="#cb14-493"></a></span>
-<span id="cb14-494"><a href="#cb14-494"></a>The analytical solution for small angles is:</span>
-<span id="cb14-495"><a href="#cb14-495"></a></span>
-<span id="cb14-496"><a href="#cb14-496"></a>$$</span>
-<span id="cb14-497"><a href="#cb14-497"></a>\theta(t) = \theta_0 \cos(\omega t + \phi)</span>
-<span id="cb14-498"><a href="#cb14-498"></a>$$</span>
-<span id="cb14-499"><a href="#cb14-499"></a></span>
-<span id="cb14-500"><a href="#cb14-500"></a>where:</span>
-<span id="cb14-501"><a href="#cb14-501"></a><span class="ss">- </span>$\theta_0$ is the initial angular displacement.</span>
-<span id="cb14-502"><a href="#cb14-502"></a><span class="ss">- </span>$\phi$ is the phase constant, determined by initial conditions.</span>
-<span id="cb14-503"><a href="#cb14-503"></a></span>
-<span id="cb14-504"><a href="#cb14-504"></a><span class="fu">#### Numerical Solution</span></span>
-<span id="cb14-505"><a href="#cb14-505"></a></span>
-<span id="cb14-506"><a href="#cb14-506"></a>For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.</span>
-<span id="cb14-507"><a href="#cb14-507"></a></span>
-<span id="cb14-510"><a href="#cb14-510"></a><span class="in">```{python}</span></span>
-<span id="cb14-511"><a href="#cb14-511"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-512"><a href="#cb14-512"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-513"><a href="#cb14-513"></a></span>
-<span id="cb14-514"><a href="#cb14-514"></a><span class="co"># Parameters</span></span>
-<span id="cb14-515"><a href="#cb14-515"></a>g <span class="op">=</span> <span class="fl">9.81</span>  <span class="co"># Acceleration due to gravity (m/s^2)</span></span>
-<span id="cb14-516"><a href="#cb14-516"></a>L <span class="op">=</span> <span class="fl">1.0</span>   <span class="co"># Length of the pendulum (m)</span></span>
-<span id="cb14-517"><a href="#cb14-517"></a>theta_0 <span class="op">=</span> np.pi <span class="op">/</span> <span class="dv">4</span>  <span class="co"># Initial angle (radians)</span></span>
-<span id="cb14-518"><a href="#cb14-518"></a></span>
-<span id="cb14-519"><a href="#cb14-519"></a><span class="co"># Time settings</span></span>
-<span id="cb14-520"><a href="#cb14-520"></a>T <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Total time (s)</span></span>
-<span id="cb14-521"><a href="#cb14-521"></a>N <span class="op">=</span> <span class="dv">10_000</span>  <span class="co"># Number of time steps</span></span>
-<span id="cb14-522"><a href="#cb14-522"></a>dt <span class="op">=</span> T <span class="op">/</span> N</span>
-<span id="cb14-523"><a href="#cb14-523"></a></span>
-<span id="cb14-524"><a href="#cb14-524"></a><span class="co"># Arrays to store values</span></span>
-<span id="cb14-525"><a href="#cb14-525"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, T, N)</span>
-<span id="cb14-526"><a href="#cb14-526"></a>theta_full <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-527"><a href="#cb14-527"></a>omega_full <span class="op">=</span> np.zeros(N)  <span class="co"># Angular velocity for full sin(theta)</span></span>
-<span id="cb14-528"><a href="#cb14-528"></a></span>
-<span id="cb14-529"><a href="#cb14-529"></a>theta_approx <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-530"><a href="#cb14-530"></a>omega_approx <span class="op">=</span> np.zeros(N)  <span class="co"># Angular velocity for sin(theta) ~ theta</span></span>
-<span id="cb14-531"><a href="#cb14-531"></a></span>
-<span id="cb14-532"><a href="#cb14-532"></a><span class="co"># Initial conditions</span></span>
-<span id="cb14-533"><a href="#cb14-533"></a>theta_full[<span class="dv">0</span>] <span class="op">=</span> theta_0</span>
-<span id="cb14-534"><a href="#cb14-534"></a>omega_full[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-460"><a href="#cb14-460"></a></span>
+<span id="cb14-461"><a href="#cb14-461"></a><span class="fu">### Pendulum Motion</span></span>
+<span id="cb14-462"><a href="#cb14-462"></a></span>
+<span id="cb14-463"><a href="#cb14-463"></a><span class="fu">#### Introduction</span></span>
+<span id="cb14-464"><a href="#cb14-464"></a></span>
+<span id="cb14-465"><a href="#cb14-465"></a>The motion of a simple pendulum is a classic example of harmonic motion. A pendulum consists of a mass $m$ (called the bob) attached to a string or rod of length $L$, which is fixed at one end and free to swing back and forth under the influence of gravity. For small angles, the motion can be approximated as simple harmonic motion.</span>
+<span id="cb14-466"><a href="#cb14-466"></a></span>
+<span id="cb14-467"><a href="#cb14-467"></a><span class="fu">#### Equations of Motion</span></span>
+<span id="cb14-468"><a href="#cb14-468"></a></span>
+<span id="cb14-469"><a href="#cb14-469"></a>The equation of motion for a pendulum is derived from Newton&#39;s second law. The force acting on the pendulum is the component of the gravitational force tangential to the arc of its swing:</span>
+<span id="cb14-470"><a href="#cb14-470"></a></span>
+<span id="cb14-471"><a href="#cb14-471"></a>$$</span>
+<span id="cb14-472"><a href="#cb14-472"></a>F = -mg \sin(\theta)</span>
+<span id="cb14-473"><a href="#cb14-473"></a>$$</span>
+<span id="cb14-474"><a href="#cb14-474"></a></span>
+<span id="cb14-475"><a href="#cb14-475"></a>Using the relationship $F = ma$ and the angular acceleration $a = L \frac{d^2 \theta}{dt^2}$, we get:</span>
+<span id="cb14-476"><a href="#cb14-476"></a></span>
+<span id="cb14-477"><a href="#cb14-477"></a>$$</span>
+<span id="cb14-478"><a href="#cb14-478"></a>L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)</span>
+<span id="cb14-479"><a href="#cb14-479"></a>$$</span>
+<span id="cb14-480"><a href="#cb14-480"></a></span>
+<span id="cb14-481"><a href="#cb14-481"></a>Dividing through by $L$, the equation becomes:</span>
+<span id="cb14-482"><a href="#cb14-482"></a></span>
+<span id="cb14-483"><a href="#cb14-483"></a>$$</span>
+<span id="cb14-484"><a href="#cb14-484"></a>\frac{d^2 \theta}{dt^2} + \frac{g}{L} \sin(\theta) = 0</span>
+<span id="cb14-485"><a href="#cb14-485"></a>$$</span>
+<span id="cb14-486"><a href="#cb14-486"></a></span>
+<span id="cb14-487"><a href="#cb14-487"></a>For small angles ($\sin(\theta) \approx \theta$), the equation simplifies to:</span>
+<span id="cb14-488"><a href="#cb14-488"></a></span>
+<span id="cb14-489"><a href="#cb14-489"></a>$$</span>
+<span id="cb14-490"><a href="#cb14-490"></a>\frac{d^2 \theta}{dt^2} + \frac{g}{L} \theta = 0</span>
+<span id="cb14-491"><a href="#cb14-491"></a>$$</span>
+<span id="cb14-492"><a href="#cb14-492"></a></span>
+<span id="cb14-493"><a href="#cb14-493"></a>This is the equation for simple harmonic motion with angular frequency:</span>
+<span id="cb14-494"><a href="#cb14-494"></a></span>
+<span id="cb14-495"><a href="#cb14-495"></a>$$</span>
+<span id="cb14-496"><a href="#cb14-496"></a>\omega = \sqrt{\frac{g}{L}}</span>
+<span id="cb14-497"><a href="#cb14-497"></a>$$</span>
+<span id="cb14-498"><a href="#cb14-498"></a></span>
+<span id="cb14-499"><a href="#cb14-499"></a><span class="fu">#### Analytical Solution</span></span>
+<span id="cb14-500"><a href="#cb14-500"></a></span>
+<span id="cb14-501"><a href="#cb14-501"></a>The analytical solution for small angles is:</span>
+<span id="cb14-502"><a href="#cb14-502"></a></span>
+<span id="cb14-503"><a href="#cb14-503"></a>$$</span>
+<span id="cb14-504"><a href="#cb14-504"></a>\theta(t) = \theta_0 \cos(\omega t + \phi)</span>
+<span id="cb14-505"><a href="#cb14-505"></a>$$</span>
+<span id="cb14-506"><a href="#cb14-506"></a></span>
+<span id="cb14-507"><a href="#cb14-507"></a>where:</span>
+<span id="cb14-508"><a href="#cb14-508"></a><span class="ss">- </span>$\theta_0$ is the initial angular displacement.</span>
+<span id="cb14-509"><a href="#cb14-509"></a><span class="ss">- </span>$\phi$ is the phase constant, determined by initial conditions.</span>
+<span id="cb14-510"><a href="#cb14-510"></a></span>
+<span id="cb14-511"><a href="#cb14-511"></a><span class="fu">#### Numerical Solution</span></span>
+<span id="cb14-512"><a href="#cb14-512"></a></span>
+<span id="cb14-513"><a href="#cb14-513"></a>For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.</span>
+<span id="cb14-514"><a href="#cb14-514"></a></span>
+<span id="cb14-517"><a href="#cb14-517"></a><span class="in">```{python}</span></span>
+<span id="cb14-518"><a href="#cb14-518"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-519"><a href="#cb14-519"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-520"><a href="#cb14-520"></a></span>
+<span id="cb14-521"><a href="#cb14-521"></a><span class="co"># Parameters</span></span>
+<span id="cb14-522"><a href="#cb14-522"></a>g <span class="op">=</span> <span class="fl">9.81</span>  <span class="co"># Acceleration due to gravity (m/s^2)</span></span>
+<span id="cb14-523"><a href="#cb14-523"></a>L <span class="op">=</span> <span class="fl">1.0</span>   <span class="co"># Length of the pendulum (m)</span></span>
+<span id="cb14-524"><a href="#cb14-524"></a>theta_0 <span class="op">=</span> np.pi <span class="op">/</span> <span class="dv">4</span>  <span class="co"># Initial angle (radians)</span></span>
+<span id="cb14-525"><a href="#cb14-525"></a></span>
+<span id="cb14-526"><a href="#cb14-526"></a><span class="co"># Time settings</span></span>
+<span id="cb14-527"><a href="#cb14-527"></a>T <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Total time (s)</span></span>
+<span id="cb14-528"><a href="#cb14-528"></a>N <span class="op">=</span> <span class="dv">10_000</span>  <span class="co"># Number of time steps</span></span>
+<span id="cb14-529"><a href="#cb14-529"></a>dt <span class="op">=</span> T <span class="op">/</span> N</span>
+<span id="cb14-530"><a href="#cb14-530"></a></span>
+<span id="cb14-531"><a href="#cb14-531"></a><span class="co"># Arrays to store values</span></span>
+<span id="cb14-532"><a href="#cb14-532"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, T, N)</span>
+<span id="cb14-533"><a href="#cb14-533"></a>theta_full <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-534"><a href="#cb14-534"></a>omega_full <span class="op">=</span> np.zeros(N)  <span class="co"># Angular velocity for full sin(theta)</span></span>
 <span id="cb14-535"><a href="#cb14-535"></a></span>
-<span id="cb14-536"><a href="#cb14-536"></a>theta_approx[<span class="dv">0</span>] <span class="op">=</span> theta_0</span>
-<span id="cb14-537"><a href="#cb14-537"></a>omega_approx[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-536"><a href="#cb14-536"></a>theta_approx <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-537"><a href="#cb14-537"></a>omega_approx <span class="op">=</span> np.zeros(N)  <span class="co"># Angular velocity for sin(theta) ~ theta</span></span>
 <span id="cb14-538"><a href="#cb14-538"></a></span>
-<span id="cb14-539"><a href="#cb14-539"></a><span class="co"># Numerical integration (Euler method)</span></span>
-<span id="cb14-540"><a href="#cb14-540"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, N):</span>
-<span id="cb14-541"><a href="#cb14-541"></a>    <span class="co"># Full sin(theta)</span></span>
-<span id="cb14-542"><a href="#cb14-542"></a>    alpha_full <span class="op">=</span> <span class="op">-</span>(g <span class="op">/</span> L) <span class="op">*</span> np.sin(theta_full[i <span class="op">-</span> <span class="dv">1</span>])</span>
-<span id="cb14-543"><a href="#cb14-543"></a>    omega_full[i] <span class="op">=</span> omega_full[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> alpha_full <span class="op">*</span> dt</span>
-<span id="cb14-544"><a href="#cb14-544"></a>    theta_full[i] <span class="op">=</span> theta_full[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> omega_full[i] <span class="op">*</span> dt</span>
+<span id="cb14-539"><a href="#cb14-539"></a><span class="co"># Initial conditions</span></span>
+<span id="cb14-540"><a href="#cb14-540"></a>theta_full[<span class="dv">0</span>] <span class="op">=</span> theta_0</span>
+<span id="cb14-541"><a href="#cb14-541"></a>omega_full[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-542"><a href="#cb14-542"></a></span>
+<span id="cb14-543"><a href="#cb14-543"></a>theta_approx[<span class="dv">0</span>] <span class="op">=</span> theta_0</span>
+<span id="cb14-544"><a href="#cb14-544"></a>omega_approx[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb14-545"><a href="#cb14-545"></a></span>
-<span id="cb14-546"><a href="#cb14-546"></a>    <span class="co"># Approximation sin(theta) ~ theta</span></span>
-<span id="cb14-547"><a href="#cb14-547"></a>    alpha_approx <span class="op">=</span> <span class="op">-</span>(g <span class="op">/</span> L) <span class="op">*</span> theta_approx[i <span class="op">-</span> <span class="dv">1</span>]</span>
-<span id="cb14-548"><a href="#cb14-548"></a>    omega_approx[i] <span class="op">=</span> omega_approx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> alpha_approx <span class="op">*</span> dt</span>
-<span id="cb14-549"><a href="#cb14-549"></a>    theta_approx[i] <span class="op">=</span> theta_approx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> omega_approx[i] <span class="op">*</span> dt</span>
-<span id="cb14-550"><a href="#cb14-550"></a></span>
-<span id="cb14-551"><a href="#cb14-551"></a><span class="co"># Plotting</span></span>
-<span id="cb14-552"><a href="#cb14-552"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
-<span id="cb14-553"><a href="#cb14-553"></a>plt.plot(t, theta_full, label<span class="op">=</span><span class="st">&quot;Full sin(theta)&quot;</span>, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb14-554"><a href="#cb14-554"></a>plt.plot(t, theta_approx, label<span class="op">=</span><span class="st">&quot;sin(theta) ~ theta&quot;</span>, color<span class="op">=</span><span class="st">&quot;red&quot;</span>, linestyle<span class="op">=</span><span class="st">&quot;--&quot;</span>)</span>
-<span id="cb14-555"><a href="#cb14-555"></a>plt.title(<span class="st">&quot;Pendulum Motion: Full sin(theta) vs Approximation&quot;</span>)</span>
-<span id="cb14-556"><a href="#cb14-556"></a>plt.xlabel(<span class="st">&quot;Time (s)&quot;</span>)</span>
-<span id="cb14-557"><a href="#cb14-557"></a>plt.ylabel(<span class="st">&quot;Angle (radians)&quot;</span>)</span>
-<span id="cb14-558"><a href="#cb14-558"></a>plt.grid()</span>
-<span id="cb14-559"><a href="#cb14-559"></a>plt.legend()</span>
-<span id="cb14-560"><a href="#cb14-560"></a>plt.show()</span>
-<span id="cb14-561"><a href="#cb14-561"></a></span>
-<span id="cb14-562"><a href="#cb14-562"></a><span class="in">```</span></span>
-<span id="cb14-563"><a href="#cb14-563"></a></span>
-<span id="cb14-564"><a href="#cb14-564"></a></span>
-<span id="cb14-565"><a href="#cb14-565"></a><span class="fu">#### Energy Analysis</span></span>
-<span id="cb14-566"><a href="#cb14-566"></a></span>
-<span id="cb14-567"><a href="#cb14-567"></a>The total mechanical energy of the pendulum is conserved (assuming no damping). The total energy is the sum of kinetic and potential energy:</span>
+<span id="cb14-546"><a href="#cb14-546"></a><span class="co"># Numerical integration (Euler method)</span></span>
+<span id="cb14-547"><a href="#cb14-547"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, N):</span>
+<span id="cb14-548"><a href="#cb14-548"></a>    <span class="co"># Full sin(theta)</span></span>
+<span id="cb14-549"><a href="#cb14-549"></a>    alpha_full <span class="op">=</span> <span class="op">-</span>(g <span class="op">/</span> L) <span class="op">*</span> np.sin(theta_full[i <span class="op">-</span> <span class="dv">1</span>])</span>
+<span id="cb14-550"><a href="#cb14-550"></a>    omega_full[i] <span class="op">=</span> omega_full[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> alpha_full <span class="op">*</span> dt</span>
+<span id="cb14-551"><a href="#cb14-551"></a>    theta_full[i] <span class="op">=</span> theta_full[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> omega_full[i] <span class="op">*</span> dt</span>
+<span id="cb14-552"><a href="#cb14-552"></a></span>
+<span id="cb14-553"><a href="#cb14-553"></a>    <span class="co"># Approximation sin(theta) ~ theta</span></span>
+<span id="cb14-554"><a href="#cb14-554"></a>    alpha_approx <span class="op">=</span> <span class="op">-</span>(g <span class="op">/</span> L) <span class="op">*</span> theta_approx[i <span class="op">-</span> <span class="dv">1</span>]</span>
+<span id="cb14-555"><a href="#cb14-555"></a>    omega_approx[i] <span class="op">=</span> omega_approx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> alpha_approx <span class="op">*</span> dt</span>
+<span id="cb14-556"><a href="#cb14-556"></a>    theta_approx[i] <span class="op">=</span> theta_approx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> omega_approx[i] <span class="op">*</span> dt</span>
+<span id="cb14-557"><a href="#cb14-557"></a></span>
+<span id="cb14-558"><a href="#cb14-558"></a><span class="co"># Plotting</span></span>
+<span id="cb14-559"><a href="#cb14-559"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb14-560"><a href="#cb14-560"></a>plt.plot(t, theta_full, label<span class="op">=</span><span class="st">&quot;Full sin(theta)&quot;</span>, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb14-561"><a href="#cb14-561"></a>plt.plot(t, theta_approx, label<span class="op">=</span><span class="st">&quot;sin(theta) ~ theta&quot;</span>, color<span class="op">=</span><span class="st">&quot;red&quot;</span>, linestyle<span class="op">=</span><span class="st">&quot;--&quot;</span>)</span>
+<span id="cb14-562"><a href="#cb14-562"></a>plt.title(<span class="st">&quot;Pendulum Motion: Full sin(theta) vs Approximation&quot;</span>)</span>
+<span id="cb14-563"><a href="#cb14-563"></a>plt.xlabel(<span class="st">&quot;Time (s)&quot;</span>)</span>
+<span id="cb14-564"><a href="#cb14-564"></a>plt.ylabel(<span class="st">&quot;Angle (radians)&quot;</span>)</span>
+<span id="cb14-565"><a href="#cb14-565"></a>plt.grid()</span>
+<span id="cb14-566"><a href="#cb14-566"></a>plt.legend()</span>
+<span id="cb14-567"><a href="#cb14-567"></a>plt.show()</span>
 <span id="cb14-568"><a href="#cb14-568"></a></span>
-<span id="cb14-569"><a href="#cb14-569"></a>$$</span>
-<span id="cb14-570"><a href="#cb14-570"></a>E = K + U</span>
-<span id="cb14-571"><a href="#cb14-571"></a>$$</span>
-<span id="cb14-572"><a href="#cb14-572"></a></span>
-<span id="cb14-573"><a href="#cb14-573"></a><span class="ss">- </span>Kinetic energy: $K = \frac{1}{2} m v^2$</span>
-<span id="cb14-574"><a href="#cb14-574"></a><span class="ss">- </span>Potential energy: $U = m g h$</span>
+<span id="cb14-569"><a href="#cb14-569"></a><span class="in">```</span></span>
+<span id="cb14-570"><a href="#cb14-570"></a></span>
+<span id="cb14-571"><a href="#cb14-571"></a></span>
+<span id="cb14-572"><a href="#cb14-572"></a><span class="fu">#### Energy Analysis</span></span>
+<span id="cb14-573"><a href="#cb14-573"></a></span>
+<span id="cb14-574"><a href="#cb14-574"></a>The total mechanical energy of the pendulum is conserved (assuming no damping). The total energy is the sum of kinetic and potential energy:</span>
 <span id="cb14-575"><a href="#cb14-575"></a></span>
-<span id="cb14-576"><a href="#cb14-576"></a>For a pendulum:</span>
-<span id="cb14-577"><a href="#cb14-577"></a></span>
+<span id="cb14-576"><a href="#cb14-576"></a>$$</span>
+<span id="cb14-577"><a href="#cb14-577"></a>E = K + U</span>
 <span id="cb14-578"><a href="#cb14-578"></a>$$</span>
-<span id="cb14-579"><a href="#cb14-579"></a>v = L \frac{d\theta}{dt}, \quad h = L (1 - \cos\theta)</span>
-<span id="cb14-580"><a href="#cb14-580"></a>$$</span>
-<span id="cb14-581"><a href="#cb14-581"></a></span>
-<span id="cb14-582"><a href="#cb14-582"></a>Thus, the total energy becomes:</span>
-<span id="cb14-583"><a href="#cb14-583"></a></span>
-<span id="cb14-584"><a href="#cb14-584"></a>$$</span>
-<span id="cb14-585"><a href="#cb14-585"></a>E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)</span>
-<span id="cb14-586"><a href="#cb14-586"></a>$$</span>
-<span id="cb14-587"><a href="#cb14-587"></a></span>
-<span id="cb14-588"><a href="#cb14-588"></a>The energy remains constant over time, which can be verified numerically.</span>
-<span id="cb14-589"><a href="#cb14-589"></a></span>
-<span id="cb14-592"><a href="#cb14-592"></a><span class="in">```{python}</span></span>
-<span id="cb14-593"><a href="#cb14-593"></a><span class="co"># Calculate energies</span></span>
-<span id="cb14-594"><a href="#cb14-594"></a>m<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb14-595"><a href="#cb14-595"></a>kinetic_energy <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> m <span class="op">*</span> (L <span class="op">*</span> omega_full)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb14-596"><a href="#cb14-596"></a>potential_energy <span class="op">=</span> m <span class="op">*</span> g <span class="op">*</span> L <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> np.cos(theta_full))</span>
-<span id="cb14-597"><a href="#cb14-597"></a>total_energy <span class="op">=</span> kinetic_energy <span class="op">+</span> potential_energy</span>
-<span id="cb14-598"><a href="#cb14-598"></a></span>
-<span id="cb14-599"><a href="#cb14-599"></a><span class="co"># Plot energies</span></span>
-<span id="cb14-600"><a href="#cb14-600"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb14-601"><a href="#cb14-601"></a>plt.plot(t, kinetic_energy, label<span class="op">=</span><span class="st">&quot;Kinetic Energy&quot;</span>)</span>
-<span id="cb14-602"><a href="#cb14-602"></a>plt.plot(t, potential_energy, label<span class="op">=</span><span class="st">&quot;Potential Energy&quot;</span>)</span>
-<span id="cb14-603"><a href="#cb14-603"></a>plt.plot(t, total_energy, label<span class="op">=</span><span class="st">&quot;Total Energy&quot;</span>, linestyle<span class="op">=</span><span class="st">&quot;dashed&quot;</span>)</span>
-<span id="cb14-604"><a href="#cb14-604"></a>plt.title(<span class="st">&quot;Energy of the Pendulum&quot;</span>)</span>
-<span id="cb14-605"><a href="#cb14-605"></a>plt.xlabel(<span class="st">&quot;Time (s)&quot;</span>)</span>
-<span id="cb14-606"><a href="#cb14-606"></a>plt.ylabel(<span class="st">&quot;Energy (J)&quot;</span>)</span>
-<span id="cb14-607"><a href="#cb14-607"></a>plt.grid()</span>
-<span id="cb14-608"><a href="#cb14-608"></a>plt.legend()</span>
-<span id="cb14-609"><a href="#cb14-609"></a>plt.show()</span>
-<span id="cb14-610"><a href="#cb14-610"></a><span class="in">```</span></span>
-<span id="cb14-611"><a href="#cb14-611"></a></span>
-<span id="cb14-612"><a href="#cb14-612"></a></span>
-<span id="cb14-613"><a href="#cb14-613"></a><span class="fu">### Circular Motion</span></span>
-<span id="cb14-614"><a href="#cb14-614"></a></span>
-<span id="cb14-615"><a href="#cb14-615"></a><span class="fu">#### Introduction</span></span>
-<span id="cb14-616"><a href="#cb14-616"></a></span>
-<span id="cb14-617"><a href="#cb14-617"></a>Circular motion refers to the movement of an object along a circular path. This motion can be uniform (constant speed) or non-uniform (variable speed). For simplicity, we will consider uniform circular motion, where the speed of the object is constant. The position, velocity, and acceleration vectors in circular motion exhibit interesting properties:</span>
+<span id="cb14-579"><a href="#cb14-579"></a></span>
+<span id="cb14-580"><a href="#cb14-580"></a><span class="ss">- </span>Kinetic energy: $K = \frac{1}{2} m v^2$</span>
+<span id="cb14-581"><a href="#cb14-581"></a><span class="ss">- </span>Potential energy: $U = m g h$</span>
+<span id="cb14-582"><a href="#cb14-582"></a></span>
+<span id="cb14-583"><a href="#cb14-583"></a>For a pendulum:</span>
+<span id="cb14-584"><a href="#cb14-584"></a></span>
+<span id="cb14-585"><a href="#cb14-585"></a>$$</span>
+<span id="cb14-586"><a href="#cb14-586"></a>v = L \frac{d\theta}{dt}, \quad h = L (1 - \cos\theta)</span>
+<span id="cb14-587"><a href="#cb14-587"></a>$$</span>
+<span id="cb14-588"><a href="#cb14-588"></a></span>
+<span id="cb14-589"><a href="#cb14-589"></a>Thus, the total energy becomes:</span>
+<span id="cb14-590"><a href="#cb14-590"></a></span>
+<span id="cb14-591"><a href="#cb14-591"></a>$$</span>
+<span id="cb14-592"><a href="#cb14-592"></a>E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)</span>
+<span id="cb14-593"><a href="#cb14-593"></a>$$</span>
+<span id="cb14-594"><a href="#cb14-594"></a></span>
+<span id="cb14-595"><a href="#cb14-595"></a>The energy remains constant over time, which can be verified numerically.</span>
+<span id="cb14-596"><a href="#cb14-596"></a></span>
+<span id="cb14-599"><a href="#cb14-599"></a><span class="in">```{python}</span></span>
+<span id="cb14-600"><a href="#cb14-600"></a><span class="co"># Calculate energies</span></span>
+<span id="cb14-601"><a href="#cb14-601"></a>m<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb14-602"><a href="#cb14-602"></a>kinetic_energy <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> m <span class="op">*</span> (L <span class="op">*</span> omega_full)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb14-603"><a href="#cb14-603"></a>potential_energy <span class="op">=</span> m <span class="op">*</span> g <span class="op">*</span> L <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> np.cos(theta_full))</span>
+<span id="cb14-604"><a href="#cb14-604"></a>total_energy <span class="op">=</span> kinetic_energy <span class="op">+</span> potential_energy</span>
+<span id="cb14-605"><a href="#cb14-605"></a></span>
+<span id="cb14-606"><a href="#cb14-606"></a><span class="co"># Plot energies</span></span>
+<span id="cb14-607"><a href="#cb14-607"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb14-608"><a href="#cb14-608"></a>plt.plot(t, kinetic_energy, label<span class="op">=</span><span class="st">&quot;Kinetic Energy&quot;</span>)</span>
+<span id="cb14-609"><a href="#cb14-609"></a>plt.plot(t, potential_energy, label<span class="op">=</span><span class="st">&quot;Potential Energy&quot;</span>)</span>
+<span id="cb14-610"><a href="#cb14-610"></a>plt.plot(t, total_energy, label<span class="op">=</span><span class="st">&quot;Total Energy&quot;</span>, linestyle<span class="op">=</span><span class="st">&quot;dashed&quot;</span>)</span>
+<span id="cb14-611"><a href="#cb14-611"></a>plt.title(<span class="st">&quot;Energy of the Pendulum&quot;</span>)</span>
+<span id="cb14-612"><a href="#cb14-612"></a>plt.xlabel(<span class="st">&quot;Time (s)&quot;</span>)</span>
+<span id="cb14-613"><a href="#cb14-613"></a>plt.ylabel(<span class="st">&quot;Energy (J)&quot;</span>)</span>
+<span id="cb14-614"><a href="#cb14-614"></a>plt.grid()</span>
+<span id="cb14-615"><a href="#cb14-615"></a>plt.legend()</span>
+<span id="cb14-616"><a href="#cb14-616"></a>plt.show()</span>
+<span id="cb14-617"><a href="#cb14-617"></a><span class="in">```</span></span>
 <span id="cb14-618"><a href="#cb14-618"></a></span>
-<span id="cb14-619"><a href="#cb14-619"></a><span class="ss">- </span>The velocity vector is always tangent to the circle.</span>
-<span id="cb14-620"><a href="#cb14-620"></a><span class="ss">- </span>The acceleration vector (centripetal acceleration) always points toward the center of the circle.</span>
+<span id="cb14-619"><a href="#cb14-619"></a></span>
+<span id="cb14-620"><a href="#cb14-620"></a><span class="fu">### Circular Motion</span></span>
 <span id="cb14-621"><a href="#cb14-621"></a></span>
-<span id="cb14-622"><a href="#cb14-622"></a><span class="fu">#### Equations of Motion</span></span>
+<span id="cb14-622"><a href="#cb14-622"></a><span class="fu">#### Introduction</span></span>
 <span id="cb14-623"><a href="#cb14-623"></a></span>
-<span id="cb14-624"><a href="#cb14-624"></a>Assume an object moves along a circular path of radius $R$ with constant angular velocity $\omega$.</span>
+<span id="cb14-624"><a href="#cb14-624"></a>Circular motion refers to the movement of an object along a circular path. This motion can be uniform (constant speed) or non-uniform (variable speed). For simplicity, we will consider uniform circular motion, where the speed of the object is constant. The position, velocity, and acceleration vectors in circular motion exhibit interesting properties:</span>
 <span id="cb14-625"><a href="#cb14-625"></a></span>
-<span id="cb14-626"><a href="#cb14-626"></a><span class="fu">##### Position Vector</span></span>
-<span id="cb14-627"><a href="#cb14-627"></a></span>
-<span id="cb14-628"><a href="#cb14-628"></a>The position of the object at time $t$ can be described in terms of the angle $\theta(t)$ it makes with the reference axis:</span>
-<span id="cb14-629"><a href="#cb14-629"></a></span>
-<span id="cb14-630"><a href="#cb14-630"></a>$$</span>
-<span id="cb14-631"><a href="#cb14-631"></a>\mathbf{r}(t) = R \cos(\omega t) \hat{i} + R \sin(\omega t) \hat{j}</span>
-<span id="cb14-632"><a href="#cb14-632"></a>$$</span>
-<span id="cb14-633"><a href="#cb14-633"></a></span>
-<span id="cb14-634"><a href="#cb14-634"></a><span class="fu">#### Velocity Vector</span></span>
-<span id="cb14-635"><a href="#cb14-635"></a></span>
-<span id="cb14-636"><a href="#cb14-636"></a>The velocity is the derivative of the position vector with respect to time:</span>
-<span id="cb14-637"><a href="#cb14-637"></a></span>
-<span id="cb14-638"><a href="#cb14-638"></a>$$</span>
-<span id="cb14-639"><a href="#cb14-639"></a>\mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = -R \omega \sin(\omega t) \hat{i} + R \omega \cos(\omega t) \hat{j}</span>
-<span id="cb14-640"><a href="#cb14-640"></a>$$</span>
-<span id="cb14-641"><a href="#cb14-641"></a></span>
-<span id="cb14-642"><a href="#cb14-642"></a>The magnitude of the velocity is constant and equals:</span>
-<span id="cb14-643"><a href="#cb14-643"></a></span>
-<span id="cb14-644"><a href="#cb14-644"></a>$$</span>
-<span id="cb14-645"><a href="#cb14-645"></a>|\mathbf{v}(t)| = R \omega</span>
-<span id="cb14-646"><a href="#cb14-646"></a>$$</span>
-<span id="cb14-647"><a href="#cb14-647"></a></span>
-<span id="cb14-648"><a href="#cb14-648"></a>**Velocity and Position Perpendicularity:**</span>
-<span id="cb14-649"><a href="#cb14-649"></a></span>
-<span id="cb14-650"><a href="#cb14-650"></a>The dot product of the position vector $\mathbf{r}(t)$ and velocity vector $\mathbf{v}(t)$ is:</span>
-<span id="cb14-651"><a href="#cb14-651"></a></span>
-<span id="cb14-652"><a href="#cb14-652"></a>$$</span>
-<span id="cb14-653"><a href="#cb14-653"></a>\mathbf{r}(t) \cdot \mathbf{v}(t) = \left<span class="co">[</span><span class="ot">R \cos(\omega t)\right</span><span class="co">]</span> \left<span class="co">[</span><span class="ot">-R \omega \sin(\omega t)\right</span><span class="co">]</span> + \left<span class="co">[</span><span class="ot">R \sin(\omega t)\right</span><span class="co">]</span> \left<span class="co">[</span><span class="ot">R \omega \cos(\omega t)\right</span><span class="co">]</span></span>
-<span id="cb14-654"><a href="#cb14-654"></a>$$</span>
-<span id="cb14-655"><a href="#cb14-655"></a></span>
-<span id="cb14-656"><a href="#cb14-656"></a>Simplifying:</span>
-<span id="cb14-657"><a href="#cb14-657"></a></span>
-<span id="cb14-658"><a href="#cb14-658"></a>$$</span>
-<span id="cb14-659"><a href="#cb14-659"></a>\mathbf{r}(t) \cdot \mathbf{v}(t) = -R^2 \omega \cos(\omega t) \sin(\omega t) + R^2 \omega \sin(\omega t) \cos(\omega t) = 0</span>
-<span id="cb14-660"><a href="#cb14-660"></a>$$</span>
-<span id="cb14-661"><a href="#cb14-661"></a></span>
-<span id="cb14-662"><a href="#cb14-662"></a>This confirms that $\mathbf{r}(t)$ and $\mathbf{v}(t)$ are perpendicular.</span>
-<span id="cb14-663"><a href="#cb14-663"></a></span>
+<span id="cb14-626"><a href="#cb14-626"></a><span class="ss">- </span>The velocity vector is always tangent to the circle.</span>
+<span id="cb14-627"><a href="#cb14-627"></a><span class="ss">- </span>The acceleration vector (centripetal acceleration) always points toward the center of the circle.</span>
+<span id="cb14-628"><a href="#cb14-628"></a></span>
+<span id="cb14-629"><a href="#cb14-629"></a><span class="fu">#### Equations of Motion</span></span>
+<span id="cb14-630"><a href="#cb14-630"></a></span>
+<span id="cb14-631"><a href="#cb14-631"></a>Assume an object moves along a circular path of radius $R$ with constant angular velocity $\omega$.</span>
+<span id="cb14-632"><a href="#cb14-632"></a></span>
+<span id="cb14-633"><a href="#cb14-633"></a><span class="fu">##### Position Vector</span></span>
+<span id="cb14-634"><a href="#cb14-634"></a></span>
+<span id="cb14-635"><a href="#cb14-635"></a>The position of the object at time $t$ can be described in terms of the angle $\theta(t)$ it makes with the reference axis:</span>
+<span id="cb14-636"><a href="#cb14-636"></a></span>
+<span id="cb14-637"><a href="#cb14-637"></a>$$</span>
+<span id="cb14-638"><a href="#cb14-638"></a>\mathbf{r}(t) = R \cos(\omega t) \hat{i} + R \sin(\omega t) \hat{j}</span>
+<span id="cb14-639"><a href="#cb14-639"></a>$$</span>
+<span id="cb14-640"><a href="#cb14-640"></a></span>
+<span id="cb14-641"><a href="#cb14-641"></a><span class="fu">#### Velocity Vector</span></span>
+<span id="cb14-642"><a href="#cb14-642"></a></span>
+<span id="cb14-643"><a href="#cb14-643"></a>The velocity is the derivative of the position vector with respect to time:</span>
+<span id="cb14-644"><a href="#cb14-644"></a></span>
+<span id="cb14-645"><a href="#cb14-645"></a>$$</span>
+<span id="cb14-646"><a href="#cb14-646"></a>\mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = -R \omega \sin(\omega t) \hat{i} + R \omega \cos(\omega t) \hat{j}</span>
+<span id="cb14-647"><a href="#cb14-647"></a>$$</span>
+<span id="cb14-648"><a href="#cb14-648"></a></span>
+<span id="cb14-649"><a href="#cb14-649"></a>The magnitude of the velocity is constant and equals:</span>
+<span id="cb14-650"><a href="#cb14-650"></a></span>
+<span id="cb14-651"><a href="#cb14-651"></a>$$</span>
+<span id="cb14-652"><a href="#cb14-652"></a>|\mathbf{v}(t)| = R \omega</span>
+<span id="cb14-653"><a href="#cb14-653"></a>$$</span>
+<span id="cb14-654"><a href="#cb14-654"></a></span>
+<span id="cb14-655"><a href="#cb14-655"></a>**Velocity and Position Perpendicularity:**</span>
+<span id="cb14-656"><a href="#cb14-656"></a></span>
+<span id="cb14-657"><a href="#cb14-657"></a>The dot product of the position vector $\mathbf{r}(t)$ and velocity vector $\mathbf{v}(t)$ is:</span>
+<span id="cb14-658"><a href="#cb14-658"></a></span>
+<span id="cb14-659"><a href="#cb14-659"></a>$$</span>
+<span id="cb14-660"><a href="#cb14-660"></a>\mathbf{r}(t) \cdot \mathbf{v}(t) = \left<span class="co">[</span><span class="ot">R \cos(\omega t)\right</span><span class="co">]</span> \left<span class="co">[</span><span class="ot">-R \omega \sin(\omega t)\right</span><span class="co">]</span> + \left<span class="co">[</span><span class="ot">R \sin(\omega t)\right</span><span class="co">]</span> \left<span class="co">[</span><span class="ot">R \omega \cos(\omega t)\right</span><span class="co">]</span></span>
+<span id="cb14-661"><a href="#cb14-661"></a>$$</span>
+<span id="cb14-662"><a href="#cb14-662"></a></span>
+<span id="cb14-663"><a href="#cb14-663"></a>Simplifying:</span>
 <span id="cb14-664"><a href="#cb14-664"></a></span>
-<span id="cb14-665"><a href="#cb14-665"></a><span class="fu">#### Acceleration Vector</span></span>
-<span id="cb14-666"><a href="#cb14-666"></a></span>
-<span id="cb14-667"><a href="#cb14-667"></a>The acceleration is the derivative of the velocity vector with respect to time:</span>
+<span id="cb14-665"><a href="#cb14-665"></a>$$</span>
+<span id="cb14-666"><a href="#cb14-666"></a>\mathbf{r}(t) \cdot \mathbf{v}(t) = -R^2 \omega \cos(\omega t) \sin(\omega t) + R^2 \omega \sin(\omega t) \cos(\omega t) = 0</span>
+<span id="cb14-667"><a href="#cb14-667"></a>$$</span>
 <span id="cb14-668"><a href="#cb14-668"></a></span>
-<span id="cb14-669"><a href="#cb14-669"></a>$$</span>
-<span id="cb14-670"><a href="#cb14-670"></a>\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = -R \omega^2 \cos(\omega t) \hat{i} - R \omega^2 \sin(\omega t) \hat{j} = -R \omega^2 \mathbf{r}(t)</span>
-<span id="cb14-671"><a href="#cb14-671"></a>$$</span>
-<span id="cb14-672"><a href="#cb14-672"></a></span>
-<span id="cb14-673"><a href="#cb14-673"></a>The acceleration vector always points toward the center of the circle (centripetal acceleration), and its magnitude is:</span>
-<span id="cb14-674"><a href="#cb14-674"></a></span>
-<span id="cb14-675"><a href="#cb14-675"></a>$$</span>
-<span id="cb14-676"><a href="#cb14-676"></a>|\mathbf{a}(t)| = R \omega^2 = \frac{v^2}{R}</span>
-<span id="cb14-677"><a href="#cb14-677"></a>$$</span>
-<span id="cb14-678"><a href="#cb14-678"></a></span>
-<span id="cb14-679"><a href="#cb14-679"></a>Last relation is very important because it shows that the acceleration is proportional to the square of the velocity and inversely proportional to the radius of the circle.</span>
-<span id="cb14-680"><a href="#cb14-680"></a>This result will we very useful in the next section when we will discuss the gravity.</span>
+<span id="cb14-669"><a href="#cb14-669"></a>This confirms that $\mathbf{r}(t)$ and $\mathbf{v}(t)$ are perpendicular.</span>
+<span id="cb14-670"><a href="#cb14-670"></a></span>
+<span id="cb14-671"><a href="#cb14-671"></a></span>
+<span id="cb14-672"><a href="#cb14-672"></a><span class="fu">#### Acceleration Vector</span></span>
+<span id="cb14-673"><a href="#cb14-673"></a></span>
+<span id="cb14-674"><a href="#cb14-674"></a>The acceleration is the derivative of the velocity vector with respect to time:</span>
+<span id="cb14-675"><a href="#cb14-675"></a></span>
+<span id="cb14-676"><a href="#cb14-676"></a>$$</span>
+<span id="cb14-677"><a href="#cb14-677"></a>\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = -R \omega^2 \cos(\omega t) \hat{i} - R \omega^2 \sin(\omega t) \hat{j} = -R \omega^2 \mathbf{r}(t)</span>
+<span id="cb14-678"><a href="#cb14-678"></a>$$</span>
+<span id="cb14-679"><a href="#cb14-679"></a></span>
+<span id="cb14-680"><a href="#cb14-680"></a>The acceleration vector always points toward the center of the circle (centripetal acceleration), and its magnitude is:</span>
 <span id="cb14-681"><a href="#cb14-681"></a></span>
-<span id="cb14-682"><a href="#cb14-682"></a></span>
-<span id="cb14-683"><a href="#cb14-683"></a><span class="fu">#### Numerical Example</span></span>
-<span id="cb14-684"><a href="#cb14-684"></a></span>
-<span id="cb14-685"><a href="#cb14-685"></a>We will visualize the position, velocity, and acceleration at two distinct points along the circular path.</span>
-<span id="cb14-686"><a href="#cb14-686"></a></span>
-<span id="cb14-689"><a href="#cb14-689"></a><span class="in">```{python}</span></span>
-<span id="cb14-690"><a href="#cb14-690"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-691"><a href="#cb14-691"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-692"><a href="#cb14-692"></a></span>
-<span id="cb14-693"><a href="#cb14-693"></a><span class="co"># Parameters</span></span>
-<span id="cb14-694"><a href="#cb14-694"></a>R <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Radius of the circle</span></span>
-<span id="cb14-695"><a href="#cb14-695"></a>omega <span class="op">=</span>  np.pi<span class="op">/</span><span class="dv">4</span>  <span class="co"># Angular velocity (rad/s)</span></span>
-<span id="cb14-696"><a href="#cb14-696"></a>T <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Time period (s)</span></span>
-<span id="cb14-697"><a href="#cb14-697"></a>t_points <span class="op">=</span> [<span class="dv">0</span>, T]  <span class="co"># Time points to analyze</span></span>
-<span id="cb14-698"><a href="#cb14-698"></a></span>
-<span id="cb14-699"><a href="#cb14-699"></a><span class="co"># Calculate vectors at specific points</span></span>
-<span id="cb14-700"><a href="#cb14-700"></a>positions <span class="op">=</span> [(R <span class="op">*</span> np.cos(omega <span class="op">*</span> t), R <span class="op">*</span> np.sin(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
-<span id="cb14-701"><a href="#cb14-701"></a>velocities <span class="op">=</span> [(<span class="op">-</span>R <span class="op">*</span> omega <span class="op">*</span> np.sin(omega <span class="op">*</span> t), R <span class="op">*</span> omega <span class="op">*</span> np.cos(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
-<span id="cb14-702"><a href="#cb14-702"></a>accelerations <span class="op">=</span> [(<span class="op">-</span>R <span class="op">*</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.cos(omega <span class="op">*</span> t), <span class="op">-</span>R <span class="op">*</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
-<span id="cb14-703"><a href="#cb14-703"></a></span>
-<span id="cb14-704"><a href="#cb14-704"></a><span class="co"># Plot the circle and vectors</span></span>
-<span id="cb14-705"><a href="#cb14-705"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb14-706"><a href="#cb14-706"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
-<span id="cb14-707"><a href="#cb14-707"></a>x_circle <span class="op">=</span> R <span class="op">*</span> np.cos(theta)</span>
-<span id="cb14-708"><a href="#cb14-708"></a>y_circle <span class="op">=</span> R <span class="op">*</span> np.sin(theta)</span>
-<span id="cb14-709"><a href="#cb14-709"></a>ax.plot(x_circle, y_circle, label<span class="op">=</span><span class="st">&quot;Circular Path&quot;</span>)</span>
+<span id="cb14-682"><a href="#cb14-682"></a>$$</span>
+<span id="cb14-683"><a href="#cb14-683"></a>|\mathbf{a}(t)| = R \omega^2 = \frac{v^2}{R}</span>
+<span id="cb14-684"><a href="#cb14-684"></a>$$</span>
+<span id="cb14-685"><a href="#cb14-685"></a></span>
+<span id="cb14-686"><a href="#cb14-686"></a>Last relation is very important because it shows that the acceleration is proportional to the square of the velocity and inversely proportional to the radius of the circle.</span>
+<span id="cb14-687"><a href="#cb14-687"></a>This result will we very useful in the next section when we will discuss the gravity.</span>
+<span id="cb14-688"><a href="#cb14-688"></a></span>
+<span id="cb14-689"><a href="#cb14-689"></a></span>
+<span id="cb14-690"><a href="#cb14-690"></a><span class="fu">#### Numerical Example</span></span>
+<span id="cb14-691"><a href="#cb14-691"></a></span>
+<span id="cb14-692"><a href="#cb14-692"></a>We will visualize the position, velocity, and acceleration at two distinct points along the circular path.</span>
+<span id="cb14-693"><a href="#cb14-693"></a></span>
+<span id="cb14-696"><a href="#cb14-696"></a><span class="in">```{python}</span></span>
+<span id="cb14-697"><a href="#cb14-697"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-698"><a href="#cb14-698"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-699"><a href="#cb14-699"></a></span>
+<span id="cb14-700"><a href="#cb14-700"></a><span class="co"># Parameters</span></span>
+<span id="cb14-701"><a href="#cb14-701"></a>R <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Radius of the circle</span></span>
+<span id="cb14-702"><a href="#cb14-702"></a>omega <span class="op">=</span>  np.pi<span class="op">/</span><span class="dv">4</span>  <span class="co"># Angular velocity (rad/s)</span></span>
+<span id="cb14-703"><a href="#cb14-703"></a>T <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Time period (s)</span></span>
+<span id="cb14-704"><a href="#cb14-704"></a>t_points <span class="op">=</span> [<span class="dv">0</span>, T]  <span class="co"># Time points to analyze</span></span>
+<span id="cb14-705"><a href="#cb14-705"></a></span>
+<span id="cb14-706"><a href="#cb14-706"></a><span class="co"># Calculate vectors at specific points</span></span>
+<span id="cb14-707"><a href="#cb14-707"></a>positions <span class="op">=</span> [(R <span class="op">*</span> np.cos(omega <span class="op">*</span> t), R <span class="op">*</span> np.sin(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
+<span id="cb14-708"><a href="#cb14-708"></a>velocities <span class="op">=</span> [(<span class="op">-</span>R <span class="op">*</span> omega <span class="op">*</span> np.sin(omega <span class="op">*</span> t), R <span class="op">*</span> omega <span class="op">*</span> np.cos(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
+<span id="cb14-709"><a href="#cb14-709"></a>accelerations <span class="op">=</span> [(<span class="op">-</span>R <span class="op">*</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.cos(omega <span class="op">*</span> t), <span class="op">-</span>R <span class="op">*</span> omega<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(omega <span class="op">*</span> t)) <span class="cf">for</span> t <span class="kw">in</span> t_points]</span>
 <span id="cb14-710"><a href="#cb14-710"></a></span>
-<span id="cb14-711"><a href="#cb14-711"></a><span class="cf">for</span> i, t <span class="kw">in</span> <span class="bu">enumerate</span>(t_points):</span>
-<span id="cb14-712"><a href="#cb14-712"></a>    x, y <span class="op">=</span> positions[i]</span>
-<span id="cb14-713"><a href="#cb14-713"></a>    vx, vy <span class="op">=</span> velocities[i]</span>
-<span id="cb14-714"><a href="#cb14-714"></a>    axx, axy <span class="op">=</span> accelerations[i]</span>
-<span id="cb14-715"><a href="#cb14-715"></a></span>
-<span id="cb14-716"><a href="#cb14-716"></a>    ax.quiver(x, y, vx, vy, color<span class="op">=</span><span class="st">&quot;red&quot;</span>, angles<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale_units<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="ss">f&quot;Velocity at t=</span><span class="sc">{</span>t<span class="sc">:.2f}</span><span class="ss">s&quot;</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb14-717"><a href="#cb14-717"></a>    ax.quiver(x, y, axx, axy, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>, angles<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale_units<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="ss">f&quot;Acceleration at t=</span><span class="sc">{</span>t<span class="sc">:.2f}</span><span class="ss">s&quot;</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
-<span id="cb14-718"><a href="#cb14-718"></a></span>
-<span id="cb14-719"><a href="#cb14-719"></a>ax.set_aspect(<span class="st">&#39;equal&#39;</span>, adjustable<span class="op">=</span><span class="st">&#39;box&#39;</span>)</span>
-<span id="cb14-720"><a href="#cb14-720"></a>ax.set_title(<span class="st">&quot;Circular Motion: Velocity and Acceleration&quot;</span>)</span>
-<span id="cb14-721"><a href="#cb14-721"></a>ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
-<span id="cb14-722"><a href="#cb14-722"></a>ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
-<span id="cb14-723"><a href="#cb14-723"></a>ax.set_xlim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb14-724"><a href="#cb14-724"></a>ax.set_ylim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb14-725"><a href="#cb14-725"></a>ax.legend()</span>
-<span id="cb14-726"><a href="#cb14-726"></a>ax.grid()</span>
-<span id="cb14-727"><a href="#cb14-727"></a>plt.show()</span>
-<span id="cb14-728"><a href="#cb14-728"></a><span class="in">```</span></span>
-<span id="cb14-729"><a href="#cb14-729"></a></span>
-<span id="cb14-730"><a href="#cb14-730"></a></span>
-<span id="cb14-731"><a href="#cb14-731"></a><span class="fu">## Gravity</span></span>
-<span id="cb14-732"><a href="#cb14-732"></a></span>
-<span id="cb14-733"><a href="#cb14-733"></a><span class="fu">### Introduction</span></span>
-<span id="cb14-734"><a href="#cb14-734"></a></span>
-<span id="cb14-735"><a href="#cb14-735"></a>The Universal Law of Gravitation, formulated by Sir Isaac Newton, describes the gravitational force between two masses. It states that every particle of matter in the universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.</span>
+<span id="cb14-711"><a href="#cb14-711"></a><span class="co"># Plot the circle and vectors</span></span>
+<span id="cb14-712"><a href="#cb14-712"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb14-713"><a href="#cb14-713"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
+<span id="cb14-714"><a href="#cb14-714"></a>x_circle <span class="op">=</span> R <span class="op">*</span> np.cos(theta)</span>
+<span id="cb14-715"><a href="#cb14-715"></a>y_circle <span class="op">=</span> R <span class="op">*</span> np.sin(theta)</span>
+<span id="cb14-716"><a href="#cb14-716"></a>ax.plot(x_circle, y_circle, label<span class="op">=</span><span class="st">&quot;Circular Path&quot;</span>)</span>
+<span id="cb14-717"><a href="#cb14-717"></a></span>
+<span id="cb14-718"><a href="#cb14-718"></a><span class="cf">for</span> i, t <span class="kw">in</span> <span class="bu">enumerate</span>(t_points):</span>
+<span id="cb14-719"><a href="#cb14-719"></a>    x, y <span class="op">=</span> positions[i]</span>
+<span id="cb14-720"><a href="#cb14-720"></a>    vx, vy <span class="op">=</span> velocities[i]</span>
+<span id="cb14-721"><a href="#cb14-721"></a>    axx, axy <span class="op">=</span> accelerations[i]</span>
+<span id="cb14-722"><a href="#cb14-722"></a></span>
+<span id="cb14-723"><a href="#cb14-723"></a>    ax.quiver(x, y, vx, vy, color<span class="op">=</span><span class="st">&quot;red&quot;</span>, angles<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale_units<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="ss">f&quot;Velocity at t=</span><span class="sc">{</span>t<span class="sc">:.2f}</span><span class="ss">s&quot;</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
+<span id="cb14-724"><a href="#cb14-724"></a>    ax.quiver(x, y, axx, axy, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>, angles<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale_units<span class="op">=</span><span class="st">&quot;xy&quot;</span>, scale<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="ss">f&quot;Acceleration at t=</span><span class="sc">{</span>t<span class="sc">:.2f}</span><span class="ss">s&quot;</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
+<span id="cb14-725"><a href="#cb14-725"></a></span>
+<span id="cb14-726"><a href="#cb14-726"></a>ax.set_aspect(<span class="st">&#39;equal&#39;</span>, adjustable<span class="op">=</span><span class="st">&#39;box&#39;</span>)</span>
+<span id="cb14-727"><a href="#cb14-727"></a>ax.set_title(<span class="st">&quot;Circular Motion: Velocity and Acceleration&quot;</span>)</span>
+<span id="cb14-728"><a href="#cb14-728"></a>ax.set_xlabel(<span class="st">&quot;x&quot;</span>)</span>
+<span id="cb14-729"><a href="#cb14-729"></a>ax.set_ylabel(<span class="st">&quot;y&quot;</span>)</span>
+<span id="cb14-730"><a href="#cb14-730"></a>ax.set_xlim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb14-731"><a href="#cb14-731"></a>ax.set_ylim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb14-732"><a href="#cb14-732"></a>ax.legend()</span>
+<span id="cb14-733"><a href="#cb14-733"></a>ax.grid()</span>
+<span id="cb14-734"><a href="#cb14-734"></a>plt.show()</span>
+<span id="cb14-735"><a href="#cb14-735"></a><span class="in">```</span></span>
 <span id="cb14-736"><a href="#cb14-736"></a></span>
-<span id="cb14-737"><a href="#cb14-737"></a><span class="fu">### Mathematical Formulation</span></span>
-<span id="cb14-738"><a href="#cb14-738"></a></span>
-<span id="cb14-739"><a href="#cb14-739"></a>The gravitational force $\mathbf{F}$ between two masses $m_1$ and $m_2$ separated by a distance $r$ is given by:</span>
-<span id="cb14-740"><a href="#cb14-740"></a></span>
-<span id="cb14-741"><a href="#cb14-741"></a>$$</span>
-<span id="cb14-742"><a href="#cb14-742"></a>\mathbf{F} = -G \frac{m_1 m_2}{r^2} \hat{r}</span>
-<span id="cb14-743"><a href="#cb14-743"></a>$$</span>
-<span id="cb14-744"><a href="#cb14-744"></a></span>
-<span id="cb14-745"><a href="#cb14-745"></a>Where:</span>
-<span id="cb14-746"><a href="#cb14-746"></a></span>
-<span id="cb14-747"><a href="#cb14-747"></a><span class="ss">- </span>$G$ is the gravitational constant ($6.674 \times 10^{-11} \ \mathrm{Nm^2/kg^2}$),</span>
-<span id="cb14-748"><a href="#cb14-748"></a><span class="ss">- </span>$\hat{r}$ is the unit vector pointing from one mass to the other,</span>
-<span id="cb14-749"><a href="#cb14-749"></a><span class="ss">- </span>$m_1$ and $m_2$ are the masses of the two bodies,</span>
-<span id="cb14-750"><a href="#cb14-750"></a><span class="ss">- </span>$r$ is the distance between the centers of the masses.</span>
+<span id="cb14-737"><a href="#cb14-737"></a></span>
+<span id="cb14-738"><a href="#cb14-738"></a><span class="fu">## Gravity</span></span>
+<span id="cb14-739"><a href="#cb14-739"></a></span>
+<span id="cb14-740"><a href="#cb14-740"></a><span class="fu">### Introduction</span></span>
+<span id="cb14-741"><a href="#cb14-741"></a></span>
+<span id="cb14-742"><a href="#cb14-742"></a>The Universal Law of Gravitation, formulated by Sir Isaac Newton, describes the gravitational force between two masses. It states that every particle of matter in the universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.</span>
+<span id="cb14-743"><a href="#cb14-743"></a></span>
+<span id="cb14-744"><a href="#cb14-744"></a><span class="fu">### Mathematical Formulation</span></span>
+<span id="cb14-745"><a href="#cb14-745"></a></span>
+<span id="cb14-746"><a href="#cb14-746"></a>The gravitational force $\mathbf{F}$ between two masses $m_1$ and $m_2$ separated by a distance $r$ is given by:</span>
+<span id="cb14-747"><a href="#cb14-747"></a></span>
+<span id="cb14-748"><a href="#cb14-748"></a>$$</span>
+<span id="cb14-749"><a href="#cb14-749"></a>\mathbf{F} = -G \frac{m_1 m_2}{r^2} \hat{r}</span>
+<span id="cb14-750"><a href="#cb14-750"></a>$$</span>
 <span id="cb14-751"><a href="#cb14-751"></a></span>
-<span id="cb14-752"><a href="#cb14-752"></a><span class="fu">### Gravitational Field</span></span>
+<span id="cb14-752"><a href="#cb14-752"></a>Where:</span>
 <span id="cb14-753"><a href="#cb14-753"></a></span>
-<span id="cb14-754"><a href="#cb14-754"></a>The gravitational field $\mathbf{g}$ at a distance $r$ from a mass $M$ is defined as the force per unit mass exerted by $M$:</span>
-<span id="cb14-755"><a href="#cb14-755"></a></span>
-<span id="cb14-756"><a href="#cb14-756"></a>$$</span>
-<span id="cb14-757"><a href="#cb14-757"></a>\mathbf{g} = -G \frac{M}{r^2} \hat{r}</span>
-<span id="cb14-758"><a href="#cb14-758"></a>$$</span>
-<span id="cb14-759"><a href="#cb14-759"></a></span>
-<span id="cb14-760"><a href="#cb14-760"></a>This field points toward the mass $M$ and has a magnitude:</span>
-<span id="cb14-761"><a href="#cb14-761"></a></span>
-<span id="cb14-762"><a href="#cb14-762"></a>$$</span>
-<span id="cb14-763"><a href="#cb14-763"></a>|\mathbf{g}| = G \frac{M}{r^2}</span>
-<span id="cb14-764"><a href="#cb14-764"></a>$$</span>
-<span id="cb14-765"><a href="#cb14-765"></a></span>
-<span id="cb14-766"><a href="#cb14-766"></a><span class="fu">#### Visualization: Gravitational Field</span></span>
-<span id="cb14-767"><a href="#cb14-767"></a></span>
-<span id="cb14-768"><a href="#cb14-768"></a>We visualize the gravitational field of a central mass $M$ in 2D slice.</span>
-<span id="cb14-769"><a href="#cb14-769"></a></span>
-<span id="cb14-772"><a href="#cb14-772"></a><span class="in">```{python}</span></span>
-<span id="cb14-773"><a href="#cb14-773"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-774"><a href="#cb14-774"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-775"><a href="#cb14-775"></a></span>
-<span id="cb14-776"><a href="#cb14-776"></a><span class="co"># Parameters</span></span>
-<span id="cb14-777"><a href="#cb14-777"></a>M <span class="op">=</span> <span class="fl">2e22</span>  <span class="co"># Mass of central body (kg)</span></span>
-<span id="cb14-778"><a href="#cb14-778"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant</span></span>
-<span id="cb14-779"><a href="#cb14-779"></a></span>
-<span id="cb14-780"><a href="#cb14-780"></a><span class="co"># Grid for visualization</span></span>
-<span id="cb14-781"><a href="#cb14-781"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">25</span>)</span>
-<span id="cb14-782"><a href="#cb14-782"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">25</span>)</span>
-<span id="cb14-783"><a href="#cb14-783"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb14-784"><a href="#cb14-784"></a>R <span class="op">=</span> np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb14-785"><a href="#cb14-785"></a></span>
-<span id="cb14-786"><a href="#cb14-786"></a><span class="co"># Avoid division by zero</span></span>
-<span id="cb14-787"><a href="#cb14-787"></a>R[R <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> np.nan</span>
-<span id="cb14-788"><a href="#cb14-788"></a>R[R <span class="op">&lt;</span><span class="dv">35</span>] <span class="op">=</span> np.nan</span>
-<span id="cb14-789"><a href="#cb14-789"></a></span>
-<span id="cb14-790"><a href="#cb14-790"></a><span class="co"># Gravitational field</span></span>
-<span id="cb14-791"><a href="#cb14-791"></a>Fx <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> X <span class="op">/</span> R<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb14-792"><a href="#cb14-792"></a>Fy <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> Y <span class="op">/</span> R<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb14-793"><a href="#cb14-793"></a></span>
-<span id="cb14-794"><a href="#cb14-794"></a><span class="co"># Plot field</span></span>
-<span id="cb14-795"><a href="#cb14-795"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb14-796"><a href="#cb14-796"></a>plt.quiver(X, Y, Fx, Fy, scale<span class="op">=</span><span class="fl">1e10</span>, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>)</span>
-<span id="cb14-797"><a href="#cb14-797"></a>plt.xlabel(<span class="st">&#39;x (m)&#39;</span>)</span>
-<span id="cb14-798"><a href="#cb14-798"></a>plt.ylabel(<span class="st">&#39;y (m)&#39;</span>)</span>
-<span id="cb14-799"><a href="#cb14-799"></a>plt.title(<span class="st">&#39;Gravitational Field&#39;</span>)</span>
-<span id="cb14-800"><a href="#cb14-800"></a>plt.grid()</span>
-<span id="cb14-801"><a href="#cb14-801"></a>plt.gca().set_aspect(<span class="st">&#39;equal&#39;</span>, adjustable<span class="op">=</span><span class="st">&#39;box&#39;</span>)</span>
-<span id="cb14-802"><a href="#cb14-802"></a>plt.show()</span>
-<span id="cb14-803"><a href="#cb14-803"></a><span class="in">```</span></span>
-<span id="cb14-804"><a href="#cb14-804"></a></span>
-<span id="cb14-805"><a href="#cb14-805"></a><span class="fu">### Orbital Motion</span></span>
-<span id="cb14-806"><a href="#cb14-806"></a></span>
-<span id="cb14-807"><a href="#cb14-807"></a>Gravitational force is responsible for the orbital motion of planets, moons, and satellites. The centripetal force required for circular motion is provided by gravity:</span>
-<span id="cb14-808"><a href="#cb14-808"></a></span>
-<span id="cb14-809"><a href="#cb14-809"></a>$$</span>
-<span id="cb14-810"><a href="#cb14-810"></a>F = \frac{mv^2}{r} = G \frac{mM}{r^2}</span>
-<span id="cb14-811"><a href="#cb14-811"></a>$$</span>
-<span id="cb14-812"><a href="#cb14-812"></a></span>
-<span id="cb14-813"><a href="#cb14-813"></a>From this, the orbital velocity $v$ of a body of mass $m$ around a central mass $M$ is:</span>
-<span id="cb14-814"><a href="#cb14-814"></a></span>
-<span id="cb14-815"><a href="#cb14-815"></a>$$</span>
-<span id="cb14-816"><a href="#cb14-816"></a>v = \sqrt{G \frac{M}{r}}</span>
-<span id="cb14-817"><a href="#cb14-817"></a>$$</span>
-<span id="cb14-818"><a href="#cb14-818"></a></span>
-<span id="cb14-819"><a href="#cb14-819"></a>The orbital period $T$ of the body can also be derived:</span>
-<span id="cb14-820"><a href="#cb14-820"></a></span>
-<span id="cb14-821"><a href="#cb14-821"></a>$$</span>
-<span id="cb14-822"><a href="#cb14-822"></a>T = 2\pi \sqrt{\frac{r^3}{GM}}</span>
-<span id="cb14-823"><a href="#cb14-823"></a>$$</span>
-<span id="cb14-824"><a href="#cb14-824"></a></span>
-<span id="cb14-825"><a href="#cb14-825"></a><span class="fu">### Escape Velocity</span></span>
-<span id="cb14-826"><a href="#cb14-826"></a></span>
-<span id="cb14-827"><a href="#cb14-827"></a>Escape velocity is the minimum velocity required for an object to escape the gravitational pull of a planet or celestial body without further propulsion. It is given by:</span>
-<span id="cb14-828"><a href="#cb14-828"></a></span>
-<span id="cb14-829"><a href="#cb14-829"></a>$$</span>
-<span id="cb14-830"><a href="#cb14-830"></a>v_\text{escape} = \sqrt{2G \frac{M}{R}}</span>
-<span id="cb14-831"><a href="#cb14-831"></a>$$</span>
-<span id="cb14-832"><a href="#cb14-832"></a></span>
-<span id="cb14-833"><a href="#cb14-833"></a>where $M$ is the mass of the celestial body and $R$ is its radius.</span>
-<span id="cb14-834"><a href="#cb14-834"></a></span>
-<span id="cb14-835"><a href="#cb14-835"></a><span class="fu">### Numerical Example: Escape Velocity for Earth</span></span>
-<span id="cb14-836"><a href="#cb14-836"></a></span>
-<span id="cb14-837"><a href="#cb14-837"></a><span class="ss">- </span>Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$</span>
-<span id="cb14-838"><a href="#cb14-838"></a><span class="ss">- </span>Radius of Earth ($R_\text{Earth}$): $6.371 \times 10^6 \ \mathrm{m}$</span>
-<span id="cb14-841"><a href="#cb14-841"></a><span class="in">```{python}</span></span>
-<span id="cb14-842"><a href="#cb14-842"></a><span class="co"># Constants</span></span>
-<span id="cb14-843"><a href="#cb14-843"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant (N m^2/kg^2)</span></span>
-<span id="cb14-844"><a href="#cb14-844"></a>M_earth <span class="op">=</span> <span class="fl">5.972e24</span>  <span class="co"># Mass of Earth (kg)</span></span>
-<span id="cb14-845"><a href="#cb14-845"></a>R_earth <span class="op">=</span> <span class="fl">6.371e6</span>  <span class="co"># Radius of Earth (m)</span></span>
-<span id="cb14-846"><a href="#cb14-846"></a></span>
-<span id="cb14-847"><a href="#cb14-847"></a><span class="co"># Escape velocity calculation</span></span>
-<span id="cb14-848"><a href="#cb14-848"></a>v_escape <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> G <span class="op">*</span> M_earth <span class="op">/</span> R_earth)</span>
-<span id="cb14-849"><a href="#cb14-849"></a><span class="bu">print</span>(<span class="ss">f&quot;Escape velocity for Earth: </span><span class="sc">{</span>v_escape<span class="op">/</span><span class="dv">1000</span><span class="sc">:.1f}</span><span class="ss"> km/s&quot;</span>)</span>
-<span id="cb14-850"><a href="#cb14-850"></a><span class="in">```</span></span>
-<span id="cb14-851"><a href="#cb14-851"></a></span>
-<span id="cb14-852"><a href="#cb14-852"></a></span>
-<span id="cb14-853"><a href="#cb14-853"></a><span class="fu">### Gravitational Potential Energy</span></span>
-<span id="cb14-854"><a href="#cb14-854"></a></span>
-<span id="cb14-855"><a href="#cb14-855"></a>The gravitational potential energy $U$ of a two-body system is given by:</span>
-<span id="cb14-856"><a href="#cb14-856"></a></span>
-<span id="cb14-857"><a href="#cb14-857"></a>$$</span>
-<span id="cb14-858"><a href="#cb14-858"></a>U = -G \frac{m_1 m_2}{r}</span>
-<span id="cb14-859"><a href="#cb14-859"></a>$$</span>
-<span id="cb14-860"><a href="#cb14-860"></a></span>
-<span id="cb14-861"><a href="#cb14-861"></a>This energy is negative because the gravitational force is attractive, and the potential energy is zero at infinite separation.</span>
-<span id="cb14-862"><a href="#cb14-862"></a></span>
-<span id="cb14-863"><a href="#cb14-863"></a><span class="fu">### Applications of Universal Gravitation</span></span>
-<span id="cb14-864"><a href="#cb14-864"></a></span>
-<span id="cb14-865"><a href="#cb14-865"></a><span class="ss">1. </span>**Planetary Orbits:** Predicting the motion of planets and moons in their orbits.</span>
-<span id="cb14-866"><a href="#cb14-866"></a><span class="ss">2. </span>**Space Travel:** Calculating escape velocities and transfer orbits for spacecraft.</span>
-<span id="cb14-867"><a href="#cb14-867"></a><span class="ss">3. </span>**Tidal Effects:** Understanding the gravitational interaction between Earth and Moon causing ocean tides.</span>
-<span id="cb14-868"><a href="#cb14-868"></a><span class="ss">4. </span>**Astrophysics:** Studying gravitational interactions in galaxies and black holes.</span>
+<span id="cb14-754"><a href="#cb14-754"></a><span class="ss">- </span>$G$ is the gravitational constant ($6.674 \times 10^{-11} \ \mathrm{Nm^2/kg^2}$),</span>
+<span id="cb14-755"><a href="#cb14-755"></a><span class="ss">- </span>$\hat{r}$ is the unit vector pointing from one mass to the other,</span>
+<span id="cb14-756"><a href="#cb14-756"></a><span class="ss">- </span>$m_1$ and $m_2$ are the masses of the two bodies,</span>
+<span id="cb14-757"><a href="#cb14-757"></a><span class="ss">- </span>$r$ is the distance between the centers of the masses.</span>
+<span id="cb14-758"><a href="#cb14-758"></a></span>
+<span id="cb14-759"><a href="#cb14-759"></a><span class="fu">### Gravitational Field</span></span>
+<span id="cb14-760"><a href="#cb14-760"></a></span>
+<span id="cb14-761"><a href="#cb14-761"></a>The gravitational field $\mathbf{g}$ at a distance $r$ from a mass $M$ is defined as the force per unit mass exerted by $M$:</span>
+<span id="cb14-762"><a href="#cb14-762"></a></span>
+<span id="cb14-763"><a href="#cb14-763"></a>$$</span>
+<span id="cb14-764"><a href="#cb14-764"></a>\mathbf{g} = -G \frac{M}{r^2} \hat{r}</span>
+<span id="cb14-765"><a href="#cb14-765"></a>$$</span>
+<span id="cb14-766"><a href="#cb14-766"></a></span>
+<span id="cb14-767"><a href="#cb14-767"></a>This field points toward the mass $M$ and has a magnitude:</span>
+<span id="cb14-768"><a href="#cb14-768"></a></span>
+<span id="cb14-769"><a href="#cb14-769"></a>$$</span>
+<span id="cb14-770"><a href="#cb14-770"></a>|\mathbf{g}| = G \frac{M}{r^2}</span>
+<span id="cb14-771"><a href="#cb14-771"></a>$$</span>
+<span id="cb14-772"><a href="#cb14-772"></a></span>
+<span id="cb14-773"><a href="#cb14-773"></a><span class="fu">#### Visualization: Gravitational Field</span></span>
+<span id="cb14-774"><a href="#cb14-774"></a></span>
+<span id="cb14-775"><a href="#cb14-775"></a>We visualize the gravitational field of a central mass $M$ in 2D slice.</span>
+<span id="cb14-776"><a href="#cb14-776"></a></span>
+<span id="cb14-779"><a href="#cb14-779"></a><span class="in">```{python}</span></span>
+<span id="cb14-780"><a href="#cb14-780"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-781"><a href="#cb14-781"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-782"><a href="#cb14-782"></a></span>
+<span id="cb14-783"><a href="#cb14-783"></a><span class="co"># Parameters</span></span>
+<span id="cb14-784"><a href="#cb14-784"></a>M <span class="op">=</span> <span class="fl">2e22</span>  <span class="co"># Mass of central body (kg)</span></span>
+<span id="cb14-785"><a href="#cb14-785"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant</span></span>
+<span id="cb14-786"><a href="#cb14-786"></a></span>
+<span id="cb14-787"><a href="#cb14-787"></a><span class="co"># Grid for visualization</span></span>
+<span id="cb14-788"><a href="#cb14-788"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">25</span>)</span>
+<span id="cb14-789"><a href="#cb14-789"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">25</span>)</span>
+<span id="cb14-790"><a href="#cb14-790"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb14-791"><a href="#cb14-791"></a>R <span class="op">=</span> np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb14-792"><a href="#cb14-792"></a></span>
+<span id="cb14-793"><a href="#cb14-793"></a><span class="co"># Avoid division by zero</span></span>
+<span id="cb14-794"><a href="#cb14-794"></a>R[R <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> np.nan</span>
+<span id="cb14-795"><a href="#cb14-795"></a>R[R <span class="op">&lt;</span><span class="dv">35</span>] <span class="op">=</span> np.nan</span>
+<span id="cb14-796"><a href="#cb14-796"></a></span>
+<span id="cb14-797"><a href="#cb14-797"></a><span class="co"># Gravitational field</span></span>
+<span id="cb14-798"><a href="#cb14-798"></a>Fx <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> X <span class="op">/</span> R<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-799"><a href="#cb14-799"></a>Fy <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> Y <span class="op">/</span> R<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-800"><a href="#cb14-800"></a></span>
+<span id="cb14-801"><a href="#cb14-801"></a><span class="co"># Plot field</span></span>
+<span id="cb14-802"><a href="#cb14-802"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb14-803"><a href="#cb14-803"></a>plt.quiver(X, Y, Fx, Fy, scale<span class="op">=</span><span class="fl">1e10</span>, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>)</span>
+<span id="cb14-804"><a href="#cb14-804"></a>plt.xlabel(<span class="st">&#39;x (m)&#39;</span>)</span>
+<span id="cb14-805"><a href="#cb14-805"></a>plt.ylabel(<span class="st">&#39;y (m)&#39;</span>)</span>
+<span id="cb14-806"><a href="#cb14-806"></a>plt.title(<span class="st">&#39;Gravitational Field&#39;</span>)</span>
+<span id="cb14-807"><a href="#cb14-807"></a>plt.grid()</span>
+<span id="cb14-808"><a href="#cb14-808"></a>plt.gca().set_aspect(<span class="st">&#39;equal&#39;</span>, adjustable<span class="op">=</span><span class="st">&#39;box&#39;</span>)</span>
+<span id="cb14-809"><a href="#cb14-809"></a>plt.show()</span>
+<span id="cb14-810"><a href="#cb14-810"></a><span class="in">```</span></span>
+<span id="cb14-811"><a href="#cb14-811"></a></span>
+<span id="cb14-812"><a href="#cb14-812"></a><span class="fu">### Orbital Motion</span></span>
+<span id="cb14-813"><a href="#cb14-813"></a></span>
+<span id="cb14-814"><a href="#cb14-814"></a>Gravitational force is responsible for the orbital motion of planets, moons, and satellites. The centripetal force required for circular motion is provided by gravity:</span>
+<span id="cb14-815"><a href="#cb14-815"></a></span>
+<span id="cb14-816"><a href="#cb14-816"></a>$$</span>
+<span id="cb14-817"><a href="#cb14-817"></a>F = \frac{mv^2}{r} = G \frac{mM}{r^2}</span>
+<span id="cb14-818"><a href="#cb14-818"></a>$$</span>
+<span id="cb14-819"><a href="#cb14-819"></a></span>
+<span id="cb14-820"><a href="#cb14-820"></a>From this, the orbital velocity $v$ of a body of mass $m$ around a central mass $M$ is:</span>
+<span id="cb14-821"><a href="#cb14-821"></a></span>
+<span id="cb14-822"><a href="#cb14-822"></a>$$</span>
+<span id="cb14-823"><a href="#cb14-823"></a>v = \sqrt{G \frac{M}{r}}</span>
+<span id="cb14-824"><a href="#cb14-824"></a>$$</span>
+<span id="cb14-825"><a href="#cb14-825"></a></span>
+<span id="cb14-826"><a href="#cb14-826"></a>The orbital period $T$ of the body can also be derived:</span>
+<span id="cb14-827"><a href="#cb14-827"></a></span>
+<span id="cb14-828"><a href="#cb14-828"></a>$$</span>
+<span id="cb14-829"><a href="#cb14-829"></a>T = 2\pi \sqrt{\frac{r^3}{GM}}</span>
+<span id="cb14-830"><a href="#cb14-830"></a>$$</span>
+<span id="cb14-831"><a href="#cb14-831"></a></span>
+<span id="cb14-832"><a href="#cb14-832"></a><span class="fu">### Escape Velocity</span></span>
+<span id="cb14-833"><a href="#cb14-833"></a></span>
+<span id="cb14-834"><a href="#cb14-834"></a>Escape velocity is the minimum velocity required for an object to escape the gravitational pull of a planet or celestial body without further propulsion. It is given by:</span>
+<span id="cb14-835"><a href="#cb14-835"></a></span>
+<span id="cb14-836"><a href="#cb14-836"></a>$$</span>
+<span id="cb14-837"><a href="#cb14-837"></a>v_\text{escape} = \sqrt{2G \frac{M}{R}}</span>
+<span id="cb14-838"><a href="#cb14-838"></a>$$</span>
+<span id="cb14-839"><a href="#cb14-839"></a></span>
+<span id="cb14-840"><a href="#cb14-840"></a>where $M$ is the mass of the celestial body and $R$ is its radius.</span>
+<span id="cb14-841"><a href="#cb14-841"></a></span>
+<span id="cb14-842"><a href="#cb14-842"></a><span class="fu">### Numerical Example: Escape Velocity for Earth</span></span>
+<span id="cb14-843"><a href="#cb14-843"></a></span>
+<span id="cb14-844"><a href="#cb14-844"></a><span class="ss">- </span>Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$</span>
+<span id="cb14-845"><a href="#cb14-845"></a><span class="ss">- </span>Radius of Earth ($R_\text{Earth}$): $6.371 \times 10^6 \ \mathrm{m}$</span>
+<span id="cb14-848"><a href="#cb14-848"></a><span class="in">```{python}</span></span>
+<span id="cb14-849"><a href="#cb14-849"></a><span class="co"># Constants</span></span>
+<span id="cb14-850"><a href="#cb14-850"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant (N m^2/kg^2)</span></span>
+<span id="cb14-851"><a href="#cb14-851"></a>M_earth <span class="op">=</span> <span class="fl">5.972e24</span>  <span class="co"># Mass of Earth (kg)</span></span>
+<span id="cb14-852"><a href="#cb14-852"></a>R_earth <span class="op">=</span> <span class="fl">6.371e6</span>  <span class="co"># Radius of Earth (m)</span></span>
+<span id="cb14-853"><a href="#cb14-853"></a></span>
+<span id="cb14-854"><a href="#cb14-854"></a><span class="co"># Escape velocity calculation</span></span>
+<span id="cb14-855"><a href="#cb14-855"></a>v_escape <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> G <span class="op">*</span> M_earth <span class="op">/</span> R_earth)</span>
+<span id="cb14-856"><a href="#cb14-856"></a><span class="bu">print</span>(<span class="ss">f&quot;Escape velocity for Earth: </span><span class="sc">{</span>v_escape<span class="op">/</span><span class="dv">1000</span><span class="sc">:.1f}</span><span class="ss"> km/s&quot;</span>)</span>
+<span id="cb14-857"><a href="#cb14-857"></a><span class="in">```</span></span>
+<span id="cb14-858"><a href="#cb14-858"></a></span>
+<span id="cb14-859"><a href="#cb14-859"></a></span>
+<span id="cb14-860"><a href="#cb14-860"></a><span class="fu">### Gravitational Potential Energy</span></span>
+<span id="cb14-861"><a href="#cb14-861"></a></span>
+<span id="cb14-862"><a href="#cb14-862"></a>The gravitational potential energy $U$ of a two-body system is given by:</span>
+<span id="cb14-863"><a href="#cb14-863"></a></span>
+<span id="cb14-864"><a href="#cb14-864"></a>$$</span>
+<span id="cb14-865"><a href="#cb14-865"></a>U = -G \frac{m_1 m_2}{r}</span>
+<span id="cb14-866"><a href="#cb14-866"></a>$$</span>
+<span id="cb14-867"><a href="#cb14-867"></a></span>
+<span id="cb14-868"><a href="#cb14-868"></a>This energy is negative because the gravitational force is attractive, and the potential energy is zero at infinite separation.</span>
 <span id="cb14-869"><a href="#cb14-869"></a></span>
-<span id="cb14-870"><a href="#cb14-870"></a><span class="fu">### Small body around the Earth</span></span>
+<span id="cb14-870"><a href="#cb14-870"></a><span class="fu">### Applications of Universal Gravitation</span></span>
 <span id="cb14-871"><a href="#cb14-871"></a></span>
-<span id="cb14-874"><a href="#cb14-874"></a><span class="in">```{python}</span></span>
-<span id="cb14-875"><a href="#cb14-875"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-876"><a href="#cb14-876"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-877"><a href="#cb14-877"></a></span>
-<span id="cb14-878"><a href="#cb14-878"></a><span class="co"># Parametry</span></span>
-<span id="cb14-879"><a href="#cb14-879"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Stała grawitacyjna (m^3/kg/s^2)</span></span>
-<span id="cb14-880"><a href="#cb14-880"></a>M <span class="op">=</span> <span class="fl">5.972e24</span>   <span class="co"># Masa większego ciała, np. Ziemi (kg)</span></span>
-<span id="cb14-881"><a href="#cb14-881"></a>m <span class="op">=</span> <span class="dv">1000</span>       <span class="co"># Masa mniejszego ciała, np. satelity (kg)</span></span>
-<span id="cb14-882"><a href="#cb14-882"></a></span>
-<span id="cb14-883"><a href="#cb14-883"></a><span class="co"># Warunki początkowe</span></span>
-<span id="cb14-884"><a href="#cb14-884"></a>r0 <span class="op">=</span> <span class="fl">7e6</span>  <span class="co"># Początkowa odległość od środka masy większego ciała (m)</span></span>
-<span id="cb14-885"><a href="#cb14-885"></a>v0 <span class="op">=</span> <span class="dv">5200</span>  <span class="co"># Początkowa prędkość orbitalna (m/s)</span></span>
-<span id="cb14-886"><a href="#cb14-886"></a>theta0 <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Początkowy kąt w radianach</span></span>
-<span id="cb14-887"><a href="#cb14-887"></a></span>
-<span id="cb14-888"><a href="#cb14-888"></a><span class="co"># Czas</span></span>
-<span id="cb14-889"><a href="#cb14-889"></a>T <span class="op">=</span> <span class="dv">6000</span>  <span class="co"># Czas symulacji (s)</span></span>
-<span id="cb14-890"><a href="#cb14-890"></a>N <span class="op">=</span> <span class="dv">100_000</span>  <span class="co"># Liczba kroków czasowych</span></span>
-<span id="cb14-891"><a href="#cb14-891"></a>dt <span class="op">=</span> T <span class="op">/</span> N</span>
-<span id="cb14-892"><a href="#cb14-892"></a></span>
-<span id="cb14-893"><a href="#cb14-893"></a><span class="co"># Tablice dla pozycji i prędkości</span></span>
-<span id="cb14-894"><a href="#cb14-894"></a>x <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-895"><a href="#cb14-895"></a>y <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-896"><a href="#cb14-896"></a>vx <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-897"><a href="#cb14-897"></a>vy <span class="op">=</span> np.zeros(N)</span>
-<span id="cb14-898"><a href="#cb14-898"></a></span>
-<span id="cb14-899"><a href="#cb14-899"></a><span class="co"># Warunki początkowe</span></span>
-<span id="cb14-900"><a href="#cb14-900"></a>x[<span class="dv">0</span>] <span class="op">=</span> r0 <span class="op">*</span> np.cos(theta0)</span>
-<span id="cb14-901"><a href="#cb14-901"></a>y[<span class="dv">0</span>] <span class="op">=</span> r0 <span class="op">*</span> np.sin(theta0)</span>
-<span id="cb14-902"><a href="#cb14-902"></a>vx[<span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span>v0 <span class="op">*</span> np.sin(theta0)</span>
-<span id="cb14-903"><a href="#cb14-903"></a>vy[<span class="dv">0</span>] <span class="op">=</span> v0 <span class="op">*</span> np.cos(theta0)</span>
-<span id="cb14-904"><a href="#cb14-904"></a></span>
-<span id="cb14-905"><a href="#cb14-905"></a><span class="co"># Numeryczna integracja (metoda Eulera)</span></span>
-<span id="cb14-906"><a href="#cb14-906"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, N):</span>
-<span id="cb14-907"><a href="#cb14-907"></a>    r <span class="op">=</span> np.sqrt(x[i <span class="op">-</span> <span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y[i <span class="op">-</span> <span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span>)  <span class="co"># Odległość od środka masy</span></span>
-<span id="cb14-908"><a href="#cb14-908"></a>    ax <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> x[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">/</span> r<span class="op">**</span><span class="dv">3</span>          <span class="co"># Przyspieszenie w osi x</span></span>
-<span id="cb14-909"><a href="#cb14-909"></a>    ay <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> y[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">/</span> r<span class="op">**</span><span class="dv">3</span>          <span class="co"># Przyspieszenie w osi y</span></span>
-<span id="cb14-910"><a href="#cb14-910"></a>    </span>
-<span id="cb14-911"><a href="#cb14-911"></a>    <span class="co"># Aktualizacja prędkości</span></span>
-<span id="cb14-912"><a href="#cb14-912"></a>    vx[i] <span class="op">=</span> vx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> ax <span class="op">*</span> dt</span>
-<span id="cb14-913"><a href="#cb14-913"></a>    vy[i] <span class="op">=</span> vy[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> ay <span class="op">*</span> dt</span>
-<span id="cb14-914"><a href="#cb14-914"></a>    </span>
-<span id="cb14-915"><a href="#cb14-915"></a>    <span class="co"># Aktualizacja pozycji</span></span>
-<span id="cb14-916"><a href="#cb14-916"></a>    x[i] <span class="op">=</span> x[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> vx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">*</span> dt</span>
-<span id="cb14-917"><a href="#cb14-917"></a>    y[i] <span class="op">=</span> y[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> vy[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">*</span> dt</span>
-<span id="cb14-918"><a href="#cb14-918"></a></span>
-<span id="cb14-919"><a href="#cb14-919"></a><span class="co"># Wizualizacja trajektorii</span></span>
-<span id="cb14-920"><a href="#cb14-920"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb14-921"><a href="#cb14-921"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">&quot;Trajektoria&quot;</span>)</span>
-<span id="cb14-922"><a href="#cb14-922"></a>plt.plot(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">&#39;ro&#39;</span>, label<span class="op">=</span><span class="st">&quot;Centralne ciało (np. Ziemia)&quot;</span>)</span>
-<span id="cb14-923"><a href="#cb14-923"></a>plt.xlabel(<span class="st">&quot;x (m)&quot;</span>)</span>
-<span id="cb14-924"><a href="#cb14-924"></a>plt.ylabel(<span class="st">&quot;y (m)&quot;</span>)</span>
-<span id="cb14-925"><a href="#cb14-925"></a>plt.title(<span class="st">&quot;Trajektoria orbitalna małego ciała&quot;</span>)</span>
-<span id="cb14-926"><a href="#cb14-926"></a>plt.legend(loc<span class="op">=</span><span class="st">&#39;lower right&#39;</span>)</span>
-<span id="cb14-927"><a href="#cb14-927"></a>plt.grid()</span>
-<span id="cb14-928"><a href="#cb14-928"></a>plt.axis(<span class="st">&#39;equal&#39;</span>)</span>
-<span id="cb14-929"><a href="#cb14-929"></a>plt.show()</span>
-<span id="cb14-930"><a href="#cb14-930"></a></span>
-<span id="cb14-931"><a href="#cb14-931"></a><span class="in">```</span></span>
-<span id="cb14-932"><a href="#cb14-932"></a></span>
-<span id="cb14-933"><a href="#cb14-933"></a></span>
-<span id="cb14-934"><a href="#cb14-934"></a><span class="fu">### Earth-Moon System with small body</span></span>
-<span id="cb14-935"><a href="#cb14-935"></a></span>
-<span id="cb14-938"><a href="#cb14-938"></a><span class="in">```{python}</span></span>
-<span id="cb14-939"><a href="#cb14-939"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-940"><a href="#cb14-940"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-941"><a href="#cb14-941"></a></span>
-<span id="cb14-942"><a href="#cb14-942"></a><span class="co"># Parameters</span></span>
-<span id="cb14-943"><a href="#cb14-943"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant (m^3/kg/s^2)</span></span>
-<span id="cb14-944"><a href="#cb14-944"></a>M_earth <span class="op">=</span> <span class="fl">5.972e24</span>  <span class="co"># Mass of Earth (kg)</span></span>
-<span id="cb14-945"><a href="#cb14-945"></a>M_moon <span class="op">=</span> <span class="fl">7.348e22</span>  <span class="co"># Mass of Moon (kg)</span></span>
-<span id="cb14-946"><a href="#cb14-946"></a>R_earth_moon <span class="op">=</span> <span class="fl">3.844e8</span>  <span class="co"># Distance between Earth and Moon (m)</span></span>
-<span id="cb14-947"><a href="#cb14-947"></a>m_probe <span class="op">=</span> <span class="dv">1000</span>  <span class="co"># Mass of the probe (kg)</span></span>
+<span id="cb14-872"><a href="#cb14-872"></a><span class="ss">1. </span>**Planetary Orbits:** Predicting the motion of planets and moons in their orbits.</span>
+<span id="cb14-873"><a href="#cb14-873"></a><span class="ss">2. </span>**Space Travel:** Calculating escape velocities and transfer orbits for spacecraft.</span>
+<span id="cb14-874"><a href="#cb14-874"></a><span class="ss">3. </span>**Tidal Effects:** Understanding the gravitational interaction between Earth and Moon causing ocean tides.</span>
+<span id="cb14-875"><a href="#cb14-875"></a><span class="ss">4. </span>**Astrophysics:** Studying gravitational interactions in galaxies and black holes.</span>
+<span id="cb14-876"><a href="#cb14-876"></a></span>
+<span id="cb14-877"><a href="#cb14-877"></a><span class="fu">### Small body around the Earth</span></span>
+<span id="cb14-878"><a href="#cb14-878"></a></span>
+<span id="cb14-881"><a href="#cb14-881"></a><span class="in">```{python}</span></span>
+<span id="cb14-882"><a href="#cb14-882"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-883"><a href="#cb14-883"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-884"><a href="#cb14-884"></a></span>
+<span id="cb14-885"><a href="#cb14-885"></a><span class="co"># Parametry</span></span>
+<span id="cb14-886"><a href="#cb14-886"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Stała grawitacyjna (m^3/kg/s^2)</span></span>
+<span id="cb14-887"><a href="#cb14-887"></a>M <span class="op">=</span> <span class="fl">5.972e24</span>   <span class="co"># Masa większego ciała, np. Ziemi (kg)</span></span>
+<span id="cb14-888"><a href="#cb14-888"></a>m <span class="op">=</span> <span class="dv">1000</span>       <span class="co"># Masa mniejszego ciała, np. satelity (kg)</span></span>
+<span id="cb14-889"><a href="#cb14-889"></a></span>
+<span id="cb14-890"><a href="#cb14-890"></a><span class="co"># Warunki początkowe</span></span>
+<span id="cb14-891"><a href="#cb14-891"></a>r0 <span class="op">=</span> <span class="fl">7e6</span>  <span class="co"># Początkowa odległość od środka masy większego ciała (m)</span></span>
+<span id="cb14-892"><a href="#cb14-892"></a>v0 <span class="op">=</span> <span class="dv">5200</span>  <span class="co"># Początkowa prędkość orbitalna (m/s)</span></span>
+<span id="cb14-893"><a href="#cb14-893"></a>theta0 <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Początkowy kąt w radianach</span></span>
+<span id="cb14-894"><a href="#cb14-894"></a></span>
+<span id="cb14-895"><a href="#cb14-895"></a><span class="co"># Czas</span></span>
+<span id="cb14-896"><a href="#cb14-896"></a>T <span class="op">=</span> <span class="dv">6000</span>  <span class="co"># Czas symulacji (s)</span></span>
+<span id="cb14-897"><a href="#cb14-897"></a>N <span class="op">=</span> <span class="dv">100_000</span>  <span class="co"># Liczba kroków czasowych</span></span>
+<span id="cb14-898"><a href="#cb14-898"></a>dt <span class="op">=</span> T <span class="op">/</span> N</span>
+<span id="cb14-899"><a href="#cb14-899"></a></span>
+<span id="cb14-900"><a href="#cb14-900"></a><span class="co"># Tablice dla pozycji i prędkości</span></span>
+<span id="cb14-901"><a href="#cb14-901"></a>x <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-902"><a href="#cb14-902"></a>y <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-903"><a href="#cb14-903"></a>vx <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-904"><a href="#cb14-904"></a>vy <span class="op">=</span> np.zeros(N)</span>
+<span id="cb14-905"><a href="#cb14-905"></a></span>
+<span id="cb14-906"><a href="#cb14-906"></a><span class="co"># Warunki początkowe</span></span>
+<span id="cb14-907"><a href="#cb14-907"></a>x[<span class="dv">0</span>] <span class="op">=</span> r0 <span class="op">*</span> np.cos(theta0)</span>
+<span id="cb14-908"><a href="#cb14-908"></a>y[<span class="dv">0</span>] <span class="op">=</span> r0 <span class="op">*</span> np.sin(theta0)</span>
+<span id="cb14-909"><a href="#cb14-909"></a>vx[<span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span>v0 <span class="op">*</span> np.sin(theta0)</span>
+<span id="cb14-910"><a href="#cb14-910"></a>vy[<span class="dv">0</span>] <span class="op">=</span> v0 <span class="op">*</span> np.cos(theta0)</span>
+<span id="cb14-911"><a href="#cb14-911"></a></span>
+<span id="cb14-912"><a href="#cb14-912"></a><span class="co"># Numeryczna integracja (metoda Eulera)</span></span>
+<span id="cb14-913"><a href="#cb14-913"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, N):</span>
+<span id="cb14-914"><a href="#cb14-914"></a>    r <span class="op">=</span> np.sqrt(x[i <span class="op">-</span> <span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y[i <span class="op">-</span> <span class="dv">1</span>]<span class="op">**</span><span class="dv">2</span>)  <span class="co"># Odległość od środka masy</span></span>
+<span id="cb14-915"><a href="#cb14-915"></a>    ax <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> x[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">/</span> r<span class="op">**</span><span class="dv">3</span>          <span class="co"># Przyspieszenie w osi x</span></span>
+<span id="cb14-916"><a href="#cb14-916"></a>    ay <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M <span class="op">*</span> y[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">/</span> r<span class="op">**</span><span class="dv">3</span>          <span class="co"># Przyspieszenie w osi y</span></span>
+<span id="cb14-917"><a href="#cb14-917"></a>    </span>
+<span id="cb14-918"><a href="#cb14-918"></a>    <span class="co"># Aktualizacja prędkości</span></span>
+<span id="cb14-919"><a href="#cb14-919"></a>    vx[i] <span class="op">=</span> vx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> ax <span class="op">*</span> dt</span>
+<span id="cb14-920"><a href="#cb14-920"></a>    vy[i] <span class="op">=</span> vy[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> ay <span class="op">*</span> dt</span>
+<span id="cb14-921"><a href="#cb14-921"></a>    </span>
+<span id="cb14-922"><a href="#cb14-922"></a>    <span class="co"># Aktualizacja pozycji</span></span>
+<span id="cb14-923"><a href="#cb14-923"></a>    x[i] <span class="op">=</span> x[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> vx[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">*</span> dt</span>
+<span id="cb14-924"><a href="#cb14-924"></a>    y[i] <span class="op">=</span> y[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> vy[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">*</span> dt</span>
+<span id="cb14-925"><a href="#cb14-925"></a></span>
+<span id="cb14-926"><a href="#cb14-926"></a><span class="co"># Wizualizacja trajektorii</span></span>
+<span id="cb14-927"><a href="#cb14-927"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb14-928"><a href="#cb14-928"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">&quot;Trajektoria&quot;</span>)</span>
+<span id="cb14-929"><a href="#cb14-929"></a>plt.plot(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">&#39;ro&#39;</span>, label<span class="op">=</span><span class="st">&quot;Centralne ciało (np. Ziemia)&quot;</span>)</span>
+<span id="cb14-930"><a href="#cb14-930"></a>plt.xlabel(<span class="st">&quot;x (m)&quot;</span>)</span>
+<span id="cb14-931"><a href="#cb14-931"></a>plt.ylabel(<span class="st">&quot;y (m)&quot;</span>)</span>
+<span id="cb14-932"><a href="#cb14-932"></a>plt.title(<span class="st">&quot;Trajektoria orbitalna małego ciała&quot;</span>)</span>
+<span id="cb14-933"><a href="#cb14-933"></a>plt.legend(loc<span class="op">=</span><span class="st">&#39;lower right&#39;</span>)</span>
+<span id="cb14-934"><a href="#cb14-934"></a>plt.grid()</span>
+<span id="cb14-935"><a href="#cb14-935"></a>plt.axis(<span class="st">&#39;equal&#39;</span>)</span>
+<span id="cb14-936"><a href="#cb14-936"></a>plt.show()</span>
+<span id="cb14-937"><a href="#cb14-937"></a></span>
+<span id="cb14-938"><a href="#cb14-938"></a><span class="in">```</span></span>
+<span id="cb14-939"><a href="#cb14-939"></a></span>
+<span id="cb14-940"><a href="#cb14-940"></a></span>
+<span id="cb14-941"><a href="#cb14-941"></a><span class="fu">### Earth-Moon System with small body</span></span>
+<span id="cb14-942"><a href="#cb14-942"></a></span>
+<span id="cb14-945"><a href="#cb14-945"></a><span class="in">```{python}</span></span>
+<span id="cb14-946"><a href="#cb14-946"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-947"><a href="#cb14-947"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb14-948"><a href="#cb14-948"></a></span>
-<span id="cb14-949"><a href="#cb14-949"></a><span class="co"># Initial positions</span></span>
-<span id="cb14-950"><a href="#cb14-950"></a>x_earth, y_earth <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span></span>
-<span id="cb14-951"><a href="#cb14-951"></a>x_moon, y_moon <span class="op">=</span> R_earth_moon, <span class="dv">0</span></span>
-<span id="cb14-952"><a href="#cb14-952"></a></span>
-<span id="cb14-953"><a href="#cb14-953"></a><span class="co"># Launch parameters</span></span>
-<span id="cb14-954"><a href="#cb14-954"></a>launch_angle <span class="op">=</span> <span class="dv">5</span>  <span class="co"># Launch angle in degrees (relative to +x-axis)</span></span>
-<span id="cb14-955"><a href="#cb14-955"></a>initial_speed <span class="op">=</span> <span class="dv">1500</span>  <span class="co"># Initial speed of the probe (m/s)</span></span>
-<span id="cb14-956"><a href="#cb14-956"></a></span>
-<span id="cb14-957"><a href="#cb14-957"></a><span class="co"># Convert launch angle to radians</span></span>
-<span id="cb14-958"><a href="#cb14-958"></a>launch_angle_rad <span class="op">=</span> np.radians(launch_angle)</span>
+<span id="cb14-949"><a href="#cb14-949"></a><span class="co"># Parameters</span></span>
+<span id="cb14-950"><a href="#cb14-950"></a>G <span class="op">=</span> <span class="fl">6.674e-11</span>  <span class="co"># Gravitational constant (m^3/kg/s^2)</span></span>
+<span id="cb14-951"><a href="#cb14-951"></a>M_earth <span class="op">=</span> <span class="fl">5.972e24</span>  <span class="co"># Mass of Earth (kg)</span></span>
+<span id="cb14-952"><a href="#cb14-952"></a>M_moon <span class="op">=</span> <span class="fl">7.348e22</span>  <span class="co"># Mass of Moon (kg)</span></span>
+<span id="cb14-953"><a href="#cb14-953"></a>R_earth_moon <span class="op">=</span> <span class="fl">3.844e8</span>  <span class="co"># Distance between Earth and Moon (m)</span></span>
+<span id="cb14-954"><a href="#cb14-954"></a>m_probe <span class="op">=</span> <span class="dv">1000</span>  <span class="co"># Mass of the probe (kg)</span></span>
+<span id="cb14-955"><a href="#cb14-955"></a></span>
+<span id="cb14-956"><a href="#cb14-956"></a><span class="co"># Initial positions</span></span>
+<span id="cb14-957"><a href="#cb14-957"></a>x_earth, y_earth <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span></span>
+<span id="cb14-958"><a href="#cb14-958"></a>x_moon, y_moon <span class="op">=</span> R_earth_moon, <span class="dv">0</span></span>
 <span id="cb14-959"><a href="#cb14-959"></a></span>
-<span id="cb14-960"><a href="#cb14-960"></a><span class="co"># Probe initial position and velocity</span></span>
-<span id="cb14-961"><a href="#cb14-961"></a>x_probe, y_probe <span class="op">=</span> R_earth_moon <span class="op">/</span> <span class="dv">2</span>, <span class="dv">0</span>  <span class="co"># Start halfway between Earth and Moon</span></span>
-<span id="cb14-962"><a href="#cb14-962"></a>vx_probe <span class="op">=</span> initial_speed <span class="op">*</span> np.cos(launch_angle_rad)</span>
-<span id="cb14-963"><a href="#cb14-963"></a>vy_probe <span class="op">=</span> initial_speed <span class="op">*</span> np.sin(launch_angle_rad)</span>
-<span id="cb14-964"><a href="#cb14-964"></a></span>
-<span id="cb14-965"><a href="#cb14-965"></a><span class="co"># Time settings</span></span>
-<span id="cb14-966"><a href="#cb14-966"></a>T <span class="op">=</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">3600</span>  <span class="co"># Total simulation time (s)</span></span>
-<span id="cb14-967"><a href="#cb14-967"></a>N <span class="op">=</span> <span class="dv">500000</span>  <span class="co"># Number of time steps</span></span>
-<span id="cb14-968"><a href="#cb14-968"></a>dt <span class="op">=</span> T <span class="op">/</span> N  <span class="co"># Time step (s)</span></span>
-<span id="cb14-969"><a href="#cb14-969"></a></span>
-<span id="cb14-970"><a href="#cb14-970"></a><span class="co"># Arrays to store positions</span></span>
-<span id="cb14-971"><a href="#cb14-971"></a>x_positions <span class="op">=</span> []</span>
-<span id="cb14-972"><a href="#cb14-972"></a>y_positions <span class="op">=</span> []</span>
-<span id="cb14-973"><a href="#cb14-973"></a></span>
-<span id="cb14-974"><a href="#cb14-974"></a><span class="co"># Simulation loop</span></span>
-<span id="cb14-975"><a href="#cb14-975"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N):</span>
-<span id="cb14-976"><a href="#cb14-976"></a>    <span class="co"># Distance between probe and Earth</span></span>
-<span id="cb14-977"><a href="#cb14-977"></a>    r_earth <span class="op">=</span> np.sqrt((x_probe <span class="op">-</span> x_earth)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y_probe <span class="op">-</span> y_earth)<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb14-978"><a href="#cb14-978"></a></span>
-<span id="cb14-979"><a href="#cb14-979"></a>    <span class="co"># Distance between probe and Moon</span></span>
-<span id="cb14-980"><a href="#cb14-980"></a>    r_moon <span class="op">=</span> np.sqrt((x_probe <span class="op">-</span> x_moon)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y_probe <span class="op">-</span> y_moon)<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb14-981"><a href="#cb14-981"></a></span>
-<span id="cb14-982"><a href="#cb14-982"></a>    <span class="co"># Gravitational accelerations</span></span>
-<span id="cb14-983"><a href="#cb14-983"></a>    ax_earth <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_earth <span class="op">*</span> (x_probe <span class="op">-</span> x_earth) <span class="op">/</span> r_earth<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb14-984"><a href="#cb14-984"></a>    ay_earth <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_earth <span class="op">*</span> (y_probe <span class="op">-</span> y_earth) <span class="op">/</span> r_earth<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-960"><a href="#cb14-960"></a><span class="co"># Launch parameters</span></span>
+<span id="cb14-961"><a href="#cb14-961"></a>launch_angle <span class="op">=</span> <span class="dv">5</span>  <span class="co"># Launch angle in degrees (relative to +x-axis)</span></span>
+<span id="cb14-962"><a href="#cb14-962"></a>initial_speed <span class="op">=</span> <span class="dv">1500</span>  <span class="co"># Initial speed of the probe (m/s)</span></span>
+<span id="cb14-963"><a href="#cb14-963"></a></span>
+<span id="cb14-964"><a href="#cb14-964"></a><span class="co"># Convert launch angle to radians</span></span>
+<span id="cb14-965"><a href="#cb14-965"></a>launch_angle_rad <span class="op">=</span> np.radians(launch_angle)</span>
+<span id="cb14-966"><a href="#cb14-966"></a></span>
+<span id="cb14-967"><a href="#cb14-967"></a><span class="co"># Probe initial position and velocity</span></span>
+<span id="cb14-968"><a href="#cb14-968"></a>x_probe, y_probe <span class="op">=</span> R_earth_moon <span class="op">/</span> <span class="dv">2</span>, <span class="dv">0</span>  <span class="co"># Start halfway between Earth and Moon</span></span>
+<span id="cb14-969"><a href="#cb14-969"></a>vx_probe <span class="op">=</span> initial_speed <span class="op">*</span> np.cos(launch_angle_rad)</span>
+<span id="cb14-970"><a href="#cb14-970"></a>vy_probe <span class="op">=</span> initial_speed <span class="op">*</span> np.sin(launch_angle_rad)</span>
+<span id="cb14-971"><a href="#cb14-971"></a></span>
+<span id="cb14-972"><a href="#cb14-972"></a><span class="co"># Time settings</span></span>
+<span id="cb14-973"><a href="#cb14-973"></a>T <span class="op">=</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">24</span> <span class="op">*</span> <span class="dv">3600</span>  <span class="co"># Total simulation time (s)</span></span>
+<span id="cb14-974"><a href="#cb14-974"></a>N <span class="op">=</span> <span class="dv">500000</span>  <span class="co"># Number of time steps</span></span>
+<span id="cb14-975"><a href="#cb14-975"></a>dt <span class="op">=</span> T <span class="op">/</span> N  <span class="co"># Time step (s)</span></span>
+<span id="cb14-976"><a href="#cb14-976"></a></span>
+<span id="cb14-977"><a href="#cb14-977"></a><span class="co"># Arrays to store positions</span></span>
+<span id="cb14-978"><a href="#cb14-978"></a>x_positions <span class="op">=</span> []</span>
+<span id="cb14-979"><a href="#cb14-979"></a>y_positions <span class="op">=</span> []</span>
+<span id="cb14-980"><a href="#cb14-980"></a></span>
+<span id="cb14-981"><a href="#cb14-981"></a><span class="co"># Simulation loop</span></span>
+<span id="cb14-982"><a href="#cb14-982"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N):</span>
+<span id="cb14-983"><a href="#cb14-983"></a>    <span class="co"># Distance between probe and Earth</span></span>
+<span id="cb14-984"><a href="#cb14-984"></a>    r_earth <span class="op">=</span> np.sqrt((x_probe <span class="op">-</span> x_earth)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y_probe <span class="op">-</span> y_earth)<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb14-985"><a href="#cb14-985"></a></span>
-<span id="cb14-986"><a href="#cb14-986"></a>    ax_moon <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_moon <span class="op">*</span> (x_probe <span class="op">-</span> x_moon) <span class="op">/</span> r_moon<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb14-987"><a href="#cb14-987"></a>    ay_moon <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_moon <span class="op">*</span> (y_probe <span class="op">-</span> y_moon) <span class="op">/</span> r_moon<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-986"><a href="#cb14-986"></a>    <span class="co"># Distance between probe and Moon</span></span>
+<span id="cb14-987"><a href="#cb14-987"></a>    r_moon <span class="op">=</span> np.sqrt((x_probe <span class="op">-</span> x_moon)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y_probe <span class="op">-</span> y_moon)<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb14-988"><a href="#cb14-988"></a></span>
-<span id="cb14-989"><a href="#cb14-989"></a>    <span class="co"># Total acceleration</span></span>
-<span id="cb14-990"><a href="#cb14-990"></a>    ax <span class="op">=</span> ax_earth <span class="op">+</span> ax_moon</span>
-<span id="cb14-991"><a href="#cb14-991"></a>    ay <span class="op">=</span> ay_earth <span class="op">+</span> ay_moon</span>
+<span id="cb14-989"><a href="#cb14-989"></a>    <span class="co"># Gravitational accelerations</span></span>
+<span id="cb14-990"><a href="#cb14-990"></a>    ax_earth <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_earth <span class="op">*</span> (x_probe <span class="op">-</span> x_earth) <span class="op">/</span> r_earth<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-991"><a href="#cb14-991"></a>    ay_earth <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_earth <span class="op">*</span> (y_probe <span class="op">-</span> y_earth) <span class="op">/</span> r_earth<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb14-992"><a href="#cb14-992"></a></span>
-<span id="cb14-993"><a href="#cb14-993"></a>    <span class="co"># Update velocities</span></span>
-<span id="cb14-994"><a href="#cb14-994"></a>    vx_probe <span class="op">+=</span> ax <span class="op">*</span> dt</span>
-<span id="cb14-995"><a href="#cb14-995"></a>    vy_probe <span class="op">+=</span> ay <span class="op">*</span> dt</span>
-<span id="cb14-996"><a href="#cb14-996"></a></span>
-<span id="cb14-997"><a href="#cb14-997"></a>    <span class="co"># Update positions</span></span>
-<span id="cb14-998"><a href="#cb14-998"></a>    x_probe <span class="op">+=</span> vx_probe <span class="op">*</span> dt</span>
-<span id="cb14-999"><a href="#cb14-999"></a>    y_probe <span class="op">+=</span> vy_probe <span class="op">*</span> dt</span>
-<span id="cb14-1000"><a href="#cb14-1000"></a></span>
-<span id="cb14-1001"><a href="#cb14-1001"></a>    <span class="co"># Store positions</span></span>
-<span id="cb14-1002"><a href="#cb14-1002"></a>    x_positions.append(x_probe)</span>
-<span id="cb14-1003"><a href="#cb14-1003"></a>    y_positions.append(y_probe)</span>
-<span id="cb14-1004"><a href="#cb14-1004"></a></span>
-<span id="cb14-1005"><a href="#cb14-1005"></a><span class="co"># Convert to arrays</span></span>
-<span id="cb14-1006"><a href="#cb14-1006"></a>x_positions <span class="op">=</span> np.array(x_positions)</span>
-<span id="cb14-1007"><a href="#cb14-1007"></a>y_positions <span class="op">=</span> np.array(y_positions)</span>
-<span id="cb14-1008"><a href="#cb14-1008"></a></span>
-<span id="cb14-1009"><a href="#cb14-1009"></a><span class="co"># Plot the results</span></span>
-<span id="cb14-1010"><a href="#cb14-1010"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb14-1011"><a href="#cb14-1011"></a>plt.plot(x_positions, y_positions, label<span class="op">=</span><span class="st">&quot;Probe Trajectory&quot;</span>)</span>
-<span id="cb14-1012"><a href="#cb14-1012"></a>plt.plot(x_earth, y_earth, <span class="st">&#39;bo&#39;</span>, label<span class="op">=</span><span class="st">&quot;Earth&quot;</span>, markersize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb14-1013"><a href="#cb14-1013"></a>plt.plot(x_moon, y_moon, <span class="st">&#39;go&#39;</span>, label<span class="op">=</span><span class="st">&quot;Moon&quot;</span>, markersize<span class="op">=</span><span class="dv">7</span>)</span>
-<span id="cb14-1014"><a href="#cb14-1014"></a>plt.xlabel(<span class="st">&quot;x (m)&quot;</span>)</span>
-<span id="cb14-1015"><a href="#cb14-1015"></a>plt.ylabel(<span class="st">&quot;y (m)&quot;</span>)</span>
-<span id="cb14-1016"><a href="#cb14-1016"></a>plt.title(<span class="st">&quot;Trajectory of the Probe in the Earth-Moon System&quot;</span>)</span>
-<span id="cb14-1017"><a href="#cb14-1017"></a>plt.legend()</span>
-<span id="cb14-1018"><a href="#cb14-1018"></a>plt.grid()</span>
-<span id="cb14-1019"><a href="#cb14-1019"></a>plt.axis(<span class="st">&#39;equal&#39;</span>)</span>
-<span id="cb14-1020"><a href="#cb14-1020"></a>plt.show()</span>
-<span id="cb14-1021"><a href="#cb14-1021"></a></span>
-<span id="cb14-1022"><a href="#cb14-1022"></a><span class="in">```</span></span>
+<span id="cb14-993"><a href="#cb14-993"></a>    ax_moon <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_moon <span class="op">*</span> (x_probe <span class="op">-</span> x_moon) <span class="op">/</span> r_moon<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-994"><a href="#cb14-994"></a>    ay_moon <span class="op">=</span> <span class="op">-</span>G <span class="op">*</span> M_moon <span class="op">*</span> (y_probe <span class="op">-</span> y_moon) <span class="op">/</span> r_moon<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb14-995"><a href="#cb14-995"></a></span>
+<span id="cb14-996"><a href="#cb14-996"></a>    <span class="co"># Total acceleration</span></span>
+<span id="cb14-997"><a href="#cb14-997"></a>    ax <span class="op">=</span> ax_earth <span class="op">+</span> ax_moon</span>
+<span id="cb14-998"><a href="#cb14-998"></a>    ay <span class="op">=</span> ay_earth <span class="op">+</span> ay_moon</span>
+<span id="cb14-999"><a href="#cb14-999"></a></span>
+<span id="cb14-1000"><a href="#cb14-1000"></a>    <span class="co"># Update velocities</span></span>
+<span id="cb14-1001"><a href="#cb14-1001"></a>    vx_probe <span class="op">+=</span> ax <span class="op">*</span> dt</span>
+<span id="cb14-1002"><a href="#cb14-1002"></a>    vy_probe <span class="op">+=</span> ay <span class="op">*</span> dt</span>
+<span id="cb14-1003"><a href="#cb14-1003"></a></span>
+<span id="cb14-1004"><a href="#cb14-1004"></a>    <span class="co"># Update positions</span></span>
+<span id="cb14-1005"><a href="#cb14-1005"></a>    x_probe <span class="op">+=</span> vx_probe <span class="op">*</span> dt</span>
+<span id="cb14-1006"><a href="#cb14-1006"></a>    y_probe <span class="op">+=</span> vy_probe <span class="op">*</span> dt</span>
+<span id="cb14-1007"><a href="#cb14-1007"></a></span>
+<span id="cb14-1008"><a href="#cb14-1008"></a>    <span class="co"># Store positions</span></span>
+<span id="cb14-1009"><a href="#cb14-1009"></a>    x_positions.append(x_probe)</span>
+<span id="cb14-1010"><a href="#cb14-1010"></a>    y_positions.append(y_probe)</span>
+<span id="cb14-1011"><a href="#cb14-1011"></a></span>
+<span id="cb14-1012"><a href="#cb14-1012"></a><span class="co"># Convert to arrays</span></span>
+<span id="cb14-1013"><a href="#cb14-1013"></a>x_positions <span class="op">=</span> np.array(x_positions)</span>
+<span id="cb14-1014"><a href="#cb14-1014"></a>y_positions <span class="op">=</span> np.array(y_positions)</span>
+<span id="cb14-1015"><a href="#cb14-1015"></a></span>
+<span id="cb14-1016"><a href="#cb14-1016"></a><span class="co"># Plot the results</span></span>
+<span id="cb14-1017"><a href="#cb14-1017"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb14-1018"><a href="#cb14-1018"></a>plt.plot(x_positions, y_positions, label<span class="op">=</span><span class="st">&quot;Probe Trajectory&quot;</span>)</span>
+<span id="cb14-1019"><a href="#cb14-1019"></a>plt.plot(x_earth, y_earth, <span class="st">&#39;bo&#39;</span>, label<span class="op">=</span><span class="st">&quot;Earth&quot;</span>, markersize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb14-1020"><a href="#cb14-1020"></a>plt.plot(x_moon, y_moon, <span class="st">&#39;go&#39;</span>, label<span class="op">=</span><span class="st">&quot;Moon&quot;</span>, markersize<span class="op">=</span><span class="dv">7</span>)</span>
+<span id="cb14-1021"><a href="#cb14-1021"></a>plt.xlabel(<span class="st">&quot;x (m)&quot;</span>)</span>
+<span id="cb14-1022"><a href="#cb14-1022"></a>plt.ylabel(<span class="st">&quot;y (m)&quot;</span>)</span>
+<span id="cb14-1023"><a href="#cb14-1023"></a>plt.title(<span class="st">&quot;Trajectory of the Probe in the Earth-Moon System&quot;</span>)</span>
+<span id="cb14-1024"><a href="#cb14-1024"></a>plt.legend()</span>
+<span id="cb14-1025"><a href="#cb14-1025"></a>plt.grid()</span>
+<span id="cb14-1026"><a href="#cb14-1026"></a>plt.axis(<span class="st">&#39;equal&#39;</span>)</span>
+<span id="cb14-1027"><a href="#cb14-1027"></a>plt.show()</span>
+<span id="cb14-1028"><a href="#cb14-1028"></a></span>
+<span id="cb14-1029"><a href="#cb14-1029"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
