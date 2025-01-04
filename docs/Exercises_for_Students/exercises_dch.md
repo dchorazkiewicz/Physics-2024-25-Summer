@@ -624,7 +624,7 @@ You are tasked with analyzing the electric field and potential from a set of poi
 #### **Steps to Follow:**
 
 1. **Setup the Charge Configuration:**
-   - Define a system of $N$ point charges, each with charge $q_i$, positioned at coordinates $(x_i, y_i)$.
+   - Define a system of $N$ point charges (at least three), each with charge $q_i$ positioned at coordinates $(x_i, y_i)$.
    - Choose arbitrary values for $q_i$ (positive or negative) and their positions $(x_i, y_i)$.
 
 2. **Compute the Electric Field:**
