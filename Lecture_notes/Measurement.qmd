@@ -18,6 +18,43 @@ format:
     self-contained: true
 ---
 
-## Basic Concepts by Remik
+## 1. Introduction
 
-### Subtitle
+Measurement is the **process of determining** the size, length, or amount of something. It is a fundamental aspect of physics and other sciences, as it allows us to quantify and compare physical quantities. Today we will discuss some of the most important measurements in the history of physics and describe the importance and details of making measurements.
+
+### Why do we measure? 
+
+- To capture relations within the physical world
+
+- To make predictions about the behavior of the natural world
+
+- To understand the physical world
+
+- To confirm and refine our understanding of the laws of physics
+
+Measurement is essential in physics and other sciences because it allows us to describe and understand the physical world. Without measurement, we would not be able to quantify physical quantities, **compare** different objects or events, or make predictions about the behavior of the natural world.
+
+### Units of measurement
+
+To make meaningful measurements, we need to use standardized units of measurement (SI units). These units are defined by international agreements and are used by scientists around the world. 
+
+**SI Units in physics include only seven units:** the meter (for length), the kilogram (for mass), the second (for time), Kelvin (for temperature), the ampere (for electric current), the mole (for the amount of substance), and the candela (for luminous intensity). The rest of the units are derived from these base units.
+
+
+## 2. Difference between Error and Uncertainty
+
+- **Error** is the difference between a measured value and the true value. It can be caused by a variety of factors, including limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process. Errors can be reduced by calibrating instruments, using multiple measurements, and applying correction factors.
+
+- **Uncertainty** is a measure of the range of values within which the true value of a measurement is likely to lie. It arises from the limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process. Uncertainty can be quantified using statistical techniques, such as the total derivative, and can be used to estimate the error in a measurement.
+
+$Quantity = Value \pm Uncertainity [Units]$
+
+Example:
+
+Resistance = $R \pm \Delta R = 10.0 \pm  0.1~~Ohm$
+
+## Two schools: Uncertainty of devices (**Use half of resolution during classes!**)
+
+- Imagine measuring the length of coffee table with a ruler. The ruler has markings in centimeters, and the length of the table is measured to be 1.00 meters. The uncertainty in the measurement is ± 0.01 meters (simply by choosing value of markings, which we call resolution). This means that the true length of the table is between 0.99 and 1.01 meters.
+
+- Imagine measuring the voltage with the voltmeterassign the **value of the half of the resolution (marking)**. The voltage is meaured to be 96.6 volts. The uncertainty in the measurement is (± 0.1 volts)/2. This means that the true voltage is between 96.55 and 96.65 volts. **USE THAT DURING CLASSES!**
