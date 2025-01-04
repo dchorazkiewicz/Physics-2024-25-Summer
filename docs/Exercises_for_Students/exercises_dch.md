@@ -115,19 +115,25 @@ This task bridges theoretical analysis with computational exploration, fostering
 
 #### Motivation:
 
-The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, <span style="text-decoration: line-through;">students</span> one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.
+The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.
 
 #### Task:
 
 1. Derive the relationship between the square of the orbital period and the cube of the orbital radius for circular orbits.
 2. Discuss the implications of this relationship for astronomy, including its role in calculating planetary masses and distances.
 3. Analyze real-world examples, such as the Moon's orbit around Earth or the orbits of planets in the Solar System.
-4. <span style="text-decoration: line-through;">Optional: </span>Implement a computational model to simulate circular orbits and verify the relationship.
+4. Implement a computational model to simulate circular orbits and verify the relationship.
 
 ---
 
-### Problem 2
+#### Deliverables:
 
+1. A Markdown document with Python script or notebook implementing the simulations.
+2. A detailed explanation of the subjects.
+3. Graphical representations of circular orbits and the relationship between orbital period and radius.
+4. A discussion on how this relationship extends to elliptical orbits and other celestial bodies.
+ 
+### Problem 2
 
 <span style="font-size: 1.2em; font-weight: bold;">Escape Velocities and Cosmic Velocities</span>
 
@@ -139,10 +145,16 @@ The concept of escape velocity is crucial for understanding the conditions requi
 
 1. Define the first, second, and third cosmic velocities, explaining their physical meaning.
 2. Analyze the mathematical derivations and parameters affecting these velocities.
-3. Discuss their importance in space exploration, including launching satellites, missions to other planets, and potential interstellar travel.<span style="text-decoration: line-through;">PODMIEŃ trzeci z czwartym punktem!!!!!</span>
-4. <span style="text-decoration: line-through;">Optional: </span>Create a simulation to calculate and visualize these velocities for different celestial bodies <span style="text-decoration: line-through;">(e.g., Earth, Moon, Mars).</span> like Earth, Moon, and Mars.
+3. Calculate and visualize these velocities for different celestial bodies like Earth, Mars adn Jupyter.
+4. Discuss their importance in space exploration, including launching satellites, missions to other planets, and potential interstellar travel.
 
 ---
+
+#### Deliverables:
+
+1. A Markdown document with Python script or notebook implementing the simulations.
+2. A detailed explanation of the subjects.
+3. Graphical representations of escape velocities and cosmic velocities for various celestial bodies.
 
 ### Problem 3
 
@@ -158,7 +170,7 @@ When an object is released from a moving rocket near Earth, its trajectory depen
 1. Analyze the possible trajectories (e.g., parabolic, hyperbolic, elliptical) of a payload released near Earth.
 2. Perform a numerical analysis to compute the path of the payload based on given initial conditions (position, velocity, and altitude).
 3. Discuss how these trajectories relate to orbital insertion, reentry, or escape scenarios.
-4. <span style="text-decoration: line-through;">Optional: </span>Develop a computational tool to simulate and visualize the motion of the payload under Earth's gravity, accounting for initial velocities and directions.
+4. Develop a computational tool to simulate and visualize the motion of the payload under Earth's gravity, accounting for initial velocities and directions.
 
 ---
 
@@ -188,9 +200,9 @@ Interference occurs when waves from different sources overlap, creating new patt
 
 Studying these patterns helps us understand wave behavior in a simple, visual way. It also allows us to explore important concepts, like the relationship between wave phase and the effects of multiple sources. This task offers a hands-on approach to learning about wave interactions and their real-world applications, making it an interesting and engaging way to dive into wave physics.
 
-#### Equation of a Single Disturbance:
+#### Task
 
-A circular wave on the water surface, emanating from a point source located at $(x_0, y_0)$, can be described by the equation:
+A circular wave on the water surface, emanating from a point source located at $(x_0, y_0)$, can be described by the Single Disturbance equation:
 
 $$
 \eta(x, y, t) = \frac{A}{\sqrt{r}} \cdot \cos\left(kr - \omega t + \phi\right)
@@ -237,7 +249,7 @@ Your task is to analyze the interference patterns formed on the water surface du
 
 #### Deliverables:
 
-1.  A Markdown document with Python script or notebook implementing the simulations.
+1. A Markdown document with Python script or notebook implementing the simulations.
 2. A detailed explanation of the interference patterns observed for the chosen regular polygon with the goal of understanding wave superposition.
 3. Graphical representations of the water surface showing constructive and destructive interference regions.
 
@@ -287,26 +299,10 @@ Studying equivalent resistance through graph theory is valuable not only for its
     - Complex graphs with multiple cycles.
 
 ---
-<span style="text-decoration: line-through;">
-#### Deliverables:</span>
-
-<span style="text-decoration: line-through;">##### **Option 1:**</span>
-
-- A detailed pseudocode and explanation of the algorithm.
-- Description of how it handles complex circuit configurations.
-
-<span style="text-decoration: line-through;">##### **Option 2:**</span>
-
-- Source code for the algorithm.
-- Examples of input circuits and results.
-- A brief analysis of the algorithm's efficiency and potential improvements.
-</span>
----
-
 #### Deliverables:
 
-- A detailed pseudocode/source code and explanation of the algorithm.
-- Description of how it handles complex circuit configurations.
+- A detailed pseudocode (but preferably a full implementation) and explanation of the algorithm.
+- Description of how it handles complex circuit configurations on three input examples.
 - A brief analysis of the algorithm's efficiency and potential improvements.
 
 ---
@@ -533,32 +529,40 @@ This problem connects fundamental concepts of probability, geometry, and numeric
 - For Buffon’s Needle, pay attention to geometric constraints, such as the relationship between the needle length and the distance between lines.
 - Start with a small number of iterations to validate the implementation, then increase the sample size to observe convergence.
 
----
-<span style="text-decoration: line-through;"> This task offers a practical and visually intuitive way to explore Monte Carlo simulations, emphasizing their application to problems in geometry and probability.</span>
+## Measurements
 
+### Problem 1
 
-### Physics Exercise: Measuring Earth's Gravitational Acceleration with a Pendulum
+<span style="font-size: 1.2em; font-weight: bold;">**Measuring Earth's Gravitational Acceleration with a Pendulum**</span>
 
----
+#### Motivation:
 
-#### **Objective:**
-Measure the acceleration due to gravity ($g$) using a pendulum and analyze the uncertainties in the measurements.
+The acceleration $g$ due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring $g$ accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining $g$ is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.
+
+#### Task:
+
+Measure the acceleration  $g$ due to gravity using a pendulum and in details analyze the uncertainties in the measurements.
+
+This exercise emphasizes rigorous measurement practices, uncertainty analysis, and their role in experimental physics.
 
 ---
 
 #### **Procedure:**
 
-1. **Materials:**
+1 **Materials:**
+   
    - A string (1 or 1.5 meters long).
-   - A small weight (e.g., bad of coins, keys) mounted on the string.
+   - A small weight (e.g., bag of coins, bag of sugar, key chain) mounted on the string.
    - Stopwatch (or smartphone timer).
    - Ruler or measuring tape.
 
-2. **Setup:**
+2 **Setup:**
+   
    - Attach the weight to the string and fix the other end to a sturdy support.
-   - Measure the length of the pendulum, $L$, from the suspension point to the center of the weight using a ruler or measuring tape. Record the resolution of the measuring tool and calculate the uncertainty as half the resolution ($\Delta L = \text{Resolution} / 2$).
+   - Measure the length of the pendulum, $L$, from the suspension point to the center of the weight using a ruler or measuring tape. Record the resolution of the measuring tool and calculate the uncertainty as half the resolution $\Delta L=\text{(Ruler Resolution)}/2$.
 
-3. **Data Collection:**
+3 **Data Collection:**
+   
    - Displace the pendulum slightly (<15°) and release it.
    - Measure the time for 10 full oscillations ($T_{10}$) and repeat this process 10 times. Record all 10 measurements.
    - Calculate the mean time for 10 oscillations ($\overline{T}_{10}$) and the standard deviation ($\sigma_T$).
@@ -570,22 +574,26 @@ Measure the acceleration due to gravity ($g$) using a pendulum and analyze the u
 
 #### **Calculations:**
 
-1. **Calculate the period:**
-   $$ T = \frac{\overline{T}_{10}}{10} $$
-   $$ \Delta T = \frac{\Delta T_{10}}{10} $$
+1 **Calculate the period:**
 
-2. **Determine $g$:**
-   $$ g = \frac{4\pi^2 L}{T^2} $$
+   $T = \frac{\overline{T}_{10}}{10}$ and $\Delta T = \frac{\Delta T_{10}}{10}$
 
-3. **Propagate uncertainties:**
-   $$ \Delta g = g \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2} $$
+2 **Determine $g$:**
+
+   $g = \frac{4\pi^2 L}{T^2}$
+
+3 **Propagate uncertainties:**
+
+   $\Delta g = g \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}$
 
 ---
 
 #### **Analysis:**
 
-1. Compare your measured $g$ with the standard value ($9.81 \, \text{m/s}^2$).
-2. Discuss:
+1 Compare your measured $g$ with the standard value ($9.81 \, \text{m/s}^2$).
+
+2 Discuss:
+
    - The effect of measurement resolution on $\Delta L$.
    - Variability in timing and its impact on $\Delta T$.
    - Any assumptions or experimental limitations.
@@ -594,105 +602,9 @@ Measure the acceleration due to gravity ($g$) using a pendulum and analyze the u
 
 #### **Deliverables:**
 
-1. Tabulated data:
+1 Tabulated data in markdown:
+
    - $L$, $\Delta L$, $T_{10}$ measurements, $\overline{T}_{10}$, $\sigma_T$, $\Delta T$.
    - Calculated $g$ and $\Delta g$.
-2. A brief discussion on sources of uncertainty and their impact on the results.
-
-This exercise emphasizes rigorous measurement practices, uncertainty analysis, and their role in experimental physics.
-
-### Physics Exercise: Electric Field and Potential from Multiple Charge Sources
-
----
-
-#### **Objective:**
-
-Analyze and compare the electric field and potential created by a system of point charges. Use computational methods to:
-
-1. Calculate and visualize the effective electric field from multiple charges.
-2. Plot the electric potential and its gradient.
-3. Compare the electric field derived directly with that obtained via the gradient of the potential.
-
----
-
-#### **Problem Statement:**
-
-You are tasked with analyzing the electric field and potential from a set of point charges arranged in space. By simulating and visualizing these quantities, you will explore their relationships and understand how to compute the electric field both directly and via the gradient of the potential.
-
----
-
-#### **Steps to Follow:**
-
-1. **Setup the Charge Configuration:**
-   - Define a system of $N$ point charges (at least three), each with charge $q_i$ positioned at coordinates $(x_i, y_i)$.
-   - Choose arbitrary values for $q_i$ (positive or negative) and their positions $(x_i, y_i)$.
-
-2. **Compute the Electric Field:**
-   - The electric field $\mathbf{E}$ at a point $(x, y)$ due to a charge $q_i$ at $(x_i, y_i)$ is given by:
-     $$
-     \mathbf{E}_i(x, y) = \frac{k_e q_i}{r_i^2} \hat{\mathbf{r}}_i
-     $$
-     where:
-     - $k_e$ is Coulomb's constant.
-     - $r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}$ is the distance between the field point and the charge.
-     - $\hat{\mathbf{r}}_i = \frac{(x - x_i, y - y_i)}{r_i}$ is the unit vector pointing from the charge to the field point.
-
-   - Calculate the total electric field as the vector sum of the contributions from all charges:
-     $$
-     \mathbf{E}(x, y) = \sum_{i=1}^N \mathbf{E}_i(x, y)
-     $$
-
-3. **Compute the Electric Potential:**
-   - The electric potential $V$ at a point $(x, y)$ due to a charge $q_i$ at $(x_i, y_i)$ is given by:
-     $$
-     V_i(x, y) = \frac{k_e q_i}{r_i}
-     $$
-   - Calculate the total potential as the sum of contributions from all charges:
-     $$
-     V(x, y) = \sum_{i=1}^N V_i(x, y)
-     $$
-
-4. **Derive the Field from the Potential:**
-   - Compute the electric field from the gradient of the potential:
-     $$
-     \mathbf{E}(x, y) = -\nabla V(x, y)
-     $$
-     where:
-     $$
-     \nabla V = \left( \frac{\partial V}{\partial x}, \frac{\partial V}{\partial y} \right)
-     $$
-
-5. **Visualization:**
-   - Plot the electric field vectors as an arrow field on a grid.
-   - Plot the electric potential $V(x, y)$ as a contour map.
-   - Overlay the gradient vectors $-\nabla V$ on the potential map.
-
-6. **Comparison:**
-   - Compare the electric field calculated directly (step 2) with that obtained via the gradient of the potential (step 4).
-   - Discuss the similarities, differences, and numerical accuracy of the two methods.
-
----
-
-#### **Deliverables:**
-
-1. **Code Implementation:**
-   - Python script or notebook that calculates and visualizes:
-     - Electric field vectors.
-     - Electric potential and its gradient.
-     - Overlay of both methods for comparison.
-2. **Plots:**
-   - Vector field of the electric field.
-   - Contour map of the electric potential with gradient arrows.
-3. **Analysis:**
-   - A brief discussion comparing the two methods of computing the electric field.
-   - Comments on numerical accuracy, limitations, and sources of error.
-
----
-
-#### **Hints and Resources:**
-
-- Use Python libraries like `NumPy` for calculations and `Matplotlib` for plotting.
-- For numerical gradients, consider using `numpy.gradient`.
-- Start with a simple charge configuration (e.g., two or three charges) before scaling up.
-
-This exercise develops skills in electrostatics, numerical computation, and visualization while encouraging critical thinking about the relationship between electric field and potential.
+  
+2 The discussion on sources of uncertainty and their impact on the results.
