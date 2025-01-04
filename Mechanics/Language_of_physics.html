@@ -3378,7 +3378,7 @@ margin-bottom: 0;
   <li><a href="#second-order-differential-equations" id="toc-second-order-differential-equations" class="nav-link" data-scroll-target="#second-order-differential-equations">Second order differential equations</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://dchorazkiewicz.github.io/Physics-2024-25-Summer/"><i class="bi bi-link-45deg"></i>Main page</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -3425,7 +3425,7 @@ margin-bottom: 0;
 T(x, y) = 5 \sin(x) \cos(y)
 \]</span></p>
 <p>Below is a Python code of this scalar field:</p>
-<div id="e58e5f59" class="cell" data-execution_count="1">
+<div id="8d386d70" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3473,7 +3473,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </ul>
 </div>
 <p>Or we can use the following Python code to grasp 4 time steps:</p>
-<div id="6e0c655d" class="cell" data-execution_count="2">
+<div id="bb1db28f" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3540,7 +3540,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 \vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})
 \]</span></p>
 <p>This field might represent the velocity of a fluid at each point <span class="math inline">\((x, y)\)</span> in a 2D space. Below is a Python code to visualize this vector field:</p>
-<div id="996d3551" class="cell" data-execution_count="3">
+<div id="4644a2bc" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3586,7 +3586,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 </div>
 </div>
 <p>Stream plot</p>
-<div id="e0819b71" class="cell" data-execution_count="4">
+<div id="2387827d" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3683,7 +3683,7 @@ T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}
 y(x) = x^2 + C
 \]</span></p>
 <p>where <span class="math inline">\(C\)</span> is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant <span class="math inline">\(C\)</span> can take any value.</p>
-<div id="d057aeba" class="cell" data-execution_count="5">
+<div id="e211ebea" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3738,7 +3738,7 @@ y(x + h) = y(x) + 2xh
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="236142ff" class="cell" data-execution_count="6">
+<div id="94465516" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3844,7 +3844,7 @@ y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)
 \]</span></p>
 <p>This equation can be used to solve the differential equation numerically. We can start from an initial value of <span class="math inline">\(y(x)\)</span> and <span class="math inline">\(y(x - h)\)</span> and use the equation above to calculate the value of <span class="math inline">\(y(x + h)\)</span>. This value can be used to calculate the next value of <span class="math inline">\(y(x + 2h)\)</span> and so on. This is a simple numerical method to solve differential equations.</p>
 <p>Let us compare the numerical solution with the analytical solution.</p>
-<div id="46fb419b" class="cell" data-execution_count="7">
+<div id="78277e6a" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4402,514 +4402,517 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb8-16"><a href="#cb8-16"></a><span class="co">    css: styles.css</span></span>
 <span id="cb8-17"><a href="#cb8-17"></a><span class="co">    math: mathjax</span></span>
 <span id="cb8-18"><a href="#cb8-18"></a><span class="co">    self-contained: true</span></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="co">---</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a></span>
-<span id="cb8-21"><a href="#cb8-21"></a><span class="fu">## Introduction</span></span>
-<span id="cb8-22"><a href="#cb8-22"></a></span>
-<span id="cb8-23"><a href="#cb8-23"></a>Physics often describes the universe and its phenomena using the language of mathematics, where the Cartesian 3D space serves as the natural stage for physical events. This spatial representation, defined by three orthogonal axes $x$, $y$, and $z$, is the starting point for our exploration. By reducing the dimensionality to 2D, we simplify the analysis, enabling a focused study of structures that arise in such spaces. This reduction is not merely an abstraction but also a practical tool for understanding the behaviors and interactions within physical systems.</span>
-<span id="cb8-24"><a href="#cb8-24"></a></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="co">    other-links:</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="co">      - text: Main page</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="co">        href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       </span></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="co">---</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a></span>
+<span id="cb8-24"><a href="#cb8-24"></a><span class="fu">## Introduction</span></span>
 <span id="cb8-25"><a href="#cb8-25"></a></span>
-<span id="cb8-26"><a href="#cb8-26"></a><span class="fu">## Weather Data Visualization</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>Physics often describes the universe and its phenomena using the language of mathematics, where the Cartesian 3D space serves as the natural stage for physical events. This spatial representation, defined by three orthogonal axes $x$, $y$, and $z$, is the starting point for our exploration. By reducing the dimensionality to 2D, we simplify the analysis, enabling a focused study of structures that arise in such spaces. This reduction is not merely an abstraction but also a practical tool for understanding the behaviors and interactions within physical systems.</span>
 <span id="cb8-27"><a href="#cb8-27"></a></span>
-<span id="cb8-28"><a href="#cb8-28"></a>Interactive weather maps serve as an excellent introduction to the fundamental ideas required to study physics. If one can interpret these maps, they will find it easier to grasp the basic concepts of scalar and vector fields, which are central to understanding physical systems.</span>
-<span id="cb8-29"><a href="#cb8-29"></a></span>
-<span id="cb8-30"><a href="#cb8-30"></a>On such maps, temperature is represented using a color gradient, where each color corresponds to a specific value at a given point in space. This visualization aligns with the definition of a **scalar field**, which assigns a single numerical value to each point in space. </span>
-<span id="cb8-31"><a href="#cb8-31"></a></span>
-<span id="cb8-32"><a href="#cb8-32"></a>Similarly, wind patterns are illustrated using moving line segments, where their length and direction represent the speed and direction of the wind at various points. These segments directly depict **vector fields**, as they assign a vector—defined by both magnitude and direction—to each point in space. Since the magnitude is expressed as a numerical value, the background color can be used to represent the magnitude of the vector field.</span>
-<span id="cb8-33"><a href="#cb8-33"></a></span>
+<span id="cb8-28"><a href="#cb8-28"></a></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="fu">## Weather Data Visualization</span></span>
+<span id="cb8-30"><a href="#cb8-30"></a></span>
+<span id="cb8-31"><a href="#cb8-31"></a>Interactive weather maps serve as an excellent introduction to the fundamental ideas required to study physics. If one can interpret these maps, they will find it easier to grasp the basic concepts of scalar and vector fields, which are central to understanding physical systems.</span>
+<span id="cb8-32"><a href="#cb8-32"></a></span>
+<span id="cb8-33"><a href="#cb8-33"></a>On such maps, temperature is represented using a color gradient, where each color corresponds to a specific value at a given point in space. This visualization aligns with the definition of a **scalar field**, which assigns a single numerical value to each point in space. </span>
 <span id="cb8-34"><a href="#cb8-34"></a></span>
-<span id="cb8-35"><a href="#cb8-35"></a><span class="in">```{=html}</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a><span class="in">&lt;iframe width=&quot;650&quot; height=&quot;450&quot; src=&quot;https://embed.windy.com/embed2.html&quot; frameborder=&quot;0&quot; data-external=&quot;1&quot;&gt;&lt;/iframe&gt;</span></span>
+<span id="cb8-35"><a href="#cb8-35"></a>Similarly, wind patterns are illustrated using moving line segments, where their length and direction represent the speed and direction of the wind at various points. These segments directly depict **vector fields**, as they assign a vector—defined by both magnitude and direction—to each point in space. Since the magnitude is expressed as a numerical value, the background color can be used to represent the magnitude of the vector field.</span>
+<span id="cb8-36"><a href="#cb8-36"></a></span>
 <span id="cb8-37"><a href="#cb8-37"></a></span>
-<span id="cb8-38"><a href="#cb8-38"></a><span class="in">```</span></span>
-<span id="cb8-39"><a href="#cb8-39"></a></span>
-<span id="cb8-40"><a href="#cb8-40"></a><span class="co">[</span><span class="ot">www.windy.com</span><span class="co">](https://www.windy.com/)</span></span>
-<span id="cb8-41"><a href="#cb8-41"></a></span>
+<span id="cb8-38"><a href="#cb8-38"></a><span class="in">```{=html}</span></span>
+<span id="cb8-39"><a href="#cb8-39"></a><span class="in">&lt;iframe width=&quot;650&quot; height=&quot;450&quot; src=&quot;https://embed.windy.com/embed2.html&quot; frameborder=&quot;0&quot; data-external=&quot;1&quot;&gt;&lt;/iframe&gt;</span></span>
+<span id="cb8-40"><a href="#cb8-40"></a></span>
+<span id="cb8-41"><a href="#cb8-41"></a><span class="in">```</span></span>
 <span id="cb8-42"><a href="#cb8-42"></a></span>
-<span id="cb8-43"><a href="#cb8-43"></a>Having this background, we can now delve into the mathematical representations of scalar and vector fields in 2D space. Let us use more formal definitions to understand these concepts better.</span>
+<span id="cb8-43"><a href="#cb8-43"></a><span class="co">[</span><span class="ot">www.windy.com</span><span class="co">](https://www.windy.com/)</span></span>
 <span id="cb8-44"><a href="#cb8-44"></a></span>
-<span id="cb8-45"><a href="#cb8-45"></a><span class="fu">## Scalar Fields</span></span>
-<span id="cb8-46"><a href="#cb8-46"></a></span>
-<span id="cb8-47"><a href="#cb8-47"></a>A scalar field associates a single real value to every point in a given space. In 2D, this can be represented as a function $T(x, y)$, where $T$ could represent a physical property like temperature.</span>
-<span id="cb8-48"><a href="#cb8-48"></a></span>
-<span id="cb8-49"><a href="#cb8-49"></a><span class="fu">### Example: Temperature on a surface</span></span>
-<span id="cb8-50"><a href="#cb8-50"></a></span>
-<span id="cb8-51"><a href="#cb8-51"></a>Consider a simple model where the temperature of a surface varies with both position and time:</span>
-<span id="cb8-52"><a href="#cb8-52"></a></span>
-<span id="cb8-53"><a href="#cb8-53"></a>$$</span>
-<span id="cb8-54"><a href="#cb8-54"></a>T(x, y) = 5 \sin(x) \cos(y)</span>
-<span id="cb8-55"><a href="#cb8-55"></a>$$</span>
-<span id="cb8-56"><a href="#cb8-56"></a></span>
-<span id="cb8-57"><a href="#cb8-57"></a>Below is a Python code of this scalar field:</span>
-<span id="cb8-58"><a href="#cb8-58"></a></span>
-<span id="cb8-61"><a href="#cb8-61"></a><span class="in">```{python}</span></span>
-<span id="cb8-62"><a href="#cb8-62"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-63"><a href="#cb8-63"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-64"><a href="#cb8-64"></a></span>
-<span id="cb8-65"><a href="#cb8-65"></a><span class="co"># Scalar field definition</span></span>
-<span id="cb8-66"><a href="#cb8-66"></a><span class="kw">def</span> scalar_field(x, y):</span>
-<span id="cb8-67"><a href="#cb8-67"></a>    <span class="cf">return</span>  <span class="dv">5</span> <span class="op">*</span> np.sin(x) <span class="op">*</span> np.cos(y)</span>
-<span id="cb8-68"><a href="#cb8-68"></a></span>
-<span id="cb8-69"><a href="#cb8-69"></a><span class="co"># Generate grid points</span></span>
-<span id="cb8-70"><a href="#cb8-70"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb8-71"><a href="#cb8-71"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb8-72"><a href="#cb8-72"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb8-73"><a href="#cb8-73"></a></span>
-<span id="cb8-74"><a href="#cb8-74"></a><span class="co"># Compute scalar field values</span></span>
-<span id="cb8-75"><a href="#cb8-75"></a>T <span class="op">=</span> scalar_field(x, y)</span>
+<span id="cb8-45"><a href="#cb8-45"></a></span>
+<span id="cb8-46"><a href="#cb8-46"></a>Having this background, we can now delve into the mathematical representations of scalar and vector fields in 2D space. Let us use more formal definitions to understand these concepts better.</span>
+<span id="cb8-47"><a href="#cb8-47"></a></span>
+<span id="cb8-48"><a href="#cb8-48"></a><span class="fu">## Scalar Fields</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a></span>
+<span id="cb8-50"><a href="#cb8-50"></a>A scalar field associates a single real value to every point in a given space. In 2D, this can be represented as a function $T(x, y)$, where $T$ could represent a physical property like temperature.</span>
+<span id="cb8-51"><a href="#cb8-51"></a></span>
+<span id="cb8-52"><a href="#cb8-52"></a><span class="fu">### Example: Temperature on a surface</span></span>
+<span id="cb8-53"><a href="#cb8-53"></a></span>
+<span id="cb8-54"><a href="#cb8-54"></a>Consider a simple model where the temperature of a surface varies with both position and time:</span>
+<span id="cb8-55"><a href="#cb8-55"></a></span>
+<span id="cb8-56"><a href="#cb8-56"></a>$$</span>
+<span id="cb8-57"><a href="#cb8-57"></a>T(x, y) = 5 \sin(x) \cos(y)</span>
+<span id="cb8-58"><a href="#cb8-58"></a>$$</span>
+<span id="cb8-59"><a href="#cb8-59"></a></span>
+<span id="cb8-60"><a href="#cb8-60"></a>Below is a Python code of this scalar field:</span>
+<span id="cb8-61"><a href="#cb8-61"></a></span>
+<span id="cb8-64"><a href="#cb8-64"></a><span class="in">```{python}</span></span>
+<span id="cb8-65"><a href="#cb8-65"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-66"><a href="#cb8-66"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-67"><a href="#cb8-67"></a></span>
+<span id="cb8-68"><a href="#cb8-68"></a><span class="co"># Scalar field definition</span></span>
+<span id="cb8-69"><a href="#cb8-69"></a><span class="kw">def</span> scalar_field(x, y):</span>
+<span id="cb8-70"><a href="#cb8-70"></a>    <span class="cf">return</span>  <span class="dv">5</span> <span class="op">*</span> np.sin(x) <span class="op">*</span> np.cos(y)</span>
+<span id="cb8-71"><a href="#cb8-71"></a></span>
+<span id="cb8-72"><a href="#cb8-72"></a><span class="co"># Generate grid points</span></span>
+<span id="cb8-73"><a href="#cb8-73"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb8-74"><a href="#cb8-74"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb8-75"><a href="#cb8-75"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
 <span id="cb8-76"><a href="#cb8-76"></a></span>
-<span id="cb8-77"><a href="#cb8-77"></a><span class="co"># Plot the scalar field</span></span>
-<span id="cb8-78"><a href="#cb8-78"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb8-79"><a href="#cb8-79"></a>plt.imshow(T, extent<span class="op">=</span>[<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>], origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, cmap<span class="op">=</span><span class="st">&quot;coolwarm&quot;</span>)</span>
-<span id="cb8-80"><a href="#cb8-80"></a>plt.colorbar(label<span class="op">=</span><span class="st">&quot;Temperature&quot;</span>)</span>
-<span id="cb8-81"><a href="#cb8-81"></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
-<span id="cb8-82"><a href="#cb8-82"></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
-<span id="cb8-83"><a href="#cb8-83"></a>plt.title(<span class="st">&quot;Temperature Distribution on a Surface&quot;</span>)</span>
-<span id="cb8-84"><a href="#cb8-84"></a>plt.show()</span>
-<span id="cb8-85"><a href="#cb8-85"></a></span>
-<span id="cb8-86"><a href="#cb8-86"></a><span class="in">```</span></span>
-<span id="cb8-87"><a href="#cb8-87"></a></span>
-<span id="cb8-88"><a href="#cb8-88"></a>Above example defines a scalar field that do not depend on time. As we can see on weather maps, scalar fields can also be time-dependent, where the value of the field changes with time.</span>
-<span id="cb8-89"><a href="#cb8-89"></a></span>
-<span id="cb8-90"><a href="#cb8-90"></a>To define a time-dependent scalar field, we can modify the previous example by adding explicit time dependence:</span>
-<span id="cb8-91"><a href="#cb8-91"></a></span>
-<span id="cb8-92"><a href="#cb8-92"></a>$$</span>
-<span id="cb8-93"><a href="#cb8-93"></a>T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}</span>
-<span id="cb8-94"><a href="#cb8-94"></a>$$</span>
-<span id="cb8-95"><a href="#cb8-95"></a></span>
-<span id="cb8-96"><a href="#cb8-96"></a>Now the temperature at each point $(x, y)$ decays exponentially with time. To visualize this field, we can use the following Python or Geogebra code in 3D calculator:</span>
-<span id="cb8-97"><a href="#cb8-97"></a></span>
-<span id="cb8-98"><a href="#cb8-98"></a>::: {.geogebra-instruction}</span>
-<span id="cb8-99"><a href="#cb8-99"></a><span class="ss">* </span>t=Slider<span class="co">[</span><span class="ot">0,10,0.01</span><span class="co">]</span></span>
-<span id="cb8-100"><a href="#cb8-100"></a><span class="ss">* </span>T(x,y)=5*sin(x)*cos(y)*exp(-t)</span>
-<span id="cb8-101"><a href="#cb8-101"></a>:::</span>
-<span id="cb8-102"><a href="#cb8-102"></a></span>
-<span id="cb8-103"><a href="#cb8-103"></a>Or we can use the following Python code to grasp 4 time steps:</span>
-<span id="cb8-104"><a href="#cb8-104"></a></span>
-<span id="cb8-107"><a href="#cb8-107"></a><span class="in">```{python}</span></span>
-<span id="cb8-108"><a href="#cb8-108"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-109"><a href="#cb8-109"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-110"><a href="#cb8-110"></a></span>
-<span id="cb8-111"><a href="#cb8-111"></a><span class="co"># Scalar field definition</span></span>
-<span id="cb8-112"><a href="#cb8-112"></a><span class="kw">def</span> scalar_field(x, y, t):</span>
-<span id="cb8-113"><a href="#cb8-113"></a>    <span class="cf">return</span> <span class="dv">5</span> <span class="op">*</span> np.sin(x) <span class="op">*</span> np.cos(y) <span class="op">*</span> np.exp(<span class="op">-</span>t)</span>
-<span id="cb8-114"><a href="#cb8-114"></a></span>
-<span id="cb8-115"><a href="#cb8-115"></a><span class="co"># Generate grid points</span></span>
-<span id="cb8-116"><a href="#cb8-116"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb8-117"><a href="#cb8-117"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
-<span id="cb8-118"><a href="#cb8-118"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb8-119"><a href="#cb8-119"></a></span>
-<span id="cb8-120"><a href="#cb8-120"></a><span class="co"># Compute scalar field values for 4 time steps</span></span>
-<span id="cb8-121"><a href="#cb8-121"></a>T <span class="op">=</span> np.zeros((<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">4</span>))</span>
-<span id="cb8-122"><a href="#cb8-122"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb8-123"><a href="#cb8-123"></a>    T[:, :, i] <span class="op">=</span> scalar_field(x, y, i)</span>
-<span id="cb8-124"><a href="#cb8-124"></a></span>
-<span id="cb8-125"><a href="#cb8-125"></a><span class="co"># Determine common color scale</span></span>
-<span id="cb8-126"><a href="#cb8-126"></a>vmin <span class="op">=</span> np.<span class="bu">min</span>(T)</span>
-<span id="cb8-127"><a href="#cb8-127"></a>vmax <span class="op">=</span> np.<span class="bu">max</span>(T)</span>
-<span id="cb8-128"><a href="#cb8-128"></a></span>
-<span id="cb8-129"><a href="#cb8-129"></a><span class="co"># Plot the scalar field for 4 time steps</span></span>
-<span id="cb8-130"><a href="#cb8-130"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">12</span>))</span>
+<span id="cb8-77"><a href="#cb8-77"></a><span class="co"># Compute scalar field values</span></span>
+<span id="cb8-78"><a href="#cb8-78"></a>T <span class="op">=</span> scalar_field(x, y)</span>
+<span id="cb8-79"><a href="#cb8-79"></a></span>
+<span id="cb8-80"><a href="#cb8-80"></a><span class="co"># Plot the scalar field</span></span>
+<span id="cb8-81"><a href="#cb8-81"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb8-82"><a href="#cb8-82"></a>plt.imshow(T, extent<span class="op">=</span>[<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>], origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, cmap<span class="op">=</span><span class="st">&quot;coolwarm&quot;</span>)</span>
+<span id="cb8-83"><a href="#cb8-83"></a>plt.colorbar(label<span class="op">=</span><span class="st">&quot;Temperature&quot;</span>)</span>
+<span id="cb8-84"><a href="#cb8-84"></a>plt.xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
+<span id="cb8-85"><a href="#cb8-85"></a>plt.ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
+<span id="cb8-86"><a href="#cb8-86"></a>plt.title(<span class="st">&quot;Temperature Distribution on a Surface&quot;</span>)</span>
+<span id="cb8-87"><a href="#cb8-87"></a>plt.show()</span>
+<span id="cb8-88"><a href="#cb8-88"></a></span>
+<span id="cb8-89"><a href="#cb8-89"></a><span class="in">```</span></span>
+<span id="cb8-90"><a href="#cb8-90"></a></span>
+<span id="cb8-91"><a href="#cb8-91"></a>Above example defines a scalar field that do not depend on time. As we can see on weather maps, scalar fields can also be time-dependent, where the value of the field changes with time.</span>
+<span id="cb8-92"><a href="#cb8-92"></a></span>
+<span id="cb8-93"><a href="#cb8-93"></a>To define a time-dependent scalar field, we can modify the previous example by adding explicit time dependence:</span>
+<span id="cb8-94"><a href="#cb8-94"></a></span>
+<span id="cb8-95"><a href="#cb8-95"></a>$$</span>
+<span id="cb8-96"><a href="#cb8-96"></a>T(x, y, t) = 5 \sin(x) \cos(y) e^{-t}</span>
+<span id="cb8-97"><a href="#cb8-97"></a>$$</span>
+<span id="cb8-98"><a href="#cb8-98"></a></span>
+<span id="cb8-99"><a href="#cb8-99"></a>Now the temperature at each point $(x, y)$ decays exponentially with time. To visualize this field, we can use the following Python or Geogebra code in 3D calculator:</span>
+<span id="cb8-100"><a href="#cb8-100"></a></span>
+<span id="cb8-101"><a href="#cb8-101"></a>::: {.geogebra-instruction}</span>
+<span id="cb8-102"><a href="#cb8-102"></a><span class="ss">* </span>t=Slider<span class="co">[</span><span class="ot">0,10,0.01</span><span class="co">]</span></span>
+<span id="cb8-103"><a href="#cb8-103"></a><span class="ss">* </span>T(x,y)=5*sin(x)*cos(y)*exp(-t)</span>
+<span id="cb8-104"><a href="#cb8-104"></a>:::</span>
+<span id="cb8-105"><a href="#cb8-105"></a></span>
+<span id="cb8-106"><a href="#cb8-106"></a>Or we can use the following Python code to grasp 4 time steps:</span>
+<span id="cb8-107"><a href="#cb8-107"></a></span>
+<span id="cb8-110"><a href="#cb8-110"></a><span class="in">```{python}</span></span>
+<span id="cb8-111"><a href="#cb8-111"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-112"><a href="#cb8-112"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-113"><a href="#cb8-113"></a></span>
+<span id="cb8-114"><a href="#cb8-114"></a><span class="co"># Scalar field definition</span></span>
+<span id="cb8-115"><a href="#cb8-115"></a><span class="kw">def</span> scalar_field(x, y, t):</span>
+<span id="cb8-116"><a href="#cb8-116"></a>    <span class="cf">return</span> <span class="dv">5</span> <span class="op">*</span> np.sin(x) <span class="op">*</span> np.cos(y) <span class="op">*</span> np.exp(<span class="op">-</span>t)</span>
+<span id="cb8-117"><a href="#cb8-117"></a></span>
+<span id="cb8-118"><a href="#cb8-118"></a><span class="co"># Generate grid points</span></span>
+<span id="cb8-119"><a href="#cb8-119"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb8-120"><a href="#cb8-120"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb8-121"><a href="#cb8-121"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb8-122"><a href="#cb8-122"></a></span>
+<span id="cb8-123"><a href="#cb8-123"></a><span class="co"># Compute scalar field values for 4 time steps</span></span>
+<span id="cb8-124"><a href="#cb8-124"></a>T <span class="op">=</span> np.zeros((<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">4</span>))</span>
+<span id="cb8-125"><a href="#cb8-125"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb8-126"><a href="#cb8-126"></a>    T[:, :, i] <span class="op">=</span> scalar_field(x, y, i)</span>
+<span id="cb8-127"><a href="#cb8-127"></a></span>
+<span id="cb8-128"><a href="#cb8-128"></a><span class="co"># Determine common color scale</span></span>
+<span id="cb8-129"><a href="#cb8-129"></a>vmin <span class="op">=</span> np.<span class="bu">min</span>(T)</span>
+<span id="cb8-130"><a href="#cb8-130"></a>vmax <span class="op">=</span> np.<span class="bu">max</span>(T)</span>
 <span id="cb8-131"><a href="#cb8-131"></a></span>
-<span id="cb8-132"><a href="#cb8-132"></a><span class="co"># Store the last image for the colorbar</span></span>
-<span id="cb8-133"><a href="#cb8-133"></a>im <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-132"><a href="#cb8-132"></a><span class="co"># Plot the scalar field for 4 time steps</span></span>
+<span id="cb8-133"><a href="#cb8-133"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">12</span>))</span>
 <span id="cb8-134"><a href="#cb8-134"></a></span>
-<span id="cb8-135"><a href="#cb8-135"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs.flat):</span>
-<span id="cb8-136"><a href="#cb8-136"></a>    ax.grid(<span class="va">False</span>)  <span class="co"># Explicitly disable gridlines</span></span>
-<span id="cb8-137"><a href="#cb8-137"></a>    im <span class="op">=</span> ax.imshow(T[:, :, i], extent<span class="op">=</span>[<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>], origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, cmap<span class="op">=</span><span class="st">&quot;coolwarm&quot;</span>, vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax)</span>
-<span id="cb8-138"><a href="#cb8-138"></a>    ax.set_title(<span class="ss">f&quot;Temperature Distribution at t=</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb8-139"><a href="#cb8-139"></a>    ax.set_xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
-<span id="cb8-140"><a href="#cb8-140"></a>    ax.set_ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
-<span id="cb8-141"><a href="#cb8-141"></a></span>
-<span id="cb8-142"><a href="#cb8-142"></a><span class="co"># Adjust layout to fit a colorbar outside the plots</span></span>
-<span id="cb8-143"><a href="#cb8-143"></a>fig.subplots_adjust(right<span class="op">=</span><span class="fl">0.85</span>)</span>
-<span id="cb8-144"><a href="#cb8-144"></a>cbar_ax <span class="op">=</span> fig.add_axes([<span class="fl">0.88</span>, <span class="fl">0.15</span>, <span class="fl">0.02</span>, <span class="fl">0.7</span>])  <span class="co"># Define a new axis for the colorbar</span></span>
-<span id="cb8-145"><a href="#cb8-145"></a>cbar <span class="op">=</span> fig.colorbar(im, cax<span class="op">=</span>cbar_ax)</span>
-<span id="cb8-146"><a href="#cb8-146"></a>cbar.set_label(<span class="st">&quot;Temperature&quot;</span>)</span>
-<span id="cb8-147"><a href="#cb8-147"></a></span>
-<span id="cb8-148"><a href="#cb8-148"></a>plt.show()</span>
-<span id="cb8-149"><a href="#cb8-149"></a></span>
-<span id="cb8-150"><a href="#cb8-150"></a><span class="in">```</span></span>
-<span id="cb8-151"><a href="#cb8-151"></a></span>
-<span id="cb8-152"><a href="#cb8-152"></a><span class="fu">## Vector Fields</span></span>
-<span id="cb8-153"><a href="#cb8-153"></a></span>
-<span id="cb8-154"><a href="#cb8-154"></a>A vector field assigns a vector to every point in space. In 2D, such a field can be represented as </span>
-<span id="cb8-155"><a href="#cb8-155"></a></span>
-<span id="cb8-156"><a href="#cb8-156"></a>$$\vec{F}(x, y) = (F_x(x, y), F_y(x, y))$$</span>
-<span id="cb8-157"><a href="#cb8-157"></a></span>
-<span id="cb8-158"><a href="#cb8-158"></a>where $F_x$ and $F_y$ are the components of the vector field. Both may depend on the position $(x, y)$.</span>
-<span id="cb8-159"><a href="#cb8-159"></a></span>
-<span id="cb8-160"><a href="#cb8-160"></a><span class="fu">### Example: Static vector field</span></span>
-<span id="cb8-161"><a href="#cb8-161"></a></span>
-<span id="cb8-162"><a href="#cb8-162"></a>Let us examine a vector field that depends on both space and time:</span>
-<span id="cb8-163"><a href="#cb8-163"></a></span>
-<span id="cb8-164"><a href="#cb8-164"></a>$$</span>
-<span id="cb8-165"><a href="#cb8-165"></a>\vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})</span>
-<span id="cb8-166"><a href="#cb8-166"></a>$$</span>
-<span id="cb8-167"><a href="#cb8-167"></a></span>
-<span id="cb8-168"><a href="#cb8-168"></a>This field might represent the velocity of a fluid at each point $(x, y)$ in a 2D space. Below is a Python code to visualize this vector field:</span>
-<span id="cb8-169"><a href="#cb8-169"></a></span>
-<span id="cb8-172"><a href="#cb8-172"></a><span class="in">```{python}</span></span>
-<span id="cb8-173"><a href="#cb8-173"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-174"><a href="#cb8-174"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-175"><a href="#cb8-175"></a></span>
-<span id="cb8-176"><a href="#cb8-176"></a><span class="co"># Definition of the vector field</span></span>
-<span id="cb8-177"><a href="#cb8-177"></a><span class="kw">def</span> vector_field(x, y):</span>
-<span id="cb8-178"><a href="#cb8-178"></a>    Fx <span class="op">=</span> np.sin(y)</span>
-<span id="cb8-179"><a href="#cb8-179"></a>    Fy <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(x)<span class="op">/</span><span class="dv">5</span>)</span>
-<span id="cb8-180"><a href="#cb8-180"></a>    <span class="cf">return</span> Fx, Fy</span>
-<span id="cb8-181"><a href="#cb8-181"></a></span>
-<span id="cb8-182"><a href="#cb8-182"></a><span class="co"># Generating a grid of points</span></span>
-<span id="cb8-183"><a href="#cb8-183"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
-<span id="cb8-184"><a href="#cb8-184"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
-<span id="cb8-185"><a href="#cb8-185"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb8-186"><a href="#cb8-186"></a></span>
-<span id="cb8-187"><a href="#cb8-187"></a><span class="co"># Calculating the vector field</span></span>
-<span id="cb8-188"><a href="#cb8-188"></a>Fx, Fy <span class="op">=</span> vector_field(x, y)</span>
+<span id="cb8-135"><a href="#cb8-135"></a><span class="co"># Store the last image for the colorbar</span></span>
+<span id="cb8-136"><a href="#cb8-136"></a>im <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb8-137"><a href="#cb8-137"></a></span>
+<span id="cb8-138"><a href="#cb8-138"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs.flat):</span>
+<span id="cb8-139"><a href="#cb8-139"></a>    ax.grid(<span class="va">False</span>)  <span class="co"># Explicitly disable gridlines</span></span>
+<span id="cb8-140"><a href="#cb8-140"></a>    im <span class="op">=</span> ax.imshow(T[:, :, i], extent<span class="op">=</span>[<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>], origin<span class="op">=</span><span class="st">&#39;lower&#39;</span>, cmap<span class="op">=</span><span class="st">&quot;coolwarm&quot;</span>, vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax)</span>
+<span id="cb8-141"><a href="#cb8-141"></a>    ax.set_title(<span class="ss">f&quot;Temperature Distribution at t=</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb8-142"><a href="#cb8-142"></a>    ax.set_xlabel(<span class="st">&quot;X-axis&quot;</span>)</span>
+<span id="cb8-143"><a href="#cb8-143"></a>    ax.set_ylabel(<span class="st">&quot;Y-axis&quot;</span>)</span>
+<span id="cb8-144"><a href="#cb8-144"></a></span>
+<span id="cb8-145"><a href="#cb8-145"></a><span class="co"># Adjust layout to fit a colorbar outside the plots</span></span>
+<span id="cb8-146"><a href="#cb8-146"></a>fig.subplots_adjust(right<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb8-147"><a href="#cb8-147"></a>cbar_ax <span class="op">=</span> fig.add_axes([<span class="fl">0.88</span>, <span class="fl">0.15</span>, <span class="fl">0.02</span>, <span class="fl">0.7</span>])  <span class="co"># Define a new axis for the colorbar</span></span>
+<span id="cb8-148"><a href="#cb8-148"></a>cbar <span class="op">=</span> fig.colorbar(im, cax<span class="op">=</span>cbar_ax)</span>
+<span id="cb8-149"><a href="#cb8-149"></a>cbar.set_label(<span class="st">&quot;Temperature&quot;</span>)</span>
+<span id="cb8-150"><a href="#cb8-150"></a></span>
+<span id="cb8-151"><a href="#cb8-151"></a>plt.show()</span>
+<span id="cb8-152"><a href="#cb8-152"></a></span>
+<span id="cb8-153"><a href="#cb8-153"></a><span class="in">```</span></span>
+<span id="cb8-154"><a href="#cb8-154"></a></span>
+<span id="cb8-155"><a href="#cb8-155"></a><span class="fu">## Vector Fields</span></span>
+<span id="cb8-156"><a href="#cb8-156"></a></span>
+<span id="cb8-157"><a href="#cb8-157"></a>A vector field assigns a vector to every point in space. In 2D, such a field can be represented as </span>
+<span id="cb8-158"><a href="#cb8-158"></a></span>
+<span id="cb8-159"><a href="#cb8-159"></a>$$\vec{F}(x, y) = (F_x(x, y), F_y(x, y))$$</span>
+<span id="cb8-160"><a href="#cb8-160"></a></span>
+<span id="cb8-161"><a href="#cb8-161"></a>where $F_x$ and $F_y$ are the components of the vector field. Both may depend on the position $(x, y)$.</span>
+<span id="cb8-162"><a href="#cb8-162"></a></span>
+<span id="cb8-163"><a href="#cb8-163"></a><span class="fu">### Example: Static vector field</span></span>
+<span id="cb8-164"><a href="#cb8-164"></a></span>
+<span id="cb8-165"><a href="#cb8-165"></a>Let us examine a vector field that depends on both space and time:</span>
+<span id="cb8-166"><a href="#cb8-166"></a></span>
+<span id="cb8-167"><a href="#cb8-167"></a>$$</span>
+<span id="cb8-168"><a href="#cb8-168"></a>\vec{F}(x, y) = (\sin(y), \sqrt{\frac{|x|}{5}})</span>
+<span id="cb8-169"><a href="#cb8-169"></a>$$</span>
+<span id="cb8-170"><a href="#cb8-170"></a></span>
+<span id="cb8-171"><a href="#cb8-171"></a>This field might represent the velocity of a fluid at each point $(x, y)$ in a 2D space. Below is a Python code to visualize this vector field:</span>
+<span id="cb8-172"><a href="#cb8-172"></a></span>
+<span id="cb8-175"><a href="#cb8-175"></a><span class="in">```{python}</span></span>
+<span id="cb8-176"><a href="#cb8-176"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-177"><a href="#cb8-177"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-178"><a href="#cb8-178"></a></span>
+<span id="cb8-179"><a href="#cb8-179"></a><span class="co"># Definition of the vector field</span></span>
+<span id="cb8-180"><a href="#cb8-180"></a><span class="kw">def</span> vector_field(x, y):</span>
+<span id="cb8-181"><a href="#cb8-181"></a>    Fx <span class="op">=</span> np.sin(y)</span>
+<span id="cb8-182"><a href="#cb8-182"></a>    Fy <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(x)<span class="op">/</span><span class="dv">5</span>)</span>
+<span id="cb8-183"><a href="#cb8-183"></a>    <span class="cf">return</span> Fx, Fy</span>
+<span id="cb8-184"><a href="#cb8-184"></a></span>
+<span id="cb8-185"><a href="#cb8-185"></a><span class="co"># Generating a grid of points</span></span>
+<span id="cb8-186"><a href="#cb8-186"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
+<span id="cb8-187"><a href="#cb8-187"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
+<span id="cb8-188"><a href="#cb8-188"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
 <span id="cb8-189"><a href="#cb8-189"></a></span>
-<span id="cb8-190"><a href="#cb8-190"></a><span class="co"># Calculating the lengths of the vectors</span></span>
-<span id="cb8-191"><a href="#cb8-191"></a>d_lengths <span class="op">=</span> np.sqrt(Fx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Fy<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-190"><a href="#cb8-190"></a><span class="co"># Calculating the vector field</span></span>
+<span id="cb8-191"><a href="#cb8-191"></a>Fx, Fy <span class="op">=</span> vector_field(x, y)</span>
 <span id="cb8-192"><a href="#cb8-192"></a></span>
-<span id="cb8-193"><a href="#cb8-193"></a><span class="co"># Initializing the plot</span></span>
-<span id="cb8-194"><a href="#cb8-194"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
-<span id="cb8-195"><a href="#cb8-195"></a>quiver <span class="op">=</span> ax.quiver(</span>
-<span id="cb8-196"><a href="#cb8-196"></a>    x, y, Fx, Fy, d_lengths, angles<span class="op">=</span><span class="st">&#39;xy&#39;</span>, scale_units<span class="op">=</span><span class="st">&#39;xy&#39;</span>, scale<span class="op">=</span><span class="dv">1</span>, cmap<span class="op">=</span><span class="st">&#39;viridis&#39;</span></span>
-<span id="cb8-197"><a href="#cb8-197"></a>)</span>
-<span id="cb8-198"><a href="#cb8-198"></a>cb <span class="op">=</span> fig.colorbar(quiver, ax<span class="op">=</span>ax, label<span class="op">=</span><span class="st">&quot;Vector length&quot;</span>)</span>
-<span id="cb8-199"><a href="#cb8-199"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
-<span id="cb8-200"><a href="#cb8-200"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
-<span id="cb8-201"><a href="#cb8-201"></a>ax.set_xlabel(<span class="st">&quot;X axis&quot;</span>)</span>
-<span id="cb8-202"><a href="#cb8-202"></a>ax.set_ylabel(<span class="st">&quot;Y axis&quot;</span>)</span>
-<span id="cb8-203"><a href="#cb8-203"></a>ax.set_title(<span class="st">&quot;2D vector field with color dependent on vector length&quot;</span>)</span>
-<span id="cb8-204"><a href="#cb8-204"></a></span>
-<span id="cb8-205"><a href="#cb8-205"></a>plt.show()</span>
-<span id="cb8-206"><a href="#cb8-206"></a><span class="in">```</span></span>
+<span id="cb8-193"><a href="#cb8-193"></a><span class="co"># Calculating the lengths of the vectors</span></span>
+<span id="cb8-194"><a href="#cb8-194"></a>d_lengths <span class="op">=</span> np.sqrt(Fx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Fy<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-195"><a href="#cb8-195"></a></span>
+<span id="cb8-196"><a href="#cb8-196"></a><span class="co"># Initializing the plot</span></span>
+<span id="cb8-197"><a href="#cb8-197"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb8-198"><a href="#cb8-198"></a>quiver <span class="op">=</span> ax.quiver(</span>
+<span id="cb8-199"><a href="#cb8-199"></a>    x, y, Fx, Fy, d_lengths, angles<span class="op">=</span><span class="st">&#39;xy&#39;</span>, scale_units<span class="op">=</span><span class="st">&#39;xy&#39;</span>, scale<span class="op">=</span><span class="dv">1</span>, cmap<span class="op">=</span><span class="st">&#39;viridis&#39;</span></span>
+<span id="cb8-200"><a href="#cb8-200"></a>)</span>
+<span id="cb8-201"><a href="#cb8-201"></a>cb <span class="op">=</span> fig.colorbar(quiver, ax<span class="op">=</span>ax, label<span class="op">=</span><span class="st">&quot;Vector length&quot;</span>)</span>
+<span id="cb8-202"><a href="#cb8-202"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb8-203"><a href="#cb8-203"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb8-204"><a href="#cb8-204"></a>ax.set_xlabel(<span class="st">&quot;X axis&quot;</span>)</span>
+<span id="cb8-205"><a href="#cb8-205"></a>ax.set_ylabel(<span class="st">&quot;Y axis&quot;</span>)</span>
+<span id="cb8-206"><a href="#cb8-206"></a>ax.set_title(<span class="st">&quot;2D vector field with color dependent on vector length&quot;</span>)</span>
 <span id="cb8-207"><a href="#cb8-207"></a></span>
-<span id="cb8-208"><a href="#cb8-208"></a></span>
-<span id="cb8-209"><a href="#cb8-209"></a>Stream plot</span>
+<span id="cb8-208"><a href="#cb8-208"></a>plt.show()</span>
+<span id="cb8-209"><a href="#cb8-209"></a><span class="in">```</span></span>
 <span id="cb8-210"><a href="#cb8-210"></a></span>
-<span id="cb8-213"><a href="#cb8-213"></a><span class="in">```{python}</span></span>
-<span id="cb8-214"><a href="#cb8-214"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-215"><a href="#cb8-215"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-216"><a href="#cb8-216"></a></span>
-<span id="cb8-217"><a href="#cb8-217"></a><span class="co"># Definition of the vector field</span></span>
-<span id="cb8-218"><a href="#cb8-218"></a><span class="kw">def</span> vector_field(x, y):</span>
-<span id="cb8-219"><a href="#cb8-219"></a>    Fx <span class="op">=</span> np.sin(y)</span>
-<span id="cb8-220"><a href="#cb8-220"></a>    Fy <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(x)<span class="op">/</span><span class="dv">5</span>)</span>
-<span id="cb8-221"><a href="#cb8-221"></a>    <span class="cf">return</span> Fx, Fy</span>
-<span id="cb8-222"><a href="#cb8-222"></a></span>
-<span id="cb8-223"><a href="#cb8-223"></a><span class="co"># Generating a grid of points</span></span>
-<span id="cb8-224"><a href="#cb8-224"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">100</span>)  <span class="co"># Higher resolution for streamlines</span></span>
-<span id="cb8-225"><a href="#cb8-225"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">100</span>)</span>
-<span id="cb8-226"><a href="#cb8-226"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb8-227"><a href="#cb8-227"></a></span>
-<span id="cb8-228"><a href="#cb8-228"></a><span class="co"># Calculating the vector field</span></span>
-<span id="cb8-229"><a href="#cb8-229"></a>Fx, Fy <span class="op">=</span> vector_field(x, y)</span>
-<span id="cb8-230"><a href="#cb8-230"></a>d_lengths <span class="op">=</span> np.sqrt(Fx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Fy<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb8-231"><a href="#cb8-231"></a></span>
-<span id="cb8-232"><a href="#cb8-232"></a><span class="co"># Streamplot (Streamlines)</span></span>
-<span id="cb8-233"><a href="#cb8-233"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
-<span id="cb8-234"><a href="#cb8-234"></a>stream <span class="op">=</span> ax.streamplot(</span>
-<span id="cb8-235"><a href="#cb8-235"></a>    x[<span class="dv">0</span>, :], y[:, <span class="dv">0</span>], Fx, Fy, color<span class="op">=</span>d_lengths, cmap<span class="op">=</span><span class="st">&#39;viridis&#39;</span>, linewidth<span class="op">=</span><span class="fl">1.5</span></span>
-<span id="cb8-236"><a href="#cb8-236"></a>)</span>
-<span id="cb8-237"><a href="#cb8-237"></a>cb <span class="op">=</span> fig.colorbar(stream.lines, ax<span class="op">=</span>ax, label<span class="op">=</span><span class="st">&quot;Vector length&quot;</span>)</span>
-<span id="cb8-238"><a href="#cb8-238"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
-<span id="cb8-239"><a href="#cb8-239"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
-<span id="cb8-240"><a href="#cb8-240"></a>ax.set_xlabel(<span class="st">&quot;X axis&quot;</span>)</span>
-<span id="cb8-241"><a href="#cb8-241"></a>ax.set_ylabel(<span class="st">&quot;Y axis&quot;</span>)</span>
-<span id="cb8-242"><a href="#cb8-242"></a>ax.set_title(<span class="st">&quot;2D Vector Field with Streamlines&quot;</span>)</span>
-<span id="cb8-243"><a href="#cb8-243"></a>plt.show()</span>
-<span id="cb8-244"><a href="#cb8-244"></a><span class="in">```</span></span>
-<span id="cb8-245"><a href="#cb8-245"></a></span>
-<span id="cb8-246"><a href="#cb8-246"></a><span class="fu">## Derivatives and Integrals</span></span>
-<span id="cb8-247"><a href="#cb8-247"></a></span>
-<span id="cb8-248"><a href="#cb8-248"></a><span class="fu">### Derivatives</span></span>
-<span id="cb8-249"><a href="#cb8-249"></a></span>
-<span id="cb8-250"><a href="#cb8-250"></a><span class="fu">#### Derivative of functions of one variable</span></span>
-<span id="cb8-251"><a href="#cb8-251"></a></span>
-<span id="cb8-252"><a href="#cb8-252"></a>The derivative of a function $f(x)$ with respect to $x$ is defined as</span>
-<span id="cb8-253"><a href="#cb8-253"></a></span>
-<span id="cb8-254"><a href="#cb8-254"></a>$$</span>
-<span id="cb8-255"><a href="#cb8-255"></a>\frac{df(x)}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</span>
-<span id="cb8-256"><a href="#cb8-256"></a>$$</span>
-<span id="cb8-257"><a href="#cb8-257"></a></span>
-<span id="cb8-258"><a href="#cb8-258"></a>This limit represents the rate of change of the function $f(x)$ with respect to $x$.</span>
-<span id="cb8-259"><a href="#cb8-259"></a></span>
-<span id="cb8-260"><a href="#cb8-260"></a><span class="fu">#### Derivative of functions of two variables</span></span>
-<span id="cb8-261"><a href="#cb8-261"></a></span>
-<span id="cb8-262"><a href="#cb8-262"></a>The derivative of a function $f(x, y)$ with respect to $x$ is defined as</span>
-<span id="cb8-263"><a href="#cb8-263"></a></span>
-<span id="cb8-264"><a href="#cb8-264"></a>$$</span>
-<span id="cb8-265"><a href="#cb8-265"></a>\frac{\partial f(x, y)}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}</span>
-<span id="cb8-266"><a href="#cb8-266"></a>$$</span>
-<span id="cb8-267"><a href="#cb8-267"></a></span>
-<span id="cb8-268"><a href="#cb8-268"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes for a fixed value of $y$. This describes how the function changes in the $x$ direction.</span>
-<span id="cb8-269"><a href="#cb8-269"></a></span>
-<span id="cb8-270"><a href="#cb8-270"></a>Similarly, the derivative of a function $f(x, y)$ with respect to $y$ is defined as</span>
-<span id="cb8-271"><a href="#cb8-271"></a></span>
-<span id="cb8-272"><a href="#cb8-272"></a>$$</span>
-<span id="cb8-273"><a href="#cb8-273"></a>\frac{\partial f(x, y)}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}</span>
-<span id="cb8-274"><a href="#cb8-274"></a>$$</span>
-<span id="cb8-275"><a href="#cb8-275"></a></span>
-<span id="cb8-276"><a href="#cb8-276"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $y$ and describes how the function changes in the $y$ direction for a fixed value of $x$.</span>
-<span id="cb8-277"><a href="#cb8-277"></a></span>
-<span id="cb8-278"><a href="#cb8-278"></a><span class="fu">### Integrals</span></span>
-<span id="cb8-279"><a href="#cb8-279"></a></span>
-<span id="cb8-280"><a href="#cb8-280"></a>At the simplest level, an integral is the reverse of a derivative. The integral of a function $f(x)$ with respect to $x$ is defined as</span>
-<span id="cb8-281"><a href="#cb8-281"></a></span>
-<span id="cb8-282"><a href="#cb8-282"></a>$$</span>
-<span id="cb8-283"><a href="#cb8-283"></a>\int f(x) dx = F(x) + C</span>
-<span id="cb8-284"><a href="#cb8-284"></a>$$</span>
-<span id="cb8-285"><a href="#cb8-285"></a></span>
-<span id="cb8-286"><a href="#cb8-286"></a>where $F(x)$ is the antiderivative of $f(x)$ and $C$ is an integration constant. The antiderivative is a function whose derivative is equal to $f(x)$:</span>
-<span id="cb8-287"><a href="#cb8-287"></a></span>
-<span id="cb8-288"><a href="#cb8-288"></a>$$</span>
-<span id="cb8-289"><a href="#cb8-289"></a>\frac{dF(x)}{dx} = f(x)</span>
-<span id="cb8-290"><a href="#cb8-290"></a>$$</span>
-<span id="cb8-291"><a href="#cb8-291"></a></span>
-<span id="cb8-292"><a href="#cb8-292"></a>The integral is a measure of the area under the curve of the function $f(x)$. The integral is a function that gives the area under the curve of the function $f(x)$ up to a given point.</span>
-<span id="cb8-293"><a href="#cb8-293"></a></span>
-<span id="cb8-294"><a href="#cb8-294"></a><span class="fu">## Differential equations</span></span>
-<span id="cb8-295"><a href="#cb8-295"></a></span>
-<span id="cb8-296"><a href="#cb8-296"></a><span class="fu">### Starting example</span></span>
-<span id="cb8-297"><a href="#cb8-297"></a></span>
-<span id="cb8-298"><a href="#cb8-298"></a>Let&#39;s consider the first order differential equation</span>
-<span id="cb8-299"><a href="#cb8-299"></a></span>
-<span id="cb8-300"><a href="#cb8-300"></a>::: {.equation-box}</span>
-<span id="cb8-301"><a href="#cb8-301"></a>$$</span>
-<span id="cb8-302"><a href="#cb8-302"></a>\frac{dy(x)}{dx} = 2x</span>
-<span id="cb8-303"><a href="#cb8-303"></a>$$</span>
-<span id="cb8-304"><a href="#cb8-304"></a>:::</span>
-<span id="cb8-305"><a href="#cb8-305"></a></span>
-<span id="cb8-306"><a href="#cb8-306"></a>Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to $2x$. This equation tells us how the function $y(x)$ changes with $x$. The function $y(x)$ changes at a rate of $2x$ with respect to $x$. This is a simple differential equation that can be solved by integration.</span>
-<span id="cb8-307"><a href="#cb8-307"></a>$$</span>
-<span id="cb8-308"><a href="#cb8-308"></a>y(x) = x^2 + C</span>
-<span id="cb8-309"><a href="#cb8-309"></a>$$</span>
-<span id="cb8-310"><a href="#cb8-310"></a></span>
-<span id="cb8-311"><a href="#cb8-311"></a>where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. </span>
-<span id="cb8-312"><a href="#cb8-312"></a></span>
-<span id="cb8-315"><a href="#cb8-315"></a><span class="in">```{python}</span></span>
-<span id="cb8-316"><a href="#cb8-316"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-317"><a href="#cb8-317"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-318"><a href="#cb8-318"></a></span>
-<span id="cb8-319"><a href="#cb8-319"></a><span class="kw">def</span> y(x, C):</span>
-<span id="cb8-320"><a href="#cb8-320"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> C</span>
+<span id="cb8-211"><a href="#cb8-211"></a></span>
+<span id="cb8-212"><a href="#cb8-212"></a>Stream plot</span>
+<span id="cb8-213"><a href="#cb8-213"></a></span>
+<span id="cb8-216"><a href="#cb8-216"></a><span class="in">```{python}</span></span>
+<span id="cb8-217"><a href="#cb8-217"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-218"><a href="#cb8-218"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-219"><a href="#cb8-219"></a></span>
+<span id="cb8-220"><a href="#cb8-220"></a><span class="co"># Definition of the vector field</span></span>
+<span id="cb8-221"><a href="#cb8-221"></a><span class="kw">def</span> vector_field(x, y):</span>
+<span id="cb8-222"><a href="#cb8-222"></a>    Fx <span class="op">=</span> np.sin(y)</span>
+<span id="cb8-223"><a href="#cb8-223"></a>    Fy <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(x)<span class="op">/</span><span class="dv">5</span>)</span>
+<span id="cb8-224"><a href="#cb8-224"></a>    <span class="cf">return</span> Fx, Fy</span>
+<span id="cb8-225"><a href="#cb8-225"></a></span>
+<span id="cb8-226"><a href="#cb8-226"></a><span class="co"># Generating a grid of points</span></span>
+<span id="cb8-227"><a href="#cb8-227"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">100</span>)  <span class="co"># Higher resolution for streamlines</span></span>
+<span id="cb8-228"><a href="#cb8-228"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>, <span class="dv">100</span>)</span>
+<span id="cb8-229"><a href="#cb8-229"></a>x, y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb8-230"><a href="#cb8-230"></a></span>
+<span id="cb8-231"><a href="#cb8-231"></a><span class="co"># Calculating the vector field</span></span>
+<span id="cb8-232"><a href="#cb8-232"></a>Fx, Fy <span class="op">=</span> vector_field(x, y)</span>
+<span id="cb8-233"><a href="#cb8-233"></a>d_lengths <span class="op">=</span> np.sqrt(Fx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Fy<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb8-234"><a href="#cb8-234"></a></span>
+<span id="cb8-235"><a href="#cb8-235"></a><span class="co"># Streamplot (Streamlines)</span></span>
+<span id="cb8-236"><a href="#cb8-236"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb8-237"><a href="#cb8-237"></a>stream <span class="op">=</span> ax.streamplot(</span>
+<span id="cb8-238"><a href="#cb8-238"></a>    x[<span class="dv">0</span>, :], y[:, <span class="dv">0</span>], Fx, Fy, color<span class="op">=</span>d_lengths, cmap<span class="op">=</span><span class="st">&#39;viridis&#39;</span>, linewidth<span class="op">=</span><span class="fl">1.5</span></span>
+<span id="cb8-239"><a href="#cb8-239"></a>)</span>
+<span id="cb8-240"><a href="#cb8-240"></a>cb <span class="op">=</span> fig.colorbar(stream.lines, ax<span class="op">=</span>ax, label<span class="op">=</span><span class="st">&quot;Vector length&quot;</span>)</span>
+<span id="cb8-241"><a href="#cb8-241"></a>ax.set_xlim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb8-242"><a href="#cb8-242"></a>ax.set_ylim(<span class="op">-</span><span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb8-243"><a href="#cb8-243"></a>ax.set_xlabel(<span class="st">&quot;X axis&quot;</span>)</span>
+<span id="cb8-244"><a href="#cb8-244"></a>ax.set_ylabel(<span class="st">&quot;Y axis&quot;</span>)</span>
+<span id="cb8-245"><a href="#cb8-245"></a>ax.set_title(<span class="st">&quot;2D Vector Field with Streamlines&quot;</span>)</span>
+<span id="cb8-246"><a href="#cb8-246"></a>plt.show()</span>
+<span id="cb8-247"><a href="#cb8-247"></a><span class="in">```</span></span>
+<span id="cb8-248"><a href="#cb8-248"></a></span>
+<span id="cb8-249"><a href="#cb8-249"></a><span class="fu">## Derivatives and Integrals</span></span>
+<span id="cb8-250"><a href="#cb8-250"></a></span>
+<span id="cb8-251"><a href="#cb8-251"></a><span class="fu">### Derivatives</span></span>
+<span id="cb8-252"><a href="#cb8-252"></a></span>
+<span id="cb8-253"><a href="#cb8-253"></a><span class="fu">#### Derivative of functions of one variable</span></span>
+<span id="cb8-254"><a href="#cb8-254"></a></span>
+<span id="cb8-255"><a href="#cb8-255"></a>The derivative of a function $f(x)$ with respect to $x$ is defined as</span>
+<span id="cb8-256"><a href="#cb8-256"></a></span>
+<span id="cb8-257"><a href="#cb8-257"></a>$$</span>
+<span id="cb8-258"><a href="#cb8-258"></a>\frac{df(x)}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</span>
+<span id="cb8-259"><a href="#cb8-259"></a>$$</span>
+<span id="cb8-260"><a href="#cb8-260"></a></span>
+<span id="cb8-261"><a href="#cb8-261"></a>This limit represents the rate of change of the function $f(x)$ with respect to $x$.</span>
+<span id="cb8-262"><a href="#cb8-262"></a></span>
+<span id="cb8-263"><a href="#cb8-263"></a><span class="fu">#### Derivative of functions of two variables</span></span>
+<span id="cb8-264"><a href="#cb8-264"></a></span>
+<span id="cb8-265"><a href="#cb8-265"></a>The derivative of a function $f(x, y)$ with respect to $x$ is defined as</span>
+<span id="cb8-266"><a href="#cb8-266"></a></span>
+<span id="cb8-267"><a href="#cb8-267"></a>$$</span>
+<span id="cb8-268"><a href="#cb8-268"></a>\frac{\partial f(x, y)}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}</span>
+<span id="cb8-269"><a href="#cb8-269"></a>$$</span>
+<span id="cb8-270"><a href="#cb8-270"></a></span>
+<span id="cb8-271"><a href="#cb8-271"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $x$. The derivative is a measure of how the function changes as $x$ changes for a fixed value of $y$. This describes how the function changes in the $x$ direction.</span>
+<span id="cb8-272"><a href="#cb8-272"></a></span>
+<span id="cb8-273"><a href="#cb8-273"></a>Similarly, the derivative of a function $f(x, y)$ with respect to $y$ is defined as</span>
+<span id="cb8-274"><a href="#cb8-274"></a></span>
+<span id="cb8-275"><a href="#cb8-275"></a>$$</span>
+<span id="cb8-276"><a href="#cb8-276"></a>\frac{\partial f(x, y)}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}</span>
+<span id="cb8-277"><a href="#cb8-277"></a>$$</span>
+<span id="cb8-278"><a href="#cb8-278"></a></span>
+<span id="cb8-279"><a href="#cb8-279"></a>This limit represents the rate of change of the function $f(x, y)$ with respect to $y$ and describes how the function changes in the $y$ direction for a fixed value of $x$.</span>
+<span id="cb8-280"><a href="#cb8-280"></a></span>
+<span id="cb8-281"><a href="#cb8-281"></a><span class="fu">### Integrals</span></span>
+<span id="cb8-282"><a href="#cb8-282"></a></span>
+<span id="cb8-283"><a href="#cb8-283"></a>At the simplest level, an integral is the reverse of a derivative. The integral of a function $f(x)$ with respect to $x$ is defined as</span>
+<span id="cb8-284"><a href="#cb8-284"></a></span>
+<span id="cb8-285"><a href="#cb8-285"></a>$$</span>
+<span id="cb8-286"><a href="#cb8-286"></a>\int f(x) dx = F(x) + C</span>
+<span id="cb8-287"><a href="#cb8-287"></a>$$</span>
+<span id="cb8-288"><a href="#cb8-288"></a></span>
+<span id="cb8-289"><a href="#cb8-289"></a>where $F(x)$ is the antiderivative of $f(x)$ and $C$ is an integration constant. The antiderivative is a function whose derivative is equal to $f(x)$:</span>
+<span id="cb8-290"><a href="#cb8-290"></a></span>
+<span id="cb8-291"><a href="#cb8-291"></a>$$</span>
+<span id="cb8-292"><a href="#cb8-292"></a>\frac{dF(x)}{dx} = f(x)</span>
+<span id="cb8-293"><a href="#cb8-293"></a>$$</span>
+<span id="cb8-294"><a href="#cb8-294"></a></span>
+<span id="cb8-295"><a href="#cb8-295"></a>The integral is a measure of the area under the curve of the function $f(x)$. The integral is a function that gives the area under the curve of the function $f(x)$ up to a given point.</span>
+<span id="cb8-296"><a href="#cb8-296"></a></span>
+<span id="cb8-297"><a href="#cb8-297"></a><span class="fu">## Differential equations</span></span>
+<span id="cb8-298"><a href="#cb8-298"></a></span>
+<span id="cb8-299"><a href="#cb8-299"></a><span class="fu">### Starting example</span></span>
+<span id="cb8-300"><a href="#cb8-300"></a></span>
+<span id="cb8-301"><a href="#cb8-301"></a>Let&#39;s consider the first order differential equation</span>
+<span id="cb8-302"><a href="#cb8-302"></a></span>
+<span id="cb8-303"><a href="#cb8-303"></a>::: {.equation-box}</span>
+<span id="cb8-304"><a href="#cb8-304"></a>$$</span>
+<span id="cb8-305"><a href="#cb8-305"></a>\frac{dy(x)}{dx} = 2x</span>
+<span id="cb8-306"><a href="#cb8-306"></a>$$</span>
+<span id="cb8-307"><a href="#cb8-307"></a>:::</span>
+<span id="cb8-308"><a href="#cb8-308"></a></span>
+<span id="cb8-309"><a href="#cb8-309"></a>Let us think how we should read this equation. The left hand side is the derivative of the function $y(x)$ with respect to $x$. This derivative is equal to $2x$. This equation tells us how the function $y(x)$ changes with $x$. The function $y(x)$ changes at a rate of $2x$ with respect to $x$. This is a simple differential equation that can be solved by integration.</span>
+<span id="cb8-310"><a href="#cb8-310"></a>$$</span>
+<span id="cb8-311"><a href="#cb8-311"></a>y(x) = x^2 + C</span>
+<span id="cb8-312"><a href="#cb8-312"></a>$$</span>
+<span id="cb8-313"><a href="#cb8-313"></a></span>
+<span id="cb8-314"><a href="#cb8-314"></a>where $C$ is an integration constant. This is the general solution of the differential equation. The solution is not unique because the constant $C$ can take any value. </span>
+<span id="cb8-315"><a href="#cb8-315"></a></span>
+<span id="cb8-318"><a href="#cb8-318"></a><span class="in">```{python}</span></span>
+<span id="cb8-319"><a href="#cb8-319"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-320"><a href="#cb8-320"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-321"><a href="#cb8-321"></a></span>
-<span id="cb8-322"><a href="#cb8-322"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-323"><a href="#cb8-323"></a></span>
-<span id="cb8-324"><a href="#cb8-324"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb8-325"><a href="#cb8-325"></a></span>
-<span id="cb8-326"><a href="#cb8-326"></a><span class="cf">for</span> C <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>, <span class="dv">10</span>):</span>
-<span id="cb8-327"><a href="#cb8-327"></a>    plt.plot(x, y(x, C), label<span class="op">=</span><span class="ss">f&#39;C=</span><span class="sc">{</span>C<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb8-322"><a href="#cb8-322"></a><span class="kw">def</span> y(x, C):</span>
+<span id="cb8-323"><a href="#cb8-323"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> C</span>
+<span id="cb8-324"><a href="#cb8-324"></a></span>
+<span id="cb8-325"><a href="#cb8-325"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-326"><a href="#cb8-326"></a></span>
+<span id="cb8-327"><a href="#cb8-327"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
 <span id="cb8-328"><a href="#cb8-328"></a></span>
-<span id="cb8-329"><a href="#cb8-329"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-330"><a href="#cb8-330"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-331"><a href="#cb8-331"></a>plt.show()</span>
-<span id="cb8-332"><a href="#cb8-332"></a><span class="in">```</span></span>
-<span id="cb8-333"><a href="#cb8-333"></a></span>
-<span id="cb8-334"><a href="#cb8-334"></a><span class="fu">#### Check in geogebra:</span></span>
-<span id="cb8-335"><a href="#cb8-335"></a></span>
-<span id="cb8-336"><a href="#cb8-336"></a>::: {.geogebra-instruction}</span>
-<span id="cb8-337"><a href="#cb8-337"></a><span class="ss">* </span>f(x) =  x^2 + 3</span>
-<span id="cb8-338"><a href="#cb8-338"></a>:::</span>
-<span id="cb8-339"><a href="#cb8-339"></a></span>
-<span id="cb8-340"><a href="#cb8-340"></a><span class="fu">##### Numerical solution</span></span>
-<span id="cb8-341"><a href="#cb8-341"></a></span>
-<span id="cb8-342"><a href="#cb8-342"></a>Remember that derivatives can be approximated by finite differences. The derivative of a function $f(x)$ can be approximated by</span>
-<span id="cb8-343"><a href="#cb8-343"></a></span>
-<span id="cb8-344"><a href="#cb8-344"></a>$$</span>
-<span id="cb8-345"><a href="#cb8-345"></a>\frac{df(x)}{dx} \approx \frac{f(x + h) - f(x)}{h}</span>
-<span id="cb8-346"><a href="#cb8-346"></a>$$</span>
-<span id="cb8-347"><a href="#cb8-347"></a></span>
-<span id="cb8-348"><a href="#cb8-348"></a>where $h$ is a small number. This is a simple way to approximate the derivative of a function. Let&#39;s use this approximation to solve the differential equation</span>
-<span id="cb8-349"><a href="#cb8-349"></a></span>
-<span id="cb8-350"><a href="#cb8-350"></a>$$</span>
-<span id="cb8-351"><a href="#cb8-351"></a>\frac{dy(x)}{dx} = 2x</span>
-<span id="cb8-352"><a href="#cb8-352"></a>$$</span>
-<span id="cb8-353"><a href="#cb8-353"></a></span>
-<span id="cb8-354"><a href="#cb8-354"></a>We can approximate the derivative by</span>
-<span id="cb8-355"><a href="#cb8-355"></a></span>
-<span id="cb8-356"><a href="#cb8-356"></a>$$</span>
-<span id="cb8-357"><a href="#cb8-357"></a>\frac{y(x + h) - y(x)}{h} = 2x</span>
-<span id="cb8-358"><a href="#cb8-358"></a>$$</span>
-<span id="cb8-359"><a href="#cb8-359"></a></span>
-<span id="cb8-360"><a href="#cb8-360"></a>This equation can be solved for $y(x + h)$</span>
-<span id="cb8-361"><a href="#cb8-361"></a></span>
-<span id="cb8-362"><a href="#cb8-362"></a>$$</span>
-<span id="cb8-363"><a href="#cb8-363"></a>y(x + h) = y(x) + 2xh</span>
-<span id="cb8-364"><a href="#cb8-364"></a>$$</span>
-<span id="cb8-365"><a href="#cb8-365"></a></span>
-<span id="cb8-366"><a href="#cb8-366"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
-<span id="cb8-367"><a href="#cb8-367"></a></span>
-<span id="cb8-368"><a href="#cb8-368"></a>Let us compare the numerical solution with the analytical solution.</span>
-<span id="cb8-369"><a href="#cb8-369"></a></span>
-<span id="cb8-372"><a href="#cb8-372"></a><span class="in">```{python}</span></span>
-<span id="cb8-373"><a href="#cb8-373"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-374"><a href="#cb8-374"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-375"><a href="#cb8-375"></a></span>
-<span id="cb8-376"><a href="#cb8-376"></a><span class="co"># Define the derivative dy/dx</span></span>
-<span id="cb8-377"><a href="#cb8-377"></a><span class="kw">def</span> dy_dx(x):</span>
-<span id="cb8-378"><a href="#cb8-378"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
-<span id="cb8-379"><a href="#cb8-379"></a></span>
-<span id="cb8-380"><a href="#cb8-380"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
-<span id="cb8-381"><a href="#cb8-381"></a><span class="kw">def</span> y_analytical(x):</span>
-<span id="cb8-382"><a href="#cb8-382"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb8-383"><a href="#cb8-383"></a></span>
-<span id="cb8-384"><a href="#cb8-384"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
-<span id="cb8-385"><a href="#cb8-385"></a><span class="kw">def</span> y_numerical(x, h):</span>
-<span id="cb8-386"><a href="#cb8-386"></a>    y <span class="op">=</span> [<span class="dv">0</span>]  <span class="co"># Initialize y with the starting value, assuming y(0) = 0</span></span>
-<span id="cb8-387"><a href="#cb8-387"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb8-388"><a href="#cb8-388"></a>        y.append(y[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy_dx(x[i]) <span class="op">*</span> h)  <span class="co"># Update y using dy/dx</span></span>
-<span id="cb8-389"><a href="#cb8-389"></a>    <span class="cf">return</span> y</span>
-<span id="cb8-390"><a href="#cb8-390"></a></span>
-<span id="cb8-391"><a href="#cb8-391"></a><span class="co"># Set up the x values</span></span>
-<span id="cb8-392"><a href="#cb8-392"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-393"><a href="#cb8-393"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb8-394"><a href="#cb8-394"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
-<span id="cb8-395"><a href="#cb8-395"></a></span>
-<span id="cb8-396"><a href="#cb8-396"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
-<span id="cb8-397"><a href="#cb8-397"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
+<span id="cb8-329"><a href="#cb8-329"></a><span class="cf">for</span> C <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>, <span class="dv">10</span>):</span>
+<span id="cb8-330"><a href="#cb8-330"></a>    plt.plot(x, y(x, C), label<span class="op">=</span><span class="ss">f&#39;C=</span><span class="sc">{</span>C<span class="sc">}</span><span class="ss">&#39;</span>)</span>
+<span id="cb8-331"><a href="#cb8-331"></a></span>
+<span id="cb8-332"><a href="#cb8-332"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-333"><a href="#cb8-333"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-334"><a href="#cb8-334"></a>plt.show()</span>
+<span id="cb8-335"><a href="#cb8-335"></a><span class="in">```</span></span>
+<span id="cb8-336"><a href="#cb8-336"></a></span>
+<span id="cb8-337"><a href="#cb8-337"></a><span class="fu">#### Check in geogebra:</span></span>
+<span id="cb8-338"><a href="#cb8-338"></a></span>
+<span id="cb8-339"><a href="#cb8-339"></a>::: {.geogebra-instruction}</span>
+<span id="cb8-340"><a href="#cb8-340"></a><span class="ss">* </span>f(x) =  x^2 + 3</span>
+<span id="cb8-341"><a href="#cb8-341"></a>:::</span>
+<span id="cb8-342"><a href="#cb8-342"></a></span>
+<span id="cb8-343"><a href="#cb8-343"></a><span class="fu">##### Numerical solution</span></span>
+<span id="cb8-344"><a href="#cb8-344"></a></span>
+<span id="cb8-345"><a href="#cb8-345"></a>Remember that derivatives can be approximated by finite differences. The derivative of a function $f(x)$ can be approximated by</span>
+<span id="cb8-346"><a href="#cb8-346"></a></span>
+<span id="cb8-347"><a href="#cb8-347"></a>$$</span>
+<span id="cb8-348"><a href="#cb8-348"></a>\frac{df(x)}{dx} \approx \frac{f(x + h) - f(x)}{h}</span>
+<span id="cb8-349"><a href="#cb8-349"></a>$$</span>
+<span id="cb8-350"><a href="#cb8-350"></a></span>
+<span id="cb8-351"><a href="#cb8-351"></a>where $h$ is a small number. This is a simple way to approximate the derivative of a function. Let&#39;s use this approximation to solve the differential equation</span>
+<span id="cb8-352"><a href="#cb8-352"></a></span>
+<span id="cb8-353"><a href="#cb8-353"></a>$$</span>
+<span id="cb8-354"><a href="#cb8-354"></a>\frac{dy(x)}{dx} = 2x</span>
+<span id="cb8-355"><a href="#cb8-355"></a>$$</span>
+<span id="cb8-356"><a href="#cb8-356"></a></span>
+<span id="cb8-357"><a href="#cb8-357"></a>We can approximate the derivative by</span>
+<span id="cb8-358"><a href="#cb8-358"></a></span>
+<span id="cb8-359"><a href="#cb8-359"></a>$$</span>
+<span id="cb8-360"><a href="#cb8-360"></a>\frac{y(x + h) - y(x)}{h} = 2x</span>
+<span id="cb8-361"><a href="#cb8-361"></a>$$</span>
+<span id="cb8-362"><a href="#cb8-362"></a></span>
+<span id="cb8-363"><a href="#cb8-363"></a>This equation can be solved for $y(x + h)$</span>
+<span id="cb8-364"><a href="#cb8-364"></a></span>
+<span id="cb8-365"><a href="#cb8-365"></a>$$</span>
+<span id="cb8-366"><a href="#cb8-366"></a>y(x + h) = y(x) + 2xh</span>
+<span id="cb8-367"><a href="#cb8-367"></a>$$</span>
+<span id="cb8-368"><a href="#cb8-368"></a></span>
+<span id="cb8-369"><a href="#cb8-369"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
+<span id="cb8-370"><a href="#cb8-370"></a></span>
+<span id="cb8-371"><a href="#cb8-371"></a>Let us compare the numerical solution with the analytical solution.</span>
+<span id="cb8-372"><a href="#cb8-372"></a></span>
+<span id="cb8-375"><a href="#cb8-375"></a><span class="in">```{python}</span></span>
+<span id="cb8-376"><a href="#cb8-376"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-377"><a href="#cb8-377"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-378"><a href="#cb8-378"></a></span>
+<span id="cb8-379"><a href="#cb8-379"></a><span class="co"># Define the derivative dy/dx</span></span>
+<span id="cb8-380"><a href="#cb8-380"></a><span class="kw">def</span> dy_dx(x):</span>
+<span id="cb8-381"><a href="#cb8-381"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
+<span id="cb8-382"><a href="#cb8-382"></a></span>
+<span id="cb8-383"><a href="#cb8-383"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
+<span id="cb8-384"><a href="#cb8-384"></a><span class="kw">def</span> y_analytical(x):</span>
+<span id="cb8-385"><a href="#cb8-385"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb8-386"><a href="#cb8-386"></a></span>
+<span id="cb8-387"><a href="#cb8-387"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
+<span id="cb8-388"><a href="#cb8-388"></a><span class="kw">def</span> y_numerical(x, h):</span>
+<span id="cb8-389"><a href="#cb8-389"></a>    y <span class="op">=</span> [<span class="dv">0</span>]  <span class="co"># Initialize y with the starting value, assuming y(0) = 0</span></span>
+<span id="cb8-390"><a href="#cb8-390"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb8-391"><a href="#cb8-391"></a>        y.append(y[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy_dx(x[i]) <span class="op">*</span> h)  <span class="co"># Update y using dy/dx</span></span>
+<span id="cb8-392"><a href="#cb8-392"></a>    <span class="cf">return</span> y</span>
+<span id="cb8-393"><a href="#cb8-393"></a></span>
+<span id="cb8-394"><a href="#cb8-394"></a><span class="co"># Set up the x values</span></span>
+<span id="cb8-395"><a href="#cb8-395"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-396"><a href="#cb8-396"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb8-397"><a href="#cb8-397"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
 <span id="cb8-398"><a href="#cb8-398"></a></span>
-<span id="cb8-399"><a href="#cb8-399"></a><span class="co"># Set up the figure with two subplots</span></span>
-<span id="cb8-400"><a href="#cb8-400"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-399"><a href="#cb8-399"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
+<span id="cb8-400"><a href="#cb8-400"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
 <span id="cb8-401"><a href="#cb8-401"></a></span>
-<span id="cb8-402"><a href="#cb8-402"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
-<span id="cb8-403"><a href="#cb8-403"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-404"><a href="#cb8-404"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;solid&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-405"><a href="#cb8-405"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
-<span id="cb8-406"><a href="#cb8-406"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-407"><a href="#cb8-407"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-408"><a href="#cb8-408"></a>axs[<span class="dv">0</span>].legend()</span>
-<span id="cb8-409"><a href="#cb8-409"></a></span>
-<span id="cb8-410"><a href="#cb8-410"></a><span class="co"># Right plot: Difference between solutions</span></span>
-<span id="cb8-411"><a href="#cb8-411"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-412"><a href="#cb8-412"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
-<span id="cb8-413"><a href="#cb8-413"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-414"><a href="#cb8-414"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-415"><a href="#cb8-415"></a>axs[<span class="dv">1</span>].legend()</span>
-<span id="cb8-416"><a href="#cb8-416"></a></span>
-<span id="cb8-417"><a href="#cb8-417"></a><span class="co"># Adjust layout and show the plots</span></span>
-<span id="cb8-418"><a href="#cb8-418"></a>plt.tight_layout()</span>
-<span id="cb8-419"><a href="#cb8-419"></a>plt.show()</span>
-<span id="cb8-420"><a href="#cb8-420"></a></span>
-<span id="cb8-421"><a href="#cb8-421"></a><span class="in">```</span></span>
-<span id="cb8-422"><a href="#cb8-422"></a></span>
-<span id="cb8-423"><a href="#cb8-423"></a>Difference between the analytical and numerical solutions depends on the step size $h$. </span>
-<span id="cb8-424"><a href="#cb8-424"></a></span>
-<span id="cb8-425"><a href="#cb8-425"></a><span class="fu">### Second order differential equations</span></span>
-<span id="cb8-426"><a href="#cb8-426"></a></span>
-<span id="cb8-427"><a href="#cb8-427"></a>Let&#39;s consider the second order differential equation</span>
-<span id="cb8-428"><a href="#cb8-428"></a></span>
-<span id="cb8-429"><a href="#cb8-429"></a>$$</span>
-<span id="cb8-430"><a href="#cb8-430"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
-<span id="cb8-431"><a href="#cb8-431"></a>$$</span>
-<span id="cb8-432"><a href="#cb8-432"></a></span>
-<span id="cb8-433"><a href="#cb8-433"></a>This is a simple differential equation that can be solved by integration. The solution is</span>
-<span id="cb8-434"><a href="#cb8-434"></a></span>
-<span id="cb8-435"><a href="#cb8-435"></a>$$</span>
-<span id="cb8-436"><a href="#cb8-436"></a>y(x) = A \sin(x) + B \cos(x)</span>
-<span id="cb8-437"><a href="#cb8-437"></a>$$</span>
-<span id="cb8-438"><a href="#cb8-438"></a></span>
-<span id="cb8-439"><a href="#cb8-439"></a>where $A$ and $B$ are integration constants. This is the general solution of the differential equation. The solution is not unique because the constants $A$ and $B$ can take any value. The solution is a sinusoidal function. The constants $A$ and $B$ determine the amplitude and phase of the sinusoidal function.</span>
-<span id="cb8-440"><a href="#cb8-440"></a></span>
-<span id="cb8-441"><a href="#cb8-441"></a><span class="fu">#### Numerical solution</span></span>
-<span id="cb8-442"><a href="#cb8-442"></a></span>
-<span id="cb8-443"><a href="#cb8-443"></a>From Taylor&#39;s theorem, we know that the second derivative of a function $f(x)$ can be approximated by</span>
-<span id="cb8-444"><a href="#cb8-444"></a></span>
-<span id="cb8-445"><a href="#cb8-445"></a>$$</span>
-<span id="cb8-446"><a href="#cb8-446"></a>f(x + h) = f(x) + h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
-<span id="cb8-447"><a href="#cb8-447"></a>$$</span>
-<span id="cb8-448"><a href="#cb8-448"></a></span>
-<span id="cb8-449"><a href="#cb8-449"></a>also</span>
-<span id="cb8-450"><a href="#cb8-450"></a></span>
-<span id="cb8-451"><a href="#cb8-451"></a>$$</span>
-<span id="cb8-452"><a href="#cb8-452"></a>f(x - h) = f(x) - h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
-<span id="cb8-453"><a href="#cb8-453"></a>$$</span>
-<span id="cb8-454"><a href="#cb8-454"></a></span>
-<span id="cb8-455"><a href="#cb8-455"></a>adding these two equations we get</span>
-<span id="cb8-456"><a href="#cb8-456"></a></span>
-<span id="cb8-457"><a href="#cb8-457"></a>$$</span>
-<span id="cb8-458"><a href="#cb8-458"></a>f(x + h) + f(x - h) = 2 f(x) + h^2 \frac{d^2f(x)}{dx^2}</span>
-<span id="cb8-459"><a href="#cb8-459"></a>$$</span>
-<span id="cb8-460"><a href="#cb8-460"></a></span>
-<span id="cb8-461"><a href="#cb8-461"></a>so we can approximate the second derivative by</span>
-<span id="cb8-462"><a href="#cb8-462"></a></span>
-<span id="cb8-463"><a href="#cb8-463"></a>$$</span>
-<span id="cb8-464"><a href="#cb8-464"></a>\frac{f(x + h) + f(x - h) - 2 f(x)}{h^2} \approx \frac{d^2f(x)}{dx^2}</span>
-<span id="cb8-465"><a href="#cb8-465"></a>$$</span>
-<span id="cb8-466"><a href="#cb8-466"></a></span>
-<span id="cb8-467"><a href="#cb8-467"></a>Let&#39;s use this approximation to solve the differential equation</span>
-<span id="cb8-468"><a href="#cb8-468"></a></span>
-<span id="cb8-469"><a href="#cb8-469"></a>$$</span>
-<span id="cb8-470"><a href="#cb8-470"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
-<span id="cb8-471"><a href="#cb8-471"></a>$$</span>
-<span id="cb8-472"><a href="#cb8-472"></a></span>
-<span id="cb8-473"><a href="#cb8-473"></a>We can approximate the second derivative by</span>
-<span id="cb8-474"><a href="#cb8-474"></a></span>
-<span id="cb8-475"><a href="#cb8-475"></a>$$</span>
-<span id="cb8-476"><a href="#cb8-476"></a>\frac{y(x + h) + y(x - h) - 2 y(x)}{h^2} = -y(x)</span>
-<span id="cb8-477"><a href="#cb8-477"></a>$$</span>
-<span id="cb8-478"><a href="#cb8-478"></a></span>
-<span id="cb8-479"><a href="#cb8-479"></a>This equation can be solved for $y(x + h)$</span>
-<span id="cb8-480"><a href="#cb8-480"></a></span>
-<span id="cb8-481"><a href="#cb8-481"></a>$$</span>
-<span id="cb8-482"><a href="#cb8-482"></a>y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)</span>
-<span id="cb8-483"><a href="#cb8-483"></a>$$</span>
-<span id="cb8-484"><a href="#cb8-484"></a></span>
-<span id="cb8-485"><a href="#cb8-485"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and $y(x - h)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
-<span id="cb8-486"><a href="#cb8-486"></a></span>
-<span id="cb8-487"><a href="#cb8-487"></a>Let us compare the numerical solution with the analytical solution.</span>
-<span id="cb8-488"><a href="#cb8-488"></a></span>
-<span id="cb8-491"><a href="#cb8-491"></a><span class="in">```{python}</span></span>
-<span id="cb8-492"><a href="#cb8-492"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-493"><a href="#cb8-493"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-494"><a href="#cb8-494"></a></span>
-<span id="cb8-495"><a href="#cb8-495"></a><span class="co"># Define the second derivative d^2y/dx^2</span></span>
-<span id="cb8-496"><a href="#cb8-496"></a><span class="kw">def</span> d2y_dx2(x):</span>
-<span id="cb8-497"><a href="#cb8-497"></a>    <span class="cf">return</span> <span class="op">-</span>x</span>
-<span id="cb8-498"><a href="#cb8-498"></a></span>
-<span id="cb8-499"><a href="#cb8-499"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
-<span id="cb8-500"><a href="#cb8-500"></a><span class="kw">def</span> y_analytical(x):</span>
-<span id="cb8-501"><a href="#cb8-501"></a>    <span class="cf">return</span> <span class="op">-</span>np.sin(x)</span>
-<span id="cb8-502"><a href="#cb8-502"></a></span>
-<span id="cb8-503"><a href="#cb8-503"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
-<span id="cb8-504"><a href="#cb8-504"></a><span class="kw">def</span> y_numerical(x, h):</span>
-<span id="cb8-505"><a href="#cb8-505"></a>    y <span class="op">=</span> [<span class="dv">0</span>, np.sin(<span class="op">-</span>h)]  <span class="co"># Initialize y with the starting values, assuming y(0) = 0 and y(-h) = sin(-h)</span></span>
-<span id="cb8-506"><a href="#cb8-506"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb8-507"><a href="#cb8-507"></a>        y.append(<span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> y[<span class="op">-</span><span class="dv">2</span>] <span class="op">-</span> h<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Update y using d^2y/dx^2</span></span>
-<span id="cb8-508"><a href="#cb8-508"></a>    <span class="cf">return</span> y</span>
-<span id="cb8-509"><a href="#cb8-509"></a></span>
-<span id="cb8-510"><a href="#cb8-510"></a><span class="co"># Set up the x values</span></span>
-<span id="cb8-511"><a href="#cb8-511"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb8-512"><a href="#cb8-512"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>)</span>
-<span id="cb8-513"><a href="#cb8-513"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
-<span id="cb8-514"><a href="#cb8-514"></a></span>
-<span id="cb8-515"><a href="#cb8-515"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
-<span id="cb8-516"><a href="#cb8-516"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
+<span id="cb8-402"><a href="#cb8-402"></a><span class="co"># Set up the figure with two subplots</span></span>
+<span id="cb8-403"><a href="#cb8-403"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-404"><a href="#cb8-404"></a></span>
+<span id="cb8-405"><a href="#cb8-405"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
+<span id="cb8-406"><a href="#cb8-406"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb8-407"><a href="#cb8-407"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;solid&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-408"><a href="#cb8-408"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
+<span id="cb8-409"><a href="#cb8-409"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-410"><a href="#cb8-410"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-411"><a href="#cb8-411"></a>axs[<span class="dv">0</span>].legend()</span>
+<span id="cb8-412"><a href="#cb8-412"></a></span>
+<span id="cb8-413"><a href="#cb8-413"></a><span class="co"># Right plot: Difference between solutions</span></span>
+<span id="cb8-414"><a href="#cb8-414"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-415"><a href="#cb8-415"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
+<span id="cb8-416"><a href="#cb8-416"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-417"><a href="#cb8-417"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-418"><a href="#cb8-418"></a>axs[<span class="dv">1</span>].legend()</span>
+<span id="cb8-419"><a href="#cb8-419"></a></span>
+<span id="cb8-420"><a href="#cb8-420"></a><span class="co"># Adjust layout and show the plots</span></span>
+<span id="cb8-421"><a href="#cb8-421"></a>plt.tight_layout()</span>
+<span id="cb8-422"><a href="#cb8-422"></a>plt.show()</span>
+<span id="cb8-423"><a href="#cb8-423"></a></span>
+<span id="cb8-424"><a href="#cb8-424"></a><span class="in">```</span></span>
+<span id="cb8-425"><a href="#cb8-425"></a></span>
+<span id="cb8-426"><a href="#cb8-426"></a>Difference between the analytical and numerical solutions depends on the step size $h$. </span>
+<span id="cb8-427"><a href="#cb8-427"></a></span>
+<span id="cb8-428"><a href="#cb8-428"></a><span class="fu">### Second order differential equations</span></span>
+<span id="cb8-429"><a href="#cb8-429"></a></span>
+<span id="cb8-430"><a href="#cb8-430"></a>Let&#39;s consider the second order differential equation</span>
+<span id="cb8-431"><a href="#cb8-431"></a></span>
+<span id="cb8-432"><a href="#cb8-432"></a>$$</span>
+<span id="cb8-433"><a href="#cb8-433"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
+<span id="cb8-434"><a href="#cb8-434"></a>$$</span>
+<span id="cb8-435"><a href="#cb8-435"></a></span>
+<span id="cb8-436"><a href="#cb8-436"></a>This is a simple differential equation that can be solved by integration. The solution is</span>
+<span id="cb8-437"><a href="#cb8-437"></a></span>
+<span id="cb8-438"><a href="#cb8-438"></a>$$</span>
+<span id="cb8-439"><a href="#cb8-439"></a>y(x) = A \sin(x) + B \cos(x)</span>
+<span id="cb8-440"><a href="#cb8-440"></a>$$</span>
+<span id="cb8-441"><a href="#cb8-441"></a></span>
+<span id="cb8-442"><a href="#cb8-442"></a>where $A$ and $B$ are integration constants. This is the general solution of the differential equation. The solution is not unique because the constants $A$ and $B$ can take any value. The solution is a sinusoidal function. The constants $A$ and $B$ determine the amplitude and phase of the sinusoidal function.</span>
+<span id="cb8-443"><a href="#cb8-443"></a></span>
+<span id="cb8-444"><a href="#cb8-444"></a><span class="fu">#### Numerical solution</span></span>
+<span id="cb8-445"><a href="#cb8-445"></a></span>
+<span id="cb8-446"><a href="#cb8-446"></a>From Taylor&#39;s theorem, we know that the second derivative of a function $f(x)$ can be approximated by</span>
+<span id="cb8-447"><a href="#cb8-447"></a></span>
+<span id="cb8-448"><a href="#cb8-448"></a>$$</span>
+<span id="cb8-449"><a href="#cb8-449"></a>f(x + h) = f(x) + h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
+<span id="cb8-450"><a href="#cb8-450"></a>$$</span>
+<span id="cb8-451"><a href="#cb8-451"></a></span>
+<span id="cb8-452"><a href="#cb8-452"></a>also</span>
+<span id="cb8-453"><a href="#cb8-453"></a></span>
+<span id="cb8-454"><a href="#cb8-454"></a>$$</span>
+<span id="cb8-455"><a href="#cb8-455"></a>f(x - h) = f(x) - h \frac{df(x)}{dx} + \frac{h^2}{2} \frac{d^2f(x)}{dx^2} + \ldots</span>
+<span id="cb8-456"><a href="#cb8-456"></a>$$</span>
+<span id="cb8-457"><a href="#cb8-457"></a></span>
+<span id="cb8-458"><a href="#cb8-458"></a>adding these two equations we get</span>
+<span id="cb8-459"><a href="#cb8-459"></a></span>
+<span id="cb8-460"><a href="#cb8-460"></a>$$</span>
+<span id="cb8-461"><a href="#cb8-461"></a>f(x + h) + f(x - h) = 2 f(x) + h^2 \frac{d^2f(x)}{dx^2}</span>
+<span id="cb8-462"><a href="#cb8-462"></a>$$</span>
+<span id="cb8-463"><a href="#cb8-463"></a></span>
+<span id="cb8-464"><a href="#cb8-464"></a>so we can approximate the second derivative by</span>
+<span id="cb8-465"><a href="#cb8-465"></a></span>
+<span id="cb8-466"><a href="#cb8-466"></a>$$</span>
+<span id="cb8-467"><a href="#cb8-467"></a>\frac{f(x + h) + f(x - h) - 2 f(x)}{h^2} \approx \frac{d^2f(x)}{dx^2}</span>
+<span id="cb8-468"><a href="#cb8-468"></a>$$</span>
+<span id="cb8-469"><a href="#cb8-469"></a></span>
+<span id="cb8-470"><a href="#cb8-470"></a>Let&#39;s use this approximation to solve the differential equation</span>
+<span id="cb8-471"><a href="#cb8-471"></a></span>
+<span id="cb8-472"><a href="#cb8-472"></a>$$</span>
+<span id="cb8-473"><a href="#cb8-473"></a>\frac{d^2y(x)}{dx^2} = -y(x)</span>
+<span id="cb8-474"><a href="#cb8-474"></a>$$</span>
+<span id="cb8-475"><a href="#cb8-475"></a></span>
+<span id="cb8-476"><a href="#cb8-476"></a>We can approximate the second derivative by</span>
+<span id="cb8-477"><a href="#cb8-477"></a></span>
+<span id="cb8-478"><a href="#cb8-478"></a>$$</span>
+<span id="cb8-479"><a href="#cb8-479"></a>\frac{y(x + h) + y(x - h) - 2 y(x)}{h^2} = -y(x)</span>
+<span id="cb8-480"><a href="#cb8-480"></a>$$</span>
+<span id="cb8-481"><a href="#cb8-481"></a></span>
+<span id="cb8-482"><a href="#cb8-482"></a>This equation can be solved for $y(x + h)$</span>
+<span id="cb8-483"><a href="#cb8-483"></a></span>
+<span id="cb8-484"><a href="#cb8-484"></a>$$</span>
+<span id="cb8-485"><a href="#cb8-485"></a>y(x + h) = 2 y(x) - y(x - h) - h^2 y(x)</span>
+<span id="cb8-486"><a href="#cb8-486"></a>$$</span>
+<span id="cb8-487"><a href="#cb8-487"></a></span>
+<span id="cb8-488"><a href="#cb8-488"></a>This equation can be used to solve the differential equation numerically. We can start from an initial value of $y(x)$ and $y(x - h)$ and use the equation above to calculate the value of $y(x + h)$. This value can be used to calculate the next value of $y(x + 2h)$ and so on. This is a simple numerical method to solve differential equations.</span>
+<span id="cb8-489"><a href="#cb8-489"></a></span>
+<span id="cb8-490"><a href="#cb8-490"></a>Let us compare the numerical solution with the analytical solution.</span>
+<span id="cb8-491"><a href="#cb8-491"></a></span>
+<span id="cb8-494"><a href="#cb8-494"></a><span class="in">```{python}</span></span>
+<span id="cb8-495"><a href="#cb8-495"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-496"><a href="#cb8-496"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-497"><a href="#cb8-497"></a></span>
+<span id="cb8-498"><a href="#cb8-498"></a><span class="co"># Define the second derivative d^2y/dx^2</span></span>
+<span id="cb8-499"><a href="#cb8-499"></a><span class="kw">def</span> d2y_dx2(x):</span>
+<span id="cb8-500"><a href="#cb8-500"></a>    <span class="cf">return</span> <span class="op">-</span>x</span>
+<span id="cb8-501"><a href="#cb8-501"></a></span>
+<span id="cb8-502"><a href="#cb8-502"></a><span class="co"># Define the exact analytical solution y(x) for comparison</span></span>
+<span id="cb8-503"><a href="#cb8-503"></a><span class="kw">def</span> y_analytical(x):</span>
+<span id="cb8-504"><a href="#cb8-504"></a>    <span class="cf">return</span> <span class="op">-</span>np.sin(x)</span>
+<span id="cb8-505"><a href="#cb8-505"></a></span>
+<span id="cb8-506"><a href="#cb8-506"></a><span class="co"># Define a numerical solution for y(x) using the forward Euler method</span></span>
+<span id="cb8-507"><a href="#cb8-507"></a><span class="kw">def</span> y_numerical(x, h):</span>
+<span id="cb8-508"><a href="#cb8-508"></a>    y <span class="op">=</span> [<span class="dv">0</span>, np.sin(<span class="op">-</span>h)]  <span class="co"># Initialize y with the starting values, assuming y(0) = 0 and y(-h) = sin(-h)</span></span>
+<span id="cb8-509"><a href="#cb8-509"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(x) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb8-510"><a href="#cb8-510"></a>        y.append(<span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> y[<span class="op">-</span><span class="dv">2</span>] <span class="op">-</span> h<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> y[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Update y using d^2y/dx^2</span></span>
+<span id="cb8-511"><a href="#cb8-511"></a>    <span class="cf">return</span> y</span>
+<span id="cb8-512"><a href="#cb8-512"></a></span>
+<span id="cb8-513"><a href="#cb8-513"></a><span class="co"># Set up the x values</span></span>
+<span id="cb8-514"><a href="#cb8-514"></a>plot_x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb8-515"><a href="#cb8-515"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>)</span>
+<span id="cb8-516"><a href="#cb8-516"></a>h <span class="op">=</span> x[<span class="dv">1</span>] <span class="op">-</span> x[<span class="dv">0</span>]  <span class="co"># Step size</span></span>
 <span id="cb8-517"><a href="#cb8-517"></a></span>
-<span id="cb8-518"><a href="#cb8-518"></a><span class="co"># Set up the figure with two subplots</span></span>
-<span id="cb8-519"><a href="#cb8-519"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-518"><a href="#cb8-518"></a><span class="co"># Compute the difference between analytical and numerical solutions</span></span>
+<span id="cb8-519"><a href="#cb8-519"></a>difference <span class="op">=</span> y_analytical(x) <span class="op">-</span> np.array(y_numerical(x, h))</span>
 <span id="cb8-520"><a href="#cb8-520"></a></span>
-<span id="cb8-521"><a href="#cb8-521"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
-<span id="cb8-522"><a href="#cb8-522"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-523"><a href="#cb8-523"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
-<span id="cb8-524"><a href="#cb8-524"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
-<span id="cb8-525"><a href="#cb8-525"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-526"><a href="#cb8-526"></a></span>
-<span id="cb8-527"><a href="#cb8-527"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb8-528"><a href="#cb8-528"></a>axs[<span class="dv">0</span>].legend()</span>
+<span id="cb8-521"><a href="#cb8-521"></a><span class="co"># Set up the figure with two subplots</span></span>
+<span id="cb8-522"><a href="#cb8-522"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">8</span>))</span>
+<span id="cb8-523"><a href="#cb8-523"></a></span>
+<span id="cb8-524"><a href="#cb8-524"></a><span class="co"># Left plot: Analytical and numerical solutions</span></span>
+<span id="cb8-525"><a href="#cb8-525"></a>axs[<span class="dv">0</span>].plot(plot_x, y_analytical(plot_x), label<span class="op">=</span><span class="st">&#39;Analytical&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;dashed&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb8-526"><a href="#cb8-526"></a>axs[<span class="dv">0</span>].scatter(x, y_numerical(x, h), label<span class="op">=</span><span class="st">&#39;Numerical&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-527"><a href="#cb8-527"></a>axs[<span class="dv">0</span>].set_title(<span class="st">&#39;Analytical vs Numerical&#39;</span>)</span>
+<span id="cb8-528"><a href="#cb8-528"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
 <span id="cb8-529"><a href="#cb8-529"></a></span>
-<span id="cb8-530"><a href="#cb8-530"></a><span class="co"># Right plot: Difference between solutions</span></span>
-<span id="cb8-531"><a href="#cb8-531"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-532"><a href="#cb8-532"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
-<span id="cb8-533"><a href="#cb8-533"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb8-534"><a href="#cb8-534"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
-<span id="cb8-535"><a href="#cb8-535"></a>axs[<span class="dv">1</span>].legend()</span>
-<span id="cb8-536"><a href="#cb8-536"></a></span>
-<span id="cb8-537"><a href="#cb8-537"></a><span class="co"># Adjust layout and show the plots</span></span>
-<span id="cb8-538"><a href="#cb8-538"></a>plt.tight_layout()</span>
-<span id="cb8-539"><a href="#cb8-539"></a>plt.show()</span>
-<span id="cb8-540"><a href="#cb8-540"></a><span class="in">```</span></span>
+<span id="cb8-530"><a href="#cb8-530"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb8-531"><a href="#cb8-531"></a>axs[<span class="dv">0</span>].legend()</span>
+<span id="cb8-532"><a href="#cb8-532"></a></span>
+<span id="cb8-533"><a href="#cb8-533"></a><span class="co"># Right plot: Difference between solutions</span></span>
+<span id="cb8-534"><a href="#cb8-534"></a>axs[<span class="dv">1</span>].scatter(x, difference, label<span class="op">=</span><span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-535"><a href="#cb8-535"></a>axs[<span class="dv">1</span>].set_title(<span class="st">&#39;Difference (Analytical - Numerical)&#39;</span>)</span>
+<span id="cb8-536"><a href="#cb8-536"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb8-537"><a href="#cb8-537"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">&#39;Difference&#39;</span>)</span>
+<span id="cb8-538"><a href="#cb8-538"></a>axs[<span class="dv">1</span>].legend()</span>
+<span id="cb8-539"><a href="#cb8-539"></a></span>
+<span id="cb8-540"><a href="#cb8-540"></a><span class="co"># Adjust layout and show the plots</span></span>
+<span id="cb8-541"><a href="#cb8-541"></a>plt.tight_layout()</span>
+<span id="cb8-542"><a href="#cb8-542"></a>plt.show()</span>
+<span id="cb8-543"><a href="#cb8-543"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

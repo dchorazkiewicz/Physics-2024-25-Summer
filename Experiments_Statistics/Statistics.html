@@ -3390,7 +3390,7 @@ margin-bottom: 0;
   <li><a href="#measurement-uncertainty-using-linear-approximation" id="toc-measurement-uncertainty-using-linear-approximation" class="nav-link" data-scroll-target="#measurement-uncertainty-using-linear-approximation">Measurement Uncertainty Using Linear Approximation</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://dchorazkiewicz.github.io/Physics-2024-25-Summer/"><i class="bi bi-link-45deg"></i>Main page</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -3418,7 +3418,7 @@ margin-bottom: 0;
 <section id="experiment-with-a-die" class="level3">
 <h3 class="anchored" data-anchor-id="experiment-with-a-die">Experiment with a Die</h3>
 <p>Let us perform an experiment with a die. We will roll a die 5 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.</p>
-<div id="68a64e03" class="cell" data-execution_count="1">
+<div id="d6fb9941" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -3430,7 +3430,7 @@ margin-bottom: 0;
 <span id="cb1-7"><a href="#cb1-7"></a>df.index <span class="op">=</span> [<span class="st">&#39;Experiment &#39;</span> <span class="op">+</span> <span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)]</span>
 <span id="cb1-8"><a href="#cb1-8"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -3538,7 +3538,7 @@ margin-bottom: 0;
 <section id="question-1" class="level4">
 <h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
 <p><strong>Let us compute the sum of the outcomes in each experiment. Next, we will count the number of times each sum appears in the 10,000 experiments and plot the results.</strong></p>
-<div id="179aa14f" class="cell" data-execution_count="2">
+<div id="5fc5325e" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">5</span>))</span>
@@ -3559,7 +3559,7 @@ margin-bottom: 0;
 <section id="question-2" class="level4">
 <h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
 <p><strong>Maybe we can change the number of times we roll the die. Let us repeat the experiment with 42 rolls. We will simulate the experiment 10,000 times and plot the results.</strong></p>
-<div id="1583996b" class="cell" data-execution_count="3">
+<div id="e8d9d247" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
@@ -3576,7 +3576,7 @@ margin-bottom: 0;
 </div>
 </div>
 <p>The plot is not ideal. Let us try running 100,000 experiments.</p>
-<div id="e149ee6c" class="cell" data-execution_count="4">
+<div id="91f2eb2b" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">100000</span>, <span class="dv">42</span>))</span>
@@ -3598,7 +3598,7 @@ margin-bottom: 0;
 <section id="question-3" class="level4">
 <h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
 <p><strong>Let us compute how many times outcomes 1, 2, 3, 4, 5, and 6 appear in the 10,000 experiments. We will plot the results.</strong></p>
-<div id="66c25e64" class="cell" data-execution_count="5">
+<div id="48c69dc6" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
@@ -3619,7 +3619,7 @@ margin-bottom: 0;
 <section id="question-4" class="level4">
 <h4 class="anchored" data-anchor-id="question-4">Question 4</h4>
 <p><strong>Let us compute the chances of getting each outcome in the first, second, third, …, 42nd roll. We will plot the results.</strong></p>
-<div id="a12cfe7d" class="cell" data-execution_count="6">
+<div id="9c9ad290" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
@@ -3653,7 +3653,7 @@ P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible
 <section id="analytical-solution" class="level4">
 <h4 class="anchored" data-anchor-id="analytical-solution">Analytical Solution</h4>
 <p>The total number of outcomes when rolling two dice can be calculated programmatically. The favorable outcomes for a sum greater than 8 can also be determined directly:</p>
-<div id="eadc5dc6" class="cell" data-execution_count="7">
+<div id="fc2a1ede" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
@@ -3682,7 +3682,7 @@ P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible
 <section id="monte-carlo-simulation" class="level4">
 <h4 class="anchored" data-anchor-id="monte-carlo-simulation">Monte Carlo Simulation</h4>
 <p>We can estimate this probability by simulating the rolls of two dice many times:</p>
-<div id="6ec056ec" class="cell" data-execution_count="8">
+<div id="843056b2" class="cell" data-execution_count="8">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3731,7 +3731,7 @@ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},
 <section id="analytical-solution-1" class="level4">
 <h4 class="anchored" data-anchor-id="analytical-solution-1">Analytical Solution</h4>
 <p>We can calculate the analytical probability using Python:</p>
-<div id="7f1b8f3f" class="cell" data-execution_count="9">
+<div id="2ba2e61c" class="cell" data-execution_count="9">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
@@ -3754,7 +3754,7 @@ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},
 <section id="monte-carlo-simulation-1" class="level4">
 <h4 class="anchored" data-anchor-id="monte-carlo-simulation-1">Monte Carlo Simulation</h4>
 <p>We can estimate the probability using a Monte Carlo simulation:</p>
-<div id="d0ccff54" class="cell" data-execution_count="10">
+<div id="204accf5" class="cell" data-execution_count="10">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3805,7 +3805,7 @@ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},
 <p><span class="math display">\[
 P(X = k) = \begin{cases} 1 - p &amp; \text{if } k = 0 \\ p &amp; \text{if } k = 1 \end{cases}
 \]</span></p>
-<div id="72ecb4c3" class="cell" data-execution_count="11">
+<div id="b2dac171" class="cell" data-execution_count="11">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -3847,7 +3847,7 @@ P(X = k) = \begin{cases} 1 - p &amp; \text{if } k = 0 \\ p &amp; \text{if } k = 
 P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
 \]</span></p>
 <p>Monte Carlo simulations can also be used to generate above distributions. Let us simulate the Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = 0.3\)</span>:</p>
-<div id="4be98ffe" class="cell" data-execution_count="12">
+<div id="3c06869b" class="cell" data-execution_count="12">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3905,7 +3905,7 @@ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
 P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
 \]</span></p>
 <p>Let us visualize the Poisson distribution with <span class="math inline">\(\lambda = 3\)</span>:</p>
-<div id="2b0cd433" class="cell" data-execution_count="13">
+<div id="e870769e" class="cell" data-execution_count="13">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3954,7 +3954,7 @@ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}
 \]</span></p>
 <p>Let us visualize the Normal distribution with <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. We will generate random samples from a standard Normal distribution and compare the histogram to the theoretical PDF:</p>
-<div id="bc8cd95c" class="cell" data-execution_count="14">
+<div id="c1c6d617" class="cell" data-execution_count="14">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3999,7 +3999,7 @@ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}
 f(x) = \lambda e^{-\lambda x}
 \]</span></p>
 <p>Let us visualize the Exponential distribution with <span class="math inline">\(\lambda = 0.5\)</span>:</p>
-<div id="f00f2bfd" class="cell" data-execution_count="15">
+<div id="f6c4b4bf" class="cell" data-execution_count="15">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4043,7 +4043,7 @@ f(x) = \lambda e^{-\lambda x}
 f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
 \]</span></p>
 <p>where <span class="math inline">\(B(\alpha, \beta)\)</span> is the Beta function. Let us visualize the Beta distribution with <span class="math inline">\(\alpha = 2\)</span> and <span class="math inline">\(\beta = 2\)</span>:</p>
-<div id="b99cb4ee" class="cell" data-execution_count="16">
+<div id="905c996f" class="cell" data-execution_count="16">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4081,7 +4081,7 @@ f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
 </div>
 </div>
 <p>The Beta distribution is commonly used in Bayesian statistics and modeling proportions or probabilities. It can simulate a wide range of shapes, from uniform to U-shaped to J-shaped distributions, depending on the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. Below are some examples of Beta distributions with different shape parameters:</p>
-<div id="df654c9b" class="cell" data-execution_count="17">
+<div id="5e5da30e" class="cell" data-execution_count="17">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4155,7 +4155,7 @@ f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
 <section id="example-mean-and-variance-of-the-beta-distribution" class="level4">
 <h4 class="anchored" data-anchor-id="example-mean-and-variance-of-the-beta-distribution">Example: Mean and Variance of the Beta Distribution</h4>
 <p>Let us assume a Beta distribution with shape parameters <span class="math inline">\(\alpha = 2\)</span> and <span class="math inline">\(\beta = 3\)</span>. We can calculate the mean and variance of this distribution using the formulae for the Beta distribution:</p>
-<div id="e7b34d70" class="cell" data-execution_count="18">
+<div id="47f04d7b" class="cell" data-execution_count="18">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4259,7 +4259,7 @@ f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
 \]</span></p>
 <p>Simplify each term to compute <span class="math inline">\(\Delta g\)</span>. This approach provides a linear estimate of the uncertainty in <span class="math inline">\(g\)</span>.</p>
 <p>Let us use python to calculate the uncertainty in <span class="math inline">\(g\)</span>:</p>
-<div id="33feacfe" class="cell" data-execution_count="19">
+<div id="82dcff4a" class="cell" data-execution_count="19">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4289,7 +4289,7 @@ f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
 <p>Monte Carlo simulation can also be used to estimate the uncertainty in a calculated result by sampling from the distributions of input variables. This approach provides a more comprehensive view of the uncertainty by considering the joint distribution of variables.</p>
 <p>Supose we measure the period of a pendulum to be <span class="math inline">\(T = 2.1 \pm 0.1\)</span> seconds. Anlogusly, we measure the length of the pendulum to be <span class="math inline">\(L = 1.0 \pm 0.05\)</span> meters.</p>
 <p>Let us use Monte Carlo simulation to estimate the acceleration due to gravity and its uncertainty:</p>
-<div id="47ad53ef" class="cell" data-execution_count="20">
+<div id="ae44c18d" class="cell" data-execution_count="20">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4831,725 +4831,728 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb26-16"><a href="#cb26-16"></a><span class="co">    css: styles.css</span></span>
 <span id="cb26-17"><a href="#cb26-17"></a><span class="co">    math: mathjax</span></span>
 <span id="cb26-18"><a href="#cb26-18"></a><span class="co">    self-contained: true</span></span>
-<span id="cb26-19"><a href="#cb26-19"></a><span class="co">---</span></span>
-<span id="cb26-20"><a href="#cb26-20"></a></span>
-<span id="cb26-21"><a href="#cb26-21"></a><span class="fu">## Basic Concepts</span></span>
-<span id="cb26-22"><a href="#cb26-22"></a></span>
-<span id="cb26-23"><a href="#cb26-23"></a><span class="fu">### Experiment with a Die</span></span>
-<span id="cb26-24"><a href="#cb26-24"></a></span>
-<span id="cb26-25"><a href="#cb26-25"></a>Let us perform an experiment with a die. We will roll a die 5 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.</span>
-<span id="cb26-26"><a href="#cb26-26"></a></span>
-<span id="cb26-29"><a href="#cb26-29"></a><span class="in">```{python}</span></span>
-<span id="cb26-30"><a href="#cb26-30"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb26-31"><a href="#cb26-31"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-32"><a href="#cb26-32"></a></span>
-<span id="cb26-33"><a href="#cb26-33"></a>np.random.seed(<span class="dv">0</span>)</span>
-<span id="cb26-34"><a href="#cb26-34"></a>data <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-35"><a href="#cb26-35"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">&#39;Roll 1&#39;</span>, <span class="st">&#39;Roll 2&#39;</span>, <span class="st">&#39;Roll 3&#39;</span>, <span class="st">&#39;Roll 4&#39;</span>, <span class="st">&#39;Roll 5&#39;</span>])</span>
-<span id="cb26-36"><a href="#cb26-36"></a>df.index <span class="op">=</span> [<span class="st">&#39;Experiment &#39;</span> <span class="op">+</span> <span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)]</span>
-<span id="cb26-37"><a href="#cb26-37"></a>df</span>
-<span id="cb26-38"><a href="#cb26-38"></a><span class="in">```</span></span>
-<span id="cb26-39"><a href="#cb26-39"></a></span>
-<span id="cb26-40"><a href="#cb26-40"></a>One thing we can observe is that the outcomes are different in each experiment. This is due to the randomness of the outcomes. However, some patterns can still be observed. Let us explore some questions.</span>
-<span id="cb26-41"><a href="#cb26-41"></a></span>
-<span id="cb26-42"><a href="#cb26-42"></a>We have computers, so we can simulate the experiment many times. Let us simulate the experiment 10,000 times.</span>
-<span id="cb26-43"><a href="#cb26-43"></a></span>
-<span id="cb26-44"><a href="#cb26-44"></a>---</span>
-<span id="cb26-45"><a href="#cb26-45"></a></span>
-<span id="cb26-46"><a href="#cb26-46"></a><span class="fu">#### Question 1</span></span>
-<span id="cb26-47"><a href="#cb26-47"></a></span>
-<span id="cb26-48"><a href="#cb26-48"></a>**Let us compute the sum of the outcomes in each experiment. Next, we will count the number of times each sum appears in the 10,000 experiments and plot the results.**</span>
-<span id="cb26-49"><a href="#cb26-49"></a></span>
-<span id="cb26-52"><a href="#cb26-52"></a><span class="in">```{python}</span></span>
-<span id="cb26-53"><a href="#cb26-53"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">5</span>))</span>
-<span id="cb26-54"><a href="#cb26-54"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb26-55"><a href="#cb26-55"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
-<span id="cb26-56"><a href="#cb26-56"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-57"><a href="#cb26-57"></a><span class="in">```</span></span>
-<span id="cb26-58"><a href="#cb26-58"></a></span>
-<span id="cb26-59"><a href="#cb26-59"></a>---</span>
-<span id="cb26-60"><a href="#cb26-60"></a></span>
-<span id="cb26-61"><a href="#cb26-61"></a><span class="fu">#### Question 2</span></span>
-<span id="cb26-62"><a href="#cb26-62"></a></span>
-<span id="cb26-63"><a href="#cb26-63"></a>**Maybe we can change the number of times we roll the die. Let us repeat the experiment with 42 rolls. We will simulate the experiment 10,000 times and plot the results.**</span>
-<span id="cb26-64"><a href="#cb26-64"></a></span>
-<span id="cb26-67"><a href="#cb26-67"></a><span class="in">```{python}</span></span>
-<span id="cb26-68"><a href="#cb26-68"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
-<span id="cb26-69"><a href="#cb26-69"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb26-70"><a href="#cb26-70"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
-<span id="cb26-71"><a href="#cb26-71"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-72"><a href="#cb26-72"></a><span class="in">```</span></span>
-<span id="cb26-73"><a href="#cb26-73"></a></span>
-<span id="cb26-74"><a href="#cb26-74"></a>The plot is not ideal. Let us try running 100,000 experiments.</span>
-<span id="cb26-75"><a href="#cb26-75"></a></span>
-<span id="cb26-78"><a href="#cb26-78"></a><span class="in">```{python}</span></span>
-<span id="cb26-79"><a href="#cb26-79"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">100000</span>, <span class="dv">42</span>))</span>
-<span id="cb26-80"><a href="#cb26-80"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb26-81"><a href="#cb26-81"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
-<span id="cb26-82"><a href="#cb26-82"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-83"><a href="#cb26-83"></a><span class="in">```</span></span>
-<span id="cb26-84"><a href="#cb26-84"></a></span>
-<span id="cb26-85"><a href="#cb26-85"></a>This is much better. We can see that the distribution of the sums looks similar. This kind of behavior is what we are looking for. Even though you cannot predict the outcome of a single experiment, you can predict the distribution of outcomes and use it to make informed decisions.</span>
-<span id="cb26-86"><a href="#cb26-86"></a></span>
-<span id="cb26-87"><a href="#cb26-87"></a>---</span>
-<span id="cb26-88"><a href="#cb26-88"></a></span>
-<span id="cb26-89"><a href="#cb26-89"></a><span class="fu">#### Question 3</span></span>
-<span id="cb26-90"><a href="#cb26-90"></a></span>
-<span id="cb26-91"><a href="#cb26-91"></a>**Let us compute how many times outcomes 1, 2, 3, 4, 5, and 6 appear in the 10,000 experiments. We will plot the results.**</span>
-<span id="cb26-92"><a href="#cb26-92"></a></span>
-<span id="cb26-95"><a href="#cb26-95"></a><span class="in">```{python}</span></span>
-<span id="cb26-96"><a href="#cb26-96"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
-<span id="cb26-97"><a href="#cb26-97"></a>counts <span class="op">=</span> pd.DataFrame(df).stack().value_counts().sort_index()</span>
-<span id="cb26-98"><a href="#cb26-98"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-99"><a href="#cb26-99"></a><span class="in">```</span></span>
-<span id="cb26-100"><a href="#cb26-100"></a></span>
-<span id="cb26-101"><a href="#cb26-101"></a>We can see that the chances are equal.</span>
-<span id="cb26-102"><a href="#cb26-102"></a></span>
-<span id="cb26-103"><a href="#cb26-103"></a>---</span>
-<span id="cb26-104"><a href="#cb26-104"></a></span>
-<span id="cb26-105"><a href="#cb26-105"></a><span class="fu">#### Question 4</span></span>
-<span id="cb26-106"><a href="#cb26-106"></a></span>
-<span id="cb26-107"><a href="#cb26-107"></a>**Let us compute the chances of getting each outcome in the first, second, third, ..., 42nd roll. We will plot the results.**</span>
-<span id="cb26-108"><a href="#cb26-108"></a></span>
-<span id="cb26-111"><a href="#cb26-111"></a><span class="in">```{python}</span></span>
-<span id="cb26-112"><a href="#cb26-112"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
-<span id="cb26-113"><a href="#cb26-113"></a>counts <span class="op">=</span> pd.DataFrame(df).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.value_counts(normalize<span class="op">=</span><span class="va">True</span>)).T</span>
-<span id="cb26-114"><a href="#cb26-114"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, stacked<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb26-115"><a href="#cb26-115"></a><span class="in">```</span></span>
-<span id="cb26-116"><a href="#cb26-116"></a></span>
-<span id="cb26-117"><a href="#cb26-117"></a></span>
-<span id="cb26-118"><a href="#cb26-118"></a><span class="fu">## Definition of Probability</span></span>
+<span id="cb26-19"><a href="#cb26-19"></a><span class="co">    other-links:</span></span>
+<span id="cb26-20"><a href="#cb26-20"></a><span class="co">      - text: Main page</span></span>
+<span id="cb26-21"><a href="#cb26-21"></a><span class="co">        href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       </span></span>
+<span id="cb26-22"><a href="#cb26-22"></a><span class="co">---</span></span>
+<span id="cb26-23"><a href="#cb26-23"></a></span>
+<span id="cb26-24"><a href="#cb26-24"></a><span class="fu">## Basic Concepts</span></span>
+<span id="cb26-25"><a href="#cb26-25"></a></span>
+<span id="cb26-26"><a href="#cb26-26"></a><span class="fu">### Experiment with a Die</span></span>
+<span id="cb26-27"><a href="#cb26-27"></a></span>
+<span id="cb26-28"><a href="#cb26-28"></a>Let us perform an experiment with a die. We will roll a die 5 times and record the outcomes. The outcomes are the numbers from 1 to 6. We will record the number of times each number appears. The experiment is repeated 10 times. The results are shown in the table below.</span>
+<span id="cb26-29"><a href="#cb26-29"></a></span>
+<span id="cb26-32"><a href="#cb26-32"></a><span class="in">```{python}</span></span>
+<span id="cb26-33"><a href="#cb26-33"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb26-34"><a href="#cb26-34"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-35"><a href="#cb26-35"></a></span>
+<span id="cb26-36"><a href="#cb26-36"></a>np.random.seed(<span class="dv">0</span>)</span>
+<span id="cb26-37"><a href="#cb26-37"></a>data <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-38"><a href="#cb26-38"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">&#39;Roll 1&#39;</span>, <span class="st">&#39;Roll 2&#39;</span>, <span class="st">&#39;Roll 3&#39;</span>, <span class="st">&#39;Roll 4&#39;</span>, <span class="st">&#39;Roll 5&#39;</span>])</span>
+<span id="cb26-39"><a href="#cb26-39"></a>df.index <span class="op">=</span> [<span class="st">&#39;Experiment &#39;</span> <span class="op">+</span> <span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)]</span>
+<span id="cb26-40"><a href="#cb26-40"></a>df</span>
+<span id="cb26-41"><a href="#cb26-41"></a><span class="in">```</span></span>
+<span id="cb26-42"><a href="#cb26-42"></a></span>
+<span id="cb26-43"><a href="#cb26-43"></a>One thing we can observe is that the outcomes are different in each experiment. This is due to the randomness of the outcomes. However, some patterns can still be observed. Let us explore some questions.</span>
+<span id="cb26-44"><a href="#cb26-44"></a></span>
+<span id="cb26-45"><a href="#cb26-45"></a>We have computers, so we can simulate the experiment many times. Let us simulate the experiment 10,000 times.</span>
+<span id="cb26-46"><a href="#cb26-46"></a></span>
+<span id="cb26-47"><a href="#cb26-47"></a>---</span>
+<span id="cb26-48"><a href="#cb26-48"></a></span>
+<span id="cb26-49"><a href="#cb26-49"></a><span class="fu">#### Question 1</span></span>
+<span id="cb26-50"><a href="#cb26-50"></a></span>
+<span id="cb26-51"><a href="#cb26-51"></a>**Let us compute the sum of the outcomes in each experiment. Next, we will count the number of times each sum appears in the 10,000 experiments and plot the results.**</span>
+<span id="cb26-52"><a href="#cb26-52"></a></span>
+<span id="cb26-55"><a href="#cb26-55"></a><span class="in">```{python}</span></span>
+<span id="cb26-56"><a href="#cb26-56"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">5</span>))</span>
+<span id="cb26-57"><a href="#cb26-57"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-58"><a href="#cb26-58"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
+<span id="cb26-59"><a href="#cb26-59"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-60"><a href="#cb26-60"></a><span class="in">```</span></span>
+<span id="cb26-61"><a href="#cb26-61"></a></span>
+<span id="cb26-62"><a href="#cb26-62"></a>---</span>
+<span id="cb26-63"><a href="#cb26-63"></a></span>
+<span id="cb26-64"><a href="#cb26-64"></a><span class="fu">#### Question 2</span></span>
+<span id="cb26-65"><a href="#cb26-65"></a></span>
+<span id="cb26-66"><a href="#cb26-66"></a>**Maybe we can change the number of times we roll the die. Let us repeat the experiment with 42 rolls. We will simulate the experiment 10,000 times and plot the results.**</span>
+<span id="cb26-67"><a href="#cb26-67"></a></span>
+<span id="cb26-70"><a href="#cb26-70"></a><span class="in">```{python}</span></span>
+<span id="cb26-71"><a href="#cb26-71"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
+<span id="cb26-72"><a href="#cb26-72"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-73"><a href="#cb26-73"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
+<span id="cb26-74"><a href="#cb26-74"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-75"><a href="#cb26-75"></a><span class="in">```</span></span>
+<span id="cb26-76"><a href="#cb26-76"></a></span>
+<span id="cb26-77"><a href="#cb26-77"></a>The plot is not ideal. Let us try running 100,000 experiments.</span>
+<span id="cb26-78"><a href="#cb26-78"></a></span>
+<span id="cb26-81"><a href="#cb26-81"></a><span class="in">```{python}</span></span>
+<span id="cb26-82"><a href="#cb26-82"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">100000</span>, <span class="dv">42</span>))</span>
+<span id="cb26-83"><a href="#cb26-83"></a>sums <span class="op">=</span> df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-84"><a href="#cb26-84"></a>counts <span class="op">=</span> pd.Series(sums).value_counts().sort_index()</span>
+<span id="cb26-85"><a href="#cb26-85"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-86"><a href="#cb26-86"></a><span class="in">```</span></span>
+<span id="cb26-87"><a href="#cb26-87"></a></span>
+<span id="cb26-88"><a href="#cb26-88"></a>This is much better. We can see that the distribution of the sums looks similar. This kind of behavior is what we are looking for. Even though you cannot predict the outcome of a single experiment, you can predict the distribution of outcomes and use it to make informed decisions.</span>
+<span id="cb26-89"><a href="#cb26-89"></a></span>
+<span id="cb26-90"><a href="#cb26-90"></a>---</span>
+<span id="cb26-91"><a href="#cb26-91"></a></span>
+<span id="cb26-92"><a href="#cb26-92"></a><span class="fu">#### Question 3</span></span>
+<span id="cb26-93"><a href="#cb26-93"></a></span>
+<span id="cb26-94"><a href="#cb26-94"></a>**Let us compute how many times outcomes 1, 2, 3, 4, 5, and 6 appear in the 10,000 experiments. We will plot the results.**</span>
+<span id="cb26-95"><a href="#cb26-95"></a></span>
+<span id="cb26-98"><a href="#cb26-98"></a><span class="in">```{python}</span></span>
+<span id="cb26-99"><a href="#cb26-99"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
+<span id="cb26-100"><a href="#cb26-100"></a>counts <span class="op">=</span> pd.DataFrame(df).stack().value_counts().sort_index()</span>
+<span id="cb26-101"><a href="#cb26-101"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-102"><a href="#cb26-102"></a><span class="in">```</span></span>
+<span id="cb26-103"><a href="#cb26-103"></a></span>
+<span id="cb26-104"><a href="#cb26-104"></a>We can see that the chances are equal.</span>
+<span id="cb26-105"><a href="#cb26-105"></a></span>
+<span id="cb26-106"><a href="#cb26-106"></a>---</span>
+<span id="cb26-107"><a href="#cb26-107"></a></span>
+<span id="cb26-108"><a href="#cb26-108"></a><span class="fu">#### Question 4</span></span>
+<span id="cb26-109"><a href="#cb26-109"></a></span>
+<span id="cb26-110"><a href="#cb26-110"></a>**Let us compute the chances of getting each outcome in the first, second, third, ..., 42nd roll. We will plot the results.**</span>
+<span id="cb26-111"><a href="#cb26-111"></a></span>
+<span id="cb26-114"><a href="#cb26-114"></a><span class="in">```{python}</span></span>
+<span id="cb26-115"><a href="#cb26-115"></a>df <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (<span class="dv">10000</span>, <span class="dv">42</span>))</span>
+<span id="cb26-116"><a href="#cb26-116"></a>counts <span class="op">=</span> pd.DataFrame(df).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.value_counts(normalize<span class="op">=</span><span class="va">True</span>)).T</span>
+<span id="cb26-117"><a href="#cb26-117"></a>counts.plot(kind<span class="op">=</span><span class="st">&#39;bar&#39;</span>, stacked<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb26-118"><a href="#cb26-118"></a><span class="in">```</span></span>
 <span id="cb26-119"><a href="#cb26-119"></a></span>
-<span id="cb26-120"><a href="#cb26-120"></a>The classical definition of probability is rooted in the concept of equally likely outcomes. For an event $A$, its probability is calculated as:</span>
-<span id="cb26-121"><a href="#cb26-121"></a></span>
-<span id="cb26-122"><a href="#cb26-122"></a>$$</span>
-<span id="cb26-123"><a href="#cb26-123"></a>P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}.</span>
-<span id="cb26-124"><a href="#cb26-124"></a>$$</span>
-<span id="cb26-125"><a href="#cb26-125"></a></span>
-<span id="cb26-126"><a href="#cb26-126"></a>This definition works well for problems where all outcomes are equally likely, such as rolling a die or drawing a card from a well-shuffled deck. However, calculating probabilities analytically becomes difficult for more complex systems. Here, simulation methods like Monte Carlo become invaluable.</span>
-<span id="cb26-127"><a href="#cb26-127"></a></span>
-<span id="cb26-128"><a href="#cb26-128"></a><span class="fu">### Simulating Classical Probability with Monte Carlo</span></span>
-<span id="cb26-129"><a href="#cb26-129"></a></span>
-<span id="cb26-130"><a href="#cb26-130"></a>Monte Carlo simulation allows us to approximate probabilities by performing random experiments multiple times. Instead of enumerating all possible outcomes, we rely on repeated random sampling to estimate probabilities. Let us demonstrate this with an example.</span>
-<span id="cb26-131"><a href="#cb26-131"></a></span>
-<span id="cb26-132"><a href="#cb26-132"></a><span class="fu">### Example: Estimating the Probability of Rolling a Sum Greater Than 8 with Two Dice</span></span>
-<span id="cb26-133"><a href="#cb26-133"></a></span>
-<span id="cb26-134"><a href="#cb26-134"></a><span class="fu">#### Analytical Solution</span></span>
-<span id="cb26-135"><a href="#cb26-135"></a>The total number of outcomes when rolling two dice can be calculated programmatically. The favorable outcomes for a sum greater than 8 can also be determined directly:</span>
+<span id="cb26-120"><a href="#cb26-120"></a></span>
+<span id="cb26-121"><a href="#cb26-121"></a><span class="fu">## Definition of Probability</span></span>
+<span id="cb26-122"><a href="#cb26-122"></a></span>
+<span id="cb26-123"><a href="#cb26-123"></a>The classical definition of probability is rooted in the concept of equally likely outcomes. For an event $A$, its probability is calculated as:</span>
+<span id="cb26-124"><a href="#cb26-124"></a></span>
+<span id="cb26-125"><a href="#cb26-125"></a>$$</span>
+<span id="cb26-126"><a href="#cb26-126"></a>P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}.</span>
+<span id="cb26-127"><a href="#cb26-127"></a>$$</span>
+<span id="cb26-128"><a href="#cb26-128"></a></span>
+<span id="cb26-129"><a href="#cb26-129"></a>This definition works well for problems where all outcomes are equally likely, such as rolling a die or drawing a card from a well-shuffled deck. However, calculating probabilities analytically becomes difficult for more complex systems. Here, simulation methods like Monte Carlo become invaluable.</span>
+<span id="cb26-130"><a href="#cb26-130"></a></span>
+<span id="cb26-131"><a href="#cb26-131"></a><span class="fu">### Simulating Classical Probability with Monte Carlo</span></span>
+<span id="cb26-132"><a href="#cb26-132"></a></span>
+<span id="cb26-133"><a href="#cb26-133"></a>Monte Carlo simulation allows us to approximate probabilities by performing random experiments multiple times. Instead of enumerating all possible outcomes, we rely on repeated random sampling to estimate probabilities. Let us demonstrate this with an example.</span>
+<span id="cb26-134"><a href="#cb26-134"></a></span>
+<span id="cb26-135"><a href="#cb26-135"></a><span class="fu">### Example: Estimating the Probability of Rolling a Sum Greater Than 8 with Two Dice</span></span>
 <span id="cb26-136"><a href="#cb26-136"></a></span>
-<span id="cb26-139"><a href="#cb26-139"></a><span class="in">```{python}</span></span>
-<span id="cb26-140"><a href="#cb26-140"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
-<span id="cb26-141"><a href="#cb26-141"></a></span>
-<span id="cb26-142"><a href="#cb26-142"></a><span class="co"># All possible outcomes for two dice</span></span>
-<span id="cb26-143"><a href="#cb26-143"></a>all_outcomes <span class="op">=</span> <span class="bu">list</span>(product(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>), repeat<span class="op">=</span><span class="dv">2</span>))</span>
+<span id="cb26-137"><a href="#cb26-137"></a><span class="fu">#### Analytical Solution</span></span>
+<span id="cb26-138"><a href="#cb26-138"></a>The total number of outcomes when rolling two dice can be calculated programmatically. The favorable outcomes for a sum greater than 8 can also be determined directly:</span>
+<span id="cb26-139"><a href="#cb26-139"></a></span>
+<span id="cb26-142"><a href="#cb26-142"></a><span class="in">```{python}</span></span>
+<span id="cb26-143"><a href="#cb26-143"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
 <span id="cb26-144"><a href="#cb26-144"></a></span>
-<span id="cb26-145"><a href="#cb26-145"></a><span class="co"># Total number of possible outcomes</span></span>
-<span id="cb26-146"><a href="#cb26-146"></a>total_outcomes <span class="op">=</span> <span class="bu">len</span>(all_outcomes)</span>
+<span id="cb26-145"><a href="#cb26-145"></a><span class="co"># All possible outcomes for two dice</span></span>
+<span id="cb26-146"><a href="#cb26-146"></a>all_outcomes <span class="op">=</span> <span class="bu">list</span>(product(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>), repeat<span class="op">=</span><span class="dv">2</span>))</span>
 <span id="cb26-147"><a href="#cb26-147"></a></span>
-<span id="cb26-148"><a href="#cb26-148"></a><span class="co"># Favorable outcomes (sum &gt; 8)</span></span>
-<span id="cb26-149"><a href="#cb26-149"></a>favorable_outcomes <span class="op">=</span> [outcome <span class="cf">for</span> outcome <span class="kw">in</span> all_outcomes <span class="cf">if</span> <span class="bu">sum</span>(outcome) <span class="op">&gt;</span> <span class="dv">8</span>]</span>
+<span id="cb26-148"><a href="#cb26-148"></a><span class="co"># Total number of possible outcomes</span></span>
+<span id="cb26-149"><a href="#cb26-149"></a>total_outcomes <span class="op">=</span> <span class="bu">len</span>(all_outcomes)</span>
 <span id="cb26-150"><a href="#cb26-150"></a></span>
-<span id="cb26-151"><a href="#cb26-151"></a><span class="co"># Number of favorable outcomes</span></span>
-<span id="cb26-152"><a href="#cb26-152"></a>num_favorable <span class="op">=</span> <span class="bu">len</span>(favorable_outcomes)</span>
+<span id="cb26-151"><a href="#cb26-151"></a><span class="co"># Favorable outcomes (sum &gt; 8)</span></span>
+<span id="cb26-152"><a href="#cb26-152"></a>favorable_outcomes <span class="op">=</span> [outcome <span class="cf">for</span> outcome <span class="kw">in</span> all_outcomes <span class="cf">if</span> <span class="bu">sum</span>(outcome) <span class="op">&gt;</span> <span class="dv">8</span>]</span>
 <span id="cb26-153"><a href="#cb26-153"></a></span>
-<span id="cb26-154"><a href="#cb26-154"></a><span class="co"># Analytical probability</span></span>
-<span id="cb26-155"><a href="#cb26-155"></a>analytical_probability <span class="op">=</span> num_favorable <span class="op">/</span> total_outcomes</span>
-<span id="cb26-156"><a href="#cb26-156"></a><span class="bu">print</span>(<span class="ss">f&quot;Analytical Probability: </span><span class="sc">{</span>analytical_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb26-157"><a href="#cb26-157"></a><span class="in">```</span></span>
-<span id="cb26-158"><a href="#cb26-158"></a></span>
-<span id="cb26-159"><a href="#cb26-159"></a><span class="fu">#### Monte Carlo Simulation</span></span>
-<span id="cb26-160"><a href="#cb26-160"></a>We can estimate this probability by simulating the rolls of two dice many times:</span>
+<span id="cb26-154"><a href="#cb26-154"></a><span class="co"># Number of favorable outcomes</span></span>
+<span id="cb26-155"><a href="#cb26-155"></a>num_favorable <span class="op">=</span> <span class="bu">len</span>(favorable_outcomes)</span>
+<span id="cb26-156"><a href="#cb26-156"></a></span>
+<span id="cb26-157"><a href="#cb26-157"></a><span class="co"># Analytical probability</span></span>
+<span id="cb26-158"><a href="#cb26-158"></a>analytical_probability <span class="op">=</span> num_favorable <span class="op">/</span> total_outcomes</span>
+<span id="cb26-159"><a href="#cb26-159"></a><span class="bu">print</span>(<span class="ss">f&quot;Analytical Probability: </span><span class="sc">{</span>analytical_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb26-160"><a href="#cb26-160"></a><span class="in">```</span></span>
 <span id="cb26-161"><a href="#cb26-161"></a></span>
-<span id="cb26-164"><a href="#cb26-164"></a><span class="in">```{python}</span></span>
-<span id="cb26-165"><a href="#cb26-165"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-166"><a href="#cb26-166"></a></span>
-<span id="cb26-167"><a href="#cb26-167"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb26-168"><a href="#cb26-168"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb26-162"><a href="#cb26-162"></a><span class="fu">#### Monte Carlo Simulation</span></span>
+<span id="cb26-163"><a href="#cb26-163"></a>We can estimate this probability by simulating the rolls of two dice many times:</span>
+<span id="cb26-164"><a href="#cb26-164"></a></span>
+<span id="cb26-167"><a href="#cb26-167"></a><span class="in">```{python}</span></span>
+<span id="cb26-168"><a href="#cb26-168"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb26-169"><a href="#cb26-169"></a></span>
-<span id="cb26-170"><a href="#cb26-170"></a><span class="co"># Number of simulations</span></span>
-<span id="cb26-171"><a href="#cb26-171"></a>n_simulations <span class="op">=</span> <span class="dv">100000</span></span>
+<span id="cb26-170"><a href="#cb26-170"></a><span class="co"># Set random seed for reproducibility</span></span>
+<span id="cb26-171"><a href="#cb26-171"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb26-172"><a href="#cb26-172"></a></span>
-<span id="cb26-173"><a href="#cb26-173"></a><span class="co"># Simulate rolling two dice</span></span>
-<span id="cb26-174"><a href="#cb26-174"></a>rolls <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (n_simulations, <span class="dv">2</span>))</span>
+<span id="cb26-173"><a href="#cb26-173"></a><span class="co"># Number of simulations</span></span>
+<span id="cb26-174"><a href="#cb26-174"></a>n_simulations <span class="op">=</span> <span class="dv">100000</span></span>
 <span id="cb26-175"><a href="#cb26-175"></a></span>
-<span id="cb26-176"><a href="#cb26-176"></a><span class="co"># Calculate sums of rolls</span></span>
-<span id="cb26-177"><a href="#cb26-177"></a>sums <span class="op">=</span> rolls.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-176"><a href="#cb26-176"></a><span class="co"># Simulate rolling two dice</span></span>
+<span id="cb26-177"><a href="#cb26-177"></a>rolls <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (n_simulations, <span class="dv">2</span>))</span>
 <span id="cb26-178"><a href="#cb26-178"></a></span>
-<span id="cb26-179"><a href="#cb26-179"></a><span class="co"># Count favorable outcomes (sum &gt; 8)</span></span>
-<span id="cb26-180"><a href="#cb26-180"></a>favorable <span class="op">=</span> (sums <span class="op">&gt;</span> <span class="dv">8</span>).<span class="bu">sum</span>()</span>
+<span id="cb26-179"><a href="#cb26-179"></a><span class="co"># Calculate sums of rolls</span></span>
+<span id="cb26-180"><a href="#cb26-180"></a>sums <span class="op">=</span> rolls.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb26-181"><a href="#cb26-181"></a></span>
-<span id="cb26-182"><a href="#cb26-182"></a><span class="co"># Estimate probability</span></span>
-<span id="cb26-183"><a href="#cb26-183"></a>estimated_probability <span class="op">=</span> favorable <span class="op">/</span> n_simulations</span>
+<span id="cb26-182"><a href="#cb26-182"></a><span class="co"># Count favorable outcomes (sum &gt; 8)</span></span>
+<span id="cb26-183"><a href="#cb26-183"></a>favorable <span class="op">=</span> (sums <span class="op">&gt;</span> <span class="dv">8</span>).<span class="bu">sum</span>()</span>
 <span id="cb26-184"><a href="#cb26-184"></a></span>
-<span id="cb26-185"><a href="#cb26-185"></a><span class="bu">print</span>(<span class="ss">f&quot;Estimated Probability (Monte Carlo): </span><span class="sc">{</span>estimated_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb26-186"><a href="#cb26-186"></a><span class="in">```</span></span>
+<span id="cb26-185"><a href="#cb26-185"></a><span class="co"># Estimate probability</span></span>
+<span id="cb26-186"><a href="#cb26-186"></a>estimated_probability <span class="op">=</span> favorable <span class="op">/</span> n_simulations</span>
 <span id="cb26-187"><a href="#cb26-187"></a></span>
-<span id="cb26-188"><a href="#cb26-188"></a><span class="fu">### Results</span></span>
-<span id="cb26-189"><a href="#cb26-189"></a>The Monte Carlo simulation uses the defined variables and programmatic logic to estimate the probability. This value should converge to the analytical result as the number of simulations increases.</span>
+<span id="cb26-188"><a href="#cb26-188"></a><span class="bu">print</span>(<span class="ss">f&quot;Estimated Probability (Monte Carlo): </span><span class="sc">{</span>estimated_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb26-189"><a href="#cb26-189"></a><span class="in">```</span></span>
 <span id="cb26-190"><a href="#cb26-190"></a></span>
-<span id="cb26-191"><a href="#cb26-191"></a>This example illustrates the power of Monte Carlo methods in approximating probabilities, especially for scenarios where analytical solutions are challenging or impossible to compute.</span>
-<span id="cb26-192"><a href="#cb26-192"></a></span>
+<span id="cb26-191"><a href="#cb26-191"></a><span class="fu">### Results</span></span>
+<span id="cb26-192"><a href="#cb26-192"></a>The Monte Carlo simulation uses the defined variables and programmatic logic to estimate the probability. This value should converge to the analytical result as the number of simulations increases.</span>
 <span id="cb26-193"><a href="#cb26-193"></a></span>
-<span id="cb26-194"><a href="#cb26-194"></a>---</span>
+<span id="cb26-194"><a href="#cb26-194"></a>This example illustrates the power of Monte Carlo methods in approximating probabilities, especially for scenarios where analytical solutions are challenging or impossible to compute.</span>
 <span id="cb26-195"><a href="#cb26-195"></a></span>
-<span id="cb26-196"><a href="#cb26-196"></a><span class="fu">## Estimating the Probability</span></span>
-<span id="cb26-197"><a href="#cb26-197"></a></span>
-<span id="cb26-198"><a href="#cb26-198"></a>Let us estimate the probability of getting 7 heads in 10 coin tosses using both analytical and Monte Carlo methods.</span>
-<span id="cb26-199"><a href="#cb26-199"></a></span>
-<span id="cb26-200"><a href="#cb26-200"></a>When flipping a fair coin 10 times, each flip has two equally likely outcomes: heads or tails. To calculate the probability of getting exactly 7 heads, we can use the binomial probability formula:</span>
-<span id="cb26-201"><a href="#cb26-201"></a></span>
-<span id="cb26-202"><a href="#cb26-202"></a>$$</span>
-<span id="cb26-203"><a href="#cb26-203"></a>P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},</span>
-<span id="cb26-204"><a href="#cb26-204"></a>$$</span>
-<span id="cb26-205"><a href="#cb26-205"></a></span>
-<span id="cb26-206"><a href="#cb26-206"></a>where:</span>
-<span id="cb26-207"><a href="#cb26-207"></a><span class="ss">- </span>$n$ is the number of trials (10 in this case),</span>
-<span id="cb26-208"><a href="#cb26-208"></a><span class="ss">- </span>$k$ is the number of successes (7 heads),</span>
-<span id="cb26-209"><a href="#cb26-209"></a><span class="ss">- </span>$p$ is the probability of success for a single trial (0.5 for a fair coin).</span>
-<span id="cb26-210"><a href="#cb26-210"></a></span>
-<span id="cb26-211"><a href="#cb26-211"></a><span class="fu">#### Analytical Solution</span></span>
-<span id="cb26-212"><a href="#cb26-212"></a>We can calculate the analytical probability using Python:</span>
+<span id="cb26-196"><a href="#cb26-196"></a></span>
+<span id="cb26-197"><a href="#cb26-197"></a>---</span>
+<span id="cb26-198"><a href="#cb26-198"></a></span>
+<span id="cb26-199"><a href="#cb26-199"></a><span class="fu">## Estimating the Probability</span></span>
+<span id="cb26-200"><a href="#cb26-200"></a></span>
+<span id="cb26-201"><a href="#cb26-201"></a>Let us estimate the probability of getting 7 heads in 10 coin tosses using both analytical and Monte Carlo methods.</span>
+<span id="cb26-202"><a href="#cb26-202"></a></span>
+<span id="cb26-203"><a href="#cb26-203"></a>When flipping a fair coin 10 times, each flip has two equally likely outcomes: heads or tails. To calculate the probability of getting exactly 7 heads, we can use the binomial probability formula:</span>
+<span id="cb26-204"><a href="#cb26-204"></a></span>
+<span id="cb26-205"><a href="#cb26-205"></a>$$</span>
+<span id="cb26-206"><a href="#cb26-206"></a>P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k},</span>
+<span id="cb26-207"><a href="#cb26-207"></a>$$</span>
+<span id="cb26-208"><a href="#cb26-208"></a></span>
+<span id="cb26-209"><a href="#cb26-209"></a>where:</span>
+<span id="cb26-210"><a href="#cb26-210"></a><span class="ss">- </span>$n$ is the number of trials (10 in this case),</span>
+<span id="cb26-211"><a href="#cb26-211"></a><span class="ss">- </span>$k$ is the number of successes (7 heads),</span>
+<span id="cb26-212"><a href="#cb26-212"></a><span class="ss">- </span>$p$ is the probability of success for a single trial (0.5 for a fair coin).</span>
 <span id="cb26-213"><a href="#cb26-213"></a></span>
-<span id="cb26-216"><a href="#cb26-216"></a><span class="in">```{python}</span></span>
-<span id="cb26-217"><a href="#cb26-217"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
-<span id="cb26-218"><a href="#cb26-218"></a></span>
-<span id="cb26-219"><a href="#cb26-219"></a><span class="co"># Parameters</span></span>
-<span id="cb26-220"><a href="#cb26-220"></a>n_trials <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb26-221"><a href="#cb26-221"></a>k_successes <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb26-222"><a href="#cb26-222"></a>p_success <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb26-223"><a href="#cb26-223"></a></span>
-<span id="cb26-224"><a href="#cb26-224"></a><span class="co"># Binomial probability</span></span>
-<span id="cb26-225"><a href="#cb26-225"></a>analytical_probability <span class="op">=</span> comb(n_trials, k_successes) <span class="op">*</span> (p_success <span class="op">**</span> k_successes) <span class="op">*</span> ((<span class="dv">1</span> <span class="op">-</span> p_success) <span class="op">**</span> (n_trials <span class="op">-</span> k_successes))</span>
+<span id="cb26-214"><a href="#cb26-214"></a><span class="fu">#### Analytical Solution</span></span>
+<span id="cb26-215"><a href="#cb26-215"></a>We can calculate the analytical probability using Python:</span>
+<span id="cb26-216"><a href="#cb26-216"></a></span>
+<span id="cb26-219"><a href="#cb26-219"></a><span class="in">```{python}</span></span>
+<span id="cb26-220"><a href="#cb26-220"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
+<span id="cb26-221"><a href="#cb26-221"></a></span>
+<span id="cb26-222"><a href="#cb26-222"></a><span class="co"># Parameters</span></span>
+<span id="cb26-223"><a href="#cb26-223"></a>n_trials <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb26-224"><a href="#cb26-224"></a>k_successes <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb26-225"><a href="#cb26-225"></a>p_success <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb26-226"><a href="#cb26-226"></a></span>
-<span id="cb26-227"><a href="#cb26-227"></a><span class="bu">print</span>(<span class="ss">f&quot;Analytical Probability of 7 Heads in 10 Tosses: </span><span class="sc">{</span>analytical_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb26-228"><a href="#cb26-228"></a><span class="in">```</span></span>
+<span id="cb26-227"><a href="#cb26-227"></a><span class="co"># Binomial probability</span></span>
+<span id="cb26-228"><a href="#cb26-228"></a>analytical_probability <span class="op">=</span> comb(n_trials, k_successes) <span class="op">*</span> (p_success <span class="op">**</span> k_successes) <span class="op">*</span> ((<span class="dv">1</span> <span class="op">-</span> p_success) <span class="op">**</span> (n_trials <span class="op">-</span> k_successes))</span>
 <span id="cb26-229"><a href="#cb26-229"></a></span>
-<span id="cb26-230"><a href="#cb26-230"></a><span class="fu">#### Monte Carlo Simulation</span></span>
-<span id="cb26-231"><a href="#cb26-231"></a>We can estimate the probability using a Monte Carlo simulation:</span>
+<span id="cb26-230"><a href="#cb26-230"></a><span class="bu">print</span>(<span class="ss">f&quot;Analytical Probability of 7 Heads in 10 Tosses: </span><span class="sc">{</span>analytical_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb26-231"><a href="#cb26-231"></a><span class="in">```</span></span>
 <span id="cb26-232"><a href="#cb26-232"></a></span>
-<span id="cb26-235"><a href="#cb26-235"></a><span class="in">```{python}</span></span>
-<span id="cb26-236"><a href="#cb26-236"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-237"><a href="#cb26-237"></a></span>
-<span id="cb26-238"><a href="#cb26-238"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb26-239"><a href="#cb26-239"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb26-233"><a href="#cb26-233"></a><span class="fu">#### Monte Carlo Simulation</span></span>
+<span id="cb26-234"><a href="#cb26-234"></a>We can estimate the probability using a Monte Carlo simulation:</span>
+<span id="cb26-235"><a href="#cb26-235"></a></span>
+<span id="cb26-238"><a href="#cb26-238"></a><span class="in">```{python}</span></span>
+<span id="cb26-239"><a href="#cb26-239"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb26-240"><a href="#cb26-240"></a></span>
-<span id="cb26-241"><a href="#cb26-241"></a><span class="co"># Number of simulations</span></span>
-<span id="cb26-242"><a href="#cb26-242"></a>n_simulations <span class="op">=</span> <span class="dv">100000</span></span>
+<span id="cb26-241"><a href="#cb26-241"></a><span class="co"># Set random seed for reproducibility</span></span>
+<span id="cb26-242"><a href="#cb26-242"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb26-243"><a href="#cb26-243"></a></span>
-<span id="cb26-244"><a href="#cb26-244"></a><span class="co"># Simulate coin tosses (1 for heads, 0 for tails)</span></span>
-<span id="cb26-245"><a href="#cb26-245"></a>tosses <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>(n_simulations, n_trials), p<span class="op">=</span>[<span class="fl">0.5</span>, <span class="fl">0.5</span>])</span>
+<span id="cb26-244"><a href="#cb26-244"></a><span class="co"># Number of simulations</span></span>
+<span id="cb26-245"><a href="#cb26-245"></a>n_simulations <span class="op">=</span> <span class="dv">100000</span></span>
 <span id="cb26-246"><a href="#cb26-246"></a></span>
-<span id="cb26-247"><a href="#cb26-247"></a><span class="co"># Count number of heads in each simulation</span></span>
-<span id="cb26-248"><a href="#cb26-248"></a>heads_count <span class="op">=</span> tosses.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb26-247"><a href="#cb26-247"></a><span class="co"># Simulate coin tosses (1 for heads, 0 for tails)</span></span>
+<span id="cb26-248"><a href="#cb26-248"></a>tosses <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>(n_simulations, n_trials), p<span class="op">=</span>[<span class="fl">0.5</span>, <span class="fl">0.5</span>])</span>
 <span id="cb26-249"><a href="#cb26-249"></a></span>
-<span id="cb26-250"><a href="#cb26-250"></a><span class="co"># Count favorable outcomes (exactly 7 heads)</span></span>
-<span id="cb26-251"><a href="#cb26-251"></a>favorable <span class="op">=</span> (heads_count <span class="op">==</span> k_successes).<span class="bu">sum</span>()</span>
+<span id="cb26-250"><a href="#cb26-250"></a><span class="co"># Count number of heads in each simulation</span></span>
+<span id="cb26-251"><a href="#cb26-251"></a>heads_count <span class="op">=</span> tosses.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb26-252"><a href="#cb26-252"></a></span>
-<span id="cb26-253"><a href="#cb26-253"></a><span class="co"># Estimate probability</span></span>
-<span id="cb26-254"><a href="#cb26-254"></a>estimated_probability <span class="op">=</span> favorable <span class="op">/</span> n_simulations</span>
+<span id="cb26-253"><a href="#cb26-253"></a><span class="co"># Count favorable outcomes (exactly 7 heads)</span></span>
+<span id="cb26-254"><a href="#cb26-254"></a>favorable <span class="op">=</span> (heads_count <span class="op">==</span> k_successes).<span class="bu">sum</span>()</span>
 <span id="cb26-255"><a href="#cb26-255"></a></span>
-<span id="cb26-256"><a href="#cb26-256"></a><span class="bu">print</span>(<span class="ss">f&quot;Estimated Probability (Monte Carlo): </span><span class="sc">{</span>estimated_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
-<span id="cb26-257"><a href="#cb26-257"></a><span class="in">```</span></span>
+<span id="cb26-256"><a href="#cb26-256"></a><span class="co"># Estimate probability</span></span>
+<span id="cb26-257"><a href="#cb26-257"></a>estimated_probability <span class="op">=</span> favorable <span class="op">/</span> n_simulations</span>
 <span id="cb26-258"><a href="#cb26-258"></a></span>
-<span id="cb26-259"><a href="#cb26-259"></a><span class="fu">### Results</span></span>
-<span id="cb26-260"><a href="#cb26-260"></a>Both the analytical and Monte Carlo methods provide an estimate of the probability. The Monte Carlo simulation demonstrates how repeated random sampling can approximate probabilities, converging to the analytical result as the number of simulations increases.</span>
+<span id="cb26-259"><a href="#cb26-259"></a><span class="bu">print</span>(<span class="ss">f&quot;Estimated Probability (Monte Carlo): </span><span class="sc">{</span>estimated_probability<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb26-260"><a href="#cb26-260"></a><span class="in">```</span></span>
 <span id="cb26-261"><a href="#cb26-261"></a></span>
-<span id="cb26-262"><a href="#cb26-262"></a>This example showcases the flexibility and power of Monte Carlo simulations in estimating probabilities for complex scenarios. Real problems are often too intricate for direct analytical solutions, making simulation methods a valuable tool in statistical analysis.</span>
-<span id="cb26-263"><a href="#cb26-263"></a></span>
-<span id="cb26-264"><a href="#cb26-264"></a><span class="fu">## Probability Distributions</span></span>
-<span id="cb26-265"><a href="#cb26-265"></a></span>
-<span id="cb26-266"><a href="#cb26-266"></a><span class="fu">### Introduction to Probability Distributions</span></span>
-<span id="cb26-267"><a href="#cb26-267"></a></span>
-<span id="cb26-268"><a href="#cb26-268"></a>In statistics, a probability distribution describes how the values of a random variable are spread across different outcomes. There are many types of probability distributions, each with unique characteristics and applications. Let&#39;s explore some common probability distributions and their properties.</span>
-<span id="cb26-269"><a href="#cb26-269"></a></span>
-<span id="cb26-270"><a href="#cb26-270"></a><span class="fu">### Discrete Probability Distributions</span></span>
-<span id="cb26-271"><a href="#cb26-271"></a></span>
-<span id="cb26-272"><a href="#cb26-272"></a>Discrete probability distributions are defined for discrete random variables, which take on a countable number of distinct values. Some well-known discrete distributions include the Bernoulli, Binomial, Poisson, and Geometric distributions.</span>
-<span id="cb26-273"><a href="#cb26-273"></a></span>
-<span id="cb26-274"><a href="#cb26-274"></a><span class="fu">#### Bernoulli Distribution</span></span>
-<span id="cb26-275"><a href="#cb26-275"></a></span>
-<span id="cb26-276"><a href="#cb26-276"></a>The Bernoulli distribution models a single binary outcome (e.g., success/failure) with a probability $p$. It is a special case of the Binomial distribution with $n = 1$.</span>
-<span id="cb26-277"><a href="#cb26-277"></a></span>
-<span id="cb26-278"><a href="#cb26-278"></a>$$</span>
-<span id="cb26-279"><a href="#cb26-279"></a>P(X = k) = \begin{cases} 1 - p &amp; \text{if } k = 0 <span class="sc">\\</span> p &amp; \text{if } k = 1 \end{cases}</span>
-<span id="cb26-280"><a href="#cb26-280"></a>$$</span>
-<span id="cb26-281"><a href="#cb26-281"></a></span>
-<span id="cb26-284"><a href="#cb26-284"></a><span class="in">```{python}</span></span>
-<span id="cb26-285"><a href="#cb26-285"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-286"><a href="#cb26-286"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-287"><a href="#cb26-287"></a></span>
-<span id="cb26-288"><a href="#cb26-288"></a><span class="co"># Parameters</span></span>
-<span id="cb26-289"><a href="#cb26-289"></a>p <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb26-262"><a href="#cb26-262"></a><span class="fu">### Results</span></span>
+<span id="cb26-263"><a href="#cb26-263"></a>Both the analytical and Monte Carlo methods provide an estimate of the probability. The Monte Carlo simulation demonstrates how repeated random sampling can approximate probabilities, converging to the analytical result as the number of simulations increases.</span>
+<span id="cb26-264"><a href="#cb26-264"></a></span>
+<span id="cb26-265"><a href="#cb26-265"></a>This example showcases the flexibility and power of Monte Carlo simulations in estimating probabilities for complex scenarios. Real problems are often too intricate for direct analytical solutions, making simulation methods a valuable tool in statistical analysis.</span>
+<span id="cb26-266"><a href="#cb26-266"></a></span>
+<span id="cb26-267"><a href="#cb26-267"></a><span class="fu">## Probability Distributions</span></span>
+<span id="cb26-268"><a href="#cb26-268"></a></span>
+<span id="cb26-269"><a href="#cb26-269"></a><span class="fu">### Introduction to Probability Distributions</span></span>
+<span id="cb26-270"><a href="#cb26-270"></a></span>
+<span id="cb26-271"><a href="#cb26-271"></a>In statistics, a probability distribution describes how the values of a random variable are spread across different outcomes. There are many types of probability distributions, each with unique characteristics and applications. Let&#39;s explore some common probability distributions and their properties.</span>
+<span id="cb26-272"><a href="#cb26-272"></a></span>
+<span id="cb26-273"><a href="#cb26-273"></a><span class="fu">### Discrete Probability Distributions</span></span>
+<span id="cb26-274"><a href="#cb26-274"></a></span>
+<span id="cb26-275"><a href="#cb26-275"></a>Discrete probability distributions are defined for discrete random variables, which take on a countable number of distinct values. Some well-known discrete distributions include the Bernoulli, Binomial, Poisson, and Geometric distributions.</span>
+<span id="cb26-276"><a href="#cb26-276"></a></span>
+<span id="cb26-277"><a href="#cb26-277"></a><span class="fu">#### Bernoulli Distribution</span></span>
+<span id="cb26-278"><a href="#cb26-278"></a></span>
+<span id="cb26-279"><a href="#cb26-279"></a>The Bernoulli distribution models a single binary outcome (e.g., success/failure) with a probability $p$. It is a special case of the Binomial distribution with $n = 1$.</span>
+<span id="cb26-280"><a href="#cb26-280"></a></span>
+<span id="cb26-281"><a href="#cb26-281"></a>$$</span>
+<span id="cb26-282"><a href="#cb26-282"></a>P(X = k) = \begin{cases} 1 - p &amp; \text{if } k = 0 <span class="sc">\\</span> p &amp; \text{if } k = 1 \end{cases}</span>
+<span id="cb26-283"><a href="#cb26-283"></a>$$</span>
+<span id="cb26-284"><a href="#cb26-284"></a></span>
+<span id="cb26-287"><a href="#cb26-287"></a><span class="in">```{python}</span></span>
+<span id="cb26-288"><a href="#cb26-288"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-289"><a href="#cb26-289"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb26-290"><a href="#cb26-290"></a></span>
-<span id="cb26-291"><a href="#cb26-291"></a><span class="co"># Possible outcomes</span></span>
-<span id="cb26-292"><a href="#cb26-292"></a>outcomes <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb26-291"><a href="#cb26-291"></a><span class="co"># Parameters</span></span>
+<span id="cb26-292"><a href="#cb26-292"></a>p <span class="op">=</span> <span class="fl">0.3</span></span>
 <span id="cb26-293"><a href="#cb26-293"></a></span>
-<span id="cb26-294"><a href="#cb26-294"></a><span class="co"># Probabilities</span></span>
-<span id="cb26-295"><a href="#cb26-295"></a>probabilities <span class="op">=</span> [<span class="dv">1</span> <span class="op">-</span> p, p]</span>
+<span id="cb26-294"><a href="#cb26-294"></a><span class="co"># Possible outcomes</span></span>
+<span id="cb26-295"><a href="#cb26-295"></a>outcomes <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>]</span>
 <span id="cb26-296"><a href="#cb26-296"></a></span>
-<span id="cb26-297"><a href="#cb26-297"></a><span class="co"># Plotting the Bernoulli distribution</span></span>
-<span id="cb26-298"><a href="#cb26-298"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb26-299"><a href="#cb26-299"></a>plt.bar(outcomes, probabilities, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb26-300"><a href="#cb26-300"></a>plt.title(<span class="st">&quot;Bernoulli Distribution&quot;</span>)</span>
-<span id="cb26-301"><a href="#cb26-301"></a>plt.xlabel(<span class="st">&quot;Outcome&quot;</span>)</span>
-<span id="cb26-302"><a href="#cb26-302"></a>plt.ylabel(<span class="st">&quot;Probability&quot;</span>)</span>
-<span id="cb26-303"><a href="#cb26-303"></a>plt.xticks(outcomes, [<span class="st">&#39;Failure (0)&#39;</span>, <span class="st">&#39;Success (1)&#39;</span>])</span>
-<span id="cb26-304"><a href="#cb26-304"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb26-305"><a href="#cb26-305"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-306"><a href="#cb26-306"></a>plt.show()</span>
-<span id="cb26-307"><a href="#cb26-307"></a><span class="in">```</span></span>
-<span id="cb26-308"><a href="#cb26-308"></a></span>
-<span id="cb26-309"><a href="#cb26-309"></a><span class="fu">#### Binomial Distribution</span></span>
-<span id="cb26-310"><a href="#cb26-310"></a></span>
-<span id="cb26-311"><a href="#cb26-311"></a>The Binomial distribution models the number of successes in $n$ independent Bernoulli trials with probability $p$. It is characterized by two parameters: $n$ (number of trials) and $p$ (probability of success). </span>
-<span id="cb26-312"><a href="#cb26-312"></a></span>
-<span id="cb26-313"><a href="#cb26-313"></a>$$</span>
-<span id="cb26-314"><a href="#cb26-314"></a>P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}</span>
-<span id="cb26-315"><a href="#cb26-315"></a>$$</span>
-<span id="cb26-316"><a href="#cb26-316"></a></span>
-<span id="cb26-317"><a href="#cb26-317"></a>Monte Carlo simulations can also be used to generate above distributions. Let us simulate the Binomial distribution with $n = 10$ and $p = 0.3$:</span>
-<span id="cb26-318"><a href="#cb26-318"></a></span>
-<span id="cb26-321"><a href="#cb26-321"></a><span class="in">```{python}</span></span>
-<span id="cb26-322"><a href="#cb26-322"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-323"><a href="#cb26-323"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-324"><a href="#cb26-324"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
-<span id="cb26-325"><a href="#cb26-325"></a></span>
-<span id="cb26-326"><a href="#cb26-326"></a><span class="co"># Number of simulations</span></span>
-<span id="cb26-327"><a href="#cb26-327"></a>n_simulations <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb26-297"><a href="#cb26-297"></a><span class="co"># Probabilities</span></span>
+<span id="cb26-298"><a href="#cb26-298"></a>probabilities <span class="op">=</span> [<span class="dv">1</span> <span class="op">-</span> p, p]</span>
+<span id="cb26-299"><a href="#cb26-299"></a></span>
+<span id="cb26-300"><a href="#cb26-300"></a><span class="co"># Plotting the Bernoulli distribution</span></span>
+<span id="cb26-301"><a href="#cb26-301"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb26-302"><a href="#cb26-302"></a>plt.bar(outcomes, probabilities, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb26-303"><a href="#cb26-303"></a>plt.title(<span class="st">&quot;Bernoulli Distribution&quot;</span>)</span>
+<span id="cb26-304"><a href="#cb26-304"></a>plt.xlabel(<span class="st">&quot;Outcome&quot;</span>)</span>
+<span id="cb26-305"><a href="#cb26-305"></a>plt.ylabel(<span class="st">&quot;Probability&quot;</span>)</span>
+<span id="cb26-306"><a href="#cb26-306"></a>plt.xticks(outcomes, [<span class="st">&#39;Failure (0)&#39;</span>, <span class="st">&#39;Success (1)&#39;</span>])</span>
+<span id="cb26-307"><a href="#cb26-307"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb26-308"><a href="#cb26-308"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-309"><a href="#cb26-309"></a>plt.show()</span>
+<span id="cb26-310"><a href="#cb26-310"></a><span class="in">```</span></span>
+<span id="cb26-311"><a href="#cb26-311"></a></span>
+<span id="cb26-312"><a href="#cb26-312"></a><span class="fu">#### Binomial Distribution</span></span>
+<span id="cb26-313"><a href="#cb26-313"></a></span>
+<span id="cb26-314"><a href="#cb26-314"></a>The Binomial distribution models the number of successes in $n$ independent Bernoulli trials with probability $p$. It is characterized by two parameters: $n$ (number of trials) and $p$ (probability of success). </span>
+<span id="cb26-315"><a href="#cb26-315"></a></span>
+<span id="cb26-316"><a href="#cb26-316"></a>$$</span>
+<span id="cb26-317"><a href="#cb26-317"></a>P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}</span>
+<span id="cb26-318"><a href="#cb26-318"></a>$$</span>
+<span id="cb26-319"><a href="#cb26-319"></a></span>
+<span id="cb26-320"><a href="#cb26-320"></a>Monte Carlo simulations can also be used to generate above distributions. Let us simulate the Binomial distribution with $n = 10$ and $p = 0.3$:</span>
+<span id="cb26-321"><a href="#cb26-321"></a></span>
+<span id="cb26-324"><a href="#cb26-324"></a><span class="in">```{python}</span></span>
+<span id="cb26-325"><a href="#cb26-325"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-326"><a href="#cb26-326"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-327"><a href="#cb26-327"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb26-328"><a href="#cb26-328"></a></span>
-<span id="cb26-329"><a href="#cb26-329"></a><span class="co"># Simulate Binomial distribution by counting successes in n trials</span></span>
-<span id="cb26-330"><a href="#cb26-330"></a>n_trials <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb26-329"><a href="#cb26-329"></a><span class="co"># Number of simulations</span></span>
+<span id="cb26-330"><a href="#cb26-330"></a>n_simulations <span class="op">=</span> <span class="dv">10_000</span></span>
 <span id="cb26-331"><a href="#cb26-331"></a></span>
-<span id="cb26-332"><a href="#cb26-332"></a><span class="co"># Probability of success</span></span>
-<span id="cb26-333"><a href="#cb26-333"></a>p_success <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb26-332"><a href="#cb26-332"></a><span class="co"># Simulate Binomial distribution by counting successes in n trials</span></span>
+<span id="cb26-333"><a href="#cb26-333"></a>n_trials <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb26-334"><a href="#cb26-334"></a></span>
-<span id="cb26-335"><a href="#cb26-335"></a><span class="co"># List to store number of successes in each simulation</span></span>
-<span id="cb26-336"><a href="#cb26-336"></a>successes <span class="op">=</span> []</span>
+<span id="cb26-335"><a href="#cb26-335"></a><span class="co"># Probability of success</span></span>
+<span id="cb26-336"><a href="#cb26-336"></a>p_success <span class="op">=</span> <span class="fl">0.3</span></span>
 <span id="cb26-337"><a href="#cb26-337"></a></span>
-<span id="cb26-338"><a href="#cb26-338"></a><span class="co"># Simulate Binomial distribution</span></span>
-<span id="cb26-339"><a href="#cb26-339"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_simulations):</span>
-<span id="cb26-340"><a href="#cb26-340"></a>    <span class="co"># Simulate n independent Bernoulli trials</span></span>
-<span id="cb26-341"><a href="#cb26-341"></a>    trials <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>n_trials, p<span class="op">=</span>[<span class="dv">1</span> <span class="op">-</span> p_success, p_success])</span>
-<span id="cb26-342"><a href="#cb26-342"></a>    </span>
-<span id="cb26-343"><a href="#cb26-343"></a>    <span class="co"># Count number of successes</span></span>
-<span id="cb26-344"><a href="#cb26-344"></a>    num_successes <span class="op">=</span> trials.<span class="bu">sum</span>()</span>
+<span id="cb26-338"><a href="#cb26-338"></a><span class="co"># List to store number of successes in each simulation</span></span>
+<span id="cb26-339"><a href="#cb26-339"></a>successes <span class="op">=</span> []</span>
+<span id="cb26-340"><a href="#cb26-340"></a></span>
+<span id="cb26-341"><a href="#cb26-341"></a><span class="co"># Simulate Binomial distribution</span></span>
+<span id="cb26-342"><a href="#cb26-342"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_simulations):</span>
+<span id="cb26-343"><a href="#cb26-343"></a>    <span class="co"># Simulate n independent Bernoulli trials</span></span>
+<span id="cb26-344"><a href="#cb26-344"></a>    trials <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>n_trials, p<span class="op">=</span>[<span class="dv">1</span> <span class="op">-</span> p_success, p_success])</span>
 <span id="cb26-345"><a href="#cb26-345"></a>    </span>
-<span id="cb26-346"><a href="#cb26-346"></a>    <span class="co"># Store number of successes</span></span>
-<span id="cb26-347"><a href="#cb26-347"></a>    successes.append(num_successes)</span>
-<span id="cb26-348"><a href="#cb26-348"></a></span>
-<span id="cb26-349"><a href="#cb26-349"></a><span class="co"># Plotting the simulated Binomial distribution</span></span>
-<span id="cb26-350"><a href="#cb26-350"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-351"><a href="#cb26-351"></a>plt.hist(successes, bins<span class="op">=</span>np.arange(n_trials <span class="op">+</span> <span class="dv">2</span>) <span class="op">-</span> <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-352"><a href="#cb26-352"></a><span class="co">#theoretical probabilities</span></span>
-<span id="cb26-353"><a href="#cb26-353"></a>plt.scatter(np.arange(n_trials <span class="op">+</span> <span class="dv">1</span>), binom.pmf(np.arange(n_trials <span class="op">+</span> <span class="dv">1</span>), n_trials, p_success) <span class="op">*</span> n_simulations, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb26-354"><a href="#cb26-354"></a>plt.title(<span class="st">&quot;Simulated Binomial Distribution&quot;</span>)</span>
-<span id="cb26-355"><a href="#cb26-355"></a>plt.xlabel(<span class="st">&quot;Number of Successes&quot;</span>)</span>
-<span id="cb26-356"><a href="#cb26-356"></a>plt.ylabel(<span class="st">&quot;Frequency&quot;</span>)</span>
-<span id="cb26-357"><a href="#cb26-357"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-358"><a href="#cb26-358"></a>plt.legend([<span class="st">&#39;Theoretical Probabilities&#39;</span>, <span class="st">&#39;Simulated Frequencies&#39;</span>])</span>
-<span id="cb26-359"><a href="#cb26-359"></a>plt.show()</span>
-<span id="cb26-360"><a href="#cb26-360"></a><span class="in">```</span></span>
-<span id="cb26-361"><a href="#cb26-361"></a></span>
-<span id="cb26-362"><a href="#cb26-362"></a><span class="fu">#### Poisson Distribution</span></span>
-<span id="cb26-363"><a href="#cb26-363"></a></span>
-<span id="cb26-364"><a href="#cb26-364"></a>The Poisson distribution models the number of events occurring in a fixed interval of time or space. It is characterized by a single parameter $\lambda$, which represents the average rate of occurrence. The Poisson distribution is often used to model rare events with a known average rate.</span>
-<span id="cb26-365"><a href="#cb26-365"></a></span>
-<span id="cb26-366"><a href="#cb26-366"></a>$$</span>
-<span id="cb26-367"><a href="#cb26-367"></a>P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}</span>
-<span id="cb26-368"><a href="#cb26-368"></a>$$</span>
-<span id="cb26-369"><a href="#cb26-369"></a></span>
-<span id="cb26-370"><a href="#cb26-370"></a>Let us visualize the Poisson distribution with $\lambda = 3$:</span>
-<span id="cb26-371"><a href="#cb26-371"></a></span>
-<span id="cb26-374"><a href="#cb26-374"></a><span class="in">```{python}</span></span>
-<span id="cb26-375"><a href="#cb26-375"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-376"><a href="#cb26-376"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-377"><a href="#cb26-377"></a><span class="im">from</span> scipy.special <span class="im">import</span> factorial</span>
-<span id="cb26-378"><a href="#cb26-378"></a></span>
-<span id="cb26-379"><a href="#cb26-379"></a><span class="co"># Poisson distribution parameters</span></span>
-<span id="cb26-380"><a href="#cb26-380"></a>lambda_val <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb26-346"><a href="#cb26-346"></a>    <span class="co"># Count number of successes</span></span>
+<span id="cb26-347"><a href="#cb26-347"></a>    num_successes <span class="op">=</span> trials.<span class="bu">sum</span>()</span>
+<span id="cb26-348"><a href="#cb26-348"></a>    </span>
+<span id="cb26-349"><a href="#cb26-349"></a>    <span class="co"># Store number of successes</span></span>
+<span id="cb26-350"><a href="#cb26-350"></a>    successes.append(num_successes)</span>
+<span id="cb26-351"><a href="#cb26-351"></a></span>
+<span id="cb26-352"><a href="#cb26-352"></a><span class="co"># Plotting the simulated Binomial distribution</span></span>
+<span id="cb26-353"><a href="#cb26-353"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-354"><a href="#cb26-354"></a>plt.hist(successes, bins<span class="op">=</span>np.arange(n_trials <span class="op">+</span> <span class="dv">2</span>) <span class="op">-</span> <span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-355"><a href="#cb26-355"></a><span class="co">#theoretical probabilities</span></span>
+<span id="cb26-356"><a href="#cb26-356"></a>plt.scatter(np.arange(n_trials <span class="op">+</span> <span class="dv">1</span>), binom.pmf(np.arange(n_trials <span class="op">+</span> <span class="dv">1</span>), n_trials, p_success) <span class="op">*</span> n_simulations, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb26-357"><a href="#cb26-357"></a>plt.title(<span class="st">&quot;Simulated Binomial Distribution&quot;</span>)</span>
+<span id="cb26-358"><a href="#cb26-358"></a>plt.xlabel(<span class="st">&quot;Number of Successes&quot;</span>)</span>
+<span id="cb26-359"><a href="#cb26-359"></a>plt.ylabel(<span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb26-360"><a href="#cb26-360"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-361"><a href="#cb26-361"></a>plt.legend([<span class="st">&#39;Theoretical Probabilities&#39;</span>, <span class="st">&#39;Simulated Frequencies&#39;</span>])</span>
+<span id="cb26-362"><a href="#cb26-362"></a>plt.show()</span>
+<span id="cb26-363"><a href="#cb26-363"></a><span class="in">```</span></span>
+<span id="cb26-364"><a href="#cb26-364"></a></span>
+<span id="cb26-365"><a href="#cb26-365"></a><span class="fu">#### Poisson Distribution</span></span>
+<span id="cb26-366"><a href="#cb26-366"></a></span>
+<span id="cb26-367"><a href="#cb26-367"></a>The Poisson distribution models the number of events occurring in a fixed interval of time or space. It is characterized by a single parameter $\lambda$, which represents the average rate of occurrence. The Poisson distribution is often used to model rare events with a known average rate.</span>
+<span id="cb26-368"><a href="#cb26-368"></a></span>
+<span id="cb26-369"><a href="#cb26-369"></a>$$</span>
+<span id="cb26-370"><a href="#cb26-370"></a>P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}</span>
+<span id="cb26-371"><a href="#cb26-371"></a>$$</span>
+<span id="cb26-372"><a href="#cb26-372"></a></span>
+<span id="cb26-373"><a href="#cb26-373"></a>Let us visualize the Poisson distribution with $\lambda = 3$:</span>
+<span id="cb26-374"><a href="#cb26-374"></a></span>
+<span id="cb26-377"><a href="#cb26-377"></a><span class="in">```{python}</span></span>
+<span id="cb26-378"><a href="#cb26-378"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-379"><a href="#cb26-379"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-380"><a href="#cb26-380"></a><span class="im">from</span> scipy.special <span class="im">import</span> factorial</span>
 <span id="cb26-381"><a href="#cb26-381"></a></span>
-<span id="cb26-382"><a href="#cb26-382"></a><span class="co"># Possible outcomes</span></span>
-<span id="cb26-383"><a href="#cb26-383"></a>outcomes <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb26-382"><a href="#cb26-382"></a><span class="co"># Poisson distribution parameters</span></span>
+<span id="cb26-383"><a href="#cb26-383"></a>lambda_val <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb26-384"><a href="#cb26-384"></a></span>
-<span id="cb26-385"><a href="#cb26-385"></a><span class="co"># Calculate Poisson probabilities</span></span>
-<span id="cb26-386"><a href="#cb26-386"></a>probabilities <span class="op">=</span> np.exp(<span class="op">-</span>lambda_val) <span class="op">*</span> (lambda_val <span class="op">**</span> outcomes) <span class="op">/</span> factorial(outcomes)</span>
+<span id="cb26-385"><a href="#cb26-385"></a><span class="co"># Possible outcomes</span></span>
+<span id="cb26-386"><a href="#cb26-386"></a>outcomes <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">20</span>)</span>
 <span id="cb26-387"><a href="#cb26-387"></a></span>
-<span id="cb26-388"><a href="#cb26-388"></a><span class="co"># Plotting the Poisson distribution</span></span>
-<span id="cb26-389"><a href="#cb26-389"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-390"><a href="#cb26-390"></a>plt.bar(outcomes, probabilities, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb26-391"><a href="#cb26-391"></a>plt.title(<span class="st">&quot;Poisson Distribution (λ = 3)&quot;</span>)</span>
-<span id="cb26-392"><a href="#cb26-392"></a>plt.xlabel(<span class="st">&quot;Number of Events (k)&quot;</span>)</span>
-<span id="cb26-393"><a href="#cb26-393"></a>plt.ylabel(<span class="st">&quot;Probability&quot;</span>)</span>
-<span id="cb26-394"><a href="#cb26-394"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-395"><a href="#cb26-395"></a>plt.show()</span>
-<span id="cb26-396"><a href="#cb26-396"></a><span class="in">```</span></span>
-<span id="cb26-397"><a href="#cb26-397"></a></span>
-<span id="cb26-398"><a href="#cb26-398"></a><span class="fu">### Continuous Probability Distributions</span></span>
-<span id="cb26-399"><a href="#cb26-399"></a></span>
-<span id="cb26-400"><a href="#cb26-400"></a>Continuous probability distributions are defined for continuous random variables, which can take on any value within a range. Some common continuous distributions include the Uniform, Normal (Gaussian), Exponential, and Beta distributions.</span>
-<span id="cb26-401"><a href="#cb26-401"></a></span>
-<span id="cb26-402"><a href="#cb26-402"></a><span class="fu">#### What is a histogram?</span></span>
-<span id="cb26-403"><a href="#cb26-403"></a></span>
-<span id="cb26-404"><a href="#cb26-404"></a>A histogram is a graphical representation of the distribution of numerical data. It consists of bars that represent the frequency or proportion of data points falling within specific intervals (bins) along the range of values. Histograms are useful for visualizing the shape, center, and spread of data.</span>
-<span id="cb26-405"><a href="#cb26-405"></a></span>
-<span id="cb26-406"><a href="#cb26-406"></a><span class="fu">#### Normal (Gaussian) Distribution</span></span>
-<span id="cb26-407"><a href="#cb26-407"></a></span>
-<span id="cb26-408"><a href="#cb26-408"></a>The Normal distribution is one of the most widely used distributions in statistics. It is characterized by two parameters: the mean $\mu$ and the standard deviation $\sigma$. The probability density function (PDF) of the Normal distribution is given by:</span>
-<span id="cb26-409"><a href="#cb26-409"></a></span>
-<span id="cb26-410"><a href="#cb26-410"></a>$$</span>
-<span id="cb26-411"><a href="#cb26-411"></a>f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}</span>
-<span id="cb26-412"><a href="#cb26-412"></a>$$</span>
-<span id="cb26-413"><a href="#cb26-413"></a></span>
-<span id="cb26-414"><a href="#cb26-414"></a>Let us visualize the Normal distribution with $\mu = 0$ and $\sigma = 1$. We will generate random samples from a standard Normal distribution and compare the histogram to the theoretical PDF:</span>
-<span id="cb26-415"><a href="#cb26-415"></a></span>
-<span id="cb26-418"><a href="#cb26-418"></a><span class="in">```{python}</span></span>
-<span id="cb26-419"><a href="#cb26-419"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-420"><a href="#cb26-420"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-421"><a href="#cb26-421"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb26-422"><a href="#cb26-422"></a></span>
-<span id="cb26-423"><a href="#cb26-423"></a><span class="co"># Parameters of the Normal distribution</span></span>
-<span id="cb26-424"><a href="#cb26-424"></a>mu <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb26-425"><a href="#cb26-425"></a>sigma <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb26-426"><a href="#cb26-426"></a></span>
-<span id="cb26-427"><a href="#cb26-427"></a><span class="co"># Generate random samples from a standard Normal distribution</span></span>
-<span id="cb26-428"><a href="#cb26-428"></a>samples <span class="op">=</span> np.random.normal(mu, sigma, <span class="dv">10_000</span>)</span>
+<span id="cb26-388"><a href="#cb26-388"></a><span class="co"># Calculate Poisson probabilities</span></span>
+<span id="cb26-389"><a href="#cb26-389"></a>probabilities <span class="op">=</span> np.exp(<span class="op">-</span>lambda_val) <span class="op">*</span> (lambda_val <span class="op">**</span> outcomes) <span class="op">/</span> factorial(outcomes)</span>
+<span id="cb26-390"><a href="#cb26-390"></a></span>
+<span id="cb26-391"><a href="#cb26-391"></a><span class="co"># Plotting the Poisson distribution</span></span>
+<span id="cb26-392"><a href="#cb26-392"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-393"><a href="#cb26-393"></a>plt.bar(outcomes, probabilities, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb26-394"><a href="#cb26-394"></a>plt.title(<span class="st">&quot;Poisson Distribution (λ = 3)&quot;</span>)</span>
+<span id="cb26-395"><a href="#cb26-395"></a>plt.xlabel(<span class="st">&quot;Number of Events (k)&quot;</span>)</span>
+<span id="cb26-396"><a href="#cb26-396"></a>plt.ylabel(<span class="st">&quot;Probability&quot;</span>)</span>
+<span id="cb26-397"><a href="#cb26-397"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-398"><a href="#cb26-398"></a>plt.show()</span>
+<span id="cb26-399"><a href="#cb26-399"></a><span class="in">```</span></span>
+<span id="cb26-400"><a href="#cb26-400"></a></span>
+<span id="cb26-401"><a href="#cb26-401"></a><span class="fu">### Continuous Probability Distributions</span></span>
+<span id="cb26-402"><a href="#cb26-402"></a></span>
+<span id="cb26-403"><a href="#cb26-403"></a>Continuous probability distributions are defined for continuous random variables, which can take on any value within a range. Some common continuous distributions include the Uniform, Normal (Gaussian), Exponential, and Beta distributions.</span>
+<span id="cb26-404"><a href="#cb26-404"></a></span>
+<span id="cb26-405"><a href="#cb26-405"></a><span class="fu">#### What is a histogram?</span></span>
+<span id="cb26-406"><a href="#cb26-406"></a></span>
+<span id="cb26-407"><a href="#cb26-407"></a>A histogram is a graphical representation of the distribution of numerical data. It consists of bars that represent the frequency or proportion of data points falling within specific intervals (bins) along the range of values. Histograms are useful for visualizing the shape, center, and spread of data.</span>
+<span id="cb26-408"><a href="#cb26-408"></a></span>
+<span id="cb26-409"><a href="#cb26-409"></a><span class="fu">#### Normal (Gaussian) Distribution</span></span>
+<span id="cb26-410"><a href="#cb26-410"></a></span>
+<span id="cb26-411"><a href="#cb26-411"></a>The Normal distribution is one of the most widely used distributions in statistics. It is characterized by two parameters: the mean $\mu$ and the standard deviation $\sigma$. The probability density function (PDF) of the Normal distribution is given by:</span>
+<span id="cb26-412"><a href="#cb26-412"></a></span>
+<span id="cb26-413"><a href="#cb26-413"></a>$$</span>
+<span id="cb26-414"><a href="#cb26-414"></a>f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}</span>
+<span id="cb26-415"><a href="#cb26-415"></a>$$</span>
+<span id="cb26-416"><a href="#cb26-416"></a></span>
+<span id="cb26-417"><a href="#cb26-417"></a>Let us visualize the Normal distribution with $\mu = 0$ and $\sigma = 1$. We will generate random samples from a standard Normal distribution and compare the histogram to the theoretical PDF:</span>
+<span id="cb26-418"><a href="#cb26-418"></a></span>
+<span id="cb26-421"><a href="#cb26-421"></a><span class="in">```{python}</span></span>
+<span id="cb26-422"><a href="#cb26-422"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-423"><a href="#cb26-423"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-424"><a href="#cb26-424"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb26-425"><a href="#cb26-425"></a></span>
+<span id="cb26-426"><a href="#cb26-426"></a><span class="co"># Parameters of the Normal distribution</span></span>
+<span id="cb26-427"><a href="#cb26-427"></a>mu <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb26-428"><a href="#cb26-428"></a>sigma <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb26-429"><a href="#cb26-429"></a></span>
-<span id="cb26-430"><a href="#cb26-430"></a><span class="co"># Theoretical PDF of the Normal distribution</span></span>
-<span id="cb26-431"><a href="#cb26-431"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1000</span>)</span>
-<span id="cb26-432"><a href="#cb26-432"></a>pdf <span class="op">=</span> norm.pdf(x, mu, sigma)</span>
-<span id="cb26-433"><a href="#cb26-433"></a></span>
-<span id="cb26-434"><a href="#cb26-434"></a><span class="co"># Plotting the Normal distribution</span></span>
-<span id="cb26-435"><a href="#cb26-435"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-436"><a href="#cb26-436"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-437"><a href="#cb26-437"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-438"><a href="#cb26-438"></a>plt.title(<span class="st">&quot;Normal Distribution (μ = 0, σ = 1)&quot;</span>)</span>
-<span id="cb26-439"><a href="#cb26-439"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
-<span id="cb26-440"><a href="#cb26-440"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
-<span id="cb26-441"><a href="#cb26-441"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-442"><a href="#cb26-442"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
-<span id="cb26-443"><a href="#cb26-443"></a>plt.show()</span>
-<span id="cb26-444"><a href="#cb26-444"></a><span class="in">```</span></span>
-<span id="cb26-445"><a href="#cb26-445"></a></span>
-<span id="cb26-446"><a href="#cb26-446"></a><span class="fu">#### Exponential Distribution</span></span>
-<span id="cb26-447"><a href="#cb26-447"></a></span>
-<span id="cb26-448"><a href="#cb26-448"></a>The Exponential distribution models the time between events in a Poisson process, where events occur continuously and independently at a constant average rate. It is characterized by a single parameter $\lambda$, which represents the rate of occurrence. The PDF of the Exponential distribution is given by:</span>
-<span id="cb26-449"><a href="#cb26-449"></a></span>
-<span id="cb26-450"><a href="#cb26-450"></a>$$</span>
-<span id="cb26-451"><a href="#cb26-451"></a>f(x) = \lambda e^{-\lambda x}</span>
-<span id="cb26-452"><a href="#cb26-452"></a>$$</span>
-<span id="cb26-453"><a href="#cb26-453"></a></span>
-<span id="cb26-454"><a href="#cb26-454"></a>Let us visualize the Exponential distribution with $\lambda = 0.5$:</span>
-<span id="cb26-455"><a href="#cb26-455"></a></span>
-<span id="cb26-458"><a href="#cb26-458"></a><span class="in">```{python}</span></span>
-<span id="cb26-459"><a href="#cb26-459"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-460"><a href="#cb26-460"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-461"><a href="#cb26-461"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon</span>
-<span id="cb26-462"><a href="#cb26-462"></a></span>
-<span id="cb26-463"><a href="#cb26-463"></a><span class="co"># Exponential distribution parameter</span></span>
-<span id="cb26-464"><a href="#cb26-464"></a>lambda_val <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb26-430"><a href="#cb26-430"></a><span class="co"># Generate random samples from a standard Normal distribution</span></span>
+<span id="cb26-431"><a href="#cb26-431"></a>samples <span class="op">=</span> np.random.normal(mu, sigma, <span class="dv">10_000</span>)</span>
+<span id="cb26-432"><a href="#cb26-432"></a></span>
+<span id="cb26-433"><a href="#cb26-433"></a><span class="co"># Theoretical PDF of the Normal distribution</span></span>
+<span id="cb26-434"><a href="#cb26-434"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-435"><a href="#cb26-435"></a>pdf <span class="op">=</span> norm.pdf(x, mu, sigma)</span>
+<span id="cb26-436"><a href="#cb26-436"></a></span>
+<span id="cb26-437"><a href="#cb26-437"></a><span class="co"># Plotting the Normal distribution</span></span>
+<span id="cb26-438"><a href="#cb26-438"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-439"><a href="#cb26-439"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-440"><a href="#cb26-440"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-441"><a href="#cb26-441"></a>plt.title(<span class="st">&quot;Normal Distribution (μ = 0, σ = 1)&quot;</span>)</span>
+<span id="cb26-442"><a href="#cb26-442"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
+<span id="cb26-443"><a href="#cb26-443"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
+<span id="cb26-444"><a href="#cb26-444"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-445"><a href="#cb26-445"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
+<span id="cb26-446"><a href="#cb26-446"></a>plt.show()</span>
+<span id="cb26-447"><a href="#cb26-447"></a><span class="in">```</span></span>
+<span id="cb26-448"><a href="#cb26-448"></a></span>
+<span id="cb26-449"><a href="#cb26-449"></a><span class="fu">#### Exponential Distribution</span></span>
+<span id="cb26-450"><a href="#cb26-450"></a></span>
+<span id="cb26-451"><a href="#cb26-451"></a>The Exponential distribution models the time between events in a Poisson process, where events occur continuously and independently at a constant average rate. It is characterized by a single parameter $\lambda$, which represents the rate of occurrence. The PDF of the Exponential distribution is given by:</span>
+<span id="cb26-452"><a href="#cb26-452"></a></span>
+<span id="cb26-453"><a href="#cb26-453"></a>$$</span>
+<span id="cb26-454"><a href="#cb26-454"></a>f(x) = \lambda e^{-\lambda x}</span>
+<span id="cb26-455"><a href="#cb26-455"></a>$$</span>
+<span id="cb26-456"><a href="#cb26-456"></a></span>
+<span id="cb26-457"><a href="#cb26-457"></a>Let us visualize the Exponential distribution with $\lambda = 0.5$:</span>
+<span id="cb26-458"><a href="#cb26-458"></a></span>
+<span id="cb26-461"><a href="#cb26-461"></a><span class="in">```{python}</span></span>
+<span id="cb26-462"><a href="#cb26-462"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-463"><a href="#cb26-463"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-464"><a href="#cb26-464"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon</span>
 <span id="cb26-465"><a href="#cb26-465"></a></span>
-<span id="cb26-466"><a href="#cb26-466"></a><span class="co"># Generate random samples from an Exponential distribution</span></span>
-<span id="cb26-467"><a href="#cb26-467"></a>samples <span class="op">=</span> np.random.exponential(<span class="dv">1</span> <span class="op">/</span> lambda_val, <span class="dv">10_000</span>)</span>
+<span id="cb26-466"><a href="#cb26-466"></a><span class="co"># Exponential distribution parameter</span></span>
+<span id="cb26-467"><a href="#cb26-467"></a>lambda_val <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb26-468"><a href="#cb26-468"></a></span>
-<span id="cb26-469"><a href="#cb26-469"></a><span class="co"># Theoretical PDF of the Exponential distribution</span></span>
-<span id="cb26-470"><a href="#cb26-470"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>)</span>
-<span id="cb26-471"><a href="#cb26-471"></a>pdf <span class="op">=</span> expon.pdf(x, scale<span class="op">=</span><span class="dv">1</span> <span class="op">/</span> lambda_val)</span>
-<span id="cb26-472"><a href="#cb26-472"></a></span>
-<span id="cb26-473"><a href="#cb26-473"></a><span class="co"># Plotting the Exponential distribution</span></span>
-<span id="cb26-474"><a href="#cb26-474"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-475"><a href="#cb26-475"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-476"><a href="#cb26-476"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-477"><a href="#cb26-477"></a>plt.title(<span class="st">&quot;Exponential Distribution (λ = 0.5)&quot;</span>)</span>
-<span id="cb26-478"><a href="#cb26-478"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
-<span id="cb26-479"><a href="#cb26-479"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
-<span id="cb26-480"><a href="#cb26-480"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-481"><a href="#cb26-481"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
-<span id="cb26-482"><a href="#cb26-482"></a>plt.show()</span>
-<span id="cb26-483"><a href="#cb26-483"></a><span class="in">```</span></span>
-<span id="cb26-484"><a href="#cb26-484"></a></span>
-<span id="cb26-485"><a href="#cb26-485"></a><span class="fu">#### Beta Distribution</span></span>
-<span id="cb26-486"><a href="#cb26-486"></a></span>
-<span id="cb26-487"><a href="#cb26-487"></a>The Beta distribution is a continuous probability distribution defined on the interval <span class="co">[</span><span class="ot">0, 1</span><span class="co">]</span>. It is characterized by two shape parameters $\alpha$ and $\beta$, which control the shape of the distribution. The PDF of the Beta distribution is given by:</span>
-<span id="cb26-488"><a href="#cb26-488"></a></span>
-<span id="cb26-489"><a href="#cb26-489"></a>$$</span>
-<span id="cb26-490"><a href="#cb26-490"></a>f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}</span>
-<span id="cb26-491"><a href="#cb26-491"></a>$$</span>
-<span id="cb26-492"><a href="#cb26-492"></a></span>
-<span id="cb26-493"><a href="#cb26-493"></a>where $B(\alpha, \beta)$ is the Beta function. Let us visualize the Beta distribution with $\alpha = 2$ and $\beta = 2$:</span>
-<span id="cb26-494"><a href="#cb26-494"></a></span>
-<span id="cb26-497"><a href="#cb26-497"></a><span class="in">```{python}</span></span>
-<span id="cb26-498"><a href="#cb26-498"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-499"><a href="#cb26-499"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-500"><a href="#cb26-500"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
-<span id="cb26-501"><a href="#cb26-501"></a></span>
-<span id="cb26-502"><a href="#cb26-502"></a><span class="co"># Beta distribution parameters</span></span>
-<span id="cb26-503"><a href="#cb26-503"></a>alpha <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb26-504"><a href="#cb26-504"></a>beta_val <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb26-505"><a href="#cb26-505"></a></span>
-<span id="cb26-506"><a href="#cb26-506"></a><span class="co"># Generate random samples from a Beta distribution</span></span>
-<span id="cb26-507"><a href="#cb26-507"></a>samples <span class="op">=</span> np.random.beta(alpha, beta_val, <span class="dv">10_000</span>)</span>
+<span id="cb26-469"><a href="#cb26-469"></a><span class="co"># Generate random samples from an Exponential distribution</span></span>
+<span id="cb26-470"><a href="#cb26-470"></a>samples <span class="op">=</span> np.random.exponential(<span class="dv">1</span> <span class="op">/</span> lambda_val, <span class="dv">10_000</span>)</span>
+<span id="cb26-471"><a href="#cb26-471"></a></span>
+<span id="cb26-472"><a href="#cb26-472"></a><span class="co"># Theoretical PDF of the Exponential distribution</span></span>
+<span id="cb26-473"><a href="#cb26-473"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-474"><a href="#cb26-474"></a>pdf <span class="op">=</span> expon.pdf(x, scale<span class="op">=</span><span class="dv">1</span> <span class="op">/</span> lambda_val)</span>
+<span id="cb26-475"><a href="#cb26-475"></a></span>
+<span id="cb26-476"><a href="#cb26-476"></a><span class="co"># Plotting the Exponential distribution</span></span>
+<span id="cb26-477"><a href="#cb26-477"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-478"><a href="#cb26-478"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-479"><a href="#cb26-479"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-480"><a href="#cb26-480"></a>plt.title(<span class="st">&quot;Exponential Distribution (λ = 0.5)&quot;</span>)</span>
+<span id="cb26-481"><a href="#cb26-481"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
+<span id="cb26-482"><a href="#cb26-482"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
+<span id="cb26-483"><a href="#cb26-483"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-484"><a href="#cb26-484"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
+<span id="cb26-485"><a href="#cb26-485"></a>plt.show()</span>
+<span id="cb26-486"><a href="#cb26-486"></a><span class="in">```</span></span>
+<span id="cb26-487"><a href="#cb26-487"></a></span>
+<span id="cb26-488"><a href="#cb26-488"></a><span class="fu">#### Beta Distribution</span></span>
+<span id="cb26-489"><a href="#cb26-489"></a></span>
+<span id="cb26-490"><a href="#cb26-490"></a>The Beta distribution is a continuous probability distribution defined on the interval <span class="co">[</span><span class="ot">0, 1</span><span class="co">]</span>. It is characterized by two shape parameters $\alpha$ and $\beta$, which control the shape of the distribution. The PDF of the Beta distribution is given by:</span>
+<span id="cb26-491"><a href="#cb26-491"></a></span>
+<span id="cb26-492"><a href="#cb26-492"></a>$$</span>
+<span id="cb26-493"><a href="#cb26-493"></a>f(x) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}</span>
+<span id="cb26-494"><a href="#cb26-494"></a>$$</span>
+<span id="cb26-495"><a href="#cb26-495"></a></span>
+<span id="cb26-496"><a href="#cb26-496"></a>where $B(\alpha, \beta)$ is the Beta function. Let us visualize the Beta distribution with $\alpha = 2$ and $\beta = 2$:</span>
+<span id="cb26-497"><a href="#cb26-497"></a></span>
+<span id="cb26-500"><a href="#cb26-500"></a><span class="in">```{python}</span></span>
+<span id="cb26-501"><a href="#cb26-501"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-502"><a href="#cb26-502"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-503"><a href="#cb26-503"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
+<span id="cb26-504"><a href="#cb26-504"></a></span>
+<span id="cb26-505"><a href="#cb26-505"></a><span class="co"># Beta distribution parameters</span></span>
+<span id="cb26-506"><a href="#cb26-506"></a>alpha <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb26-507"><a href="#cb26-507"></a>beta_val <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb26-508"><a href="#cb26-508"></a></span>
-<span id="cb26-509"><a href="#cb26-509"></a><span class="co"># Theoretical PDF of the Beta distribution</span></span>
-<span id="cb26-510"><a href="#cb26-510"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
-<span id="cb26-511"><a href="#cb26-511"></a>pdf <span class="op">=</span> beta.pdf(x, alpha, beta_val)</span>
-<span id="cb26-512"><a href="#cb26-512"></a></span>
-<span id="cb26-513"><a href="#cb26-513"></a><span class="co"># Plotting the Beta distribution</span></span>
-<span id="cb26-514"><a href="#cb26-514"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-515"><a href="#cb26-515"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-516"><a href="#cb26-516"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-517"><a href="#cb26-517"></a>plt.title(<span class="st">&quot;Beta Distribution (α = 2, β = 3)&quot;</span>)</span>
-<span id="cb26-518"><a href="#cb26-518"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
-<span id="cb26-519"><a href="#cb26-519"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
-<span id="cb26-520"><a href="#cb26-520"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-521"><a href="#cb26-521"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
-<span id="cb26-522"><a href="#cb26-522"></a>plt.show()</span>
-<span id="cb26-523"><a href="#cb26-523"></a><span class="in">```</span></span>
-<span id="cb26-524"><a href="#cb26-524"></a>The Beta distribution is commonly used in Bayesian statistics and modeling proportions or probabilities.</span>
-<span id="cb26-525"><a href="#cb26-525"></a>It can simulate a wide range of shapes, from uniform to U-shaped to J-shaped distributions, depending on the values of $\alpha$ and $\beta$. Below are some examples of Beta distributions with different shape parameters:</span>
-<span id="cb26-526"><a href="#cb26-526"></a></span>
-<span id="cb26-529"><a href="#cb26-529"></a><span class="in">```{python}</span></span>
-<span id="cb26-530"><a href="#cb26-530"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-531"><a href="#cb26-531"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-532"><a href="#cb26-532"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
-<span id="cb26-533"><a href="#cb26-533"></a></span>
-<span id="cb26-534"><a href="#cb26-534"></a><span class="co"># Beta distribution parameters</span></span>
-<span id="cb26-535"><a href="#cb26-535"></a>alphas <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
-<span id="cb26-536"><a href="#cb26-536"></a>betas <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="fl">0.5</span>]</span>
-<span id="cb26-537"><a href="#cb26-537"></a></span>
-<span id="cb26-538"><a href="#cb26-538"></a><span class="co"># Theoretical PDFs of the Beta distributions</span></span>
-<span id="cb26-539"><a href="#cb26-539"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
-<span id="cb26-540"><a href="#cb26-540"></a>pdfs <span class="op">=</span> [beta.pdf(x, alpha, beta_param) <span class="cf">for</span> alpha, beta_param <span class="kw">in</span> <span class="bu">zip</span>(alphas, betas)]</span>
-<span id="cb26-541"><a href="#cb26-541"></a></span>
-<span id="cb26-542"><a href="#cb26-542"></a><span class="co"># Plotting the Beta distributions</span></span>
-<span id="cb26-543"><a href="#cb26-543"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
-<span id="cb26-544"><a href="#cb26-544"></a><span class="cf">for</span> i, (alpha, beta_param, pdf) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(alphas, betas, pdfs), <span class="dv">1</span>):</span>
-<span id="cb26-545"><a href="#cb26-545"></a>    plt.subplot(<span class="dv">2</span>, <span class="dv">2</span>, i)</span>
-<span id="cb26-546"><a href="#cb26-546"></a>    plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-547"><a href="#cb26-547"></a>    plt.title(<span class="ss">f&quot;Beta Distribution (α = </span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">, β = </span><span class="sc">{</span>beta_param<span class="sc">}</span><span class="ss">)&quot;</span>)</span>
-<span id="cb26-548"><a href="#cb26-548"></a>    plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
-<span id="cb26-549"><a href="#cb26-549"></a>    plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
-<span id="cb26-550"><a href="#cb26-550"></a>    plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-551"><a href="#cb26-551"></a></span>
-<span id="cb26-552"><a href="#cb26-552"></a>plt.tight_layout()</span>
-<span id="cb26-553"><a href="#cb26-553"></a>plt.show()</span>
-<span id="cb26-554"><a href="#cb26-554"></a><span class="in">```</span></span>
-<span id="cb26-555"><a href="#cb26-555"></a></span>
-<span id="cb26-556"><a href="#cb26-556"></a><span class="fu">### Mean and Variance</span></span>
-<span id="cb26-557"><a href="#cb26-557"></a></span>
-<span id="cb26-558"><a href="#cb26-558"></a>The mean and variance of a probability distribution provide important insights into the central tendency and spread of the distribution. The mean (expected value) represents the average value of the random variable, while the variance measures the dispersion of values around the mean.</span>
-<span id="cb26-559"><a href="#cb26-559"></a></span>
-<span id="cb26-560"><a href="#cb26-560"></a><span class="fu">#### Mean of a Probability Distribution</span></span>
-<span id="cb26-561"><a href="#cb26-561"></a></span>
-<span id="cb26-562"><a href="#cb26-562"></a>The mean of a probability distribution is calculated as the weighted average of all possible values of the random variable, with the probabilities serving as weights. For a discrete random variable $X$ with probability mass function $P(X = x)$, the mean $\mu$ is given by:</span>
-<span id="cb26-563"><a href="#cb26-563"></a></span>
-<span id="cb26-564"><a href="#cb26-564"></a>$$</span>
-<span id="cb26-565"><a href="#cb26-565"></a>\mu = \sum_{x} x \cdot P(X = x)</span>
-<span id="cb26-566"><a href="#cb26-566"></a>$$</span>
-<span id="cb26-567"><a href="#cb26-567"></a></span>
-<span id="cb26-568"><a href="#cb26-568"></a>For a continuous random variable with probability density function $f(x)$, the mean is calculated as:</span>
-<span id="cb26-569"><a href="#cb26-569"></a></span>
-<span id="cb26-570"><a href="#cb26-570"></a>$$</span>
-<span id="cb26-571"><a href="#cb26-571"></a>\mu = \int_{-\infty}^{\infty} x \cdot f(x) \, dx</span>
-<span id="cb26-572"><a href="#cb26-572"></a>$$</span>
-<span id="cb26-573"><a href="#cb26-573"></a></span>
-<span id="cb26-574"><a href="#cb26-574"></a>If we have a sample of data, the sample mean is calculated as the average of the observed values</span>
-<span id="cb26-575"><a href="#cb26-575"></a></span>
-<span id="cb26-576"><a href="#cb26-576"></a>$$</span>
-<span id="cb26-577"><a href="#cb26-577"></a>\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i=\frac{x_1+x_2+\cdots+x_n}{n}</span>
-<span id="cb26-578"><a href="#cb26-578"></a>$$</span>
-<span id="cb26-579"><a href="#cb26-579"></a></span>
-<span id="cb26-580"><a href="#cb26-580"></a><span class="fu">#### Variance of a Probability Distribution</span></span>
-<span id="cb26-581"><a href="#cb26-581"></a></span>
-<span id="cb26-582"><a href="#cb26-582"></a>The variance of a probability distribution measures the spread or dispersion of values around the mean. It is calculated as the average of the squared differences between each value and the mean. For a discrete random variable $X$ with mean $\mu$, the variance $\sigma^2$ is given by:</span>
-<span id="cb26-583"><a href="#cb26-583"></a></span>
-<span id="cb26-584"><a href="#cb26-584"></a>$$</span>
-<span id="cb26-585"><a href="#cb26-585"></a>\sigma^2 = \sum_{x} (x - \mu)^2 \cdot P(X = x)</span>
-<span id="cb26-586"><a href="#cb26-586"></a>$$</span>
-<span id="cb26-587"><a href="#cb26-587"></a></span>
-<span id="cb26-588"><a href="#cb26-588"></a>For a continuous random variable with mean $\mu$, the variance is calculated as:</span>
-<span id="cb26-589"><a href="#cb26-589"></a></span>
-<span id="cb26-590"><a href="#cb26-590"></a>$$</span>
-<span id="cb26-591"><a href="#cb26-591"></a>\sigma^2 = \int_{-\infty}^{\infty} (x - \mu)^2 \cdot f(x) \, dx</span>
-<span id="cb26-592"><a href="#cb26-592"></a>$$</span>
-<span id="cb26-593"><a href="#cb26-593"></a></span>
-<span id="cb26-594"><a href="#cb26-594"></a>If we have a sample of data, the sample variance is calculated as the average of the squared differences between each observed value and the sample mean.</span>
-<span id="cb26-595"><a href="#cb26-595"></a></span>
-<span id="cb26-596"><a href="#cb26-596"></a>$$</span>
-<span id="cb26-597"><a href="#cb26-597"></a>\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2=\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2}{n}</span>
-<span id="cb26-598"><a href="#cb26-598"></a>$$</span>
-<span id="cb26-599"><a href="#cb26-599"></a></span>
-<span id="cb26-600"><a href="#cb26-600"></a><span class="fu">#### Example: Mean and Variance of the Beta Distribution</span></span>
-<span id="cb26-601"><a href="#cb26-601"></a></span>
-<span id="cb26-602"><a href="#cb26-602"></a>Let us assume a Beta distribution with shape parameters $\alpha = 2$ and $\beta = 3$. We can calculate the mean and variance of this distribution using the formulae for the Beta distribution:</span>
-<span id="cb26-603"><a href="#cb26-603"></a></span>
-<span id="cb26-606"><a href="#cb26-606"></a><span class="in">```{python}</span></span>
-<span id="cb26-607"><a href="#cb26-607"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-608"><a href="#cb26-608"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-609"><a href="#cb26-609"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
-<span id="cb26-610"><a href="#cb26-610"></a></span>
-<span id="cb26-611"><a href="#cb26-611"></a><span class="co"># Beta distribution parameters</span></span>
-<span id="cb26-612"><a href="#cb26-612"></a>alpha <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb26-613"><a href="#cb26-613"></a>beta_val <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb26-614"><a href="#cb26-614"></a></span>
-<span id="cb26-615"><a href="#cb26-615"></a><span class="co"># Calculate mean and variance of the Beta distribution</span></span>
-<span id="cb26-616"><a href="#cb26-616"></a>mean <span class="op">=</span> alpha <span class="op">/</span> (alpha <span class="op">+</span> beta_val)</span>
-<span id="cb26-617"><a href="#cb26-617"></a>variance <span class="op">=</span> (alpha <span class="op">*</span> beta_val) <span class="op">/</span> ((alpha <span class="op">+</span> beta_val) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (alpha <span class="op">+</span> beta_val <span class="op">+</span> <span class="dv">1</span>))</span>
-<span id="cb26-618"><a href="#cb26-618"></a></span>
-<span id="cb26-619"><a href="#cb26-619"></a><span class="co"># mean and variance from sample</span></span>
-<span id="cb26-620"><a href="#cb26-620"></a>samples <span class="op">=</span> np.random.beta(alpha, beta_val, <span class="dv">10_000</span>)</span>
+<span id="cb26-509"><a href="#cb26-509"></a><span class="co"># Generate random samples from a Beta distribution</span></span>
+<span id="cb26-510"><a href="#cb26-510"></a>samples <span class="op">=</span> np.random.beta(alpha, beta_val, <span class="dv">10_000</span>)</span>
+<span id="cb26-511"><a href="#cb26-511"></a></span>
+<span id="cb26-512"><a href="#cb26-512"></a><span class="co"># Theoretical PDF of the Beta distribution</span></span>
+<span id="cb26-513"><a href="#cb26-513"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-514"><a href="#cb26-514"></a>pdf <span class="op">=</span> beta.pdf(x, alpha, beta_val)</span>
+<span id="cb26-515"><a href="#cb26-515"></a></span>
+<span id="cb26-516"><a href="#cb26-516"></a><span class="co"># Plotting the Beta distribution</span></span>
+<span id="cb26-517"><a href="#cb26-517"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-518"><a href="#cb26-518"></a>plt.hist(samples, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-519"><a href="#cb26-519"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-520"><a href="#cb26-520"></a>plt.title(<span class="st">&quot;Beta Distribution (α = 2, β = 3)&quot;</span>)</span>
+<span id="cb26-521"><a href="#cb26-521"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
+<span id="cb26-522"><a href="#cb26-522"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
+<span id="cb26-523"><a href="#cb26-523"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-524"><a href="#cb26-524"></a>plt.legend([<span class="st">&#39;Theoretical PDF&#39;</span>, <span class="st">&#39;Sampled Data&#39;</span>])</span>
+<span id="cb26-525"><a href="#cb26-525"></a>plt.show()</span>
+<span id="cb26-526"><a href="#cb26-526"></a><span class="in">```</span></span>
+<span id="cb26-527"><a href="#cb26-527"></a>The Beta distribution is commonly used in Bayesian statistics and modeling proportions or probabilities.</span>
+<span id="cb26-528"><a href="#cb26-528"></a>It can simulate a wide range of shapes, from uniform to U-shaped to J-shaped distributions, depending on the values of $\alpha$ and $\beta$. Below are some examples of Beta distributions with different shape parameters:</span>
+<span id="cb26-529"><a href="#cb26-529"></a></span>
+<span id="cb26-532"><a href="#cb26-532"></a><span class="in">```{python}</span></span>
+<span id="cb26-533"><a href="#cb26-533"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-534"><a href="#cb26-534"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-535"><a href="#cb26-535"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
+<span id="cb26-536"><a href="#cb26-536"></a></span>
+<span id="cb26-537"><a href="#cb26-537"></a><span class="co"># Beta distribution parameters</span></span>
+<span id="cb26-538"><a href="#cb26-538"></a>alphas <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb26-539"><a href="#cb26-539"></a>betas <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="fl">0.5</span>]</span>
+<span id="cb26-540"><a href="#cb26-540"></a></span>
+<span id="cb26-541"><a href="#cb26-541"></a><span class="co"># Theoretical PDFs of the Beta distributions</span></span>
+<span id="cb26-542"><a href="#cb26-542"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-543"><a href="#cb26-543"></a>pdfs <span class="op">=</span> [beta.pdf(x, alpha, beta_param) <span class="cf">for</span> alpha, beta_param <span class="kw">in</span> <span class="bu">zip</span>(alphas, betas)]</span>
+<span id="cb26-544"><a href="#cb26-544"></a></span>
+<span id="cb26-545"><a href="#cb26-545"></a><span class="co"># Plotting the Beta distributions</span></span>
+<span id="cb26-546"><a href="#cb26-546"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
+<span id="cb26-547"><a href="#cb26-547"></a><span class="cf">for</span> i, (alpha, beta_param, pdf) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(alphas, betas, pdfs), <span class="dv">1</span>):</span>
+<span id="cb26-548"><a href="#cb26-548"></a>    plt.subplot(<span class="dv">2</span>, <span class="dv">2</span>, i)</span>
+<span id="cb26-549"><a href="#cb26-549"></a>    plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-550"><a href="#cb26-550"></a>    plt.title(<span class="ss">f&quot;Beta Distribution (α = </span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">, β = </span><span class="sc">{</span>beta_param<span class="sc">}</span><span class="ss">)&quot;</span>)</span>
+<span id="cb26-551"><a href="#cb26-551"></a>    plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
+<span id="cb26-552"><a href="#cb26-552"></a>    plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
+<span id="cb26-553"><a href="#cb26-553"></a>    plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-554"><a href="#cb26-554"></a></span>
+<span id="cb26-555"><a href="#cb26-555"></a>plt.tight_layout()</span>
+<span id="cb26-556"><a href="#cb26-556"></a>plt.show()</span>
+<span id="cb26-557"><a href="#cb26-557"></a><span class="in">```</span></span>
+<span id="cb26-558"><a href="#cb26-558"></a></span>
+<span id="cb26-559"><a href="#cb26-559"></a><span class="fu">### Mean and Variance</span></span>
+<span id="cb26-560"><a href="#cb26-560"></a></span>
+<span id="cb26-561"><a href="#cb26-561"></a>The mean and variance of a probability distribution provide important insights into the central tendency and spread of the distribution. The mean (expected value) represents the average value of the random variable, while the variance measures the dispersion of values around the mean.</span>
+<span id="cb26-562"><a href="#cb26-562"></a></span>
+<span id="cb26-563"><a href="#cb26-563"></a><span class="fu">#### Mean of a Probability Distribution</span></span>
+<span id="cb26-564"><a href="#cb26-564"></a></span>
+<span id="cb26-565"><a href="#cb26-565"></a>The mean of a probability distribution is calculated as the weighted average of all possible values of the random variable, with the probabilities serving as weights. For a discrete random variable $X$ with probability mass function $P(X = x)$, the mean $\mu$ is given by:</span>
+<span id="cb26-566"><a href="#cb26-566"></a></span>
+<span id="cb26-567"><a href="#cb26-567"></a>$$</span>
+<span id="cb26-568"><a href="#cb26-568"></a>\mu = \sum_{x} x \cdot P(X = x)</span>
+<span id="cb26-569"><a href="#cb26-569"></a>$$</span>
+<span id="cb26-570"><a href="#cb26-570"></a></span>
+<span id="cb26-571"><a href="#cb26-571"></a>For a continuous random variable with probability density function $f(x)$, the mean is calculated as:</span>
+<span id="cb26-572"><a href="#cb26-572"></a></span>
+<span id="cb26-573"><a href="#cb26-573"></a>$$</span>
+<span id="cb26-574"><a href="#cb26-574"></a>\mu = \int_{-\infty}^{\infty} x \cdot f(x) \, dx</span>
+<span id="cb26-575"><a href="#cb26-575"></a>$$</span>
+<span id="cb26-576"><a href="#cb26-576"></a></span>
+<span id="cb26-577"><a href="#cb26-577"></a>If we have a sample of data, the sample mean is calculated as the average of the observed values</span>
+<span id="cb26-578"><a href="#cb26-578"></a></span>
+<span id="cb26-579"><a href="#cb26-579"></a>$$</span>
+<span id="cb26-580"><a href="#cb26-580"></a>\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i=\frac{x_1+x_2+\cdots+x_n}{n}</span>
+<span id="cb26-581"><a href="#cb26-581"></a>$$</span>
+<span id="cb26-582"><a href="#cb26-582"></a></span>
+<span id="cb26-583"><a href="#cb26-583"></a><span class="fu">#### Variance of a Probability Distribution</span></span>
+<span id="cb26-584"><a href="#cb26-584"></a></span>
+<span id="cb26-585"><a href="#cb26-585"></a>The variance of a probability distribution measures the spread or dispersion of values around the mean. It is calculated as the average of the squared differences between each value and the mean. For a discrete random variable $X$ with mean $\mu$, the variance $\sigma^2$ is given by:</span>
+<span id="cb26-586"><a href="#cb26-586"></a></span>
+<span id="cb26-587"><a href="#cb26-587"></a>$$</span>
+<span id="cb26-588"><a href="#cb26-588"></a>\sigma^2 = \sum_{x} (x - \mu)^2 \cdot P(X = x)</span>
+<span id="cb26-589"><a href="#cb26-589"></a>$$</span>
+<span id="cb26-590"><a href="#cb26-590"></a></span>
+<span id="cb26-591"><a href="#cb26-591"></a>For a continuous random variable with mean $\mu$, the variance is calculated as:</span>
+<span id="cb26-592"><a href="#cb26-592"></a></span>
+<span id="cb26-593"><a href="#cb26-593"></a>$$</span>
+<span id="cb26-594"><a href="#cb26-594"></a>\sigma^2 = \int_{-\infty}^{\infty} (x - \mu)^2 \cdot f(x) \, dx</span>
+<span id="cb26-595"><a href="#cb26-595"></a>$$</span>
+<span id="cb26-596"><a href="#cb26-596"></a></span>
+<span id="cb26-597"><a href="#cb26-597"></a>If we have a sample of data, the sample variance is calculated as the average of the squared differences between each observed value and the sample mean.</span>
+<span id="cb26-598"><a href="#cb26-598"></a></span>
+<span id="cb26-599"><a href="#cb26-599"></a>$$</span>
+<span id="cb26-600"><a href="#cb26-600"></a>\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2=\frac{(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2}{n}</span>
+<span id="cb26-601"><a href="#cb26-601"></a>$$</span>
+<span id="cb26-602"><a href="#cb26-602"></a></span>
+<span id="cb26-603"><a href="#cb26-603"></a><span class="fu">#### Example: Mean and Variance of the Beta Distribution</span></span>
+<span id="cb26-604"><a href="#cb26-604"></a></span>
+<span id="cb26-605"><a href="#cb26-605"></a>Let us assume a Beta distribution with shape parameters $\alpha = 2$ and $\beta = 3$. We can calculate the mean and variance of this distribution using the formulae for the Beta distribution:</span>
+<span id="cb26-606"><a href="#cb26-606"></a></span>
+<span id="cb26-609"><a href="#cb26-609"></a><span class="in">```{python}</span></span>
+<span id="cb26-610"><a href="#cb26-610"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-611"><a href="#cb26-611"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-612"><a href="#cb26-612"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
+<span id="cb26-613"><a href="#cb26-613"></a></span>
+<span id="cb26-614"><a href="#cb26-614"></a><span class="co"># Beta distribution parameters</span></span>
+<span id="cb26-615"><a href="#cb26-615"></a>alpha <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb26-616"><a href="#cb26-616"></a>beta_val <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb26-617"><a href="#cb26-617"></a></span>
+<span id="cb26-618"><a href="#cb26-618"></a><span class="co"># Calculate mean and variance of the Beta distribution</span></span>
+<span id="cb26-619"><a href="#cb26-619"></a>mean <span class="op">=</span> alpha <span class="op">/</span> (alpha <span class="op">+</span> beta_val)</span>
+<span id="cb26-620"><a href="#cb26-620"></a>variance <span class="op">=</span> (alpha <span class="op">*</span> beta_val) <span class="op">/</span> ((alpha <span class="op">+</span> beta_val) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (alpha <span class="op">+</span> beta_val <span class="op">+</span> <span class="dv">1</span>))</span>
 <span id="cb26-621"><a href="#cb26-621"></a></span>
-<span id="cb26-622"><a href="#cb26-622"></a>sample_mean <span class="op">=</span> np.mean(samples)</span>
-<span id="cb26-623"><a href="#cb26-623"></a>sample_variance <span class="op">=</span> np.var(samples)</span>
+<span id="cb26-622"><a href="#cb26-622"></a><span class="co"># mean and variance from sample</span></span>
+<span id="cb26-623"><a href="#cb26-623"></a>samples <span class="op">=</span> np.random.beta(alpha, beta_val, <span class="dv">10_000</span>)</span>
 <span id="cb26-624"><a href="#cb26-624"></a></span>
-<span id="cb26-625"><a href="#cb26-625"></a><span class="co"># plot the distribution and the mean and variance (theoretical and exact)</span></span>
-<span id="cb26-626"><a href="#cb26-626"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
-<span id="cb26-627"><a href="#cb26-627"></a>pdf <span class="op">=</span> beta.pdf(x, alpha, beta_val)</span>
-<span id="cb26-628"><a href="#cb26-628"></a></span>
-<span id="cb26-629"><a href="#cb26-629"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-630"><a href="#cb26-630"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb26-631"><a href="#cb26-631"></a><span class="co"># mean and variance</span></span>
-<span id="cb26-632"><a href="#cb26-632"></a>plt.axvline(mean, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Mean: </span><span class="sc">{</span>mean<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-633"><a href="#cb26-633"></a>plt.axvline(mean <span class="op">-</span> np.sqrt(variance), color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Std Dev: </span><span class="sc">{</span>np<span class="sc">.</span>sqrt(variance)<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-634"><a href="#cb26-634"></a>plt.axvline(mean <span class="op">+</span> np.sqrt(variance), color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
-<span id="cb26-635"><a href="#cb26-635"></a><span class="co">#sample mean and variance</span></span>
-<span id="cb26-636"><a href="#cb26-636"></a>plt.axvline(sample_mean, color<span class="op">=</span><span class="st">&#39;purple&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Sample Mean: </span><span class="sc">{</span>sample_mean<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-637"><a href="#cb26-637"></a>plt.axvline(sample_mean <span class="op">-</span> np.sqrt(sample_variance), color<span class="op">=</span><span class="st">&#39;orange&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Sample Std Dev: </span><span class="sc">{</span>np<span class="sc">.</span>sqrt(sample_variance)<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-638"><a href="#cb26-638"></a>plt.title(<span class="st">&quot;Beta Distribution (α = 2, β = 3)&quot;</span>)</span>
-<span id="cb26-639"><a href="#cb26-639"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
-<span id="cb26-640"><a href="#cb26-640"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
-<span id="cb26-641"><a href="#cb26-641"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-642"><a href="#cb26-642"></a>plt.legend()</span>
-<span id="cb26-643"><a href="#cb26-643"></a>plt.show()</span>
-<span id="cb26-644"><a href="#cb26-644"></a><span class="in">```</span></span>
-<span id="cb26-645"><a href="#cb26-645"></a></span>
-<span id="cb26-646"><a href="#cb26-646"></a></span>
-<span id="cb26-647"><a href="#cb26-647"></a><span class="fu">### Conclusion</span></span>
+<span id="cb26-625"><a href="#cb26-625"></a>sample_mean <span class="op">=</span> np.mean(samples)</span>
+<span id="cb26-626"><a href="#cb26-626"></a>sample_variance <span class="op">=</span> np.var(samples)</span>
+<span id="cb26-627"><a href="#cb26-627"></a></span>
+<span id="cb26-628"><a href="#cb26-628"></a><span class="co"># plot the distribution and the mean and variance (theoretical and exact)</span></span>
+<span id="cb26-629"><a href="#cb26-629"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-630"><a href="#cb26-630"></a>pdf <span class="op">=</span> beta.pdf(x, alpha, beta_val)</span>
+<span id="cb26-631"><a href="#cb26-631"></a></span>
+<span id="cb26-632"><a href="#cb26-632"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-633"><a href="#cb26-633"></a>plt.plot(x, pdf, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-634"><a href="#cb26-634"></a><span class="co"># mean and variance</span></span>
+<span id="cb26-635"><a href="#cb26-635"></a>plt.axvline(mean, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Mean: </span><span class="sc">{</span>mean<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-636"><a href="#cb26-636"></a>plt.axvline(mean <span class="op">-</span> np.sqrt(variance), color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Std Dev: </span><span class="sc">{</span>np<span class="sc">.</span>sqrt(variance)<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-637"><a href="#cb26-637"></a>plt.axvline(mean <span class="op">+</span> np.sqrt(variance), color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
+<span id="cb26-638"><a href="#cb26-638"></a><span class="co">#sample mean and variance</span></span>
+<span id="cb26-639"><a href="#cb26-639"></a>plt.axvline(sample_mean, color<span class="op">=</span><span class="st">&#39;purple&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Sample Mean: </span><span class="sc">{</span>sample_mean<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-640"><a href="#cb26-640"></a>plt.axvline(sample_mean <span class="op">-</span> np.sqrt(sample_variance), color<span class="op">=</span><span class="st">&#39;orange&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Sample Std Dev: </span><span class="sc">{</span>np<span class="sc">.</span>sqrt(sample_variance)<span class="sc">:.3f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-641"><a href="#cb26-641"></a>plt.title(<span class="st">&quot;Beta Distribution (α = 2, β = 3)&quot;</span>)</span>
+<span id="cb26-642"><a href="#cb26-642"></a>plt.xlabel(<span class="st">&quot;Value&quot;</span>)</span>
+<span id="cb26-643"><a href="#cb26-643"></a>plt.ylabel(<span class="st">&quot;Density&quot;</span>)</span>
+<span id="cb26-644"><a href="#cb26-644"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-645"><a href="#cb26-645"></a>plt.legend()</span>
+<span id="cb26-646"><a href="#cb26-646"></a>plt.show()</span>
+<span id="cb26-647"><a href="#cb26-647"></a><span class="in">```</span></span>
 <span id="cb26-648"><a href="#cb26-648"></a></span>
-<span id="cb26-649"><a href="#cb26-649"></a>Probability distributions play a crucial role in statistics and data analysis. They provide a mathematical framework for describing the likelihood of different outcomes and are used in various statistical models and methods. Understanding the properties and characteristics of different probability distributions is essential for making informed decisions and drawing meaningful insights from data.</span>
-<span id="cb26-650"><a href="#cb26-650"></a></span>
-<span id="cb26-651"><a href="#cb26-651"></a><span class="fu">## Applications</span></span>
-<span id="cb26-652"><a href="#cb26-652"></a></span>
-<span id="cb26-653"><a href="#cb26-653"></a><span class="fu">### Measurments</span></span>
-<span id="cb26-654"><a href="#cb26-654"></a></span>
-<span id="cb26-655"><a href="#cb26-655"></a>In many real-world scenarios, we encounter data that follows a particular probability distribution. Understanding the underlying distribution of data is crucial for making accurate predictions and informed decisions. Let&#39;s explore some common applications of probability distributions in measurements and data analysis.</span>
-<span id="cb26-656"><a href="#cb26-656"></a></span>
-<span id="cb26-657"><a href="#cb26-657"></a><span class="fu">### Measurement Uncertainty Using Linear Approximation</span></span>
-<span id="cb26-658"><a href="#cb26-658"></a></span>
-<span id="cb26-659"><a href="#cb26-659"></a>In some cases, a simpler linear approximation can be used to estimate the uncertainty in a calculated result. This method avoids squaring and summing the terms and instead directly adds the contributions of uncertainties from each variable, scaled by their respective partial derivatives. This is a conservative approach and provides an upper bound for the uncertainty.</span>
-<span id="cb26-660"><a href="#cb26-660"></a></span>
-<span id="cb26-661"><a href="#cb26-661"></a><span class="fu">#### Linear Total Differential Formula</span></span>
-<span id="cb26-662"><a href="#cb26-662"></a></span>
-<span id="cb26-663"><a href="#cb26-663"></a>If $f(x_1, x_2, \dots, x_n)$ is a function of multiple variables, the uncertainty in $f$ ($\Delta f$) can be approximated as:</span>
-<span id="cb26-664"><a href="#cb26-664"></a></span>
-<span id="cb26-665"><a href="#cb26-665"></a>$$</span>
-<span id="cb26-666"><a href="#cb26-666"></a>\Delta f \approx \left| \frac{\partial f}{\partial x_1} \right| \Delta x_1 + \left| \frac{\partial f}{\partial x_2} \right| \Delta x_2 + \dots + \left| \frac{\partial f}{\partial x_n} \right| \Delta x_n</span>
-<span id="cb26-667"><a href="#cb26-667"></a>$$</span>
-<span id="cb26-668"><a href="#cb26-668"></a></span>
-<span id="cb26-669"><a href="#cb26-669"></a>where:</span>
-<span id="cb26-670"><a href="#cb26-670"></a></span>
-<span id="cb26-671"><a href="#cb26-671"></a><span class="ss">- </span>$\frac{\partial f}{\partial x_i}$: Partial derivative of $f$ with respect to $x_i$,</span>
-<span id="cb26-672"><a href="#cb26-672"></a><span class="ss">- </span>$\Delta x_i$: Uncertainty in the variable $x_i$,</span>
-<span id="cb26-673"><a href="#cb26-673"></a><span class="ss">- </span>$\left| \cdot \right|$: Absolute value.</span>
-<span id="cb26-674"><a href="#cb26-674"></a></span>
-<span id="cb26-675"><a href="#cb26-675"></a>This method assumes independent uncertainties and provides a straightforward estimate.</span>
-<span id="cb26-676"><a href="#cb26-676"></a></span>
-<span id="cb26-677"><a href="#cb26-677"></a><span class="fu">#### Example: Pendulum and Gravity</span></span>
-<span id="cb26-678"><a href="#cb26-678"></a></span>
-<span id="cb26-679"><a href="#cb26-679"></a>For the pendulum example, where $g = \frac{4\pi^2 L}{T^2}$, the uncertainty in $g$ ($\Delta g$) can be calculated as:</span>
-<span id="cb26-680"><a href="#cb26-680"></a></span>
-<span id="cb26-681"><a href="#cb26-681"></a>$$</span>
-<span id="cb26-682"><a href="#cb26-682"></a>\Delta g \approx \left| \frac{\partial g}{\partial T} \right| \Delta T + \left| \frac{\partial g}{\partial L} \right| \Delta L</span>
-<span id="cb26-683"><a href="#cb26-683"></a>$$</span>
-<span id="cb26-684"><a href="#cb26-684"></a></span>
-<span id="cb26-685"><a href="#cb26-685"></a>The partial derivatives are:</span>
-<span id="cb26-686"><a href="#cb26-686"></a></span>
-<span id="cb26-687"><a href="#cb26-687"></a>$$</span>
-<span id="cb26-688"><a href="#cb26-688"></a>\frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}, \quad \frac{\partial g}{\partial L} = \frac{4\pi^2}{T^2}</span>
-<span id="cb26-689"><a href="#cb26-689"></a>$$</span>
-<span id="cb26-690"><a href="#cb26-690"></a></span>
-<span id="cb26-691"><a href="#cb26-691"></a>Substitute these into the formula:</span>
-<span id="cb26-692"><a href="#cb26-692"></a></span>
-<span id="cb26-693"><a href="#cb26-693"></a>$$</span>
-<span id="cb26-694"><a href="#cb26-694"></a>\Delta g \approx \left| -\frac{8\pi^2 L}{T^3} \right| \Delta T + \left| \frac{4\pi^2}{T^2} \right| \Delta L</span>
-<span id="cb26-695"><a href="#cb26-695"></a>$$</span>
-<span id="cb26-696"><a href="#cb26-696"></a></span>
-<span id="cb26-697"><a href="#cb26-697"></a>Given the measurements:</span>
-<span id="cb26-698"><a href="#cb26-698"></a></span>
-<span id="cb26-699"><a href="#cb26-699"></a><span class="ss">- </span>$T = 2.1 \, \mathrm{s}, \, \Delta T = 0.1 \, \mathrm{s}$,</span>
-<span id="cb26-700"><a href="#cb26-700"></a><span class="ss">- </span>$L = 1.0 \, \mathrm{m}, \, \Delta L = 0.05 \, \mathrm{m}$,</span>
+<span id="cb26-649"><a href="#cb26-649"></a></span>
+<span id="cb26-650"><a href="#cb26-650"></a><span class="fu">### Conclusion</span></span>
+<span id="cb26-651"><a href="#cb26-651"></a></span>
+<span id="cb26-652"><a href="#cb26-652"></a>Probability distributions play a crucial role in statistics and data analysis. They provide a mathematical framework for describing the likelihood of different outcomes and are used in various statistical models and methods. Understanding the properties and characteristics of different probability distributions is essential for making informed decisions and drawing meaningful insights from data.</span>
+<span id="cb26-653"><a href="#cb26-653"></a></span>
+<span id="cb26-654"><a href="#cb26-654"></a><span class="fu">## Applications</span></span>
+<span id="cb26-655"><a href="#cb26-655"></a></span>
+<span id="cb26-656"><a href="#cb26-656"></a><span class="fu">### Measurments</span></span>
+<span id="cb26-657"><a href="#cb26-657"></a></span>
+<span id="cb26-658"><a href="#cb26-658"></a>In many real-world scenarios, we encounter data that follows a particular probability distribution. Understanding the underlying distribution of data is crucial for making accurate predictions and informed decisions. Let&#39;s explore some common applications of probability distributions in measurements and data analysis.</span>
+<span id="cb26-659"><a href="#cb26-659"></a></span>
+<span id="cb26-660"><a href="#cb26-660"></a><span class="fu">### Measurement Uncertainty Using Linear Approximation</span></span>
+<span id="cb26-661"><a href="#cb26-661"></a></span>
+<span id="cb26-662"><a href="#cb26-662"></a>In some cases, a simpler linear approximation can be used to estimate the uncertainty in a calculated result. This method avoids squaring and summing the terms and instead directly adds the contributions of uncertainties from each variable, scaled by their respective partial derivatives. This is a conservative approach and provides an upper bound for the uncertainty.</span>
+<span id="cb26-663"><a href="#cb26-663"></a></span>
+<span id="cb26-664"><a href="#cb26-664"></a><span class="fu">#### Linear Total Differential Formula</span></span>
+<span id="cb26-665"><a href="#cb26-665"></a></span>
+<span id="cb26-666"><a href="#cb26-666"></a>If $f(x_1, x_2, \dots, x_n)$ is a function of multiple variables, the uncertainty in $f$ ($\Delta f$) can be approximated as:</span>
+<span id="cb26-667"><a href="#cb26-667"></a></span>
+<span id="cb26-668"><a href="#cb26-668"></a>$$</span>
+<span id="cb26-669"><a href="#cb26-669"></a>\Delta f \approx \left| \frac{\partial f}{\partial x_1} \right| \Delta x_1 + \left| \frac{\partial f}{\partial x_2} \right| \Delta x_2 + \dots + \left| \frac{\partial f}{\partial x_n} \right| \Delta x_n</span>
+<span id="cb26-670"><a href="#cb26-670"></a>$$</span>
+<span id="cb26-671"><a href="#cb26-671"></a></span>
+<span id="cb26-672"><a href="#cb26-672"></a>where:</span>
+<span id="cb26-673"><a href="#cb26-673"></a></span>
+<span id="cb26-674"><a href="#cb26-674"></a><span class="ss">- </span>$\frac{\partial f}{\partial x_i}$: Partial derivative of $f$ with respect to $x_i$,</span>
+<span id="cb26-675"><a href="#cb26-675"></a><span class="ss">- </span>$\Delta x_i$: Uncertainty in the variable $x_i$,</span>
+<span id="cb26-676"><a href="#cb26-676"></a><span class="ss">- </span>$\left| \cdot \right|$: Absolute value.</span>
+<span id="cb26-677"><a href="#cb26-677"></a></span>
+<span id="cb26-678"><a href="#cb26-678"></a>This method assumes independent uncertainties and provides a straightforward estimate.</span>
+<span id="cb26-679"><a href="#cb26-679"></a></span>
+<span id="cb26-680"><a href="#cb26-680"></a><span class="fu">#### Example: Pendulum and Gravity</span></span>
+<span id="cb26-681"><a href="#cb26-681"></a></span>
+<span id="cb26-682"><a href="#cb26-682"></a>For the pendulum example, where $g = \frac{4\pi^2 L}{T^2}$, the uncertainty in $g$ ($\Delta g$) can be calculated as:</span>
+<span id="cb26-683"><a href="#cb26-683"></a></span>
+<span id="cb26-684"><a href="#cb26-684"></a>$$</span>
+<span id="cb26-685"><a href="#cb26-685"></a>\Delta g \approx \left| \frac{\partial g}{\partial T} \right| \Delta T + \left| \frac{\partial g}{\partial L} \right| \Delta L</span>
+<span id="cb26-686"><a href="#cb26-686"></a>$$</span>
+<span id="cb26-687"><a href="#cb26-687"></a></span>
+<span id="cb26-688"><a href="#cb26-688"></a>The partial derivatives are:</span>
+<span id="cb26-689"><a href="#cb26-689"></a></span>
+<span id="cb26-690"><a href="#cb26-690"></a>$$</span>
+<span id="cb26-691"><a href="#cb26-691"></a>\frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}, \quad \frac{\partial g}{\partial L} = \frac{4\pi^2}{T^2}</span>
+<span id="cb26-692"><a href="#cb26-692"></a>$$</span>
+<span id="cb26-693"><a href="#cb26-693"></a></span>
+<span id="cb26-694"><a href="#cb26-694"></a>Substitute these into the formula:</span>
+<span id="cb26-695"><a href="#cb26-695"></a></span>
+<span id="cb26-696"><a href="#cb26-696"></a>$$</span>
+<span id="cb26-697"><a href="#cb26-697"></a>\Delta g \approx \left| -\frac{8\pi^2 L}{T^3} \right| \Delta T + \left| \frac{4\pi^2}{T^2} \right| \Delta L</span>
+<span id="cb26-698"><a href="#cb26-698"></a>$$</span>
+<span id="cb26-699"><a href="#cb26-699"></a></span>
+<span id="cb26-700"><a href="#cb26-700"></a>Given the measurements:</span>
 <span id="cb26-701"><a href="#cb26-701"></a></span>
-<span id="cb26-702"><a href="#cb26-702"></a>Substitute the values:</span>
-<span id="cb26-703"><a href="#cb26-703"></a></span>
-<span id="cb26-704"><a href="#cb26-704"></a>$$</span>
-<span id="cb26-705"><a href="#cb26-705"></a>\Delta g \approx \left| -\frac{8\pi^2 (1.0)}{(2.1)^3} \right| (0.1) + \left| \frac{4\pi^2}{(2.1)^2} \right| (0.05)</span>
-<span id="cb26-706"><a href="#cb26-706"></a>$$</span>
-<span id="cb26-707"><a href="#cb26-707"></a></span>
-<span id="cb26-708"><a href="#cb26-708"></a>Simplify each term to compute $\Delta g$. This approach provides a linear estimate of the uncertainty in $g$.</span>
-<span id="cb26-709"><a href="#cb26-709"></a></span>
-<span id="cb26-710"><a href="#cb26-710"></a>Let us use python to calculate the uncertainty in $g$:</span>
-<span id="cb26-711"><a href="#cb26-711"></a></span>
-<span id="cb26-714"><a href="#cb26-714"></a><span class="in">```{python}</span></span>
-<span id="cb26-715"><a href="#cb26-715"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-716"><a href="#cb26-716"></a></span>
-<span id="cb26-717"><a href="#cb26-717"></a><span class="co"># Parameters</span></span>
-<span id="cb26-718"><a href="#cb26-718"></a>T <span class="op">=</span> <span class="fl">2.1</span></span>
-<span id="cb26-719"><a href="#cb26-719"></a>L <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb26-720"><a href="#cb26-720"></a>delta_T <span class="op">=</span> <span class="fl">0.1</span></span>
-<span id="cb26-721"><a href="#cb26-721"></a>delta_L <span class="op">=</span> <span class="fl">0.05</span></span>
-<span id="cb26-722"><a href="#cb26-722"></a></span>
-<span id="cb26-723"><a href="#cb26-723"></a><span class="co"># Partial derivatives</span></span>
-<span id="cb26-724"><a href="#cb26-724"></a>partial_g_T <span class="op">=</span> <span class="op">-</span><span class="dv">8</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> L <span class="op">/</span> T <span class="op">**</span> <span class="dv">3</span></span>
-<span id="cb26-725"><a href="#cb26-725"></a>partial_g_L <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> T <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb26-726"><a href="#cb26-726"></a></span>
-<span id="cb26-727"><a href="#cb26-727"></a><span class="co"># Uncertainty in g</span></span>
-<span id="cb26-728"><a href="#cb26-728"></a>delta_g <span class="op">=</span> np.<span class="bu">abs</span>(partial_g_T) <span class="op">*</span> delta_T <span class="op">+</span> np.<span class="bu">abs</span>(partial_g_L) <span class="op">*</span> delta_L</span>
+<span id="cb26-702"><a href="#cb26-702"></a><span class="ss">- </span>$T = 2.1 \, \mathrm{s}, \, \Delta T = 0.1 \, \mathrm{s}$,</span>
+<span id="cb26-703"><a href="#cb26-703"></a><span class="ss">- </span>$L = 1.0 \, \mathrm{m}, \, \Delta L = 0.05 \, \mathrm{m}$,</span>
+<span id="cb26-704"><a href="#cb26-704"></a></span>
+<span id="cb26-705"><a href="#cb26-705"></a>Substitute the values:</span>
+<span id="cb26-706"><a href="#cb26-706"></a></span>
+<span id="cb26-707"><a href="#cb26-707"></a>$$</span>
+<span id="cb26-708"><a href="#cb26-708"></a>\Delta g \approx \left| -\frac{8\pi^2 (1.0)}{(2.1)^3} \right| (0.1) + \left| \frac{4\pi^2}{(2.1)^2} \right| (0.05)</span>
+<span id="cb26-709"><a href="#cb26-709"></a>$$</span>
+<span id="cb26-710"><a href="#cb26-710"></a></span>
+<span id="cb26-711"><a href="#cb26-711"></a>Simplify each term to compute $\Delta g$. This approach provides a linear estimate of the uncertainty in $g$.</span>
+<span id="cb26-712"><a href="#cb26-712"></a></span>
+<span id="cb26-713"><a href="#cb26-713"></a>Let us use python to calculate the uncertainty in $g$:</span>
+<span id="cb26-714"><a href="#cb26-714"></a></span>
+<span id="cb26-717"><a href="#cb26-717"></a><span class="in">```{python}</span></span>
+<span id="cb26-718"><a href="#cb26-718"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-719"><a href="#cb26-719"></a></span>
+<span id="cb26-720"><a href="#cb26-720"></a><span class="co"># Parameters</span></span>
+<span id="cb26-721"><a href="#cb26-721"></a>T <span class="op">=</span> <span class="fl">2.1</span></span>
+<span id="cb26-722"><a href="#cb26-722"></a>L <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb26-723"><a href="#cb26-723"></a>delta_T <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb26-724"><a href="#cb26-724"></a>delta_L <span class="op">=</span> <span class="fl">0.05</span></span>
+<span id="cb26-725"><a href="#cb26-725"></a></span>
+<span id="cb26-726"><a href="#cb26-726"></a><span class="co"># Partial derivatives</span></span>
+<span id="cb26-727"><a href="#cb26-727"></a>partial_g_T <span class="op">=</span> <span class="op">-</span><span class="dv">8</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> L <span class="op">/</span> T <span class="op">**</span> <span class="dv">3</span></span>
+<span id="cb26-728"><a href="#cb26-728"></a>partial_g_L <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> T <span class="op">**</span> <span class="dv">2</span></span>
 <span id="cb26-729"><a href="#cb26-729"></a></span>
-<span id="cb26-730"><a href="#cb26-730"></a><span class="bu">print</span>(<span class="ss">f&quot;Acceleration Due to Gravity (g) is estimated as </span><span class="sc">{</span>partial_g_T<span class="sc">:.2f}</span><span class="ss"> ± </span><span class="sc">{</span>delta_g<span class="sc">:.2f}</span><span class="ss"> m/s^2&quot;</span>)</span>
-<span id="cb26-731"><a href="#cb26-731"></a><span class="in">```</span></span>
+<span id="cb26-730"><a href="#cb26-730"></a><span class="co"># Uncertainty in g</span></span>
+<span id="cb26-731"><a href="#cb26-731"></a>delta_g <span class="op">=</span> np.<span class="bu">abs</span>(partial_g_T) <span class="op">*</span> delta_T <span class="op">+</span> np.<span class="bu">abs</span>(partial_g_L) <span class="op">*</span> delta_L</span>
 <span id="cb26-732"><a href="#cb26-732"></a></span>
-<span id="cb26-733"><a href="#cb26-733"></a><span class="fu">#### Monte Carlo Simulation for Uncertainty Estimation</span></span>
-<span id="cb26-734"><a href="#cb26-734"></a></span>
-<span id="cb26-735"><a href="#cb26-735"></a>Monte Carlo simulation can also be used to estimate the uncertainty in a calculated result by sampling from the distributions of input variables. This approach provides a more comprehensive view of the uncertainty by considering the joint distribution of variables.</span>
-<span id="cb26-736"><a href="#cb26-736"></a></span>
-<span id="cb26-737"><a href="#cb26-737"></a>Supose we measure the period of a pendulum to be $T = 2.1 \pm 0.1$ seconds. Anlogusly, we measure the length of the pendulum to be $L = 1.0 \pm 0.05$ meters. </span>
-<span id="cb26-738"><a href="#cb26-738"></a></span>
-<span id="cb26-739"><a href="#cb26-739"></a>Let us use Monte Carlo simulation to estimate the acceleration due to gravity and its uncertainty:</span>
-<span id="cb26-740"><a href="#cb26-740"></a></span>
-<span id="cb26-743"><a href="#cb26-743"></a><span class="in">```{python}</span></span>
-<span id="cb26-744"><a href="#cb26-744"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-745"><a href="#cb26-745"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-746"><a href="#cb26-746"></a></span>
-<span id="cb26-747"><a href="#cb26-747"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb26-748"><a href="#cb26-748"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb26-733"><a href="#cb26-733"></a><span class="bu">print</span>(<span class="ss">f&quot;Acceleration Due to Gravity (g) is estimated as </span><span class="sc">{</span>partial_g_T<span class="sc">:.2f}</span><span class="ss"> ± </span><span class="sc">{</span>delta_g<span class="sc">:.2f}</span><span class="ss"> m/s^2&quot;</span>)</span>
+<span id="cb26-734"><a href="#cb26-734"></a><span class="in">```</span></span>
+<span id="cb26-735"><a href="#cb26-735"></a></span>
+<span id="cb26-736"><a href="#cb26-736"></a><span class="fu">#### Monte Carlo Simulation for Uncertainty Estimation</span></span>
+<span id="cb26-737"><a href="#cb26-737"></a></span>
+<span id="cb26-738"><a href="#cb26-738"></a>Monte Carlo simulation can also be used to estimate the uncertainty in a calculated result by sampling from the distributions of input variables. This approach provides a more comprehensive view of the uncertainty by considering the joint distribution of variables.</span>
+<span id="cb26-739"><a href="#cb26-739"></a></span>
+<span id="cb26-740"><a href="#cb26-740"></a>Supose we measure the period of a pendulum to be $T = 2.1 \pm 0.1$ seconds. Anlogusly, we measure the length of the pendulum to be $L = 1.0 \pm 0.05$ meters. </span>
+<span id="cb26-741"><a href="#cb26-741"></a></span>
+<span id="cb26-742"><a href="#cb26-742"></a>Let us use Monte Carlo simulation to estimate the acceleration due to gravity and its uncertainty:</span>
+<span id="cb26-743"><a href="#cb26-743"></a></span>
+<span id="cb26-746"><a href="#cb26-746"></a><span class="in">```{python}</span></span>
+<span id="cb26-747"><a href="#cb26-747"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-748"><a href="#cb26-748"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb26-749"><a href="#cb26-749"></a></span>
-<span id="cb26-750"><a href="#cb26-750"></a><span class="co"># Number of simulations</span></span>
-<span id="cb26-751"><a href="#cb26-751"></a>n_simulations <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb26-750"><a href="#cb26-750"></a><span class="co"># Set random seed for reproducibility</span></span>
+<span id="cb26-751"><a href="#cb26-751"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb26-752"><a href="#cb26-752"></a></span>
-<span id="cb26-753"><a href="#cb26-753"></a><span class="co"># Simulate period and length measurements</span></span>
-<span id="cb26-754"><a href="#cb26-754"></a>T <span class="op">=</span> np.random.uniform(<span class="fl">2.0</span>, <span class="fl">2.2</span>, n_simulations)</span>
-<span id="cb26-755"><a href="#cb26-755"></a>L <span class="op">=</span> np.random.uniform(<span class="fl">0.95</span>, <span class="fl">1.05</span>, n_simulations)</span>
-<span id="cb26-756"><a href="#cb26-756"></a></span>
-<span id="cb26-757"><a href="#cb26-757"></a><span class="co"># Calculate acceleration due to gravity</span></span>
-<span id="cb26-758"><a href="#cb26-758"></a>g <span class="op">=</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> L) <span class="op">/</span> T <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb26-753"><a href="#cb26-753"></a><span class="co"># Number of simulations</span></span>
+<span id="cb26-754"><a href="#cb26-754"></a>n_simulations <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb26-755"><a href="#cb26-755"></a></span>
+<span id="cb26-756"><a href="#cb26-756"></a><span class="co"># Simulate period and length measurements</span></span>
+<span id="cb26-757"><a href="#cb26-757"></a>T <span class="op">=</span> np.random.uniform(<span class="fl">2.0</span>, <span class="fl">2.2</span>, n_simulations)</span>
+<span id="cb26-758"><a href="#cb26-758"></a>L <span class="op">=</span> np.random.uniform(<span class="fl">0.95</span>, <span class="fl">1.05</span>, n_simulations)</span>
 <span id="cb26-759"><a href="#cb26-759"></a></span>
-<span id="cb26-760"><a href="#cb26-760"></a><span class="co"># Compute mean and standard deviation of g</span></span>
-<span id="cb26-761"><a href="#cb26-761"></a>mean_g <span class="op">=</span> np.mean(g)</span>
-<span id="cb26-762"><a href="#cb26-762"></a>std_g <span class="op">=</span> np.std(g)</span>
-<span id="cb26-763"><a href="#cb26-763"></a></span>
-<span id="cb26-764"><a href="#cb26-764"></a><span class="co"># histogram of g</span></span>
-<span id="cb26-765"><a href="#cb26-765"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb26-766"><a href="#cb26-766"></a>plt.hist(g, bins<span class="op">=</span><span class="dv">50</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-767"><a href="#cb26-767"></a>plt.axvline(mean_g, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Mean: </span><span class="sc">{</span>mean_g<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-768"><a href="#cb26-768"></a>plt.axvline(mean_g <span class="op">-</span> std_g, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Std Dev: </span><span class="sc">{</span>std_g<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
-<span id="cb26-769"><a href="#cb26-769"></a>plt.axvline(mean_g <span class="op">+</span> std_g, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
-<span id="cb26-770"><a href="#cb26-770"></a>plt.title(<span class="st">&quot;Acceleration Due to Gravity (g) Distribution&quot;</span>)</span>
-<span id="cb26-771"><a href="#cb26-771"></a>plt.xlabel(<span class="st">&quot;Acceleration Due to Gravity (m/s^2)&quot;</span>)</span>
-<span id="cb26-772"><a href="#cb26-772"></a>plt.ylabel(<span class="st">&quot;Frequency&quot;</span>)</span>
-<span id="cb26-773"><a href="#cb26-773"></a>plt.legend()</span>
-<span id="cb26-774"><a href="#cb26-774"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb26-775"><a href="#cb26-775"></a>plt.show()</span>
-<span id="cb26-776"><a href="#cb26-776"></a><span class="in">```</span></span>
-<span id="cb26-777"><a href="#cb26-777"></a></span>
+<span id="cb26-760"><a href="#cb26-760"></a><span class="co"># Calculate acceleration due to gravity</span></span>
+<span id="cb26-761"><a href="#cb26-761"></a>g <span class="op">=</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> L) <span class="op">/</span> T <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb26-762"><a href="#cb26-762"></a></span>
+<span id="cb26-763"><a href="#cb26-763"></a><span class="co"># Compute mean and standard deviation of g</span></span>
+<span id="cb26-764"><a href="#cb26-764"></a>mean_g <span class="op">=</span> np.mean(g)</span>
+<span id="cb26-765"><a href="#cb26-765"></a>std_g <span class="op">=</span> np.std(g)</span>
+<span id="cb26-766"><a href="#cb26-766"></a></span>
+<span id="cb26-767"><a href="#cb26-767"></a><span class="co"># histogram of g</span></span>
+<span id="cb26-768"><a href="#cb26-768"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb26-769"><a href="#cb26-769"></a>plt.hist(g, bins<span class="op">=</span><span class="dv">50</span>, color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-770"><a href="#cb26-770"></a>plt.axvline(mean_g, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Mean: </span><span class="sc">{</span>mean_g<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-771"><a href="#cb26-771"></a>plt.axvline(mean_g <span class="op">-</span> std_g, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, label<span class="op">=</span><span class="ss">f&#39;Std Dev: </span><span class="sc">{</span>std_g<span class="sc">:.2f}</span><span class="ss">&#39;</span>)</span>
+<span id="cb26-772"><a href="#cb26-772"></a>plt.axvline(mean_g <span class="op">+</span> std_g, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span>
+<span id="cb26-773"><a href="#cb26-773"></a>plt.title(<span class="st">&quot;Acceleration Due to Gravity (g) Distribution&quot;</span>)</span>
+<span id="cb26-774"><a href="#cb26-774"></a>plt.xlabel(<span class="st">&quot;Acceleration Due to Gravity (m/s^2)&quot;</span>)</span>
+<span id="cb26-775"><a href="#cb26-775"></a>plt.ylabel(<span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb26-776"><a href="#cb26-776"></a>plt.legend()</span>
+<span id="cb26-777"><a href="#cb26-777"></a>plt.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb26-778"><a href="#cb26-778"></a>plt.show()</span>
+<span id="cb26-779"><a href="#cb26-779"></a><span class="in">```</span></span>
+<span id="cb26-780"><a href="#cb26-780"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
