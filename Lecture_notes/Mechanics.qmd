@@ -298,6 +298,7 @@ To solve these equations we need to know the initial position and velocity of th
 
 Newton's third law states that forces always occur in pairs. If one object exerts a force on another object, the second object exerts an equal and opposite force on the first object. This law is also known as the law of action and reaction. The law of action and reaction states that for every action there is an equal and opposite reaction. This law is a consequence of the conservation of momentum. The momentum of a system is conserved if no external forces act on it.
 
+## Basic examples
 
 ### Projectile motion
 
@@ -366,31 +367,33 @@ plt.show()
 ```
 
 
-### Simple harmonic motion in 2D
+### Harmonic oscillation
 
-Let $\mathbb{F}=(-kx,-ky)$ be the force acting on the particle. The equations of motion are
+Let $\mathbb{F}=-k x$ be the force acting on the particle. The equation of motion is
 
 $$
-\begin{align*}
-\frac{d^2 x(t)}{dt^2} &= -\frac{k}{m} x(t) \\
-\frac{d^2 y(t)}{dt^2} &= -\frac{k}{m} y(t)
-\end{align*}
+\frac{d^2 x(t)}{dt^2} = -\frac{k}{m} x(t)
 $$
 
-where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle in the $x$ direction is proportional to the position of the particle in the $x$ direction. The acceleration of the particle in the $y$ direction is proportional to the position of the particle in the $y$ direction. The force acting on the particle is the force of a spring. The force of a spring is equal to the spring constant times the position of the particle. The force of a spring is equal to the force acting on the particle.
+where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle is proportional to its position, and the force acting on the particle is the force of a spring, equal to the spring constant times the position of the particle.
 
 #### Analytical solution
 
-The analytical solution of the equations of motion for a particle in simple harmonic motion is
+The analytical solution of the equation of motion for a particle in simple harmonic motion is
 
 $$
-\begin{align*}
-x(t) &= A_x \sin(\omega t) + B_x \cos(\omega t) \\
-y(t) &= A_y \sin(\omega t) + B_y \cos(\omega t)
-\end{align*}
+x(t) = A \sin(\omega t) + B \cos(\omega t)
 $$
 
-where $A_x$, $B_x$, $A_y$, and $B_y$ are the amplitudes of the particle in the $x$ and $y$ directions, respectively, and $\omega$ is the angular frequency of the particle. The angular frequency of the particle is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ is the initial phase of the particle. The initial phase of the particle is the phase of the particle at time $t=0$. The initial phase of the particle is the boundary condition of the problem. The boundary condition determines the trajectory of the particle in space.
+where $A$ and $B$ are the amplitudes of the particle, and $\omega$ is the angular frequency of the particle
+
+$$
+\omega = \sqrt{\frac{k}{m}}
+$$
+
+The angular frequency is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ determines the initial phase of the particle.
+
+
 
 #### Numerical solution
 
@@ -399,43 +402,41 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Parameters
-k_x, k_y = 1, 2  # Spring constants
+k = 1  # Spring constant
 m = 1  # Mass of the particle
-x_0, y_0 = 1, 0  # Initial position
-v_x0, v_y0 = 0, 1  # Initial velocity
+x_0 = 1  # Initial position
+v_0 = 0  # Initial velocity
 
-# Acceleration function
-def acceleration(x, y, k_x,k_y, m):
-    a_x = -k_x / m * x
-    a_y = -k_y / m * y
-    return a_x, a_y
+# Derived parameters
+omega = np.sqrt(k / m)  # Angular frequency
 
-# Simulation time
+# Time array
 t = np.linspace(0, 50, 500)
 dt = t[1] - t[0]
 
-# Positions and velocities
-x, y = [x_0], [y_0]
-v_x, v_y = v_x0, v_y0
+# Numerical solution (Euler method)
+x_num = [x_0]
+v = v_0
 
 for i in range(1, len(t)):
-    a_x, a_y = acceleration(x[-1], y[-1], k_x,k_y, m)
-    # Update velocity (Euler step)
-    v_x += a_x * dt
-    v_y += a_y * dt
-    # Update position (Euler step)
-    x.append(x[-1] + v_x * dt)
-    y.append(y[-1] + v_y * dt)
+    a = -k / m * x_num[-1]  # Acceleration
+    v += a * dt            # Update velocity
+    x_num.append(x_num[-1] + v * dt)  # Update position
 
-# Plotting the trajectory
-plt.figure(figsize=(6, 6))
-plt.plot(x, y, label="Trajectory")
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Harmonic Motion in Two Dimensions')
+# Analytical solution
+A = x_0
+B = v_0 / omega
+x_analytical = B * np.sin(omega * t) + A * np.cos(omega * t)
+
+# Plotting the position vs time
+plt.figure(figsize=(8, 4))
+plt.plot(t, x_num, label="Numerical Solution", linestyle='--')
+plt.plot(t, x_analytical, label="Analytical Solution", linestyle='-')
+plt.xlabel('Time (t)')
+plt.ylabel('Position (x)')
+plt.title('Harmonic Motion in One Dimension')
 plt.legend()
 plt.grid()
-plt.axis('equal')
 plt.show()
 ```
 
@@ -510,44 +511,44 @@ dt = T / N
 
 # Arrays to store values
 t = np.linspace(0, T, N)
-theta = np.zeros(N)
-omega = np.zeros(N)  # Angular velocity
+theta_full = np.zeros(N)
+omega_full = np.zeros(N)  # Angular velocity for full sin(theta)
+
+theta_approx = np.zeros(N)
+omega_approx = np.zeros(N)  # Angular velocity for sin(theta) ~ theta
 
 # Initial conditions
-theta[0] = theta_0
-omega[0] = 0
+theta_full[0] = theta_0
+omega_full[0] = 0
+
+theta_approx[0] = theta_0
+omega_approx[0] = 0
 
 # Numerical integration (Euler method)
 for i in range(1, N):
-    alpha = -(g / L) * np.sin(theta[i - 1])  # Angular acceleration
-    omega[i] = omega[i - 1] + alpha * dt  # Update angular velocity
-    theta[i] = theta[i - 1] + omega[i] * dt  # Update angle
+    # Full sin(theta)
+    alpha_full = -(g / L) * np.sin(theta_full[i - 1])
+    omega_full[i] = omega_full[i - 1] + alpha_full * dt
+    theta_full[i] = theta_full[i - 1] + omega_full[i] * dt
+
+    # Approximation sin(theta) ~ theta
+    alpha_approx = -(g / L) * theta_approx[i - 1]
+    omega_approx[i] = omega_approx[i - 1] + alpha_approx * dt
+    theta_approx[i] = theta_approx[i - 1] + omega_approx[i] * dt
 
 # Plotting
-plt.figure(figsize=(10, 6))
-plt.plot(t, theta, label="Angular Displacement")
-plt.title("Pendulum Motion")
+plt.figure(figsize=(12, 6))
+plt.plot(t, theta_full, label="Full sin(theta)", color="blue")
+plt.plot(t, theta_approx, label="sin(theta) ~ theta", color="red", linestyle="--")
+plt.title("Pendulum Motion: Full sin(theta) vs Approximation")
 plt.xlabel("Time (s)")
 plt.ylabel("Angle (radians)")
 plt.grid()
 plt.legend()
 plt.show()
+
 ```
 
-#### Phase Space Representation
-
-The motion of the pendulum can also be visualized in phase space, where the angular displacement $\theta$ is plotted against the angular velocity $\omega$.
-
-```{python}
-plt.figure(figsize=(6, 6))
-plt.plot(theta, omega, label="Phase Space")
-plt.title("Phase Space: Pendulum Motion")
-plt.xlabel("Angle (radians)")
-plt.ylabel("Angular Velocity (rad/s)")
-plt.grid()
-plt.legend()
-plt.show()
-```
 
 #### Energy Analysis
 
@@ -576,8 +577,9 @@ The energy remains constant over time, which can be verified numerically.
 
 ```{python}
 # Calculate energies
-kinetic_energy = 0.5 * m * (L * omega)**2
-potential_energy = m * g * L * (1 - np.cos(theta))
+m=1
+kinetic_energy = 0.5 * m * (L * omega_full)**2
+potential_energy = m * g * L * (1 - np.cos(theta_full))
 total_energy = kinetic_energy + potential_energy
 
 # Plot energies
@@ -629,53 +631,40 @@ $$
 |\mathbf{v}(t)| = R \omega
 $$
 
+**Velocity and Position Perpendicularity:**
+
+The dot product of the position vector $\mathbf{r}(t)$ and velocity vector $\mathbf{v}(t)$ is:
+
+$$
+\mathbf{r}(t) \cdot \mathbf{v}(t) = \left[R \cos(\omega t)\right] \left[-R \omega \sin(\omega t)\right] + \left[R \sin(\omega t)\right] \left[R \omega \cos(\omega t)\right]
+$$
+
+Simplifying:
+
+$$
+\mathbf{r}(t) \cdot \mathbf{v}(t) = -R^2 \omega \cos(\omega t) \sin(\omega t) + R^2 \omega \sin(\omega t) \cos(\omega t) = 0
+$$
+
+This confirms that $\mathbf{r}(t)$ and $\mathbf{v}(t)$ are perpendicular.
+
+
 #### Acceleration Vector
 
 The acceleration is the derivative of the velocity vector with respect to time:
 
 $$
-\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = -R \omega^2 \cos(\omega t) \hat{i} - R \omega^2 \sin(\omega t) \hat{j}
+\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = -R \omega^2 \cos(\omega t) \hat{i} - R \omega^2 \sin(\omega t) \hat{j} = -R \omega^2 \mathbf{r}(t)
 $$
 
 The acceleration vector always points toward the center of the circle (centripetal acceleration), and its magnitude is:
 
 $$
-|\mathbf{a}(t)| = R \omega^2
+|\mathbf{a}(t)| = R \omega^2 = \frac{v^2}{R}
 $$
 
-#### Properties (Explicit Calculations)
+Last relation is very important because it shows that the acceleration is proportional to the square of the velocity and inversely proportional to the radius of the circle.
+This result will we very useful in the next section when we will discuss the gravity.
 
-1. **Velocity and Position Perpendicularity:**
-   
-   The dot product of the position vector $\mathbf{r}(t)$ and velocity vector $\mathbf{v}(t)$ is:
-   
-   $$
-   \mathbf{r}(t) \cdot \mathbf{v}(t) = \left[R \cos(\omega t)\right] \left[-R \omega \sin(\omega t)\right] + \left[R \sin(\omega t)\right] \left[R \omega \cos(\omega t)\right]
-   $$
-   
-   Simplifying:
-   
-   $$
-   \mathbf{r}(t) \cdot \mathbf{v}(t) = -R^2 \omega \cos(\omega t) \sin(\omega t) + R^2 \omega \sin(\omega t) \cos(\omega t) = 0
-   $$
-   
-   This confirms that $\mathbf{r}(t)$ and $\mathbf{v}(t)$ are perpendicular.
-
-2. **Acceleration Direction Toward the Center:**
-   
-   The acceleration vector $\mathbf{a}(t)$ is proportional to the negative of the position vector:
-   
-   $$
-   \mathbf{a}(t) = -\omega^2 \mathbf{r}(t)
-   $$
-   
-   Substituting $\mathbf{r}(t)$:
-   
-   $$
-   \mathbf{a}(t) = -\omega^2 \left[R \cos(\omega t) \hat{i} + R \sin(\omega t) \hat{j}\right]
-   $$
-   
-   This shows that $\mathbf{a}(t)$ always points toward the center of the circle.
 
 #### Numerical Example
 
@@ -738,6 +727,7 @@ $$
 $$
 
 Where:
+
 - $G$ is the gravitational constant ($6.674 \times 10^{-11} \ \mathrm{Nm^2/kg^2}$),
 - $\hat{r}$ is the unit vector pointing from one mass to the other,
 - $m_1$ and $m_2$ are the masses of the two bodies,
@@ -757,59 +747,9 @@ $$
 |\mathbf{g}| = G \frac{M}{r^2}
 $$
 
-### Orbital Motion
+#### Visualization: Gravitational Field
 
-Gravitational force is responsible for the orbital motion of planets, moons, and satellites. The centripetal force required for circular motion is provided by gravity:
-
-$$
-F = \frac{mv^2}{r} = G \frac{mM}{r^2}
-$$
-
-From this, the orbital velocity $v$ of a body of mass $m$ around a central mass $M$ is:
-
-$$
-v = \sqrt{G \frac{M}{r}}
-$$
-
-The orbital period $T$ of the body can also be derived:
-
-$$
-T = 2\pi \sqrt{\frac{r^3}{GM}}
-$$
-
-### Escape Velocity
-
-Escape velocity is the minimum velocity required for an object to escape the gravitational pull of a planet or celestial body without further propulsion. It is given by:
-
-$$
-v_\text{escape} = \sqrt{2G \frac{M}{r}}
-$$
-
-### Numerical Example: Gravitational Force Between Earth and Moon
-
-We calculate the gravitational force between Earth and Moon using the following values:
-
-- Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$
-- Mass of Moon ($M_\text{Moon}$): $7.348 \times 10^{22} \ \mathrm{kg}$
-- Distance between Earth and Moon ($r$): $3.844 \times 10^8 \ \mathrm{m}$
-
-```{python}
-# Constants
-G = 6.674e-11  # Gravitational constant (N m^2/kg^2)
-M_earth = 5.972e24  # Mass of Earth (kg)
-M_moon = 7.348e22  # Mass of Moon (kg)
-r = 3.844e8  # Distance between Earth and Moon (m)
-
-# Gravitational force
-F = G * M_earth * M_moon / r**2
-
-# Output the result
-print(f"The gravitational force between Earth and Moon is {F:.2e} N")
-```
-
-### Visualization: Gravitational Field
-
-We visualize the gravitational field of a central mass $M$ in 2D space.
+We visualize the gravitational field of a central mass $M$ in 2D slice.
 
 ```{python}
 import numpy as np
@@ -844,6 +784,52 @@ plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
 ```
 
+### Orbital Motion
+
+Gravitational force is responsible for the orbital motion of planets, moons, and satellites. The centripetal force required for circular motion is provided by gravity:
+
+$$
+F = \frac{mv^2}{r} = G \frac{mM}{r^2}
+$$
+
+From this, the orbital velocity $v$ of a body of mass $m$ around a central mass $M$ is:
+
+$$
+v = \sqrt{G \frac{M}{r}}
+$$
+
+The orbital period $T$ of the body can also be derived:
+
+$$
+T = 2\pi \sqrt{\frac{r^3}{GM}}
+$$
+
+### Escape Velocity
+
+Escape velocity is the minimum velocity required for an object to escape the gravitational pull of a planet or celestial body without further propulsion. It is given by:
+
+$$
+v_\text{escape} = \sqrt{2G \frac{M}{R}}
+$$
+
+where $M$ is the mass of the celestial body and $R$ is its radius.
+
+### Numerical Example: Escape Velocity for Earth
+
+- Mass of Earth ($M_\text{Earth}$): $5.972 \times 10^{24} \ \mathrm{kg}$
+- Radius of Earth ($R_\text{Earth}$): $6.371 \times 10^6 \ \mathrm{m}$
+```{python}
+# Constants
+G = 6.674e-11  # Gravitational constant (N m^2/kg^2)
+M_earth = 5.972e24  # Mass of Earth (kg)
+R_earth = 6.371e6  # Radius of Earth (m)
+
+# Escape velocity calculation
+v_escape = np.sqrt(2 * G * M_earth / R_earth)
+print(f"Escape velocity for Earth: {v_escape/1000:.1f} km/s")
+```
+
+
 ### Gravitational Potential Energy
 
 The gravitational potential energy $U$ of a two-body system is given by:
@@ -861,22 +847,63 @@ This energy is negative because the gravitational force is attractive, and the p
 3. **Tidal Effects:** Understanding the gravitational interaction between Earth and Moon causing ocean tides.
 4. **Astrophysics:** Studying gravitational interactions in galaxies and black holes.
 
-### Advanced Topic: Gravitational Slingshot
-
-Gravitational slingshot, or gravity assist, is a technique used in space travel to accelerate a spacecraft by passing it close to a planet. The gravitational force of the planet alters the spacecraft’s trajectory and speed, conserving energy and allowing the spacecraft to gain velocity relative to its target.
-
-This technique relies on the conservation of momentum and energy in the spacecraft-planet system. It is widely used for interplanetary missions, such as Voyager and Cassini.
+### Small body around the Earth
 
 ```{python}
-# Example parameters for gravitational slingshot visualization
-planet_velocity = np.array([0, 30])  # Planet velocity (km/s)
-initial_velocity = np.array([10, 0])  # Initial spacecraft velocity (km/s)
-relative_velocity = initial_velocity - planet_velocity
-final_velocity = relative_velocity + 2 * planet_velocity
+import numpy as np
+import matplotlib.pyplot as plt
 
-print("Initial velocity relative to the planet:", relative_velocity, "km/s")
-print("Final velocity after slingshot:", final_velocity, "km/s")
-```
+# Parametry
+G = 6.674e-11  # Stała grawitacyjna (m^3/kg/s^2)
+M = 5.972e24   # Masa większego ciała, np. Ziemi (kg)
+m = 1000       # Masa mniejszego ciała, np. satelity (kg)
 
-This example demonstrates how a spacecraft gains speed using gravitational slingshot.
+# Warunki początkowe
+r0 = 7e6  # Początkowa odległość od środka masy większego ciała (m)
+v0 = 5200  # Początkowa prędkość orbitalna (m/s)
+theta0 = 0  # Początkowy kąt w radianach
+
+# Czas
+T = 6000  # Czas symulacji (s)
+N = 100_000  # Liczba kroków czasowych
+dt = T / N
+
+# Tablice dla pozycji i prędkości
+x = np.zeros(N)
+y = np.zeros(N)
+vx = np.zeros(N)
+vy = np.zeros(N)
+
+# Warunki początkowe
+x[0] = r0 * np.cos(theta0)
+y[0] = r0 * np.sin(theta0)
+vx[0] = -v0 * np.sin(theta0)
+vy[0] = v0 * np.cos(theta0)
+
+# Numeryczna integracja (metoda Eulera)
+for i in range(1, N):
+    r = np.sqrt(x[i - 1]**2 + y[i - 1]**2)  # Odległość od środka masy
+    ax = -G * M * x[i - 1] / r**3          # Przyspieszenie w osi x
+    ay = -G * M * y[i - 1] / r**3          # Przyspieszenie w osi y
     
+    # Aktualizacja prędkości
+    vx[i] = vx[i - 1] + ax * dt
+    vy[i] = vy[i - 1] + ay * dt
+    
+    # Aktualizacja pozycji
+    x[i] = x[i - 1] + vx[i - 1] * dt
+    y[i] = y[i - 1] + vy[i - 1] * dt
+
+# Wizualizacja trajektorii
+plt.figure(figsize=(8, 8))
+plt.plot(x, y, label="Trajektoria")
+plt.plot(0, 0, 'ro', label="Centralne ciało (np. Ziemia)")
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.title("Trajektoria orbitalna małego ciała")
+plt.legend(loc='lower right')
+plt.grid()
+plt.axis('equal')
+plt.show()
+
+```
