@@ -6,7 +6,7 @@ nav:
       - Language of Physics: Mechanics/Language_of_physics.html
       - Mechanics: Mechanics/Mechanics.html
       - Waves: Mechanics/Waves.html
-    - 🤔 Student Projects:
+    - Student Projects:
       - Logistic Equation: Mechanics/sp/logistic_equation_bifurcation.md
       - Double Pendulum: Mechanics/sp/double_pendulum_trajectories.md
       - Lorenz Attractor: Mechanics/sp/lorenz_system_and_attractor.md
@@ -20,24 +20,23 @@ nav:
     - 🎓 Lecture Notes:
       - Electromagnetism: Electromagnetism/Electromagnetism.html
       - Circuits: Electromagnetism/Circuits.html
-    - 🤔 Student Projects:
+    - Student Projects:
       - Kirchhoff Laws: Electromagnetism/sp/Kirchhoff_laws.md
       - Aurora Borealis: Electromagnetism/sp/solar_wind.md
   - 🔬 Experiments:
     - 🎓 Lecture Notes:
       - Statistics 101: Experiments_Statistics/Statistics.html
       - Measurements: Experiments_Statistics/Measurement.html
-    - 🤔 Student Projects:
+    - Student Projects:
       - Estiamting Pi: Experiments_Statistics/sp/estimation_of_pi.md
   - ⚛️ Modern Physics:
     - 🎓 Lecture Notes:
       - Quantum Mechanics: Modern_Physics/Quantum_mechanics.html
       - Cosmology: Modern_Physics/Cosmology.html
-    - 🤔 Student Projects:
+    - Student Projects:
       - Quantum Harmonic Oscillator: Modern_Physics/sp/quantum_harmonic_oscillator.md
   - ✏️ Exercises for Students:
-    - ❗ What and how ❗: Exercises_for_Students/What_to_deliver.md
-    - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
+    - Problem list: Exercises_for_Students/exercises_dch.md
 
 theme:
   name: material
