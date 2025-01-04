@@ -21,6 +21,7 @@ format:
         href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       
 ---
 
-# Waves
 
 ## Springs
+
+[www](wave_example.html)
