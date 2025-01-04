@@ -36,6 +36,7 @@ nav:
     - 🤔 Student Projects:
       - Quantum Harmonic Oscillator: Modern_Physics/sp/quantum_harmonic_oscillator.md
   - ✏️ Exercises for Students:
+    - ❗ What and how ❗: Exercises_for_Students/What_to_deliver.md
     - 🤔 Problem list: Exercises_for_Students/exercises_dch.md
 
 theme:
