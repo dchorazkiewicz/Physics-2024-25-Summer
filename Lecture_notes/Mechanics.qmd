@@ -377,6 +377,7 @@ $$
 
 where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle is proportional to its position, and the force acting on the particle is the force of a spring, equal to the spring constant times the position of the particle.
 
+
 #### Analytical solution
 
 The analytical solution of the equation of motion for a particle in simple harmonic motion is
@@ -393,6 +394,12 @@ $$
 
 The angular frequency is equal to the square root of the spring constant divided by the mass of the particle. The phase angle $\phi$ determines the initial phase of the particle.
 
+#### Geogebra example
+
+::: {.geogebra-instruction}
+* t=Slider[1, 100, 0.1]
+* P=Point[0, sin(t)]
+:::
 
 
 #### Numerical solution
