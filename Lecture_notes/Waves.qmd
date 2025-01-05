@@ -324,6 +324,21 @@ In geogebra we can simulate the interference of two waves with different amplitu
 :::
 
 
+## Huygens–Fresnel principle
 
+The Huygens–Fresnel principle is a fundamental concept in wave optics that describes how every point on a wavefront can be considered as a source of secondary spherical waves. These secondary waves combine to form the wavefront at a later time, allowing us to predict the propagation of waves through various media and obstacles.
 
+### Refraction
+
+Refraction is a common phenomenon where waves change direction as they pass from one medium to another. The Huygens–Fresnel principle provides a simple explanation for refraction, showing how the secondary waves generated at each point on the wavefront propagate through the new medium, leading to a change in the wave's direction.
+
+![source: Wikipedia](pics/waves/Refraction_-_Huygens-Fresnel_principle.svg) 
+
+### Diffraction
+
+Diffraction is another key concept explained by the Huygens–Fresnel principle, where waves bend around obstacles or pass through narrow openings. By considering each point on the wavefront as a source of secondary waves, we can predict how the diffracted waves will propagate and create interference patterns.
+
+![source: Wikipedia](pics/waves/Refraction_on_an_aperture_-_Huygens-Fresnel_principle.svg) 
+
+![source: Wikipedia](pics/waves/Wavelength%3Dslitwidth.gif){width=50%}
 
