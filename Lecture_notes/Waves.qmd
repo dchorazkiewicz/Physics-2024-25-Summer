@@ -22,6 +22,178 @@ format:
 ---
 
 
-## Springs
 
-[www](wave_example.html)
+## Springs and Mechanical Waves
+
+Mechanical waves arise as a result of the application of simple harmonic motion rules to interconnected systems. At their core, such waves can be visualized as particles connected by springs, where each particle's motion influences the next. This elegant interplay between force, displacement, and energy transfer forms the foundation of mechanical wave dynamics.
+
+To illustrate this concept, imagine a chain of small masses connected by springs. When one mass is displaced, the motion propagates through the entire system, creating a wave-like pattern. You can explore this phenomenon in action with a simulation of ten masses linked by springs: [Wave simulation](wave_example.html).
+
+## Plane Harmonic Wave
+
+A plane harmonic wave is a fundamental example of wave motion, described by a sinusoidal function such as:
+
+$$
+\psi(x, t) = A \sin(kx - \omega t + \phi),
+$$
+
+where:
+- $A$ is the amplitude,
+- $k$ is the wave number,
+- $\omega$ is the angular frequency,
+- $\phi$ is the phase constant,
+- $x$ and $t$ represent position and time, respectively.
+
+### Constructing the Wave Equation
+
+The temporal and spatial derivatives of the wave function $\psi(x, t)$ are key to understanding its behavior. The first and second derivatives with respect to time $t$ are:
+
+$$
+\frac{\partial \psi}{\partial t} = -A \omega \cos(kx - \omega t + \phi),
+$$
+
+$$
+\frac{\partial^2 \psi}{\partial t^2} = -A \omega^2 \sin(kx - \omega t + \phi).
+$$
+
+Similarly, the first and second derivatives with respect to position $x$ are:
+
+$$
+\frac{\partial \psi}{\partial x} = A k \cos(kx - \omega t + \phi),
+$$
+
+$$
+\frac{\partial^2 \psi}{\partial x^2} = -A k^2 \sin(kx - \omega t + \phi).
+$$
+
+By combining these derivatives, we can see how the wave function satisfies the general wave equation. Substituting $\frac{\partial^2 \psi}{\partial x^2}$ and $\frac{\partial^2 \psi}{\partial t^2}$ into:
+
+$$
+\frac{\partial^2 \psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 \psi}{\partial t^2},
+$$
+
+and using the relations $v = \frac{\omega}{k}$, it becomes clear that the sinusoidal wave satisfies this fundamental equation, connecting temporal and spatial changes in the wave function.
+
+### General Implications
+
+What we have derived here is not just a coincidence but is, in fact, the result of more general considerations. The equation we obtained, often called the wave equation, emerges from the fundamental principles governing wave phenomena. It describes the behavior of a wide range of wave-like systems, including sound waves, water waves, and even electromagnetic waves in certain contexts. As such, it is recognized as one of the cornerstone equations in the study of physical systems exhibiting wave motion.
+
+ 
+Zaczynajmy! Najpierw wyprowadzimy wzory różnicowe, które pozwolą na numeryczne rozwiązanie równania falowego. Oto plan:
+
+ 
+### Równanie różnicowe dla równania falowego
+
+Przypomnijmy równanie falowe w postaci:
+
+$$
+\frac{\partial^2 \psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 \psi}{\partial t^2}.
+$$
+
+#### Dyskretyzacja przestrzeni i czasu
+
+Załóżmy, że:
+- Dzielimy przestrzeń $x$ na $N$ równych przedziałów o długości $\Delta x$.
+- Dzielimy czas $t$ na kroki o długości $\Delta t$.
+
+Funkcja $\psi(x, t)$ jest zastąpiona dyskretną siatką $\psi_i^n$, gdzie $i$ oznacza indeks przestrzenny, a $n$ oznacza indeks czasowy:
+- $i = 0, 1, 2, \dots, N$,
+- $n = 0, 1, 2, \dots$.
+
+#### Przybliżenia różnicowe
+
+1. **Drugie pochodne przestrzenne**:
+   Przybliżamy $\frac{\partial^2 \psi}{\partial x^2}$ za pomocą centralnej różnicy:
+   $$
+   \frac{\partial^2 \psi}{\partial x^2} \approx \frac{\psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n}{\Delta x^2}.
+   $$
+
+2. **Drugie pochodne czasowe**:
+   Przybliżamy $\frac{\partial^2 \psi}{\partial t^2}$ za pomocą centralnej różnicy:
+   $$
+   \frac{\partial^2 \psi}{\partial t^2} \approx \frac{\psi_i^{n+1} - 2\psi_i^n + \psi_i^{n-1}}{\Delta t^2}.
+   $$
+
+#### Równanie różnicowe
+
+Podstawiając powyższe do równania falowego, otrzymujemy:
+$$
+\frac{\psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n}{\Delta x^2} = \frac{1}{v^2} \frac{\psi_i^{n+1} - 2\psi_i^n + \psi_i^{n-1}}{\Delta t^2}.
+$$
+
+Uproszczając, wyznaczamy $\psi_i^{n+1}$:
+$$
+\psi_i^{n+1} = 2\psi_i^n - \psi_i^{n-1} + c^2 \left( \psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n \right),
+$$
+
+gdzie $c = \frac{v \Delta t}{\Delta x}$ to liczba Couranta, która musi spełniać warunek stabilności $c \leq 1$.
+
+---
+
+### Implementacja numeryczna
+
+1. **Stan początkowy**: Struna zaczepiona na końcach ($\psi_0^n = \psi_N^n = 0$) z początkowym wychyleniem w kształcie trójkąta.
+2. **Iteracja czasowa**: Obliczymy stan $\psi_i^{n+1}$ na podstawie stanów $\psi_i^n$ i $\psi_i^{n-1}$.
+3. **Wizualizacja**: Pokażemy kilka snapshotów fali w różnych momentach czasowych.
+
+Zaraz przygotuję kod w Pythonie, który realizuje ten algorytm.
+
+Powyższy kod implementuje explicite rozwiązanie równania falowego dla struny zaczepionej na końcach z początkowym wychyleniem w kształcie trójkąta. Wizualizacja pokazuje propagację fali w kilku wybranych momentach czasowych.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parametry
+L = 1.0          # Długość struny
+T = 1.0          # Całkowity czas symulacji
+c = 1.0          # Prędkość fali
+nx = 100         # Liczba punktów przestrzennych
+nt = 500         # Liczba kroków czasowych
+
+dx = L / (nx - 1)            # Krok przestrzenny
+dt = T / nt                  # Krok czasowy
+r = c * dt / dx              # Liczba Couranta
+
+# Inicjalizacja tablic
+u = np.zeros((nt, nx))       # Rozwiązanie w kolejnych krokach czasowych
+x = np.linspace(0, L, nx)    # Współrzędne x
+
+# Warunki początkowe: np. struna początkowo wygięta w kształt sinusoidy
+u[0, :] = np.exp(-100 * (x - 0.5)**2)
+u[1, :] = u[0, :]
+
+# Warunki brzegowe: u(0, t) = u(L, t) = 0 (struna zamocowana na końcach)
+u[:, 0] = 0
+u[:, -1] = 0
+
+# Iteracja po czasie
+for n in range(1, nt - 1):
+    for i in range(1, nx - 1):
+        u[n + 1, i] = (2 * (1 - r**2) * u[n, i] -
+                       u[n - 1, i] +
+                       r**2 * (u[n, i + 1] + u[n, i - 1]))
+
+# Wybór momentów czasowych do wizualizacji
+time_snapshots = [0, 10, 50, 100, 200, 300]
+time_labels = [f'Time = {n*dt:.2f} s' for n in time_snapshots]
+
+# Tworzenie wykresów dla wybranych momentów czasowych
+plt.figure(figsize=(10, 6))
+for idx, n in enumerate(time_snapshots):
+    plt.plot(x, u[n, :], label=time_labels[idx])
+
+plt.xlabel('Pozycja na strunie')
+plt.ylabel('Amplituda')
+plt.title('Propagacja fali na strunie w wybranych momentach czasowych')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+```
+
+
+same we can save in gif file
+
+![wave](./py_src/wave_propagation.gif)
