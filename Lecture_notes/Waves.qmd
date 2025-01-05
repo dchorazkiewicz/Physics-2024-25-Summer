@@ -38,11 +38,62 @@ $$
 $$
 
 where:
+
 - $A$ is the amplitude,
 - $k$ is the wave number,
 - $\omega$ is the angular frequency,
 - $\phi$ is the phase constant,
 - $x$ and $t$ represent position and time, respectively.
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters for the wave
+A = 1.0  # Amplitude
+lambda_wave = 4.0  # Wavelength
+k = 2 * np.pi / lambda_wave  # Wave number
+phi = 0  # Phase constant
+x = np.linspace(0, 8, 1000)  # Range for x
+
+# Wave function
+psi = A * np.sin(k * x - phi)
+
+# Plot the wave function
+plt.figure(figsize=(12, 6))
+plt.plot(x, psi, label="$\\psi(x) = A \\sin(kx - \\phi)$", color="blue")
+
+# Mark the amplitude
+plt.plot([lambda_wave / 4, lambda_wave / 4], [0, A], color="green", linewidth=2)
+plt.text(lambda_wave / 4 + 0.2, A / 2, r'Amplitude $A$', fontsize=12, ha='left', color="green")
+
+# Mark the segment from 1 to 5 with vertical lines at the ends
+x_start = 1
+x_end = 5
+y_label = A + 0.3  # Position above the wave to mark the segment
+plt.plot([x_start, x_end], [y_label, y_label], color="red", linewidth=2)  # Horizontal line
+plt.plot([x_start, x_start], [y_label - 0.05, y_label + 0.05], color="red", linewidth=2)  # Vertical line at start
+plt.plot([x_end, x_end], [y_label - 0.05, y_label + 0.05], color="red", linewidth=2)  # Vertical line at end
+plt.text((x_start + x_end) / 2, y_label - 0.1, "$\\lambda$", fontsize=12, ha='center', color="red")  # Label above the segment
+
+# Add auxiliary lines
+plt.axhline(y=0, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)  # Horizontal axis
+plt.axhline(y=A, color='gray', linestyle='--', linewidth=0.7)  # Amplitude line
+plt.axhline(y=-A, color='gray', linestyle='--', linewidth=0.7)  # Negative amplitude line
+
+# Configure axes
+plt.xlabel("Position $x$", fontsize=14)
+plt.ylabel("Wave function $\\psi(x)$", fontsize=14)
+
+# Add grid
+plt.grid(True, linestyle="--", alpha=0.7)
+
+# Display the plot
+plt.show()
+
+
+```
 
 ### Constructing the Wave Equation
 
@@ -78,122 +129,119 @@ and using the relations $v = \frac{\omega}{k}$, it becomes clear that the sinuso
 
 What we have derived here is not just a coincidence but is, in fact, the result of more general considerations. The equation we obtained, often called the wave equation, emerges from the fundamental principles governing wave phenomena. It describes the behavior of a wide range of wave-like systems, including sound waves, water waves, and even electromagnetic waves in certain contexts. As such, it is recognized as one of the cornerstone equations in the study of physical systems exhibiting wave motion.
 
- 
-Zaczynajmy! Najpierw wyprowadzimy wzory różnicowe, które pozwolą na numeryczne rozwiązanie równania falowego. Oto plan:
+Let us begin! First, we will derive the difference equations that allow for the numerical solution of the wave equation. Here is the plan:
 
- 
-### Równanie różnicowe dla równania falowego
+### Difference Equation for the Wave Equation
 
-Przypomnijmy równanie falowe w postaci:
+Recall the wave equation in the form:
 
 $$
 \frac{\partial^2 \psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 \psi}{\partial t^2}.
 $$
 
-#### Dyskretyzacja przestrzeni i czasu
+#### Discretization of Space and Time
 
-Załóżmy, że:
-- Dzielimy przestrzeń $x$ na $N$ równych przedziałów o długości $\Delta x$.
-- Dzielimy czas $t$ na kroki o długości $\Delta t$.
+Assume that:
+- We divide the space $x$ into $N$ equal intervals of length $\Delta x$.
+- We divide the time $t$ into steps of length $\Delta t$.
 
-Funkcja $\psi(x, t)$ jest zastąpiona dyskretną siatką $\psi_i^n$, gdzie $i$ oznacza indeks przestrzenny, a $n$ oznacza indeks czasowy:
+The function $\psi(x, t)$ is replaced by a discrete grid $\psi_i^n$, where $i$ denotes the spatial index and $n$ denotes the time index:
+
 - $i = 0, 1, 2, \dots, N$,
 - $n = 0, 1, 2, \dots$.
 
-#### Przybliżenia różnicowe
+#### Finite Difference Approximations
 
-1. **Drugie pochodne przestrzenne**:
-   Przybliżamy $\frac{\partial^2 \psi}{\partial x^2}$ za pomocą centralnej różnicy:
+1. **Second spatial derivatives**:
+   Approximate $\frac{\partial^2 \psi}{\partial x^2}$ using central differences:
    $$
    \frac{\partial^2 \psi}{\partial x^2} \approx \frac{\psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n}{\Delta x^2}.
    $$
 
-2. **Drugie pochodne czasowe**:
-   Przybliżamy $\frac{\partial^2 \psi}{\partial t^2}$ za pomocą centralnej różnicy:
+2. **Second temporal derivatives**:
+   Approximate $\frac{\partial^2 \psi}{\partial t^2}$ using central differences:
    $$
    \frac{\partial^2 \psi}{\partial t^2} \approx \frac{\psi_i^{n+1} - 2\psi_i^n + \psi_i^{n-1}}{\Delta t^2}.
    $$
 
-#### Równanie różnicowe
+#### Difference Equation
 
-Podstawiając powyższe do równania falowego, otrzymujemy:
+Substituting these into the wave equation, we obtain:
 $$
 \frac{\psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n}{\Delta x^2} = \frac{1}{v^2} \frac{\psi_i^{n+1} - 2\psi_i^n + \psi_i^{n-1}}{\Delta t^2}.
 $$
 
-Uproszczając, wyznaczamy $\psi_i^{n+1}$:
+Simplifying, we solve for $\psi_i^{n+1}$:
 $$
 \psi_i^{n+1} = 2\psi_i^n - \psi_i^{n-1} + c^2 \left( \psi_{i+1}^n - 2\psi_i^n + \psi_{i-1}^n \right),
 $$
 
-gdzie $c = \frac{v \Delta t}{\Delta x}$ to liczba Couranta, która musi spełniać warunek stabilności $c \leq 1$.
+where $c = \frac{v \Delta t}{\Delta x}$ is the Courant number, which must satisfy the stability condition $c \leq 1$.
 
 ---
 
-### Implementacja numeryczna
+### Numerical Implementation
 
-1. **Stan początkowy**: Struna zaczepiona na końcach ($\psi_0^n = \psi_N^n = 0$) z początkowym wychyleniem w kształcie trójkąta.
-2. **Iteracja czasowa**: Obliczymy stan $\psi_i^{n+1}$ na podstawie stanów $\psi_i^n$ i $\psi_i^{n-1}$.
-3. **Wizualizacja**: Pokażemy kilka snapshotów fali w różnych momentach czasowych.
+1. **Initial state**: A string fixed at both ends ($\psi_0^n = \psi_N^n = 0$) with an initial triangular displacement.
+2. **Time iteration**: Compute the state $\psi_i^{n+1}$ based on the states $\psi_i^n$ and $\psi_i^{n-1}$.
+3. **Visualization**: Display several snapshots of the wave at different time intervals.
 
-Zaraz przygotuję kod w Pythonie, który realizuje ten algorytm.
+Next, I will prepare Python code to implement this algorithm.
 
-Powyższy kod implementuje explicite rozwiązanie równania falowego dla struny zaczepionej na końcach z początkowym wychyleniem w kształcie trójkąta. Wizualizacja pokazuje propagację fali w kilku wybranych momentach czasowych.
+The following code implements an explicit solution of the wave equation for a string fixed at both ends with an initial triangular displacement. The visualization shows the wave's propagation at various time intervals.
 
 ```{python}
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Parametry
-L = 1.0          # Długość struny
-T = 1.0          # Całkowity czas symulacji
-c = 1.0          # Prędkość fali
-nx = 100         # Liczba punktów przestrzennych
-nt = 500         # Liczba kroków czasowych
+# Parameters
+L = 1.0          # Length of the string
+T = 1.0          # Total simulation time
+c = 1.0          # Wave speed
+nx = 100         # Number of spatial points
+nt = 500         # Number of time steps
 
-dx = L / (nx - 1)            # Krok przestrzenny
-dt = T / nt                  # Krok czasowy
-r = c * dt / dx              # Liczba Couranta
+dx = L / (nx - 1)            # Spatial step
+dt = T / nt                  # Time step
+r = c * dt / dx              # Courant number
 
-# Inicjalizacja tablic
-u = np.zeros((nt, nx))       # Rozwiązanie w kolejnych krokach czasowych
-x = np.linspace(0, L, nx)    # Współrzędne x
+# Initialize arrays
+u = np.zeros((nt, nx))       # Solution at successive time steps
+x = np.linspace(0, L, nx)    # x-coordinates
 
-# Warunki początkowe: np. struna początkowo wygięta w kształt sinusoidy
+# Initial conditions: e.g., a sinusoidal-shaped initial displacement
 u[0, :] = np.exp(-100 * (x - 0.5)**2)
 u[1, :] = u[0, :]
 
-# Warunki brzegowe: u(0, t) = u(L, t) = 0 (struna zamocowana na końcach)
+# Boundary conditions: u(0, t) = u(L, t) = 0 (string fixed at ends)
 u[:, 0] = 0
 u[:, -1] = 0
 
-# Iteracja po czasie
+# Time iteration
 for n in range(1, nt - 1):
     for i in range(1, nx - 1):
         u[n + 1, i] = (2 * (1 - r**2) * u[n, i] -
                        u[n - 1, i] +
                        r**2 * (u[n, i + 1] + u[n, i - 1]))
 
-# Wybór momentów czasowych do wizualizacji
+# Select time snapshots for visualization
 time_snapshots = [0, 10, 50, 100, 200, 300]
 time_labels = [f'Time = {n*dt:.2f} s' for n in time_snapshots]
 
-# Tworzenie wykresów dla wybranych momentów czasowych
+# Plot snapshots at selected time intervals
 plt.figure(figsize=(10, 6))
 for idx, n in enumerate(time_snapshots):
     plt.plot(x, u[n, :], label=time_labels[idx])
 
-plt.xlabel('Pozycja na strunie')
-plt.ylabel('Amplituda')
-plt.title('Propagacja fali na strunie w wybranych momentach czasowych')
+plt.xlabel('Position on the string')
+plt.ylabel('Amplitude')
+plt.title('Wave propagation on a string at selected time intervals')
 plt.legend()
 plt.grid(True)
 plt.show()
-
-
 ```
 
 
 same we can save in gif file
 
-![wave](./py_src/wave_propagation.gif)
+![](./py_src/wave_propagation.gif)

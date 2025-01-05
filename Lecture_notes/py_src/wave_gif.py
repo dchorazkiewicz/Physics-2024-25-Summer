@@ -49,7 +49,7 @@ for n in range(nt):
     filenames.append(filename)
 
 # Create GIF from the saved frames
-with imageio.get_writer('Lecture_notes/py_src/wave_propagation.gif', mode='I', duration=dt) as writer:
+with imageio.get_writer('Lecture_notes/py_src/wave_propagation.gif', mode='I', duration=dt, loop=0) as writer:
     for filename in filenames:
         image = imageio.imread(filename)
         writer.append_data(image)
