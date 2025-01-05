@@ -273,7 +273,7 @@ Newton's second law states that the acceleration of a particle is proportional t
 
 
 $$
-\mathbf{F}(t) = m \mathbf{a}(t)
+\mathbf{F}(x, y, z, t) = m \mathbf{a}(x, y, z, t)
 $$
 
 where $\mathbf{F}(t)=(F_x(t), F_y(t), F_z(t))$ is the force acting on the particle, $m$ is the mass of the particle, and 
@@ -283,9 +283,9 @@ Above equation can be written as a set of three equations
 
 $$
 \begin{align*}
-\frac{d^2 x(t)}{dt^2} &= \frac{F_x(t)}{m} \\
-\frac{d^2 y(t)}{dt^2} &= \frac{F_y(t)}{m}\\
-\frac{d^2 z(t)}{dt^2} &= \frac{F_z(t)}{m}
+\frac{d^2 x(t)}{dt^2} &= \frac{F_x(x, y, z, t)}{m} \\
+\frac{d^2 y(t)}{dt^2} &= \frac{F_y(x, y, z, t)}{m}\\
+\frac{d^2 z(t)}{dt^2} &= \frac{F_z(x, y, z, t)}{m}
 \end{align*}
 $$
 
@@ -334,35 +334,75 @@ where $v_{0x}$ and $v_{0y}$ are the initial velocities of the particle in the $x
 import numpy as np
 import matplotlib.pyplot as plt
 
-F = (0, -9.81)  # Force of gravity
-m = 1  # Mass of the particle
-x_0, y_0 = 0, 100  # Initial position
-v_x0, v_y0 = 1, 0  # Initial velocity
+# Constants
+F = (0, -9.81)  # Force of gravity (N)
+m = 1  # Mass of the particle (kg)
+x_0, y_0 = 0, 100  # Initial position (m)
+v_x0, v_y0 = 1, 0  # Initial velocity (m/s)
 
-def a(t):
-    return F[0] / m, F[1] / m
+def simulate_trajectory(F, m, x_0, y_0, v_x0, v_y0, t_max, steps):
+    # Time discretization
+    t = np.linspace(0, t_max, steps)
+    h = t[1] - t[0]  # Time step
 
-t= np.linspace(0, 5, 100)
-h= t[1] - t[0]
+    # Initialize position and velocity
+    x = [x_0]
+    y = [y_0]
+    v_x, v_y = v_x0, v_y0
 
-x = [x_0]
-y = [y_0]
+    # Euler integration
+    for i in range(1, len(t)):
+        a_x, a_y = F[0] / m, F[1] / m  # Acceleration
+        v_x += a_x * h  # Update velocity
+        v_y += a_y * h
+        x_next = x[-1] + v_x * h  # Update position
+        y_next = y[-1] + v_y * h
+        
+        # Stop if the particle hits the ground
+        if y_next < 0:
+            break
 
-for i in range(1, len(t)):
-    a_x, a_y = a(t[i])
-    v_x0 += a_x * h
-    v_y0 += a_y * h
-    x.append(x[i-1] + v_x0 * h)
-    y.append(y[i-1] + v_y0 * h)
+        x.append(x_next)
+        y.append(y_next)
+    
+    return x, y, t[:len(x)]  # Return trajectory and corresponding time
 
-fig, ax = plt.subplots(figsize=(6, 4))
-ax.plot(x, y)
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-# add goung level
+# Simulate the trajectory
+x, y, t = simulate_trajectory(F, m, x_0, y_0, v_x0, v_y0, t_max=5, steps=100)
+
+# Create grid for vector field
+X, Y = np.meshgrid(np.linspace(-1, 6, 10), np.linspace(0, 120, 5))
+U = np.zeros_like(X)  # Horizontal component of g is 0
+V = -9.81 * np.ones_like(Y)  # Vertical component of g is constant
+
+# Time to display the ball and force
+t_display = 2.0  # Time at which to show the ball and force
+idx = np.argmin(np.abs(t - t_display))  # Find the closest index for the given time
+
+# Visualization
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(x, y, label="Trajectory")
 ax.axhline(0, color='green', linestyle='dashed', label='Ground level')
-# add initial position
 ax.scatter(x_0, y_0, color='red', label='Initial position')
+
+# Add vector field
+ax.quiver(X, Y, U, V, color='blue', alpha=0.3, scale=200
+, width=0.002,label='Gravitational field')
+
+# Add the ball at the selected time
+ball_x, ball_y = x[idx], y[idx]
+ax.scatter(ball_x, ball_y, color='orange', s=100, label='Ball (t=2s)')
+
+# Add the force vector acting on the ball
+force_x, force_y = F[0] / m, F[1] / m  # Force per unit mass
+ax.quiver(ball_x, ball_y, force_x, force_y, color='red', angles='xy', scale_units='xy', scale=0.5, label='Force on Ball')
+
+# Labels and title
+ax.set_xlabel('x (m)')
+ax.set_ylabel('y (m)')
+ax.set_title('Particle Trajectory with Gravitational Field and Force on Ball')
+ax.legend()
+
 plt.show()
 ```
 
@@ -377,6 +417,41 @@ $$
 
 where $k$ is the spring constant and $m$ is the mass of the particle. The acceleration of the particle is proportional to its position, and the force acting on the particle is the force of a spring, equal to the spring constant times the position of the particle.
 
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+# Updated constant
+k = 0.5  # Updated spring constant
+displacements = [1, 2, 3, 4, 5]  # Displacements (x)
+forces = [-k * x for x in displacements]  # Corresponding forces (F)
+
+# Positions for visualization
+y_positions = np.linspace(1, len(displacements) + 1, len(displacements))  # Avoid overlapping
+
+
+# Visualization
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Draw force vectors for each displacement
+for x, F, y in zip(displacements, forces, y_positions):
+    # Draw ball position
+    ax.scatter(x, y, color='orange', s=100, label=f"x = {x}, F = {F:.2f}" if y == y_positions[0] else "")
+    # Draw force vector
+    ax.quiver(x, y, F, 0, angles='xy', scale_units='xy', scale=1, color='blue', width=0.005)
+    # Add annotation for calculations
+    ax.text(x + F / 2, y + 0.2, f"F = {-k:.1f}*{x} = {F:.2f}", fontsize=9, color='black', alpha=.8)
+
+# Labels and title
+ax.axhline(0, color='black', linewidth=0.5, linestyle='dashed')  # Equilibrium line
+ax.set_xlim(0, 6)
+ax.set_ylim(0, len(displacements) + 2)
+ax.set_xlabel("Displacement $x$")
+ax.set_ylabel("Vertical position (for clarity)")
+ax.set_title("Force Linearly Dependent on Displacement with Annotations")
+
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.show()
+```
 
 #### Analytical solution
 
@@ -461,6 +536,80 @@ The equation of motion for a pendulum is derived from Newton's second law. The f
 $$
 F = -mg \sin(\theta)
 $$
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+pivot = (0, 10)  # Point of attachment of the pendulum
+L = 10  # Length of the pendulum
+theta1 = np.radians(30)  # First angle of displacement (in radians)
+theta2 = np.radians(60)  # Second angle of displacement (in radians)
+g = 9.81  # Gravitational acceleration
+m = 0.5  # Mass of the pendulum bob
+
+# Calculate bob position for both angles
+x_bob1 = pivot[0] + L * np.sin(theta1)  # x-coordinate for θ=30°
+y_bob1 = pivot[1] - L * np.cos(theta1)  # y-coordinate for θ=30°
+x_bob2 = pivot[0] + L * np.sin(theta2)  # x-coordinate for θ=60°
+y_bob2 = pivot[1] - L * np.cos(theta2)  # y-coordinate for θ=60°
+
+# Calculate forces for both angles
+F_gravity = m * g  # Magnitude of gravitational force
+F_tangential1 = F_gravity * np.sin(theta1)  # Tangential force for θ=30°
+F_tangential2 = F_gravity * np.sin(theta2)  # Tangential force for θ=60°
+
+# Circle parameters for light shading
+circle = plt.Circle(pivot, L, color='gray', fill=False, linestyle='dashed', alpha=0.5)
+
+# Visualization setup
+fig, ax = plt.subplots(figsize=(8, 8))
+
+# Add circular path for the pendulum (single circle for both cases)
+ax.add_artist(circle)  # Add the circular path
+
+# Draw pendulum lines for both cases
+ax.plot([pivot[0], x_bob1], [pivot[1], y_bob1], color='black', linewidth=1.5, label='Pendulum (θ=30°)')
+ax.plot([pivot[0], x_bob2], [pivot[1], y_bob2], color='black', linewidth=1.5, linestyle='dotted', label='Pendulum (θ=60°)')
+
+# Draw bobs as larger circles for both cases
+bob1 = plt.Circle((x_bob1, y_bob1), 0.5, color='orange', zorder=5)  # Bob for θ=30°
+bob2 = plt.Circle((x_bob2, y_bob2), 0.5, color='green', zorder=5)  # Bob for θ=60°
+ax.add_artist(bob1)
+ax.add_artist(bob2)
+
+# Draw force vectors for θ=30°
+ax.quiver(x_bob1, y_bob1, 0, -F_gravity, angles='xy', scale_units='xy', scale=1, color='red', label='Gravitational Force (mg)')
+ax.quiver(
+    x_bob1, y_bob1,
+    -F_tangential1 * np.cos(theta1), -F_tangential1 * np.sin(theta1),
+    angles='xy', scale_units='xy', scale=1, color='blue', label=r'Tangential Force ($-mg \sin(\theta)$)'
+)
+
+# Draw force vectors for θ=60°
+ax.quiver(x_bob2, y_bob2, 0, -F_gravity, angles='xy', scale_units='xy', scale=1, color='darkred')
+ax.quiver(
+    x_bob2, y_bob2,
+    -F_tangential2 * np.cos(theta2), -F_tangential2 * np.sin(theta2),
+    angles='xy', scale_units='xy', scale=1, color='darkblue', label=r'Tangential Force ($-mg \sin(\theta)$, θ=60°)'
+)
+
+# Labels and title
+ax.set_xlim(-L - 2, L + 2)
+ax.set_ylim(-5, 12)
+ax.set_aspect('equal', adjustable='box')
+ax.axhline(pivot[1], color='black', linestyle='dashed', linewidth=1.5)  # Horizontal reference
+ax.set_title("Forces Acting on a Pendulum (Two Positions)")
+ax.set_xlabel("Horizontal Position")
+ax.set_ylabel("Vertical Position")
+ax.legend()
+
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.show()
+
+``` 
+
 
 Using the relationship $F = ma$ and the angular acceleration $a = L \frac{d^2 \theta}{dt^2}$, we get:
 
