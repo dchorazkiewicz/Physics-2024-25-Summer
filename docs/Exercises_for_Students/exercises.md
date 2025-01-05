@@ -115,3 +115,99 @@ Describe the decay rates and half-lives of radioactive isotopes.
 
 Discuss the Standard Model of particle physics. Describe the fundamental particles and forces in the model.
 
+
+### Physics Exercise: Electric Field and Potential from Multiple Charge Sources
+
+---
+
+#### **Objective:**
+
+Analyze and compare the electric field and potential created by a system of point charges. Use computational methods to:
+
+1. Calculate and visualize the effective electric field from multiple charges.
+2. Plot the electric potential and its gradient.
+3. Compare the electric field derived directly with that obtained via the gradient of the potential.
+
+---
+
+#### **Problem Statement:**
+
+You are tasked with analyzing the electric field and potential from a set of point charges arranged in space. By simulating and visualizing these quantities, you will explore their relationships and understand how to compute the electric field both directly and via the gradient of the potential.
+
+---
+
+#### **Steps to Follow:**
+
+1. **Setup the Charge Configuration:**
+   - Define a system of $N$ point charges (at least three), each with charge $q_i$ positioned at coordinates $(x_i, y_i)$.
+   - Choose arbitrary values for $q_i$ (positive or negative) and their positions $(x_i, y_i)$.
+
+2. **Compute the Electric Field:**
+   - The electric field $\mathbf{E}$ at a point $(x, y)$ due to a charge $q_i$ at $(x_i, y_i)$ is given by:
+     $$
+     \mathbf{E}_i(x, y) = \frac{k_e q_i}{r_i^2} \hat{\mathbf{r}}_i
+     $$
+     where:
+     - $k_e$ is Coulomb's constant.
+     - $r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}$ is the distance between the field point and the charge.
+     - $\hat{\mathbf{r}}_i = \frac{(x - x_i, y - y_i)}{r_i}$ is the unit vector pointing from the charge to the field point.
+
+   - Calculate the total electric field as the vector sum of the contributions from all charges:
+     $$
+     \mathbf{E}(x, y) = \sum_{i=1}^N \mathbf{E}_i(x, y)
+     $$
+
+3. **Compute the Electric Potential:**
+   - The electric potential $V$ at a point $(x, y)$ due to a charge $q_i$ at $(x_i, y_i)$ is given by:
+     $$
+     V_i(x, y) = \frac{k_e q_i}{r_i}
+     $$
+   - Calculate the total potential as the sum of contributions from all charges:
+     $$
+     V(x, y) = \sum_{i=1}^N V_i(x, y)
+     $$
+
+4. **Derive the Field from the Potential:**
+   - Compute the electric field from the gradient of the potential:
+     $$
+     \mathbf{E}(x, y) = -\nabla V(x, y)
+     $$
+     where:
+     $$
+     \nabla V = \left( \frac{\partial V}{\partial x}, \frac{\partial V}{\partial y} \right)
+     $$
+
+5. **Visualization:**
+   - Plot the electric field vectors as an arrow field on a grid.
+   - Plot the electric potential $V(x, y)$ as a contour map.
+   - Overlay the gradient vectors $-\nabla V$ on the potential map.
+
+6. **Comparison:**
+   - Compare the electric field calculated directly (step 2) with that obtained via the gradient of the potential (step 4).
+   - Discuss the similarities, differences, and numerical accuracy of the two methods.
+
+---
+
+#### **Deliverables:**
+
+1. **Code Implementation:**
+   - Python script or notebook that calculates and visualizes:
+     - Electric field vectors.
+     - Electric potential and its gradient.
+     - Overlay of both methods for comparison.
+2. **Plots:**
+   - Vector field of the electric field.
+   - Contour map of the electric potential with gradient arrows.
+3. **Analysis:**
+   - A brief discussion comparing the two methods of computing the electric field.
+   - Comments on numerical accuracy, limitations, and sources of error.
+
+---
+
+#### **Hints and Resources:**
+
+- Use Python libraries like `NumPy` for calculations and `Matplotlib` for plotting.
+- For numerical gradients, consider using `numpy.gradient`.
+- Start with a simple charge configuration (e.g., two or three charges) before scaling up.
+
+This exercise develops skills in electrostatics, numerical computation, and visualization while encouraging critical thinking about the relationship between electric field and potential.
