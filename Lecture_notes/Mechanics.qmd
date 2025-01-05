@@ -74,25 +74,33 @@ def r1(t):
     return np.array([t, -t**2 + t])
 
 def r2(t):
-    return np.array([np.cos(t), np.sin(t)])
+    return np.array([2 * np.cos(t), 2 * np.sin(t)])
 
-t = np.linspace(0, 10, 100)
+# Define the time ranges
+t1 = np.linspace(0, 2, 100)
+t2 = np.linspace(0, 2 * np.pi, 100)
 
-fig, axes = plt.subplots(nrows=2, figsize=(8, 6))  # Tworzymy dwa wykresy obok siebie
+# Create a side-by-side plot layout
+fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))  # One row, two columns
 
-# Pierwszy wykres
-axes[0].plot(r1(t)[0], r1(t)[1])
+# First plot
+axes[0].plot(r1(t1)[0], r1(t1)[1])
 axes[0].set_xlabel('x')
 axes[0].set_ylabel('y')
-axes[0].set_title('Wykres 1: r1(t)')
+axes[0].set_title('Plot 1: r1(t)')
 
-# Drugi wykres
-axes[1].plot(r2(t)[0], r2(t)[1])
+# Second plot
+axes[1].plot(r2(t2)[0], r2(t2)[1])
 axes[1].set_xlabel('x')
 axes[1].set_ylabel('y')
-axes[1].set_title('Wykres 2: r2(t)')
+axes[1].set_title('Plot 2: r2(t)')
 
-plt.tight_layout()  # Dostosowanie układu
+# Adjust aspect ratios if needed
+axes[0].set_aspect('equal', 'box')
+axes[1].set_aspect('equal', 'box')
+
+# Optimize layout
+plt.tight_layout()
 plt.show()
 
 ```
