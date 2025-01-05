@@ -334,6 +334,17 @@ Refraction is a common phenomenon where waves change direction as they pass from
 
 ![source: Wikipedia](pics/waves/Refraction_-_Huygens-Fresnel_principle.svg) 
 
+#### Snell's Law
+
+Snell's Law is a key result derived from the Huygens–Fresnel principle, describing the relationship between the angles of incidence and refraction for waves passing through different media. The law states that the ratio of the sines of the angles is equal to the ratio of the wave speeds in the two media:
+
+$$
+\frac{\sin(\theta_1)}{\sin(\theta_2)} = \frac{v_1}{v_2},
+$$
+
+where $\theta_1$ and $\theta_2$ are the angles of incidence and refraction, respectively, and $v_1$ and $v_2$ are the wave speeds in the two media.
+
+
 ### Diffraction
 
 Diffraction is another key concept explained by the Huygens–Fresnel principle, where waves bend around obstacles or pass through narrow openings. By considering each point on the wavefront as a source of secondary waves, we can predict how the diffracted waves will propagate and create interference patterns.
@@ -342,3 +353,25 @@ Diffraction is another key concept explained by the Huygens–Fresnel principle,
 
 ![source: Wikipedia](pics/waves/Wavelength%3Dslitwidth.gif){width=50%}
 
+
+## Doppler Effect
+
+The Doppler effect is a well-known phenomenon where the frequency of a wave changes due to the relative motion between the source and observer. The Huygens–Fresnel principle provides a theoretical framework for understanding the Doppler effect, showing how the wavefronts shift and compress or expand based on the motion of the source and observer.
+
+This effec can be visualized with the following animations (source: Wikipedia):
+
+:::{layout-ncol="2"}
+![](pics/waves/Dopplereffectstationary.gif)
+
+![](pics/waves/Dopplereffectsourcemovingrightatmach0.7.gif)
+
+![](pics/waves/Dopplereffectsourcemovingrightatmach1.0.gif)
+
+![](pics/waves/Dopplereffectsourcemovingrightatmach1.4.gif)
+:::
+
+#### Vapor cone ([Wikipedia](https://en.wikipedia.org/wiki/Vapor_cone))
+
+The vapor cone, also known as the shock collar or shock egg, is a visible cloud of condensed water droplets that can sometimes form around an object moving at high speeds. This phenomenon is often associated with supersonic aircraft and other high-speed vehicles, where the pressure difference between the front and rear of the object leads to the condensation of water vapor in the air.
+
+![source: Wikipedia](pics/waves/FA-18_going_transonic.jpeg)
