@@ -617,6 +617,17 @@
       Modern Physics II
     </span>
 </a>
+<nav aria-label="Modern Physics II" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#physics-exercise-electric-field-and-potential-from-multiple-charge-sources">
+<span class="md-ellipsis">
+      Physics Exercise: Electric Field and Potential from Multiple Charge Sources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -695,6 +706,112 @@ Explain the concept of wavefunction normalization. For a given wavefunction <spa
 <p>Describe the concept of radioactive decay and three types of decay processes: alpha, beta, and gamma decay.</p>
 <p>Describe the decay rates and half-lives of radioactive isotopes.</p>
 <p>Discuss the Standard Model of particle physics. Describe the fundamental particles and forces in the model.</p>
+<h3 id="physics-exercise-electric-field-and-potential-from-multiple-charge-sources">Physics Exercise: Electric Field and Potential from Multiple Charge Sources<a class="headerlink" href="#physics-exercise-electric-field-and-potential-from-multiple-charge-sources" title="Permanent link">¶</a></h3>
+<hr/>
+<h4 id="objective"><strong>Objective:</strong><a class="headerlink" href="#objective" title="Permanent link">¶</a></h4>
+<p>Analyze and compare the electric field and potential created by a system of point charges. Use computational methods to:</p>
+<ol>
+<li>Calculate and visualize the effective electric field from multiple charges.</li>
+<li>Plot the electric potential and its gradient.</li>
+<li>Compare the electric field derived directly with that obtained via the gradient of the potential.</li>
+</ol>
+<hr/>
+<h4 id="problem-statement"><strong>Problem Statement:</strong><a class="headerlink" href="#problem-statement" title="Permanent link">¶</a></h4>
+<p>You are tasked with analyzing the electric field and potential from a set of point charges arranged in space. By simulating and visualizing these quantities, you will explore their relationships and understand how to compute the electric field both directly and via the gradient of the potential.</p>
+<hr/>
+<h4 id="steps-to-follow"><strong>Steps to Follow:</strong><a class="headerlink" href="#steps-to-follow" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Setup the Charge Configuration:</strong></li>
+<li>Define a system of <span class="arithmatex">\(N\)</span> point charges (at least three), each with charge <span class="arithmatex">\(q_i\)</span> positioned at coordinates <span class="arithmatex">\((x_i, y_i)\)</span>.</li>
+<li>
+<p>Choose arbitrary values for <span class="arithmatex">\(q_i\)</span> (positive or negative) and their positions <span class="arithmatex">\((x_i, y_i)\)</span>.</p>
+</li>
+<li>
+<p><strong>Compute the Electric Field:</strong></p>
+</li>
+<li>
+<p>The electric field <span class="arithmatex">\(\mathbf{E}\)</span> at a point <span class="arithmatex">\((x, y)\)</span> due to a charge <span class="arithmatex">\(q_i\)</span> at <span class="arithmatex">\((x_i, y_i)\)</span> is given by:
+     $$
+     \mathbf{E}_i(x, y) = \frac{k_e q_i}{r_i^2} \hat{\mathbf{r}}_i
+     $$
+     where:</p>
+<ul>
+<li><span class="arithmatex">\(k_e\)</span> is Coulomb's constant.</li>
+<li><span class="arithmatex">\(r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}\)</span> is the distance between the field point and the charge.</li>
+<li><span class="arithmatex">\(\hat{\mathbf{r}}_i = \frac{(x - x_i, y - y_i)}{r_i}\)</span> is the unit vector pointing from the charge to the field point.</li>
+</ul>
+</li>
+<li>
+<p>Calculate the total electric field as the vector sum of the contributions from all charges:
+     $$
+     \mathbf{E}(x, y) = \sum_{i=1}^N \mathbf{E}_i(x, y)
+     $$</p>
+</li>
+<li>
+<p><strong>Compute the Electric Potential:</strong></p>
+</li>
+<li>The electric potential <span class="arithmatex">\(V\)</span> at a point <span class="arithmatex">\((x, y)\)</span> due to a charge <span class="arithmatex">\(q_i\)</span> at <span class="arithmatex">\((x_i, y_i)\)</span> is given by:
+     $$
+     V_i(x, y) = \frac{k_e q_i}{r_i}
+     $$</li>
+<li>
+<p>Calculate the total potential as the sum of contributions from all charges:
+     $$
+     V(x, y) = \sum_{i=1}^N V_i(x, y)
+     $$</p>
+</li>
+<li>
+<p><strong>Derive the Field from the Potential:</strong></p>
+</li>
+<li>
+<p>Compute the electric field from the gradient of the potential:
+     $$
+     \mathbf{E}(x, y) = -\nabla V(x, y)
+     $$
+     where:
+     $$
+     \nabla V = \left( \frac{\partial V}{\partial x}, \frac{\partial V}{\partial y} \right)
+     $$</p>
+</li>
+<li>
+<p><strong>Visualization:</strong></p>
+</li>
+<li>Plot the electric field vectors as an arrow field on a grid.</li>
+<li>Plot the electric potential <span class="arithmatex">\(V(x, y)\)</span> as a contour map.</li>
+<li>
+<p>Overlay the gradient vectors <span class="arithmatex">\(-\nabla V\)</span> on the potential map.</p>
+</li>
+<li>
+<p><strong>Comparison:</strong></p>
+</li>
+<li>Compare the electric field calculated directly (step 2) with that obtained via the gradient of the potential (step 4).</li>
+<li>Discuss the similarities, differences, and numerical accuracy of the two methods.</li>
+</ol>
+<hr/>
+<h4 id="deliverables"><strong>Deliverables:</strong><a class="headerlink" href="#deliverables" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Code Implementation:</strong></li>
+<li>Python script or notebook that calculates and visualizes:<ul>
+<li>Electric field vectors.</li>
+<li>Electric potential and its gradient.</li>
+<li>Overlay of both methods for comparison.</li>
+</ul>
+</li>
+<li><strong>Plots:</strong></li>
+<li>Vector field of the electric field.</li>
+<li>Contour map of the electric potential with gradient arrows.</li>
+<li><strong>Analysis:</strong></li>
+<li>A brief discussion comparing the two methods of computing the electric field.</li>
+<li>Comments on numerical accuracy, limitations, and sources of error.</li>
+</ol>
+<hr/>
+<h4 id="hints-and-resources"><strong>Hints and Resources:</strong><a class="headerlink" href="#hints-and-resources" title="Permanent link">¶</a></h4>
+<ul>
+<li>Use Python libraries like <code>NumPy</code> for calculations and <code>Matplotlib</code> for plotting.</li>
+<li>For numerical gradients, consider using <code>numpy.gradient</code>.</li>
+<li>Start with a simple charge configuration (e.g., two or three charges) before scaling up.</li>
+</ul>
+<p>This exercise develops skills in electrostatics, numerical computation, and visualization while encouraging critical thinking about the relationship between electric field and potential.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
