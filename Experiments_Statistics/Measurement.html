@@ -3390,7 +3390,7 @@ margin-bottom: 0;
   <li><a href="#quote" id="toc-quote" class="nav-link" data-scroll-target="#quote">Quote</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://dchorazkiewicz.github.io/Physics-2024-25-Summer/"><i class="bi bi-link-45deg"></i>Main page</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -3662,7 +3662,7 @@ R = \frac{V}{I}, \quad \Delta R = \sqrt{\left( \frac{\Delta V}{I} \right)^2 + \l
 </section>
 <section id="example-of-error-bar-in-python" class="level1">
 <h1>Example of error bar in python</h1>
-<div id="9ff15b06" class="cell" data-execution_count="1">
+<div id="77e11ceb" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -4279,426 +4279,429 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-16"><a href="#cb2-16"></a><span class="co">    css: styles.css</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a><span class="co">    math: mathjax</span></span>
 <span id="cb2-18"><a href="#cb2-18"></a><span class="co">    self-contained: true</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co">---</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="fu">## 1. Introduction</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a></span>
-<span id="cb2-23"><a href="#cb2-23"></a>Measurement is the process of determining the size, length, or amount of something. It is a fundamental aspect of physics and other sciences, as it allows us to quantify and compare physical quantities. Today we will discuss some of the most important measurements in the history of physics and describe the importance and details of making measurements.</span>
-<span id="cb2-24"><a href="#cb2-24"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="fu">### Why do we measure? </span></span>
-<span id="cb2-26"><a href="#cb2-26"></a></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="ss">- </span>To capture relations within the physical world</span>
-<span id="cb2-28"><a href="#cb2-28"></a></span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="ss">- </span>To make predictions about the behavior of the natural world</span>
-<span id="cb2-30"><a href="#cb2-30"></a></span>
-<span id="cb2-31"><a href="#cb2-31"></a><span class="ss">- </span>To understand the physical world</span>
-<span id="cb2-32"><a href="#cb2-32"></a></span>
-<span id="cb2-33"><a href="#cb2-33"></a><span class="ss">- </span>To confirm and refine our understanding of the laws of physics</span>
-<span id="cb2-34"><a href="#cb2-34"></a></span>
-<span id="cb2-35"><a href="#cb2-35"></a>Measurement is essential in physics and other sciences because it allows us to describe and understand the physical world. Without measurement, we would not be able to quantify physical quantities, compare different objects or events, or make predictions about the behavior of the natural world.</span>
-<span id="cb2-36"><a href="#cb2-36"></a></span>
-<span id="cb2-37"><a href="#cb2-37"></a><span class="fu">### Units of measurement</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a></span>
-<span id="cb2-39"><a href="#cb2-39"></a>To make meaningful measurements, we need to use standardized units of measurement (SI units). These units are defined by international agreements and are used by scientists around the world. </span>
-<span id="cb2-40"><a href="#cb2-40"></a></span>
-<span id="cb2-41"><a href="#cb2-41"></a>**SI Units in physics include only seven units:**</span>
-<span id="cb2-42"><a href="#cb2-42"></a></span>
-<span id="cb2-43"><a href="#cb2-43"></a><span class="ss">- </span>meter (m) for length</span>
-<span id="cb2-44"><a href="#cb2-44"></a></span>
-<span id="cb2-45"><a href="#cb2-45"></a><span class="ss">- </span>kilogram (kg) for mass</span>
-<span id="cb2-46"><a href="#cb2-46"></a></span>
-<span id="cb2-47"><a href="#cb2-47"></a><span class="ss">- </span>second (s) for time</span>
-<span id="cb2-48"><a href="#cb2-48"></a></span>
-<span id="cb2-49"><a href="#cb2-49"></a><span class="ss">- </span>Kelvin (K) for temperature</span>
-<span id="cb2-50"><a href="#cb2-50"></a></span>
-<span id="cb2-51"><a href="#cb2-51"></a><span class="ss">- </span>ampere (A) for electric current</span>
-<span id="cb2-52"><a href="#cb2-52"></a></span>
-<span id="cb2-53"><a href="#cb2-53"></a><span class="ss">- </span>mole (mol) for the amount of substance</span>
-<span id="cb2-54"><a href="#cb2-54"></a></span>
-<span id="cb2-55"><a href="#cb2-55"></a><span class="ss">- </span>candela (cd) for luminous intensity</span>
-<span id="cb2-56"><a href="#cb2-56"></a></span>
-<span id="cb2-57"><a href="#cb2-57"></a>All other units are derived from these base units. For example, the unit of force, the Newton (N), is derived from the base units of mass, length, and time.</span>
-<span id="cb2-58"><a href="#cb2-58"></a></span>
-<span id="cb2-59"><a href="#cb2-59"></a>**Examples of derived units in physics include:**</span>
-<span id="cb2-60"><a href="#cb2-60"></a></span>
-<span id="cb2-61"><a href="#cb2-61"></a><span class="ss">- </span>Acceleration: $<span class="co">[</span><span class="ot">m/s^2</span><span class="co">]</span>$</span>
-<span id="cb2-62"><a href="#cb2-62"></a></span>
-<span id="cb2-63"><a href="#cb2-63"></a><span class="ss">- </span>Force: Newton $<span class="co">[</span><span class="ot">N=kg\,m/s^2</span><span class="co">]</span>$</span>
-<span id="cb2-64"><a href="#cb2-64"></a></span>
-<span id="cb2-65"><a href="#cb2-65"></a><span class="ss">- </span>Energy: Joule $<span class="co">[</span><span class="ot">J=kg\,m^2/s^2</span><span class="co">]</span>$</span>
-<span id="cb2-66"><a href="#cb2-66"></a></span>
-<span id="cb2-67"><a href="#cb2-67"></a><span class="ss">- </span>Power: Watt $<span class="co">[</span><span class="ot">W=J/s</span><span class="co">]</span>$</span>
-<span id="cb2-68"><a href="#cb2-68"></a></span>
-<span id="cb2-69"><a href="#cb2-69"></a><span class="ss">- </span>Pressure: Pascal $<span class="co">[</span><span class="ot">Pa=N/m^2=kg/m \,s^2</span><span class="co">]</span>$</span>
-<span id="cb2-70"><a href="#cb2-70"></a></span>
-<span id="cb2-71"><a href="#cb2-71"></a><span class="ss">- </span>Electric charge: Coulomb $<span class="co">[</span><span class="ot">C=A s</span><span class="co">]</span>$</span>
-<span id="cb2-72"><a href="#cb2-72"></a></span>
-<span id="cb2-73"><a href="#cb2-73"></a><span class="ss">- </span>Electric potential: Volt $<span class="co">[</span><span class="ot">V=W/A=J/s/A=kg m^2/ s^3 /A</span><span class="co">]</span>$</span>
-<span id="cb2-74"><a href="#cb2-74"></a></span>
-<span id="cb2-75"><a href="#cb2-75"></a><span class="ss">- </span>Electric resistance: Ohm $<span class="co">[</span><span class="ot">\Omega=V/A=kg\, m^2 / C^2 s^3=A^2 s^3 / kg\,m^2</span><span class="co">]</span>$</span>
-<span id="cb2-76"><a href="#cb2-76"></a></span>
-<span id="cb2-77"><a href="#cb2-77"></a><span class="fu">## 2. Uncertainty in measurement</span></span>
-<span id="cb2-78"><a href="#cb2-78"></a></span>
-<span id="cb2-79"><a href="#cb2-79"></a><span class="fu">### Difference between Error and Uncertainty</span></span>
-<span id="cb2-80"><a href="#cb2-80"></a></span>
-<span id="cb2-81"><a href="#cb2-81"></a><span class="ss">- </span>**Error** is the difference between a measured value and the true value. It can be caused by a variety of factors, including limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process. Errors can be reduced by calibrating instruments, using multiple measurements, and applying correction factors.</span>
-<span id="cb2-82"><a href="#cb2-82"></a></span>
-<span id="cb2-83"><a href="#cb2-83"></a><span class="ss">- </span>**Uncertainty** is a measure of the range of values within which the true value of a measurement is likely to lie. It is a more general concept than error and includes both systematic and random errors. Uncertainty can be estimated using statistical methods, such as the standard deviation of a set of measurements, or by using the total derivative to estimate the uncertainty in a measurement due to uncertainties in the variables that affect it.</span>
-<span id="cb2-84"><a href="#cb2-84"></a></span>
-<span id="cb2-85"><a href="#cb2-85"></a><span class="fu">### Scheme of presenting uncertainty</span></span>
-<span id="cb2-86"><a href="#cb2-86"></a></span>
-<span id="cb2-87"><a href="#cb2-87"></a>Quantity = Value $\pm$ Uncertainity <span class="co">[</span><span class="ot">Units</span><span class="co">]</span></span>
-<span id="cb2-88"><a href="#cb2-88"></a></span>
-<span id="cb2-89"><a href="#cb2-89"></a>**Example:**</span>
-<span id="cb2-90"><a href="#cb2-90"></a></span>
-<span id="cb2-91"><a href="#cb2-91"></a>Resistance = $R \pm \Delta R = 10.0 \pm  0.1~~<span class="co">[</span><span class="ot">Ohm</span><span class="co">]</span>$</span>
-<span id="cb2-92"><a href="#cb2-92"></a></span>
-<span id="cb2-93"><a href="#cb2-93"></a><span class="fu">### Uncertainty of devices and measurements</span></span>
-<span id="cb2-94"><a href="#cb2-94"></a></span>
-<span id="cb2-95"><a href="#cb2-95"></a>Measurement devices have a resolution, which is the smallest change in the quantity being measured that the device can detect. The uncertainty in a measurement made with a device is typically (and on our course) **half of the resolution of the device**. </span>
-<span id="cb2-96"><a href="#cb2-96"></a></span>
-<span id="cb2-97"><a href="#cb2-97"></a>For example, if a ruler has a resolution of 1 mm, by having markings every 1 mm, the uncertainty in a measurement made with the ruler is 0.5 mm. This is because the true value of the quantity being measured could be anywhere within the range of the resolution of the device.</span>
-<span id="cb2-98"><a href="#cb2-98"></a></span>
-<span id="cb2-99"><a href="#cb2-99"></a>If the watch with markings every 1 minute shows 12:00, it means that the true time is between 11:59:30 and 12:00:30. </span>
-<span id="cb2-100"><a href="#cb2-100"></a></span>
-<span id="cb2-101"><a href="#cb2-101"></a>Other example lets take voltmeter with resolution of 0.1 V. If the voltmeter shows 96.6 V, the true value of the voltage is between 96.55 and 96.65 V. One can write it as 96.6 V $\pm$ 0.05 V.</span>
-<span id="cb2-102"><a href="#cb2-102"></a></span>
-<span id="cb2-103"><a href="#cb2-103"></a><span class="fu">### Uncertentity from total derivative</span></span>
-<span id="cb2-104"><a href="#cb2-104"></a></span>
-<span id="cb2-105"><a href="#cb2-105"></a>**Uncertainty** is an unavoidable aspect of measurement in physics and other sciences. It arises from a variety of sources, including the limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process.</span>
-<span id="cb2-106"><a href="#cb2-106"></a></span>
-<span id="cb2-107"><a href="#cb2-107"></a>To estimate the uncertainty in measurement using the total derivative, follow these steps:</span>
-<span id="cb2-108"><a href="#cb2-108"></a></span>
-<span id="cb2-109"><a href="#cb2-109"></a><span class="ss">1. </span>Identify the physical quantity that you want to measure and the variables that affect it.</span>
-<span id="cb2-110"><a href="#cb2-110"></a></span>
-<span id="cb2-111"><a href="#cb2-111"></a><span class="ss">2. </span>Determine the uncertainties in the variables that affect the physical quantity.</span>
-<span id="cb2-112"><a href="#cb2-112"></a></span>
-<span id="cb2-113"><a href="#cb2-113"></a><span class="ss">3. </span>Calculate the total derivative of the physical quantity with respect to the variables that affect it.</span>
-<span id="cb2-114"><a href="#cb2-114"></a></span>
-<span id="cb2-115"><a href="#cb2-115"></a><span class="ss">4. </span>Use the total derivative to estimate the uncertainty in the physical quantity due to uncertainties in the variables.</span>
-<span id="cb2-116"><a href="#cb2-116"></a></span>
-<span id="cb2-117"><a href="#cb2-117"></a>By following these steps and using the total derivative to estimate the uncertainty in a measurement, you can make more accurate and reliable measurements and improve the quality of your experimental data.</span>
-<span id="cb2-118"><a href="#cb2-118"></a></span>
-<span id="cb2-119"><a href="#cb2-119"></a><span class="fu">### Quantifying uncertainty using the total derivative</span></span>
-<span id="cb2-120"><a href="#cb2-120"></a></span>
-<span id="cb2-121"><a href="#cb2-121"></a>The *total derivative* is a mathematical concept that describes how a function changes with respect to changes in its variables. For example </span>
-<span id="cb2-122"><a href="#cb2-122"></a></span>
-<span id="cb2-123"><a href="#cb2-123"></a>$$d f(x,y) = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy</span>
-<span id="cb2-124"><a href="#cb2-124"></a>$$ </span>
-<span id="cb2-125"><a href="#cb2-125"></a> In the context of measurement, the total derivative can be used to quantify the uncertainty in a physical quantity due to uncertainties in the variables that affect it. </span>
-<span id="cb2-126"><a href="#cb2-126"></a> </span>
-<span id="cb2-127"><a href="#cb2-127"></a> For example, if a physical quantity f(x,y) is a function of variables x and y, then the total derivative of f with respect to x and y can be used to estimate the uncertainty in f due to uncertainties in x and y (i.e. $\Delta x$ and $\Delta y$ ).</span>
-<span id="cb2-128"><a href="#cb2-128"></a></span>
-<span id="cb2-129"><a href="#cb2-129"></a>$$\Delta f(x,y) = | \frac{\partial f}{\partial x} \Delta x| + |\frac{\partial f}{\partial y} \Delta y|\qquad \qquad\text{University formula}</span>
-<span id="cb2-130"><a href="#cb2-130"></a>$$</span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="co">    other-links:</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="co">      - text: Main page</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co">        href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/        </span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="co">---</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="fu">## 1. Introduction</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a>Measurement is the process of determining the size, length, or amount of something. It is a fundamental aspect of physics and other sciences, as it allows us to quantify and compare physical quantities. Today we will discuss some of the most important measurements in the history of physics and describe the importance and details of making measurements.</span>
+<span id="cb2-27"><a href="#cb2-27"></a></span>
+<span id="cb2-28"><a href="#cb2-28"></a><span class="fu">### Why do we measure? </span></span>
+<span id="cb2-29"><a href="#cb2-29"></a></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="ss">- </span>To capture relations within the physical world</span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="ss">- </span>To make predictions about the behavior of the natural world</span>
+<span id="cb2-33"><a href="#cb2-33"></a></span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="ss">- </span>To understand the physical world</span>
+<span id="cb2-35"><a href="#cb2-35"></a></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="ss">- </span>To confirm and refine our understanding of the laws of physics</span>
+<span id="cb2-37"><a href="#cb2-37"></a></span>
+<span id="cb2-38"><a href="#cb2-38"></a>Measurement is essential in physics and other sciences because it allows us to describe and understand the physical world. Without measurement, we would not be able to quantify physical quantities, compare different objects or events, or make predictions about the behavior of the natural world.</span>
+<span id="cb2-39"><a href="#cb2-39"></a></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="fu">### Units of measurement</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a></span>
+<span id="cb2-42"><a href="#cb2-42"></a>To make meaningful measurements, we need to use standardized units of measurement (SI units). These units are defined by international agreements and are used by scientists around the world. </span>
+<span id="cb2-43"><a href="#cb2-43"></a></span>
+<span id="cb2-44"><a href="#cb2-44"></a>**SI Units in physics include only seven units:**</span>
+<span id="cb2-45"><a href="#cb2-45"></a></span>
+<span id="cb2-46"><a href="#cb2-46"></a><span class="ss">- </span>meter (m) for length</span>
+<span id="cb2-47"><a href="#cb2-47"></a></span>
+<span id="cb2-48"><a href="#cb2-48"></a><span class="ss">- </span>kilogram (kg) for mass</span>
+<span id="cb2-49"><a href="#cb2-49"></a></span>
+<span id="cb2-50"><a href="#cb2-50"></a><span class="ss">- </span>second (s) for time</span>
+<span id="cb2-51"><a href="#cb2-51"></a></span>
+<span id="cb2-52"><a href="#cb2-52"></a><span class="ss">- </span>Kelvin (K) for temperature</span>
+<span id="cb2-53"><a href="#cb2-53"></a></span>
+<span id="cb2-54"><a href="#cb2-54"></a><span class="ss">- </span>ampere (A) for electric current</span>
+<span id="cb2-55"><a href="#cb2-55"></a></span>
+<span id="cb2-56"><a href="#cb2-56"></a><span class="ss">- </span>mole (mol) for the amount of substance</span>
+<span id="cb2-57"><a href="#cb2-57"></a></span>
+<span id="cb2-58"><a href="#cb2-58"></a><span class="ss">- </span>candela (cd) for luminous intensity</span>
+<span id="cb2-59"><a href="#cb2-59"></a></span>
+<span id="cb2-60"><a href="#cb2-60"></a>All other units are derived from these base units. For example, the unit of force, the Newton (N), is derived from the base units of mass, length, and time.</span>
+<span id="cb2-61"><a href="#cb2-61"></a></span>
+<span id="cb2-62"><a href="#cb2-62"></a>**Examples of derived units in physics include:**</span>
+<span id="cb2-63"><a href="#cb2-63"></a></span>
+<span id="cb2-64"><a href="#cb2-64"></a><span class="ss">- </span>Acceleration: $<span class="co">[</span><span class="ot">m/s^2</span><span class="co">]</span>$</span>
+<span id="cb2-65"><a href="#cb2-65"></a></span>
+<span id="cb2-66"><a href="#cb2-66"></a><span class="ss">- </span>Force: Newton $<span class="co">[</span><span class="ot">N=kg\,m/s^2</span><span class="co">]</span>$</span>
+<span id="cb2-67"><a href="#cb2-67"></a></span>
+<span id="cb2-68"><a href="#cb2-68"></a><span class="ss">- </span>Energy: Joule $<span class="co">[</span><span class="ot">J=kg\,m^2/s^2</span><span class="co">]</span>$</span>
+<span id="cb2-69"><a href="#cb2-69"></a></span>
+<span id="cb2-70"><a href="#cb2-70"></a><span class="ss">- </span>Power: Watt $<span class="co">[</span><span class="ot">W=J/s</span><span class="co">]</span>$</span>
+<span id="cb2-71"><a href="#cb2-71"></a></span>
+<span id="cb2-72"><a href="#cb2-72"></a><span class="ss">- </span>Pressure: Pascal $<span class="co">[</span><span class="ot">Pa=N/m^2=kg/m \,s^2</span><span class="co">]</span>$</span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a><span class="ss">- </span>Electric charge: Coulomb $<span class="co">[</span><span class="ot">C=A s</span><span class="co">]</span>$</span>
+<span id="cb2-75"><a href="#cb2-75"></a></span>
+<span id="cb2-76"><a href="#cb2-76"></a><span class="ss">- </span>Electric potential: Volt $<span class="co">[</span><span class="ot">V=W/A=J/s/A=kg m^2/ s^3 /A</span><span class="co">]</span>$</span>
+<span id="cb2-77"><a href="#cb2-77"></a></span>
+<span id="cb2-78"><a href="#cb2-78"></a><span class="ss">- </span>Electric resistance: Ohm $<span class="co">[</span><span class="ot">\Omega=V/A=kg\, m^2 / C^2 s^3=A^2 s^3 / kg\,m^2</span><span class="co">]</span>$</span>
+<span id="cb2-79"><a href="#cb2-79"></a></span>
+<span id="cb2-80"><a href="#cb2-80"></a><span class="fu">## 2. Uncertainty in measurement</span></span>
+<span id="cb2-81"><a href="#cb2-81"></a></span>
+<span id="cb2-82"><a href="#cb2-82"></a><span class="fu">### Difference between Error and Uncertainty</span></span>
+<span id="cb2-83"><a href="#cb2-83"></a></span>
+<span id="cb2-84"><a href="#cb2-84"></a><span class="ss">- </span>**Error** is the difference between a measured value and the true value. It can be caused by a variety of factors, including limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process. Errors can be reduced by calibrating instruments, using multiple measurements, and applying correction factors.</span>
+<span id="cb2-85"><a href="#cb2-85"></a></span>
+<span id="cb2-86"><a href="#cb2-86"></a><span class="ss">- </span>**Uncertainty** is a measure of the range of values within which the true value of a measurement is likely to lie. It is a more general concept than error and includes both systematic and random errors. Uncertainty can be estimated using statistical methods, such as the standard deviation of a set of measurements, or by using the total derivative to estimate the uncertainty in a measurement due to uncertainties in the variables that affect it.</span>
+<span id="cb2-87"><a href="#cb2-87"></a></span>
+<span id="cb2-88"><a href="#cb2-88"></a><span class="fu">### Scheme of presenting uncertainty</span></span>
+<span id="cb2-89"><a href="#cb2-89"></a></span>
+<span id="cb2-90"><a href="#cb2-90"></a>Quantity = Value $\pm$ Uncertainity <span class="co">[</span><span class="ot">Units</span><span class="co">]</span></span>
+<span id="cb2-91"><a href="#cb2-91"></a></span>
+<span id="cb2-92"><a href="#cb2-92"></a>**Example:**</span>
+<span id="cb2-93"><a href="#cb2-93"></a></span>
+<span id="cb2-94"><a href="#cb2-94"></a>Resistance = $R \pm \Delta R = 10.0 \pm  0.1~~<span class="co">[</span><span class="ot">Ohm</span><span class="co">]</span>$</span>
+<span id="cb2-95"><a href="#cb2-95"></a></span>
+<span id="cb2-96"><a href="#cb2-96"></a><span class="fu">### Uncertainty of devices and measurements</span></span>
+<span id="cb2-97"><a href="#cb2-97"></a></span>
+<span id="cb2-98"><a href="#cb2-98"></a>Measurement devices have a resolution, which is the smallest change in the quantity being measured that the device can detect. The uncertainty in a measurement made with a device is typically (and on our course) **half of the resolution of the device**. </span>
+<span id="cb2-99"><a href="#cb2-99"></a></span>
+<span id="cb2-100"><a href="#cb2-100"></a>For example, if a ruler has a resolution of 1 mm, by having markings every 1 mm, the uncertainty in a measurement made with the ruler is 0.5 mm. This is because the true value of the quantity being measured could be anywhere within the range of the resolution of the device.</span>
+<span id="cb2-101"><a href="#cb2-101"></a></span>
+<span id="cb2-102"><a href="#cb2-102"></a>If the watch with markings every 1 minute shows 12:00, it means that the true time is between 11:59:30 and 12:00:30. </span>
+<span id="cb2-103"><a href="#cb2-103"></a></span>
+<span id="cb2-104"><a href="#cb2-104"></a>Other example lets take voltmeter with resolution of 0.1 V. If the voltmeter shows 96.6 V, the true value of the voltage is between 96.55 and 96.65 V. One can write it as 96.6 V $\pm$ 0.05 V.</span>
+<span id="cb2-105"><a href="#cb2-105"></a></span>
+<span id="cb2-106"><a href="#cb2-106"></a><span class="fu">### Uncertentity from total derivative</span></span>
+<span id="cb2-107"><a href="#cb2-107"></a></span>
+<span id="cb2-108"><a href="#cb2-108"></a>**Uncertainty** is an unavoidable aspect of measurement in physics and other sciences. It arises from a variety of sources, including the limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process.</span>
+<span id="cb2-109"><a href="#cb2-109"></a></span>
+<span id="cb2-110"><a href="#cb2-110"></a>To estimate the uncertainty in measurement using the total derivative, follow these steps:</span>
+<span id="cb2-111"><a href="#cb2-111"></a></span>
+<span id="cb2-112"><a href="#cb2-112"></a><span class="ss">1. </span>Identify the physical quantity that you want to measure and the variables that affect it.</span>
+<span id="cb2-113"><a href="#cb2-113"></a></span>
+<span id="cb2-114"><a href="#cb2-114"></a><span class="ss">2. </span>Determine the uncertainties in the variables that affect the physical quantity.</span>
+<span id="cb2-115"><a href="#cb2-115"></a></span>
+<span id="cb2-116"><a href="#cb2-116"></a><span class="ss">3. </span>Calculate the total derivative of the physical quantity with respect to the variables that affect it.</span>
+<span id="cb2-117"><a href="#cb2-117"></a></span>
+<span id="cb2-118"><a href="#cb2-118"></a><span class="ss">4. </span>Use the total derivative to estimate the uncertainty in the physical quantity due to uncertainties in the variables.</span>
+<span id="cb2-119"><a href="#cb2-119"></a></span>
+<span id="cb2-120"><a href="#cb2-120"></a>By following these steps and using the total derivative to estimate the uncertainty in a measurement, you can make more accurate and reliable measurements and improve the quality of your experimental data.</span>
+<span id="cb2-121"><a href="#cb2-121"></a></span>
+<span id="cb2-122"><a href="#cb2-122"></a><span class="fu">### Quantifying uncertainty using the total derivative</span></span>
+<span id="cb2-123"><a href="#cb2-123"></a></span>
+<span id="cb2-124"><a href="#cb2-124"></a>The *total derivative* is a mathematical concept that describes how a function changes with respect to changes in its variables. For example </span>
+<span id="cb2-125"><a href="#cb2-125"></a></span>
+<span id="cb2-126"><a href="#cb2-126"></a>$$d f(x,y) = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy</span>
+<span id="cb2-127"><a href="#cb2-127"></a>$$ </span>
+<span id="cb2-128"><a href="#cb2-128"></a> In the context of measurement, the total derivative can be used to quantify the uncertainty in a physical quantity due to uncertainties in the variables that affect it. </span>
+<span id="cb2-129"><a href="#cb2-129"></a> </span>
+<span id="cb2-130"><a href="#cb2-130"></a> For example, if a physical quantity f(x,y) is a function of variables x and y, then the total derivative of f with respect to x and y can be used to estimate the uncertainty in f due to uncertainties in x and y (i.e. $\Delta x$ and $\Delta y$ ).</span>
 <span id="cb2-131"><a href="#cb2-131"></a></span>
-<span id="cb2-132"><a href="#cb2-132"></a>$$\Delta f(x,y) = \sqrt{(\frac{\partial f}{\partial x} \Delta x)^2 + (\frac{\partial f}{\partial y} \Delta y)^2}\qquad\text{Engineering formula (use this one!)}</span>
+<span id="cb2-132"><a href="#cb2-132"></a>$$\Delta f(x,y) = | \frac{\partial f}{\partial x} \Delta x| + |\frac{\partial f}{\partial y} \Delta y|\qquad \qquad\text{University formula}</span>
 <span id="cb2-133"><a href="#cb2-133"></a>$$</span>
 <span id="cb2-134"><a href="#cb2-134"></a></span>
-<span id="cb2-135"><a href="#cb2-135"></a><span class="fu">### Example: Estimating Uncertainty in Volume Measurement of a Ball</span></span>
-<span id="cb2-136"><a href="#cb2-136"></a></span>
-<span id="cb2-137"><a href="#cb2-137"></a>The diameter of a certain ball was measured to be $L = 42 \pm 1$ cm. Using this measurement, estimate the volume of the ball $V$, and then calculate the uncertainty in this volume estimation $\Delta V$.</span>
-<span id="cb2-138"><a href="#cb2-138"></a></span>
-<span id="cb2-139"><a href="#cb2-139"></a>LINK</span>
-<span id="cb2-140"><a href="#cb2-140"></a></span>
-<span id="cb2-141"><a href="#cb2-141"></a>**Calculations of Ball&#39;s Volume**</span>
-<span id="cb2-142"><a href="#cb2-142"></a></span>
-<span id="cb2-143"><a href="#cb2-143"></a><span class="ss">- </span>Diameter of the ball, $Length = L\pm \Delta L= 42 \pm 1$ cm</span>
-<span id="cb2-144"><a href="#cb2-144"></a><span class="ss">- </span>Formula for the volume of a sphere: </span>
-<span id="cb2-145"><a href="#cb2-145"></a>  $$V = \frac{4}{3} \pi r^3</span>
-<span id="cb2-146"><a href="#cb2-146"></a>  $$</span>
-<span id="cb2-147"><a href="#cb2-147"></a>  where $r$ is the radius of the ball. Since the radius $r$ is half of the diameter,</span>
-<span id="cb2-148"><a href="#cb2-148"></a>$$r = \frac{L}{2} = \frac{42}{2} = 21 \text{ cm}</span>
-<span id="cb2-149"><a href="#cb2-149"></a>$$</span>
-<span id="cb2-150"><a href="#cb2-150"></a>volume of the ball $V$ can be calculated as:</span>
-<span id="cb2-151"><a href="#cb2-151"></a>$$V(L) = \frac{4}{3} \pi \left(\frac{L}{2}\right)^3 = \frac{\pi L^3}{6}  \approx 38808 \text{ cm}^3</span>
+<span id="cb2-135"><a href="#cb2-135"></a>$$\Delta f(x,y) = \sqrt{(\frac{\partial f}{\partial x} \Delta x)^2 + (\frac{\partial f}{\partial y} \Delta y)^2}\qquad\text{Engineering formula (use this one!)}</span>
+<span id="cb2-136"><a href="#cb2-136"></a>$$</span>
+<span id="cb2-137"><a href="#cb2-137"></a></span>
+<span id="cb2-138"><a href="#cb2-138"></a><span class="fu">### Example: Estimating Uncertainty in Volume Measurement of a Ball</span></span>
+<span id="cb2-139"><a href="#cb2-139"></a></span>
+<span id="cb2-140"><a href="#cb2-140"></a>The diameter of a certain ball was measured to be $L = 42 \pm 1$ cm. Using this measurement, estimate the volume of the ball $V$, and then calculate the uncertainty in this volume estimation $\Delta V$.</span>
+<span id="cb2-141"><a href="#cb2-141"></a></span>
+<span id="cb2-142"><a href="#cb2-142"></a>LINK</span>
+<span id="cb2-143"><a href="#cb2-143"></a></span>
+<span id="cb2-144"><a href="#cb2-144"></a>**Calculations of Ball&#39;s Volume**</span>
+<span id="cb2-145"><a href="#cb2-145"></a></span>
+<span id="cb2-146"><a href="#cb2-146"></a><span class="ss">- </span>Diameter of the ball, $Length = L\pm \Delta L= 42 \pm 1$ cm</span>
+<span id="cb2-147"><a href="#cb2-147"></a><span class="ss">- </span>Formula for the volume of a sphere: </span>
+<span id="cb2-148"><a href="#cb2-148"></a>  $$V = \frac{4}{3} \pi r^3</span>
+<span id="cb2-149"><a href="#cb2-149"></a>  $$</span>
+<span id="cb2-150"><a href="#cb2-150"></a>  where $r$ is the radius of the ball. Since the radius $r$ is half of the diameter,</span>
+<span id="cb2-151"><a href="#cb2-151"></a>$$r = \frac{L}{2} = \frac{42}{2} = 21 \text{ cm}</span>
 <span id="cb2-152"><a href="#cb2-152"></a>$$</span>
-<span id="cb2-153"><a href="#cb2-153"></a></span>
-<span id="cb2-154"><a href="#cb2-154"></a>**Estimating Volume Uncertainty**</span>
-<span id="cb2-155"><a href="#cb2-155"></a></span>
-<span id="cb2-156"><a href="#cb2-156"></a>The uncertainty in the volume, $\Delta V$, can be estimated using the propagation of uncertainty formula for functions of a single variable since the volume $V$ depends on the radius $r$, which in turn depends on $L$. Note the use of absolute value here. The formula is:</span>
-<span id="cb2-157"><a href="#cb2-157"></a>$$</span>
-<span id="cb2-158"><a href="#cb2-158"></a>\Delta V = \left| \frac{\partial V}{\partial L} \right| \Delta L</span>
-<span id="cb2-159"><a href="#cb2-159"></a>$$</span>
-<span id="cb2-160"><a href="#cb2-160"></a>where first term is partial derivative $\frac{\partial V}{\partial L}$ and $\Delta L = 1$ cm is the uncertainty in the diameter.</span>
-<span id="cb2-161"><a href="#cb2-161"></a></span>
-<span id="cb2-162"><a href="#cb2-162"></a>**Step 1:** Derive the partial derivative $\frac{\partial V}{\partial L}$:</span>
-<span id="cb2-163"><a href="#cb2-163"></a>$$</span>
-<span id="cb2-164"><a href="#cb2-164"></a>\frac{\partial V}{\partial L} = \frac{\pi}{6} (3 L^2) = \frac{\pi}{2} L^2\approx 2772 \, \text{cm}^2</span>
-<span id="cb2-165"><a href="#cb2-165"></a>$$</span>
-<span id="cb2-166"><a href="#cb2-166"></a></span>
-<span id="cb2-167"><a href="#cb2-167"></a>**Step 2:** Calculate $\Delta V$:</span>
+<span id="cb2-153"><a href="#cb2-153"></a>volume of the ball $V$ can be calculated as:</span>
+<span id="cb2-154"><a href="#cb2-154"></a>$$V(L) = \frac{4}{3} \pi \left(\frac{L}{2}\right)^3 = \frac{\pi L^3}{6}  \approx 38808 \text{ cm}^3</span>
+<span id="cb2-155"><a href="#cb2-155"></a>$$</span>
+<span id="cb2-156"><a href="#cb2-156"></a></span>
+<span id="cb2-157"><a href="#cb2-157"></a>**Estimating Volume Uncertainty**</span>
+<span id="cb2-158"><a href="#cb2-158"></a></span>
+<span id="cb2-159"><a href="#cb2-159"></a>The uncertainty in the volume, $\Delta V$, can be estimated using the propagation of uncertainty formula for functions of a single variable since the volume $V$ depends on the radius $r$, which in turn depends on $L$. Note the use of absolute value here. The formula is:</span>
+<span id="cb2-160"><a href="#cb2-160"></a>$$</span>
+<span id="cb2-161"><a href="#cb2-161"></a>\Delta V = \left| \frac{\partial V}{\partial L} \right| \Delta L</span>
+<span id="cb2-162"><a href="#cb2-162"></a>$$</span>
+<span id="cb2-163"><a href="#cb2-163"></a>where first term is partial derivative $\frac{\partial V}{\partial L}$ and $\Delta L = 1$ cm is the uncertainty in the diameter.</span>
+<span id="cb2-164"><a href="#cb2-164"></a></span>
+<span id="cb2-165"><a href="#cb2-165"></a>**Step 1:** Derive the partial derivative $\frac{\partial V}{\partial L}$:</span>
+<span id="cb2-166"><a href="#cb2-166"></a>$$</span>
+<span id="cb2-167"><a href="#cb2-167"></a>\frac{\partial V}{\partial L} = \frac{\pi}{6} (3 L^2) = \frac{\pi}{2} L^2\approx 2772 \, \text{cm}^2</span>
 <span id="cb2-168"><a href="#cb2-168"></a>$$</span>
-<span id="cb2-169"><a href="#cb2-169"></a>\Delta V = 2772 \times 1 \approx 2772 \, \text{cm}^3</span>
-<span id="cb2-170"><a href="#cb2-170"></a>$$</span>
-<span id="cb2-171"><a href="#cb2-171"></a></span>
-<span id="cb2-172"><a href="#cb2-172"></a>**Conclusion**</span>
-<span id="cb2-173"><a href="#cb2-173"></a></span>
-<span id="cb2-174"><a href="#cb2-174"></a>The volume of the ball is $38808 \, \text{cm}^3$ with an uncertainty of $\pm 2772 \, \text{cm}^3$. We can write is as $V=38808 \, \text{cm}^3 \pm 2772 \, \text{cm}^3$.</span>
-<span id="cb2-175"><a href="#cb2-175"></a></span>
-<span id="cb2-176"><a href="#cb2-176"></a>**Uncertainty as a percentage of the value**</span>
-<span id="cb2-177"><a href="#cb2-177"></a></span>
-<span id="cb2-178"><a href="#cb2-178"></a>Often people write the uncertainty as a percentage of the value. </span>
-<span id="cb2-179"><a href="#cb2-179"></a></span>
-<span id="cb2-180"><a href="#cb2-180"></a>In this case it would be $\Delta V/V \times 100 \%  =2772/38808 \times 100 \% \approx 7 \%$.</span>
-<span id="cb2-181"><a href="#cb2-181"></a></span>
-<span id="cb2-182"><a href="#cb2-182"></a>Similarly, relative uncertainty can be written as $\Delta V/V = 2772/38808 \approx 0.07$.</span>
-<span id="cb2-183"><a href="#cb2-183"></a></span>
-<span id="cb2-184"><a href="#cb2-184"></a>Here’s an improved and slightly reorganized version of your markdown notes:</span>
-<span id="cb2-185"><a href="#cb2-185"></a></span>
+<span id="cb2-169"><a href="#cb2-169"></a></span>
+<span id="cb2-170"><a href="#cb2-170"></a>**Step 2:** Calculate $\Delta V$:</span>
+<span id="cb2-171"><a href="#cb2-171"></a>$$</span>
+<span id="cb2-172"><a href="#cb2-172"></a>\Delta V = 2772 \times 1 \approx 2772 \, \text{cm}^3</span>
+<span id="cb2-173"><a href="#cb2-173"></a>$$</span>
+<span id="cb2-174"><a href="#cb2-174"></a></span>
+<span id="cb2-175"><a href="#cb2-175"></a>**Conclusion**</span>
+<span id="cb2-176"><a href="#cb2-176"></a></span>
+<span id="cb2-177"><a href="#cb2-177"></a>The volume of the ball is $38808 \, \text{cm}^3$ with an uncertainty of $\pm 2772 \, \text{cm}^3$. We can write is as $V=38808 \, \text{cm}^3 \pm 2772 \, \text{cm}^3$.</span>
+<span id="cb2-178"><a href="#cb2-178"></a></span>
+<span id="cb2-179"><a href="#cb2-179"></a>**Uncertainty as a percentage of the value**</span>
+<span id="cb2-180"><a href="#cb2-180"></a></span>
+<span id="cb2-181"><a href="#cb2-181"></a>Often people write the uncertainty as a percentage of the value. </span>
+<span id="cb2-182"><a href="#cb2-182"></a></span>
+<span id="cb2-183"><a href="#cb2-183"></a>In this case it would be $\Delta V/V \times 100 \%  =2772/38808 \times 100 \% \approx 7 \%$.</span>
+<span id="cb2-184"><a href="#cb2-184"></a></span>
+<span id="cb2-185"><a href="#cb2-185"></a>Similarly, relative uncertainty can be written as $\Delta V/V = 2772/38808 \approx 0.07$.</span>
 <span id="cb2-186"><a href="#cb2-186"></a></span>
-<span id="cb2-187"><a href="#cb2-187"></a><span class="fu">### Example: Calculating Resistance and Its Uncertainty</span></span>
+<span id="cb2-187"><a href="#cb2-187"></a>Here’s an improved and slightly reorganized version of your markdown notes:</span>
 <span id="cb2-188"><a href="#cb2-188"></a></span>
-<span id="cb2-189"><a href="#cb2-189"></a>We calculate the resistance $R$ of a resistor using **Ohm&#39;s Law**, which relates resistance $R$, voltage $V$, and current $I$ in a circuit:</span>
-<span id="cb2-190"><a href="#cb2-190"></a>$$</span>
-<span id="cb2-191"><a href="#cb2-191"></a>R = \frac{V}{I}</span>
-<span id="cb2-192"><a href="#cb2-192"></a>$$</span>
-<span id="cb2-193"><a href="#cb2-193"></a></span>
-<span id="cb2-194"><a href="#cb2-194"></a>If the voltage $V$ and current $I$ are measured with uncertainties $\Delta V$ and $\Delta I$, the uncertainty in the resistance $\Delta R$ can be estimated using the total derivative method.</span>
-<span id="cb2-195"><a href="#cb2-195"></a>  $$</span>
-<span id="cb2-196"><a href="#cb2-196"></a>  Voltage = V \pm \Delta V</span>
-<span id="cb2-197"><a href="#cb2-197"></a>  $$</span>
+<span id="cb2-189"><a href="#cb2-189"></a></span>
+<span id="cb2-190"><a href="#cb2-190"></a><span class="fu">### Example: Calculating Resistance and Its Uncertainty</span></span>
+<span id="cb2-191"><a href="#cb2-191"></a></span>
+<span id="cb2-192"><a href="#cb2-192"></a>We calculate the resistance $R$ of a resistor using **Ohm&#39;s Law**, which relates resistance $R$, voltage $V$, and current $I$ in a circuit:</span>
+<span id="cb2-193"><a href="#cb2-193"></a>$$</span>
+<span id="cb2-194"><a href="#cb2-194"></a>R = \frac{V}{I}</span>
+<span id="cb2-195"><a href="#cb2-195"></a>$$</span>
+<span id="cb2-196"><a href="#cb2-196"></a></span>
+<span id="cb2-197"><a href="#cb2-197"></a>If the voltage $V$ and current $I$ are measured with uncertainties $\Delta V$ and $\Delta I$, the uncertainty in the resistance $\Delta R$ can be estimated using the total derivative method.</span>
 <span id="cb2-198"><a href="#cb2-198"></a>  $$</span>
-<span id="cb2-199"><a href="#cb2-199"></a>  Current = I \pm \Delta I</span>
+<span id="cb2-199"><a href="#cb2-199"></a>  Voltage = V \pm \Delta V</span>
 <span id="cb2-200"><a href="#cb2-200"></a>  $$</span>
-<span id="cb2-201"><a href="#cb2-201"></a></span>
-<span id="cb2-202"><a href="#cb2-202"></a>The resistance $R$ is given by:</span>
-<span id="cb2-203"><a href="#cb2-203"></a>$$</span>
-<span id="cb2-204"><a href="#cb2-204"></a>R = \frac{V}{I}</span>
-<span id="cb2-205"><a href="#cb2-205"></a>$$</span>
-<span id="cb2-206"><a href="#cb2-206"></a></span>
-<span id="cb2-207"><a href="#cb2-207"></a>The uncertainty $\Delta R$ can be calculated in two ways:</span>
-<span id="cb2-208"><a href="#cb2-208"></a></span>
-<span id="cb2-209"><a href="#cb2-209"></a><span class="ss">1. </span>**Simplified Linear Approximation**:</span>
-<span id="cb2-210"><a href="#cb2-210"></a>   $$</span>
-<span id="cb2-211"><a href="#cb2-211"></a>   \Delta R = \left| \frac{\partial R}{\partial V} \Delta V \right| + \left| \frac{\partial R}{\partial I} \Delta I \right|</span>
-<span id="cb2-212"><a href="#cb2-212"></a>   $$</span>
-<span id="cb2-213"><a href="#cb2-213"></a></span>
-<span id="cb2-214"><a href="#cb2-214"></a><span class="ss">2. </span>**Quadrature Method (Preferred in Engineering)**:</span>
+<span id="cb2-201"><a href="#cb2-201"></a>  $$</span>
+<span id="cb2-202"><a href="#cb2-202"></a>  Current = I \pm \Delta I</span>
+<span id="cb2-203"><a href="#cb2-203"></a>  $$</span>
+<span id="cb2-204"><a href="#cb2-204"></a></span>
+<span id="cb2-205"><a href="#cb2-205"></a>The resistance $R$ is given by:</span>
+<span id="cb2-206"><a href="#cb2-206"></a>$$</span>
+<span id="cb2-207"><a href="#cb2-207"></a>R = \frac{V}{I}</span>
+<span id="cb2-208"><a href="#cb2-208"></a>$$</span>
+<span id="cb2-209"><a href="#cb2-209"></a></span>
+<span id="cb2-210"><a href="#cb2-210"></a>The uncertainty $\Delta R$ can be calculated in two ways:</span>
+<span id="cb2-211"><a href="#cb2-211"></a></span>
+<span id="cb2-212"><a href="#cb2-212"></a><span class="ss">1. </span>**Simplified Linear Approximation**:</span>
+<span id="cb2-213"><a href="#cb2-213"></a>   $$</span>
+<span id="cb2-214"><a href="#cb2-214"></a>   \Delta R = \left| \frac{\partial R}{\partial V} \Delta V \right| + \left| \frac{\partial R}{\partial I} \Delta I \right|</span>
 <span id="cb2-215"><a href="#cb2-215"></a>   $$</span>
-<span id="cb2-216"><a href="#cb2-216"></a>   \Delta R = \sqrt{\left( \frac{\partial R}{\partial V} \Delta V \right)^2 + \left( \frac{\partial R}{\partial I} \Delta I \right)^2}</span>
-<span id="cb2-217"><a href="#cb2-217"></a>   $$</span>
-<span id="cb2-218"><a href="#cb2-218"></a></span>
-<span id="cb2-219"><a href="#cb2-219"></a>Using the formula $R = \frac{V}{I}$, the partial derivatives are:</span>
-<span id="cb2-220"><a href="#cb2-220"></a></span>
-<span id="cb2-221"><a href="#cb2-221"></a><span class="ss">- </span>With respect to $V$:</span>
-<span id="cb2-222"><a href="#cb2-222"></a>  $$</span>
-<span id="cb2-223"><a href="#cb2-223"></a>  \frac{\partial R}{\partial V} = \frac{\partial \left( \frac{V}{I} \right)}{\partial V} = \frac{1}{I}</span>
-<span id="cb2-224"><a href="#cb2-224"></a>  $$</span>
-<span id="cb2-225"><a href="#cb2-225"></a></span>
-<span id="cb2-226"><a href="#cb2-226"></a><span class="ss">- </span>With respect to $I$:</span>
+<span id="cb2-216"><a href="#cb2-216"></a></span>
+<span id="cb2-217"><a href="#cb2-217"></a><span class="ss">2. </span>**Quadrature Method (Preferred in Engineering)**:</span>
+<span id="cb2-218"><a href="#cb2-218"></a>   $$</span>
+<span id="cb2-219"><a href="#cb2-219"></a>   \Delta R = \sqrt{\left( \frac{\partial R}{\partial V} \Delta V \right)^2 + \left( \frac{\partial R}{\partial I} \Delta I \right)^2}</span>
+<span id="cb2-220"><a href="#cb2-220"></a>   $$</span>
+<span id="cb2-221"><a href="#cb2-221"></a></span>
+<span id="cb2-222"><a href="#cb2-222"></a>Using the formula $R = \frac{V}{I}$, the partial derivatives are:</span>
+<span id="cb2-223"><a href="#cb2-223"></a></span>
+<span id="cb2-224"><a href="#cb2-224"></a><span class="ss">- </span>With respect to $V$:</span>
+<span id="cb2-225"><a href="#cb2-225"></a>  $$</span>
+<span id="cb2-226"><a href="#cb2-226"></a>  \frac{\partial R}{\partial V} = \frac{\partial \left( \frac{V}{I} \right)}{\partial V} = \frac{1}{I}</span>
 <span id="cb2-227"><a href="#cb2-227"></a>  $$</span>
-<span id="cb2-228"><a href="#cb2-228"></a>  \frac{\partial R}{\partial I} = \frac{\partial \left( \frac{V}{I} \right)}{\partial I} = -\frac{V}{I^2}</span>
-<span id="cb2-229"><a href="#cb2-229"></a>  $$</span>
-<span id="cb2-230"><a href="#cb2-230"></a></span>
-<span id="cb2-231"><a href="#cb2-231"></a>Substituting the partial derivatives into the uncertainty formula, we get:</span>
-<span id="cb2-232"><a href="#cb2-232"></a>$$</span>
-<span id="cb2-233"><a href="#cb2-233"></a>\Delta R = \sqrt{\left( \frac{\Delta V}{I} \right)^2 + \left( -\frac{V \Delta I}{I^2} \right)^2}</span>
-<span id="cb2-234"><a href="#cb2-234"></a>$$</span>
-<span id="cb2-235"><a href="#cb2-235"></a></span>
-<span id="cb2-236"><a href="#cb2-236"></a>The resistance with its uncertainty is expressed as:</span>
+<span id="cb2-228"><a href="#cb2-228"></a></span>
+<span id="cb2-229"><a href="#cb2-229"></a><span class="ss">- </span>With respect to $I$:</span>
+<span id="cb2-230"><a href="#cb2-230"></a>  $$</span>
+<span id="cb2-231"><a href="#cb2-231"></a>  \frac{\partial R}{\partial I} = \frac{\partial \left( \frac{V}{I} \right)}{\partial I} = -\frac{V}{I^2}</span>
+<span id="cb2-232"><a href="#cb2-232"></a>  $$</span>
+<span id="cb2-233"><a href="#cb2-233"></a></span>
+<span id="cb2-234"><a href="#cb2-234"></a>Substituting the partial derivatives into the uncertainty formula, we get:</span>
+<span id="cb2-235"><a href="#cb2-235"></a>$$</span>
+<span id="cb2-236"><a href="#cb2-236"></a>\Delta R = \sqrt{\left( \frac{\Delta V}{I} \right)^2 + \left( -\frac{V \Delta I}{I^2} \right)^2}</span>
 <span id="cb2-237"><a href="#cb2-237"></a>$$</span>
-<span id="cb2-238"><a href="#cb2-238"></a>Resistance = R \pm \Delta R</span>
-<span id="cb2-239"><a href="#cb2-239"></a>$$</span>
-<span id="cb2-240"><a href="#cb2-240"></a>where:</span>
-<span id="cb2-241"><a href="#cb2-241"></a>$$</span>
-<span id="cb2-242"><a href="#cb2-242"></a>R = \frac{V}{I}, \quad \Delta R = \sqrt{\left( \frac{\Delta V}{I} \right)^2 + \left( \frac{V \Delta I}{I^2} \right)^2}</span>
-<span id="cb2-243"><a href="#cb2-243"></a>$$</span>
-<span id="cb2-244"><a href="#cb2-244"></a></span>
-<span id="cb2-245"><a href="#cb2-245"></a><span class="fu">## Average and standard deviation</span></span>
-<span id="cb2-246"><a href="#cb2-246"></a></span>
-<span id="cb2-247"><a href="#cb2-247"></a>The **average of N measurements** of a physical quantity x_n is given by:</span>
-<span id="cb2-248"><a href="#cb2-248"></a></span>
-<span id="cb2-249"><a href="#cb2-249"></a>$$\bar x = \frac{1}{N} \sum_{n=1}^{N} x_n $$</span>
-<span id="cb2-250"><a href="#cb2-250"></a>where $n=1,2,3,...,N$.</span>
+<span id="cb2-238"><a href="#cb2-238"></a></span>
+<span id="cb2-239"><a href="#cb2-239"></a>The resistance with its uncertainty is expressed as:</span>
+<span id="cb2-240"><a href="#cb2-240"></a>$$</span>
+<span id="cb2-241"><a href="#cb2-241"></a>Resistance = R \pm \Delta R</span>
+<span id="cb2-242"><a href="#cb2-242"></a>$$</span>
+<span id="cb2-243"><a href="#cb2-243"></a>where:</span>
+<span id="cb2-244"><a href="#cb2-244"></a>$$</span>
+<span id="cb2-245"><a href="#cb2-245"></a>R = \frac{V}{I}, \quad \Delta R = \sqrt{\left( \frac{\Delta V}{I} \right)^2 + \left( \frac{V \Delta I}{I^2} \right)^2}</span>
+<span id="cb2-246"><a href="#cb2-246"></a>$$</span>
+<span id="cb2-247"><a href="#cb2-247"></a></span>
+<span id="cb2-248"><a href="#cb2-248"></a><span class="fu">## Average and standard deviation</span></span>
+<span id="cb2-249"><a href="#cb2-249"></a></span>
+<span id="cb2-250"><a href="#cb2-250"></a>The **average of N measurements** of a physical quantity x_n is given by:</span>
 <span id="cb2-251"><a href="#cb2-251"></a></span>
-<span id="cb2-252"><a href="#cb2-252"></a>The **standard deviation** of the N measurements is given by:</span>
-<span id="cb2-253"><a href="#cb2-253"></a></span>
-<span id="cb2-254"><a href="#cb2-254"></a>$$\Delta x = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (x_n - \bar x)^2} $$</span>
-<span id="cb2-255"><a href="#cb2-255"></a></span>
-<span id="cb2-256"><a href="#cb2-256"></a>Be careful as in literature people use:</span>
-<span id="cb2-257"><a href="#cb2-257"></a></span>
-<span id="cb2-258"><a href="#cb2-258"></a><span class="ss">- </span>**standard diviation** $\Delta x = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (x_n - \bar x)^2}$ </span>
-<span id="cb2-259"><a href="#cb2-259"></a>  </span>
-<span id="cb2-260"><a href="#cb2-260"></a><span class="ss">- </span>**standard diviation of the mean** $\Delta x = \sqrt{\frac{1}{N(N-1)} \sum_{n=1}^{N} (x_n - \bar x)^2}$.</span>
-<span id="cb2-261"><a href="#cb2-261"></a>  </span>
-<span id="cb2-262"><a href="#cb2-262"></a>The standard deviation is a measure of the spread or dispersion of the measurements around the average value. A small standard deviation indicates that the measurements are close to the average value, while a large standard deviation indicates that the measurements are spread out over a wider range of values.</span>
-<span id="cb2-263"><a href="#cb2-263"></a></span>
-<span id="cb2-264"><a href="#cb2-264"></a>Mean of the measurements is the average value of the measurements, while the standard deviation is a measure of the spread or dispersion of the measurements around the mean value. The standard deviation is a measure of the uncertainty in the measurements and can be used to estimate the error in the average value.</span>
-<span id="cb2-265"><a href="#cb2-265"></a></span>
-<span id="cb2-266"><a href="#cb2-266"></a>The average and standard deviation are important statistical quantities that are used to describe the distribution of measurements and to make comparisons between different sets of data. By calculating the average and standard deviation of a set of measurements, scientists can determine the accuracy and reliability of their experimental data and make more meaningful conclusions about the physical quantity being measured.</span>
-<span id="cb2-267"><a href="#cb2-267"></a></span>
-<span id="cb2-268"><a href="#cb2-268"></a><span class="fu">### Example: Pizza delivery time</span></span>
-<span id="cb2-269"><a href="#cb2-269"></a></span>
-<span id="cb2-270"><a href="#cb2-270"></a>Consider measuring the time it takes for a pizza to be delivered to your house. You order a pizza from a local restaurant and record the delivery times for 10 different orders. The delivery times are recorded in the following table:</span>
-<span id="cb2-271"><a href="#cb2-271"></a></span>
-<span id="cb2-272"><a href="#cb2-272"></a>| Measurement n | Delivery time t_n (min) |</span>
-<span id="cb2-273"><a href="#cb2-273"></a>|---------------|-------------------------|</span>
-<span id="cb2-274"><a href="#cb2-274"></a>| 1             | 30                      |</span>
-<span id="cb2-275"><a href="#cb2-275"></a>| 2             | 25                      |</span>
-<span id="cb2-276"><a href="#cb2-276"></a>| 3             | 31                      |</span>
-<span id="cb2-277"><a href="#cb2-277"></a>| 4             | 40                      |</span>
-<span id="cb2-278"><a href="#cb2-278"></a>| 5             | 23                      |</span>
-<span id="cb2-279"><a href="#cb2-279"></a>| 6             | 45                      |</span>
-<span id="cb2-280"><a href="#cb2-280"></a>| 7             | 30                      |</span>
-<span id="cb2-281"><a href="#cb2-281"></a>| 8             | 25                      |</span>
-<span id="cb2-282"><a href="#cb2-282"></a>| 9             | 35                      |</span>
-<span id="cb2-283"><a href="#cb2-283"></a>| 10            | 47                      |</span>
-<span id="cb2-284"><a href="#cb2-284"></a></span>
-<span id="cb2-285"><a href="#cb2-285"></a>Lets find the shortest and longest delivery time, the average delivery time, and the standard deviation of the delivery times.</span>
-<span id="cb2-286"><a href="#cb2-286"></a></span>
-<span id="cb2-287"><a href="#cb2-287"></a><span class="fu">### Calculations</span></span>
-<span id="cb2-288"><a href="#cb2-288"></a></span>
-<span id="cb2-289"><a href="#cb2-289"></a>**Shortest and Longest Delivery Time:**</span>
-<span id="cb2-290"><a href="#cb2-290"></a></span>
-<span id="cb2-291"><a href="#cb2-291"></a><span class="ss">- </span>Shortest delivery time: 23 minutes</span>
-<span id="cb2-292"><a href="#cb2-292"></a><span class="ss">- </span>Longest delivery time: 47 minutes</span>
+<span id="cb2-252"><a href="#cb2-252"></a>$$\bar x = \frac{1}{N} \sum_{n=1}^{N} x_n $$</span>
+<span id="cb2-253"><a href="#cb2-253"></a>where $n=1,2,3,...,N$.</span>
+<span id="cb2-254"><a href="#cb2-254"></a></span>
+<span id="cb2-255"><a href="#cb2-255"></a>The **standard deviation** of the N measurements is given by:</span>
+<span id="cb2-256"><a href="#cb2-256"></a></span>
+<span id="cb2-257"><a href="#cb2-257"></a>$$\Delta x = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (x_n - \bar x)^2} $$</span>
+<span id="cb2-258"><a href="#cb2-258"></a></span>
+<span id="cb2-259"><a href="#cb2-259"></a>Be careful as in literature people use:</span>
+<span id="cb2-260"><a href="#cb2-260"></a></span>
+<span id="cb2-261"><a href="#cb2-261"></a><span class="ss">- </span>**standard diviation** $\Delta x = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (x_n - \bar x)^2}$ </span>
+<span id="cb2-262"><a href="#cb2-262"></a>  </span>
+<span id="cb2-263"><a href="#cb2-263"></a><span class="ss">- </span>**standard diviation of the mean** $\Delta x = \sqrt{\frac{1}{N(N-1)} \sum_{n=1}^{N} (x_n - \bar x)^2}$.</span>
+<span id="cb2-264"><a href="#cb2-264"></a>  </span>
+<span id="cb2-265"><a href="#cb2-265"></a>The standard deviation is a measure of the spread or dispersion of the measurements around the average value. A small standard deviation indicates that the measurements are close to the average value, while a large standard deviation indicates that the measurements are spread out over a wider range of values.</span>
+<span id="cb2-266"><a href="#cb2-266"></a></span>
+<span id="cb2-267"><a href="#cb2-267"></a>Mean of the measurements is the average value of the measurements, while the standard deviation is a measure of the spread or dispersion of the measurements around the mean value. The standard deviation is a measure of the uncertainty in the measurements and can be used to estimate the error in the average value.</span>
+<span id="cb2-268"><a href="#cb2-268"></a></span>
+<span id="cb2-269"><a href="#cb2-269"></a>The average and standard deviation are important statistical quantities that are used to describe the distribution of measurements and to make comparisons between different sets of data. By calculating the average and standard deviation of a set of measurements, scientists can determine the accuracy and reliability of their experimental data and make more meaningful conclusions about the physical quantity being measured.</span>
+<span id="cb2-270"><a href="#cb2-270"></a></span>
+<span id="cb2-271"><a href="#cb2-271"></a><span class="fu">### Example: Pizza delivery time</span></span>
+<span id="cb2-272"><a href="#cb2-272"></a></span>
+<span id="cb2-273"><a href="#cb2-273"></a>Consider measuring the time it takes for a pizza to be delivered to your house. You order a pizza from a local restaurant and record the delivery times for 10 different orders. The delivery times are recorded in the following table:</span>
+<span id="cb2-274"><a href="#cb2-274"></a></span>
+<span id="cb2-275"><a href="#cb2-275"></a>| Measurement n | Delivery time t_n (min) |</span>
+<span id="cb2-276"><a href="#cb2-276"></a>|---------------|-------------------------|</span>
+<span id="cb2-277"><a href="#cb2-277"></a>| 1             | 30                      |</span>
+<span id="cb2-278"><a href="#cb2-278"></a>| 2             | 25                      |</span>
+<span id="cb2-279"><a href="#cb2-279"></a>| 3             | 31                      |</span>
+<span id="cb2-280"><a href="#cb2-280"></a>| 4             | 40                      |</span>
+<span id="cb2-281"><a href="#cb2-281"></a>| 5             | 23                      |</span>
+<span id="cb2-282"><a href="#cb2-282"></a>| 6             | 45                      |</span>
+<span id="cb2-283"><a href="#cb2-283"></a>| 7             | 30                      |</span>
+<span id="cb2-284"><a href="#cb2-284"></a>| 8             | 25                      |</span>
+<span id="cb2-285"><a href="#cb2-285"></a>| 9             | 35                      |</span>
+<span id="cb2-286"><a href="#cb2-286"></a>| 10            | 47                      |</span>
+<span id="cb2-287"><a href="#cb2-287"></a></span>
+<span id="cb2-288"><a href="#cb2-288"></a>Lets find the shortest and longest delivery time, the average delivery time, and the standard deviation of the delivery times.</span>
+<span id="cb2-289"><a href="#cb2-289"></a></span>
+<span id="cb2-290"><a href="#cb2-290"></a><span class="fu">### Calculations</span></span>
+<span id="cb2-291"><a href="#cb2-291"></a></span>
+<span id="cb2-292"><a href="#cb2-292"></a>**Shortest and Longest Delivery Time:**</span>
 <span id="cb2-293"><a href="#cb2-293"></a></span>
-<span id="cb2-294"><a href="#cb2-294"></a>**Average Delivery Time:**</span>
-<span id="cb2-295"><a href="#cb2-295"></a></span>
-<span id="cb2-296"><a href="#cb2-296"></a>$$\small</span>
-<span id="cb2-297"><a href="#cb2-297"></a>\text{Average delivery time} = \frac{1}{N} \sum_{n=1}^{N} t_n = \frac{1}{10} (30 + 25 + 31 + 40 + 23 + 45 + 30 + 25 + 35 + 47) = 32.6 \text{ minutes}</span>
-<span id="cb2-298"><a href="#cb2-298"></a>$$</span>
-<span id="cb2-299"><a href="#cb2-299"></a></span>
-<span id="cb2-300"><a href="#cb2-300"></a>**Standard Deviation:**</span>
-<span id="cb2-301"><a href="#cb2-301"></a></span>
-<span id="cb2-302"><a href="#cb2-302"></a>$$\small</span>
-<span id="cb2-303"><a href="#cb2-303"></a>\text{Standard deviation} = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (t_n - \bar{t})^2} = \sqrt{\frac{(30 - 32.6)^2 + (25 - 32.6)^2 + \ldots + (47 - 32.6)^2}{9}} \approx 8.9 \text{ minutes}</span>
-<span id="cb2-304"><a href="#cb2-304"></a>$$</span>
-<span id="cb2-305"><a href="#cb2-305"></a></span>
-<span id="cb2-306"><a href="#cb2-306"></a>In conclusion, the average delivery time is 32.6 minutes, with a standard deviation of 8.9 minutes.</span>
-<span id="cb2-307"><a href="#cb2-307"></a></span>
-<span id="cb2-308"><a href="#cb2-308"></a><span class="fu">## Error bar</span></span>
-<span id="cb2-309"><a href="#cb2-309"></a></span>
-<span id="cb2-310"><a href="#cb2-310"></a>Error bars are a graphical representation of the uncertainty in a measurement. They are typically shown as vertical or horizontal lines on a graph that indicate the range of values within which the true value of the measurement is likely to lie. Error bars are used to visualize the uncertainty in a measurement and to make comparisons between different data points.</span>
-<span id="cb2-311"><a href="#cb2-311"></a></span>
-<span id="cb2-312"><a href="#cb2-312"></a><span class="fu"># Example of error bar in python </span></span>
-<span id="cb2-313"><a href="#cb2-313"></a></span>
-<span id="cb2-316"><a href="#cb2-316"></a><span class="in">```{python}</span></span>
-<span id="cb2-317"><a href="#cb2-317"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-318"><a href="#cb2-318"></a></span>
-<span id="cb2-319"><a href="#cb2-319"></a><span class="co"># Data</span></span>
-<span id="cb2-320"><a href="#cb2-320"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb2-321"><a href="#cb2-321"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>]</span>
-<span id="cb2-322"><a href="#cb2-322"></a>y_err <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="dv">1</span>]</span>
-<span id="cb2-323"><a href="#cb2-323"></a></span>
-<span id="cb2-324"><a href="#cb2-324"></a><span class="co"># Plot with error bars</span></span>
-<span id="cb2-325"><a href="#cb2-325"></a>plt.errorbar(x, y, yerr<span class="op">=</span>y_err, fmt<span class="op">=</span><span class="st">&#39;o&#39;</span>, capsize<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb2-326"><a href="#cb2-326"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
-<span id="cb2-327"><a href="#cb2-327"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
-<span id="cb2-328"><a href="#cb2-328"></a>plt.title(<span class="st">&#39;Error Bar Example&#39;</span>)</span>
-<span id="cb2-329"><a href="#cb2-329"></a>plt.show()</span>
-<span id="cb2-330"><a href="#cb2-330"></a><span class="in">```</span></span>
-<span id="cb2-331"><a href="#cb2-331"></a></span>
-<span id="cb2-332"><a href="#cb2-332"></a></span>
-<span id="cb2-333"><a href="#cb2-333"></a><span class="fu">## Few nice examples of measurements in physics</span></span>
+<span id="cb2-294"><a href="#cb2-294"></a><span class="ss">- </span>Shortest delivery time: 23 minutes</span>
+<span id="cb2-295"><a href="#cb2-295"></a><span class="ss">- </span>Longest delivery time: 47 minutes</span>
+<span id="cb2-296"><a href="#cb2-296"></a></span>
+<span id="cb2-297"><a href="#cb2-297"></a>**Average Delivery Time:**</span>
+<span id="cb2-298"><a href="#cb2-298"></a></span>
+<span id="cb2-299"><a href="#cb2-299"></a>$$\small</span>
+<span id="cb2-300"><a href="#cb2-300"></a>\text{Average delivery time} = \frac{1}{N} \sum_{n=1}^{N} t_n = \frac{1}{10} (30 + 25 + 31 + 40 + 23 + 45 + 30 + 25 + 35 + 47) = 32.6 \text{ minutes}</span>
+<span id="cb2-301"><a href="#cb2-301"></a>$$</span>
+<span id="cb2-302"><a href="#cb2-302"></a></span>
+<span id="cb2-303"><a href="#cb2-303"></a>**Standard Deviation:**</span>
+<span id="cb2-304"><a href="#cb2-304"></a></span>
+<span id="cb2-305"><a href="#cb2-305"></a>$$\small</span>
+<span id="cb2-306"><a href="#cb2-306"></a>\text{Standard deviation} = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (t_n - \bar{t})^2} = \sqrt{\frac{(30 - 32.6)^2 + (25 - 32.6)^2 + \ldots + (47 - 32.6)^2}{9}} \approx 8.9 \text{ minutes}</span>
+<span id="cb2-307"><a href="#cb2-307"></a>$$</span>
+<span id="cb2-308"><a href="#cb2-308"></a></span>
+<span id="cb2-309"><a href="#cb2-309"></a>In conclusion, the average delivery time is 32.6 minutes, with a standard deviation of 8.9 minutes.</span>
+<span id="cb2-310"><a href="#cb2-310"></a></span>
+<span id="cb2-311"><a href="#cb2-311"></a><span class="fu">## Error bar</span></span>
+<span id="cb2-312"><a href="#cb2-312"></a></span>
+<span id="cb2-313"><a href="#cb2-313"></a>Error bars are a graphical representation of the uncertainty in a measurement. They are typically shown as vertical or horizontal lines on a graph that indicate the range of values within which the true value of the measurement is likely to lie. Error bars are used to visualize the uncertainty in a measurement and to make comparisons between different data points.</span>
+<span id="cb2-314"><a href="#cb2-314"></a></span>
+<span id="cb2-315"><a href="#cb2-315"></a><span class="fu"># Example of error bar in python </span></span>
+<span id="cb2-316"><a href="#cb2-316"></a></span>
+<span id="cb2-319"><a href="#cb2-319"></a><span class="in">```{python}</span></span>
+<span id="cb2-320"><a href="#cb2-320"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-321"><a href="#cb2-321"></a></span>
+<span id="cb2-322"><a href="#cb2-322"></a><span class="co"># Data</span></span>
+<span id="cb2-323"><a href="#cb2-323"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb2-324"><a href="#cb2-324"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>]</span>
+<span id="cb2-325"><a href="#cb2-325"></a>y_err <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="dv">1</span>]</span>
+<span id="cb2-326"><a href="#cb2-326"></a></span>
+<span id="cb2-327"><a href="#cb2-327"></a><span class="co"># Plot with error bars</span></span>
+<span id="cb2-328"><a href="#cb2-328"></a>plt.errorbar(x, y, yerr<span class="op">=</span>y_err, fmt<span class="op">=</span><span class="st">&#39;o&#39;</span>, capsize<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-329"><a href="#cb2-329"></a>plt.xlabel(<span class="st">&#39;x&#39;</span>)</span>
+<span id="cb2-330"><a href="#cb2-330"></a>plt.ylabel(<span class="st">&#39;y&#39;</span>)</span>
+<span id="cb2-331"><a href="#cb2-331"></a>plt.title(<span class="st">&#39;Error Bar Example&#39;</span>)</span>
+<span id="cb2-332"><a href="#cb2-332"></a>plt.show()</span>
+<span id="cb2-333"><a href="#cb2-333"></a><span class="in">```</span></span>
 <span id="cb2-334"><a href="#cb2-334"></a></span>
-<span id="cb2-335"><a href="#cb2-335"></a><span class="fu">### Eratosthenes&#39; Measurement of Earth&#39;s Circumference</span></span>
-<span id="cb2-336"><a href="#cb2-336"></a></span>
-<span id="cb2-337"><a href="#cb2-337"></a>Eratosthenes was a Greek mathematician, geographer, poet, astronomer, and music theorist who lived in the third century BC. He is famous for accurately <span class="co">[</span><span class="ot">calculating the Earth&#39;s circumference</span><span class="co">](https://youtu.be/Mw30CgaXiQw?si=uFrM9bP4S2BAhL87)</span> using simple geometry.</span>
-<span id="cb2-338"><a href="#cb2-338"></a></span>
-<span id="cb2-339"><a href="#cb2-339"></a><span class="ss">1. </span>**Observation in Syene (modern-day Aswan, Egypt):**</span>
-<span id="cb2-340"><a href="#cb2-340"></a><span class="ss">   - </span>At noon on the summer solstice, the Sun was directly overhead, casting no shadow and reflecting in a well. This indicated that Syene lay on the Tropic of Cancer.</span>
+<span id="cb2-335"><a href="#cb2-335"></a></span>
+<span id="cb2-336"><a href="#cb2-336"></a><span class="fu">## Few nice examples of measurements in physics</span></span>
+<span id="cb2-337"><a href="#cb2-337"></a></span>
+<span id="cb2-338"><a href="#cb2-338"></a><span class="fu">### Eratosthenes&#39; Measurement of Earth&#39;s Circumference</span></span>
+<span id="cb2-339"><a href="#cb2-339"></a></span>
+<span id="cb2-340"><a href="#cb2-340"></a>Eratosthenes was a Greek mathematician, geographer, poet, astronomer, and music theorist who lived in the third century BC. He is famous for accurately <span class="co">[</span><span class="ot">calculating the Earth&#39;s circumference</span><span class="co">](https://youtu.be/Mw30CgaXiQw?si=uFrM9bP4S2BAhL87)</span> using simple geometry.</span>
 <span id="cb2-341"><a href="#cb2-341"></a></span>
-<span id="cb2-342"><a href="#cb2-342"></a><span class="ss">2. </span>**Measurement in Alexandria:**</span>
-<span id="cb2-343"><a href="#cb2-343"></a><span class="ss">   - </span>In Alexandria, north of Syene, Eratosthenes measured the Sun&#39;s angle at noon during the summer solstice: **7°**.</span>
+<span id="cb2-342"><a href="#cb2-342"></a><span class="ss">1. </span>**Observation in Syene (modern-day Aswan, Egypt):**</span>
+<span id="cb2-343"><a href="#cb2-343"></a><span class="ss">   - </span>At noon on the summer solstice, the Sun was directly overhead, casting no shadow and reflecting in a well. This indicated that Syene lay on the Tropic of Cancer.</span>
 <span id="cb2-344"><a href="#cb2-344"></a></span>
-<span id="cb2-345"><a href="#cb2-345"></a><span class="ss">3. </span>**Distance Between Cities:**</span>
-<span id="cb2-346"><a href="#cb2-346"></a><span class="ss">   - </span>He hired a man to measure the distance between Syene and Alexandria: **800 km**.</span>
+<span id="cb2-345"><a href="#cb2-345"></a><span class="ss">2. </span>**Measurement in Alexandria:**</span>
+<span id="cb2-346"><a href="#cb2-346"></a><span class="ss">   - </span>In Alexandria, north of Syene, Eratosthenes measured the Sun&#39;s angle at noon during the summer solstice: **7°**.</span>
 <span id="cb2-347"><a href="#cb2-347"></a></span>
-<span id="cb2-348"><a href="#cb2-348"></a><span class="ss">4. </span>**Calculation:**</span>
-<span id="cb2-349"><a href="#cb2-349"></a><span class="ss">   - </span>He assumed the Earth is a sphere and used the fraction of the Earth&#39;s circumference that 7° represents:</span>
-<span id="cb2-350"><a href="#cb2-350"></a>     $$</span>
-<span id="cb2-351"><a href="#cb2-351"></a>     \frac{7^\circ}{360^\circ} = \frac{800 \, \text{km}}{\text{Earth&#39;s circumference}}</span>
-<span id="cb2-352"><a href="#cb2-352"></a>     $$</span>
-<span id="cb2-353"><a href="#cb2-353"></a></span>
-<span id="cb2-354"><a href="#cb2-354"></a>Earth&#39;s circumference:</span>
-<span id="cb2-355"><a href="#cb2-355"></a>  $$</span>
-<span id="cb2-356"><a href="#cb2-356"></a>  \text{Circumference} = \frac{800 \, \text{km}}{\frac{7}{360}} = 40,000 \, \text{km}</span>
-<span id="cb2-357"><a href="#cb2-357"></a>  $$</span>
-<span id="cb2-358"><a href="#cb2-358"></a></span>
-<span id="cb2-359"><a href="#cb2-359"></a>Earth&#39;s radius:</span>
+<span id="cb2-348"><a href="#cb2-348"></a><span class="ss">3. </span>**Distance Between Cities:**</span>
+<span id="cb2-349"><a href="#cb2-349"></a><span class="ss">   - </span>He hired a man to measure the distance between Syene and Alexandria: **800 km**.</span>
+<span id="cb2-350"><a href="#cb2-350"></a></span>
+<span id="cb2-351"><a href="#cb2-351"></a><span class="ss">4. </span>**Calculation:**</span>
+<span id="cb2-352"><a href="#cb2-352"></a><span class="ss">   - </span>He assumed the Earth is a sphere and used the fraction of the Earth&#39;s circumference that 7° represents:</span>
+<span id="cb2-353"><a href="#cb2-353"></a>     $$</span>
+<span id="cb2-354"><a href="#cb2-354"></a>     \frac{7^\circ}{360^\circ} = \frac{800 \, \text{km}}{\text{Earth&#39;s circumference}}</span>
+<span id="cb2-355"><a href="#cb2-355"></a>     $$</span>
+<span id="cb2-356"><a href="#cb2-356"></a></span>
+<span id="cb2-357"><a href="#cb2-357"></a>Earth&#39;s circumference:</span>
+<span id="cb2-358"><a href="#cb2-358"></a>  $$</span>
+<span id="cb2-359"><a href="#cb2-359"></a>  \text{Circumference} = \frac{800 \, \text{km}}{\frac{7}{360}} = 40,000 \, \text{km}</span>
 <span id="cb2-360"><a href="#cb2-360"></a>  $$</span>
-<span id="cb2-361"><a href="#cb2-361"></a>  R = \frac{40,000 \, \text{km}}{2 \pi} \approx 6370 \, \text{km}</span>
-<span id="cb2-362"><a href="#cb2-362"></a>  $$</span>
-<span id="cb2-363"><a href="#cb2-363"></a></span>
-<span id="cb2-364"><a href="#cb2-364"></a>---</span>
-<span id="cb2-365"><a href="#cb2-365"></a></span>
-<span id="cb2-366"><a href="#cb2-366"></a><span class="fu">### Measuring Earth&#39;s Mass with a Pendulum</span></span>
-<span id="cb2-367"><a href="#cb2-367"></a></span>
-<span id="cb2-368"><a href="#cb2-368"></a>The Earth&#39;s mass can be calculated using a pendulum and Newton&#39;s law of gravitation:</span>
-<span id="cb2-369"><a href="#cb2-369"></a></span>
-<span id="cb2-370"><a href="#cb2-370"></a>$$</span>
-<span id="cb2-371"><a href="#cb2-371"></a>mg = \frac{G m M}{R^2}</span>
-<span id="cb2-372"><a href="#cb2-372"></a>$$</span>
-<span id="cb2-373"><a href="#cb2-373"></a>Rearranging for $M$ (Earth&#39;s mass):</span>
-<span id="cb2-374"><a href="#cb2-374"></a>$$</span>
-<span id="cb2-375"><a href="#cb2-375"></a>M = \frac{g R^2}{G} = \frac{4 \pi^2 R^2}{G} \frac{L}{T^2}</span>
-<span id="cb2-376"><a href="#cb2-376"></a>$$</span>
-<span id="cb2-377"><a href="#cb2-377"></a></span>
-<span id="cb2-378"><a href="#cb2-378"></a>Given Values:</span>
-<span id="cb2-379"><a href="#cb2-379"></a></span>
-<span id="cb2-380"><a href="#cb2-380"></a><span class="ss">- </span>Gravitational constant: $G = 6.674 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$</span>
-<span id="cb2-381"><a href="#cb2-381"></a><span class="ss">- </span>Earth&#39;s radius: $R = 6370 \, \text{km}$</span>
+<span id="cb2-361"><a href="#cb2-361"></a></span>
+<span id="cb2-362"><a href="#cb2-362"></a>Earth&#39;s radius:</span>
+<span id="cb2-363"><a href="#cb2-363"></a>  $$</span>
+<span id="cb2-364"><a href="#cb2-364"></a>  R = \frac{40,000 \, \text{km}}{2 \pi} \approx 6370 \, \text{km}</span>
+<span id="cb2-365"><a href="#cb2-365"></a>  $$</span>
+<span id="cb2-366"><a href="#cb2-366"></a></span>
+<span id="cb2-367"><a href="#cb2-367"></a>---</span>
+<span id="cb2-368"><a href="#cb2-368"></a></span>
+<span id="cb2-369"><a href="#cb2-369"></a><span class="fu">### Measuring Earth&#39;s Mass with a Pendulum</span></span>
+<span id="cb2-370"><a href="#cb2-370"></a></span>
+<span id="cb2-371"><a href="#cb2-371"></a>The Earth&#39;s mass can be calculated using a pendulum and Newton&#39;s law of gravitation:</span>
+<span id="cb2-372"><a href="#cb2-372"></a></span>
+<span id="cb2-373"><a href="#cb2-373"></a>$$</span>
+<span id="cb2-374"><a href="#cb2-374"></a>mg = \frac{G m M}{R^2}</span>
+<span id="cb2-375"><a href="#cb2-375"></a>$$</span>
+<span id="cb2-376"><a href="#cb2-376"></a>Rearranging for $M$ (Earth&#39;s mass):</span>
+<span id="cb2-377"><a href="#cb2-377"></a>$$</span>
+<span id="cb2-378"><a href="#cb2-378"></a>M = \frac{g R^2}{G} = \frac{4 \pi^2 R^2}{G} \frac{L}{T^2}</span>
+<span id="cb2-379"><a href="#cb2-379"></a>$$</span>
+<span id="cb2-380"><a href="#cb2-380"></a></span>
+<span id="cb2-381"><a href="#cb2-381"></a>Given Values:</span>
 <span id="cb2-382"><a href="#cb2-382"></a></span>
-<span id="cb2-383"><a href="#cb2-383"></a>By measuring the pendulum&#39;s length ($L$) and period ($T$), we can calculate the Earth&#39;s mass:</span>
-<span id="cb2-384"><a href="#cb2-384"></a>$$</span>
-<span id="cb2-385"><a href="#cb2-385"></a>\text{Mass of Earth} \approx 5.97 \times 10^{24} \, \text{kg}</span>
-<span id="cb2-386"><a href="#cb2-386"></a>$$</span>
-<span id="cb2-387"><a href="#cb2-387"></a></span>
-<span id="cb2-388"><a href="#cb2-388"></a>Henry Cavendish first <span class="co">[</span><span class="ot">measured Earth&#39;s mass</span><span class="co">](https://en.wikipedia.org/wiki/Cavendish_experiment)</span> using his experiment to determine $G$ in the Newtonian gravity formula.:</span>
+<span id="cb2-383"><a href="#cb2-383"></a><span class="ss">- </span>Gravitational constant: $G = 6.674 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$</span>
+<span id="cb2-384"><a href="#cb2-384"></a><span class="ss">- </span>Earth&#39;s radius: $R = 6370 \, \text{km}$</span>
+<span id="cb2-385"><a href="#cb2-385"></a></span>
+<span id="cb2-386"><a href="#cb2-386"></a>By measuring the pendulum&#39;s length ($L$) and period ($T$), we can calculate the Earth&#39;s mass:</span>
+<span id="cb2-387"><a href="#cb2-387"></a>$$</span>
+<span id="cb2-388"><a href="#cb2-388"></a>\text{Mass of Earth} \approx 5.97 \times 10^{24} \, \text{kg}</span>
 <span id="cb2-389"><a href="#cb2-389"></a>$$</span>
-<span id="cb2-390"><a href="#cb2-390"></a>F = \frac{G m_1 m_2}{r^2}</span>
-<span id="cb2-391"><a href="#cb2-391"></a>$$</span>
-<span id="cb2-392"><a href="#cb2-392"></a>---</span>
-<span id="cb2-393"><a href="#cb2-393"></a></span>
-<span id="cb2-394"><a href="#cb2-394"></a><span class="fu">### Speed of Light Using a Microwave Oven</span></span>
-<span id="cb2-395"><a href="#cb2-395"></a></span>
-<span id="cb2-396"><a href="#cb2-396"></a>The speed of light, $c$, can be measured using a microwave oven and chocolate (or cheese). Check links: <span class="co">[</span><span class="ot">here</span><span class="co">](https://youtu.be/kp33ZprO0Ck?si=GE5QrnY2P1YDdrTS)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](https://youtu.be/3hm1CW8SX08?si=x7xOcxzKE8l4UChS)</span>.</span>
-<span id="cb2-397"><a href="#cb2-397"></a></span>
-<span id="cb2-398"><a href="#cb2-398"></a><span class="ss">1. </span>Remove the rotating plate and place chocolate inside the oven.</span>
-<span id="cb2-399"><a href="#cb2-399"></a><span class="ss">2. </span>Heat until the chocolate starts to melt.</span>
-<span id="cb2-400"><a href="#cb2-400"></a><span class="ss">3. </span>Measure the distance ($L$) between the melting points (one wavelength of the microwave standing wave).</span>
-<span id="cb2-401"><a href="#cb2-401"></a></span>
-<span id="cb2-402"><a href="#cb2-402"></a>Formulas:</span>
-<span id="cb2-403"><a href="#cb2-403"></a></span>
-<span id="cb2-404"><a href="#cb2-404"></a><span class="ss">- </span>Wavelength: $\lambda = 2L$</span>
-<span id="cb2-405"><a href="#cb2-405"></a><span class="ss">- </span>Speed of light: $c = f \lambda$</span>
+<span id="cb2-390"><a href="#cb2-390"></a></span>
+<span id="cb2-391"><a href="#cb2-391"></a>Henry Cavendish first <span class="co">[</span><span class="ot">measured Earth&#39;s mass</span><span class="co">](https://en.wikipedia.org/wiki/Cavendish_experiment)</span> using his experiment to determine $G$ in the Newtonian gravity formula.:</span>
+<span id="cb2-392"><a href="#cb2-392"></a>$$</span>
+<span id="cb2-393"><a href="#cb2-393"></a>F = \frac{G m_1 m_2}{r^2}</span>
+<span id="cb2-394"><a href="#cb2-394"></a>$$</span>
+<span id="cb2-395"><a href="#cb2-395"></a>---</span>
+<span id="cb2-396"><a href="#cb2-396"></a></span>
+<span id="cb2-397"><a href="#cb2-397"></a><span class="fu">### Speed of Light Using a Microwave Oven</span></span>
+<span id="cb2-398"><a href="#cb2-398"></a></span>
+<span id="cb2-399"><a href="#cb2-399"></a>The speed of light, $c$, can be measured using a microwave oven and chocolate (or cheese). Check links: <span class="co">[</span><span class="ot">here</span><span class="co">](https://youtu.be/kp33ZprO0Ck?si=GE5QrnY2P1YDdrTS)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](https://youtu.be/3hm1CW8SX08?si=x7xOcxzKE8l4UChS)</span>.</span>
+<span id="cb2-400"><a href="#cb2-400"></a></span>
+<span id="cb2-401"><a href="#cb2-401"></a><span class="ss">1. </span>Remove the rotating plate and place chocolate inside the oven.</span>
+<span id="cb2-402"><a href="#cb2-402"></a><span class="ss">2. </span>Heat until the chocolate starts to melt.</span>
+<span id="cb2-403"><a href="#cb2-403"></a><span class="ss">3. </span>Measure the distance ($L$) between the melting points (one wavelength of the microwave standing wave).</span>
+<span id="cb2-404"><a href="#cb2-404"></a></span>
+<span id="cb2-405"><a href="#cb2-405"></a>Formulas:</span>
 <span id="cb2-406"><a href="#cb2-406"></a></span>
-<span id="cb2-407"><a href="#cb2-407"></a>Calculations:</span>
-<span id="cb2-408"><a href="#cb2-408"></a></span>
-<span id="cb2-409"><a href="#cb2-409"></a><span class="ss">- </span>Frequency of microwave oven: $f = 2.45 \, \text{GHz}$</span>
-<span id="cb2-410"><a href="#cb2-410"></a><span class="ss">- </span>Measured distance: $L = 0.065 \, \text{m}$ (half-wavelength)</span>
-<span id="cb2-411"><a href="#cb2-411"></a>$$</span>
-<span id="cb2-412"><a href="#cb2-412"></a>c = 2.45 \times 10^9 \times 0.13 = 3.185 \times 10^8 \, \text{m/s}</span>
-<span id="cb2-413"><a href="#cb2-413"></a>$$</span>
-<span id="cb2-414"><a href="#cb2-414"></a></span>
-<span id="cb2-415"><a href="#cb2-415"></a>Percentage error:</span>
+<span id="cb2-407"><a href="#cb2-407"></a><span class="ss">- </span>Wavelength: $\lambda = 2L$</span>
+<span id="cb2-408"><a href="#cb2-408"></a><span class="ss">- </span>Speed of light: $c = f \lambda$</span>
+<span id="cb2-409"><a href="#cb2-409"></a></span>
+<span id="cb2-410"><a href="#cb2-410"></a>Calculations:</span>
+<span id="cb2-411"><a href="#cb2-411"></a></span>
+<span id="cb2-412"><a href="#cb2-412"></a><span class="ss">- </span>Frequency of microwave oven: $f = 2.45 \, \text{GHz}$</span>
+<span id="cb2-413"><a href="#cb2-413"></a><span class="ss">- </span>Measured distance: $L = 0.065 \, \text{m}$ (half-wavelength)</span>
+<span id="cb2-414"><a href="#cb2-414"></a>$$</span>
+<span id="cb2-415"><a href="#cb2-415"></a>c = 2.45 \times 10^9 \times 0.13 = 3.185 \times 10^8 \, \text{m/s}</span>
 <span id="cb2-416"><a href="#cb2-416"></a>$$</span>
-<span id="cb2-417"><a href="#cb2-417"></a>\frac{3.185 \times 10^8 - 2.99792458 \times 10^8}{2.99792458 \times 10^8} \times 100 \% \approx 6.3 \%</span>
-<span id="cb2-418"><a href="#cb2-418"></a>$$</span>
-<span id="cb2-419"><a href="#cb2-419"></a></span>
-<span id="cb2-420"><a href="#cb2-420"></a>---</span>
-<span id="cb2-421"><a href="#cb2-421"></a></span>
-<span id="cb2-422"><a href="#cb2-422"></a><span class="fu">### Geometry of the Universe</span></span>
-<span id="cb2-423"><a href="#cb2-423"></a></span>
-<span id="cb2-424"><a href="#cb2-424"></a>By measuring the sum of angles in a triangle, we can determine the geometry of the universe.</span>
-<span id="cb2-425"><a href="#cb2-425"></a></span>
-<span id="cb2-426"><a href="#cb2-426"></a>The sum of angles in a triangle depends on the geometry of the space:</span>
-<span id="cb2-427"><a href="#cb2-427"></a></span>
-<span id="cb2-428"><a href="#cb2-428"></a><span class="ss">1. </span>**Flat Space**: Sum of angles = $180^\circ$</span>
-<span id="cb2-429"><a href="#cb2-429"></a></span>
-<span id="cb2-430"><a href="#cb2-430"></a><span class="ss">2. </span>**Spherical Space**: Sum of angles &gt; $180^\circ$</span>
-<span id="cb2-431"><a href="#cb2-431"></a></span>
-<span id="cb2-432"><a href="#cb2-432"></a><span class="ss">3. </span>**Hyperbolic Space**: Sum of angles &lt; $180^\circ$</span>
-<span id="cb2-433"><a href="#cb2-433"></a></span>
-<span id="cb2-434"><a href="#cb2-434"></a>Link: <span class="al">![](https://commons.wikimedia.org/wiki/File:End_of_universe.jpg#/media/File:End_of_universe.jpg)</span></span>
-<span id="cb2-435"><a href="#cb2-435"></a></span>
-<span id="cb2-436"><a href="#cb2-436"></a>---</span>
-<span id="cb2-437"><a href="#cb2-437"></a></span>
-<span id="cb2-438"><a href="#cb2-438"></a><span class="fu">## Quote</span></span>
-<span id="cb2-439"><a href="#cb2-439"></a></span>
-<span id="cb2-440"><a href="#cb2-440"></a>*&quot;Man started from measuring himself and finished weighing the stars.&quot;*</span>
+<span id="cb2-417"><a href="#cb2-417"></a></span>
+<span id="cb2-418"><a href="#cb2-418"></a>Percentage error:</span>
+<span id="cb2-419"><a href="#cb2-419"></a>$$</span>
+<span id="cb2-420"><a href="#cb2-420"></a>\frac{3.185 \times 10^8 - 2.99792458 \times 10^8}{2.99792458 \times 10^8} \times 100 \% \approx 6.3 \%</span>
+<span id="cb2-421"><a href="#cb2-421"></a>$$</span>
+<span id="cb2-422"><a href="#cb2-422"></a></span>
+<span id="cb2-423"><a href="#cb2-423"></a>---</span>
+<span id="cb2-424"><a href="#cb2-424"></a></span>
+<span id="cb2-425"><a href="#cb2-425"></a><span class="fu">### Geometry of the Universe</span></span>
+<span id="cb2-426"><a href="#cb2-426"></a></span>
+<span id="cb2-427"><a href="#cb2-427"></a>By measuring the sum of angles in a triangle, we can determine the geometry of the universe.</span>
+<span id="cb2-428"><a href="#cb2-428"></a></span>
+<span id="cb2-429"><a href="#cb2-429"></a>The sum of angles in a triangle depends on the geometry of the space:</span>
+<span id="cb2-430"><a href="#cb2-430"></a></span>
+<span id="cb2-431"><a href="#cb2-431"></a><span class="ss">1. </span>**Flat Space**: Sum of angles = $180^\circ$</span>
+<span id="cb2-432"><a href="#cb2-432"></a></span>
+<span id="cb2-433"><a href="#cb2-433"></a><span class="ss">2. </span>**Spherical Space**: Sum of angles &gt; $180^\circ$</span>
+<span id="cb2-434"><a href="#cb2-434"></a></span>
+<span id="cb2-435"><a href="#cb2-435"></a><span class="ss">3. </span>**Hyperbolic Space**: Sum of angles &lt; $180^\circ$</span>
+<span id="cb2-436"><a href="#cb2-436"></a></span>
+<span id="cb2-437"><a href="#cb2-437"></a>Link: <span class="al">![](https://commons.wikimedia.org/wiki/File:End_of_universe.jpg#/media/File:End_of_universe.jpg)</span></span>
+<span id="cb2-438"><a href="#cb2-438"></a></span>
+<span id="cb2-439"><a href="#cb2-439"></a>---</span>
+<span id="cb2-440"><a href="#cb2-440"></a></span>
+<span id="cb2-441"><a href="#cb2-441"></a><span class="fu">## Quote</span></span>
+<span id="cb2-442"><a href="#cb2-442"></a></span>
+<span id="cb2-443"><a href="#cb2-443"></a>*&quot;Man started from measuring himself and finished weighing the stars.&quot;*</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
