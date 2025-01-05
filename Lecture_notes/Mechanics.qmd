@@ -293,10 +293,126 @@ $$
 
 To solve these equations we need to know the initial position and velocity of the particle. These are the boundary conditions of the problem. The boundary conditions are the initial values of the position and velocity of the particle. The boundary conditions determine the trajectory of the particle in space. The boundary conditions can be used to solve the differential equations of motion.
 
-
 ### Newton's third law
 
 Newton's third law states that forces always occur in pairs. If one object exerts a force on another object, the second object exerts an equal and opposite force on the first object. This law is also known as the law of action and reaction. The law of action and reaction states that for every action there is an equal and opposite reaction. This law is a consequence of the conservation of momentum. The momentum of a system is conserved if no external forces act on it.
+
+### Solving the Second-Order Equation Iteratively
+
+#### 1. Rewriting the Second-Order Equation
+
+The second-order equation is:
+
+$$
+\frac{d^2 x(t)}{dt^2} = \frac{F_x(x, y, z, t)}{m}.
+$$
+
+We introduce $v_x(t)$, the velocity in the $x$-direction, such that:
+
+$$
+v_x(t) = \frac{dx(t)}{dt}.
+$$
+
+This converts the equation into a system of two first-order equations:
+
+$$
+\begin{align}
+\frac{dx(t)}{dt} &= v_x(t), \\
+&\\
+\frac{dv_x(t)}{dt} &= \frac{F_x(x, y, z, t)}{m}.
+\end{align}
+$$
+
+ 
+
+#### 2. Iterative Procedure
+
+We solve these equations step-by-step using numerical methods. For simplicity, let's use **Euler's method**:
+
+- Let $x_n = x(t_n)$ and $v_{x,n} = v_x(t_n)$.
+- Given a small time step $\Delta t$, the update rules are:
+  $$
+  \begin{align}
+  x_{n+1} &= x_n + v_{x,n} \Delta t, \\
+  v_{x,n+1} &= v_{x,n} + \frac{F_x(x_n, y_n, z_n, t_n)}{m} \Delta t.
+  \end{align}
+  $$
+
+We iterate these equations to compute the trajectory.
+
+ 
+
+#### 3. Focus on the $x$-Component
+
+To make this concrete, let's assume:
+
+- A force $F_x(x, y, z, t) = -kx^3$, where $k$ is a constant.
+- We ignore $y$ and $z$ for simplicity (focus on $x$-component only).
+
+This gives:
+
+$$
+\frac{dv_x(t)}{dt} = \frac{-k (x(t))^3}{m}.
+$$
+
+The iterative update rules become:
+
+$$
+\begin{cases}
+  x_{n+1} = x_n + v_{x,n} \Delta t, \\
+  v_{x,n+1} = v_{x,n} - \frac{k x_n^3}{m} \Delta t.
+\end{cases}
+$$
+
+ 
+
+#### 4. Numerical Implementation
+
+Here's how we can implement this:
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+k = 1.0        # Spring constant
+m = 1.0        # Mass
+dt = 0.01      # Time step
+steps = 1000   # Number of steps
+x0 = 1.0       # Initial position
+v0 = 0.0       # Initial velocity
+
+def force(x):
+    return -k * x*x*x
+
+# Arrays to store time, position, and velocity
+time = np.linspace(0, steps * dt, steps)
+x = np.zeros(steps)
+v = np.zeros(steps)
+
+# Initial conditions
+x[0] = x0
+v[0] = v0
+
+# Iterative solution using Euler's method
+for n in range(steps - 1):
+    # Update position
+    x[n + 1] = x[n] + v[n] * dt
+    # Update velocity
+    v[n + 1] = v[n] + force(x[n]) / m * dt
+
+# Plot results
+plt.figure(figsize=(10, 5))
+plt.plot(time, x, label='Position (x)')
+plt.plot(time, v, label='Velocity (v)')
+plt.xlabel('Time (t)')
+plt.ylabel('Position/Velocity')
+plt.title('Harmonic Oscillator Solution')
+plt.legend()
+plt.grid()
+plt.show()
+```
+
 
 ## Basic examples
 
