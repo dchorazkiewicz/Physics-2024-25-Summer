@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symulacja Kulek</title>
+    <title>Wave simulation</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <style>
         body {
@@ -29,10 +29,10 @@
     </style>
 </head>
 <body>
-    <h1>Symulacja Ruchu Kulek</h1>
+    <h1>Wave simulation</h1>
     <div class="controls">
         <button onclick="resetSimulation()">Reset</button>
-        <button onclick="togglePlayPause()" id="playPauseButton">Pause</button>
+        <button onclick="togglePlayPause()" id="playPauseButton">▶</button>
     </div>
     <script>
         // Parametry układu
@@ -45,7 +45,7 @@
 
         let positions = [];
         let velocities = [];
-        let isPaused = false;
+        let isPaused = true;
 
         // Parametry symulacji
         const dt = 0.016; // krok czasowy (w sekundach)
@@ -53,15 +53,19 @@
         function resetSimulation() {
             positions = Array.from({ length: N }, (_, i) => offsetX + i * L);
             velocities = Array(N).fill(0);
-            positions[0] += 20; // Zaburzenie pierwszej kulki
+            positions[0] -= 40; // Zaburzenie pierwszej kulki
 
             // Zwiększ rozmiar canvas, jeśli kulki się nie mieszczą
             resizeCanvas(offsetX + (N * L) + 100, 200);
+
+            // Po resecie symulacja jest wstrzymana
+            isPaused = true;
+            document.getElementById('playPauseButton').textContent = '▶';
         }
 
         function togglePlayPause() {
             isPaused = !isPaused;
-            document.getElementById('playPauseButton').textContent = isPaused ? 'Play' : 'Pause';
+            document.getElementById('playPauseButton').textContent = isPaused ? '▶' : '⏸';
         }
 
         function setup() {
@@ -73,6 +77,14 @@
             if (isPaused) return;
 
             background(220);
+
+            // Rysowanie linii położenia równowagi dla każdej kulki
+            stroke(200, 0, 0);
+            strokeWeight(1);
+            for (let i = 0; i < N; i++) {
+                let equilibriumX = offsetX + i * L;
+                line(equilibriumX, height / 2 - 10, equilibriumX, height / 2 + 10);
+            }
 
             // Aktualizacja pozycji i prędkości
             let accelerations = Array(N).fill(0);

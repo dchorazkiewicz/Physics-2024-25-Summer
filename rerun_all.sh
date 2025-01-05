@@ -24,9 +24,44 @@ for qmd_file in *.qmd; do
   fi
 done
 
+# Change back to the original directory
+cd ..
+
+# Automatyczne ustawienie katalogu głównego na bieżący katalog
+ROOT_DIR=$(pwd)
+
+# Tworzenie linków w katalogu Mechanics
+cd "$ROOT_DIR/docs/Mechanics" || exit
+ln -sf ../../Lecture_notes/Language_of_physics.html Language_of_physics.html
+ln -sf ../../Lecture_notes/Mechanics.html Mechanics.html
+ln -sf ../../Lecture_notes/Waves.html Waves.html
+
+# Tworzenie linków w katalogu Electromagnetism
+cd "$ROOT_DIR/docs/Electromagnetism" || exit
+ln -sf ../../Lecture_notes/Electromagnetism.html Electromagnetism.html
+ln -sf ../../Lecture_notes/Circuits.html Circuits.html
+
+# Tworzenie linków w katalogu Experiments_Statistics
+cd "$ROOT_DIR/docs/Experiments_Statistics" || exit
+ln -sf ../../Lecture_notes/Measurement.html Measurement.html
+ln -sf ../../Lecture_notes/Statistics.html Statistics.html
+
+# Tworzenie linków w katalogu Modern_Physics
+cd "$ROOT_DIR/docs/Modern_Physics" || exit
+ln -sf ../../Lecture_notes/Quantum_mechanics.html Quantum_mechanics.html
+ln -sf ../../Lecture_notes/Cosmology.html Cosmology.html
+
+# Powrót do katalogu głównego
+cd "$ROOT_DIR" || exit
+
+
+
 # Deploy using mkdocs
 echo "Deploying site with mkdocs..."
-cd ..
+
+# print the current directory
+pwd
+
 mkdocs gh-deploy
 
 echo "All tasks completed successfully."
