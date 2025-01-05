@@ -3454,7 +3454,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \]</span></p>
 <section id="python-implementation" class="level5">
 <h5 class="anchored" data-anchor-id="python-implementation">Python implementation</h5>
-<div id="d7b6ffaa" class="cell" data-execution_count="1">
+<div id="256d6fbf" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3541,7 +3541,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} = \left(\frac{dx(t)}{dt}, \frac{dy(t)}{dt}\right)
 \]</span></p>
 <p>The velocity vector describes the speed and direction of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the velocity vector is the speed of the particle. The direction of the velocity vector is the direction of motion of the particle.</p>
-<div id="278422e8" class="cell" data-execution_count="2">
+<div id="234f2bee" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3607,7 +3607,7 @@ t\rightarrow \mathbf{r}(t) = (x(t), y(t))
 \left(\frac{d^2x(t)}{dt^2}, \frac{d^2y(t)}{dt^2}\right)
 \]</span></p>
 <p>The acceleration vector describes the rate of change of the velocity of the particle at any time <span class="math inline">\(t\)</span>. The magnitude of the acceleration vector is the rate of change of the speed of the particle. The direction of the acceleration vector is the direction of the change of the velocity of the particle.</p>
-<div id="43f13434" class="cell" data-execution_count="3">
+<div id="030c0930" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3726,7 +3726,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 </section>
 <section id="numerical-solution" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution">Numerical solution</h4>
-<div id="913195e2" class="cell" data-execution_count="4">
+<div id="945466ac" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3820,7 +3820,7 @@ y(t) &amp;= -\frac{1}{2} g t^2 + v_{0y} t + y_0
 \frac{d^2 x(t)}{dt^2} = -\frac{k}{m} x(t)
 \]</span></p>
 <p>where <span class="math inline">\(k\)</span> is the spring constant and <span class="math inline">\(m\)</span> is the mass of the particle. The acceleration of the particle is proportional to its position, and the force acting on the particle is the force of a spring, equal to the spring constant times the position of the particle.</p>
-<div id="3d786fb5" class="cell" data-execution_count="5">
+<div id="6da44fd1" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3888,7 +3888,7 @@ x(t) = A \sin(\omega t) + B \cos(\omega t)
 </section>
 <section id="numerical-solution-1" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-1">Numerical solution</h4>
-<div id="1b3a22fd" class="cell" data-execution_count="6">
+<div id="365c6d7d" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -3954,7 +3954,7 @@ x(t) = A \sin(\omega t) + B \cos(\omega t)
 <p><span class="math display">\[
 F = -mg \sin(\theta)
 \]</span></p>
-<div id="4cb0eb53" class="cell" data-execution_count="7">
+<div id="f9ae6e4a" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4063,7 +4063,7 @@ L \frac{d^2 \theta}{dt^2} = -g \sin(\theta)
 <section id="numerical-solution-2" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-solution-2">Numerical Solution</h4>
 <p>For larger angles, the small-angle approximation does not hold, and we need to solve the original nonlinear equation numerically. We can use the finite difference method to approximate the solution.</p>
-<div id="f8258d62" class="cell" data-execution_count="8">
+<div id="6d097699" class="cell" data-execution_count="8">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4145,7 +4145,7 @@ v = L \frac{d\theta}{dt}, \quad h = L (1 - \cos\theta)
 E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 \]</span></p>
 <p>The energy remains constant over time, which can be verified numerically.</p>
-<div id="07b26e05" class="cell" data-execution_count="9">
+<div id="e39aa23a" class="cell" data-execution_count="9">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Calculate energies</span></span>
@@ -4233,7 +4233,7 @@ E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 <section id="numerical-example" class="level4">
 <h4 class="anchored" data-anchor-id="numerical-example">Numerical Example</h4>
 <p>We will visualize the position, velocity, and acceleration at two distinct points along the circular path.</p>
-<div id="33e254d2" class="cell" data-execution_count="10">
+<div id="8912ec99" class="cell" data-execution_count="10">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4319,7 +4319,7 @@ E = \frac{1}{2} m L^2 \left(\frac{d\theta}{dt}\right)^2 + m g L (1 - \cos\theta)
 <section id="visualization-gravitational-field" class="level4">
 <h4 class="anchored" data-anchor-id="visualization-gravitational-field">Visualization: Gravitational Field</h4>
 <p>We visualize the gravitational field of a central mass <span class="math inline">\(M\)</span> in 2D slice.</p>
-<div id="e0d141cf" class="cell" data-execution_count="11">
+<div id="6b49b8bd" class="cell" data-execution_count="11">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4392,7 +4392,7 @@ v_\text{escape} = \sqrt{2G \frac{M}{R}}
 <li>Mass of Earth (<span class="math inline">\(M_\text{Earth}\)</span>): <span class="math inline">\(5.972 \times 10^{24} \ \mathrm{kg}\)</span></li>
 <li>Radius of Earth (<span class="math inline">\(R_\text{Earth}\)</span>): <span class="math inline">\(6.371 \times 10^6 \ \mathrm{m}\)</span></li>
 </ul>
-<div id="4458628e" class="cell" data-execution_count="12">
+<div id="d2defe60" class="cell" data-execution_count="12">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Constants</span></span>
@@ -4428,7 +4428,7 @@ U = -G \frac{m_1 m_2}{r}
 </section>
 <section id="small-body-around-the-earth" class="level3">
 <h3 class="anchored" data-anchor-id="small-body-around-the-earth">Small body around the Earth</h3>
-<div id="0478f19d" class="cell" data-execution_count="13">
+<div id="f7782224" class="cell" data-execution_count="13">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -4498,7 +4498,7 @@ U = -G \frac{m_1 m_2}{r}
 </section>
 <section id="earth-moon-system-with-small-body" class="level3">
 <h3 class="anchored" data-anchor-id="earth-moon-system-with-small-body">Earth-Moon System with small body</h3>
-<div id="d650dc02" class="cell" data-execution_count="14">
+<div id="db4fc120" class="cell" data-execution_count="14">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
