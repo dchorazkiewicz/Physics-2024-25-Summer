@@ -3496,7 +3496,7 @@ V_{ab} = \phi_a - \phi_b
 </li>
 <li><strong>Diodes</strong></li>
 </ol>
-<p>We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using <embed role="img" src="data:text/html; charset=utf-8;charset=utf-8,%3C%21DOCTYPE%20html%3E%0A%0A%3Chtml%20lang%3D%22en%22%3E%0A%20%20%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22utf%2D8%22%20%2F%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice%2Dwidth%2C%20initial%2Dscale%3D1%2E0%22%20%2F%3E%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice%2Dwidth%2C%20initial%2Dscale%3D1%22%20%2F%3E%0A%0A%20%20%20%20%3Ctitle%3EGetting%20Started%20%26%238212%3B%20Schemdraw%200%2E19%20documentation%3C%2Ftitle%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text%2Fcss%22%20href%3D%22%2E%2E%2F%5Fstatic%2Fpygments%2Ecss%3Fv%3D4f649999%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text%2Fcss%22%20href%3D%22%2E%2E%2F%5Fstatic%2Falabaster%2Ecss%3Fv%3D039e1c02%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text%2Fcss%22%20href%3D%22%2E%2E%2F%5Fstatic%2Fjupyter%2Dsphinx%2Ecss%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text%2Fcss%22%20href%3D%22%2E%2E%2F%5Fstatic%2Fthebelab%2Ecss%22%20%2F%3E%0A%20%20%20%20%0A%20%20%20%20%3Cscript%20data%2Durl%5Froot%3D%22%2E%2E%2F%22%20id%3D%22documentation%5Foptions%22%20src%3D%22%2E%2E%2F%5Fstatic%2Fdocumentation%5Foptions%2Ejs%3Fv%3D533fd5ee%22%3E%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%20src%3D%22%2E%2E%2F%5Fstatic%2Fdoctools%2Ejs%3Fv%3D888ff710%22%3E%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%20src%3D%22%2E%2E%2F%5Fstatic%2Fsphinx%5Fhighlight%2Ejs%3Fv%3D4825356b%22%3E%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%20src%3D%22%2E%2E%2F%5Fstatic%2Fthebelab%2Dhelper%2Ejs%22%3E%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs%2Ecloudflare%2Ecom%2Fajax%2Flibs%2Frequire%2Ejs%2F2%2E3%2E4%2Frequire%2Emin%2Ejs%22%3E%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A%2F%2Fcdn%2Ejsdelivr%2Enet%2Fnpm%2F%40jupyter%2Dwidgets%2Fhtml%2Dmanager%40%5E1%2E0%2E1%2Fdist%2Fembed%2Damd%2Ejs%22%3E%3C%2Fscript%3E%0A%20%20%20%20%0A%20%20%20%20%3Clink%20rel%3D%22index%22%20title%3D%22Index%22%20href%3D%22%2E%2E%2Fgenindex%2Ehtml%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22search%22%20title%3D%22Search%22%20href%3D%22%2E%2E%2Fsearch%2Ehtml%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22next%22%20title%3D%22Usage%22%20href%3D%22index%2Ehtml%22%20%2F%3E%0A%20%20%20%20%3Clink%20rel%3D%22prev%22%20title%3D%22Schemdraw%20documentation%22%20href%3D%22%2E%2E%2Findex%2Ehtml%22%20%2F%3E%0A%20%20%20%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22%2E%2E%2F%5Fstatic%2Fcustom%2Ecss%22%20type%3D%22text%2Fcss%22%20%2F%3E%0A%20%20%0A%20%20%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice%2Dwidth%2C%20initial%2Dscale%3D0%2E9%2C%20maximum%2Dscale%3D0%2E9%22%20%2F%3E%0A%0A%20%20%0A%3C%21%2D%2D%20RTD%20Extra%20Head%20%2D%2D%3E%0A%0A%0A%0A%3Cscript%20type%3D%22application%2Fjson%22%20id%3D%22READTHEDOCS%5FDATA%22%3E%7B%22ad%5Ffree%22%3A%20false%2C%20%22api%5Fhost%22%3A%20%22https%3A%2F%2Freadthedocs%2Eorg%22%2C%20%22builder%22%3A%20%22sphinx%22%2C%20%22canonical%5Furl%22%3A%20null%2C%20%22docroot%22%3A%20%22%2Fdocs%2F%22%2C%20%22features%22%3A%20%7B%22docsearch%5Fdisabled%22%3A%20false%7D%2C%20%22global%5Fanalytics%5Fcode%22%3A%20%22UA%2D17997319%2D1%22%2C%20%22language%22%3A%20%22en%22%2C%20%22page%22%3A%20%22usage%2Fstart%22%2C%20%22programming%5Flanguage%22%3A%20%22py%22%2C%20%22project%22%3A%20%22schemdraw%22%2C%20%22proxied%5Fapi%5Fhost%22%3A%20%22%2F%5F%22%2C%20%22source%5Fsuffix%22%3A%20%22%2Erst%22%2C%20%22subprojects%22%3A%20%7B%7D%2C%20%22theme%22%3A%20%22alabaster%22%2C%20%22user%5Fanalytics%5Fcode%22%3A%20%22%22%2C%20%22version%22%3A%20%22stable%22%7D%3C%2Fscript%3E%0A%0A%3C%21%2D%2D%0AUsing%20this%20variable%20directly%20instead%20of%20using%20%60JSON%2Eparse%60%20is%20deprecated%2E%0AThe%20READTHEDOCS%5FDATA%20global%20variable%20will%20be%20removed%20in%20the%20future%2E%0A%2D%2D%3E%0A%3Cscript%20type%3D%22text%2Fjavascript%22%3E%0AREADTHEDOCS%5FDATA%20%3D%20JSON%2Eparse%28document%2EgetElementById%28%27READTHEDOCS%5FDATA%27%29%2EinnerHTML%29%3B%0A%3C%2Fscript%3E%0A%0A%0A%0A%3C%21%2D%2D%20end%20RTD%20%3Cextrahead%3E%20%2D%2D%3E%0A%3Cscript%20async%20type%3D%22text%2Fjavascript%22%20src%3D%22%2F%5F%2Fstatic%2Fjavascript%2Freadthedocs%2Daddons%2Ejs%22%3E%3C%2Fscript%3E%3Cmeta%20name%3D%22readthedocs%2Dproject%2Dslug%22%20content%3D%22schemdraw%22%20%2F%3E%3Cmeta%20name%3D%22readthedocs%2Dversion%2Dslug%22%20content%3D%22stable%22%20%2F%3E%3Cmeta%20name%3D%22readthedocs%2Dresolver%2Dfilename%22%20content%3D%22%2Fusage%2Fstart%2Ehtml%22%20%2F%3E%3Cmeta%20name%3D%22readthedocs%2Dhttp%2Dstatus%22%20content%3D%22200%22%20%2F%3E%3C%2Fhead%3E%3Cbody%3E%0A%20%20%0A%0A%20%20%20%20%3Cdiv%20class%3D%22document%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22documentwrapper%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22bodywrapper%22%3E%0A%20%20%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22body%22%20role%3D%22main%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%3Csection%20id%3D%22getting%2Dstarted%22%3E%0A%3Ch1%3EGetting%20Started%3Ca%20class%3D%22headerlink%22%20href%3D%22%23getting%2Dstarted%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh1%3E%0A%3Csection%20id%3D%22installation%22%3E%0A%3Ch2%3EInstallation%3Ca%20class%3D%22headerlink%22%20href%3D%22%23installation%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh2%3E%0A%3Cp%3Eschemdraw%20can%20be%20installed%20from%20pip%20using%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dbash%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3Epip%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Einstall%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Eschemdraw%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3Eor%20to%20include%20optional%20%3Ccode%20class%3D%22docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Ematplotlib%3C%2Fspan%3E%3C%2Fcode%3E%20backend%20dependencies%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dbash%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3Epip%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Einstall%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Eschemdraw%3Cspan%20class%3D%22o%22%3E%5B%3C%2Fspan%3Ematplotlib%3Cspan%20class%3D%22o%22%3E%5D%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3ETo%20allow%20the%20SVG%20drawing%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22backends%2Ehtml%23backends%22%3E%3Cspan%20class%3D%22std%20std%2Dref%22%3EBackends%3C%2Fspan%3E%3C%2Fa%3E%20to%20render%20math%20expressions%2C%0Ainstall%20the%20optional%20%3Ca%20class%3D%22reference%20external%22%20href%3D%22https%3A%2F%2Fziamath%2Ereadthedocs%2Eio%22%3Eziamath%3C%2Fa%3E%20dependency%20with%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dbash%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3Epip%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Einstall%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Eschemdraw%3Cspan%20class%3D%22o%22%3E%5B%3C%2Fspan%3Esvgmath%3Cspan%20class%3D%22o%22%3E%5D%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EAlternatively%2C%20schemdraw%20can%20be%20installed%20directly%20by%20downloading%20the%20source%20and%20running%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dbash%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3Epip%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3Einstall%3Cspan%20class%3D%22w%22%3E%20%3C%2Fspan%3E%2E%2F%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3ESchemdraw%20requires%20Python%203%2E8%20or%20higher%2E%3C%2Fp%3E%0A%3C%2Fsection%3E%0A%3Csection%20id%3D%22overview%22%3E%0A%3Ch2%3EOverview%3Ca%20class%3D%22headerlink%22%20href%3D%22%23overview%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh2%3E%0A%3Cp%3EThe%20%3Ccode%20class%3D%22xref%20py%20py%2Dmod%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%3C%2Fspan%3E%3C%2Fcode%3E%20module%20allows%20for%20drawing%20circuit%20elements%2E%0A%3Ccode%20class%3D%22xref%20py%20py%2Dmod%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%2Eelements%3C%2Fspan%3E%3C%2Fcode%3E%20contains%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Felements%2Felectrical%2Ehtml%23electrical%22%3E%3Cspan%20class%3D%22std%20std%2Dref%22%3EBasic%20Elements%3C%2Fspan%3E%3C%2Fa%3E%20pre%2Ddefined%20for%0Ause%20in%20a%20drawing%2E%20A%20common%20import%20structure%20is%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22jupyter%5Fcell%20jupyter%5Fcontainer%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22cell%5Finput%20code%5Fcell%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22highlight%2Dipython3%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22kn%22%3Eimport%3C%2Fspan%3E%20%3Cspan%20class%3D%22nn%22%3Eschemdraw%3C%2Fspan%3E%0A%3Cspan%20class%3D%22kn%22%3Eimport%3C%2Fspan%3E%20%3Cspan%20class%3D%22nn%22%3Eschemdraw%2Eelements%3C%2Fspan%3E%20%3Cspan%20class%3D%22k%22%3Eas%3C%2Fspan%3E%20%3Cspan%20class%3D%22nn%22%3Eelm%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20class%3D%22cell%5Foutput%20docutils%20container%22%3E%0A%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3ETo%20make%20a%20circuit%20diagram%2C%20use%20a%20context%20manager%20%28%3Ccite%3Ewith%3C%2Fcite%3E%20statement%29%20on%20a%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fclasses%2Fdrawing%2Ehtml%23schemdraw%2EDrawing%22%20title%3D%22schemdraw%2EDrawing%22%3E%3Ccode%20class%3D%22xref%20py%20py%2Dclass%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%2EDrawing%3C%2Fspan%3E%3C%2Fcode%3E%3C%2Fa%3E%2E%20Then%20any%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fclasses%2Fdrawing%2Ehtml%23schemdraw%2Eelements%2EElement%22%20title%3D%22schemdraw%2Eelements%2EElement%22%3E%3Ccode%20class%3D%22xref%20py%20py%2Dclass%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%2Eelements%2EElement%3C%2Fspan%3E%3C%2Fcode%3E%3C%2Fa%3E%20instances%20created%20within%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20block%20added%20to%20the%20drawing%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22jupyter%5Fcell%20jupyter%5Fcontainer%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22cell%5Finput%20code%5Fcell%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22highlight%2Dipython3%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EResistor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3ECapacitor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDiode%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20class%3D%22cell%5Foutput%20docutils%20container%22%3E%0A%3Cimg%20alt%3D%22%2E%2E%2F%5Fimages%2Fstart%5F1%5F0%2Esvg%22%20src%3D%22%2E%2E%2F%5Fimages%2Fstart%5F1%5F0%2Esvg%22%20%2F%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3E%3Cstrong%3ENew%20in%20version%200%2E18%3C%2Fstrong%3E%3A%20The%20context%20manager%20keeps%20track%20of%20the%20active%20drawing%2C%20so%20that%20using%20%3Ccite%3Edrawing%2Eadd%28element%29%3C%2Fcite%3E%20or%20%3Ccite%3Edrawing%20%2B%3D%20element%3C%2Fcite%3E%20is%20no%20longer%20necessary%2E%0AThese%20operators%20are%20still%20functional%20and%20are%20needed%20if%20drawing%20outside%20a%20%3Ccite%3Ewith%3C%2Fcite%3E%20context%20manager%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%20%3Cspan%20class%3D%22k%22%3Eas%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%2B%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EResistor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%2B%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3ECapacitor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eadd%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDiode%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%29%3C%2Fspan%3E%20%20%20%3Cspan%20class%3D%22c1%22%3E%23%20Same%20as%20%60drawing%20%2B%3D%60%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EElement%20placement%20and%20other%20properties%20and%20are%20set%20using%20a%20chained%20method%20interface%2C%20for%20example%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22jupyter%5Fcell%20jupyter%5Fcontainer%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22cell%5Finput%20code%5Fcell%20docutils%20container%22%3E%0A%3Cdiv%20class%3D%22highlight%2Dipython3%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EResistor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Elabel%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3B100K%CE%A9%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3ECapacitor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Edown%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Elabel%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3B0%2E1%CE%BCF%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%2C%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eloc%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3Bbottom%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3ELine%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eleft%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EGround%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3ESourceV%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eup%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Elabel%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3B10V%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20class%3D%22cell%5Foutput%20docutils%20container%22%3E%0A%3Cimg%20alt%3D%22%2E%2E%2F%5Fimages%2Fstart%5F2%5F0%2Esvg%22%20src%3D%22%2E%2E%2F%5Fimages%2Fstart%5F2%5F0%2Esvg%22%20%2F%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EMethods%20%3Ccite%3Eup%3C%2Fcite%3E%2C%20%3Ccite%3Edown%3C%2Fcite%3E%2C%20%3Ccite%3Eleft%3C%2Fcite%3E%2C%20%3Ccite%3Eright%3C%2Fcite%3E%20specify%20the%20drawing%20direction%2C%20and%20%3Ccite%3Elabel%3C%2Fcite%3E%20adds%20text%20to%20the%20element%2E%0AIf%20not%20specified%2C%20elements%20reuse%20the%20same%20direction%20from%20the%20previous%20element%2C%20and%20begin%20where%0Athe%20previous%20element%20ended%2E%3C%2Fp%3E%0A%3Cp%3EUsing%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20context%20manager%20is%20a%20convenience%2C%20letting%20the%20drawing%20be%20displayed%20and%20saved%20upon%20exiting%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20block%2E%20Schematics%20may%20also%20be%20created%20simply%20by%20assinging%20a%20new%20Drawing%20instance%2C%20but%20this%20requires%20explicitly%20adding%20elements%20to%20the%20drawing%20with%20%3Ccite%3Ed%2Eadd%3C%2Fcite%3E%20or%20d%20%2B%3D%60%2C%20and%20calling%20%3Ccite%3Edraw%28%29%3C%2Fcite%3E%20and%2For%20%3Ccite%3Esave%28%29%3C%2Fcite%3E%20to%20show%20the%20drawing%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%2B%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eelm%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EResistor%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%3Cspan%20class%3D%22o%22%3E%2E%2E%2E%3C%2Fspan%3E%0A%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Edraw%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%0A%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Esave%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3Bmy%5Fcircuit%2Esvg%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EFor%20full%20details%20of%20placing%20and%20stylizing%20elements%2C%20see%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22placement%2Ehtml%23placement%22%3E%3Cspan%20class%3D%22std%20std%2Dref%22%3EPlacing%20Elements%3C%2Fspan%3E%3C%2Fa%3E%2E%0Aand%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fclasses%2Fdrawing%2Ehtml%23schemdraw%2Eelements%2EElement%22%20title%3D%22schemdraw%2Eelements%2EElement%22%3E%3Ccode%20class%3D%22xref%20py%20py%2Dclass%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%2Eelements%2EElement%3C%2Fspan%3E%3C%2Fcode%3E%3C%2Fa%3E%2E%3C%2Fp%3E%0A%3Cp%3EIn%20general%2C%20parameters%20that%20control%20%3Cstrong%3Ewhat%3C%2Fstrong%3E%20is%20drawn%20are%20passed%20to%20the%20element%20itself%2C%20and%20parameters%20that%20control%20%3Cstrong%3Ehow%3C%2Fstrong%3E%20things%20are%20drawn%20are%20set%20using%20chained%20Element%20methods%2E%20For%20example%2C%20to%20make%20a%20polarized%20Capacitor%2C%20pass%20%3Ccite%3Epolar%3DTrue%3C%2Fcite%3E%20as%20an%20argument%20to%20%3Ccite%3ECapacitor%3C%2Fcite%3E%2C%20but%20to%20change%20the%20Capacitor%E2%80%99s%20color%2C%20use%20the%20%3Ccite%3E%2Ecolor%28%29%3C%2Fcite%3E%20method%3A%20%3Ccite%3Eelm%2ECapacitor%28polar%3DTrue%29%2Ecolor%28%E2%80%98red%E2%80%99%29%3C%2Fcite%3E%2E%3C%2Fp%3E%0A%3C%2Fsection%3E%0A%3Csection%20id%3D%22viewing%2Dthe%2Ddrawing%22%3E%0A%3Ch2%3EViewing%20the%20Drawing%3Ca%20class%3D%22headerlink%22%20href%3D%22%23viewing%2Dthe%2Ddrawing%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh2%3E%0A%3Csection%20id%3D%22jupyter%22%3E%0A%3Ch3%3EJupyter%3Ca%20class%3D%22headerlink%22%20href%3D%22%23jupyter%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh3%3E%0A%3Cp%3EWhen%20run%20in%20a%20Jupyter%20notebook%2C%20the%20schematic%20will%20be%20drawn%20to%20the%20cell%20output%20after%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20block%20is%20exited%2E%0AIf%20your%20schematics%20pop%20up%20in%20an%20external%20window%2C%20and%20you%20are%20using%20the%20Matplotlib%20backend%2C%20set%20Matplotlib%20to%20inline%20mode%20before%20importing%20schemdraw%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%25%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Ematplotlib%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Einline%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EFor%20best%20results%20when%20viewing%20circuits%20in%20the%20notebook%2C%20use%20a%20vector%20figure%20format%2C%20such%20as%20svg%20before%20importing%20schemdraw%3A%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%25%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Econfig%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3EInlineBackend%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Efigure%5Fformat%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22s1%22%3E%26%2339%3Bsvg%26%2339%3B%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3C%2Fsection%3E%0A%3Csection%20id%3D%22python%2Dscripts%2Dand%2Dgui%2Dweb%2Dapps%22%3E%0A%3Ch3%3EPython%20Scripts%20and%20GUI%2FWeb%20apps%3Ca%20class%3D%22headerlink%22%20href%3D%22%23python%2Dscripts%2Dand%2Dgui%2Dweb%2Dapps%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh3%3E%0A%3Cp%3EIf%20run%20as%20a%20Python%20script%2C%20the%20schematic%20will%20be%20opened%20in%20a%20pop%2Dup%20window%20after%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20block%20exits%2E%0AAdd%20the%20%3Ccite%3Eshow%3DFalse%3C%2Fcite%3E%20option%20when%20creating%20the%20Drawing%20to%20suppress%20the%20window%20from%20appearing%2E%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eshow%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%3Cspan%20class%3D%22kc%22%3EFalse%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%20%3Cspan%20class%3D%22k%22%3Eas%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22o%22%3E%2E%2E%2E%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EThe%20raw%20image%20data%20as%20a%20bytes%20array%20can%20be%20obtained%20by%20calling%20%3Ccite%3E%2Eget%5Fimagedata%28%29%3C%2Fcite%3E%20with%20the%20after%20the%20%3Ccite%3Ewith%3C%2Fcite%3E%20block%20exits%2E%0AThis%20can%20be%20useful%20for%20integrating%20schemdraw%20into%20an%20existing%20GUI%20or%20web%20application%2E%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%29%3C%2Fspan%3E%20%3Cspan%20class%3D%22k%22%3Eas%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22o%22%3E%2E%2E%2E%3C%2Fspan%3E%0A%3Cspan%20class%3D%22n%22%3Eimage%5Fbytes%3C%2Fspan%3E%20%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Edrawing%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Eget%5Fimagedata%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3Bsvg%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3C%2Fsection%3E%0A%3Csection%20id%3D%22headless%2Dservers%22%3E%0A%3Ch3%3EHeadless%20Servers%3Ca%20class%3D%22headerlink%22%20href%3D%22%23headless%2Dservers%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh3%3E%0A%3Cp%3EWhen%20running%20on%20a%20server%2C%20sometimes%20there%20is%20no%20display%20available%2E%0AThe%20code%20may%20attempt%20to%20open%20the%20GUI%20preview%20window%20and%20fail%2E%0AIn%20these%20cases%2C%20try%20setting%20the%20Matplotlib%20backend%20to%20a%20non%2DGUI%20option%2E%0ABefore%20importing%20schemdraw%2C%20add%20these%20lines%20to%20use%20the%20Agg%20backend%20which%20does%20not%20have%20a%20GUI%2E%0AThen%20get%20the%20drawing%20using%20%3Ccite%3Ed%2Eget%5Fimagedata%28%29%3C%2Fcite%3E%2C%20or%20%3Ccite%3Ed%2Esave%28%29%3C%2Fcite%3E%20to%20get%20the%20image%2E%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22kn%22%3Eimport%3C%2Fspan%3E%20%3Cspan%20class%3D%22nn%22%3Ematplotlib%3C%2Fspan%3E%0A%3Cspan%20class%3D%22n%22%3Ematplotlib%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Euse%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3BAgg%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%20%3Cspan%20class%3D%22c1%22%3E%23%20Set%20Matplotlib%26%2339%3Bs%20backend%20here%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EAlternatively%2C%20use%20Schemdraw%E2%80%99s%20SVG%20backend%20%28see%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22backends%2Ehtml%23backends%22%3E%3Cspan%20class%3D%22std%20std%2Dref%22%3EBackends%3C%2Fspan%3E%3C%2Fa%3E%29%2E%3C%2Fp%3E%0A%3C%2Fsection%3E%0A%3C%2Fsection%3E%0A%3Csection%20id%3D%22saving%2Ddrawings%22%3E%0A%3Ch2%3ESaving%20Drawings%3Ca%20class%3D%22headerlink%22%20href%3D%22%23saving%2Ddrawings%22%20title%3D%22Permalink%20to%20this%20heading%22%3E%C2%B6%3C%2Fa%3E%3C%2Fh2%3E%0A%3Cp%3ETo%20save%20the%20schematic%20to%20a%20file%2C%20add%20the%20%3Ccite%3Efile%3C%2Fcite%3E%20parameter%20when%20setting%20up%20the%20Drawing%2E%0AThe%20image%20type%20is%20determined%20from%20the%20file%20extension%2E%0AOptions%20include%20%3Ccite%3Esvg%3C%2Fcite%3E%2C%20%3Ccite%3Eeps%3C%2Fcite%3E%2C%20%3Ccite%3Epng%3C%2Fcite%3E%2C%20%3Ccite%3Epdf%3C%2Fcite%3E%2C%20and%20%3Ccite%3Ejpg%3C%2Fcite%3E%20when%20using%20the%20Matplotlib%20backend%2C%20and%20%3Ccite%3Esvg%3C%2Fcite%3E%20when%20using%20the%20SVG%20backend%2E%0AA%20vector%20format%20such%20as%20%3Ccite%3Esvg%3C%2Fcite%3E%20is%20recommended%20for%20best%20image%20quality%2E%3C%2Fp%3E%0A%3Cdiv%20class%3D%22highlight%2Dpython%20notranslate%22%3E%3Cdiv%20class%3D%22highlight%22%3E%3Cpre%3E%3Cspan%3E%3C%2Fspan%3E%3Cspan%20class%3D%22k%22%3Ewith%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Eschemdraw%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%2E%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3EDrawing%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%28%3C%2Fspan%3E%3Cspan%20class%3D%22n%22%3Efile%3C%2Fspan%3E%3Cspan%20class%3D%22o%22%3E%3D%3C%2Fspan%3E%3Cspan%20class%3D%22s1%22%3E%26%2339%3Bmy%5Fcircuit%2Esvg%26%2339%3B%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%29%3C%2Fspan%3E%20%3Cspan%20class%3D%22k%22%3Eas%3C%2Fspan%3E%20%3Cspan%20class%3D%22n%22%3Ed%3C%2Fspan%3E%3Cspan%20class%3D%22p%22%3E%3A%3C%2Fspan%3E%0A%20%20%20%20%3Cspan%20class%3D%22o%22%3E%2E%2E%2E%3C%2Fspan%3E%0A%3C%2Fpre%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cp%3EThe%20Drawing%20may%20also%20be%20saved%20using%20with%20the%20%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fclasses%2Fdrawing%2Ehtml%23schemdraw%2EDrawing%2Esave%22%20title%3D%22schemdraw%2EDrawing%2Esave%22%3E%3Ccode%20class%3D%22xref%20py%20py%2Dmeth%20docutils%20literal%20notranslate%22%3E%3Cspan%20class%3D%22pre%22%3Eschemdraw%2EDrawing%2Esave%28%29%3C%2Fspan%3E%3C%2Fcode%3E%3C%2Fa%3E%20method%2E%3C%2Fp%3E%0A%3C%2Fsection%3E%0A%3C%2Fsection%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22sphinxsidebar%22%20role%3D%22navigation%22%20aria%2Dlabel%3D%22main%20navigation%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22sphinxsidebarwrapper%22%3E%0A%3Ch1%20class%3D%22logo%22%3E%3Ca%20href%3D%22%2E%2E%2Findex%2Ehtml%22%3ESchemdraw%3C%2Fa%3E%3C%2Fh1%3E%0A%0A%0A%0A%0A%0A%0A%0A%0A%3Ch3%3ENavigation%3C%2Fh3%3E%0A%3Cp%20class%3D%22caption%22%20role%3D%22heading%22%3E%3Cspan%20class%3D%22caption%2Dtext%22%3EContents%3A%3C%2Fspan%3E%3C%2Fp%3E%0A%3Cul%20class%3D%22current%22%3E%0A%3Cli%20class%3D%22toctree%2Dl1%20current%22%3E%3Ca%20class%3D%22current%20reference%20internal%22%20href%3D%22%23%22%3EGetting%20Started%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22index%2Ehtml%22%3EUsage%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Felements%2Felements%2Ehtml%22%3ECircuit%20Elements%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fgallery%2Findex%2Ehtml%22%3ECircuit%20Gallery%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22customizing%2Ehtml%22%3ECustomizing%20Elements%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fclasses%2Findex%2Ehtml%22%3EClass%20Definitions%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fchanges%2Ehtml%22%3EChange%20Log%3C%2Fa%3E%3C%2Fli%3E%0A%3Cli%20class%3D%22toctree%2Dl1%22%3E%3Ca%20class%3D%22reference%20internal%22%20href%3D%22%2E%2E%2Fcontributing%2Ehtml%22%3EDevelopment%3C%2Fa%3E%3C%2Fli%3E%0A%3C%2Ful%3E%0A%0A%3Cdiv%20class%3D%22relations%22%3E%0A%3Ch3%3ERelated%20Topics%3C%2Fh3%3E%0A%3Cul%3E%0A%20%20%3Cli%3E%3Ca%20href%3D%22%2E%2E%2Findex%2Ehtml%22%3EDocumentation%20overview%3C%2Fa%3E%3Cul%3E%0A%20%20%20%20%20%20%3Cli%3EPrevious%3A%20%3Ca%20href%3D%22%2E%2E%2Findex%2Ehtml%22%20title%3D%22previous%20chapter%22%3ESchemdraw%20documentation%3C%2Fa%3E%3C%2Fli%3E%0A%20%20%20%20%20%20%3Cli%3ENext%3A%20%3Ca%20href%3D%22index%2Ehtml%22%20title%3D%22next%20chapter%22%3EUsage%3C%2Fa%3E%3C%2Fli%3E%0A%20%20%3C%2Ful%3E%3C%2Fli%3E%0A%3C%2Ful%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20id%3D%22searchbox%22%20style%3D%22display%3A%20none%22%20role%3D%22search%22%3E%0A%20%20%3Ch3%20id%3D%22searchlabel%22%3EQuick%20search%3C%2Fh3%3E%0A%20%20%20%20%3Cdiv%20class%3D%22searchformwrapper%22%3E%0A%20%20%20%20%3Cform%20class%3D%22search%22%20action%3D%22%2E%2E%2Fsearch%2Ehtml%22%20method%3D%22get%22%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20name%3D%22q%22%20aria%2Dlabelledby%3D%22searchlabel%22%20autocomplete%3D%22off%22%20autocorrect%3D%22off%22%20autocapitalize%3D%22off%22%20spellcheck%3D%22false%22%2F%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22submit%22%20value%3D%22Go%22%20%2F%3E%0A%20%20%20%20%3C%2Fform%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cscript%3Edocument%2EgetElementById%28%27searchbox%27%29%2Estyle%2Edisplay%20%3D%20%22block%22%3C%2Fscript%3E%0A%0A%0A%0A%0A%0A%0A%0A%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22clearer%22%3E%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22footer%22%3E%0A%20%20%20%20%20%20%26copy%3B2023%2C%20Collin%20J%2E%20Delker%2E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%7C%0A%20%20%20%20%20%20Powered%20by%20%3Ca%20href%3D%22http%3A%2F%2Fsphinx%2Ddoc%2Eorg%2F%22%3ESphinx%207%2E1%2E2%3C%2Fa%3E%0A%20%20%20%20%20%20%26amp%3B%20%3Ca%20href%3D%22https%3A%2F%2Fgithub%2Ecom%2Fbitprophet%2Falabaster%22%3EAlabaster%200%2E7%2E13%3C%2Fa%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%7C%0A%20%20%20%20%20%20%3Ca%20href%3D%22%2E%2E%2F%5Fsources%2Fusage%2Fstart%2Erst%2Etxt%22%0A%20%20%20%20%20%20%20%20%20%20rel%3D%22nofollow%22%3EPage%20source%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%0A%20%20%20%20%0A%0A%20%20%20%20%0A%20%20%3C%2Fbody%3E%0A%3C%2Fhtml%3E" class="img-fluid"> in Python.</p>
+<p>We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using <a href="https://schemdraw.readthedocs.io/en/stable/usage/start.html">schemdraw</a> in Python.</p>
 <hr>
 <section id="resistors" class="level3">
 <h3 class="anchored" data-anchor-id="resistors">Resistors</h3>
@@ -3515,7 +3515,7 @@ P = IV = I^2 R = \frac{V^2}{R}.
 \]</span></li>
 <li>Used in voltage regulation, current limiting, and signal conditioning.</li>
 </ul>
-<div id="2b793dca" class="cell" data-execution_count="1">
+<div id="c2575de6" class="cell" data-execution_count="1">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> schemdraw</span>
@@ -3527,12 +3527,12 @@ P = IV = I^2 R = \frac{V^2}{R}.
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_c5e04cd9edc6655ecb03" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
+<p><svg id="svg_c104a680f2d977c90b12" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.632137</dc:date>
+    <dc:date>2025-01-06T15:14:22.056625</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -3545,8 +3545,8 @@ P = IV = I^2 R = \frac{V^2}{R}.
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_c5e04cd9edc6655ecb03_figure_1">
-  <g id="svg_c5e04cd9edc6655ecb03_patch_1">
+ <g id="svg_c104a680f2d977c90b12_figure_1">
+  <g id="svg_c104a680f2d977c90b12_patch_1">
    <path d="M 0 42.16 
 L 117.36 42.16 
 L 117.36 0 
@@ -3554,8 +3554,8 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_c5e04cd9edc6655ecb03_axes_1">
-   <g id="svg_c5e04cd9edc6655ecb03_line2d_1">
+  <g id="svg_c104a680f2d977c90b12_axes_1">
+   <g id="svg_c104a680f2d977c90b12_line2d_1">
     <path d="M 4.68 28.48 
 L 40.68 28.48 
 L 43.68 19.48 
@@ -3566,13 +3566,13 @@ L 67.68 19.48
 L 73.68 37.48 
 L 76.68 28.48 
 L 112.68 28.48 
-" clip-path="url(#svg_c5e04cd9edc6655ecb03_p33b35928f8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_c104a680f2d977c90b12_p1adbd50b37)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c5e04cd9edc6655ecb03_text_1">
+   <g id="svg_c104a680f2d977c90b12_text_1">
     <!-- R -->
     <g transform="translate(53.816094 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_c5e04cd9edc6655ecb03_DejaVuSans-52" d="M 2841 2188 
+      <path id="svg_c104a680f2d977c90b12_DejaVuSans-52" d="M 2841 2188 
 Q 3044 2119 3236 1894 
 Q 3428 1669 3622 1275 
 L 4263 0 
@@ -3601,13 +3601,13 @@ L 1259 4147
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_c5e04cd9edc6655ecb03_DejaVuSans-52" />
+     <use xlink:href="#svg_c104a680f2d977c90b12_DejaVuSans-52" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_c5e04cd9edc6655ecb03_p33b35928f8">
+  <clipPath id="svg_c104a680f2d977c90b12_p1adbd50b37">
    <rect x="0" y="0" width="117.36" height="42.16" />
   </clipPath>
  </defs>
@@ -3660,7 +3660,7 @@ v(t) = \frac{1}{C} \int i(t) \, dt.
 \]</span></li>
 <li>Commonly used for filtering, decoupling, and timing applications.</li>
 </ul>
-<div id="7d1f6832" class="cell" data-execution_count="2">
+<div id="98a4a7e4" class="cell" data-execution_count="2">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> schemdraw</span>
@@ -3672,12 +3672,12 @@ v(t) = \frac{1}{C} \int i(t) \, dt.
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_6b43a0353f249a5f739f" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
+<p><svg id="svg_35955c032b05f6ec5228" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.659033</dc:date>
+    <dc:date>2025-01-06T15:14:22.083366</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -3690,8 +3690,8 @@ v(t) = \frac{1}{C} \int i(t) \, dt.
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_6b43a0353f249a5f739f_figure_1">
-  <g id="svg_6b43a0353f249a5f739f_patch_1">
+ <g id="svg_35955c032b05f6ec5228_figure_1">
+  <g id="svg_35955c032b05f6ec5228_patch_1">
    <path d="M 0 42.16 
 L 117.36 42.16 
 L 117.36 0 
@@ -3699,8 +3699,8 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_6b43a0353f249a5f739f_axes_1">
-   <g id="svg_6b43a0353f249a5f739f_line2d_1">
+  <g id="svg_35955c032b05f6ec5228_axes_1">
+   <g id="svg_35955c032b05f6ec5228_line2d_1">
     <path d="M 4.68 28.48 
 L 55.44 28.48 
 M 55.44 19.48 
@@ -3709,13 +3709,13 @@ M 61.92 19.48
 L 61.92 37.48 
 M 61.92 28.48 
 L 112.68 28.48 
-" clip-path="url(#svg_6b43a0353f249a5f739f_p37a5cd207b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_35955c032b05f6ec5228_p1b93009949)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_6b43a0353f249a5f739f_text_1">
+   <g id="svg_35955c032b05f6ec5228_text_1">
     <!-- C -->
     <g transform="translate(53.792031 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_6b43a0353f249a5f739f_DejaVuSans-43" d="M 4122 4306 
+      <path id="svg_35955c032b05f6ec5228_DejaVuSans-43" d="M 4122 4306 
 L 4122 3641 
 Q 3803 3938 3442 4084 
 Q 3081 4231 2675 4231 
@@ -3737,13 +3737,13 @@ Q 3797 4528 4122 4306
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_6b43a0353f249a5f739f_DejaVuSans-43" />
+     <use xlink:href="#svg_35955c032b05f6ec5228_DejaVuSans-43" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_6b43a0353f249a5f739f_p37a5cd207b">
+  <clipPath id="svg_35955c032b05f6ec5228_p1b93009949">
    <rect x="0" y="0" width="117.36" height="42.16" />
   </clipPath>
  </defs>
@@ -3769,7 +3769,7 @@ V = L \frac{dI}{dt}
 </li>
 <li>Often used in filters, transformers, and power supplies.</li>
 </ul>
-<div id="b6e92d97" class="cell" data-execution_count="3">
+<div id="87679e67" class="cell" data-execution_count="3">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> schemdraw</span>
@@ -3781,12 +3781,12 @@ V = L \frac{dI}{dt}
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_7ae49e890d1acc405e34" role="img" width="117.36pt" height="28.659978pt" viewBox="0 0 117.36 28.659978">
+<p><svg id="svg_b560dc6ac19bc9fff384" role="img" width="117.36pt" height="28.659978pt" viewBox="0 0 117.36 28.659978">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.684135</dc:date>
+    <dc:date>2025-01-06T15:14:22.109046</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -3799,8 +3799,8 @@ V = L \frac{dI}{dt}
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_7ae49e890d1acc405e34_figure_1">
-  <g id="svg_7ae49e890d1acc405e34_patch_1">
+ <g id="svg_b560dc6ac19bc9fff384_figure_1">
+  <g id="svg_b560dc6ac19bc9fff384_patch_1">
    <path d="M 0 28.659978 
 L 117.36 28.659978 
 L 117.36 0 
@@ -3808,51 +3808,51 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_7ae49e890d1acc405e34_axes_1">
-   <g id="svg_7ae49e890d1acc405e34_patch_2">
+  <g id="svg_b560dc6ac19bc9fff384_axes_1">
+   <g id="svg_b560dc6ac19bc9fff384_patch_2">
     <path d="M 49.68 23.979978 
 C 49.68 22.786961 49.205571 21.641587 48.361981 20.797997 
 C 47.51839 19.954407 46.373016 19.479978 45.18 19.479978 
 C 43.986984 19.479978 42.84161 19.954407 41.998019 20.797997 
 C 41.154429 21.641587 40.68 22.786961 40.68 23.979978 
-" clip-path="url(#svg_7ae49e890d1acc405e34_p6956127e2c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_b560dc6ac19bc9fff384_pa12743cc89)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_7ae49e890d1acc405e34_patch_3">
+   <g id="svg_b560dc6ac19bc9fff384_patch_3">
     <path d="M 58.68 23.979978 
 C 58.68 22.786961 58.205571 21.641587 57.361981 20.797997 
 C 56.51839 19.954407 55.373016 19.479978 54.18 19.479978 
 C 52.986984 19.479978 51.84161 19.954407 50.998019 20.797997 
 C 50.154429 21.641587 49.68 22.786961 49.68 23.979978 
-" clip-path="url(#svg_7ae49e890d1acc405e34_p6956127e2c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_b560dc6ac19bc9fff384_pa12743cc89)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_7ae49e890d1acc405e34_patch_4">
+   <g id="svg_b560dc6ac19bc9fff384_patch_4">
     <path d="M 67.68 23.979978 
 C 67.68 22.786961 67.205571 21.641587 66.361981 20.797997 
 C 65.51839 19.954407 64.373016 19.479978 63.18 19.479978 
 C 61.986984 19.479978 60.84161 19.954407 59.998019 20.797997 
 C 59.154429 21.641587 58.68 22.786961 58.68 23.979978 
-" clip-path="url(#svg_7ae49e890d1acc405e34_p6956127e2c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_b560dc6ac19bc9fff384_pa12743cc89)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_7ae49e890d1acc405e34_patch_5">
+   <g id="svg_b560dc6ac19bc9fff384_patch_5">
     <path d="M 76.68 23.979978 
 C 76.68 22.786961 76.205571 21.641587 75.361981 20.797997 
 C 74.51839 19.954407 73.373016 19.479978 72.18 19.479978 
 C 70.986984 19.479978 69.84161 19.954407 68.998019 20.797997 
 C 68.154429 21.641587 67.68 22.786961 67.68 23.979978 
-" clip-path="url(#svg_7ae49e890d1acc405e34_p6956127e2c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_b560dc6ac19bc9fff384_pa12743cc89)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_7ae49e890d1acc405e34_line2d_1">
+   <g id="svg_b560dc6ac19bc9fff384_line2d_1">
     <path d="M 4.68 23.979978 
 L 40.68 23.979978 
 M 76.68 23.979978 
 L 112.68 23.979978 
-" clip-path="url(#svg_7ae49e890d1acc405e34_p6956127e2c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_b560dc6ac19bc9fff384_pa12743cc89)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_7ae49e890d1acc405e34_text_1">
+   <g id="svg_b560dc6ac19bc9fff384_text_1">
     <!-- L -->
     <g transform="translate(54.779687 12.968437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_7ae49e890d1acc405e34_DejaVuSans-4c" d="M 628 4666 
+      <path id="svg_b560dc6ac19bc9fff384_DejaVuSans-4c" d="M 628 4666 
 L 1259 4666 
 L 1259 531 
 L 3531 531 
@@ -3862,13 +3862,13 @@ L 628 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_7ae49e890d1acc405e34_DejaVuSans-4c" />
+     <use xlink:href="#svg_b560dc6ac19bc9fff384_DejaVuSans-4c" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_7ae49e890d1acc405e34_p6956127e2c">
+  <clipPath id="svg_b560dc6ac19bc9fff384_pa12743cc89">
    <rect x="0" y="-0" width="117.36" height="28.659978" />
   </clipPath>
  </defs>
@@ -3894,7 +3894,7 @@ I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
 </li>
 <li>Practical uses: rectification (converting AC to DC), protection circuits, and signal demodulation.</li>
 </ul>
-<div id="ad1db77b" class="cell" data-execution_count="4">
+<div id="f2b80e6f" class="cell" data-execution_count="4">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> schemdraw</span>
@@ -3906,12 +3906,12 @@ I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_2ca0582b2faf793470f7" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
+<p><svg id="svg_1f5222c22946b7c813e4" role="img" width="117.36pt" height="42.16pt" viewBox="0 0 117.36 42.16">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.707178</dc:date>
+    <dc:date>2025-01-06T15:14:22.153200</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -3924,8 +3924,8 @@ I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_2ca0582b2faf793470f7_figure_1">
-  <g id="svg_2ca0582b2faf793470f7_patch_1">
+ <g id="svg_1f5222c22946b7c813e4_figure_1">
+  <g id="svg_1f5222c22946b7c813e4_patch_1">
    <path d="M 0 42.16 
 L 117.36 42.16 
 L 117.36 0 
@@ -3933,29 +3933,29 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_2ca0582b2faf793470f7_axes_1">
-   <g id="svg_2ca0582b2faf793470f7_patch_2">
+  <g id="svg_1f5222c22946b7c813e4_axes_1">
+   <g id="svg_1f5222c22946b7c813e4_patch_2">
     <path d="M 52.38 19.48 
 L 64.98 28.48 
 L 52.38 37.48 
 L 52.38 19.48 
 z
-" clip-path="url(#svg_2ca0582b2faf793470f7_p2a326b50eb)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_1f5222c22946b7c813e4_p2ea60cae27)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_2ca0582b2faf793470f7_line2d_1">
+   <g id="svg_1f5222c22946b7c813e4_line2d_1">
     <path d="M 4.68 28.48 
 L 52.38 28.48 
 M 64.98 19.48 
 L 64.98 37.48 
 M 64.98 28.48 
 L 112.68 28.48 
-" clip-path="url(#svg_2ca0582b2faf793470f7_p2a326b50eb)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_1f5222c22946b7c813e4_p2ea60cae27)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_2ca0582b2faf793470f7_text_1">
+   <g id="svg_1f5222c22946b7c813e4_text_1">
     <!-- D -->
     <g transform="translate(53.29 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_2ca0582b2faf793470f7_DejaVuSans-44" d="M 1259 4147 
+      <path id="svg_1f5222c22946b7c813e4_DejaVuSans-44" d="M 1259 4147 
 L 1259 519 
 L 2022 519 
 Q 2988 519 3436 956 
@@ -3975,13 +3975,13 @@ L 628 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_2ca0582b2faf793470f7_DejaVuSans-44" />
+     <use xlink:href="#svg_1f5222c22946b7c813e4_DejaVuSans-44" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_2ca0582b2faf793470f7_p2a326b50eb">
+  <clipPath id="svg_1f5222c22946b7c813e4_p2ea60cae27">
    <rect x="0" y="0" width="117.36" height="42.16" />
   </clipPath>
  </defs>
@@ -4090,7 +4090,7 @@ z
 </section>
 <section id="rlc" class="level2">
 <h2 class="anchored" data-anchor-id="rlc">RLC</h2>
-<div id="0e10716d" class="cell" data-execution_count="5">
+<div id="5c9ad10e" class="cell" data-execution_count="5">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> schemdraw</span>
@@ -4107,12 +4107,12 @@ z
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_c83f36d4592d91e635af" role="img" width="130.859978pt" height="135.36pt" viewBox="0 0 130.859978 135.36">
+<p><svg id="svg_7c46fc00a4013b489590" role="img" width="130.859978pt" height="135.36pt" viewBox="0 0 130.859978 135.36">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.809999</dc:date>
+    <dc:date>2025-01-06T15:14:22.245392</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -4125,8 +4125,8 @@ z
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_c83f36d4592d91e635af_figure_1">
-  <g id="svg_c83f36d4592d91e635af_patch_1">
+ <g id="svg_7c46fc00a4013b489590_figure_1">
+  <g id="svg_7c46fc00a4013b489590_patch_1">
    <path d="M 0 135.36 
 L 130.859978 135.36 
 L 130.859978 0 
@@ -4134,47 +4134,47 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_c83f36d4592d91e635af_axes_1">
-   <g id="svg_c83f36d4592d91e635af_patch_2">
+  <g id="svg_7c46fc00a4013b489590_axes_1">
+   <g id="svg_7c46fc00a4013b489590_patch_2">
     <path d="M 69.479978 130.68 
 L 56.879978 121.68 
 L 69.479978 112.68 
 z
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_3">
+   <g id="svg_7c46fc00a4013b489590_patch_3">
     <path d="M 9.179978 76.68 
 C 7.986961 76.68 6.841587 77.154429 5.997997 77.998019 
 C 5.154407 78.84161 4.679978 79.986984 4.679978 81.18 
 C 4.679978 82.373016 5.154407 83.51839 5.997997 84.361981 
 C 6.841587 85.205571 7.986961 85.68 9.179978 85.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_4">
+   <g id="svg_7c46fc00a4013b489590_patch_4">
     <path d="M 9.179978 67.68 
 C 7.986961 67.68 6.841587 68.154429 5.997997 68.998019 
 C 5.154407 69.84161 4.679978 70.986984 4.679978 72.18 
 C 4.679978 73.373016 5.154407 74.51839 5.997997 75.361981 
 C 6.841587 76.205571 7.986961 76.68 9.179978 76.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_5">
+   <g id="svg_7c46fc00a4013b489590_patch_5">
     <path d="M 9.179978 58.68 
 C 7.986961 58.68 6.841587 59.154429 5.997997 59.998019 
 C 5.154407 60.84161 4.679978 61.986984 4.679978 63.18 
 C 4.679978 64.373016 5.154407 65.51839 5.997997 66.361981 
 C 6.841587 67.205571 7.986961 67.68 9.179978 67.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_6">
+   <g id="svg_7c46fc00a4013b489590_patch_6">
     <path d="M 9.179978 49.68 
 C 7.986961 49.68 6.841587 50.154429 5.997997 50.998019 
 C 5.154407 51.84161 4.679978 52.986984 4.679978 54.18 
 C 4.679978 55.373016 5.154407 56.51839 5.997997 57.361981 
 C 6.841587 58.205571 7.986961 58.68 9.179978 58.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_7">
+   <g id="svg_7c46fc00a4013b489590_patch_7">
     <path d="M 91.97597 44.365895 
 C 89.277991 41.288986 86.062162 38.604598 82.443342 36.408606 
 C 78.824521 34.212615 74.846312 32.531481 70.650802 31.425248 
@@ -4192,9 +4192,9 @@ C 49.01517 104.687143 53.346626 105.381533 57.71983 105.470261
 C 62.093033 105.558989 66.455292 105.040986 70.650802 103.934752 
 C 74.846312 102.828519 78.824521 101.147385 82.443342 98.951394 
 C 86.062162 96.755402 89.277991 94.071014 91.97597 90.994105 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_patch_8">
+   <g id="svg_7c46fc00a4013b489590_patch_8">
     <path d="M 97.748987 51.733519 
 L 90.072733 46.314558 
 L 92.183841 44.660367 
@@ -4203,9 +4203,9 @@ L 91.990139 44.354793
 L 92.212178 44.638163 
 L 94.323285 42.983972 
 z
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="stroke: #000000; stroke-linejoin: miter" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="stroke: #000000; stroke-linejoin: miter" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_line2d_1">
+   <g id="svg_7c46fc00a4013b489590_line2d_1">
     <path d="M 9.179978 13.68 
 L 45.179978 13.68 
 L 48.179978 4.68 
@@ -4216,9 +4216,9 @@ L 72.179978 4.68
 L 78.179978 22.68 
 L 81.179978 13.68 
 L 117.179978 13.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_line2d_2">
+   <g id="svg_7c46fc00a4013b489590_line2d_2">
     <path d="M 117.179978 13.68 
 L 117.179978 64.44 
 M 126.179978 64.44 
@@ -4227,36 +4227,36 @@ M 126.179978 70.92
 L 108.179978 70.92 
 M 117.179978 70.92 
 L 117.179978 121.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_line2d_3">
+   <g id="svg_7c46fc00a4013b489590_line2d_3">
     <path d="M 117.179978 121.68 
 L 69.479978 121.68 
 M 56.879978 130.68 
 L 56.879978 112.68 
 M 56.879978 121.68 
 L 9.179978 121.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_line2d_4">
+   <g id="svg_7c46fc00a4013b489590_line2d_4">
     <path d="M 9.179978 121.68 
 L 9.179978 85.68 
 M 9.179978 49.68 
 L 9.179978 13.68 
-" clip-path="url(#svg_c83f36d4592d91e635af_pd6d56c0000)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_7c46fc00a4013b489590_p465148a43b)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_c83f36d4592d91e635af_text_1">
+   <g id="svg_7c46fc00a4013b489590_text_1">
     <!-- $I_1$ -->
     <g transform="translate(53.289978 71.543125) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_c83f36d4592d91e635af_DejaVuSans-Oblique-49" d="M 1081 4666 
+      <path id="svg_7c46fc00a4013b489590_DejaVuSans-Oblique-49" d="M 1081 4666 
 L 1716 4666 
 L 806 0 
 L 172 0 
 L 1081 4666 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_c83f36d4592d91e635af_DejaVuSans-31" d="M 794 531 
+      <path id="svg_7c46fc00a4013b489590_DejaVuSans-31" d="M 794 531 
 L 1825 531 
 L 1825 4091 
 L 703 3866 
@@ -4271,14 +4271,14 @@ L 794 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_c83f36d4592d91e635af_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_c83f36d4592d91e635af_DejaVuSans-31" transform="translate(29.492188 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_7c46fc00a4013b489590_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_7c46fc00a4013b489590_DejaVuSans-31" transform="translate(29.492188 -16.3125) scale(0.7)" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_c83f36d4592d91e635af_pd6d56c0000">
+  <clipPath id="svg_7c46fc00a4013b489590_p465148a43b">
    <rect x="0" y="0" width="130.859978" height="135.36" />
   </clipPath>
  </defs>
@@ -4290,7 +4290,7 @@ z
 </section>
 <section id="series" class="level2">
 <h2 class="anchored" data-anchor-id="series">Series</h2>
-<div id="d55c1f6c" class="cell" data-execution_count="6">
+<div id="308bec92" class="cell" data-execution_count="6">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> schemdraw</span>
@@ -4309,12 +4309,12 @@ z
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_5300234b76d61d6ce5c3" role="img" width="441.36pt" height="42.16pt" viewBox="0 0 441.36 42.16">
+<p><svg id="svg_5e8831fdc506464cd594" role="img" width="441.36pt" height="42.16pt" viewBox="0 0 441.36 42.16">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.845242</dc:date>
+    <dc:date>2025-01-06T15:14:22.280822</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -4327,8 +4327,8 @@ z
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_5300234b76d61d6ce5c3_figure_1">
-  <g id="svg_5300234b76d61d6ce5c3_patch_1">
+ <g id="svg_5e8831fdc506464cd594_figure_1">
+  <g id="svg_5e8831fdc506464cd594_patch_1">
    <path d="M 0 42.16 
 L 441.36 42.16 
 L 441.36 0 
@@ -4336,8 +4336,8 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_5300234b76d61d6ce5c3_axes_1">
-   <g id="svg_5300234b76d61d6ce5c3_line2d_1">
+  <g id="svg_5e8831fdc506464cd594_axes_1">
+   <g id="svg_5e8831fdc506464cd594_line2d_1">
     <path d="M 4.68 28.48 
 L 40.68 28.48 
 L 43.68 19.48 
@@ -4348,9 +4348,9 @@ L 67.68 19.48
 L 73.68 37.48 
 L 76.68 28.48 
 L 112.68 28.48 
-" clip-path="url(#svg_5300234b76d61d6ce5c3_p65333fb1b3)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_5e8831fdc506464cd594_p919376eb64)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_line2d_2">
+   <g id="svg_5e8831fdc506464cd594_line2d_2">
     <path d="M 112.68 28.48 
 L 148.68 28.48 
 L 151.68 19.48 
@@ -4361,9 +4361,9 @@ L 175.68 19.48
 L 181.68 37.48 
 L 184.68 28.48 
 L 220.68 28.48 
-" clip-path="url(#svg_5300234b76d61d6ce5c3_p65333fb1b3)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_5e8831fdc506464cd594_p919376eb64)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_line2d_3">
+   <g id="svg_5e8831fdc506464cd594_line2d_3">
     <path d="M 220.68 28.48 
 L 256.68 28.48 
 L 259.68 19.48 
@@ -4374,9 +4374,9 @@ L 283.68 19.48
 L 289.68 37.48 
 L 292.68 28.48 
 L 328.68 28.48 
-" clip-path="url(#svg_5300234b76d61d6ce5c3_p65333fb1b3)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_5e8831fdc506464cd594_p919376eb64)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_line2d_4">
+   <g id="svg_5e8831fdc506464cd594_line2d_4">
     <path d="M 328.68 28.48 
 L 364.68 28.48 
 L 367.68 19.48 
@@ -4387,13 +4387,13 @@ L 391.68 19.48
 L 397.68 37.48 
 L 400.68 28.48 
 L 436.68 28.48 
-" clip-path="url(#svg_5300234b76d61d6ce5c3_p65333fb1b3)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_5e8831fdc506464cd594_p919376eb64)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_text_1">
+   <g id="svg_5e8831fdc506464cd594_text_1">
     <!-- $R_1$ -->
     <g transform="translate(50.49 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_5300234b76d61d6ce5c3_DejaVuSans-Oblique-52" d="M 1613 4147 
+      <path id="svg_5e8831fdc506464cd594_DejaVuSans-Oblique-52" d="M 1613 4147 
 L 1294 2491 
 L 2106 2491 
 Q 2584 2491 2879 2755 
@@ -4421,7 +4421,7 @@ Q 3841 3044 3547 2687
 Q 3253 2331 2772 2241 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_5300234b76d61d6ce5c3_DejaVuSans-31" d="M 794 531 
+      <path id="svg_5e8831fdc506464cd594_DejaVuSans-31" d="M 794 531 
 L 1825 531 
 L 1825 4091 
 L 703 3866 
@@ -4436,15 +4436,15 @@ L 794 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_text_2">
+   <g id="svg_5e8831fdc506464cd594_text_2">
     <!-- $R_2$ -->
     <g transform="translate(158.49 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_5300234b76d61d6ce5c3_DejaVuSans-32" d="M 1228 531 
+      <path id="svg_5e8831fdc506464cd594_DejaVuSans-32" d="M 1228 531 
 L 3431 531 
 L 3431 0 
 L 469 0 
@@ -4469,15 +4469,15 @@ Q 1991 1309 1228 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_text_3">
+   <g id="svg_5e8831fdc506464cd594_text_3">
     <!-- $R_3$ -->
     <g transform="translate(266.49 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_5300234b76d61d6ce5c3_DejaVuSans-33" d="M 2597 2516 
+      <path id="svg_5e8831fdc506464cd594_DejaVuSans-33" d="M 2597 2516 
 Q 3050 2419 3304 2112 
 Q 3559 1806 3559 1356 
 Q 3559 666 3084 287 
@@ -4510,15 +4510,15 @@ Q 3006 2619 2597 2516
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_5300234b76d61d6ce5c3_text_4">
+   <g id="svg_5e8831fdc506464cd594_text_4">
     <!-- $R_4$ -->
     <g transform="translate(374.49 12.968438) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_5300234b76d61d6ce5c3_DejaVuSans-34" d="M 2419 4116 
+      <path id="svg_5e8831fdc506464cd594_DejaVuSans-34" d="M 2419 4116 
 L 825 1625 
 L 2419 1625 
 L 2419 4116 
@@ -4538,14 +4538,14 @@ L 2253 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_5300234b76d61d6ce5c3_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_5e8831fdc506464cd594_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_5300234b76d61d6ce5c3_p65333fb1b3">
+  <clipPath id="svg_5e8831fdc506464cd594_p919376eb64">
    <rect x="0" y="0" width="441.36" height="42.16" />
   </clipPath>
  </defs>
@@ -4558,7 +4558,7 @@ z
 <section id="use-schemdraw-to-draw-circuits-and-solve-them" class="level2">
 <h2 class="anchored" data-anchor-id="use-schemdraw-to-draw-circuits-and-solve-them">Use schemdraw to draw circuits and solve them!!!</h2>
 <p>Python code</p>
-<div id="848085b1" class="cell" data-execution_count="7">
+<div id="b2e2373b" class="cell" data-execution_count="7">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> schemdraw</span>
@@ -4599,12 +4599,12 @@ z
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_d206b81f7922a0201f65" role="img" width="455.316pt" height="215.86pt" viewBox="0 0 455.316 215.86">
+<p><svg id="svg_90ec4e9fdea978157027" role="img" width="455.316pt" height="215.86pt" viewBox="0 0 455.316 215.86">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.900535</dc:date>
+    <dc:date>2025-01-06T15:14:22.340914</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -4617,8 +4617,8 @@ z
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_d206b81f7922a0201f65_figure_1">
-  <g id="svg_d206b81f7922a0201f65_patch_1">
+ <g id="svg_90ec4e9fdea978157027_figure_1">
+  <g id="svg_90ec4e9fdea978157027_patch_1">
    <path d="M 0 215.86 
 L 455.316 215.86 
 L 455.316 0 
@@ -4626,8 +4626,8 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_d206b81f7922a0201f65_axes_1">
-   <g id="svg_d206b81f7922a0201f65_patch_2">
+  <g id="svg_90ec4e9fdea978157027_axes_1">
+   <g id="svg_90ec4e9fdea978157027_patch_2">
     <path d="M 51.648 136.48 
 C 56.421656 136.48 61.000438 134.583406 64.375922 131.207922 
 C 67.751406 127.832438 69.648 123.253656 69.648 118.48 
@@ -4639,9 +4639,9 @@ C 33.648 123.253656 35.544594 127.832438 38.920078 131.207922
 C 42.295562 134.583406 46.874344 136.48 51.648 136.48 
 L 51.648 136.48 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_3">
+   <g id="svg_90ec4e9fdea978157027_patch_3">
     <path d="M 411.648 136.48 
 C 416.421656 136.48 421.000438 134.583406 424.375922 131.207922 
 C 427.751406 127.832438 429.648 123.253656 429.648 118.48 
@@ -4653,9 +4653,9 @@ C 393.648 123.253656 395.544594 127.832438 398.920078 131.207922
 C 402.295562 134.583406 406.874344 136.48 411.648 136.48 
 L 411.648 136.48 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_4">
+   <g id="svg_90ec4e9fdea978157027_patch_4">
     <path d="M 173.811574 103.609757 
 C 172.148759 99.684155 169.991873 96.139441 167.428545 93.119624 
 C 164.865216 90.099806 161.930633 87.646341 158.744016 85.858902 
@@ -4673,9 +4673,9 @@ C 141.743886 163.330562 145.231952 163.708907 148.697223 163.347159
 C 152.162494 162.985411 155.557399 161.888537 158.744016 160.101098 
 C 161.930633 158.313659 164.865216 155.860194 167.428545 152.840376 
 C 169.991873 149.820559 172.148759 146.275845 173.811574 142.350243 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_5">
+   <g id="svg_90ec4e9fdea978157027_patch_5">
     <path d="M 178.288253 111.82979 
 L 171.612591 105.217261 
 L 173.967946 103.934521 
@@ -4684,9 +4684,9 @@ L 173.827382 103.601148
 L 173.999562 103.917303 
 L 176.354918 102.634562 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: #ff0000; stroke: #ff0000; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: #ff0000; stroke: #ff0000; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_6">
+   <g id="svg_90ec4e9fdea978157027_patch_6">
     <path d="M 344.811574 103.609757 
 C 343.148759 99.684155 340.991873 96.139441 338.428545 93.119624 
 C 335.865216 90.099806 332.930633 87.646341 329.744016 85.858902 
@@ -4704,9 +4704,9 @@ C 312.743886 163.330562 316.231952 163.708907 319.697223 163.347159
 C 323.162494 162.985411 326.557399 161.888537 329.744016 160.101098 
 C 332.930633 158.313659 335.865216 155.860194 338.428545 152.840376 
 C 340.991873 149.820559 343.148759 146.275845 344.811574 142.350243 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ffc0cb; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ffc0cb; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_7">
+   <g id="svg_90ec4e9fdea978157027_patch_7">
     <path d="M 349.288253 111.82979 
 L 342.612591 105.217261 
 L 344.967946 103.934521 
@@ -4715,33 +4715,33 @@ L 344.827382 103.601148
 L 344.999562 103.917303 
 L 347.354918 102.634562 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: #ffc0cb; stroke: #ffc0cb; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: #ffc0cb; stroke: #ffc0cb; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_1">
+   <g id="svg_90ec4e9fdea978157027_line2d_1">
     <path d="M 51.648 208.48 
 L 51.648 136.48 
 L 51.648 136.48 
 M 51.648 100.48 
 L 51.648 100.48 
 L 51.648 28.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_2">
+   <g id="svg_90ec4e9fdea978157027_line2d_2">
     <path d="M 55.248 127.48 
 L 48.048 127.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_3">
+   <g id="svg_90ec4e9fdea978157027_line2d_3">
     <path d="M 51.648 113.08 
 L 51.648 105.88 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_4">
+   <g id="svg_90ec4e9fdea978157027_line2d_4">
     <path d="M 55.248 109.48 
 L 48.048 109.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_5">
+   <g id="svg_90ec4e9fdea978157027_line2d_5">
     <path d="M 51.648 28.48 
 L 123.648 28.48 
 L 126.648 19.48 
@@ -4752,9 +4752,9 @@ L 150.648 19.48
 L 156.648 37.48 
 L 159.648 28.48 
 L 231.648 28.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #0000ff; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #0000ff; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_6">
+   <g id="svg_90ec4e9fdea978157027_line2d_6">
     <path d="M 231.648 28.48 
 L 231.648 100.48 
 L 240.648 103.48 
@@ -4765,46 +4765,46 @@ L 240.648 127.48
 L 222.648 133.48 
 L 231.648 136.48 
 L 231.648 208.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #ffa500; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #ffa500; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_7">
+   <g id="svg_90ec4e9fdea978157027_line2d_7">
     <path d="M 231.648 28.48 
 L 321.648 28.48 
 L 411.648 28.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #800080; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #800080; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_8">
+   <g id="svg_90ec4e9fdea978157027_line2d_8">
     <path d="M 411.648 28.48 
 L 411.648 100.48 
 L 411.648 100.48 
 M 411.648 136.48 
 L 411.648 136.48 
 L 411.648 208.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_9">
+   <g id="svg_90ec4e9fdea978157027_line2d_9">
     <path d="M 411.648 109.48 
 L 411.648 118.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #a52a2a; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_8">
+   <g id="svg_90ec4e9fdea978157027_patch_8">
     <path d="M 414.348 118.48 
 L 411.648 127.48 
 L 408.948 118.48 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: #a52a2a" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: #a52a2a" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_line2d_10">
+   <g id="svg_90ec4e9fdea978157027_line2d_10">
     <path d="M 411.648 208.48 
 L 231.648 208.48 
 L 51.648 208.48 
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: none; stroke: #808080; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: none; stroke: #808080; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_1">
+   <g id="svg_90ec4e9fdea978157027_text_1">
     <!-- 20V -->
     <g style="fill: #ff0000" transform="translate(2.656125 122.343125) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-32" d="M 1228 531 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-32" d="M 1228 531 
 L 3431 531 
 L 3431 0 
 L 469 0 
@@ -4828,7 +4828,7 @@ Q 2828 2175 2409 1742
 Q 1991 1309 1228 531 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-30" d="M 2034 4250 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-30" d="M 2034 4250 
 Q 1547 4250 1301 3770 
 Q 1056 3291 1056 2328 
 Q 1056 1369 1301 889 
@@ -4849,7 +4849,7 @@ Q 422 3509 836 4129
 Q 1250 4750 2034 4750 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-56" d="M 1831 0 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-56" d="M 1831 0 
 L 50 4666 
 L 709 4666 
 L 2188 738 
@@ -4860,16 +4860,16 @@ L 1831 0
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-32" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-30" x="63.623047" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-56" x="127.246094" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-32" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-30" x="63.623047" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-56" x="127.246094" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_2">
+   <g id="svg_90ec4e9fdea978157027_text_2">
     <!-- 400Ω -->
     <g style="fill: #0000ff" transform="translate(122.937219 12.968437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-34" d="M 2419 4116 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-34" d="M 2419 4116 
 L 825 1625 
 L 2419 1625 
 L 2419 4116 
@@ -4888,7 +4888,7 @@ L 313 1709
 L 2253 4666 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-3a9" d="M 4647 556 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-3a9" d="M 4647 556 
 L 4647 0 
 L 2772 0 
 L 2772 556 
@@ -4916,17 +4916,17 @@ L 4647 556
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-34" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-30" x="63.623047" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-30" x="127.246094" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-3a9" x="190.869141" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-34" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-30" x="63.623047" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-30" x="127.246094" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-3a9" x="190.869141" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_3">
+   <g id="svg_90ec4e9fdea978157027_text_3">
     <!-- 100Ω -->
     <g style="fill: #ffa500" transform="translate(247.159562 99.769219) rotate(-270) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-31" d="M 794 531 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-31" d="M 794 531 
 L 1825 531 
 L 1825 4091 
 L 703 3866 
@@ -4941,17 +4941,17 @@ L 794 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-31" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-30" x="63.623047" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-30" x="127.246094" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-3a9" x="190.869141" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-31" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-30" x="63.623047" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-30" x="127.246094" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-3a9" x="190.869141" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_4">
+   <g id="svg_90ec4e9fdea978157027_text_4">
     <!-- 1A -->
     <g style="fill: #a52a2a" transform="translate(433.248 122.343125) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-41" d="M 2188 4044 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-41" d="M 2188 4044 
 L 1331 1722 
 L 3047 1722 
 L 2188 4044 
@@ -4968,15 +4968,15 @@ L 1831 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-31" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-41" x="63.623047" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-31" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-41" x="63.623047" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_5">
+   <g id="svg_90ec4e9fdea978157027_text_5">
     <!-- $I_1$ -->
     <g style="fill: #ff0000" transform="translate(140.758 126.843125) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_d206b81f7922a0201f65_DejaVuSans-Oblique-49" d="M 1081 4666 
+      <path id="svg_90ec4e9fdea978157027_DejaVuSans-Oblique-49" d="M 1081 4666 
 L 1716 4666 
 L 806 0 
 L 172 0 
@@ -4984,18 +4984,18 @@ L 1081 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-31" transform="translate(29.492188 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-31" transform="translate(29.492188 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_text_6">
+   <g id="svg_90ec4e9fdea978157027_text_6">
     <!-- $I_2$ -->
     <g style="fill: #ffc0cb" transform="translate(311.758 126.843125) scale(0.14 -0.14)">
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_d206b81f7922a0201f65_DejaVuSans-32" transform="translate(29.492188 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-Oblique-49" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_90ec4e9fdea978157027_DejaVuSans-32" transform="translate(29.492188 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_9">
+   <g id="svg_90ec4e9fdea978157027_patch_9">
     <path d="M 231.648 31.18 
 C 232.364048 31.18 233.050866 30.895511 233.557188 30.389188 
 C 234.063511 29.882866 234.348 29.196048 234.348 28.48 
@@ -5006,9 +5006,9 @@ C 229.232489 27.077134 228.948 27.763952 228.948 28.48
 C 228.948 29.196048 229.232489 29.882866 229.738812 30.389188 
 C 230.245134 30.895511 230.931952 31.18 231.648 31.18 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: #008000; stroke: #008000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: #008000; stroke: #008000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
-   <g id="svg_d206b81f7922a0201f65_patch_10">
+   <g id="svg_90ec4e9fdea978157027_patch_10">
     <path d="M 231.648 211.18 
 C 232.364048 211.18 233.050866 210.895511 233.557188 210.389188 
 C 234.063511 209.882866 234.348 209.196048 234.348 208.48 
@@ -5019,12 +5019,12 @@ C 229.232489 207.077134 228.948 207.763952 228.948 208.48
 C 228.948 209.196048 229.232489 209.882866 229.738812 210.389188 
 C 230.245134 210.895511 230.931952 211.18 231.648 211.18 
 z
-" clip-path="url(#svg_d206b81f7922a0201f65_pb89aaa2cc6)" style="fill: #008000; stroke: #008000; stroke-width: 2; stroke-linejoin: miter" />
+" clip-path="url(#svg_90ec4e9fdea978157027_p1879dd9b28)" style="fill: #008000; stroke: #008000; stroke-width: 2; stroke-linejoin: miter" />
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_d206b81f7922a0201f65_pb89aaa2cc6">
+  <clipPath id="svg_90ec4e9fdea978157027_p1879dd9b28">
    <rect x="0" y="0" width="455.316" height="215.86" />
   </clipPath>
  </defs>
@@ -5033,7 +5033,7 @@ z
 </div>
 </div>
 </div>
-<div id="95aee048" class="cell" data-execution_count="8">
+<div id="2f5745b8" class="cell" data-execution_count="8">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> schemdraw</span>
@@ -5078,12 +5078,12 @@ z
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_8435776e3402559a12c2" role="img" width="225.36pt" height="189.36pt" viewBox="0 0 225.36 189.36">
+<p><svg id="svg_64eb3c55e9d727543829" role="img" width="225.36pt" height="189.36pt" viewBox="0 0 225.36 189.36">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:22.949141</dc:date>
+    <dc:date>2025-01-06T15:14:22.390337</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -5096,8 +5096,8 @@ z
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_8435776e3402559a12c2_figure_1">
-  <g id="svg_8435776e3402559a12c2_patch_1">
+ <g id="svg_64eb3c55e9d727543829_figure_1">
+  <g id="svg_64eb3c55e9d727543829_patch_1">
    <path d="M 0 189.36 
 L 225.36 189.36 
 L 225.36 0 
@@ -5105,14 +5105,14 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_8435776e3402559a12c2_axes_1">
-   <g id="svg_8435776e3402559a12c2_line2d_1">
+  <g id="svg_64eb3c55e9d727543829_axes_1">
+   <g id="svg_64eb3c55e9d727543829_line2d_1">
     <path d="M 112.68 4.68 
 L 112.68 22.68 
 L 112.68 40.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_2">
+   <g id="svg_64eb3c55e9d727543829_line2d_2">
     <path d="M 112.68 40.68 
 L 148.68 40.68 
 L 151.68 31.68 
@@ -5123,21 +5123,21 @@ L 175.68 31.68
 L 181.68 49.68 
 L 184.68 40.68 
 L 220.68 40.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_3">
+   <g id="svg_64eb3c55e9d727543829_line2d_3">
     <path d="M 220.68 40.68 
 L 220.68 58.68 
 L 220.68 76.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_4">
+   <g id="svg_64eb3c55e9d727543829_line2d_4">
     <path d="M 112.68 40.68 
 L 112.68 58.68 
 L 112.68 76.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_5">
+   <g id="svg_64eb3c55e9d727543829_line2d_5">
     <path d="M 112.68 76.68 
 L 148.68 76.68 
 L 151.68 67.68 
@@ -5148,21 +5148,21 @@ L 175.68 67.68
 L 181.68 85.68 
 L 184.68 76.68 
 L 220.68 76.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_6">
+   <g id="svg_64eb3c55e9d727543829_line2d_6">
     <path d="M 220.68 76.68 
 L 220.68 94.68 
 L 220.68 112.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_7">
+   <g id="svg_64eb3c55e9d727543829_line2d_7">
     <path d="M 112.68 40.68 
 L 112.68 76.68 
 L 112.68 112.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_8">
+   <g id="svg_64eb3c55e9d727543829_line2d_8">
     <path d="M 112.68 112.68 
 L 148.68 112.68 
 L 151.68 103.68 
@@ -5173,21 +5173,21 @@ L 175.68 103.68
 L 181.68 121.68 
 L 184.68 112.68 
 L 220.68 112.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_9">
+   <g id="svg_64eb3c55e9d727543829_line2d_9">
     <path d="M 220.68 112.68 
 L 220.68 130.68 
 L 220.68 148.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_10">
+   <g id="svg_64eb3c55e9d727543829_line2d_10">
     <path d="M 112.68 40.68 
 L 112.68 94.68 
 L 112.68 148.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_11">
+   <g id="svg_64eb3c55e9d727543829_line2d_11">
     <path d="M 112.68 148.68 
 L 148.68 148.68 
 L 151.68 139.68 
@@ -5198,31 +5198,31 @@ L 175.68 139.68
 L 181.68 157.68 
 L 184.68 148.68 
 L 220.68 148.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_12">
+   <g id="svg_64eb3c55e9d727543829_line2d_12">
     <path d="M 220.68 148.68 
 L 220.68 166.68 
 L 220.68 184.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_13">
+   <g id="svg_64eb3c55e9d727543829_line2d_13">
     <path d="M 112.68 40.68 
 L 112.68 112.68 
 L 112.68 184.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_line2d_14">
+   <g id="svg_64eb3c55e9d727543829_line2d_14">
     <path d="M 112.68 184.68 
 L 58.68 184.68 
 L 4.68 184.68 
-" clip-path="url(#svg_8435776e3402559a12c2_pdf677ffbf7)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_64eb3c55e9d727543829_p6cac114ae8)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_8435776e3402559a12c2_text_1">
+   <g id="svg_64eb3c55e9d727543829_text_1">
     <!-- $R_1$ -->
     <g transform="translate(158.49 25.168437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_8435776e3402559a12c2_DejaVuSans-Oblique-52" d="M 1613 4147 
+      <path id="svg_64eb3c55e9d727543829_DejaVuSans-Oblique-52" d="M 1613 4147 
 L 1294 2491 
 L 2106 2491 
 Q 2584 2491 2879 2755 
@@ -5250,7 +5250,7 @@ Q 3841 3044 3547 2687
 Q 3253 2331 2772 2241 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_8435776e3402559a12c2_DejaVuSans-31" d="M 794 531 
+      <path id="svg_64eb3c55e9d727543829_DejaVuSans-31" d="M 794 531 
 L 1825 531 
 L 1825 4091 
 L 703 3866 
@@ -5265,15 +5265,15 @@ L 794 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_8435776e3402559a12c2_text_2">
+   <g id="svg_64eb3c55e9d727543829_text_2">
     <!-- $R_2$ -->
     <g transform="translate(158.49 61.168437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_8435776e3402559a12c2_DejaVuSans-32" d="M 1228 531 
+      <path id="svg_64eb3c55e9d727543829_DejaVuSans-32" d="M 1228 531 
 L 3431 531 
 L 3431 0 
 L 469 0 
@@ -5298,15 +5298,15 @@ Q 1991 1309 1228 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_8435776e3402559a12c2_text_3">
+   <g id="svg_64eb3c55e9d727543829_text_3">
     <!-- $R_3$ -->
     <g transform="translate(158.49 97.168437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_8435776e3402559a12c2_DejaVuSans-33" d="M 2597 2516 
+      <path id="svg_64eb3c55e9d727543829_DejaVuSans-33" d="M 2597 2516 
 Q 3050 2419 3304 2112 
 Q 3559 1806 3559 1356 
 Q 3559 666 3084 287 
@@ -5339,15 +5339,15 @@ Q 3006 2619 2597 2516
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_8435776e3402559a12c2_text_4">
+   <g id="svg_64eb3c55e9d727543829_text_4">
     <!-- $R_4$ -->
     <g transform="translate(158.49 133.168437) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_8435776e3402559a12c2_DejaVuSans-34" d="M 2419 4116 
+      <path id="svg_64eb3c55e9d727543829_DejaVuSans-34" d="M 2419 4116 
 L 825 1625 
 L 2419 1625 
 L 2419 4116 
@@ -5367,14 +5367,14 @@ L 2253 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_8435776e3402559a12c2_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_64eb3c55e9d727543829_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_8435776e3402559a12c2_pdf677ffbf7">
+  <clipPath id="svg_64eb3c55e9d727543829_p6cac114ae8">
    <rect x="0" y="-0" width="225.36" height="189.36" />
   </clipPath>
  </defs>
@@ -5383,7 +5383,7 @@ z
 </div>
 </div>
 </div>
-<div id="aaf887de" class="cell" data-execution_count="9">
+<div id="3704bf79" class="cell" data-execution_count="9">
 <details open class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> schemdraw</span>
@@ -5415,12 +5415,12 @@ z
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><svg id="svg_299247c84b6005eb9227" role="img" width="333.554062pt" height="306.758853pt" viewBox="0 0 333.554062 306.758853">
+<p><svg id="svg_0fd98c1717f61c946259" role="img" width="333.554062pt" height="306.758853pt" viewBox="0 0 333.554062 306.758853">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-    <dc:date>2025-01-06T14:23:23.001751</dc:date>
+    <dc:date>2025-01-06T15:14:22.442410</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -5433,8 +5433,8 @@ z
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="svg_299247c84b6005eb9227_figure_1">
-  <g id="svg_299247c84b6005eb9227_patch_1">
+ <g id="svg_0fd98c1717f61c946259_figure_1">
+  <g id="svg_0fd98c1717f61c946259_patch_1">
    <path d="M 0 306.758853 
 L 333.554062 306.758853 
 L 333.554062 0 
@@ -5442,8 +5442,8 @@ L 0 0
 z
 " style="fill: #ffffff" />
   </g>
-  <g id="svg_299247c84b6005eb9227_axes_1">
-   <g id="svg_299247c84b6005eb9227_patch_2">
+  <g id="svg_0fd98c1717f61c946259_axes_1">
+   <g id="svg_0fd98c1717f61c946259_patch_2">
     <path d="M 319.874062 99.379531 
 C 319.874062 86.943641 317.366159 74.628674 312.493879 63.13941 
 C 307.621598 51.650145 300.479694 41.210021 291.476893 32.416519 
@@ -5461,9 +5461,9 @@ C 235.651945 194.079531 248.260026 191.629932 260.022752 186.870923
 C 271.785478 182.111913 282.474093 175.136045 291.476893 166.342543 
 C 300.479694 157.549041 307.621598 147.108916 312.493879 135.619652 
 C 317.366159 124.130388 319.874062 111.815421 319.874062 99.379531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #ff0000; stroke-linejoin: miter" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #ff0000; stroke-linejoin: miter" />
    </g>
-   <g id="svg_299247c84b6005eb9227_patch_3">
+   <g id="svg_0fd98c1717f61c946259_patch_3">
     <path d="M 328.874062 165.279531 
 C 328.874062 147.315119 327.646573 129.525389 325.261842 112.928437 
 C 322.877111 96.331485 319.381516 81.25008 314.975108 68.547323 
@@ -5481,33 +5481,33 @@ C 287.651665 302.079531 293.822672 298.540933 299.579922 291.666251
 C 305.337172 284.791568 310.5687 274.714496 314.975108 262.011738 
 C 319.381516 249.308981 322.877111 234.227576 325.261842 217.630624 
 C 327.646573 201.033672 328.874062 183.243942 328.874062 165.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #0000ff; stroke-linejoin: miter" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #0000ff; stroke-linejoin: miter" />
    </g>
-   <g id="svg_299247c84b6005eb9227_patch_4">
+   <g id="svg_0fd98c1717f61c946259_patch_4">
     <path d="M 178.574062 57.279531 
 C 169.097834 57.279531 165.074062 57.279531 111.074063 57.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_patch_5">
+   <g id="svg_0fd98c1717f61c946259_patch_5">
     <path d="M 174.074062 53.679531 
 L 183.074062 57.279531 
 L 174.074062 60.879531 
 z
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: #ff0000" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: #ff0000" />
    </g>
-   <g id="svg_299247c84b6005eb9227_patch_6">
+   <g id="svg_0fd98c1717f61c946259_patch_6">
     <path d="M 286.574062 57.279531 
 C 277.097834 57.279531 273.074062 57.279531 219.074062 57.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #0000ff; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #0000ff; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_patch_7">
+   <g id="svg_0fd98c1717f61c946259_patch_7">
     <path d="M 282.074062 53.679531 
 L 291.074062 57.279531 
 L 282.074062 60.879531 
 z
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: #0000ff" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: #0000ff" />
    </g>
-   <g id="svg_299247c84b6005eb9227_line2d_1">
+   <g id="svg_0fd98c1717f61c946259_line2d_1">
     <path d="M 183.074062 57.279531 
 L 219.074062 57.279531 
 L 222.074062 48.279531 
@@ -5518,9 +5518,9 @@ L 246.074062 48.279531
 L 252.074062 66.279531 
 L 255.074062 57.279531 
 L 291.074062 57.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_line2d_2">
+   <g id="svg_0fd98c1717f61c946259_line2d_2">
     <path d="M 183.074062 57.279531 
 L 183.074062 93.279531 
 L 192.074062 96.279531 
@@ -5531,15 +5531,15 @@ L 192.074062 120.279531
 L 174.074062 126.279531 
 L 183.074062 129.279531 
 L 183.074062 165.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_line2d_3">
+   <g id="svg_0fd98c1717f61c946259_line2d_3">
     <path d="M 183.074062 165.279531 
 L 237.074062 165.279531 
 L 291.074062 165.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_line2d_4">
+   <g id="svg_0fd98c1717f61c946259_line2d_4">
     <path d="M 291.074062 57.279531 
 L 291.074062 93.279531 
 L 300.074062 96.279531 
@@ -5550,9 +5550,9 @@ L 300.074062 120.279531
 L 282.074062 126.279531 
 L 291.074062 129.279531 
 L 291.074062 165.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_line2d_5">
+   <g id="svg_0fd98c1717f61c946259_line2d_5">
     <path d="M 291.074062 165.279531 
 L 291.074062 201.279531 
 L 300.074062 204.279531 
@@ -5563,13 +5563,13 @@ L 300.074062 228.279531
 L 282.074062 234.279531 
 L 291.074062 237.279531 
 L 291.074062 273.279531 
-" clip-path="url(#svg_299247c84b6005eb9227_p693b0c2f6d)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
+" clip-path="url(#svg_0fd98c1717f61c946259_p855c7b8b1c)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round" />
    </g>
-   <g id="svg_299247c84b6005eb9227_text_1">
+   <g id="svg_0fd98c1717f61c946259_text_1">
     <!-- $R_1$ -->
     <g transform="translate(228.884062 41.767968) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-Oblique-52" d="M 1613 4147 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-Oblique-52" d="M 1613 4147 
 L 1294 2491 
 L 2106 2491 
 Q 2584 2491 2879 2755 
@@ -5597,7 +5597,7 @@ Q 3841 3044 3547 2687
 Q 3253 2331 2772 2241 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-31" d="M 794 531 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-31" d="M 794 531 
 L 1825 531 
 L 1825 4091 
 L 703 3866 
@@ -5612,15 +5612,15 @@ L 794 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-31" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_299247c84b6005eb9227_text_2">
+   <g id="svg_0fd98c1717f61c946259_text_2">
     <!-- $R_2$ -->
     <g transform="translate(154.094063 115.142656) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-32" d="M 1228 531 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-32" d="M 1228 531 
 L 3431 531 
 L 3431 0 
 L 469 0 
@@ -5645,15 +5645,15 @@ Q 1991 1309 1228 531
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-32" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_299247c84b6005eb9227_text_3">
+   <g id="svg_0fd98c1717f61c946259_text_3">
     <!-- $R_3$ -->
     <g transform="translate(262.094062 115.142656) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-33" d="M 2597 2516 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-33" d="M 2597 2516 
 Q 3050 2419 3304 2112 
 Q 3559 1806 3559 1356 
 Q 3559 666 3084 287 
@@ -5686,15 +5686,15 @@ Q 3006 2619 2597 2516
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-33" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_299247c84b6005eb9227_text_4">
+   <g id="svg_0fd98c1717f61c946259_text_4">
     <!-- $R_4$ -->
     <g transform="translate(262.094062 223.142656) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-34" d="M 2419 4116 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-34" d="M 2419 4116 
 L 825 1625 
 L 2419 1625 
 L 2419 4116 
@@ -5714,15 +5714,15 @@ L 2253 4666
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-Oblique-52" transform="translate(0 0.09375)" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-34" transform="translate(69.482422 -16.3125) scale(0.7)" />
     </g>
    </g>
-   <g id="svg_299247c84b6005eb9227_text_5">
+   <g id="svg_0fd98c1717f61c946259_text_5">
     <!-- Parallel Section -->
     <g style="fill: #ff0000" transform="translate(-0 61.142656) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-50" d="M 1259 4147 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-50" d="M 1259 4147 
 L 1259 2394 
 L 2053 2394 
 Q 2494 2394 2734 2622 
@@ -5743,7 +5743,7 @@ L 628 0
 L 628 4666 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-61" d="M 2194 1759 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-61" d="M 2194 1759 
 Q 1497 1759 1228 1600 
 Q 959 1441 959 1056 
 Q 959 750 1161 570 
@@ -5776,7 +5776,7 @@ Q 2591 3584 2966 3190
 Q 3341 2797 3341 1997 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-72" d="M 2631 2963 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-72" d="M 2631 2963 
 Q 2534 3019 2420 3045 
 Q 2306 3072 2169 3072 
 Q 1681 3072 1420 2755 
@@ -5793,14 +5793,14 @@ Q 2541 3569 2628 3553
 L 2631 2963 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-6c" d="M 603 4863 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-6c" d="M 603 4863 
 L 1178 4863 
 L 1178 0 
 L 603 0 
 L 603 4863 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-65" d="M 3597 1894 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-65" d="M 3597 1894 
 L 3597 1613 
 L 953 1613 
 Q 991 1019 1311 708 
@@ -5825,8 +5825,8 @@ Q 1016 2553 972 2059
 L 3022 2063 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-20" transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-53" d="M 3425 4513 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-20" transform="scale(0.015625)" />
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-53" d="M 3425 4513 
 L 3425 3897 
 Q 3066 4069 2747 4153 
 Q 2428 4238 2131 4238 
@@ -5857,7 +5857,7 @@ Q 2388 4750 2728 4690
 Q 3069 4631 3425 4513 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-63" d="M 3122 3366 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-63" d="M 3122 3366 
 L 3122 2828 
 Q 2878 2963 2633 3030 
 Q 2388 3097 2138 3097 
@@ -5878,7 +5878,7 @@ Q 2378 3584 2631 3529
 Q 2884 3475 3122 3366 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-74" d="M 1172 4494 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-74" d="M 1172 4494 
 L 1172 3500 
 L 2356 3500 
 L 2356 3053 
@@ -5899,7 +5899,7 @@ L 594 4494
 L 1172 4494 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-69" d="M 603 3500 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-69" d="M 603 3500 
 L 1178 3500 
 L 1178 0 
 L 603 0 
@@ -5912,7 +5912,7 @@ L 603 4134
 L 603 4863 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-6f" d="M 1959 3097 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-6f" d="M 1959 3097 
 Q 1497 3097 1228 2736 
 Q 959 2375 959 1747 
 Q 959 1119 1226 758 
@@ -5933,7 +5933,7 @@ Q 353 2609 779 3096
 Q 1206 3584 1959 3584 
 z
 " transform="scale(0.015625)" />
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-6e" d="M 3513 2113 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-6e" d="M 3513 2113 
 L 3513 0 
 L 2938 0 
 L 2938 2094 
@@ -5953,29 +5953,29 @@ Q 3513 2838 3513 2113
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-50" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-61" x="55.802734" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-72" x="117.082031" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-61" x="158.195312" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6c" x="219.474609" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6c" x="247.257812" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-65" x="275.041016" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6c" x="336.564453" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-20" x="364.347656" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-53" x="396.134766" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-65" x="459.611328" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-63" x="521.134766" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-74" x="576.115234" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-69" x="615.324219" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6f" x="643.107422" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6e" x="704.289062" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-50" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-61" x="55.802734" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-72" x="117.082031" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-61" x="158.195312" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6c" x="219.474609" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6c" x="247.257812" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-65" x="275.041016" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6c" x="336.564453" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-20" x="364.347656" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-53" x="396.134766" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-65" x="459.611328" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-63" x="521.134766" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-74" x="576.115234" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-69" x="615.324219" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6f" x="643.107422" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6e" x="704.289062" />
     </g>
    </g>
-   <g id="svg_299247c84b6005eb9227_text_6">
+   <g id="svg_0fd98c1717f61c946259_text_6">
     <!-- Series Section -->
     <g style="fill: #0000ff" transform="translate(115.95375 61.142656) scale(0.14 -0.14)">
      <defs>
-      <path id="svg_299247c84b6005eb9227_DejaVuSans-73" d="M 2834 3397 
+      <path id="svg_0fd98c1717f61c946259_DejaVuSans-73" d="M 2834 3397 
 L 2834 2853 
 Q 2591 2978 2328 3040 
 Q 2066 3103 1784 3103 
@@ -6007,26 +6007,26 @@ Q 2597 3491 2834 3397
 z
 " transform="scale(0.015625)" />
      </defs>
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-53" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-65" x="63.476562" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-72" x="125" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-69" x="166.113281" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-65" x="193.896484" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-73" x="255.419922" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-20" x="307.519531" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-53" x="339.306641" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-65" x="402.783203" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-63" x="464.306641" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-74" x="519.287109" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-69" x="558.496094" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6f" x="586.279297" />
-     <use xlink:href="#svg_299247c84b6005eb9227_DejaVuSans-6e" x="647.460938" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-53" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-65" x="63.476562" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-72" x="125" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-69" x="166.113281" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-65" x="193.896484" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-73" x="255.419922" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-20" x="307.519531" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-53" x="339.306641" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-65" x="402.783203" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-63" x="464.306641" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-74" x="519.287109" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-69" x="558.496094" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6f" x="586.279297" />
+     <use xlink:href="#svg_0fd98c1717f61c946259_DejaVuSans-6e" x="647.460938" />
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="svg_299247c84b6005eb9227_p693b0c2f6d">
+  <clipPath id="svg_0fd98c1717f61c946259_p855c7b8b1c">
    <rect x="4.178062" y="-0" width="329.376" height="306.758853" />
   </clipPath>
  </defs>
@@ -6629,7 +6629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-101"><a href="#cb11-101"></a><span class="ss">3. </span>**Inductors**  </span>
 <span id="cb11-102"><a href="#cb11-102"></a><span class="ss">4. </span>**Diodes**  </span>
 <span id="cb11-103"><a href="#cb11-103"></a></span>
-<span id="cb11-104"><a href="#cb11-104"></a>We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using <span class="al">![schemdraw](https://schemdraw.readthedocs.io/en/stable/usage/start.html)</span> in Python.</span>
+<span id="cb11-104"><a href="#cb11-104"></a>We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using <span class="co">[</span><span class="ot">schemdraw</span><span class="co">](https://schemdraw.readthedocs.io/en/stable/usage/start.html)</span> in Python.</span>
 <span id="cb11-105"><a href="#cb11-105"></a></span>
 <span id="cb11-106"><a href="#cb11-106"></a>---</span>
 <span id="cb11-107"><a href="#cb11-107"></a></span>
