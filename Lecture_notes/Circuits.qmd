@@ -21,11 +21,226 @@ format:
         href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       
 ---
 
-## EM
+
+## Current
+
+In physics and electrical engineering, **electric current** refers to the flow of electric charge. Most commonly, these charges are carried by electrons moving through a conductor (such as a metal wire). We can write the electric current $I$ in terms of the charge $Q$ flowing per unit time $t$:
+
+$$
+I = \frac{dQ}{dt}
+$$
+
+When a current flows through a circuit element, we often speak of it in terms of a **current direction**, which, by convention, is taken to be the direction a positive charge would move. This is sometimes referred to as **conventional current**.
+
+---
+
+## Voltage
+
+**Voltage** (or **electric potential difference**) is the measure of the potential energy difference per unit charge between two points in a circuit. It can be thought of as the "pressure" that pushes charges through a conductor. We use the symbol $V$ for voltage, and it is measured in **volts** \([V]\). Mathematically, voltage between two points $a$ and $b$ can be expressed as:
+
+$$
+V_{ab} = \phi_a - \phi_b
+$$
+
+where $\phi$ represents the electric potential at a given point.
+
+In practical terms, if you have a voltage source like a battery, it provides a certain potential difference that drives current around a circuit.
+
+---
+
+## Basic Circuit Elements
+
+Below are the most common circuit elements you need to know:
+
+1. **Resistors**  
+2. **Capacitors**  
+3. **Inductors**  
+4. **Diodes**  
+
+We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using **schemdraw** in Python.
+
+---
+
+### Resistors
+
+A **resistor** is a passive component that opposes the flow of current. The relationship between the voltage $V$ across a resistor and the current $I$ flowing through it is described by **Ohm’s Law**:
+
+$$
+V = IR
+$$
+
+where $R$ is the **resistance** (measured in ohms \([\Omega]\)). Resistors can be used to control current levels, divide voltage, and dissipate energy in a circuit.
+
+**Key Points**:
+
+- Symbol in circuit diagrams: a zig-zag line or a rectangular box.  
+- Power dissipated by a resistor can be calculated using  
+  $$
+  P = IV = I^2 R = \frac{V^2}{R}.
+  $$
+- Used in voltage regulation, current limiting, and signal conditioning.
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Resistor().label('R')
+```
+
+The above code snippet creates an image of a single resistor labeled “R”.
+
+---
+
+### Capacitors
+
+A **capacitor** is a device that stores energy in the form of an electric field between two conductive plates separated by an insulator (dielectric). The basic relationship between voltage $V$ across a capacitor and the charge $Q$ it holds is:
+
+$$
+Q = C \, V
+$$
+
+where $C$ is the **capacitance** (measured in farads \([F]\)). In circuits, the current $i(t)$ and voltage $v(t)$ for a capacitor relate as:
+
+$$
+i(t) = C \frac{dv(t)}{dt}
+$$
+
+**Key Points**:
+
+- Symbol in circuit diagrams: two parallel lines.  
+- Capacitors resist changes in voltage — they charge up and discharge according to  
+  $$
+  v(t) = \frac{1}{C} \int i(t) \, dt.
+  $$
+- Commonly used for filtering, decoupling, and timing applications.
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Capacitor().label('C')
+```
+
+This snippet draws a basic capacitor symbol labeled “C”.
+
+---
+
+### Inductors
+
+An **inductor** is a component that stores energy in a magnetic field when current flows through it. The voltage $V$ across an inductor of inductance $L$ is given by:
+
+$$
+V = L \frac{dI}{dt}
+$$
+
+**Key Points**:
+
+- Symbol in circuit diagrams: a coiled wire.  
+- Inductors resist changes in current. When current changes, the inductor induces a voltage that opposes the change.  
+- Often used in filters, transformers, and power supplies.
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Inductor().label('L')
+```
+
+This snippet draws a simple inductor symbol labeled “L”.
+
+---
+
+### Diodes
+
+A **diode** allows current to flow primarily in one direction. It has a very low (ideally zero) resistance in one direction — called **forward bias** — and a high (ideally infinite) resistance in the other direction — **reverse bias**.
+
+**Key Points**:
+
+- Symbol in circuit diagrams: a triangle pointing to a vertical line.  
+- Typical diode equation for current $I$ and voltage $V$ is (idealized):  
+  $$
+  I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
+  $$
+  where $I_S$ is the saturation current, $n$ is the ideality factor (usually 1 or 2), and $V_T$ is the thermal voltage ($\approx 25 \,\text{mV}$ at room temperature).  
+- Practical uses: rectification (converting AC to DC), protection circuits, and signal demodulation.
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Diode().label('D')
+```
+
+Here, we draw a simple diode symbol labeled “D”.
+
+---
+
+## Kirchhoff's Laws
+
+To analyze and understand how currents and voltages distribute themselves around a circuit, we use **Kirchhoff’s Laws**:
+
+### Kirchhoff’s Current Law (KCL)
+
+- States that the algebraic sum of all currents entering a node (junction) is zero.  
+- Another way to put it: **the current flowing into a node equals the current flowing out**.  
+- Written mathematically:
+
+$$
+\sum I_{\text{in}} = \sum I_{\text{out}}
+$$
+
+### Kirchhoff’s Voltage Law (KVL)
+
+- States that the algebraic sum of all voltages around any closed loop in a circuit is zero.  
+- Another way to put it: **what goes up (in voltage) must come down** around a complete path.  
+- Written mathematically:
+
+$$
+\sum V_{\text{around a loop}} = 0
+$$
+
+---
+
+## Putting It All Together
+
+By combining the definitions of current and voltage with the properties of resistors, capacitors, inductors, and diodes, and applying Kirchhoff’s Laws, one can systematically analyze any linear circuit.
+
+1. Use Kirchhoff’s Current Law to ensure current conservation at each node.  
+2. Use Kirchhoff’s Voltage Law to ensure voltage consistency around loops.  
+3. Apply the constitutive relationships for each circuit element (Ohm’s law for resistors, capacitor current-voltage relationship, inductor current-voltage relationship, and diode I–V characteristic).
+
+With these tools, you can solve for unknown currents and voltages throughout the circuit.
+
+---
+
+## Summary
+
+- **Current**: Flow of electric charge, measured in amperes \([A]\).  
+- **Voltage**: Potential difference driving the current, measured in volts \([V]\).  
+- **Resistors**: Convert electric energy into heat, obey $V = IR$.  
+- **Capacitors**: Store energy in an electric field, obey $Q = CV$ and $i = C \frac{dV}{dt}$.  
+- **Inductors**: Store energy in a magnetic field, obey $V = L \frac{dI}{dt}$.  
+- **Diodes**: Allow current in one direction, block current in reverse (ideal diode model).  
+- **Kirchhoff’s Laws**: Provide fundamental rules for current and voltage in circuit analysis.  
+- **schemdraw (Python)**: A useful library for drawing circuit diagrams programmatically.
+
+Understanding these basics is essential before moving on to more complex circuits and network theorems (e.g., Thevenin’s and Norton’s theorems, superposition, etc.).
+
+---
+
+## References and Further Reading
+
+- D. Halliday, R. Resnick, and J. Walker, *Fundamentals of Physics*.  
+- J.D. Irwin, *Basic Engineering Circuit Analysis*.  
+- Thomas L. Floyd, *Electronic Devices*.  
+- The [HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/) website for quick reference.
 
 
-
-### Examples
+## Use schemdraw to draw circuits and solve them!!!
 
 Python code
 
