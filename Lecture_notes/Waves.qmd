@@ -21,24 +21,6 @@ format:
         href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       
 ---
 
-## Definition of Wave
-
-**Wave** is a disturbance that propagates through space or a medium, and transports energy without transporting mass.
-
-
-### Vibrations vs Waves
-
-**Vibration**
-
-- Wiggle in time
-- $u(t) = A \sin(\omega t)$
-
-**Wave**
-
-- Wiggle in time and space
-- $u(t, x) = A \sin(\omega t - kx)$
-
----
 
 ## Springs and Mechanical Waves
 
@@ -404,3 +386,23 @@ The vapor cone, also known as the shock collar or shock egg, is a visible cloud 
 - [Doppler Effect simulator](https://ophysics.com/waves11.html)
 
 - [Interference applet](https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html)
+
+
+## Definition of Wave
+
+**Wave** is a disturbance that propagates through space or a medium, and transports energy without transporting mass.
+
+
+### To be considered...
+
+**Vibration**
+
+- Wiggle in time
+- $u(t) = A \sin(\omega t)$
+
+**Wave**
+
+- Wiggle in time and space
+- $u(t, x) = A \sin(\omega t - kx)$
+
+---
