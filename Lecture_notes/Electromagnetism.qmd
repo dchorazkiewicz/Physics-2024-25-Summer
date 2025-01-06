@@ -23,7 +23,7 @@ format:
 
 ## History of Electromagnetism
 
-### 1820: Hans Christian Ørsted 
+### 1820: Ørsted 
 
 discovered that a current-carrying wire deflects a compass needle.
 Hans Christian Ørsted’s discovery marked the first demonstration of a link between electricity and magnetism.  
@@ -33,7 +33,7 @@ Hans Christian Ørsted’s discovery marked the first demonstration of a link be
 - **Connection between electricity and magnetism**: Ørsted's work revealed that electric currents produce magnetic fields, laying the groundwork for the field of electromagnetism.  
 - **Foundation for future research**: This observation inspired scientists like André-Marie Ampère, Jean-Baptiste Biot, and Félix Savart to further investigate the interactions between electric currents and magnetic forces.  
 
-### 1820: André-Marie Ampère 
+### 1820: Ampère 
 
 discovered that two current-carrying wires attract or repel each other.
 André-Marie Ampère demonstrated that parallel current-carrying wires exert attractive or repulsive forces on each other, depending on the direction of the currents. His work led to Ampère's Law.  
@@ -43,7 +43,7 @@ André-Marie Ampère demonstrated that parallel current-carrying wires exert att
 - **Quantitative understanding of magnetic forces**: Ampère’s Law provided a mathematical description of the relationship between electric currents and the magnetic fields they produce.  
 - **Technological impact**: This discovery underpins technologies such as electromagnets, electric motors, and transformers.  
 
-### 1820: Jean-Baptiste Biot and Félix Savart 
+### 1820: Biot and Savart 
 
 formulated a law for the magnetic field produced by a current-carrying wire.
 The Biot-Savart Law describes the magnetic field at a point in space as being proportional to the current and inversely proportional to the distance from the wire.  
@@ -53,8 +53,9 @@ The Biot-Savart Law describes the magnetic field at a point in space as being pr
 - **Precision in magnetic field calculations**: This law remains a key tool in calculating magnetic fields for complex geometries.  
 - **Applications in engineering**: It is essential for designing devices like inductors, solenoids, and magnetic field sensors.  
 
-### 1831: Michael Faraday discovered that a changing magnetic field produces an electric field
+### 1831: Faraday
 
+discovered that a changing magnetic field produces an electric field.
 Michael Faraday’s experiments revealed electromagnetic induction, the process by which a changing magnetic field generates an electric current.  
 
 **Implications**:  
@@ -62,7 +63,7 @@ Michael Faraday’s experiments revealed electromagnetic induction, the process 
 - **Electricity generation**: This principle is the foundation of power generation in electric generators and transformers.  
 - **Electromagnetic wave theory**: Faraday’s findings were crucial for understanding how electric and magnetic fields interact dynamically.  
 
-### 1834: Michael Faraday
+### 1834: Faraday
 
 discovered electromagnetic induction.
 Michael Faraday formalized the concept that a time-varying magnetic field induces an electromotive force (EMF) in a conductor.  
@@ -72,8 +73,9 @@ Michael Faraday formalized the concept that a time-varying magnetic field induce
 - **Basis for modern power systems**: Electromagnetic induction is the principle behind electric power generation, including in alternators and dynamo machines.  
 - **Understanding of energy transfer**: It clarified how magnetic energy can be converted into electrical energy and vice versa.  
 
-### 1864: James Clerk Maxwell formulated the equations of electromagnetism
+### 1864: Maxwell 
 
+formulated the equations of electromagnetism.
 James Clerk Maxwell unified the concepts of electricity and magnetism into a comprehensive set of equations, showing that light itself is an electromagnetic wave.  
 
 **Implications**:  
