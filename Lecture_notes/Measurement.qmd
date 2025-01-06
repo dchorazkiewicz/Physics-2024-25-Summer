@@ -21,9 +21,23 @@ format:
         href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/        
 ---
 
-## 1. Introduction
+*"Man started from measuring himself and finished weighing the stars."*
+
+## 1. Measurement
 
 Measurement is the process of determining the size, length, or amount of something. It is a fundamental aspect of physics and other sciences, as it allows us to quantify and compare physical quantities. Today we will discuss some of the most important measurements in the history of physics and describe the importance and details of making measurements.
+
+### Types of measurements in physics
+
+- **Direct measurements**: Measuring a physical quantity directly using a measuring instrument, such as a ruler, thermometer, or voltmeter.
+
+- **Indirect measurements**: Measuring a physical quantity indirectly by using other measurements and mathematical relationships, such as calculating the volume of a sphere from its diameter, or determining the speed of an object from its position and time.
+
+### Difference between accuracy and precision
+
+- **Accuracy** is the degree to which a measurement is close to the true value of the quantity being measured. It is a measure of how well the measurement reflects the actual physical quantity.
+
+- **Precision** is the degree to which repeated measurements of the same quantity give consistent results. It is a measure of the reproducibility and consistency of the measurement process.
 
 ### Why do we measure? 
 
@@ -61,21 +75,21 @@ All other units are derived from these base units. For example, the unit of forc
 
 **Examples of derived units in physics include:**
 
-- Acceleration: $[m/s^2]$
+- Acceleration: $[\frac{m}{s^2}]$
 
-- Force: Newton $[N=kg\,m/s^2]$
+- Force: Newton $[N=\frac{kg\,m}{s^2}]$
 
-- Energy: Joule $[J=kg\,m^2/s^2]$
+- Energy: Joule $[J=\frac{kg\,m^2}{s^2}]$
 
-- Power: Watt $[W=J/s]$
+- Power: Watt $[W=\frac{J}{s}=\frac{kg\,m^2}{s^3}]$
 
-- Pressure: Pascal $[Pa=N/m^2=kg/m \,s^2]$
+- Pressure: Pascal $[Pa=\frac{N}{m^2}=\frac{kg}{m\,s^2}]$
 
 - Electric charge: Coulomb $[C=A s]$
 
-- Electric potential: Volt $[V=W/A=J/s/A=kg m^2/ s^3 /A]$
+- Electric potential: Volt $[V=\frac{J}{C}=\frac{kg\,m^2}{A\,s^3}]$
 
-- Electric resistance: Ohm $[\Omega=V/A=kg\, m^2 / C^2 s^3=A^2 s^3 / kg\,m^2]$
+- Electric resistance: Ohm $[\Omega=\frac{V}{A}=\frac{kg\,m^2}{A^2\,s^3}]$
 
 ## 2. Uncertainty in measurement
 
@@ -103,11 +117,26 @@ If the watch with markings every 1 minute shows 12:00, it means that the true ti
 
 Other example lets take voltmeter with resolution of 0.1 V. If the voltmeter shows 96.6 V, the true value of the voltage is between 96.55 and 96.65 V. One can write it as 96.6 V $\pm$ 0.05 V.
 
-### Uncertentity from total derivative
+### Total derivative
 
-**Uncertainty** is an unavoidable aspect of measurement in physics and other sciences. It arises from a variety of sources, including the limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process.
+The *total derivative* is a mathematical concept that describes how a function changes with respect to changes in its variables. 
 
-To estimate the uncertainty in measurement using the total derivative, follow these steps:
+In the context of measurement, the total derivative can be used to quantify the so-called **propagation of uncertainty** in a physical quantity due to uncertainties in the variables that affect it.
+
+$$
+d f(x_1,x_2,...,x_n) = \frac{\partial f}{\partial x_1} dx_1 + \frac{\partial f}{\partial x_2} dx_2 + ... + \frac{\partial f}{\partial x_n} dx_n
+$$
+
+For example for fucntion dependent on two variables, $f(x,y)$:
+
+$$d f(x,y) = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy
+$$ 
+
+### Uncertainty from the Total Derivative
+
+In the context of measurement, the total derivative can be used to quantify the so-called **propagation of uncertainty** in a physical quantity due to uncertainties in the variables that affect it.
+
+To estimate the uncertainty in measurement using the total derivative , you can follow these steps:
 
 1. Identify the physical quantity that you want to measure and the variables that affect it.
 
@@ -116,18 +145,8 @@ To estimate the uncertainty in measurement using the total derivative, follow th
 3. Calculate the total derivative of the physical quantity with respect to the variables that affect it.
 
 4. Use the total derivative to estimate the uncertainty in the physical quantity due to uncertainties in the variables.
-
-By following these steps and using the total derivative to estimate the uncertainty in a measurement, you can make more accurate and reliable measurements and improve the quality of your experimental data.
-
-### Quantifying uncertainty using the total derivative
-
-The *total derivative* is a mathematical concept that describes how a function changes with respect to changes in its variables. For example 
-
-$$d f(x,y) = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy
-$$ 
- In the context of measurement, the total derivative can be used to quantify the uncertainty in a physical quantity due to uncertainties in the variables that affect it. 
  
- For example, if a physical quantity f(x,y) is a function of variables x and y, then the total derivative of f with respect to x and y can be used to estimate the uncertainty in f due to uncertainties in x and y (i.e. $\Delta x$ and $\Delta y$ ).
+For example, if a physical quantity $f(x,y)$ is a function of variables x and y, then the total derivative of $f$ with respect to $x$ and $y$ can be used to estimate the uncertainty in $f$ due to uncertainties in $x$ and $y$ (i.e. $\Delta x$ and $\Delta y$).
 
 $$\Delta f(x,y) = | \frac{\partial f}{\partial x} \Delta x| + |\frac{\partial f}{\partial y} \Delta y|\qquad \qquad\text{University formula}
 $$
@@ -135,11 +154,13 @@ $$
 $$\Delta f(x,y) = \sqrt{(\frac{\partial f}{\partial x} \Delta x)^2 + (\frac{\partial f}{\partial y} \Delta y)^2}\qquad\text{Engineering formula (use this one!)}
 $$
 
-### Example: Estimating Uncertainty in Volume Measurement of a Ball
+**Uncertainty** is an unavoidable aspect of measurement in physics and other sciences. It arises from a variety of sources, including the limitations of measuring instruments, the nature of the physical quantity being measured, and the presence of random errors in the measurement process.
 
-The diameter of a certain ball was measured to be $L = 42 \pm 1$ cm. Using this measurement, estimate the volume of the ball $V$, and then calculate the uncertainty in this volume estimation $\Delta V$.
+### Example 1
 
-LINK
+**Estimating Uncertainty in Volume Measurement of a Ball**
+
+The diameter of a certain ball was measured to be $L = 42 \pm 1$ cm. Using this measurement, lets estimate the volume of the ball $V$, and then calculate the uncertainty in this volume estimation $\Delta V$.
 
 **Calculations of Ball's Volume**
 
@@ -187,7 +208,9 @@ Similarly, relative uncertainty can be written as $\Delta V/V = 2772/38808 \appr
 Here’s an improved and slightly reorganized version of your markdown notes:
 
 
-### Example: Calculating Resistance and Its Uncertainty
+### Example 2
+
+**Calculating Resistance and Its Uncertainty**
 
 We calculate the resistance $R$ of a resistor using **Ohm's Law**, which relates resistance $R$, voltage $V$, and current $I$ in a circuit:
 $$
@@ -268,26 +291,26 @@ Mean of the measurements is the average value of the measurements, while the sta
 
 The average and standard deviation are important statistical quantities that are used to describe the distribution of measurements and to make comparisons between different sets of data. By calculating the average and standard deviation of a set of measurements, scientists can determine the accuracy and reliability of their experimental data and make more meaningful conclusions about the physical quantity being measured.
 
-### Example: Pizza delivery time
+### Example of mean and standard deviation
+
+**Pizza delivery time**
 
 Consider measuring the time it takes for a pizza to be delivered to your house. You order a pizza from a local restaurant and record the delivery times for 10 different orders. The delivery times are recorded in the following table:
 
-| Measurement n | Delivery time t_n (min) |
-|---------------|-------------------------|
-| 1             | 30                      |
-| 2             | 25                      |
-| 3             | 31                      |
-| 4             | 40                      |
-| 5             | 23                      |
-| 6             | 45                      |
-| 7             | 30                      |
-| 8             | 25                      |
-| 9             | 35                      |
-| 10            | 47                      |
+| Measurement n | Delivery $t_n$ [min]  |
+|---------------|-----------------------|
+| 1             | 30                    |
+| 2             | 25                    |
+| 3             | 31                    |
+| 4             | 40                    |
+| 5             | 23                    |
+| 6             | 45                    |
+| 7             | 30                    |
+| 8             | 25                    |
+| 9             | 35                    |
+| 10            | 47                    |
 
 Lets find the shortest and longest delivery time, the average delivery time, and the standard deviation of the delivery times.
-
-### Calculations
 
 **Shortest and Longest Delivery Time:**
 
@@ -297,13 +320,20 @@ Lets find the shortest and longest delivery time, the average delivery time, and
 **Average Delivery Time:**
 
 $$\small
-\text{Average delivery time} = \frac{1}{N} \sum_{n=1}^{N} t_n = \frac{1}{10} (30 + 25 + 31 + 40 + 23 + 45 + 30 + 25 + 35 + 47) = 32.6 \text{ minutes}
+\begin{align}
+\text{Average delivery time} &= \frac{1}{N} \sum_{n=1}^{N} t_n\\
+&= \frac{1}{10} (30 + 25 + 31 + 40 + 23 + 45 + 30 + 25 + 35 + 47)\\
+&= 32.6 \text{ minutes}
+\end{align}
 $$
 
 **Standard Deviation:**
-
 $$\small
-\text{Standard deviation} = \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (t_n - \bar{t})^2} = \sqrt{\frac{(30 - 32.6)^2 + (25 - 32.6)^2 + \ldots + (47 - 32.6)^2}{9}} \approx 8.9 \text{ minutes}
+\begin{align}
+\text{Standard deviation} &= \sqrt{\frac{1}{N-1} \sum_{n=1}^{N} (t_n - \bar{t})^2}\\
+&= \sqrt{\frac{(30 - 32.6)^2 + (25 - 32.6)^2 + \ldots + (47 - 32.6)^2}{9}}\\
+&\approx 8.9 \text{ minutes}
+\end{align}
 $$
 
 In conclusion, the average delivery time is 32.6 minutes, with a standard deviation of 8.9 minutes.
@@ -312,7 +342,7 @@ In conclusion, the average delivery time is 32.6 minutes, with a standard deviat
 
 Error bars are a graphical representation of the uncertainty in a measurement. They are typically shown as vertical or horizontal lines on a graph that indicate the range of values within which the true value of the measurement is likely to lie. Error bars are used to visualize the uncertainty in a measurement and to make comparisons between different data points.
 
-# Example of error bar in python 
+### Example of error bar in python 
 
 ```{python}
 import matplotlib.pyplot as plt
@@ -330,24 +360,27 @@ plt.title('Error Bar Example')
 plt.show()
 ```
 
-
 ## Few nice examples of measurements in physics
 
-### Eratosthenes' Measurement of Earth's Circumference
+### Earth's Circumference
 
 Eratosthenes was a Greek mathematician, geographer, poet, astronomer, and music theorist who lived in the third century BC. He is famous for accurately [calculating the Earth's circumference](https://youtu.be/Mw30CgaXiQw?si=uFrM9bP4S2BAhL87) using simple geometry.
 
-1. **Observation in Syene (modern-day Aswan, Egypt):**
-   - At noon on the summer solstice, the Sun was directly overhead, casting no shadow and reflecting in a well. This indicated that Syene lay on the Tropic of Cancer.
+**Observation in Syene (modern-day Aswan, Egypt):**
 
-2. **Measurement in Alexandria:**
-   - In Alexandria, north of Syene, Eratosthenes measured the Sun's angle at noon during the summer solstice: **7°**.
+At noon on the summer solstice, the Sun was directly overhead, casting no shadow and reflecting in a well. This indicated that Syene lay on the Tropic of Cancer.
 
-3. **Distance Between Cities:**
-   - He hired a man to measure the distance between Syene and Alexandria: **800 km**.
+**Measurement in Alexandria:**
 
-4. **Calculation:**
-   - He assumed the Earth is a sphere and used the fraction of the Earth's circumference that 7° represents:
+In Alexandria, north of Syene, Eratosthenes measured the Sun's angle at noon during the summer solstice: **7°**.
+
+**Distance Between Cities:**
+
+He hired a man to measure the distance between Syene and Alexandria: **800 km**.
+
+**Calculation:**
+
+He assumed the Earth is a sphere and used the fraction of the Earth's circumference that 7° represents:
      $$
      \frac{7^\circ}{360^\circ} = \frac{800 \, \text{km}}{\text{Earth's circumference}}
      $$
@@ -356,17 +389,17 @@ Earth's circumference:
   $$
   \text{Circumference} = \frac{800 \, \text{km}}{\frac{7}{360}} = 40,000 \, \text{km}
   $$
-
 Earth's radius:
   $$
   R = \frac{40,000 \, \text{km}}{2 \pi} \approx 6370 \, \text{km}
   $$
 
----
+Eratosthenes' measurement was remarkably close to the actual value of the Earth's circumference: **40,075 km**.
 
 ### Measuring Earth's Mass with a Pendulum
 
-The Earth's mass can be calculated using a pendulum and Newton's law of gravitation:
+The Earth's mass can be calculated using a pendulum $g = \frac{4 \pi^2 R}{T^2}$
+and Newton's law of gravitation $mg = \frac{G m M}{R^2}$.
 
 $$
 mg = \frac{G m M}{R^2}
@@ -386,11 +419,7 @@ $$
 \text{Mass of Earth} \approx 5.97 \times 10^{24} \, \text{kg}
 $$
 
-Henry Cavendish first [measured Earth's mass](https://en.wikipedia.org/wiki/Cavendish_experiment) using his experiment to determine $G$ in the Newtonian gravity formula.:
-$$
-F = \frac{G m_1 m_2}{r^2}
-$$
----
+Henry Cavendish first [measured Earth's mass](https://en.wikipedia.org/wiki/Cavendish_experiment) using his experiment to determine $G$ in the Newtonian gravity formula.
 
 ### Speed of Light Using a Microwave Oven
 
@@ -418,8 +447,6 @@ $$
 \frac{3.185 \times 10^8 - 2.99792458 \times 10^8}{2.99792458 \times 10^8} \times 100 \% \approx 6.3 \%
 $$
 
----
-
 ### Geometry of the Universe
 
 By measuring the sum of angles in a triangle, we can determine the geometry of the universe.
@@ -433,9 +460,3 @@ The sum of angles in a triangle depends on the geometry of the space:
 3. **Hyperbolic Space**: Sum of angles < $180^\circ$
 
 Link: ![](https://upload.wikimedia.org/wikipedia/commons/9/98/End_of_universe.jpg)
-
----
-
-## Quote
-
-*"Man started from measuring himself and finished weighing the stars."*
