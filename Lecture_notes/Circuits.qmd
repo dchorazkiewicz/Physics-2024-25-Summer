@@ -101,7 +101,7 @@ Below are the most common circuit elements you need to know:
 3. **Inductors**  
 4. **Diodes**  
 
-We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using ![schemdraw](https://schemdraw.readthedocs.io/en/stable/usage/start.html) in Python.
+We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using [schemdraw](https://schemdraw.readthedocs.io/en/stable/usage/start.html) in Python.
 
 ---
 
