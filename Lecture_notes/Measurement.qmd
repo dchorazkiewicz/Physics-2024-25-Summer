@@ -429,7 +429,7 @@ The sum of angles in a triangle depends on the geometry of the space:
 
 3. **Hyperbolic Space**: Sum of angles < $180^\circ$
 
-Link: ![](https://commons.wikimedia.org/wiki/File:End_of_universe.jpg#/media/File:End_of_universe.jpg)
+Link: ![](https://upload.wikimedia.org/wikipedia/commons/9/98/End_of_universe.jpg)
 
 ---
 
