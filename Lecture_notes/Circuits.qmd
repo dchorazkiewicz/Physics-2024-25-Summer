@@ -18,9 +18,32 @@ format:
     self-contained: true
     other-links:
       - text: Main page
-        href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       
+        href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/   
+
 ---
 
+## Introduction to Circuits and Circuit Elements
+
+A circuit is a closed loop or pathway through which electric current can flow. It consists of various electrical components connected together to perform a specific function, such as controlling the flow of current, storing energy, or amplifying signals. Circuits can be found in a wide range of electronic devices, from simple light switches to complex computer systems.
+
+### Types of circuits: 
+- **series circuits** (the components are connected end-to-end, forming a single path for current flow)
+- **parallel circuits** (the components are connected across each other, providing multiple paths for current flow).
+- **combination circuits** (a mix of series and parallel circuits).
+  
+## List of standard circuit elements with symbols:
+- Switch: S
+- Resistor: R
+- Capacitor: C
+- Inductor: L
+- Diode: D
+- Transistor: Q
+- Voltage Source: V
+- Current Source: I
+
+## Cuircuit at fundamental level 
+
+Cuircuit is **movment of electrons** in a closed loop. Density of electrons is higher at the negative terminal of the battery and lower at the positive terminal. The electrons move from the negative terminal to the positive terminal, creating a current flow.
 
 ## Current
 
@@ -30,13 +53,17 @@ $$
 I = \frac{dQ}{dt}
 $$
 
+Current is measured in **amperes** $[A]$, where 1 Amper corresponds to 1 coulomb of charge passing a point in 1 second.
+
 When a current flows through a circuit element, we often speak of it in terms of a **current direction**, which, by convention, is taken to be the direction a positive charge would move. This is sometimes referred to as **conventional current**.
+
+In materials such as wood or glass, all the electrons are bound to nearby atoms and none can move freely. These materials are called **insulators**. In many materials, such as copper and other metals, some of the electrons are free to move about the entire material. Such materials are called **conductors**. 
 
 ---
 
 ## Voltage
 
-**Voltage** (or **electric potential difference**) is the measure of the potential energy difference per unit charge between two points in a circuit. It can be thought of as the "pressure" that pushes charges through a conductor. We use the symbol $V$ for voltage, and it is measured in **volts** \([V]\). Mathematically, voltage between two points $a$ and $b$ can be expressed as:
+**Voltage** (or **electric potential difference**) is the measure of the potential energy difference per unit charge between two points in a circuit. It can be thought of as the "pressure" that pushes charges through a conductor. We use the symbol $V$ for voltage, and it is measured in **volts** $[V]$. Mathematically, voltage between two points $a$ and $b$ can be expressed as:
 
 $$
 V_{ab} = \phi_a - \phi_b
@@ -45,6 +72,23 @@ $$
 where $\phi$ represents the electric potential at a given point.
 
 In practical terms, if you have a voltage source like a battery, it provides a certain potential difference that drives current around a circuit.
+
+---
+
+## Battery
+
+A battery is an electrochemical device that stores electrical energy and provides a voltage source for electronic circuits. It consists of one or more cells that convert chemical energy into electrical energy through a chemical reaction. The voltaic pile, invented by Alessandro Volta in the early 19th century, marks a pivotal moment in the history of electricity and electrochemistry.
+
+The voltaic pile is considered one of the first electrochemical cells, consisting of two distinct electrodes and an electrolyte. The cell is structured as follows:
+
+- **Electrodes**: One made of zinc and the other of copper.
+- **Electrolyte**: Sulfuric acid mixed with water or a saltwater brine, composed of ions (2 H+ and SO4 2−).
+
+---
+
+## Ground
+
+Ground is a reference point in an electrical circuit that serves as a common return path for current flow. It is typically connected to the earth or a conductive material to provide a stable reference voltage for the circuit. Ground is used to establish a zero voltage reference point and ensure safe operation of electrical devices and systems.
 
 ---
 
@@ -57,7 +101,7 @@ Below are the most common circuit elements you need to know:
 3. **Inductors**  
 4. **Diodes**  
 
-We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using **schemdraw** in Python.
+We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using ![schemdraw](https://schemdraw.readthedocs.io/en/stable/usage/start.html) in Python.
 
 ---
 
@@ -89,6 +133,37 @@ with schemdraw.Drawing() as d:
 ```
 
 The above code snippet creates an image of a single resistor labeled “R”.
+
+---
+## Adding resistors to a circuit
+
+To add a resistor to a circuit, you need to connect it in series or parallel with other components. 
+
+schemaDREW PICTURE
+
+In a series circuit, the resistor is connected end-to-end with other components, forming a single path for current flow. 
+
+In a parallel circuit, the resistor is connected across other components, providing multiple paths for current flow.
+
+To calculate the total resistance of a **series circuit**, you need to add the resistance values of all the components in the circuit. 
+
+$$R_{total} = R1 + R2 + R3 + ...$$
+
+where R_total is the total resistance of the circuit and $R1, R2, R3, ...$ are the resistance values of the components in series.
+
+To calculate the total resistance of a **parallel circuit**, you need to use the formula:
+
+$$1/R_{total} = 1/R1 + 1/R2 + 1/R3 + ...$$
+
+where R_total is the total resistance of the circuit and $R1, R2, R3, ...$ are the resistance values of the components in parallel.
+
+### Sometimes you need to combine series and parallel circuits:
+
+- Parallel = voltage across all components are the same
+
+- Series = current through all components is the same
+
+schemaDREW PICTURE
 
 ---
 
@@ -214,6 +289,22 @@ By combining the definitions of current and voltage with the properties of resis
 3. Apply the constitutive relationships for each circuit element (Ohm’s law for resistors, capacitor current-voltage relationship, inductor current-voltage relationship, and diode I–V characteristic).
 
 With these tools, you can solve for unknown currents and voltages throughout the circuit.
+
+---
+
+## Measuring Instruments
+
+### Ammameter
+
+An ammeter is a device used to measure the current flowing through an electrical circuit. It is connected in series with the circuit to measure the current passing through it. Ammeters are designed to have a low resistance to minimize the voltage drop across them and ensure accurate current measurements. They are commonly used in electronic circuits to monitor current flow and troubleshoot circuit issues. Measuring: **ampers**.
+
+### Voltmeter
+
+A voltmeter is a device used to measure the voltage across an electrical circuit. It is connected in parallel with the circuit to measure the voltage difference between two points. Voltmeters are designed to have a high resistance to minimize the current flow through them and ensure accurate voltage measurements. They are commonly used in electronic circuits to monitor voltage levels and troubleshoot circuit issues.  Measuring: **volts**.
+
+### Ohmmeter
+
+An ohmmeter is a device used to measure the resistance of an electrical component. It is connected to the component being tested to measure its resistance value. Ohmmeters are commonly used to check the continuity of wires, test the resistance of resistors, and troubleshoot circuit issues. Measuring: **ohms**.
 
 ---
 
