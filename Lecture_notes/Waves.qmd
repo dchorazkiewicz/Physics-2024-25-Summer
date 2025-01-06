@@ -1,5 +1,5 @@
 ---
-title: Wawes
+title: Waves
 format:
   html:
     theme: flatly
@@ -21,7 +21,24 @@ format:
         href: https://dchorazkiewicz.github.io/Physics-2024-25-Summer/       
 ---
 
+## Definition of Wave
 
+**Wave** is a disturbance that propagates through space or a medium, and transports energy without transporting mass.
+
+
+### Vibrations vs Waves
+
+**Vibration**
+
+- Wiggle in time
+- $u(t) = A \sin(\omega t)$
+
+**Wave**
+
+- Wiggle in time and space
+- $u(t, x) = A \sin(\omega t - kx)$
+
+---
 
 ## Springs and Mechanical Waves
 
@@ -375,3 +392,15 @@ This effec can be visualized with the following animations (source: Wikipedia):
 The vapor cone, also known as the shock collar or shock egg, is a visible cloud of condensed water droplets that can sometimes form around an object moving at high speeds. This phenomenon is often associated with supersonic aircraft and other high-speed vehicles, where the pressure difference between the front and rear of the object leads to the condensation of water vapor in the air.
 
 ![source: Wikipedia](pics/waves/FA-18_going_transonic.jpeg)
+
+#### Playground for waves:
+
+- [Wave applet](https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_all.html)
+
+- [Heat versus Wave Equation](https://x.com/gabrielpeyre/status/1765255995809305064?t=pzuMHd7gpN1penkJplRkQg)
+
+- [Video of Doppler Effect on the street](https://youtu.be/ffg4TOpXZyg?si=PxLSJtInPxolERYb)
+
+- [Doppler Effect simulator](https://ophysics.com/waves11.html)
+
+- [Interference applet](https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html)
