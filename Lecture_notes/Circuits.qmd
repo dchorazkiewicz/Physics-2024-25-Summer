@@ -163,8 +163,6 @@ where R_total is the total resistance of the circuit and $R1, R2, R3, ...$ are t
 
 - Series = current through all components is the same
 
-schemaDREW PICTURE
-
 ---
 
 ### Capacitors
@@ -330,6 +328,38 @@ Understanding these basics is essential before moving on to more complex circuit
 - Thomas L. Floyd, *Electronic Devices*.  
 - The [HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/) website for quick reference.
 
+## RLC
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+# Create the drawing
+with schemdraw.Drawing():
+    R1 = elm.Resistor()
+    C1 = elm.Capacitor().down()
+    D1 = elm.Diode().fill(True).left()
+    L1 = elm.Inductor().up()
+    elm.LoopCurrent([R1, C1, D1, L1], direction='cw').label('$I_1$')
+```
+
+## Series
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+# Create the drawing
+with schemdraw.Drawing() as d:
+    # Series resistors
+    d += elm.Resistor().label('$R_1$')
+    d += elm.Resistor().label('$R_2$')
+    d += elm.Resistor().label('$R_3$')
+    d += elm.Resistor().label('$R_4$')
+
+    d.draw()
+    
+```
 
 ## Use schemdraw to draw circuits and solve them!!!
 
@@ -370,5 +400,97 @@ with schemdraw.Drawing() as d:
     
     elm.LoopCurrent([R1,R2,L2,V1], pad=1.25).label('$I_1$').color('red')
     elm.LoopCurrent([R1,I1,L2,R2], pad=1.25).label('$I_2$').color('pink')    # Use R1 as top element for both so they get the same height
+
+```
+
+
+
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+# Create the drawing
+with schemdraw.Drawing() as d:
+    # First vertical line
+    d += elm.Line().down().length(1)
+    
+    # Branch for R1
+    d.push()
+    d += elm.Resistor().right().label('$R_1$')
+    d += elm.Line().down().length(1)
+    d.pop()
+    
+    # Branch for R2
+    d.push()
+    d += elm.Line().down().length(1)
+    d += elm.Resistor().right().label('$R_2$')
+    d += elm.Line().down().length(1)
+    d.pop()
+    
+    # Branch for R3
+    d.push()
+    d += elm.Line().down().length(2)
+    d += elm.Resistor().right().label('$R_3$')
+    d += elm.Line().down().length(1)
+    d.pop()
+    
+    # Branch for R4
+    d.push()
+    d += elm.Line().down().length(3)
+    d += elm.Resistor().right().label('$R_4$')
+    d += elm.Line().down().length(1)
+    d.pop()
+    
+    # Final closing lines
+    d += elm.Line().down().length(4)
+    d += elm.Line().left().length(3)
+    
+```
+
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+# Create the drawing
+with schemdraw.Drawing() as d:
+    # Parallel resistors
+    R1 = d.add(elm.Resistor().right().label('$R_1$'))
+    R2 = d.add(elm.Resistor().down().label('$R_2$').at(R1.start))
+    d.add(elm.Line().right().at(R2.end))
+    
+    # Encircle the parallel section
+    d.add(elm.Encircle([R1, R2], padx=0.8, pady=0.8).linestyle('--').linewidth(1).color('red'))
+
+    # Series resistors
+    R3 = d.add(elm.Resistor().down().label('$R_3$').at(R1.end))
+    R4 = d.add(elm.Resistor().down().label('$R_4$').at(R3.end))
+    
+    # Encircle the series section
+    d.add(elm.Encircle([R3, R4], padx=0.8, pady=0.8).linestyle('--').linewidth(1).color('blue'))
+
+    # Annotate parallel and series sections
+    d.add(elm.Annotate().at(R1.start).delta(dx=-2, dy=0).label('Parallel Section').color('red'))
+    d.add(elm.Annotate().at(R3.start).delta(dx=-2, dy=0).label('Series Section').color('blue'))
+
+    d.draw()
+
+```
+
+```python
+import schemdraw
+import schemdraw.elements as elm
+
+# Create the drawing
+with schemdraw.Drawing() as d:
+
+parallel = elm.Encircle([R1, R2], padx=.8).linestyle('--').linewidth(1).color('red')
+series = elm.Encircle([R3, R4], padx=.8).linestyle('--').linewidth(1).color('blue')
+
+elm.Annotate().at(parallel.NNE).delta(dx=1, dy=1).label('Parallel').color('red')
+elm.Annotate(th1=0).at(series.ENE).delta(dx=1.5, dy=1).label('Series').color('blue')
+
+    d.draw()
 
 ```
