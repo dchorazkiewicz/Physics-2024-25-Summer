@@ -19,10 +19,10 @@ This repository serves as a comprehensive resource for the **Physics 2024/25 Sum
 * You need to have a GitHub account. If you don't have one, you can create it [here](www.github.com)
 * Install Visual Studio Code from [here](https://code.visualstudio.com/)
 * Install folowing extensions in Visual Studio Code:
-  * Github Repositories (GitHub, Inc.)
-  * GitHub Copilot (GitHub Copilot)
-  * GitHub Actions (GitHub, Inc.)
-  * Python (Microsoft)
+    * Github Repositories (GitHub, Inc.)
+    * GitHub Copilot (GitHub Copilot)
+    * GitHub Actions (GitHub, Inc.)
+    * Python (Microsoft)
 
 ---
 
