@@ -14,6 +14,18 @@ This repository serves as a comprehensive resource for the **Physics 2024/25 Sum
 
 ---
 
+## Technical setup
+
+* You need to have a GitHub account. If you don't have one, you can create it [here](www.github.com)
+* Install Visual Studio Code from [here](https://code.visualstudio.com/)
+* Install folowing extensions in Visual Studio Code:
+    * Github Repositories (GitHub, Inc.)
+    * GitHub Copilot (GitHub Copilot)
+    * GitHub Actions (GitHub, Inc.)
+    * Python (Microsoft)
+
+---
+
 ## How to Use This Page
 
 This webpage is generated from the following GitHub repository:  [GitHub](https://github.com/dchorazkiewicz/Physics-2024-25-Summer) 
@@ -24,3 +36,4 @@ These lecture notes will be used during classes and are intended to help student
 Students are required to complete a project that involves creating individual repositories containing 
 solutions to the problems listed in the **Exercises for Students** section. 
 These repositories will be based on the template provided at: [Template repository](https://github.com/dchorazkiewicz/solutions_repo). Detailed instructions can also be found at the same link.
+
