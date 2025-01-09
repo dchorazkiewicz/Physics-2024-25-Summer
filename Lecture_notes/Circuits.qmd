@@ -26,6 +26,10 @@ format:
 
 A circuit is a closed loop or pathway through which electric current can flow. It consists of various electrical components connected together to perform a specific function, such as controlling the flow of current, storing energy, or amplifying signals. Circuits can be found in a wide range of electronic devices, from simple light switches to complex computer systems.
 
+### Cuircuit at fundamental level 
+
+Cuircuit is **movement of electrons** in a closed loop. Density of electrons is higher at the negative terminal of the battery and lower at the positive terminal. The electrons move from the negative terminal to the positive terminal, creating a current flow.
+
 ### Types of circuits: 
 - **series circuits** (the components are connected end-to-end, forming a single path for current flow)
 - **parallel circuits** (the components are connected across each other, providing multiple paths for current flow).
@@ -44,10 +48,6 @@ A circuit is a closed loop or pathway through which electric current can flow. I
 We will look at each in turn and briefly discuss their functions and key equations, along with an example on how to draw them using [schemdraw](https://schemdraw.readthedocs.io/en/stable/usage/start.html) in Python.
 
 We also recommend using [Falstad Circuit Simulator](https://www.falstad.com/circuit/) for more advanced simulations.
-
-### Cuircuit at fundamental level 
-
-Cuircuit is **movement of electrons** in a closed loop. Density of electrons is higher at the negative terminal of the battery and lower at the positive terminal. The electrons move from the negative terminal to the positive terminal, creating a current flow.
 
 ## Current
 
@@ -79,7 +79,7 @@ In practical terms, if you have a voltage source like a battery, it provides a c
 
 ## Battery
 
-A battery is an electrochemical device that stores electrical energy and provides a voltage source for electronic circuits. It consists of one or more cells that convert chemical energy into electrical energy through a chemical reaction. The voltaic pile, invented by Alessandro Volta in the early 19th century, marks a pivotal moment in the history of electricity and electrochemistry.
+A battery is an electrochemical device that stores electrical energy and provides a voltage source for electronic circuits. It consists of one or more cells that convert chemical energy into electrical energy through a chemical reaction. The voltaic pile, invented by link: [Alessandro Volta](https://en.wikipedia.org/wiki/Alessandro_Volta) in the early 19th century, marks a pivotal moment in the history of electricity and electrochemistry.
 
 The voltaic pile is considered one of the first electrochemical cells, consisting of two distinct electrodes and an electrolyte. The cell is structured as follows:
 
@@ -116,16 +116,16 @@ Power dissipated by a resistor can be calculated using
 
 **Symbols:**
 
-Symbol in circuit diagrams: a zig-zag line (US)
+Symbol in circuit diagrams: a zig-zag line (US):
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
 
-#elm.style(elm.STYLE_IEEE)
+elm.style(elm.STYLE_IEEE)
 with schemdraw.Drawing() as d:
     d += elm.Resistor().label('R')
 ```
-or a rectangular box. (EU)
+or a rectangular box (EU):
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
@@ -135,6 +135,14 @@ elm.style(elm.STYLE_IEC)
 with schemdraw.Drawing() as d:
     d += elm.Resistor().label('R')
 ```
+
+Resistivity is a material property that describes how well a material resists the flow of electric current. It is measured in ohm-meters $[\Omega m]$.
+
+$$
+R = \rho \frac{L}{A}
+$$
+
+where $R$ is the resistance, $\rho$ is the resistivity, $L$ is the length of the resistor, and $A$ is the cross-sectional area.
 
 **Adding resistors to a circuit**
 
@@ -148,7 +156,7 @@ In a **parallel** circuit, the resistor is connected across other components, pr
 
 - Series = current through all components is the same
   
-#### Series Resistors
+### Series Resistors
 
 To calculate the total resistance of a **series circuit**, you need to add the resistance values of all the components in the circuit. 
 
@@ -163,24 +171,11 @@ import schemdraw
 import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
+    d += elm.Dot()  # Starting point
     d += elm.Resistor().right().label('R1')  # Resistor R1
     d += elm.Resistor().right().label('R2')  # Resistor R2
     d += elm.Resistor().right().label('R3')  # Resistor R3
-```
-
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Resistor().right().label('R1')  # Resistor R1
-    d += elm.Resistor().right().label('R2')  # Resistor R2
-    d += elm.Resistor().right().label('R3')  # Resistor R3
-    d += elm.Line().down().length(2)
-    d += elm.Line().left().length(3)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().left().length(3)
-    d += elm.Line().up().length(2)
+    d += elm.Dot()  # Ending point
 ```
 is equivalent to:
 ```{python}
@@ -188,27 +183,12 @@ import schemdraw
 import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
-    d += elm.Line().right().length(3)
-    d += elm.Resistor().right().label('R_total')  # Resistor R2
-    d += elm.Line().right().length(3)
-    d += elm.Line().down().length(2)
-    d += elm.Line().left().length(3)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().left().length(3)
-    d += elm.Line().up().length(2)
+    d += elm.Dot()  # Starting point
+    d += elm.Resistor().right().label('$R_{total}$')  # Resistor R_total
+    d += elm.Dot()  # Ending point
 ```
-(or othe version)
 
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Resistor().right().label('R_total')  # Resistor R_total
-    d += elm.Line().down().length(2)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().up().length(2)
-```
+### Parallel Resistors
 
 To calculate the total resistance of a **parallel circuit**, you need to use the formula:
 
@@ -216,12 +196,14 @@ $$1/R_{total} = 1/R1 + 1/R2 + 1/R3 + ...$$
 
 where R_total is the total resistance of the circuit and $R1, R2, R3, ...$ are the resistance values of the components in parallel.
 
+Example in SchemaDraw:
 ```{python} 
 import schemdraw
 import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
     d += elm.Line().right().length(1)   # Line to the right
+    d += elm.Dot()  # Starting point
     d += elm.Line().up().length(2)  # Line up
     d += elm.Resistor().right().label('R1')  # Resistor R1 to the right
     d += elm.Line().down().length(2)   # Line down
@@ -229,7 +211,19 @@ with schemdraw.Drawing() as d:
     d += elm.Line().down().length(2)   # Line down
     d += elm.Resistor().right().label('R3')  # Resistor R3 to the right
     d += elm.Line().up().length(2)   # Line up
+    d += elm.Dot()  # Ending point
     d += elm.Line().right().length(1)   # Line to the right
+```
+
+is equivalent to:
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Dot()  # Starting point
+    d += elm.Resistor().right().label('$R_{total}$')  # Resistor R_total
+    d += elm.Dot()  # Ending point
 ```
 
 ## Capacitors
@@ -240,21 +234,19 @@ $$
 Q = C \, V
 $$
 
-where $C$ is the **capacitance** (measured in farads \([F]\)). In circuits, the current $i(t)$ and voltage $v(t)$ for a capacitor relate as:
+where $C$ is the **capacitance** (measured in farads $[F]$. In circuits, the current $i(t)$ and voltage $v(t)$ for a capacitor relate as:
 
 $$
 i(t) = C \frac{dv(t)}{dt}
 $$
 
-**Key Points**:
-
-- Symbol in circuit diagrams: two parallel lines.  
-- Capacitors resist changes in voltage — they charge up and discharge according to  
+Capacitors resist changes in voltage — they charge up and discharge according to  
   $$
   v(t) = \frac{1}{C} \int i(t) \, dt.
   $$
 - Commonly used for filtering, decoupling, and timing applications.
 
+Symbol in circuit diagrams: two parallel lines
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
@@ -263,26 +255,29 @@ with schemdraw.Drawing() as d:
     d += elm.Capacitor().label('C')
 ```
 
-This snippet draws a basic capacitor symbol labeled “C”.
+Adding capacitors to a circuit is opposite to adding resistors. You can connect them in series or parallel with other components.
 
-Adding capacitors to a circuit:
-
+In a **series** circuit, the capacitors are connected end-to-end with other components, forming a single path for current flow.
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
+    d += elm.Dot()  # Starting point
     d += elm.Capacitor().right().label('C1')  # Capacitor C1
     d += elm.Capacitor().right().label('C2')  # Capacitor C2
     d += elm.Capacitor().right().label('C3')  # Capacitor C3
+    d += elm.Dot()  # Ending point
 ```
 
+In a **parallel** circuit, the capacitors are connected across other components, providing multiple paths for current flow.
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
 
 with schemdraw.Drawing() as d:
     d += elm.Line().right().length(1)   # Line to the right
+    d += elm.Dot()  # Starting point
     d += elm.Line().up().length(2)      # Line up
     d += elm.Capacitor().right().label('C1')  # Capacitor C1 to the right
     d += elm.Line().down().length(2)    # Line down
@@ -290,27 +285,38 @@ with schemdraw.Drawing() as d:
     d += elm.Line().down().length(2)    # Line down
     d += elm.Capacitor().right().label('C3')  # Capacitor C3 to the right
     d += elm.Line().up().length(2)      # Line up
+    d += elm.Dot()  # Ending point
     d += elm.Line().right().length(1)   # Line to the right
-
 ```
 
+**Capacitance** is a measure of a capacitor's ability to store electrical charge and energy. It is defined as the ratio of the charge stored on the plates to the voltage across the plates. The SI unit of capacitance is the farad (F), which is equal to one coulomb per volt.
 
----
+Formula for total capacitance in a **series** circuit:
 
-### Inductors
+$$
+\frac{1}{C_{\text{total}}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \ldots
+$$
+
+Formula for total capacitance in a **parallel** circuit:
+
+$$
+C_{\text{total}} = C_1 + C_2 + C_3 + \ldots
+$$
+
+
+## Inductors
 
 An **inductor** is a component that stores energy in a magnetic field when current flows through it. The voltage $V$ across an inductor of inductance $L$ is given by:
 
 $$
-V = L \frac{dI}{dt}
+V = L \frac{d I}{dt}
 $$
 
-**Key Points**:
+Inductors resist changes in current. When current changes, the inductor induces a voltage that opposes the change.  
 
-- Symbol in circuit diagrams: a coiled wire.  
-- Inductors resist changes in current. When current changes, the inductor induces a voltage that opposes the change.  
-- Often used in filters, transformers, and power supplies.
+Often used in filters, transformers, and power supplies.
 
+- Symbol in circuit diagrams: a coiled wire
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
@@ -319,11 +325,31 @@ with schemdraw.Drawing() as d:
     d += elm.Inductor().label('L')
 ```
 
-This snippet draws a simple inductor symbol labeled “L”.
+You can connect inductors in series or parallel with other components. The total inductance in a **series** circuit is (like in resitors) the sum of the individual inductances, while in a **parallel** circuit, the reciprocal of the total inductance is the sum of the reciprocals of the individual inductances. 
+
+## Measuring Instruments
+
+### Ammameter
+
+An ammeter is a device used to measure the current flowing through an electrical circuit. It is connected in series with the circuit to measure the current passing through it. Ammeters are designed to have a low resistance to minimize the voltage drop across them and ensure accurate current measurements. They are commonly used in electronic circuits to monitor current flow and troubleshoot circuit issues. Measuring: **ampers**.
+
+### Voltmeter
+
+A voltmeter is a device used to measure the voltage across an electrical circuit. It is connected in parallel with the circuit to measure the voltage difference between two points. Voltmeters are designed to have a high resistance to minimize the current flow through them and ensure accurate voltage measurements. They are commonly used in electronic circuits to monitor voltage levels and troubleshoot circuit issues.  Measuring: **volts**.
+
+### Ohmmeter
+
+An ohmmeter is a device used to measure the resistance of an electrical component. It is connected to the component being tested to measure its resistance value. Ohmmeters are commonly used to check the continuity of wires, test the resistance of resistors, and troubleshoot circuit issues. Measuring: **ohms**.
+
+### Multimeter
+
+A multimeter is a versatile device that combines the functions of an ammeter, voltmeter, and ohmmeter in a single instrument.
 
 ---
+---
+---
 
-### Diodes
+## Diodes
 
 A **diode** allows current to flow primarily in one direction. It has a very low (ideally zero) resistance in one direction — called **forward bias** — and a high (ideally infinite) resistance in the other direction — **reverse bias**.
 
@@ -337,6 +363,7 @@ A **diode** allows current to flow primarily in one direction. It has a very low
   where $I_S$ is the saturation current, $n$ is the ideality factor (usually 1 or 2), and $V_T$ is the thermal voltage ($\approx 25 \,\text{mV}$ at room temperature).  
 - Practical uses: rectification (converting AC to DC), protection circuits, and signal demodulation.
 
+Here, we draw a simple diode symbol labeled “D”:
 ```{python}
 import schemdraw
 import schemdraw.elements as elm
@@ -344,8 +371,6 @@ import schemdraw.elements as elm
 with schemdraw.Drawing() as d:
     d += elm.Diode().label('D')
 ```
-
-Here, we draw a simple diode symbol labeled “D”.
 
 ---
 
@@ -418,7 +443,7 @@ The current $i_3$ has a negative sign which means the assumed direction of $i_3$
 
 ---
 
-## Putting It All Together
+### Putting It All Together
 
 By combining the definitions of current and voltage with the properties of resistors, capacitors, inductors, and diodes, and applying Kirchhoff’s Laws, one can systematically analyze any linear circuit.
 
@@ -427,22 +452,6 @@ By combining the definitions of current and voltage with the properties of resis
 3. Apply the constitutive relationships for each circuit element (Ohm’s law for resistors, capacitor current-voltage relationship, inductor current-voltage relationship, and diode I–V characteristic).
 
 With these tools, you can solve for unknown currents and voltages throughout the circuit.
-
----
-
-## Measuring Instruments
-
-### Ammameter
-
-An ammeter is a device used to measure the current flowing through an electrical circuit. It is connected in series with the circuit to measure the current passing through it. Ammeters are designed to have a low resistance to minimize the voltage drop across them and ensure accurate current measurements. They are commonly used in electronic circuits to monitor current flow and troubleshoot circuit issues. Measuring: **ampers**.
-
-### Voltmeter
-
-A voltmeter is a device used to measure the voltage across an electrical circuit. It is connected in parallel with the circuit to measure the voltage difference between two points. Voltmeters are designed to have a high resistance to minimize the current flow through them and ensure accurate voltage measurements. They are commonly used in electronic circuits to monitor voltage levels and troubleshoot circuit issues.  Measuring: **volts**.
-
-### Ohmmeter
-
-An ohmmeter is a device used to measure the resistance of an electrical component. It is connected to the component being tested to measure its resistance value. Ohmmeters are commonly used to check the continuity of wires, test the resistance of resistors, and troubleshoot circuit issues. Measuring: **ohms**.
 
 ---
 
@@ -633,4 +642,48 @@ elm.Annotate(th1=0).at(series.ENE).delta(dx=1.5, dy=1).label('Series').color('bl
 
     d.draw()
 
+```
+
+
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Resistor().right().label('R1')  # Resistor R1
+    d += elm.Resistor().right().label('R2')  # Resistor R2
+    d += elm.Resistor().right().label('R3')  # Resistor R3
+    d += elm.Line().down().length(2)
+    d += elm.Line().left().length(3)
+    d += elm.SourceV().left().label('V')  # Voltage source
+    d += elm.Line().left().length(3)
+    d += elm.Line().up().length(2)
+```
+is equivalent to:
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Line().right().length(3)
+    d += elm.Resistor().right().label('R_total')  # Resistor R2
+    d += elm.Line().right().length(3)
+    d += elm.Line().down().length(2)
+    d += elm.Line().left().length(3)
+    d += elm.SourceV().left().label('V')  # Voltage source
+    d += elm.Line().left().length(3)
+    d += elm.Line().up().length(2)
+```
+(or othe version)
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Resistor().right().label('R_total')  # Resistor R_total
+    d += elm.Line().down().length(2)
+    d += elm.SourceV().left().label('V')  # Voltage source
+    d += elm.Line().up().length(2)
 ```
