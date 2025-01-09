@@ -226,6 +226,10 @@ with schemdraw.Drawing() as d:
     d += elm.Dot()  # Ending point
 ```
 
+Example of a circuit with a parallel and series section:
+
+![Parallel and Series Resistors](./pics/circuits/resistors-adding.png)
+
 ## Capacitors
 
 A **capacitor** is a device that stores energy in the form of an electric field between two conductive plates separated by an insulator (dielectric). The basic relationship between voltage $V$ across a capacitor and the charge $Q$ it holds is:
@@ -303,10 +307,11 @@ $$
 C_{\text{total}} = C_1 + C_2 + C_3 + \ldots
 $$
 
+Interesingly, behind the **touch screen** there are two parallel layers, one behind the other, of thin strips of a transparent conductor. A voltage is maintained between the two layers. In touch screen on a mobile phone/tablet, when you **bring** your finger (a conductor) up to a point on the screen, your finger and the front conducting layer act like a second capacitor in series at that point. The circuitry attached to the conducting layers detects the location of the capacitance change, and detects where you touched the screen.
 
 ## Inductors
 
-An **inductor** is a component that stores energy in a magnetic field when current flows through it. The voltage $V$ across an inductor of inductance $L$ is given by:
+An **Inductor** is a component that stores energy in a magnetic field when current flows through it. The voltage $V$ across an inductor of inductance $L$ is given by:
 
 $$
 V = L \frac{d I}{dt}
@@ -327,6 +332,8 @@ with schemdraw.Drawing() as d:
 
 You can connect inductors in series or parallel with other components. The total inductance in a **series** circuit is (like in resitors) the sum of the individual inductances, while in a **parallel** circuit, the reciprocal of the total inductance is the sum of the reciprocals of the individual inductances. 
 
+![Source: Wikipedia](./pics/circuits/Tuned_circuit_animation_3.gif)
+
 ## Measuring Instruments
 
 ### Ammameter
@@ -345,35 +352,6 @@ An ohmmeter is a device used to measure the resistance of an electrical componen
 
 A multimeter is a versatile device that combines the functions of an ammeter, voltmeter, and ohmmeter in a single instrument.
 
----
----
----
-
-## Diodes
-
-A **diode** allows current to flow primarily in one direction. It has a very low (ideally zero) resistance in one direction — called **forward bias** — and a high (ideally infinite) resistance in the other direction — **reverse bias**.
-
-**Key Points**:
-
-- Symbol in circuit diagrams: a triangle pointing to a vertical line.  
-- Typical diode equation for current $I$ and voltage $V$ is (idealized):  
-  $$
-  I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
-  $$
-  where $I_S$ is the saturation current, $n$ is the ideality factor (usually 1 or 2), and $V_T$ is the thermal voltage ($\approx 25 \,\text{mV}$ at room temperature).  
-- Practical uses: rectification (converting AC to DC), protection circuits, and signal demodulation.
-
-Here, we draw a simple diode symbol labeled “D”:
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Diode().label('D')
-```
-
----
-
 ## Kirchhoff's Laws
 
 To analyze and understand how currents and voltages distribute themselves around a circuit, we use **Kirchhoff’s Laws**:
@@ -388,6 +366,30 @@ $$
 \sum I_{\text{in}} = \sum I_{\text{out}}
 $$
 
+Example ion SchemaDraw: $I_2=I_1+I_3+I_4+I_5$
+
+```{python}
+import schemdraw
+import schemdraw.elements as elm
+
+with schemdraw.Drawing() as d:
+    d += elm.Arrow().right().label('I2')               # Current I2 entering
+    # Central node
+    d += elm.Dot() 
+    start_pos = d.here
+    d.push()  
+    d += elm.Arrow().right().label('I3')             # Current I3 leaving
+    d.pop()  # Return to the saved position
+    d.push()  
+    d += elm.Arrow().up().label('I1')     # Current I1 leaving
+    d.pop()  # Return to the saved position
+    d.push()  
+    d += elm.Arrow(theta=45).label('I5', loc='right')  # Current I5 leaving
+    d.pop()  # Return to the saved position
+    d.push()  
+    d += elm.Arrow(theta=315).label('I4', loc='right')  # Current I4 entering
+```
+
 ### Kirchhoff’s Voltage Law (KVL)
 
 - States that the algebraic sum of all voltages around any closed loop in a circuit is zero.  
@@ -398,11 +400,23 @@ $$
 \sum V_{\text{around a loop}} = 0
 $$
 
-### Example in details
+### Details
+
+**Strategy for solving circuits using Kirchhoff’s Laws:**
+
+By combining the definitions of current and voltage with the properties of resistors, capacitors, inductors, and diodes, and applying Kirchhoff’s Laws, one can systematically analyze any linear circuit.
+
+1. Use Kirchhoff’s Current Law to ensure current conservation at each node.  
+2. Use Kirchhoff’s Voltage Law to ensure voltage consistency around loops.  
+3. Apply the constitutive relationships for each circuit element (Ohm’s law for resistors, capacitor current-voltage relationship, inductor current-voltage relationship, and diode I–V characteristic).
+
+With these tools, you can solve for unknown currents and voltages throughout the circuit.
+
+**Example:**
 
 Assume an electric network consisting of two voltage sources and three resistors.
 
-![Kirchhoff's Laws Example](./pics/circuits/Kirshhoff-example.png)
+![Source: Wikipedia](./pics/circuits/kirchhoff-example.png)
 
 According to the first law:  
 $i_1 - i_2 - i_3 = 0$
@@ -443,39 +457,57 @@ The current $i_3$ has a negative sign which means the assumed direction of $i_3$
 
 ---
 
-### Putting It All Together
+## Diodes
 
-By combining the definitions of current and voltage with the properties of resistors, capacitors, inductors, and diodes, and applying Kirchhoff’s Laws, one can systematically analyze any linear circuit.
+A **diode** allows current to flow primarily in one direction. It has a very low (ideally zero) resistance in one direction — called **forward bias** — and a high (ideally infinite) resistance in the other direction — **reverse bias**.
 
-1. Use Kirchhoff’s Current Law to ensure current conservation at each node.  
-2. Use Kirchhoff’s Voltage Law to ensure voltage consistency around loops.  
-3. Apply the constitutive relationships for each circuit element (Ohm’s law for resistors, capacitor current-voltage relationship, inductor current-voltage relationship, and diode I–V characteristic).
+**Key Points**:
 
-With these tools, you can solve for unknown currents and voltages throughout the circuit.
+- Symbol in circuit diagrams: a triangle pointing to a vertical line.  
+- Typical diode equation for current $I$ and voltage $V$ is (idealized):  
+  $$
+  I = I_S \Bigl( e^{\frac{V}{n V_T}} - 1 \Bigr),
+  $$
+  where $I_S$ is the saturation current, $n$ is the ideality factor (usually 1 or 2), and $V_T$ is the thermal voltage ($\approx 25 \,\text{mV}$ at room temperature).  
+- Practical uses: rectification (converting AC to DC), protection circuits, and signal demodulation.
 
----
+Here, we draw a simple diode symbol labeled “D”:
+```{python}
+import schemdraw
+import schemdraw.elements as elm
 
-## Summary
+with schemdraw.Drawing() as d:
+    d += elm.Diode().label('D')
+```
 
-- **Current**: Flow of electric charge, measured in amperes \([A]\).  
-- **Voltage**: Potential difference driving the current, measured in volts \([V]\).  
-- **Resistors**: Convert electric energy into heat, obey $V = IR$.  
-- **Capacitors**: Store energy in an electric field, obey $Q = CV$ and $i = C \frac{dV}{dt}$.  
-- **Inductors**: Store energy in a magnetic field, obey $V = L \frac{dI}{dt}$.  
-- **Diodes**: Allow current in one direction, block current in reverse (ideal diode model).  
-- **Kirchhoff’s Laws**: Provide fundamental rules for current and voltage in circuit analysis.  
-- **schemdraw (Python)**: A useful library for drawing circuit diagrams programmatically.
+## Transistors
 
-Understanding these basics is essential before moving on to more complex circuits and network theorems (e.g., Thevenin’s and Norton’s theorems, superposition, etc.).
+## Alternating Current
 
----
+## Transformers
 
-## References and Further Reading
+Transformer is a passive component that transfers electrical energy from one electrical circuit to another circuit, or multiple circuits. A varying current in any coil of the transformer produces a varying magnetic flux in the transformer's core, which induces a varying electromotive force (EMF) across any other coils wound around the same core. Electrical energy can be transferred between separate coils without a metallic (conductive) connection between the two circuits.
 
-- D. Halliday, R. Resnick, and J. Walker, *Fundamentals of Physics*.  
-- J.D. Irwin, *Basic Engineering Circuit Analysis*.  
-- Thomas L. Floyd, *Electronic Devices*.  
-- The [HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/) website for quick reference.
+Transformers operate on mutual induction, allowing voltage levels to be modified. The transformer equation relates the primary V_P and secondary V_S voltages to their respective turns N_P and N_S:
+
+$$\frac{V_P}{V_S} = \frac{N_P}{N_S}
+$$
+
+![Source: Wikipedia](./pics/circuits/transformer.png)
+
+A transformer with 1000 winding turns changes the primary voltage of 120V  into a secondary voltage of 230 V.  What is the number of winding turns on the second voltage?
+
+$$120/230 = 1000/N_S$$
+
+$$N_S = 1000 * 230 / 120 = 1916 \text{ turns}$$
+
+# Conductors, Semiconductors, and Insulators
+
+Electrical properties of materials are critical for designing electronic components. 
+
+- Insulators exhibit high resistivity
+- Semiconductors have variable resistivity (influenced by doping and temperature)
+- Conductors exhibit low resistivity
 
 ## RLC
 
@@ -492,198 +524,124 @@ with schemdraw.Drawing():
     elm.LoopCurrent([R1, C1, V1, L1], direction='ccw').label('$I_1$')
 ```
 
-## Series
+## Summary
 
-```{python}
-import schemdraw
-import schemdraw.elements as elm
+- **Current**: Flow of electric charge, measured in amperes $[A]$.  
+- **Voltage**: Potential difference driving the current, measured in volts $[V]$.  
+- **Resistors**: Convert electric energy into heat, obey $V = IR$.  
+- **Capacitors**: Store energy in an electric field, obey $Q = CV$ and $i = C \frac{dV}{dt}$.  
+- **Inductors**: Store energy in a magnetic field, obey $V = L \frac{dI}{dt}$.  
+- **Diodes**: Allow current in one direction, block current in reverse (ideal diode model).  
+- **Kirchhoff’s Laws**: Provide fundamental rules for current and voltage in circuit analysis.  
+- **schemdraw (Python)**: A useful library for drawing circuit diagrams programmatically.
+- **Falstad Circuit Simulator**: A powerful tool for simulating electronic circuits.
 
-# Create the drawing
-with schemdraw.Drawing() as d:
-    # Series resistors
-    d += elm.Resistor().label('$R_1$')
-    d += elm.Resistor().label('$R_2$')
-    d += elm.Resistor().label('$R_3$')
-    d += elm.Resistor().label('$R_4$')
+Understanding these basics is essential before moving on to more complex circuits and network theorems (e.g., Thevenin’s and Norton’s theorems, superposition, etc.).
 
-    d.draw()
-    
-```
+## Currents
 
-## Use schemdraw to draw circuits and solve them!!!
+Current is the flow of electric charge through a conductor, measured in amperes (A). Along we also provide voltage characteristics measured in volts (V).
 
-Python code
+![Source: Wikipedia](./pics/circuits/currents.png)
 
-```{python}
-import schemdraw
-import schemdraw.elements as elm
+## Alternating Current (AC) vs. Direct Current (DC)
 
-with schemdraw.Drawing() as d:
-    d.config(unit=5)
-    
-    # Źródło napięcia
-    V1 = d.add(elm.SourceV().label('20V').color('red'))
-    
-    # Rezystor poziomy
-    R1 = d.add(elm.Resistor().right().label('400Ω').color('blue'))
-    
-    # Kropka na połączeniu
-    d.add(elm.Dot().color('green'))
-    d.push()
-    
-    # Rezystor pionowy
-    R2 = d.add(elm.Resistor().down().label('100Ω', loc='bot', rotate=True).color('orange'))
-    
-    # Kolejna kropka
-    d.add(elm.Dot().color('green'))
-    d.pop()
-    
-    # Linia pozioma
-    L1 = d.add(elm.Line().color('purple'))
-    
-    # Źródło prądowe
-    I1 = d.add(elm.SourceI().down().label('1A', loc='bot').color('brown'))
-    
-    # Powrót linią
-    L2 = d.add(elm.Line().tox(V1.start).color('gray'))
-    
-    elm.LoopCurrent([R1,R2,L2,V1], pad=1.25).label('$I_1$').color('red')
-    elm.LoopCurrent([R1,I1,L2,R2], pad=1.25).label('$I_2$').color('pink')    # Use R1 as top element for both so they get the same height
+Alternating Current (AC) is characterized by its ability to change direction periodically, in contrast to Direct Current (DC), which flows in the same direction. 
 
-```
+![Source: Wikipedia](./pics/circuits/ac_dc.png)
 
+AC is the standard for electricity distribution due to its efficiency over long distances. It is also easier to convert AC to different voltages using transformers. DC is used in batteries and electronic devices.
 
+![Source: Wikipedia](./pics/circuits/alternating.png)
 
+The mathematical representation of AC is given by:
 
-```{python}
-import schemdraw
-import schemdraw.elements as elm
+$$V(t) = V_{max} \sin(\omega t + \phi)
+$$
 
-# Create the drawing
-with schemdraw.Drawing() as d:
-    # First vertical line
-    d += elm.Line().down().length(1)
-    
-    # Branch for R1
-    d.push()
-    d += elm.Resistor().right().label('$R_1$')
-    d += elm.Line().down().length(1)
-    d.pop()
-    
-    # Branch for R2
-    d.push()
-    d += elm.Line().down().length(1)
-    d += elm.Resistor().right().label('$R_2$')
-    d += elm.Line().down().length(1)
-    d.pop()
-    
-    # Branch for R3
-    d.push()
-    d += elm.Line().down().length(2)
-    d += elm.Resistor().right().label('$R_3$')
-    d += elm.Line().down().length(1)
-    d.pop()
-    
-    # Branch for R4
-    d.push()
-    d += elm.Line().down().length(3)
-    d += elm.Resistor().right().label('$R_4$')
-    d += elm.Line().down().length(1)
-    d.pop()
-    
-    # Final closing lines
-    d += elm.Line().down().length(4)
-    d += elm.Line().left().length(3)
-    
-```
+$$I(t) = I_{max} \sin(\omega t + \phi)
+$$
+where:
+- $V(t)$ is the voltage at time $t$$,
+- $V_{max}$ is the maximum voltage,
+- $I(t)$ is the current at time $t$$,
+- $I$_{max}$ is the maximum current.
+- $\omega$ is the angular frequency,
+- $\phi$ is the phase angle.
 
+## Diode
 
-```{python}
-import schemdraw
-import schemdraw.elements as elm
+A **diode** is a passive two-terminal electrical component that allows current to flow in one direction only. It consists of a semiconductor material with two regions: a p-type region with an excess of positive charge carriers (holes) and an n-type region with an excess of negative charge carriers (electrons). 
 
-# Create the drawing
-with schemdraw.Drawing() as d:
-    # Parallel resistors
-    R1 = d.add(elm.Resistor().right().label('$R_1$'))
-    R2 = d.add(elm.Resistor().down().label('$R_2$').at(R1.start))
-    d.add(elm.Line().right().at(R2.end))
-    
-    # Encircle the parallel section
-    d.add(elm.Encircle([R1, R2], padx=0.8, pady=0.8).linestyle('--').linewidth(1).color('red'))
+When a voltage is applied across the diode, it creates an electric field that allows current to flow from the p-type region to the n-type region. [Diodes](https://tinyurl.com/yc2359yk) are commonly used in electronic circuits for various purposes, such as rectification, signal demodulation, and voltage regulation. They are represented by the symbol "D" in circuit diagrams.
 
-    # Series resistors
-    R3 = d.add(elm.Resistor().down().label('$R_3$').at(R1.end))
-    R4 = d.add(elm.Resistor().down().label('$R_4$').at(R3.end))
-    
-    # Encircle the series section
-    d.add(elm.Encircle([R3, R4], padx=0.8, pady=0.8).linestyle('--').linewidth(1).color('blue'))
+![Source: Wikipedia](./pics/circuits/diode123.png)
 
-    # Annotate parallel and series sections
-    d.add(elm.Annotate().at(R1.start).delta(dx=-2, dy=0).label('Parallel Section').color('red'))
-    d.add(elm.Annotate().at(R3.start).delta(dx=-2, dy=0).label('Series Section').color('blue'))
+**Main Types of diodes:**
 
-    d.draw()
+- **Rectifier diode**: converts AC voltage to DC voltage by allowing current to flow in one direction only.
 
-```
+- **Zener diode**: regulates voltage by maintaining a constant voltage across its terminals.
 
-```python
-import schemdraw
-import schemdraw.elements as elm
+- **Light-emitting diode** (LED): emits light when current flows through it.
 
-# Create the drawing
-with schemdraw.Drawing() as d:
+- Varactor diode: changes capacitance with applied voltage, used in tuning circuits. Varactor diodes are used in voltage-controlled oscillators, phase-locked loops, and frequency synthesizers.
 
-parallel = elm.Encircle([R1, R2], padx=.8).linestyle('--').linewidth(1).color('red')
-series = elm.Encircle([R3, R4], padx=.8).linestyle('--').linewidth(1).color('blue')
+- **Photodiode**: converts light into electrical current, used in light sensors and solar cells.
 
-elm.Annotate().at(parallel.NNE).delta(dx=1, dy=1).label('Parallel').color('red')
-elm.Annotate(th1=0).at(series.ENE).delta(dx=1.5, dy=1).label('Series').color('blue')
+### Rectifier diode
 
-    d.draw()
+A rectifier diode is a type of diode that converts alternating current (AC) to direct current (DC) by allowing current to flow in one direction only. It is used in power supplies, battery chargers, and other electronic devices that require DC voltage. Rectifier diodes are commonly used in bridge rectifiers, half-wave rectifiers, and full-wave rectifiers to convert AC voltage to DC voltage.
 
-```
+The rectifier diode operates by allowing current to flow when the voltage across its terminals is positive and blocking current flow when the voltage is negative. This process converts the AC voltage into a pulsating DC voltage that can be smoothed using capacitors and filters to produce a stable DC voltage.
+
+Rectifier diodes are available in different types, such as silicon diodes, germanium diodes, Schottky diodes, and fast-recovery diodes, each with specific characteristics and applications.
+
+### Single diode:
+
+![Source: Wikipedia](./pics/circuits/diode_works.png)
+
+### Four diodes in a bridge rectifier:
+
+![Source: Wikipedia](./pics/circuits/rectifier.png)
+
+### Diode with soothing out condensator:
+
+![Source: Wikipedia](./pics/circuits/rectifier_with_condensator.png)
+
+### Zener Diode
+
+A Zener diode is a special type of diode designed to reliably allow current to flow "backwards" (inverted polarity) when a certain set reverse voltage, known as the [Zener voltage](https://tinyurl.com/yz4eazby), is reached.
+
+![Source: Wikipedia](./pics/circuits/zener.png)
+
+They are used to generate low-power stabilized supply rails from a higher voltage and to provide reference voltages for circuits, especially stabilized power supplies. They are also used to protect circuits from overvoltage, especially electrostatic discharge.
+
+Zener effect is a phenomenon that occurs in a reverse-biased p-n junction diode when the electric field enables tunneling of electrons from the valence band of the p-type material to the conduction band of the n-type material, creating a population of minority carriers in the p-type material, which suddenly increase the reverse current.
+
+### Equations for diodes:
+
+- [Ideal diode equation](https://www.wolframalpha.com/input?i=diode+240+mA) equation: I = I_s * (e^(V/V_T) - 1)
+
+where $I$ is the current through the diode, $I_s$ is the saturation current, $V$ is the voltage across the diode, and $V_T$ is the thermal voltage.
+
+---
+
+## References and Further Reading
+
+- D. Halliday, R. Resnick, and J. Walker, *Fundamentals of Physics*.  
+- J.D. Irwin, *Basic Engineering Circuit Analysis*.  
+- Thomas L. Floyd, *Electronic Devices*.  
+- The [HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/) website for quick reference.
+
+## Links and pictures [to be cut]
+
+https://everycircuit.com/app
+
+https://www.circuitlab.com/editor/#?id=27h7g9mt6rwy
+
+https://www.falstad.com/circuit/circuitjs.html
+
+https://www.electronics-tutorials.ws/
 
 
-
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Resistor().right().label('R1')  # Resistor R1
-    d += elm.Resistor().right().label('R2')  # Resistor R2
-    d += elm.Resistor().right().label('R3')  # Resistor R3
-    d += elm.Line().down().length(2)
-    d += elm.Line().left().length(3)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().left().length(3)
-    d += elm.Line().up().length(2)
-```
-is equivalent to:
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Line().right().length(3)
-    d += elm.Resistor().right().label('R_total')  # Resistor R2
-    d += elm.Line().right().length(3)
-    d += elm.Line().down().length(2)
-    d += elm.Line().left().length(3)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().left().length(3)
-    d += elm.Line().up().length(2)
-```
-(or othe version)
-
-```{python}
-import schemdraw
-import schemdraw.elements as elm
-
-with schemdraw.Drawing() as d:
-    d += elm.Resistor().right().label('R_total')  # Resistor R_total
-    d += elm.Line().down().length(2)
-    d += elm.SourceV().left().label('V')  # Voltage source
-    d += elm.Line().up().length(2)
-```
